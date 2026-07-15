@@ -1,0 +1,1962 @@
+[
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "SSKH1",
+    "strand": "Historical Understandings",
+    "description": "Identify the national holidays and describe the people and/or events celebrated.",
+    "elements": [
+      "a. Christmas",
+      "b. Columbus Day",
+      "c. Independence Day",
+      "d. Juneteenth National Independence Day",
+      "e. Labor Day",
+      "f. Martin Luther King, Jr. Day",
+      "g. Memorial Day",
+      "h. New Year’s Day",
+      "i. Presidents Day (George Washington, Abraham Lincoln, and the current president)",
+      "j. Thanksgiving Day",
+      "k. Veterans Day"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "SSKH2",
+    "strand": "Historical Understandings",
+    "description": "Identify the following American symbols:",
+    "elements": [
+      "a. The national and state flags (United States and Georgia flags)",
+      "b. Pledge of Allegiance",
+      "c. Star Spangled Banner (identify as the national anthem)",
+      "d. The bald eagle",
+      "e. The Statue of Liberty",
+      "f. Lincoln Memorial (identify image and associate with Abraham Lincoln and Presidents Day)",
+      "g. Washington Monument (identify image and associate with George Washington and Presidents Day)",
+      "h. White House (identify image and associate with Presidents Day and the current president)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "SSKH3",
+    "strand": "Historical Understandings",
+    "description": "Correctly use words and phrases related to chronology and time. (Note: These elements should be integrated into discussions about historical events and figures.)",
+    "elements": [
+      "a. Now, long ago",
+      "b. Before, after",
+      "c. Today, tomorrow, yesterday",
+      "d. First, last, next",
+      "e. Day, week, month, year",
+      "f. Past, present, future"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "SSKG1",
+    "strand": "Geographic Understandings",
+    "description": "Describe the diversity of American culture by explaining the customs and celebrations of various families and communities.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "SSKG2",
+    "strand": "Geographic Understandings",
+    "description": "Explain that a map is a drawing of a place and a globe is a model of Earth.",
+    "elements": [
+      "a. Differentiate land and water features on simple maps and globes.",
+      "b. Explain that maps and globes show a view from above.",
+      "c. Explain that maps and globes show features in a smaller size."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "SSKG3",
+    "strand": "Geographic Understandings",
+    "description": "State the street address, city, state, and country in which the student lives.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "SSKCG1",
+    "strand": "Government/Civic Understandings",
+    "description": "Demonstrate an understanding of good citizenship.",
+    "elements": [
+      "a. Explain how rules are made and why.",
+      "b. Explain why rules should be followed."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "SSKCG2",
+    "strand": "Government/Civic Understandings",
+    "description": "Describe examples of positive character traits exhibited by good citizens such as honesty, patriotism, courtesy, respect, pride, and self-control.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "SSKE1",
+    "strand": "Economic Understandings",
+    "description": "Describe the work that people do such as: police officer, fire fighter, soldier, mail carrier, farmer, doctor, teacher, etc.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "SSKE2",
+    "strand": "Economic Understandings",
+    "description": "Explain that people earn income by working.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "SSKE3",
+    "strand": "Economic Understandings",
+    "description": "Explain how money is used to purchase goods and services.",
+    "elements": [
+      "a. Distinguish goods from services.",
+      "b. Identify that U.S. coins and dollar bills (paper money) are used as currency."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "SSKE4",
+    "strand": "Economic Understandings",
+    "description": "Explain that people must make choices because they cannot have everything they want.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "SS1H1",
+    "strand": "Historical Understandings",
+    "description": "Read about and describe the life of historical figures in American history.",
+    "elements": [
+      "a. Identify the contributions made by these figures: Benjamin Franklin (inventor/author/ statesman), Thomas Jefferson (Declaration of Independence), Meriwether Lewis and William Clark with Sacagawea (exploration), Theodore Roosevelt (National Parks and the environment), George Washington Carver (science), and Ruby Bridges (civil rights).",
+      "b. Describe how everyday life of these historical figures is similar to and different from everyday life in the present (for example: food, clothing, homes, transportation, communication, recreation, etc.)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "SS1G1",
+    "strand": "Geographic Understandings",
+    "description": "Describe how each historic figure in SS1H1a was influenced by his or her time and place.",
+    "elements": [
+      "a. American colonies (Benjamin Franklin and Thomas Jefferson)",
+      "b. American frontier (Lewis & Clark and Sacagawea)",
+      "c. National Parks (Theodore Roosevelt)",
+      "d. Southern U.S. (George Washington Carver and Ruby Bridges)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "SS1G2",
+    "strand": "Geographic Understandings",
+    "description": "Identify and locate the student’s city, county, state, nation (country), and continent on a simple map or a globe.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "SS1G3",
+    "strand": "Geographic Understandings",
+    "description": "Locate major topographical features of the earth’s surface.",
+    "elements": [
+      "a. Locate all of the continents: North America, South America, Africa, Europe, Asia, Antarctica, and Australia.",
+      "b. Locate the major oceans: Arctic, Atlantic, Pacific, Southern, and Indian.",
+      "c. Identify and describe landforms (mountains, deserts, valleys, and coasts)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "SS1CG1",
+    "strand": "Government/Civic Understandings",
+    "description": "Describe how the historical figures in SS1H1a display positive character traits such as: fairness, respect for others, respect for the environment, courage, equality, tolerance, perseverance, and commitment.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "SS1CG2",
+    "strand": "Government/Civic Understandings",
+    "description": "Explore the concept of patriotism through the words in the songs America (My Country ‘Tis of Thee) and America the Beautiful (for example: brotherhood, liberty, freedom, pride, etc.).",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "SS1E1",
+    "strand": "Economic Understandings",
+    "description": "Identify goods that people make and services that people provide for each other.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "SS1E2",
+    "strand": "Economic Understandings",
+    "description": "Explain that scarcity is when unlimited wants are greater than limited resources.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "SS1E3",
+    "strand": "Economic Understandings",
+    "description": "Describe how people are both producers and consumers.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "SS1E4",
+    "strand": "Economic Understandings",
+    "description": "Explain that people earn income by working and that they must make choices about how much to save and spend.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS2H1",
+    "strand": "Historical Understandings",
+    "description": "Describe the lives and contributions of historical figures in Georgia history.",
+    "elements": [
+      "a. James Oglethorpe, Tomochichi, and Mary Musgrove (founding of Georgia)",
+      "b. Sequoyah (development of a Cherokee alphabet)",
+      "c. Jackie Robinson (sportsmanship and civil rights)",
+      "d. Martin Luther King, Jr. (civil rights)",
+      "e. Juliette Gordon Low (Girl Scouts and leadership)",
+      "f. Jimmy Carter (leadership and human rights)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS2H2",
+    "strand": "Historical Understandings",
+    "description": "Describe the Georgia Muscogee (Creek) and Cherokee cultures of the past in terms of tools, clothing, homes, ways of making a living, and accomplishments.",
+    "elements": [
+      "a. Compare and contrast the Georgia Muscogee (Creek) and Cherokee cultures of the past to those of Georgians today."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS2G1",
+    "strand": "Geographic Understandings",
+    "description": "Locate and compare major topographical features of Georgia and describe how these features define Georgia’s surface.",
+    "elements": [
+      "a. Locate and compare the geographic regions of Georgia: Blue Ridge, Piedmont, Coastal Plain, Ridge and Valley, and Appalachian Plateau.",
+      "b. Locate on a physical map the major rivers: Savannah, Flint, and Chattahoochee."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS2G2",
+    "strand": "Geographic Understandings",
+    "description": "Describe the cultural and geographic systems associated with the historical figures in SS2H1 and Georgia’s Muscogee (Creek) and Cherokee in SS2H2.",
+    "elements": [
+      "a. Identify specific locations significant to the life and times of each historic figure, and the Muscogee (Creek) and Cherokee, on a political or physical map.",
+      "b. Describe how each historic figure and the Muscogee (Creek) and Cherokee adapted to and were influenced by their environments.",
+      "c. Describe how the region in which these historic figures lived affected their lives and compare these regions to the region in which students live.",
+      "d. Describe the regions in Georgia where the Muscogee (Creek) and Cherokee lived and how the people used their local resources."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS2CG1",
+    "strand": "Government/Civic Understandings",
+    "description": "Define the concept of government and the need for rules and laws.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS2CG2",
+    "strand": "Government/Civic Understandings",
+    "description": "Identify the following elected officials of the executive branch and where they work:",
+    "elements": [
+      "a. President (leader of our nation) and Washington, D.C. – White House",
+      "b. Governor (leader of our state) and Atlanta, GA – State Capitol Building",
+      "c. Mayor (leader of a city) and city hall"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS2CG3",
+    "strand": "Government/Civic Understandings",
+    "description": "Give examples of how the historical figures in SS2H1 demonstrate positive citizenship traits such as: honesty, dependability, trustworthiness, honor, civility, good sportsmanship, patience, and compassion.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS2E1",
+    "strand": "Economic Understandings",
+    "description": "Explain that because of scarcity, people must make choices that result in opportunity costs.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS2E2",
+    "strand": "Economic Understandings",
+    "description": "Identify some ways in which goods and services are allocated (such as: price, majority rule, contests, force, sharing, lottery, authority, first-come-first-served, and personal characteristics).",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS2E3",
+    "strand": "Economic Understandings",
+    "description": "Explain that people usually use money to obtain the goods and services they want and explain how money makes trade easier than barter.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS2E4",
+    "strand": "Economic Understandings",
+    "description": "Describe the costs and benefits of personal saving and spending choices.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS3H1",
+    "strand": "Historical Understandings",
+    "description": "Describe early American Indian cultures and their development in North America.",
+    "elements": [
+      "a. Locate the regions where American Indians settled in North America: Arctic, Northwest Southwest, Plains, Northeast, and Southeast.",
+      "b. Compare and contrast how American Indians in each region used their environment to obtain food, clothing, and shelter.",
+      "c. Discuss how American Indians continue to contribute to American life (e.g., arts, literature)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS3H2",
+    "strand": "Historical Understandings",
+    "description": "Describe European exploration in North America.",
+    "elements": [
+      "a. Describe the reasons for and obstacles to the exploration of North America.",
+      "b. Describe the accomplishments of: John Cabot (England), Vasco Núñez de Balboa (Spain), Hernando de Soto (Spain), Christopher Columbus (Spain), Henry Hudson (The Netherlands), and Jacques Cartier (France).",
+      "c. Describe examples of cooperation and conflict between European explorers and American Indians."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS3H3",
+    "strand": "Historical Understandings",
+    "description": "Explain the factors that shaped British Colonial America.",
+    "elements": [
+      "a. Identify key reasons why the New England, Mid-Atlantic, and Southern colonies were founded (religious freedom and profit).",
+      "b. Compare and contrast colonial life in the New England, Mid-Atlantic, and Southern colonies (education, economy, and religion).",
+      "c. Describe colonial life in America from the perspectives of various people: large landowners, farmers, artisans, women, children, indentured servants, slaves, and American Indians."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS3G1",
+    "strand": "Geographic Understandings",
+    "description": "Locate major topographical features on a physical map of the United States.",
+    "elements": [
+      "a. Locate major rivers of the United States of America: Mississippi, Ohio, Rio Grande, Colorado, Hudson, and St. Lawrence.",
+      "b. Locate major mountain ranges of the United States of America: Appalachian, Rocky."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS3G2",
+    "strand": "Geographic Understandings",
+    "description": "Locate and describe the equator, prime meridian, and lines of latitude and longitude on a globe.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS3G3",
+    "strand": "Geographic Understandings",
+    "description": "Describe how physical systems affect human systems.",
+    "elements": [
+      "a. Explain why American Indian groups occupied the areas they did (SS3H1a), with emphasis on why some developed permanent villages and others did not.",
+      "b. Describe how the early explorers (SS3H2a) adapted, or failed to adapt, to the various physical environments in which they traveled.",
+      "c. Explain how the physical geography of the New England, Mid-Atlantic, and Southern colonies helped determine economic activities."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS3CG1",
+    "strand": "Government/Civic Understandings",
+    "description": "Describe the elements of representative democracy/republic in the United States.",
+    "elements": [
+      "a. Describe the three branches of national government: executive (president), legislative (Congress), and judicial (Supreme Court of the United States).",
+      "b. Describe the three branches of state government: executive (governor), legislative (Georgia General Assembly), and judicial (Supreme Court of Georgia).",
+      "c. State the main responsibility of each branch: executive (enforcing laws), legislative (making laws), judicial (determining if laws are fair)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS3CG2",
+    "strand": "Government/Civic Understandings",
+    "description": "Explain the importance of Americans sharing certain central democratic beliefs and principles, both personal and civic.",
+    "elements": [
+      "a. Explain the necessity of respecting the rights of others and promoting the common good.",
+      "b. Explain the necessity of obeying reasonable laws/rules voluntarily, and explain why it is important for citizens in a democratic society to participate in public (civic) life (staying informed, voting, volunteering, and communicating with public officials)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS3E1",
+    "strand": "Economic Understandings",
+    "description": "Define and give examples of the four types of productive resources.",
+    "elements": [
+      "a. Natural (land)",
+      "b. Human (labor)",
+      "c. Capital (capital goods)",
+      "d. Entrepreneurship (risk-taking and combining natural, human, and capital resources in an attempt to make a profit)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS3E2",
+    "strand": "Economic Understandings",
+    "description": "Explain that governments provide certain types of goods and services in a market economy (schools, libraries, roads, police/fire protection, and military) and pay for these through taxes.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS3E3",
+    "strand": "Economic Understandings",
+    "description": "Give examples of interdependence and trade and explain the benefits of voluntary exchange.",
+    "elements": [
+      "a. Describe the interdependence of consumers and producers.",
+      "b. Describe how goods and services are allocated by price in the marketplace.",
+      "c. Explain that some goods are made locally, some elsewhere in the country, and some in other countries.",
+      "d. Explain that most countries create their own currency for use as money."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS3E4",
+    "strand": "Economic Understandings",
+    "description": "Explain the concept of opportunity cost as it relates to making a saving or spending choice.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS4H1",
+    "strand": "Historical Understandings",
+    "description": "Explain the causes, events, and results of the American Revolution.",
+    "elements": [
+      "a. Trace the events that shaped the revolutionary movement in America: French and Indian War, 1765 Stamp Act, the slogan “no taxation without representation,” the activities of the Sons of Liberty, the activities of the Daughters of Liberty, Boston Massacre, and the Boston Tea Party.",
+      "b. Describe the influence of key individuals and groups during the American Revolution: King George III, George Washington, Benjamin Franklin, Thomas Jefferson, Benedict Arnold, Patrick Henry, John Adams, Paul Revere, and Black regiments.",
+      "c. Describe the major events of the American Revolution and explain the factors leading to American victory and British defeat; include the Battles of Lexington and Concord, Saratoga, and Yorktown.",
+      "d. Explain the writing of the Declaration of Independence; include who wrote it, how it was written, why it was necessary, and how it was a response to tyranny and the abuse of power."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS4H2",
+    "strand": "Historical Understandings",
+    "description": "Analyze the challenges faced by the framers of the Constitution.",
+    "elements": [
+      "a. Identify the major leaders of the Constitutional Convention (James Madison, George Washington, and Benjamin Franklin).",
+      "b. Evaluate the major issues debated at the Constitutional Convention: the weaknesses of the Articles of Confederation, the rights of states to govern themselves (federal system), the Great Compromise, and slavery (Three-Fifths Compromise)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS4H3",
+    "strand": "Historical Understandings",
+    "description": "Explain westward expansion in America.",
+    "elements": [
+      "a. Describe the causes and events of the War of 1812; include the burning of the Capitol and the White House and the writing of “The Star Spangled Banner.”",
+      "b. Describe the impact of westward expansion on American Indians; include the Trail of Tears, Battle of Little Bighorn and the forced relocation of American Indians to reservations.",
+      "c. Describe territorial expansion with emphasis on the Louisiana Purchase, the Lewis and Clark expedition, and the acquisitions of Texas (the Alamo and independence), Oregon (Oregon Trail), and California (Gold Rush and the development of mining towns)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS4H4",
+    "strand": "Historical Understandings",
+    "description": "Examine the main ideas of the abolitionist and suffrage movements.",
+    "elements": [
+      "a. Discuss contributions of and challenges faced by Susan B. Anthony, Frederick Douglass, Elizabeth Cady Stanton, Sojourner Truth, and Harriet Tubman."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS4H5",
+    "strand": "Historical Understandings",
+    "description": "Explain the causes, major events, and consequences of the Civil War.",
+    "elements": [
+      "a. Identify Uncle Tom’s Cabin and John Brown’s raid on Harper’s Ferry and explain how each of these events was related to the Civil War.",
+      "b. Discuss how the issues of states’ rights and slavery increased tensions between the North and South.",
+      "c. Identify major battles, campaigns, and events: Fort Sumter, Gettysburg, the Atlanta Campaign, Sherman’s March to the Sea, and Appomattox Court House.",
+      "d. Describe the roles of Abraham Lincoln, Robert E. Lee, Ulysses S. Grant, Jefferson Davis, Thomas “Stonewall” Jackson, and William T. Sherman.",
+      "e. Describe the effects of war on the North and South."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS4H6",
+    "strand": "Historical Understandings",
+    "description": "Analyze the effects of Reconstruction on American life.",
+    "elements": [
+      "a. Describe the purpose of the 13th, 14th, and 15th Amendments.",
+      "b. Explain the work of the Bureau of Refugees, Freedmen, and Abandoned Lands (Freedmen’s Bureau).",
+      "c. Explain how slavery was replaced by sharecropping and how freed African Americans or Blacks were prevented from exercising their newly won rights.",
+      "d. Describe the effects of Jim Crow laws and practices."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS4G1",
+    "strand": "Geographic Understandings",
+    "description": "Locate important physical and man-made features in the United States.",
+    "elements": [
+      "a. Locate major physical features of the United States: the Atlantic Coastal Plain, the Great Plains, the Continental Divide, the Gulf of Mexico, the Mississippi River, and the Great Lakes.",
+      "b. Locate major man-made features of the United States: New York City, NY; Boston, MA; Philadelphia, PA; Washington, D.C.; Gettysburg, PA; and the Erie Canal."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS4G2",
+    "strand": "Geographic Understandings",
+    "description": "Describe how physical systems affect human systems.",
+    "elements": [
+      "a. Explain how each force (American and British) attempted to use the physical geography of each battle site (Lexington and Concord, Saratoga, and Yorktown) to its benefit.",
+      "b. Describe physical barriers that hindered and physical gateways that benefited territorial expansion from 1801 to 1861."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS4CG1",
+    "strand": "Government/Civic Understandings",
+    "description": "Describe the meaning of:",
+    "elements": [
+      "a. Natural rights as found in the Declaration of Independence (the right to life, liberty, and the pursuit of happiness)",
+      "b. “We the People” from the Preamble to the U.S. Constitution as a reflection of consent of the governed or popular sovereignty",
+      "c. The federal system of government in the U.S. (federal powers, state powers, and shared powers)",
+      "d. Representative democracy/republic"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS4CG2",
+    "strand": "Government/Civic Understandings",
+    "description": "Explain the importance of freedoms guaranteed by the First Amendment to the U.S. Constitution.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS4CG3",
+    "strand": "Government/Civic Understandings",
+    "description": "Describe the structure of government and the Bill of Rights.",
+    "elements": [
+      "a. Describe how the three branches of government interact with each other (checks and balances and separation of powers), and how they relate to local, state, and federal government.",
+      "b. Identify and explain the rights in the Bill of Rights, describe how the Bill of Rights places limits on the powers of government, and explain the reasons for its inclusion in the Constitution in 1791."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS4E1",
+    "strand": "Economic Understandings",
+    "description": "Use the basic economic concepts of trade, opportunity cost, specialization, voluntary exchange, productivity, and price incentives to illustrate historical events.",
+    "elements": [
+      "a. Describe opportunity cost and its relationship to decision-making across time (e.g., decisions to settle in the west).",
+      "b. Explain how price incentives affect people’s behavior and choices: decisions about what crops (e.g., cotton, and tobacco) to grow and products (e.g., textiles) to produce.",
+      "c. Describe how specialization improves standards of living (e.g., differences in the economies in the North and South).",
+      "d. Explain how voluntary exchange helps both buyers and sellers (e.g., Gold Rush mining towns).",
+      "e. Describe how trade promotes economic activity (e.g., trade between the U.S. and Europe).",
+      "f. Give examples of technological advancements and their impact on business productivity during the development of the United States (e.g., cotton gin, steamboat, steam locomotive, and telegraph)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS4E2",
+    "strand": "Economic Understandings",
+    "description": "Identify the elements of a personal budget (income, expenditures, and saving) and explain why personal spending and saving decisions are important.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS5H1",
+    "strand": "Historical Understandings",
+    "description": "Describe how life changed in America at the turn of the century.",
+    "elements": [
+      "a. Describe the role of the cattle trails in the late 19th century; include the Black Cowboys of Texas, the Great Western Cattle Trail, and the Chisholm Trail.",
+      "b. Describe the impact on American life of the Wright brothers (flight), George Washington Carver (science), Alexander Graham Bell (communication), and Thomas Edison (electricity).",
+      "c. Explain how William McKinley and Theodore Roosevelt expanded America’s role in the world; include the Spanish-American War and the building of the Panama Canal.",
+      "d. Describe the reasons people immigrated to the United States, from where they emigrated, and where they settled."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS5H2",
+    "strand": "Historical Understandings",
+    "description": "Describe U.S. involvement in World War I and post-World War I America.",
+    "elements": [
+      "a. Explain how German attacks on U.S. shipping during the war in Europe (1914-1917) ultimately led the U.S. to join the fight against Germany; include the sinking of the Lusitania and concerns over safety of U.S. ships, U.S. contributions to the war, and the impact of the Treaty of Versailles in 1919.",
+      "b. Describe the cultural developments and individual contributions in the 1920s of the Jazz Age (Louis Armstrong), the Harlem Renaissance (Langston Hughes), baseball (Babe Ruth), the automobile (Henry Ford), and transatlantic flight (Charles Lindbergh)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS5H3",
+    "strand": "Historical Understandings",
+    "description": "Explain how the Great Depression and New Deal affected the lives of millions of Americans.",
+    "elements": [
+      "a. Discuss the Stock Market Crash of 1929, Herbert Hoover, Franklin Roosevelt, the Dust Bowl, and soup kitchens.",
+      "b. Analyze the main features of the New Deal; include the significance of the Civilian Conservation Corps, Works Progress Administration, and the Tennessee Valley Authority.",
+      "c. Discuss important cultural elements of the 1930s; include Duke Ellington, Margaret Mitchell, and Jesse Owens."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS5H4",
+    "strand": "Historical Understandings",
+    "description": "Explain America’s involvement in World War II.",
+    "elements": [
+      "a. Describe German aggression in Europe and Japanese aggression in Asia.",
+      "b. Describe major events in the war in both Europe and the Pacific; include Pearl Harbor, Iwo Jima, D-Day, VE and VJ Days, and the Holocaust.",
+      "c. Discuss President Truman’s decision to drop the atomic bombs on Hiroshima and Nagasaki.",
+      "d. Identify Roosevelt, Stalin, Churchill, Hirohito, Truman, Mussolini, and Hitler.",
+      "e. Describe the effects of rationing and the changing role of women and African Americans or Blacks; include “Rosie the Riveter” and the Tuskegee Airmen.",
+      "f. Explain the role of Eleanor Roosevelt and the U.S. in the formation of the United Nations."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS5H5",
+    "strand": "Historical Understandings",
+    "description": "Discuss the origins and consequences of the Cold War.",
+    "elements": [
+      "a. Explain the origin and meaning of the term “Iron Curtain.”",
+      "b. Explain how the United States sought to stop the spread of communism through the Berlin airlift, the Korean War, and the North Atlantic Treaty Organization.",
+      "c. Identify Joseph McCarthy and Nikita Khrushchev.",
+      "d. Discuss the importance of the Cuban Missile Crisis and the Vietnam War."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS5H6",
+    "strand": "Historical Understandings",
+    "description": "Describe the importance of key people, events, and developments between 1950- 1975.",
+    "elements": [
+      "a. Analyze the effects of Jim Crow laws and practices.",
+      "b. Explain the key events and people of the Civil Rights movement: Brown v. Board of Education (1954), Montgomery Bus Boycott, the March on Washington, Civil Rights Act, Voting Rights Act, and civil rights activities of Thurgood Marshall, Lyndon B. Johnson, Cesar Chavez, Rosa Parks, and Martin Luther King, Jr.",
+      "c. Describe the impact on American society of the assassinations of President John F. Kennedy, Robert F. Kennedy, and Martin Luther King, Jr.",
+      "d. Discuss the significance of the technologies of television and space exploration."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS5H7",
+    "strand": "Historical Understandings",
+    "description": "Trace important developments in America from 1975 to 2001.",
+    "elements": [
+      "a. Describe the collapse of the Soviet Union, including the role of Ronald Reagan.",
+      "b. Describe the events of September 11, 2001, and analyze their impact on American life.",
+      "c. Explain the impact of the personal computer and the Internet on American life."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS5G1",
+    "strand": "Geographic Understandings",
+    "description": "Locate important places in the United States.",
+    "elements": [
+      "a. Locate important man-made places; include the Chisholm Trail; Pittsburgh, PA; Kitty Hawk, NC; Pearl Harbor, HI; Montgomery, AL.; and Chicago, IL."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS5G2",
+    "strand": "Geographic Understandings",
+    "description": "Explain the reasons for the spatial patterns of economic activities.",
+    "elements": [
+      "a. Locate primary agricultural and industrial locations between the end of the Civil War and 1900 and explain how factors such as population, transportation, and resources have influenced these areas (e.g., Pittsburgh’s rapid growth in the late nineteenth century).",
+      "b. Locate primary agricultural and industrial locations since the turn of the 20th century and explain how factors such as population, transportation, and resources have influenced these areas (e.g., Chicago’s rapid growth at the turn of the century)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS5CG1",
+    "strand": "Government/Civic Understandings",
+    "description": "Explain how a citizen’s rights are protected under the U.S. Constitution.",
+    "elements": [
+      "a. Explain the responsibilities of a citizen.",
+      "b. Explain the concept of due process of law and describe how the U.S. Constitution protects a citizen’s rights by due process."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS5CG2",
+    "strand": "Government/Civic Understandings",
+    "description": "Explain the process by which amendments to the U.S. Constitution are made.",
+    "elements": [
+      "a. Explain the amendment process outlined in the Constitution.",
+      "b. Describe the purpose for the amendment process."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS5CG3",
+    "strand": "Government/Civic Understandings",
+    "description": "Explain how amendments to the U. S. Constitution have maintained a representative democracy/republic.",
+    "elements": [
+      "a. Explain how voting rights are protected by the 15th, 19th, 23rd, 24th, and 26th amendments."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS5E1",
+    "strand": "Economic Understandings",
+    "description": "Use the basic economic concepts of trade, opportunity cost, specialization, productivity, and price incentives to illustrate historical events.",
+    "elements": [
+      "a. Describe opportunity costs and their relationship to decision-making across time (e.g., decisions by individuals in response to rationing during WWII).",
+      "b. Explain how price incentives affect people’s behavior and choices (e.g., decisions to participate in cattle trails because of increased beef prices).",
+      "c. Describe how specialization can improve standards of living and productivity (e.g., how Henry Ford’s use of the assembly line reduced the price of automobiles).",
+      "d. Describe how trade and voluntary exchange promotes economic activity (e.g., how the Panama Canal increases trade among countries)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS5E2",
+    "strand": "Economic Understandings",
+    "description": "Describe the functions of four major sectors in the U. S. economy.",
+    "elements": [
+      "a. Describe the household function in providing resources and consuming goods and services.",
+      "b. Describe the private business function in producing goods and services.",
+      "c. Describe the bank function in providing checking accounts, savings accounts, and loans.",
+      "d. Describe the government function in taxation and providing certain public goods and public services."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS5E3",
+    "strand": "Economic Understandings",
+    "description": "Describe how consumers and producers interact in the U. S. economy.",
+    "elements": [
+      "a. Describe how competition, markets, and prices influence consumer behavior.",
+      "b. Describe how people earn income by selling their labor to businesses.",
+      "c. Describe how entrepreneurs take risks to develop new goods and services to start a business."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS5E4",
+    "strand": "Economic Understandings",
+    "description": "Identify the elements of a personal budget (income, expenditures, and saving) and explain why personal spending and saving decisions are important.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6H1",
+    "strand": "Historical Understandings",
+    "description": "Explain conflict and change in Latin America.",
+    "elements": [
+      "a. Describe the influence of African slavery on the development of the Americas.",
+      "b. Describe the influence of the Spanish and the Portuguese on the language and religions of Latin America.",
+      "c. Explain the impact of the Cuban Revolution and describe the current relationship between Cuba and the United States.",
+      "d. Explain the impact of poverty, the war on drugs, and migration to the United States on Latin America."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6H2",
+    "strand": "Historical Understandings",
+    "description": "Describe Quebec’s independence movement.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6G1",
+    "strand": "Geographic Understandings",
+    "description": "Locate selected features of Latin America.",
+    "elements": [
+      "a. Locate on a world and regional political-physical map: Amazon River, Amazon Rainforest, Caribbean Sea, Gulf of Mexico, Atlantic Ocean, Pacific Ocean, Panama Canal, Andes Mountains, Sierra Madre Mountains, and Atacama Desert.",
+      "b. Locate on a world and regional political-physical map the countries of Brazil, Chile, Colombia, Cuba, Mexico, and Panama."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6G2",
+    "strand": "Geographic Understandings",
+    "description": "Explain the impact of environmental issues in Latin America.",
+    "elements": [
+      "a. Explain the causes and effects of air pollution in Mexico City, Mexico.",
+      "b. Explain the environmental issue of destruction of the rain forest in Brazil."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6G3",
+    "strand": "Geographic Understandings",
+    "description": "Explain the impact of location, climate, distribution of natural resources, and population distribution on Latin America.",
+    "elements": [
+      "a. Explain how the location, climate, and distribution of natural resources impact trade and affect where people live in Mexico, Brazil, and Cuba."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6G4",
+    "strand": "Geographic Understandings",
+    "description": "Locate selected features of Canada.",
+    "elements": [
+      "a. Locate on a world and regional political-physical map: the St. Lawrence River, Hudson Bay, Atlantic Ocean, Pacific Ocean, the Great Lakes, Canadian Shield, and Rocky Mountains.",
+      "b. Locate on a world and regional political-physical map Canada and the province of Quebec."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6G5",
+    "strand": "Geographic Understandings",
+    "description": "Explain the impact of location, climate, distribution of natural resources, and population distribution on Canada.",
+    "elements": [
+      "a. Describe how Canada’s location, climate, and natural resources impact trade and affect where people live."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6G6",
+    "strand": "Geographic Understandings",
+    "description": "Explain the impact of environmental issues in Canada.",
+    "elements": [
+      "a. Explain the causes and effects of pollution and acid rain in Canada to include the Great Lakes.",
+      "b. Explain the causes and effects of the extraction of natural resources on the Canadian Shield (e.g., mining and logging)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6CG1",
+    "strand": "Government/Civic Understandings",
+    "description": "Compare and contrast various forms of government.",
+    "elements": [
+      "a. Explain citizen participation in autocratic, and democratic governments. [i.e. the role of citizens in choosing the leaders of Mexico (presidential democracy), Cuba (autocratic), and Brazil (presidential democracy)].",
+      "b. Describe the two predominant forms of democratic governments: parliamentary and presidential."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6CG2",
+    "strand": "Government/Civic Understandings",
+    "description": "Explain citizen participation in the Canadian government.",
+    "elements": [
+      "a. Explain the role of citizens in choosing the leader of Canada (parliamentary democracy)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6E1",
+    "strand": "Economic Understandings",
+    "description": "Analyze different economic systems.",
+    "elements": [
+      "a. Compare how traditional, command, and market economies answer the economic questions of 1-what to produce, 2-how to produce, and 3-for whom to produce.",
+      "b. Explain that countries have a mixed economic system located on a continuum between pure market and pure command.",
+      "c. Compare and contrast the basic types of economic systems found in Mexico, Cuba, and Brazil."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6E2",
+    "strand": "Economic Understandings",
+    "description": "Give examples of how voluntary trade benefits buyers and sellers in Latin America.",
+    "elements": [
+      "a. Explain how specialization encourages trade between countries.",
+      "b. Compare and contrast different types of trade barriers, such as tariffs, quotas, and embargos.",
+      "c. Explain why international trade requires a system for exchanging currencies between nations.",
+      "d. Explain the functions of the United States-Mexico-Canada Agreement (USMCA)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6E3",
+    "strand": "Economic Understandings",
+    "description": "Describe factors that influence economic growth and examine their presence or absence in Brazil, Cuba, and Mexico.",
+    "elements": [
+      "a. Evaluate how literacy rates affect the standard of living.",
+      "b. Explain the relationship between investment in human capital (education and training) and gross domestic product (GDP per capita).",
+      "c. Explain the relationship between investment in capital goods (factories, machinery, and technology) and gross domestic product (GDP per capita).",
+      "d. Describe the role of natural resources in a country’s economy.",
+      "e. Describe the role of entrepreneurship."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6E4",
+    "strand": "Economic Understandings",
+    "description": "Analyze different economic systems.",
+    "elements": [
+      "a. Compare how traditional, command, and market economies answer the economic questions of 1-what to produce, 2-how to produce, and 3-for whom to produce.",
+      "b. Explain that countries have a mixed economic system located on a continuum between pure market and pure command.",
+      "c. Describe the economic system of Canada."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6E5",
+    "strand": "Economic Understandings",
+    "description": "Give examples of how voluntary trade benefits buyers and sellers in Canada.",
+    "elements": [
+      "a. Explain how specialization encourages trade between countries.",
+      "b. Compare and contrast different types of trade barriers, such as tariffs, quotas, and embargoes.",
+      "c. Explain why international trade requires a system for exchanging currencies between nations.",
+      "d. Explain the functions of the United States-Mexico-Canada Agreement (USMCA)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6E6",
+    "strand": "Economic Understandings",
+    "description": "Describe factors that influence economic growth and examine their presence or absence in Canada.",
+    "elements": [
+      "a. Evaluate how literacy rates affect the standard of living.",
+      "b. Explain the relationship between investment in human capital (education and training) and gross domestic product (GDP per capita).",
+      "c. Explain the relationship between investment in capital goods (factories, machinery, and technology) and gross domestic product (GDP per capita).",
+      "d. Describe the role of natural resources in a country’s economy.",
+      "e. Describe the role of entrepreneurship. Europe"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6H3",
+    "strand": "Historical Understandings",
+    "description": "Explain conflict and change in Europe.",
+    "elements": [
+      "a. Describe the aftermath of World War I: the rise of communism, the Treaty of Versailles, the rise of Nazism, and worldwide depression.",
+      "b. Explain the rise of Nazism including preexisting prejudices, the use of propaganda, and events which resulted in the Holocaust.",
+      "c. Explain how German reunification contributed to the collapse of the Soviet Union and led to the end of the Cold War."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6G7",
+    "strand": "Geographic Understandings",
+    "description": "Locate selected features of Europe.",
+    "elements": [
+      "a. Locate on a world and regional political-physical map: the Danube River, Rhine River, English Channel, Mediterranean Sea, European Plain, the Alps, Pyrenees, Ural Mountains, and Iberian Peninsula.",
+      "b. Locate on a world and regional political-physical map the countries of France, Germany, Italy, Russia, Spain, Ukraine, and United Kingdom."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6G8",
+    "strand": "Geographic Understandings",
+    "description": "Explain environmental issues in Europe.",
+    "elements": [
+      "a. Explain the causes and effects of acid rain in Germany.",
+      "b. Explain the causes and effects of air pollution in the United Kingdom.",
+      "c. Explain the causes and effects of the nuclear disaster in Chernobyl, Ukraine."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6G9",
+    "strand": "Geographic Understandings",
+    "description": "Explain the impact of location, climate, natural resources, and population distribution on Europe.",
+    "elements": [
+      "a. Compare how the location, climate, and natural resources of Germany, the United Kingdom and Russia impact trade and affect where people live."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6G10",
+    "strand": "Geographic Understandings",
+    "description": "Describe selected cultural characteristics of Europe.",
+    "elements": [
+      "a. Describe the diversity of languages spoken within Europe.",
+      "b. Identify the major religions in Europe: Judaism, Christianity, and Islam."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6CG3",
+    "strand": "Government/Civic Understandings",
+    "description": "Compare and contrast various forms of government.",
+    "elements": [
+      "a. Explain citizen participation in autocratic and democratic governments. [i.e., role of citizens in choosing the leaders of the United Kingdom (parliamentary democracy), Germany (parliamentary democracy), and Russia (presidential democracy)].",
+      "b. Describe the two predominant forms of democratic governments: parliamentary and presidential."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6E7",
+    "strand": "Economic Understandings",
+    "description": "Analyze different economic systems.",
+    "elements": [
+      "a. Compare how traditional, command, and market economies answer the economic questions of 1-what to produce, 2-how to produce, and 3-for whom to produce.",
+      "b. Explain that countries have a mixed economic system located on a continuum between pure market and pure command.",
+      "c. Compare the basic types of economic systems found in the United Kingdom, Germany, and Russia."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6E8",
+    "strand": "Economic Understandings",
+    "description": "Analyze the benefits of and barriers to voluntary trade in Europe.",
+    "elements": [
+      "a. Explain how specialization encourages trade between countries.",
+      "b. Compare and contrast different types of trade barriers such as tariffs, quotas, and embargoes.",
+      "c. Explain why international trade requires a system for exchanging currencies between nations.",
+      "d. Describe the purpose of the European Union and the relationship between member nations."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6E9",
+    "strand": "Economic Understandings",
+    "description": "Describe factors that influence economic growth and examine their presence or absence in the United Kingdom, Germany, and Russia.",
+    "elements": [
+      "a. Evaluate how literacy rates affect the standard of living.",
+      "b. Explain the relationship between investment in human capital goods (education and training) and gross domestic product (GDP per capita).",
+      "c. Explain the relationship between investment in capital (factories, machinery, and technology) and gross domestic product (GDP per capita).",
+      "d. Describe the role of natural resources in a country’s economy.",
+      "e. Describe the role of entrepreneurship. Australia"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6H4",
+    "strand": "Historical Understandings",
+    "description": "Explain the impact of English colonization on current Aboriginal basic rights, health, literacy, and language.",
+    "elements": []
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6G11",
+    "strand": "Geographic Understandings",
+    "description": "Locate selected features of Australia.",
+    "elements": [
+      "a. Locate on a world and regional political-physical map: the Great Barrier Reef, Coral Sea, Uluru/Ayers Rock, Indian and Pacific Oceans, Great Dividing Range, and Great Victoria Desert."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6G12",
+    "strand": "Geographic Understandings",
+    "description": "Explain the impact of location, climate, distribution of natural resources, and population distribution on Australia.",
+    "elements": [
+      "a. Describe how Australia’s location, climate, and natural resources impact trade and affect where people live."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6CG4",
+    "strand": "Government/Civic Understandings",
+    "description": "Explain forms of citizen participation in government.",
+    "elements": [
+      "a. Explain citizen participation in democratic governments [i.e. the role of citizens in choosing the leaders of Australia (parliamentary democracy)]."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6E10",
+    "strand": "Economic Understandings",
+    "description": "Analyze different economic systems.",
+    "elements": [
+      "a. Compare how traditional, command, and market economies answer the economic questions of 1-what to produce, 2-how to produce, and 3-for whom to produce.",
+      "b. Explain that countries have a mixed economic system located on a continuum between pure market and pure command.",
+      "c. Describe the economic system used in Australia."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6E11",
+    "strand": "Economic Understandings",
+    "description": "Give examples of how voluntary trade benefits buyers and sellers in Australia.",
+    "elements": [
+      "a. Explain how specialization makes trade possible between countries.",
+      "b. Compare and contrast different types of trade barriers, such as tariffs, quotas, and embargoes.",
+      "c. Explain why international trade requires a system for exchanging currency between nations."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6E12",
+    "strand": "Economic Understandings",
+    "description": "Describe factors that influence economic growth and examine their presence or absence in Australia.",
+    "elements": [
+      "a. Evaluate how literacy rates affect the standard of living.",
+      "b. Explain the relationship between investment in human capital (education and training) and gross domestic product (GDP per capita).",
+      "c. Explain the relationship between investment in capital goods (factories, machinery, and technology) and gross domestic product (GDP per capita).",
+      "d. Describe the role of natural resources in a country’s economy.",
+      "e. Describe the role of entrepreneurship."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS6E13",
+    "strand": "Economic Understandings",
+    "description": "Understand that a basic principle of effective personal money management is to live within one’s income.",
+    "elements": [
+      "a. Understand that income is received from work and is limited.",
+      "b. Understand that a budget is a tool to plan the spending and saving of income.",
+      "c. Understand the reasons and benefits of saving.",
+      "d. Understand the uses and costs of credit."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7H1",
+    "strand": "Historical Understandings",
+    "description": "Analyze continuity and change in Africa.",
+    "elements": [
+      "a. Explain how the European partitioning across Africa contributed to conflict, civil war, and artificial political boundaries in Africa today.",
+      "b. Explain how the Pan-African movement and nationalism led to independence in Kenya and Nigeria.",
+      "c. Explain the creation and end of apartheid in South Africa and the roles of Nelson Mandela and F.W.de Klerk."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7G1",
+    "strand": "Geographic Understandings",
+    "description": "Locate selected features of Africa.",
+    "elements": [
+      "a. Locate on a world and regional political-physical map: Sahara, Sahel, savanna, tropical rain forest, Congo River, Niger River, Nile River, Lake Victoria, Great Rift Valley, Mt. Kilimanjaro, Atlas Mountains, and Kalahari Desert.",
+      "b. Locate on a world and regional political-physical map the countries of Democratic Republic of the Congo, Egypt, Kenya, Nigeria, South Africa, and Sudan."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7G2",
+    "strand": "Geographic Understandings",
+    "description": "Explain environmental issues across the continent of Africa.",
+    "elements": [
+      "a. Explain how water pollution and unequal access to water impacts irrigation, trade, industry, and drinking water.",
+      "b. Explain the relationship between poor soil and deforestation in Sub-Saharan Africa.",
+      "c. Explain the impact of desertification on the environment of Africa."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7G3",
+    "strand": "Geographic Understandings",
+    "description": "Explain the impact of location, climate, and physical characteristics on population distribution in Africa.",
+    "elements": [
+      "a. Explain how the characteristics in the Sahara, Sahel, savanna, and tropical rain forest impact trade and affect where people live."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7G4",
+    "strand": "Geographic Understandings",
+    "description": "Analyze the diverse cultural characteristics of the people who live in Africa.",
+    "elements": [
+      "a. Explain the differences between an ethnic group and a religious group.",
+      "b. Describe the diversity of religions within African ethnic groups."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7CG1",
+    "strand": "Government/Civic Understandings",
+    "description": "Compare and contrast different forms of citizen participation in government.",
+    "elements": [
+      "a. Explain the role of citizen participation in autocratic and democratic governments.",
+      "b. Describe the two predominant forms of democratic governments: parliamentary and presidential.",
+      "c. Explain the role of citizens in choosing the leaders of South Africa (parliamentary democracy), Nigeria (presidential democracy), and Kenya (presidential democracy)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7CG2",
+    "strand": "Government/Civic Understandings",
+    "description": "Analyze how government instability in Africa impacts standard of living.",
+    "elements": [
+      "a. Describe the impact of government instability on access to education and the distribution of medicine and food to combat diseases and famine across Africa."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7E1",
+    "strand": "Economic Understandings",
+    "description": "Analyze different economic systems.",
+    "elements": [
+      "a. Compare how traditional, command, and market economies answer the economic questions of 1-what to produce, 2-how to produce, and 3-for whom to produce.",
+      "b. Explain that countries have a mixed economic system located on a continuum between pure market and pure command.",
+      "c. Compare and contrast the economic systems in South Africa, Nigeria, and Kenya."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7E2",
+    "strand": "Economic Understandings",
+    "description": "Explain how voluntary trade benefits buyers and sellers in Africa.",
+    "elements": [
+      "a. Explain how specialization encourages trade between countries.",
+      "b. Compare and contrast different types of trade barriers, such as tariffs, quotas, and embargoes.",
+      "c. Explain why international trade requires a system for exchanging currencies between nations."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7E3",
+    "strand": "Economic Understandings",
+    "description": "Describe factors that influence economic growth and examine their presence or absence in Nigeria, South Africa, and Kenya.",
+    "elements": [
+      "a. Evaluate how literacy rates affect the standard of living.",
+      "b. Explain the relationship between investment in human capital (education and training) and gross domestic product (GDP per capita).",
+      "c. Explain the relationship between investment in capital goods (factories, machinery, and technology) and gross domestic product (GDP per capita).",
+      "d. Explain how the distribution of natural resources affects the economic development of Africa.",
+      "e. Describe the role of entrepreneurship. Southwest Asia (Middle East)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7H2",
+    "strand": "Historical Understandings",
+    "description": "Analyze continuity and change in Southwest Asia (Middle East).",
+    "elements": [
+      "a. Explain how European partitioning in the Middle East following WWI led to regional conflict.",
+      "b. Explain the historical factors contributing to the establishment of the modern State of Israel in 1948; include the Jewish religious connection to the land, antisemitism, the development of Zionism in Europe, and the aftermath of the Holocaust.",
+      "c. Describe how land and religion plays a role in continuing conflicts in the Middle East (i.e. the Palestinian-Israeli conflict, the division between Sunni and Shia Muslims, and Kurdish nationalism).",
+      "d. Explain U.S. presence and interest in Southwest Asia, including the Persian Gulf conflict and invasions of Afghanistan and Iraq."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7G5",
+    "strand": "Geographic Understandings",
+    "description": "Locate selected features in Southwest Asia (Middle East).",
+    "elements": [
+      "a. Locate on a world and regional political-physical map: Euphrates River, Jordan River, Tigris River, Suez Canal, Persian Gulf, Strait of Hormuz, Arabian Sea, and Red Sea.",
+      "b. Locate on a world and regional political-physical map: Afghanistan, Iran, Iraq, Israel, Kuwait, Saudi Arabia, Syria, Turkey, Gaza Strip, and West Bank."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7G6",
+    "strand": "Geographic Understandings",
+    "description": "Explain the impact of environmental issues across Southwest Asia (Middle East).",
+    "elements": [
+      "a. Explain how water pollution and the unequal access to water impacts irrigation and drinking water."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7G7",
+    "strand": "Geographic Understandings",
+    "description": "Explain the impact of location, climate, physical characteristics, distribution of natural resources, and population distribution on Southwest Asia (Middle East).",
+    "elements": [
+      "a. Describe how the deserts and rivers of Southwest Asia (Middle East) impact trade and affect where people live."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7G8",
+    "strand": "Geographic Understandings",
+    "description": "Analyze the diverse cultural characteristics of the people who live in Southwest Asia (Middle East).",
+    "elements": [
+      "a. Explain the differences between an ethnic group and a religious group.",
+      "b. Describe the diversity of religions within Southwest Asian (Middle Eastern) ethnic groups (e.g., Arabs, Persians, and Kurds).",
+      "c. Compare and contrast the prominent religions in Southwest Asia (Middle East): Judaism, Islam, and Christianity."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7CG3",
+    "strand": "Government/Civic Understandings",
+    "description": "Compare and contrast various forms of government.",
+    "elements": [
+      "a. Explain citizen participation in autocratic and democratic governments [i.e., the role of citizens in choosing the leaders of Israel (parliamentary democracy), Saudi Arabia (autocratic monarchy), and Turkey (presidential democracy)].",
+      "b. Describe the two predominant forms of democratic governments: parliamentary and presidential."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7E4",
+    "strand": "Economic Understandings",
+    "description": "Analyze different economic systems.",
+    "elements": [
+      "a. Compare how traditional, command, and market economies answer the economic questions of 1-what to produce, 2-how to produce, and 3-for whom to produce.",
+      "b. Explain that countries have a mixed economic system located on a continuum between pure market and pure command.",
+      "c. Compare and contrast the economic systems in Israel, Saudi Arabia, and Turkey."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7E5",
+    "strand": "Economic Understandings",
+    "description": "Explain how voluntary trade benefits buyers and sellers in Southwest Asia (Middle East).",
+    "elements": [
+      "a. Explain how specialization encourages trade between countries.",
+      "b. Compare and contrast different types of trade barriers, such as tariffs, quotas, and embargoes.",
+      "c. Explain why international trade requires a system for exchanging currencies between nations.",
+      "d. Explain the primary function of the Organization of Petroleum Exporting Countries (OPEC)."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7E6",
+    "strand": "Economic Understandings",
+    "description": "Describe factors that influence economic growth and examine their presence or absence in Israel, Saudi Arabia, and Turkey.",
+    "elements": [
+      "a. Evaluate how literacy rates affect the standard of living.",
+      "b. Explain the relationship between investment in human capital (education and training) and gross domestic product (GDP per capita).",
+      "c. Explain the relationship between investment in capital goods (factories, machinery, and technology) and gross domestic product (GDP per capita).",
+      "d. Explain how the distribution of oil has affected the development of Southwest Asia (Middle East).",
+      "e. Describe the role of entrepreneurship. Southern and Eastern Asia"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7H3",
+    "strand": "Historical Understandings",
+    "description": "Analyze continuity and change in Southern and Eastern Asia.",
+    "elements": [
+      "a. Describe how nationalism led to independence in India.",
+      "b. Describe the impact of Mohandas Gandhi’s belief in non-violent protest.",
+      "c. Explain the role of the United States in the rebuilding of Japan after WWII.",
+      "d. Describe the impact of communism in China in terms of Mao Zedong, the Great Leap Forward, the Cultural Revolution, and Tiananmen Square.",
+      "e. Explain the reasons for foreign involvement in Korea and Vietnam in terms of containment of communism."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7G9",
+    "strand": "Geographic Understandings",
+    "description": "Locate selected features in Southern and Eastern Asia.",
+    "elements": [
+      "a. Locate on a world and regional political-physical map: Ganges River, Huang He (Yellow River), Chang Jiang (Yangtze) River, Bay of Bengal, Indian Ocean, Sea of Japan, South China Sea, Yellow Sea, Gobi Desert, Taklimakan Desert, Himalayan Mountains, and Korean Peninsula.",
+      "b. Locate on a world and regional political-physical map the countries of China, India, Japan, North Korea, South Korea, and Vietnam."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7G10",
+    "strand": "Geographic Understandings",
+    "description": "Explain the impact of environmental issues across Southern and Eastern Asia.",
+    "elements": [
+      "a. Explain the causes and effects of pollution on the Chang Jiang (Yangtze) and Ganges Rivers.",
+      "b. Explain the causes and effects of air pollution and flooding in India and China."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7G11",
+    "strand": "Geographic Understandings",
+    "description": "Explain the impact of location, climate, physical characteristics, distribution of natural resources, and population distribution on Southern and Eastern Asia.",
+    "elements": [
+      "a. Describe how the mountain, desert, and water features of Southern and Eastern Asia impact trade and affect where people live."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7G12",
+    "strand": "Geographic Understandings",
+    "description": "Analyze the diverse cultural characteristics of the people who live in Southern and Eastern Asia.",
+    "elements": [
+      "a. Explain the differences between an ethnic group and a religious group.",
+      "b. Compare and contrast the belief systems originating in Southern and Eastern Asia: Buddhism, Hinduism, Shintoism, and Confucianism."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7CG4",
+    "strand": "Government/Civic Understandings",
+    "description": "Compare and contrast various forms of government.",
+    "elements": [
+      "a. Explain the role of citizen participation in autocratic and democratic governments [i.e. explain the role of citizens in choosing the leaders of China (communist state), Japan (parliamentary democracy), North Korea (autocracy), South Korea (presidential democracy), and India (parliamentary democracy)].",
+      "b. Describe the two predominant forms of democratic governments: parliamentary and presidential."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7E7",
+    "strand": "Economic Understandings",
+    "description": "Analyze different economic systems.",
+    "elements": [
+      "a. Compare how traditional, command, and market economies answer the economic questions of 1-what to produce, 2-how to produce, and 3-for whom to produce.",
+      "b. Explain that countries have a mixed economic system located on a continuum between pure market and pure command.",
+      "c. Compare and contrast the economic systems in China, India, Japan, North Korea, and South Korea."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7E8",
+    "strand": "Economic Understandings",
+    "description": "Explain how voluntary trade benefits buyers and sellers in Southern and Eastern Asia.",
+    "elements": [
+      "a. Explain how specialization encourages trade between countries.",
+      "b. Compare and contrast different types of trade barriers, such as tariffs, quotas, and embargoes.",
+      "c. Explain why international trade requires a system for exchanging currencies between nations."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7E9",
+    "strand": "Economic Understandings",
+    "description": "Describe factors that influence economic growth and examine their presence or absence in China, India, Japan, South Korea and North Korea",
+    "elements": [
+      "a. Evaluate how literacy rates affect the standard of living.",
+      "b. Explain the relationship between investment in human capital (education and training) and gross domestic product (GDP per capita).",
+      "c. Explain the relationship between investment in capital goods (factories, machinery, and technology) and gross domestic product (GDP per capita).",
+      "d. Describe the role of natural resources in a country’s economy.",
+      "e. Describe the role of entrepreneurship."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS7E10",
+    "strand": "Economic Understandings",
+    "description": "Understand that a basic principle of effective personal money management is to live within one’s income.",
+    "elements": [
+      "a. Understand that income is received from work and is limited.",
+      "b. Understand that a budget is a tool to plan the spending and saving of income.",
+      "c. Understand the reasons and benefits of saving.",
+      "d. Understand the uses and costs of credit."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8H1",
+    "strand": "Historical Understandings",
+    "description": "Evaluate the impact of European exploration and settlement on American Indians in Georgia.",
+    "elements": [
+      "a. Describe the characteristics of American Indians living in Georgia at the time of European contact; to include culture, food, weapons/tools, and shelter.",
+      "b. Explain reasons for European exploration and settlement of North America, with emphasis on the interests of the Spanish and British in the Southeastern area.",
+      "c. Evaluate the impact of Spanish contact on American Indians, including the explorations of Hernando DeSoto and the establishment of Spanish missions along the barrier islands."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8H2",
+    "strand": "Historical Understandings",
+    "description": "Analyze the colonial period of Georgia’s history.",
+    "elements": [
+      "a. Explain the importance of the Charter of 1732, including the reasons for settlement (philanthropy, economics, and defense).",
+      "b. Analyze the relationship between James Oglethorpe, Tomochichi, and Mary Musgrove in establishing the city of Savannah at Yamacraw Bluff.",
+      "c. Evaluate the role of diverse groups (Jews, Salzburgers, Highland Scots, and Malcontents) in settling Georgia during the Trustee Period.",
+      "d. Explain the transition of Georgia into a royal colony with regard to land ownership, slavery, alcohol, and government.",
+      "e. Give examples of the kinds of goods and services produced and traded in colonial Georgia."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8H3",
+    "strand": "Historical Understandings",
+    "description": "Analyze the role of Georgia in the American Revolutionary Era.",
+    "elements": [
+      "a. Explain the causes of the American Revolution as they impacted Georgia; include the French and Indian War, Proclamation of 1763, and the Stamp Act.",
+      "b. Interpret the three parts of the Declaration of Independence (preamble, grievances, and declaration) and identify the three Georgia signers of the document.",
+      "c. Analyze the significance of the Loyalists and Patriots as a part of Georgia’s role in the Revolutionary War; include the Battle of Kettle Creek and Siege of Savannah.",
+      "d. Analyze the weaknesses of the Articles of Confederation and explain how those weaknesses led to the writing of a new federal Constitution."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8H4",
+    "strand": "Historical Understandings",
+    "description": "Explain significant factors that affected westward expansion in Georgia between 1789 and 1840.",
+    "elements": [
+      "a. Explain reasons for the establishment of the University of Georgia, and for the westward movement of Georgia’s capitals.",
+      "b. Evaluate the impact of land policies pursued by Georgia; include the headright system, land lotteries, and the Yazoo Land Fraud.",
+      "c. Explain how technological developments, including the cotton gin and railroads, had an impact on Georgia’s growth.",
+      "d. Describe the role of William McIntosh in the removal of the Muscogee (Creek) from Georgia.",
+      "e. Analyze how key people (John Ross, John Marshall, and Andrew Jackson) and events (Dahlonega Gold Rush and Worcester v. Georgia) led to the removal of the Cherokees from Georgia known as the Trail of Tears."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8H5",
+    "strand": "Historical Understandings",
+    "description": "Analyze the impact of the Civil War on Georgia.",
+    "elements": [
+      "a. Explain the importance of key issues and events that led to the Civil War; include slavery, states’ rights, nullification, Compromise of 1850 and the Georgia Platform, the Dred Scott case, Abraham Lincoln’s election in 1860, and the debate over secession in Georgia.",
+      "b. Explain Georgia’s role in the Civil War; include the Union blockade of Georgia’s coast, the Emancipation Proclamation, Chickamauga, Sherman’s Atlanta Campaign, Sherman’s March to the Sea, and Andersonville."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8H6",
+    "strand": "Historical Understandings",
+    "description": "Analyze the impact of Reconstruction on Georgia.",
+    "elements": [
+      "a. Explain the roles of the 13th, 14th, and 15th Amendments in Reconstruction.",
+      "b. Explain the key features of the Lincoln, the Johnson, and the Congressional Reconstruction plans.",
+      "c. Compare and contrast the goals and outcomes of the Freedmen’s Bureau and the Ku Klux Klan.",
+      "d. Examine reasons for and effects of the removal of African American or Black legislators from the Georgia General Assembly during Reconstruction.",
+      "e. Give examples of goods and services produced during the Reconstruction Era, including the use of sharecropping and tenant farming."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8H7",
+    "strand": "Historical Understandings",
+    "description": "Evaluate key political, social, and economic changes that occurred in Georgia during the New South Era.",
+    "elements": [
+      "a. Identify the ways individuals, groups, and events attempted to shape the New South; include the Bourbon Triumvirate, Henry Grady, International Cotton Expositions, and Tom Watson and the Populists.",
+      "b. Analyze how rights were denied to African Americans or Blacks through Jim Crow laws, Plessy v. Ferguson, disenfranchisement, and racial violence, including the 1906 Atlanta Race Massacre.",
+      "c. Explain the roles of Booker T. Washington, W. E. B. DuBois, and Alonzo Herndon in advancement of the rights of African Americans or Blacks in the New South Era.",
+      "d. Examine antisemitism and the resistance to racial equality exemplified in the Leo Frank case."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8H8",
+    "strand": "Historical Understandings",
+    "description": "Analyze Georgia’s participation in important events that occurred from World War I through the Great Depression.",
+    "elements": [
+      "a. Describe Georgia’s contributions to World War I.",
+      "b. Explain economic factors that resulted in the Great Depression. (e.g., boll weevil and drought).",
+      "c. Describe Eugene Talmadge’s opposition to the New Deal Programs.",
+      "d. Discuss President Roosevelt’s ties to Georgia, including his visits to Warm Springs and his impact on the state.",
+      "e. Examine the effects of the New Deal in terms of the impact of the Civilian Conservation Corps, Agricultural Adjustment Act, Rural Electrification Administration, and Social Security Administration."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8H9",
+    "strand": "Historical Understandings",
+    "description": "Describe the role of Georgia in WWII.",
+    "elements": [
+      "a. Describe key events leading up to American involvement in World War II; include the Lend-Lease Act and the bombing of Pearl Harbor.",
+      "b. Evaluate the purpose and economic impact of the Bell Bomber Plant, military bases, and the Savannah and Brunswick shipyards.",
+      "c. Explain the economic and military contributions of Richard Russell and Carl Vinson."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8H10",
+    "strand": "Historical Understandings",
+    "description": "Evaluate key post-World War II developments in Georgia.",
+    "elements": [
+      "a. Explain how technology transformed agriculture and created a population shift within the state.",
+      "b. Explain how the development of Atlanta under mayors William B. Hartsfield and Ivan Allen, Jr. impacted the state.",
+      "c. Describe the relationship between the end of the white primary and the 1946 governor’s race."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8H11",
+    "strand": "Historical Understandings",
+    "description": "Evaluate the role of Georgia in the modern civil rights movement.",
+    "elements": [
+      "a. Explain Georgia’s response to Brown v. Board of Education including the 1956 flag and the Sibley Commission.",
+      "b. Describe the role of individuals (Martin Luther King, Jr. and John Lewis), groups (SNCC and SCLC) and events (Albany Movement and March on Washington) in the Civil Rights Movement.",
+      "c. Explain the resistance to the 1964 Civil Rights Act, emphasizing the role of Lester Maddox."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8H12",
+    "strand": "Historical Understandings",
+    "description": "Explain the importance of developments in Georgia since the late 20th century.",
+    "elements": [
+      "a. Explain how the continued development of Atlanta under mayors Maynard Jackson and Andrew Young impacted the state.",
+      "b. Describe the role of Jimmy Carter in Georgia as state senator, governor, president, and past president.",
+      "c. Evaluate the short-term and long-term impacts of hosting the 1996 Olympics on Georgia’s economic and population growth.",
+      "d. Analyze Georgia’s role in the national and global economy of the 21st Century, with regard to tourism, Savannah port expansion, and the film industry."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8G1",
+    "strand": "Geographic Understandings",
+    "description": "Describe Georgia’s geography and climate.",
+    "elements": [
+      "a. Locate Georgia in relation to region, nation, continent, and hemispheres.",
+      "b. Distinguish among the five geographic regions of Georgia in terms of location, climate, agriculture, and economic contribution.",
+      "c. Locate key physical features of Georgia and explain their importance; include the Fall Line, Okefenokee Swamp, Appalachian Mountains, Chattahoochee and Savannah Rivers, and barrier islands.",
+      "d. Analyze the importance of water in Georgia’s historical development and economic growth."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8CG1",
+    "strand": "Government/Civic Understandings",
+    "description": "Describe the foundations of Georgia’s government.",
+    "elements": [
+      "a. Explain the basic structure of the Georgia state constitution (preamble, bill of rights, articles, and amendments) as well as its relationship to the United States Constitution.",
+      "b. Explain separation of powers and checks and balances among Georgia’s three branches of government.",
+      "c. Describe the rights and responsibilities of citizens according to the Georgia Constitution.",
+      "d. List voting qualifications for elections in Georgia.",
+      "e. Identify wisdom, justice, moderation, and courage as the four principles in the Pledge of Allegiance to the Georgia Flag."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8CG2",
+    "strand": "Government/Civic Understandings",
+    "description": "Analyze the role of the legislative branch in Georgia.",
+    "elements": [
+      "a. Explain the qualifications for members of the General Assembly and its role as the law- making body of Georgia.",
+      "b. Describe the purpose of the committee system within the Georgia General Assembly.",
+      "c. Explain the process for making a law in Georgia.",
+      "d. Describe how state government is funded and how spending decisions are made."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8CG3",
+    "strand": "Government/Civic Understandings",
+    "description": "Analyze the role of the executive branch in Georgia state government.",
+    "elements": [
+      "a. Explain the qualifications for the governor and lieutenant governor and their role in the executive branch of state government.",
+      "b. Describe how the executive branch fulfills its role through state agencies that administer programs and enforce laws."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8CG4",
+    "strand": "Government/Civic Understandings",
+    "description": "Analyze the role of the judicial branch in Georgia state government.",
+    "elements": [
+      "a. Describe the ways that judges are selected in Georgia.",
+      "b. Analyze the dual purpose of the judicial branch: to interpret the laws of Georgia and administer justice in our legal system.",
+      "c. Explain the difference between criminal law and civil law.",
+      "d. Explain the steps in the adult criminal justice system beginning with arrest."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8CG5",
+    "strand": "Government/Civic Understandings",
+    "description": "Explain how the Georgia court system treats juvenile offenders.",
+    "elements": [
+      "a. Explain the difference between delinquent and unruly behavior and the consequences of each.",
+      "b. Describe the rights of juveniles involved in the juvenile justice system.",
+      "c. Explain the steps in the juvenile justice system when a juvenile is first taken into custody."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8CG6",
+    "strand": "Government/Civic Understandings",
+    "description": "Analyze the role of local governments in the state of Georgia.",
+    "elements": [
+      "a. Explain the origins and purposes, of city, county, and special-purpose governments in Georgia.",
+      "b. Describe how local government is funded and how spending decisions are made."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8E1",
+    "strand": "Economic Understandings",
+    "description": "Explain how the four transportation systems (road, air, water, and rail) of Georgia contribute to the development and growth of the state’s economy.",
+    "elements": [
+      "a. Evaluate the ways in which the Interstate Highway System, Hartsfield-Jackson International Airport, deepwater ports, and railroads interact to support the exchange of goods and services domestically and internationally.",
+      "b. Explain how the four transportation systems provide jobs for Georgians."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8E2",
+    "strand": "Economic Understandings",
+    "description": "Evaluate the influence of Georgia-based businesses on the State’s economic growth and development.",
+    "elements": [
+      "a. Describe how profit is an incentive for entrepreneurs.",
+      "b. Explain how entrepreneurs take risks to develop new goods and services to start a business.",
+      "c. Evaluate the economic impact of various industries in Georgia including agricultural, entertainment, manufacturing, service, and technology."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS8E3",
+    "strand": "Economic Understandings",
+    "description": "Explain the principles of effective personal money management.",
+    "elements": [
+      "a. Explain that income is the starting point for personal financial management.",
+      "b. Describe the reasons for and the benefits of a household budget.",
+      "c. Describe the reasons for and the benefits of savings.",
+      "d. Describe the uses of debt and associated risks."
+    ]
+  }
+]

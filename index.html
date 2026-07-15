@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Standards Alignment — ClearK12</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">SA</div>
+    <div>
+      <div class="brand-name">Standards Alignment</div>
+      <div class="brand-sub">Ohio ↔ Georgia · Science &amp; Social Studies</div>
+    </div>
+  </div>
+  <nav class="tabs" id="navTabs">
+    <button class="tab active" data-view="explorer">Explorer</button>
+    <button class="tab" data-view="review">Review Queue <span class="badge" id="pendingBadge">0</span></button>
+    <button class="tab" data-view="passages">Passage Sets</button>
+  </nav>
+  <div class="topbar-actions">
+    <button class="btn btn-ghost hidden" id="saveBadge" title="Cloud saving status — click to connect or update the access token"></button>
+    <button class="btn btn-ghost" id="exportBtn" title="Download approved alignments as JSON">Export</button>
+  </div>
+</header>
+
+<main id="explorerView" class="view">
+  <aside class="picker-panel">
+    <div class="picker-group">
+      <label>State</label>
+      <div class="seg" id="stateSeg">
+        <button class="seg-btn active" data-val="OH">Ohio</button>
+        <button class="seg-btn" data-val="GA">Georgia</button>
+      </div>
+    </div>
+    <div class="picker-group">
+      <label>Subject</label>
+      <div class="seg" id="subjectSeg">
+        <button class="seg-btn active" data-val="social_studies">Social Studies</button>
+        <button class="seg-btn" data-val="science">Science</button>
+      </div>
+    </div>
+    <div class="picker-group">
+      <label>Grade</label>
+      <div class="grade-row" id="gradeRow"></div>
+    </div>
+    <div class="picker-group">
+      <label>Standards <span class="count-pill" id="stdCount"></span></label>
+      <input type="search" id="stdSearch" placeholder="Filter standards…">
+      <div class="std-list" id="stdList"></div>
+    </div>
+  </aside>
+
+  <section class="detail-panel" id="detailPanel">
+    <div class="empty-state" id="emptyDetail">
+      <div class="empty-icon">⇄</div>
+      <h2>Select a standard</h2>
+      <p>Pick a state, subject, grade, and standard on the left to see its aligned standards in the other state.</p>
+    </div>
+    <div id="detailContent" class="hidden"></div>
+  </section>
+</main>
+
+<main id="reviewView" class="view hidden">
+  <div class="review-header">
+    <div class="review-filters">
+      <div class="seg" id="revSubjectSeg">
+        <button class="seg-btn active" data-val="social_studies">Social Studies</button>
+        <button class="seg-btn" data-val="science">Science</button>
+      </div>
+      <div class="grade-row" id="revGradeRow"></div>
+      <div class="seg" id="revStatusSeg">
+        <button class="seg-btn active" data-val="pending">Pending</button>
+        <button class="seg-btn" data-val="approved">Approved</button>
+        <button class="seg-btn" data-val="rejected">Rejected</button>
+        <button class="seg-btn" data-val="all">All</button>
+      </div>
+    </div>
+    <div class="review-progress" id="reviewProgress"></div>
+  </div>
+  <div class="review-list" id="reviewList"></div>
+</main>
+
+<main id="passagesView" class="view hidden">
+  <aside class="sets-panel">
+    <button class="btn btn-primary" id="newSetBtn">+ New Passage Set</button>
+    <div class="set-list" id="setList"></div>
+  </aside>
+  <section class="editor-panel" id="setEditor"></section>
+  <aside class="align-side" id="setSidePanel"></aside>
+</main>
+
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>

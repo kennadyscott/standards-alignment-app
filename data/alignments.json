@@ -1,0 +1,167 @@
+{
+  "generated": "2026-07-15",
+  "method": "AI-drafted from official standards text at the element level (Georgia lettered elements are individual standards); every pair requires human approval",
+  "alignments": [
+    {
+      "id": "ss4-01", "subject": "social_studies", "grade": "4", "oh": "4.SS.4", "ga": "SS4H1a", "confidence": "strong",
+      "rationale": "Ohio: the 13 colonies uniting around a common cause of liberty and justice. Georgia SS4H1a traces the events that shaped that revolutionary movement (Stamp Act, 'no taxation without representation,' Sons/Daughters of Liberty, Boston Massacre, Boston Tea Party)."
+    },
+    {
+      "id": "ss4-02", "subject": "social_studies", "grade": "4", "oh": "4.SS.4", "ga": "SS4H1c", "confidence": "strong",
+      "rationale": "Ohio: colonies uniting to fight for independence during the American Revolution. Georgia SS4H1c covers the major events of that fight and the factors leading to American victory (Lexington and Concord, Saratoga, Yorktown)."
+    },
+    {
+      "id": "ss4-03", "subject": "social_studies", "grade": "4", "oh": "4.SS.4", "ga": "SS4H1d", "confidence": "moderate",
+      "rationale": "Ohio's 'common cause of liberty and justice... to form a new nation' is expressed in Georgia SS4H1d through the Declaration of Independence — why it was necessary and how it responded to tyranny. Matches the ideals half of Ohio's statement."
+    },
+    {
+      "id": "ss4-04", "subject": "social_studies", "grade": "4", "oh": "4.SS.18", "ga": "SS4CG2", "confidence": "strong",
+      "rationale": "Both explicitly target the First Amendment. Ohio: the Constitution protects citizens' rights, five addressed in the First Amendment. Georgia SS4CG2: the importance of freedoms guaranteed by the First Amendment."
+    },
+    {
+      "id": "ss4-05", "subject": "social_studies", "grade": "4", "oh": "4.SS.18", "ga": "SS4CG3b", "confidence": "moderate",
+      "rationale": "Ohio's 'system of limited government and protects citizens' rights' maps to SS4CG3b: the rights in the Bill of Rights and how it places limits on the powers of government. GA works through the full Bill of Rights rather than the First Amendment."
+    },
+    {
+      "id": "ss4-06", "subject": "social_studies", "grade": "4", "oh": "4.SS.19", "ga": "SS4CG3a", "confidence": "strong",
+      "rationale": "Direct three-branches match. Ohio: the Ohio and U.S. Constitutions separate the major responsibilities of government among three branches. Georgia SS4CG3a: how the three branches interact (checks and balances, separation of powers). GA lacks the state-constitution angle."
+    },
+    {
+      "id": "ss4-07", "subject": "social_studies", "grade": "4", "oh": "4.SS.19", "ga": "SS4H2b", "confidence": "partial",
+      "rationale": "Ohio treats a constitution as a written plan for government; Georgia SS4H2b evaluates the issues debated while writing that plan at the Constitutional Convention (weaknesses of the Articles, states' rights). Related but historical rather than structural."
+    },
+    {
+      "id": "ss4-08", "subject": "social_studies", "grade": "4", "oh": "4.SS.7", "ga": "SS4H4a", "confidence": "moderate",
+      "rationale": "Ohio: the anti-slavery movement and the Underground Railroad. Georgia SS4H4a: contributions of Frederick Douglass, Sojourner Truth, and Harriet Tubman (with suffrage leaders Anthony and Stanton). Abolition content overlaps; GA is figure-focused and adds suffrage."
+    },
+    {
+      "id": "ss4-09", "subject": "social_studies", "grade": "4", "oh": "4.SS.6", "ga": "SS4H3a", "confidence": "moderate",
+      "rationale": "Both cover the War of 1812. Ohio: frontier conflicts with American Indians and Great Britain leading to the war. Georgia SS4H3a: its causes and events (burning of the Capitol, 'The Star-Spangled Banner'). Same war, different regional lens."
+    },
+    {
+      "id": "ss4-10", "subject": "social_studies", "grade": "4", "oh": "4.SS.5", "ga": "SS4H3c", "confidence": "partial",
+      "rationale": "Ohio's Northwest Ordinance (process for territories to become states) sits inside Georgia SS4H3c's territorial-expansion story (Louisiana Purchase, Texas, Oregon, California). GA never names the Northwest Ordinance."
+    },
+    {
+      "id": "ss4-11", "subject": "social_studies", "grade": "4", "oh": "4.SS.3", "ga": "SS4H3b", "confidence": "partial",
+      "rationale": "Ohio: interactions among American Indians, settlers, and immigrants producing cooperation, conflict and compromise. Georgia SS4H3b: the impact of westward expansion on American Indians (Trail of Tears, forced relocation). Overlap is settler–American Indian interaction; OH is broader."
+    },
+    {
+      "id": "ss4-12", "subject": "social_studies", "grade": "4", "oh": "4.SS.11", "ga": "SS4H5b", "confidence": "partial",
+      "rationale": "Ohio: North, South and West regions developing from physical environments and economies. Georgia SS4H5b: states' rights and slavery increasing tensions between North and South. Both build sectional understanding; OH is geographic-economic, GA is a Civil War cause."
+    },
+    {
+      "id": "ss4-13", "subject": "social_studies", "grade": "4", "oh": "4.SS.11", "ga": "SS4E1c", "confidence": "partial",
+      "rationale": "Georgia SS4E1c uses the differences between the economies of the North and South to teach specialization — the economic half of Ohio's regions standard."
+    },
+    {
+      "id": "ss4-14", "subject": "social_studies", "grade": "4", "oh": "4.SS.9", "ga": "SS4G1a", "confidence": "partial",
+      "rationale": "Ohio is a map-skills standard (scale, cardinal/intermediate directions for relative location). Georgia SS4G1a is the content those skills serve: locating major physical features of the U.S. GA files map skills in a separate uncoded skills matrix."
+    },
+    {
+      "id": "ss4-15", "subject": "social_studies", "grade": "4", "oh": "4.SS.9", "ga": "SS4G1b", "confidence": "partial",
+      "rationale": "Companion to SS4G1a: locating major man-made features (New York City, Boston, Washington D.C., the Erie Canal) matches the 'human characteristics' half of Ohio's map-skills statement."
+    },
+    {
+      "id": "ss4-16", "subject": "social_studies", "grade": "4", "oh": "4.SS.12", "ga": "SS4G2b", "confidence": "partial",
+      "rationale": "Ohio: people modifying the environment with positive and negative consequences. Georgia SS4G2b: physical barriers that hindered and gateways that benefited territorial expansion. Both are human–environment interaction, but the causal direction is reversed."
+    },
+    {
+      "id": "ss4-17", "subject": "social_studies", "grade": "4", "oh": "4.SS.10", "ga": "SS5G2a", "confidence": "moderate",
+      "rationale": "Cross-grade (GA grade 5). Ohio: U.S. economic development influenced by agriculture, industry and natural resources. Georgia SS5G2a: locating agricultural and industrial centers 1865–1900 and the factors (population, transportation, resources) that explain them."
+    },
+    {
+      "id": "ss4-18", "subject": "social_studies", "grade": "4", "oh": "4.SS.10", "ga": "SS5G2b", "confidence": "moderate",
+      "rationale": "Cross-grade (GA grade 5). Same economic-geography content as SS5G2a, carried from the turn of the 20th century forward — matching Ohio's 'continues to influence and be influenced by' framing."
+    },
+    {
+      "id": "ss4-19", "subject": "social_studies", "grade": "4", "oh": "4.SS.8", "ga": "SS5H1b", "confidence": "moderate",
+      "rationale": "Cross-grade (GA grade 5). Ohio: technological innovations originating in Ohio that benefited the U.S. (e.g., the Wright brothers of Dayton). Georgia SS5H1b: the impact of the Wright brothers, Carver, Bell, and Edison on American life."
+    },
+    {
+      "id": "ss4-20", "subject": "social_studies", "grade": "4", "oh": "4.SS.22", "ga": "SS4E2", "confidence": "strong",
+      "rationale": "Direct financial-literacy match. Ohio: saving a portion of income contributes to financial well-being; reducing spending to save more. Georgia SS4E2: elements of a personal budget (income, expenditures, saving) and why spending/saving decisions matter."
+    },
+    {
+      "id": "ss4-21", "subject": "social_studies", "grade": "4", "oh": "4.SS.21", "ga": "SS4E1f", "confidence": "partial",
+      "rationale": "Ohio: entrepreneurs organize productive resources, take risks for profit, and compete. Georgia SS4E1f is the nearest element: technological advancements and their impact on business productivity. GA never frames entrepreneurship or risk directly."
+    },
+    {
+      "id": "ss4-22", "subject": "social_studies", "grade": "4", "oh": "4.SS.15", "ga": "SS4CG1b", "confidence": "partial",
+      "rationale": "Ohio: individuals' opportunities to act in and influence government. Georgia SS4CG1b grounds that in 'We the People' — consent of the governed / popular sovereignty — the principle underneath civic participation."
+    },
+    {
+      "id": "ss4-23", "subject": "social_studies", "grade": "4", "oh": "4.SS.15", "ga": "SS4CG1d", "confidence": "partial",
+      "rationale": "Georgia SS4CG1d (representative democracy/republic) covers the system through which Ohio's 'act in and influence their state and national government' happens. Concept-level overlap; GA omits rights-and-responsibilities language."
+    },
+    {
+      "id": "ss4-24", "subject": "social_studies", "grade": "4", "oh": "4.SS.17", "ga": "SS4CG3b", "confidence": "moderate",
+      "rationale": "Ohio: laws can protect rights, provide benefits and assign responsibilities. Georgia SS4CG3b: the rights in the Bill of Rights, how it limits government, and citizens' responsibility to protect those rights. Both treat law as rights-protection."
+    },
+
+    {
+      "id": "sci4-01", "subject": "science", "grade": "4", "oh": "4.ESS.1", "ga": "S5E1a", "confidence": "moderate",
+      "rationale": "Cross-grade (GA grade 5). Ohio: identifying Earth's characteristic landforms. Georgia S5E1a: identifying surface features (deltas, sand dunes, etc.) caused by constructive/destructive processes. GA folds identification into process analysis; Ohio's 70%-water fact lands closer to S6E3a."
+    },
+    {
+      "id": "sci4-02", "subject": "science", "grade": "4", "oh": "4.ESS.2", "ga": "S5E1a", "confidence": "strong",
+      "rationale": "Cross-grade (GA grade 5). Ohio: Earth's surface changes due to weathering (water, ice, wind, plant growth, catastrophic events). Georgia S5E1a: surface features caused by constructive and destructive processes — weathering is a named destructive process. Georgia has no grade-4 weathering element."
+    },
+    {
+      "id": "sci4-03", "subject": "science", "grade": "4", "oh": "4.ESS.2", "ga": "S6E5d", "confidence": "moderate",
+      "rationale": "Cross-grade (GA grade 6). Georgia S6E5d: identify types of weathering, agents of erosion and transportation, and environments of deposition — the middle-school revisit of Ohio's grade-4 weathering statement, at greater depth."
+    },
+    {
+      "id": "sci4-04", "subject": "science", "grade": "4", "oh": "4.ESS.3", "ga": "S5E1a", "confidence": "strong",
+      "rationale": "Cross-grade (GA grade 5). Ohio: erosion and deposition — water, wind and ice remove and deposit rock, soil, sediment. Georgia S5E1a names the resulting features (deltas, sand dunes) formed by exactly those processes."
+    },
+    {
+      "id": "sci4-05", "subject": "science", "grade": "4", "oh": "4.ESS.3", "ga": "S5E1b", "confidence": "moderate",
+      "rationale": "Cross-grade (GA grade 5). Georgia S5E1b: interactive models collecting data on how surface-feature changes are caused by constructive/destructive processes — the modeling counterpart of Ohio's erosion/deposition statement."
+    },
+    {
+      "id": "sci4-06", "subject": "science", "grade": "4", "oh": "4.ESS.3", "ga": "S6E5e", "confidence": "moderate",
+      "rationale": "Cross-grade (GA grade 6). Georgia S6E5e: model how natural processes (weathering, erosion, deposition) and human activity change rocks and Earth's surface — Ohio's grade-4 content inside GA's grade-6 geology sequence."
+    },
+    {
+      "id": "sci4-07", "subject": "science", "grade": "4", "oh": "4.PS.1", "ga": "S5P1a", "confidence": "moderate",
+      "rationale": "Cross-grade (GA grade 5). Ohio: total matter is conserved when objects break into pieces or dissolve. Georgia S5P1a investigates those same physical changes (manipulating, separating and mixing materials) but targets classifying the change, not conservation."
+    },
+    {
+      "id": "sci4-08", "subject": "science", "grade": "4", "oh": "4.PS.1", "ga": "S5P1b", "confidence": "moderate",
+      "rationale": "Cross-grade (GA grade 5). Ohio: matter is conserved when a substance changes state. Georgia S5P1b: physical changes in the state of water due to temperature. Same phenomenon; GA doesn't make the conservation claim."
+    },
+    {
+      "id": "sci4-09", "subject": "science", "grade": "4", "oh": "4.PS.1", "ga": "S8P1f", "confidence": "partial",
+      "rationale": "Cross-grade (GA grade 8). Georgia's only explicit conservation-of-matter element is S8P1f (conservation of matter in a chemical reaction) — conceptually the true match for Ohio's conservation focus, but four grades later and at atomic-level depth."
+    },
+    {
+      "id": "sci4-10", "subject": "science", "grade": "4", "oh": "4.PS.2", "ga": "S5P2b", "confidence": "moderate",
+      "rationale": "Cross-grade (GA grade 5). Ohio 4.PS.2 includes electrical energy transferring through circuits. Georgia S5P2b: design a complete, simple electric circuit and explain all necessary components."
+    },
+    {
+      "id": "sci4-11", "subject": "science", "grade": "4", "oh": "4.PS.2", "ga": "S5P2c", "confidence": "moderate",
+      "rationale": "Cross-grade (GA grade 5). Ohio 4.PS.2 covers which materials conduct electrical energy. Georgia S5P2c: investigate common materials to determine if they are insulators or conductors of electricity."
+    },
+    {
+      "id": "sci4-12", "subject": "science", "grade": "4", "oh": "4.PS.2", "ga": "S3P1b", "confidence": "partial",
+      "rationale": "Cross-grade (GA grade 3). Ohio 4.PS.2 includes heat transferring from hot to cold objects with measurable temperature change. Georgia S3P1b: gather thermometer data illustrating the effects of heating — the investigative version, one grade earlier."
+    },
+    {
+      "id": "sci4-13", "subject": "science", "grade": "4", "oh": "4.LS.1", "ga": "S4L1c", "confidence": "strong",
+      "rationale": "Same-grade match. Ohio: changes in an organism's environment are sometimes beneficial and sometimes harmful; ecosystems change. Georgia S4L1c: design a scenario to demonstrate the effect of a change on an ecosystem, including living and non-living factors."
+    },
+    {
+      "id": "sci4-14", "subject": "science", "grade": "4", "oh": "4.LS.1", "ga": "S4L1d", "confidence": "moderate",
+      "rationale": "Same-grade match. Georgia S4L1d: model changes to the flow of energy in an ecosystem when plants or animals become scarce, extinct, or over-abundant — a specific case of Ohio's environmental-change statement."
+    },
+    {
+      "id": "sci4-15", "subject": "science", "grade": "4", "oh": "4.LS.1", "ga": "S7L4c", "confidence": "partial",
+      "rationale": "Cross-grade (GA grade 7). Georgia S7L4c: how resource availability, disease, climate, and human activity affect organisms, populations, and ecosystems — the middle-school treatment of Ohio's grade-4 environmental-change idea."
+    },
+    {
+      "id": "sci4-16", "subject": "science", "grade": "4", "oh": "4.LS.2", "ga": "S3E2a", "confidence": "strong",
+      "rationale": "Cross-grade (GA grade 3). Ohio: fossils compared to one another and to present-day organisms as evidence of changing life and environments. Georgia S3E2a: construct an argument from fossil observations to show how they evidence past organisms and environments."
+    }
+  ]
+}

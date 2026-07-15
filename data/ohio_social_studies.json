@@ -1,0 +1,1662 @@
+[
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "K.SS.1",
+    "strand": "History",
+    "topic": "Historical Thinking and Skills",
+    "theme": "A Child’s Place in Time and Space",
+    "description": "Time can be measured."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "K.SS.2",
+    "strand": "History",
+    "topic": "Historical Thinking and Skills",
+    "theme": "A Child’s Place in Time and Space",
+    "description": "Personal history can be shared through stories and pictures."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "K.SS.3",
+    "strand": "History",
+    "topic": "Heritage",
+    "theme": "A Child’s Place in Time and Space",
+    "description": "Heritage is reflected through diverse cultures and is shown through the arts, customs, traditions, family celebrations and language."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "K.SS.4",
+    "strand": "History",
+    "topic": "Heritage",
+    "theme": "A Child’s Place in Time and Space",
+    "description": "Symbols and practices of the United States include the flag, Pledge of Allegiance and the National Anthem. Other nations are represented by symbols and practices too."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "K.SS.5",
+    "strand": "Geography",
+    "topic": "Spatial Thinking and Skills",
+    "theme": "A Child’s Place in Time and Space",
+    "description": "Terms related to direction and distance, as well as symbols and landmarks, can be used to talk about the relative location of familiar places."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "K.SS.6",
+    "strand": "Geography",
+    "topic": "Spatial Thinking and Skills",
+    "theme": "A Child’s Place in Time and Space",
+    "description": "Models and maps represent real places."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "K.SS.7",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "A Child’s Place in Time and Space",
+    "description": "Humans depend on and impact the physical environment in order to supply food, clothing and shelter."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "K.SS.8",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "A Child’s Place in Time and Space",
+    "description": "Individuals are unique but share common characteristics of multiple groups."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "K.SS.9",
+    "strand": "Government",
+    "topic": "Civic Participation and Skills",
+    "theme": "A Child’s Place in Time and Space",
+    "description": "Individuals share responsibilities and take action toward the achievement of common goals in homes, schools and communities."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "K.SS.10",
+    "strand": "Government",
+    "topic": "Rules and Laws",
+    "theme": "A Child’s Place in Time and Space",
+    "description": "The purpose of rules and authority figures is to provide order, security and safety in the home, school and community."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "K.SS.11",
+    "strand": "Economics",
+    "topic": "Scarcity",
+    "theme": "A Child’s Place in Time and Space",
+    "description": "Individuals have many wants and make decisions to satisfy those wants. These decisions impact others."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "K",
+    "code": "K.SS.12",
+    "strand": "Economics",
+    "topic": "Production and Consumption",
+    "theme": "A Child’s Place in Time and Space",
+    "description": "Goods are objects that can satisfy an individual’s wants. Services are actions that can satisfy individual’s wants."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "1.SS.1",
+    "strand": "History",
+    "topic": "Historical Thinking and Skills",
+    "theme": "Families Now and Long Ago, Near and Far",
+    "description": "Time can be divided into categories (e.g., months of the year, past, present and future)."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "1.SS.2",
+    "strand": "History",
+    "topic": "Historical Thinking and Skills",
+    "theme": "Families Now and Long Ago, Near and Far",
+    "description": "Photographs, letters, artifacts and books can be used to learn about the past."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "1.SS.3",
+    "strand": "History",
+    "topic": "Heritage",
+    "theme": "Families Now and Long Ago, Near and Far",
+    "description": "The ways basic human needs are met have changed over time."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "1.SS.4",
+    "strand": "Geography",
+    "topic": "Spatial Thinking and Skills",
+    "theme": "Families Now and Long Ago, Near and Far",
+    "description": "Maps can be used to locate and identify places."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "1.SS.5",
+    "strand": "Geography",
+    "topic": "Places and Regions",
+    "theme": "Families Now and Long Ago, Near and Far",
+    "description": "Places are distinctive because of their physical characteristics (land forms and bodies of water) and human characteristics (structures built by people)."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "1.SS.6",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "Families Now and Long Ago, Near and Far",
+    "description": "Families interact with the physical environment differently in different times and places."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "1.SS.7",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "Families Now and Long Ago, Near and Far",
+    "description": "Diverse cultural practices address basic human needs in various ways and may change over time"
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "1.SS.8",
+    "strand": "Government",
+    "topic": "Civic Participation and Skills",
+    "theme": "Families Now and Long Ago, Near and Far",
+    "description": "Individuals have responsibility to take action toward the achievement of common goals in homes, schools and communities and are accountable for those actions."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "1.SS.9",
+    "strand": "Government",
+    "topic": "Civic Participation and Skills",
+    "theme": "Families Now and Long Ago, Near and Far",
+    "description": "Collaboration requires group members to respect the rights and opinions of others."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "1.SS.10",
+    "strand": "Government",
+    "topic": "Rules and Laws",
+    "theme": "Families Now and Long Ago, Near and Far",
+    "description": "Rules exist in different settings. The principles of fairness should guide rules and the consequences for breaking rules."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "1.SS.11",
+    "strand": "Economics",
+    "topic": "Scarcity",
+    "theme": "Families Now and Long Ago, Near and Far",
+    "description": "Wants are unlimited and resources are limited. Individuals make choices because they cannot have everything they want."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "1.SS.12",
+    "strand": "Economics",
+    "topic": "Production and Consumption",
+    "theme": "Families Now and Long Ago, Near and Far",
+    "description": "People produce and consume goods and services in the community."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "1.SS.13",
+    "strand": "Economics",
+    "topic": "Markets",
+    "theme": "Families Now and Long Ago, Near and Far",
+    "description": "People trade to obtain goods and services they want."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "1",
+    "code": "1.SS.14",
+    "strand": "Economics",
+    "topic": "Financial Literacy",
+    "theme": "Families Now and Long Ago, Near and Far",
+    "description": "Currency is used as a means of economic exchange."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.1",
+    "strand": "History",
+    "topic": "Historical Thinking and Skills",
+    "theme": "People Working Together",
+    "description": "Time can be shown graphically on calendars and timelines."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.2",
+    "strand": "History",
+    "topic": "Historical Thinking and Skills",
+    "theme": "People Working Together",
+    "description": "Change over time can be shown with artifacts, maps, and photographs."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.3",
+    "strand": "History",
+    "topic": "Heritage",
+    "theme": "People Working Together",
+    "description": "Science and technology have changed daily life."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.4",
+    "strand": "History",
+    "topic": "Heritage",
+    "theme": "People Working Together",
+    "description": "Biographies can show how peoples’ actions have shaped the world in which we live."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.5",
+    "strand": "Geography",
+    "topic": "Spatial Thinking and Skills",
+    "theme": "People Working Together",
+    "description": "Maps and their symbols, including cardinal directions, can be interpreted to answer questions about location of places."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.6",
+    "strand": "Geography",
+    "topic": "Places and Regions",
+    "theme": "People Working Together",
+    "description": "The work that people do is impacted by the distinctive human and physical characteristics in the place where they live."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.7",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "People Working Together",
+    "description": "Human activities alter the physical environment, both positively and negatively."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.8",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "People Working Together",
+    "description": "Cultures develop in unique ways, in part through the influence of the physical environment."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.9",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "People Working Together",
+    "description": "Interactions among cultures lead to sharing ways of life."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.10",
+    "strand": "Government",
+    "topic": "Civic Participation and Skills",
+    "theme": "People Working Together",
+    "description": "Respect for the rights of self and others includes making responsible choices and being accountable for personal actions."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.11",
+    "strand": "Government",
+    "topic": "Civic Participation and Skills",
+    "theme": "People Working Together",
+    "description": "Groups are accountable for choices they make and actions they take."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.12",
+    "strand": "Government",
+    "topic": "Rules and Laws",
+    "theme": "People Working Together",
+    "description": "There are different rules and laws that govern behavior in different settings."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.13",
+    "strand": "Economics",
+    "topic": "Economic Decision Making and Skills",
+    "theme": "People Working Together",
+    "description": "Information displayed on bar graphs can be used to compare quantities."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.14",
+    "strand": "Economics",
+    "topic": "Scarcity",
+    "theme": "People Working Together",
+    "description": "Resources can be used in various ways."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.15",
+    "strand": "Economics",
+    "topic": "Production and Consumption",
+    "theme": "People Working Together",
+    "description": "Most people around the world work in jobs in which they produce specific goods and services."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.16",
+    "strand": "Economics",
+    "topic": "Markets",
+    "theme": "People Working Together",
+    "description": "People use money to buy and sell goods and services."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "2.SS.17",
+    "strand": "Economics",
+    "topic": "Financial Literacy",
+    "theme": "People Working Together",
+    "description": "People earn income by working."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.1",
+    "strand": "History",
+    "topic": "Historical Thinking and Skills",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "Events in local history can be shown on timelines organized by years, decades and centuries."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.2",
+    "strand": "History",
+    "topic": "Historical Thinking and Skills",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "Primary and secondary sources can be used to show change over time."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.3",
+    "strand": "History",
+    "topic": "Heritage",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "Local communities change over time."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.4",
+    "strand": "Geography",
+    "topic": "Spatial Thinking and Skills",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "Physical and political maps have distinctive characteristics and purposes. Places can be located on a map by using the title, key, alphanumeric grid and cardinal directions."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.5",
+    "strand": "Geography",
+    "topic": "Places and Regions",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "Daily life is influenced by the agriculture, industry and natural resources in different communities."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.6",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "Evidence of positive and negative human modification of the environment can be observed in the local community."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.7",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "Systems of transportation and communication move people, products and ideas from place to place."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.8",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "Communities may include diverse cultural groups."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.9",
+    "strand": "Government",
+    "topic": "Civic Participation and Skills",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "Members of local communities have rights and responsibilities."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.10",
+    "strand": "Government",
+    "topic": "Civic Participation and Skills",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "Individuals make the community a better place by taking action to solve problems in a way that promotes the common good."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.11",
+    "strand": "Government",
+    "topic": "Rules and Laws",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "Laws are rules which apply to all people in a community and describe ways people are expected to behave. Laws promote order and security, provide public services and protect the rights of individuals in the local community."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.12",
+    "strand": "Government",
+    "topic": "Roles and Systems of Government",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "Governments have authority to make and enforce laws."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.13",
+    "strand": "Government",
+    "topic": "Roles and Systems of Government",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "The structure of local governments may differ from one community to another."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.14",
+    "strand": "Economics",
+    "topic": "Economic Decision Making and Skills",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "Line graphs are used to show changes in data over time."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.15",
+    "strand": "Economics",
+    "topic": "Scarcity",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "Both positive and negative incentives affect individuals’ choices and behaviors."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.16",
+    "strand": "Economics",
+    "topic": "Scarcity",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "Individuals must make decisions because of the scarcity of resources. Making a decision involves a trade-off."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.17",
+    "strand": "Economics",
+    "topic": "Production and Consumption",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "A consumer is a person whose wants are satisfied by using goods and services. A producer makes goods and/or provides services."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.18",
+    "strand": "Economics",
+    "topic": "Markets",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "A market is where buyers and sellers exchange goods and services."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.19",
+    "strand": "Economics",
+    "topic": "Financial Literacy",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "Making decisions involves weighing costs and benefits."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "3.SS.20",
+    "strand": "Economics",
+    "topic": "Financial Literacy",
+    "theme": "Communities: Past and Present, Near and Far",
+    "description": "A budget is a plan to help people make personal economic decisions for the present and future and to become more financially responsible."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.1",
+    "strand": "History",
+    "topic": "Historical Thinking and Skills",
+    "theme": "Ohio in the United States",
+    "description": "The order of significant events in Ohio and the United States can be shown on a timeline."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.2",
+    "strand": "History",
+    "topic": "Historical Thinking and Skills",
+    "theme": "Ohio in the United States",
+    "description": "Primary and secondary sources can be used to create historical narratives."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.3",
+    "strand": "History",
+    "topic": "Heritage",
+    "theme": "Ohio in the United States",
+    "description": "Various groups of people have lived in Ohio over time including American Indians, migrating settlers and immigrants. Interactions among these groups have resulted in cooperation, conflict and compromise."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.4",
+    "strand": "History",
+    "topic": "Heritage",
+    "theme": "Ohio in the United States",
+    "description": "The 13 colonies came together around a common cause of liberty and justice, uniting to fight for independence during the American Revolution and to form a new nation."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.5",
+    "strand": "History",
+    "topic": "Heritage",
+    "theme": "Ohio in the United States",
+    "description": "The Northwest Ordinance incorporated democratic ideals into the territories. It provided a process for territories to become states and recognized them as equal to the other existing states."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.6",
+    "strand": "History",
+    "topic": "Heritage",
+    "theme": "Ohio in the United States",
+    "description": "Ongoing conflicts on the Ohio frontier with American Indians and Great Britain contributed to the United States’ involvement in the War of 1812."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.7",
+    "strand": "History",
+    "topic": "Heritage",
+    "theme": "Ohio in the United States",
+    "description": "Following the War of 1812, Ohio continued to play a key role in national conflicts including the anti-slavery movement and the Underground Railroad."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.8",
+    "strand": "History",
+    "topic": "Heritage",
+    "theme": "Ohio in the United States",
+    "description": "Many technological innovations that originated in Ohio benefitted the United States."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.9",
+    "strand": "Geography",
+    "topic": "Spatial Thinking and Skills",
+    "theme": "Ohio in the United States",
+    "description": "A map scale and cardinal and intermediate directions can be used to describe the relative location of physical and human characteristics of Ohio and the United States."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.10",
+    "strand": "Geography",
+    "topic": "Places and Regions",
+    "theme": "Ohio in the United States",
+    "description": "The economic development of the United States continues to influence and be influenced by agriculture, industry and natural resources in Ohio."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.11",
+    "strand": "Geography",
+    "topic": "Places and Regions",
+    "theme": "Ohio in the United States",
+    "description": "The regions of the United States known as the North, South and West developed in the early 1800s largely based on their physical environments and economies."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.12",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "Ohio in the United States",
+    "description": "People have modified the environment throughout history resulting in both positive and negative consequences in Ohio and the United States."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.13",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "Ohio in the United States",
+    "description": "The population of the United States has changed over time, becoming more diverse (e.g., racial, ethnic, linguistic, religious). Ohio’s population has become increasingly reflective of the multicultural diversity of the United States."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.14",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "Ohio in the United States",
+    "description": "Ohio’s location and its transportation systems continue to influence the movement of people, products and ideas in the United States."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.15",
+    "strand": "Government",
+    "topic": "Civic Participation and Skills",
+    "theme": "Ohio in the United States",
+    "description": "Individuals have a variety of opportunities to act in and influence their state and national government. Citizens have both rights and responsibilities in Ohio and the United States."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.16",
+    "strand": "Government",
+    "topic": "Civic Participation and Skills",
+    "theme": "Ohio in the United States",
+    "description": "Civic participation in a democratic society requires individuals to make informed and reasoned decisions by accessing, evaluating and using information effectively to engage in compromise."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.17",
+    "strand": "Government",
+    "topic": "Rules and Laws",
+    "theme": "Ohio in the United States",
+    "description": "Laws can protect rights, provide benefits and assign responsibilities."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.18",
+    "strand": "Government",
+    "topic": "Rules and Laws",
+    "theme": "Ohio in the United States",
+    "description": "The U.S. Constitution establishes a system of limited government and protects citizens’ rights; five of these rights are addressed in the First Amendment."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.19",
+    "strand": "Government",
+    "topic": "Roles and Systems of Government",
+    "theme": "Ohio in the United States",
+    "description": "A constitution is a written plan for government. The Ohio Constitution and the U.S. Constitution separate the major responsibilities of government among three branches."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.20",
+    "strand": "Economics",
+    "topic": "Economic Decision Making and Skills",
+    "theme": "Ohio in the United States",
+    "description": "Tables and charts organize data in a variety of formats to help individuals understand information and issues."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.21",
+    "strand": "Economics",
+    "topic": "Production and Consumption",
+    "theme": "Ohio in the United States",
+    "description": "Entrepreneurs in Ohio and the United States organize productive resources and take risks to make a profit and compete with other producers."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "4.SS.22",
+    "strand": "Economics",
+    "topic": "Financial Literacy",
+    "theme": "Ohio in the United States",
+    "description": "Saving a portion of income contributes to an individuals’ financial well-being. Individuals can reduce spending to save more of their income."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.1",
+    "strand": "History",
+    "topic": "Historical Thinking and Skills",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "Events can be arranged in order of occurrence using the conventions of B.C. and A.D. or B.C.E. and C.E."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.2",
+    "strand": "History",
+    "topic": "Early Civilizations",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "Early Indian civilizations (Maya, Inca, Aztec, Mississippian) existed in the Western Hemisphere prior to the arrival of Europeans. These civilizations had developed unique governments, social structures, religions, technologies, and agricultural practices."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.3",
+    "strand": "History",
+    "topic": "Heritage",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "European exploration and colonization during the 1400s-1600s had lasting effects which can be used to understand the Western Hemisphere today."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.4",
+    "strand": "Geography",
+    "topic": "Spatial Thinking and Skills",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "Geographic tools can be used to gather, process and report information about people, places and environments. Cartographers decide which information to include in maps."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.5",
+    "strand": "Geography",
+    "topic": "Spatial Thinking and Skills",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "Latitude and longitude can be used to make observations about location and generalizations about climate"
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.6",
+    "strand": "Geography",
+    "topic": "Places and Regions",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "Regions can be determined using data related to various criteria including landform, climate, population, and cultural and economic characteristics."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.7",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "The variety of physical environments within the Western Hemisphere influences human activities. Likewise, human activities modify the physical environments."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.8",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "American Indians developed unique cultures with many different ways of life. American Indian tribes and nations can be classified into cultural groups based on geographic and cultural similarities."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.9",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "Political, environmental, social and economic factors cause people, products and ideas to move from place to place in the Western Hemisphere and results in diversity."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.10",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "The Western Hemisphere is culturally diverse (eg., language, food, religion, art, music) due to the influences and interactions of a variety of world cultures."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.11",
+    "strand": "Government",
+    "topic": "Civic Participation and Skills",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "Individuals can better understand public issues by gathering, interpreting and checking information for accuracy from multiple sources. Data can be displayed graphically to effectively and efficiently communicate information."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.12",
+    "strand": "Government",
+    "topic": "Roles and Systems of Government",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "Democracies, dictatorships and monarchies are categories for understanding the relationship between those in power or authority and citizens."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.13",
+    "strand": "Economics",
+    "topic": "Economic Decision Making and Skills",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "Information displayed in circle graphs can be used to show relative proportions of segments of data to an entire body of data."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.14",
+    "strand": "Economics",
+    "topic": "Economic Decision Making and Skills",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "The choices made by individuals and governments have both present and future consequences."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.15",
+    "strand": "Economics",
+    "topic": "Scarcity",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "The availability of productive resources (i.e., entrepreneurship, human resources, capital goods and natural resources) promotes specialization that could lead to trade."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.16",
+    "strand": "Economics",
+    "topic": "Production and Consumption",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "The availability of productive resources and the division of labor can have a positive or negative impact on productive capacity."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.17",
+    "strand": "Economics",
+    "topic": "Markets",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "Regions and countries become interdependent when they specialize in what they produce best and then trade with other regions to increase the amount and variety of goods and services available."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "5.SS.18",
+    "strand": "Economics",
+    "topic": "Financial Literacy",
+    "theme": "Regions and People of the Western Hemisphere",
+    "description": "Workers can improve their ability to earn income by gaining new knowledge, skills and experiences."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "6.SS.1",
+    "strand": "History",
+    "topic": "Historical Thinking and Skills",
+    "theme": "Regions and People of the Eastern Hemisphere",
+    "description": "Multiple tier timelines can be used to show relationships among events and places."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "6.SS.2",
+    "strand": "History",
+    "topic": "Early Civilizations",
+    "theme": "Regions and People of the Eastern Hemisphere",
+    "description": "Early civilizations (India, Egypt, China and Mesopotamia) had unique governments, economic systems, social structures, religions, technologies and agricultural practices and products. The cultural practices and products of these early civilizations can be used to help understand the Eastern Hemisphere today."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "6.SS.3",
+    "strand": "Geography",
+    "topic": "Spatial Thinking and Skills",
+    "theme": "Regions and People of the Eastern Hemisphere",
+    "description": "Geographic tools can be used to gather, process and report information about people, places and environments. Cartographers decide which information to include and how it is displayed."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "6.SS.4",
+    "strand": "Geography",
+    "topic": "Spatial Thinking and Skills",
+    "theme": "Regions and People of the Eastern Hemisphere",
+    "description": "Latitude and longitude can be used to identify absolute location."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "6.SS.5",
+    "strand": "Geography",
+    "topic": "Places and Regions",
+    "theme": "Regions and People of the Eastern Hemisphere",
+    "description": "Regions can be determined, classified and compared using data related to various criteria including landform, climate, population, and cultural and economic characteristics"
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "6.SS.6",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "Regions and People of the Eastern Hemisphere",
+    "description": "The variety of physical environments within the Eastern Hemisphere influences human activities. Likewise, human activities modify the physical environment."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "6.SS.7",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "Regions and People of the Eastern Hemisphere",
+    "description": "Political, environmental, social and economic factors cause people, products and ideas to move from place to place in the Eastern Hemisphere in the past and today."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "6.SS.8",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "Regions and People of the Eastern Hemisphere",
+    "description": "Diffusion of agricultural practices and products, technology, cultural practices and major world religions (Buddhism, Christianity, Hinduism, Islam and Judaism) impacted the Eastern Hemisphere."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "6.SS.9",
+    "strand": "Government",
+    "topic": "Civic Participation and Skills",
+    "theme": "Regions and People of the Eastern Hemisphere",
+    "description": "Different perspectives on a topic can be obtained from a variety of historic and contemporary sources and used to effectively communicate and defend a claim based on evidence. Sources should be examined for accuracy and credibility."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "6.SS.10",
+    "strand": "Government",
+    "topic": "Roles and Systems of Government",
+    "theme": "Regions and People of the Eastern Hemisphere",
+    "description": "Governments can be categorized as monarchies, theocracies, dictatorships or democracies, but categories may overlap and labels may not accurately represent how governments function. The extent of citizens’ liberties and responsibilities varies according to limits on governmental authority."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "6.SS.11",
+    "strand": "Economics",
+    "topic": "Economic Decision Making and Skills",
+    "theme": "Regions and People of the Eastern Hemisphere",
+    "description": "Economists compare data sets to draw conclusions about relationships among them."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "6.SS.12",
+    "strand": "Economics",
+    "topic": "Economic Decision Making and Skills",
+    "theme": "Regions and People of the Eastern Hemisphere",
+    "description": "The choices made by individuals and governments have both present and future consequences. The evaluation of choices is relative and may differ across individuals and societies."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "6.SS.13",
+    "strand": "Economics",
+    "topic": "Scarcity",
+    "theme": "Regions and People of the Eastern Hemisphere",
+    "description": "The fundamental questions of economics include what to produce, how to produce and for whom to produce."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "6.SS.14",
+    "strand": "Economics",
+    "topic": "Scarcity",
+    "theme": "Regions and People of the Eastern Hemisphere",
+    "description": "When regions and/or countries specialize, global trade occurs."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "6.SS.15",
+    "strand": "Economics",
+    "topic": "Markets",
+    "theme": "Regions and People of the Eastern Hemisphere",
+    "description": "The interaction of supply and demand, influenced by competition, helps to determine price in a market. This interaction also determines the quantities of outputs produced and the quantities of productive resources (entrepreneurship, human resources, natural resources and capital) used."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "6.SS.16",
+    "strand": "Economics",
+    "topic": "Financial Literacy",
+    "theme": "Regions and People of the Eastern Hemisphere",
+    "description": "When selecting items to buy, individuals can weigh costs and benefits and compare the price and quality of available goods and services."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.1",
+    "strand": "History",
+    "topic": "Historical Thinking and Skills",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "Historians and archaeologists describe historical events and issues from the perspectives of people living at the time to avoid evaluating the past in terms of today’s norms and values."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.2",
+    "strand": "History",
+    "topic": "Early Civilizations",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "The civilizations that developed in Greece and Rome had an enduring impact on later civilizations. This legacy includes governance and law, engineering and technology, art and architecture, as well as literature and history. The Roman Empire also played an instrumental role in the spread of Christianity."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.3",
+    "strand": "History",
+    "topic": "Feudalism and Transitions",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "The Roman Empire collapsed due to various internal and external factors (political, social and economic) which led to the development of feudalism and the manorial system in the region. The fall of Rome and later invasions also allowed for the creation of new empires in the region."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.4",
+    "strand": "History",
+    "topic": "Feudalism and Transitions",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "The Mongols conquered much of Asia which led to unified states in China and Korea. Mongol failure to conquer Japan allowed a feudal system to persist."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.5",
+    "strand": "History",
+    "topic": "Feudalism and Transitions",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "Achievements in medicine, science, mathematics and geography by the Islamic civilization dominated most of the Mediterranean after the decline of the Roman Empire. These achievements were introduced into Western Europe as a result of the Muslim conquests, Crusades and trade, influencing the European Renaissance."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.6",
+    "strand": "History",
+    "topic": "Feudalism and Transitions",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "The decline of feudalism, the rise of nation-states and the Renaissance in Europe introduced revolutionary ideas, leading to cultural, scientific and social changes."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.7",
+    "strand": "History",
+    "topic": "Feudalism and Transitions",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "The Reformation introduced changes in religion including the emergence of Protestant faiths and a decline in the political power and social influence of the Roman Catholic Church."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.8",
+    "strand": "History",
+    "topic": "First Global Age",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "Empires in Africa and Asia grew as commercial and cultural centers along trade routes."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.9",
+    "strand": "History",
+    "topic": "First Global Age",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "The advent of the trans-Saharan slave trade had profound effects on both West and Central Africa and the receiving societies."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.10",
+    "strand": "History",
+    "topic": "First Global Age",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "European economic and cultural influence dramatically increased through explorations, conquests and colonization."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.11",
+    "strand": "History",
+    "topic": "First Global Age",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "The Columbian exchange (i.e., the exchange of fauna, flora and pathogens) among previously unconnected parts of the world reshaped societies in ways still evident today."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.12",
+    "strand": "Geography",
+    "topic": "Spatial Thinking and Skills",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "Maps and other geographic representations can be used to trace the development of human settlement over time."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.13",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "Geographic factors promote or impede the movement of people, products and ideas."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.14",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "Trade routes connecting Africa, Europe and Asia helped foster the spread of ideas, technology, goods and major world religions (Buddhism, Christianity, Hinduism, Islam and Judaism) that impacted the Eastern Hemisphere."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.15",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "Improvements in transportation, communication and technology have facilitated cultural diffusion among peoples around the world."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.16",
+    "strand": "Government",
+    "topic": "Civic Participation and Skills",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "Analyzing individual and group perspectives is essential to understanding historic and contemporary issues. Opportunities for civic engagement exist for students to connect real-world issues and events to classroom learning."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.17",
+    "strand": "Government",
+    "topic": "Roles and Systems of Government",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "Greek democracy and the Roman Republic were a radical departure from monarchy and theocracy, influencing the structure and function of modern democratic governments."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.18",
+    "strand": "Government",
+    "topic": "Roles and Systems of Government",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "With the decline of feudalism, consolidation of power resulted in the emergence of nation-states."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.19",
+    "strand": "Economics",
+    "topic": "Economic Decision Making and Skills",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "Individuals, governments and businesses must analyze costs and benefits when making economic decisions. A cost-benefit analysis consists of determining the potential costs and benefits of an action and then balancing the costs against the benefits."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.20",
+    "strand": "Economics",
+    "topic": "Scarcity",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "The variability in the distribution of productive resources in the various regions of the world contributed to specialization, trade and interdependence."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "7.SS.21",
+    "strand": "Economics",
+    "topic": "Markets",
+    "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+    "description": "The growth of cities and empires fostered the growth of markets. Market exchanges encouraged specialization and the transition from barter to monetary economies."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.1",
+    "strand": "History",
+    "topic": "Historical Thinking and Skills",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "Primary and secondary sources are used to examine events from multiple perspectives and to present and defend a position."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.2",
+    "strand": "History",
+    "topic": "Colonization to Independence",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "North America, originally inhabited by American Indians, was explored and colonized by Europeans for economic and religious reasons."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.3",
+    "strand": "History",
+    "topic": "Colonization to Independence",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "Competition for control of territory and resources in North America led to conflicts among colonizing powers."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.4",
+    "strand": "History",
+    "topic": "Colonization to Independence",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "The practice of race-based slavery led to the forced migration of Africans to the American colonies and contributed to colonial economic development. Their knowledge, skills and traditions were essential to the development of the colonies."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.5",
+    "strand": "History",
+    "topic": "Colonization to Independence",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "The ideas of the Enlightenment and dissatisfaction with colonial rule led English colonists to write the Declaration of Independence and launch the American Revolution."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.6",
+    "strand": "History",
+    "topic": "Colonization to Independence",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "Key events and significant figures in American history influenced the course and outcome of the American Revolution."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.7",
+    "strand": "History",
+    "topic": "A New Nation",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "The outcome of the American Revolution was national independence and new political, social and economic relationships for the American people."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.8",
+    "strand": "History",
+    "topic": "A New Nation",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "Problems arising under the Articles of Confederation led to debate over the adoption of the U.S. Constitution."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.9",
+    "strand": "History",
+    "topic": "A New Nation",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "Actions of early presidential administrations established a strong federal government, provided peaceful transitions of power and repelled a foreign invasion."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.10",
+    "strand": "History",
+    "topic": "Expansion",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "The United States added to its territory through treaties and purchases."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.11",
+    "strand": "History",
+    "topic": "Expansion",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "Westward expansion contributed to economic and industrial development, debates over sectional issues, war with Mexico and the displacement of American Indians."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.12",
+    "strand": "History",
+    "topic": "Civil War and Reconstruction",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "Disputes over the nature of federalism, complicated by economic developments in the United States, resulted in sectional issues, including slavery, which led to the American Civil War."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.13",
+    "strand": "History",
+    "topic": "Civil War and Reconstruction",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "Key events and significant figures in American history influenced the course and outcome of the Civil War."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.14",
+    "strand": "History",
+    "topic": "Civil War and Reconstruction",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "The Reconstruction period resulted in changes to the U.S. Constitution, an affirmation of federal authority and lingering social and political differences."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.15",
+    "strand": "Geography",
+    "topic": "Spatial Thinking and Skills",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "Modern and historical maps and other geographic tools are used to analyze how historic events are shaped by geography."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.16",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "The availability of natural resources contributed to the geographic and economic expansion of the United States, sometimes resulting in unintended environmental consequences."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.17",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "The movement of people, products and ideas resulted in new patterns of settlement and land use that influenced the political and economic development of the United States."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.18",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "Cultural biases, stereotypes and prejudices had social, political and economic consequences for minority groups and the population as a whole."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.19",
+    "strand": "Geography",
+    "topic": "Human Systems",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "Americans began to develop a unique national identity among diverse regional and cultural populations based on democratic ideals."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.20",
+    "strand": "Government",
+    "topic": "Civic Participation and Skills",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "Active participation in social and civic groups can lead to the attainment of individual and public goals."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.21",
+    "strand": "Government",
+    "topic": "Civic Participation and Skills",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "Informed citizens understand how media and communication technology influence public opinion."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.22",
+    "strand": "Government",
+    "topic": "Roles and Systems of Government",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "The U.S. Constitution established a federal republic, providing a framework for a national government with elected representatives, separation of powers, and checks and balances."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.23",
+    "strand": "Government",
+    "topic": "Roles and Systems of Government",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "The U.S. Constitution protects citizens’ rights by limiting the powers of government."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.24",
+    "strand": "Economics",
+    "topic": "Economic Decision Making and Skills",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "Choices made by individuals, businesses and governments have both present and future consequences."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.25",
+    "strand": "Economics",
+    "topic": "Production and Consumption",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "The Industrial Revolution fundamentally changed the means of production as a result of improvements in technology, use of new power resources, the advent of interchangeable parts and the shift from craftwork to factory work."
+  },
+  {
+    "state": "OH",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "8.SS.26",
+    "strand": "Economics",
+    "topic": "Markets",
+    "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+    "description": "Governments can impact markets by means of spending, regulations, taxes and trade barriers."
+  }
+]

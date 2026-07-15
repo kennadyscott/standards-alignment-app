@@ -1,0 +1,668 @@
+[
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.ESS.1",
+    "strand": "Earth and Space Science",
+    "topic": "Daily and Seasonal Changes",
+    "description": "Weather changes are long-term and short-term. Weather changes occur throughout the day and from day to day. Air is a nonliving substance that surrounds Earth and wind is air that is moving. Wind, temperature and precipitation can be used to document short-term weather changes that are observable. Yearly weather changes (seasons) are observable patterns in the daily weather changes. Note: The focus is on observing the weather patterns of seasons. The reason for changing seasons is not appropriate for this grade level; this is found in grade 7."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.ESS.2",
+    "strand": "Earth and Space Science",
+    "topic": "Daily and Seasonal Changes",
+    "description": "The moon, sun and stars can be observed at different times of the day or night. The moon, sun and stars appear in different positions at different times of the day or night. Sometimes the moon is visible during the night, sometimes the moon is visible during the day and at other times the moon is not visible at all. The observable shape of the moon changes in size very slowly throughout the month. The sun is visible only during the day. The sun’s position in the sky appears to change in a single day and from season to season. Stars are visible at night, some are visible in the evening or morning and some are brighter than others."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.PS.1",
+    "strand": "Physical Science",
+    "topic": "Properties of Everyday Objects and Materials",
+    "description": "Objects and materials can be sorted and described by their properties. Objects can be sorted and described by the properties of the materials from which they are made. Some of the properties can include color, size and texture."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.PS.2",
+    "strand": "Physical Science",
+    "topic": "Properties of Everyday Objects and Materials",
+    "description": "Some objects and materials can be made to vibrate to produce sound. Sound is produced by touching, blowing or tapping objects. The sounds that are produced vary depending on the properties of objects. Sound is produced when objects vibrate."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.LS.1",
+    "strand": "Life Science",
+    "topic": "Physical and Behavioral Traits of Living Things",
+    "description": "Living things have specific characteristics and traits. Living things grow and reproduce. Living things are found worldwide."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.LS.2",
+    "strand": "Life Science",
+    "topic": "Physical and Behavioral Traits of Living Things",
+    "description": "Living things have physical traits and behaviors, which influence their survival. Living things are made up of a variety of structures. Some traits can be observable structures. Some of these structures and behaviors influence their survival."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.ESS.1",
+    "strand": "Earth and Space Science",
+    "topic": "Sun, Energy, and Weather",
+    "description": "The sun is the principal source of energy Sunlight warms Earth’s land, air and water. The amount of exposure to sunlight affects the amount of warming or cooling of air, water and land."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.ESS.2",
+    "strand": "Earth and Space Science",
+    "topic": "Sun, Energy, and Weather",
+    "description": "Water on Earth is present in many forms. The physical properties of water can change. These changes occur due to changing energy. Water can change from a liquid to a solid and from a solid to a liquid. Note: Water as a vapor is not introduced until grade 2; the water cycle is reserved for later grades."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.PS.1",
+    "strand": "Physical Science",
+    "topic": "Motion and Materials",
+    "description": "Properties of objects and materials can change. Objects and materials change when exposed to various conditions, such as heating or cooling. Changes in temperature are a result of changes in energy. Not all materials change in the same way."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.PS.2",
+    "strand": "Physical Science",
+    "topic": "Motion and Materials",
+    "description": "Objects can be moved in a variety of ways, such as straight, zigzag, circular and back and forth. The position of an object can be described by locating it relative to another object or to the object’s surroundings. An object is in motion when its position is changing. The motion of an object can be affected by pushing or pulling. A push or pull is a force that can make an object move faster, slower or go in a different direction. Changes in motion are a result of changes in energy."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.LS.1",
+    "strand": "Life Science",
+    "topic": "Basic Needs of Living Things",
+    "description": "Living things have basic needs, which are met by obtaining materials from the physical environment. Living things require energy, water, and a particular range of temperatures in their environments. Plants get energy from sunlight. Animals get energy from plants and other animals. Living things acquire resources from the living and nonliving components of the environment."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.LS.2",
+    "strand": "Life Science",
+    "topic": "Basic Needs of Living Things",
+    "description": "Living things survive only in environments that meet their needs. Resources are necessary to meet the needs of an individual and populations of individuals. Living things interact with their physical environments as they meet those needs. Effects of seasonal changes within the local environment directly impact the availability of resources."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.ESS.1",
+    "strand": "Earth and Space Science",
+    "topic": "The Atmosphere",
+    "description": "The atmosphere is primarily made up of air. Air has properties that can be observed and measured. The transfer of energy in the atmosphere causes air movement, which is felt as wind. Wind speed and direction can be measured."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.ESS.2",
+    "strand": "Earth and Space Science",
+    "topic": "The Atmosphere",
+    "description": "Water is present in the atmosphere. Water is present in the atmosphere as water vapor. When water vapor in the atmosphere cools, it forms clouds, fog, rain, ice, snow, sleet or hail. Note: The emphasis at this grade level is investigating condensation and evaporation, not memorizing the water cycle itself. Note: The emphasis is not in naming cloud types, but in relating the characteristics of the clouds with weather."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.ESS.3",
+    "strand": "Earth and Space Science",
+    "topic": "The Atmosphere",
+    "description": "Long- and short-term weather changes occur due to changes in energy. Changes in energy affect all aspects of weather, including temperature, precipitation, and wind."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.PS.1",
+    "strand": "Physical Science",
+    "topic": "Changes in Motion",
+    "description": "Forces change the motion of an object. Motion can increase, change direction or stop depending on the force applied. The change in motion of an object is related to the size of the force. Some forces act without touching, such as using a magnet to move an object or objects falling to the ground."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.LS.1",
+    "strand": "Life Science",
+    "topic": "Interactions within Habitats",
+    "description": "Living things cause changes on Earth. Living things function and interact with their physical environments. Living things cause changes in the environments where they live; the changes can be very noticeable or slightly noticeable, fast or slow. Note: At this grade level, discussion is limited to changes that can be easily observed."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.LS.2",
+    "strand": "Life Science",
+    "topic": "Interactions within Habitats",
+    "description": "All organisms alive today result from their ancestors, some of which may be extinct. Not all kinds of organisms that lived in the past are represented by living organisms today. Some kinds of organisms become extinct when their basic needs are no longer met or the environment changes."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.ESS.1",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Resources",
+    "description": "Earth’s nonliving resources have specific properties. Soil is composed of pieces of rock, organic material, water and air and has characteristics that can be measured and observed. Use the term “soil”, not “dirt”. Dirt and soils are not synonymous. Rocks have specific characteristics that allow them to be sorted and compared. Rocks form in different ways. Air and water are also nonliving resources. Note: Rock classification is not the focus for this grade level; this is found in grade 6. At this grade, the observable characteristics of rocks can be used to sort or compare, rather than formal classification."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.ESS.2",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Resources",
+    "description": "Earth’s resources can be used for energy. Renewable energy resources, such as wind, water or solar energy, can be replenished within a short amount of time by natural processes. Nonrenewable energy is a finite resource, such as natural gas, coal or oil, which cannot be replenished in a short amount of time."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.ESS.3",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Resources",
+    "description": "Some of Earth’s resources are limited. Some of Earth’s resources become limited due to overuse and/or contamination. Reducing resource use, decreasing waste and/or pollution, recycling and reusing can help conserve these resources."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.PS.1",
+    "strand": "Physical Science",
+    "topic": "Matter and Forms of Energy",
+    "description": "All objects and substances in the natural world are composed of matter. Matter takes up space and has mass. Differentiating between mass and weight is not necessary at this grade level."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.PS.2",
+    "strand": "Physical Science",
+    "topic": "Matter and Forms of Energy",
+    "description": "Matter exists in different states, each of which has different properties. The most recognizable states of matter are solids, liquids and gases. Shape and compressibility are properties that can distinguish between the states of matter. One way to change matter from one state to another is by heating or cooling."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.PS.3",
+    "strand": "Physical Science",
+    "topic": "Matter and Forms of Energy",
+    "description": "Heat, electrical energy, light, sound and magnetic energy are forms of energy. There are many different forms of energy. Energy is the ability to cause motion or create change. The different forms of energy that are outlined at this grade level should be limited to familiar forms that a student is able to observe."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.LS.1",
+    "strand": "Life Science",
+    "topic": "Behavior, Growth and Changes",
+    "description": "Offspring resemble their parents and each other. Individual organisms inherit many traits from their parents indicating a reliable way to transfer information from one generation to the next. Some behavioral traits are learned through interactions with the environment and are not inherited."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.LS.2",
+    "strand": "Life Science",
+    "topic": "Behavior, Growth and Changes",
+    "description": "Individuals of the same kind of organism differ in their inherited traits. These differences give some individuals an advantage in surviving and/or reproducing. Plants and animals have physical features that are associated with the environments where they live. Plants and animals have certain physical or behavioral characteristics that influence their chances of surviving in particular environments. Note: The focus is on the individual, not the population. Adaptation is not the focus at this grade level."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.LS.3",
+    "strand": "Life Science",
+    "topic": "Behavior, Growth and Changes",
+    "description": "Plants and animals have life cycles that are part of their adaptations for survival in their natural environments. Worldwide, organisms are growing, reproducing, dying and decaying. The details of the life cycle are different for different organisms, which affects their ability to survive and reproduce in their natural environments. Note: The names of the stages within the life cycles are not the focus."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.ESS.1",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Surface",
+    "description": "Earth’s surface has specific characteristics and landforms that can be identified. About 70 percent of the Earth’s surface is covered with water and most of that is the ocean. Only a small portion of the Earth’s water is freshwater, which is found in rivers, lakes, groundwater and glaciers. Earth’s surface can change due to erosion and deposition of soil, rock or sediment. Catastrophic events such as flooding, volcanoes and earthquakes can create landforms."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.ESS.2",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Surface",
+    "description": "The surface of Earth changes due to weathering. Rocks change shape, size and/or form due to water or glacial movement, freeze and thaw, wind, plant growth, acid rain, pollution and catastrophic events such as earthquakes, flooding, and volcanic activity. Note: Differentiating between chemical and physical weathering is not the focus at this grade level."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.ESS.3",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Surface",
+    "description": "The surface of Earth changes due to erosion and deposition. Liquid water, wind and ice physically remove and carry rock, soil and sediment (erosion) and deposit the material in a new location (deposition). Gravitational force affects movements of water, rock and soil."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.PS.1",
+    "strand": "Physical Science",
+    "topic": "Electricity, Heat and Matter",
+    "description": "When objects break into smaller pieces, dissolve, or change state, the total amount of matter is conserved. When an object is broken into smaller pieces, when a solid is dissolved in a liquid or when matter changes state (solid, liquid, gas), the total amount of matter remains constant. Note: Differentiation between mass and weight is not necessary at this grade level."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.PS.2",
+    "strand": "Physical Science",
+    "topic": "Electricity, Heat and Matter",
+    "description": "Energy can be transferred from one location to another or can be transformed from one form to another. Energy transfers from hot objects to cold objects as heat, resulting in a temperature change. Electric circuits require a complete loop of conducting materials through which electrical energy can be transferred. Electrical energy in circuits can be transformed to other forms of energy, including light, heat, sound and motion. Electricity and magnetism are closely related."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.LS.1",
+    "strand": "Life Science",
+    "topic": "Earth’s Living History",
+    "description": "Changes in an organism’s environment are sometimes beneficial to its survival and sometimes harmful. Ecosystems can change gradually or dramatically. When the environment changes, some plants and animals survive and reproduce and others die or move to new locations. Ecosystems are based on interrelationships among and between biotic and abiotic factors. These include the diversity of other organisms present, the availability of food and other resources, and the physical attributes of the environment."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.LS.2",
+    "strand": "Life Science",
+    "topic": "Earth’s Living History",
+    "description": "Fossils can be compared to one another and to present-day organisms according to their similarities and differences. The concept of biodiversity is expanded to include different classification schemes based upon shared internal and external characteristics of organisms. Most species that have lived on Earth are extinct. Fossils provide a point of comparison between the types of organisms that lived long ago and those existing today."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.ESS.1",
+    "strand": "Earth and Space Science",
+    "topic": "Cycles and Patterns in the Solar System",
+    "description": "The solar system includes the sun and all celestial bodies that orbit the sun. Each planet in the solar system has unique characteristics. The distance from the sun, size, composition and movement of each planet are unique. Planets revolve around the sun in elliptical orbits. Some of the planets have moons and/or debris that orbit them. Comets, asteroids and meteoroids orbit the sun."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.ESS.2",
+    "strand": "Earth and Space Science",
+    "topic": "Cycles and Patterns in the Solar System",
+    "description": "The sun is one of many stars that exist in the universe. The sun appears to be the largest star in the sky because it is the closest star to Earth. Some stars are larger than the sun and some stars are smaller than the sun."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.ESS.3",
+    "strand": "Earth and Space Science",
+    "topic": "Cycles and Patterns in the Solar System",
+    "description": "Most of the cycles and patterns of motion between the Earth and sun are predictable. Earth’s revolution around the sun takes approximately 365 days. Earth completes one rotation on its axis in a 24-hour period, producing day and night. This rotation makes the sun, stars and moon appear to change position in the sky. Note: Moon phases should not be the focus."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.PS.1",
+    "strand": "Physical Science",
+    "topic": "Light, Sound and Motion",
+    "description": "The amount of change in movement of an object is based on the mass of the object and the amount of force exerted. Movement can be measured by speed. The speed of an object is calculated by determining the distance (d) traveled in a period of time (t). Any change in speed or direction of an object requires a force and is affected by the mass of the object and the amount of force applied. Note: Differentiating between mass and weight is not necessary at this grade level."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.PS.2",
+    "strand": "Physical Science",
+    "topic": "Light, Sound and Motion",
+    "description": "Light and sound are forms of energy that behave in predictable ways. Light travels and maintains its direction until it interacts with an object or moves from one medium to another and then it can be reflected, refracted or absorbed. Sound is produced by vibrating objects and requires a medium through which to travel. The rate of vibration is related to the pitch of the sound. Note: At this grade level, the discussion of light and sound should be based on observable behavior. Waves are introduced at the middle school level."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.LS.1",
+    "strand": "Life Science",
+    "topic": "Interconnections within Ecosystems",
+    "description": "Organisms perform a variety of roles in an ecosystem. Populations of organisms can be categorized by how they acquire energy. Food webs can be used to identify the relationships among producers, consumers and decomposers in an ecosystem."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.LS.2",
+    "strand": "Life Science",
+    "topic": "Interconnections within Ecosystems",
+    "description": "All of the processes that take place within organisms require energy. For ecosystems, the major source of energy is sunlight. Energy entering ecosystems as sunlight is transferred and transformed by producers into energy that organisms use through the process of photosynthesis. That energy is used or stored by the producer and can be passed from organism to organism as illustrated in food webs."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.ESS.1",
+    "strand": "Earth and Space Science",
+    "topic": "Rocks, Minerals and Soil",
+    "description": "Minerals have specific, quantifiable properties. Minerals are naturally occurring, inorganic solids that have a defined chemical composition. Minerals have properties that can be observed and measured. Minerals form in specific environments. Note: The emphasis is on learning how to identify the mineral by conducting tests (not through memorization)."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.ESS.2",
+    "strand": "Earth and Space Science",
+    "topic": "Rocks, Minerals and Soil",
+    "description": "Igneous, metamorphic and sedimentary rocks have unique characteristics that can be used for identification and/or classification. Most rocks are composed of one or more minerals, but there are a few types of sedimentary rocks that contain organic material, such as coal. The composition of the rock, types of mineral present, and/or mineral shape and size can be used to identify the rock and to interpret its history of formation, breakdown (weathering) and transport (erosion)."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.ESS.3",
+    "strand": "Earth and Space Science",
+    "topic": "Rocks, Minerals and Soil",
+    "description": "Igneous, metamorphic and sedimentary rocks form in different ways. Magma or lava cools and crystallizes to form igneous rocks. Heat and pressure applied to existing rock forms metamorphic rocks. Sedimentary rock forms as existing rock weathers chemically and/or physically and the weathered material is compressed and then lithifies. Each rock type can provide information about the environment in which it was formed."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.ESS.4",
+    "strand": "Earth and Space Science",
+    "topic": "Rocks, Minerals and Soil",
+    "description": "Soil is unconsolidated material that contains organic matter and weathered rock. Soil formation occurs at different rates and is based on environmental conditions, types of existing bedrock and rates of weathering. Soil forms in layers known as horizons. Soil horizons can be distinguished from one another based on properties that can be measured. The terms dirt and soil are not synonymous, use the term “soil”. Note: The emphasis should be on properties of soil rather than memorization."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.ESS.5",
+    "strand": "Earth and Space Science",
+    "topic": "Rocks, Minerals and Soil",
+    "description": "Rocks, minerals and soils have common and practical uses. Nearly all manufactured material requires some kind of geologic resource. Most geologic resources are considered nonrenewable. Rocks, minerals and soil are examples of geologic resources that are nonrenewable."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.PS.1",
+    "strand": "Physical Science",
+    "topic": "Matter and Motion",
+    "description": "Matter is made up of small particles called atoms. Matter has mass, volume and density and is made up of particles called atoms. Elements are a class of substances composed of a single kind of atom. Molecules are the combination of two or more atoms that are joined together chemically."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.PS.2",
+    "strand": "Physical Science",
+    "topic": "Matter and Motion",
+    "description": "Changes of state are explained by a model of matter composed of particles that are in motion. Temperature is a measure of the average motion of the particles in a substance. Heat is a process of energy transfer rather than a type of energy. Energy transfer can result in a change in temperature or a phase change. When substances undergo changes of state, atoms change their motion and position. Note: It is not the intent of this standard to encourage vocabulary identification (matching definitions with heat, temperature, and thermal energy). Instead, these are provided as conceptual tools for understanding the role of energy in physical, biotic, atmospheric, oceanic, and geologic systems covered in grade 6 and subsequent grades and courses."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.PS.3",
+    "strand": "Physical Science",
+    "topic": "Matter and Motion",
+    "description": "There are two categories of energy: kinetic and potential. Objects and substances in motion have kinetic energy. Objects and substances can have energy as a result of their position (potential energy). Note: Chemical and elastic potential energy should not be included at this grade; this is found in PS grade 7."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.PS.4",
+    "strand": "Physical Science",
+    "topic": "Matter and Motion",
+    "description": "An object’s motion can be described by its speed and the direction in which it is moving. An object’s position and speed can be measured and graphed as a function of time. Note: Velocity and acceleration rates should not be included at this grade level; these terms are introduced in high school."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.LS.1",
+    "strand": "Life Science",
+    "topic": "Cellular to Multicellular",
+    "description": "Cells are the fundamental unit of life. All living things are composed of cells. Different body tissues and organs are made of different kinds of cells. The ways cells function are similar in all living organisms. Note: Emphasis should be placed on the function and coordination of cell organelles as well as their roles in overall cell function. Specific information about the organelles that need to be addressed at this grade level will be found in the model curriculum."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.LS.2",
+    "strand": "Life Science",
+    "topic": "Cellular to Multicellular",
+    "description": "All cells come from pre-existing cells. Cells repeatedly divide resulting in more cells and growth and repair in multicellular organisms. Note: This is not a detailed discussion of the phases of mitosis or meiosis. The focus should be on reproduction as a means of transmitting genetic information from one generation to the next, cellular growth and repair."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.LS.3",
+    "strand": "Life Science",
+    "topic": "Cellular to Multicellular",
+    "description": "Cells carry on specific functions that sustain life. Many basic functions of organisms occur in cells. Cells take in nutrients and energy to perform work, like making various molecules required by that cell or an organism. Every cell is covered by a membrane that controls what can enter and leave the cell. Within the cell are specialized parts for the transport of materials, energy capture and release, protein building, waste disposal, information feedback and movement. Note: Emphasis should be placed on the function and coordination of cell components, as well as on their roles in overall cell function."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.LS.4",
+    "strand": "Life Science",
+    "topic": "Cellular to Multicellular",
+    "description": "Living systems at all levels of organization demonstrate the complementary nature of structure and function. The level of organization within organisms includes cells, tissues, organs, organ systems and whole organisms. Whether the organism is single-celled or multicellular, all of its parts function as a whole to perform the tasks necessary for the survival of the organism. Organisms have diverse body plans, symmetry and internal structures that contribute to their being able to survive in their environments."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.ESS.1",
+    "strand": "Earth and Space Science",
+    "topic": "Cycles and Patterns of Earth and the Moon",
+    "description": "The hydrologic cycle illustrates the changing states of water as it moves through the lithosphere, biosphere, hydrosphere and atmosphere. Thermal energy is transferred as water changes state throughout the cycle. The cycling of water in the atmosphere is an important part of weather patterns on Earth. The rate at which water flows through soil and rock is dependent upon the porosity and permeability of the soil or rock."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.ESS.2",
+    "strand": "Earth and Space Science",
+    "topic": "Cycles and Patterns of Earth and the Moon",
+    "description": "Thermal-energy transfers in the ocean and the atmosphere contribute to the formation of currents, which influence global climate patterns. The sun is the major source of energy for wind, air and ocean currents and the hydrologic cycle. As thermal energy transfers occur in the atmosphere and ocean, currents form. Large bodies of water can influence weather and climate. The jet stream is an example of an atmospheric current and the Gulf Stream is an example of an oceanic current. Ocean currents are influenced by factors other than thermal energy, such as water density, mineral content (such as salinity), ocean floor topography and Earth’s rotation. All of these factors delineate global climate patterns on Earth."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.ESS.3",
+    "strand": "Earth and Space Science",
+    "topic": "Cycles and Patterns of Earth and the Moon",
+    "description": "The atmosphere has different properties at different elevations and contains a mixture of gases that cycle through the lithosphere, biosphere, hydrosphere and atmosphere. The atmosphere is held to the Earth by the force of gravity. There are defined layers of the atmosphere that have specific properties, such as temperature, chemical composition and physical characteristics. Gases in the atmosphere include nitrogen, oxygen, water vapor, carbon dioxide and other trace gases. Biogeochemical cycles illustrate the movement of specific elements or molecules (such as carbon or nitrogen) through the lithosphere, biosphere, hydrosphere and atmosphere. Note: The emphasis is on why the atmosphere has defined layers, not on naming the layers."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.ESS.4",
+    "strand": "Earth and Space Science",
+    "topic": "Cycles and Patterns of Earth and the Moon",
+    "description": "The relative patterns of motion and positions of Earth, moon and sun cause solar and lunar eclipses, tides and phases of the moon. The moon’s orbit and its change of position relative to Earth and sun result in different parts of the moon being visible from Earth (phases of the moon). A solar eclipse is when Earth moves into the shadow of the moon (during a new moon). A lunar eclipse is when the moon moves into the shadow of Earth (during a full moon). Gravitational force between Earth and the moon causes daily oceanic tides. When the gravitational forces from the sun and moon align (at new and full moons) spring tides occur. When the gravitational forces of the sun and moon are perpendicular (at first and last quarter moons), neap tides occur."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.ESS.5",
+    "strand": "Earth and Space Science",
+    "topic": "Cycles and Patterns of Earth and the Moon",
+    "description": "The relative positions of Earth and the sun cause patterns we call seasons. Earth’s axis is tilted at an angle of 23.5°. This tilt along with Earth’s revolution around the sun, affects the amount of direct sunlight that the earth receives in a single day and throughout the year. The average daily temperature is related to the amount of direct sunlight received."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.PS.1",
+    "strand": "Physical Science",
+    "topic": "Conservation of Mass and Energy",
+    "description": "Elements can be organized by properties. Elements can be classified as metals, non-metals and metalloids, and can be organized by similar properties such as color, solubility, hardness, density, conductivity, melting point and boiling point, viscosity, and malleability. Note 1: This is the conceptual introduction of the Periodic Table of Elements and should be limited to classifications based on observable properties; it should not include the names of the families."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.PS.2",
+    "strand": "Physical Science",
+    "topic": "Conservation of Mass and Energy",
+    "description": "Matter can be separated or changed, but in a closed system, the number and types of atoms remains constant. When substances interact and form new substances the properties of the new substances may be very different from those of the original substances, but the amount of mass does not change. Physically combining two or more substances forms a mixture, which can be separated through physical processes. Note: Under these standards, classifying specific changes as chemical or physical is not appropriate."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.PS.3",
+    "strand": "Physical Science",
+    "topic": "Conservation of Mass and Energy",
+    "description": "Energy can be transformed or transferred but is never lost. When energy is transferred from one system to another, the quantity of energy before transfer equals the quantity of energy after transfer. When energy is transformed from one form to another, the total amount of energy remains the same."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.PS.4",
+    "strand": "Physical Science",
+    "topic": "Conservation of Mass and Energy",
+    "description": "Energy can be transferred through a variety of ways. Mechanical energy can be transferred when objects push or pull on each other over a distance. Mechanical and electromagnetic waves transfer energy when they interact with matter. Thermal energy can be transferred through radiation, convection and conduction. An electrical circuit transfers energy from a source to a device. Note: Energy transfers should be experiential and observable at this grade level."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.LS.1",
+    "strand": "Life Science",
+    "topic": "Cycles of Matter and Flow of Energy",
+    "description": "Energy flows and matter is transferred continuously from one organism to another and between organisms and their physical environments. Plants use the energy in light to make sugars out of carbon dioxide and water (photosynthesis). These materials can be used or stored for later use. Organisms that eat plants break down plant structures to release the energy and produce the materials they need to survive. The organism may then be consumed by other organisms for materials and energy. Energy can transform from one form to another in living things. Animals get energy from oxidizing food, releasing some of its energy as heat. The total amount of matter and energy remains constant, even though its form and location change. Note: Chemical reactions in terms of subatomic structures of atoms are not appropriate at this grade level. Chemical reactions are presented as the rearrangement of atoms in molecules."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.LS.2",
+    "strand": "Life Science",
+    "topic": "Cycles of Matter and Flow of Energy",
+    "description": "In any particular biome, the number, growth and survival of organisms and populations depend on biotic and abiotic factors. The variety of physical (abiotic) conditions that exists on Earth gives rise to diverse environments (biomes) and allows for the existence of a wide variety of organisms (biodiversity). Biomes are regional ecosystems characterized by distinct types of organisms that have developed under specific soil and climatic conditions. Ecosystems are dynamic in nature; the number and types of species fluctuate over time. Disruptions, deliberate or inadvertent, to the physical (abiotic) or biological (biotic) components of an ecosystem impact the composition of an ecosystem."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.ESS.1",
+    "strand": "Earth and Space Science",
+    "topic": "Physical Earth",
+    "description": "The composition and properties of Earth’s interior are identified by the behavior of seismic waves. The refraction and reflection of seismic waves as they move through one type of material to another is used to differentiate the layers of Earth’s interior. Earth has a core, a mantle, and a crust. Impacts during planetary formation generated heat. These impacts converted gravitational potential energy to heat. Earth’s core is also able to generate its own thermal energy because of decaying atoms. This continuously releases thermal energy. Thermal energy generated from Earth’s core drives convection currents in the asthenosphere. Note 1: Radioactive decay is not the focus; this will be discussed in Physical Science and Chemistry. Note 2: At this grade level, analyzing seismograms (e.g., amplitude and lag time) and reading a travel time curve are not the focus. At this grade the properties of seismic waves should be addressed."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.ESS.2",
+    "strand": "Earth and Space Science",
+    "topic": "Physical Earth",
+    "description": "Earth’s lithosphere consists of major and minor tectonic plates that move relative to each other. Historical data and observations such as fossil distribution, paleomagnetism, continental drift and seafloor spreading contributed to the theory of plate tectonics. The rigid tectonic plates move with the molten rock and magma beneath them in the upper mantle. Convection currents in the asthenosphere cause movements of the lithospheric plates. The energy that forms convection currents comes from deep within the Earth. There are three main types of plate boundaries: divergent, convergent and transform. Each type of boundary results in specific motion and causes events (such as earthquakes or volcanic activity) or features (such as mountains or trenches) that are indicative of the type of boundary."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.ESS.3",
+    "strand": "Earth and Space Science",
+    "topic": "Physical Earth",
+    "description": "A combination of constructive and destructive geologic processes formed Earth’s surface. Earth’s surface is formed from a variety of different geologic processes, including but not limited to plate tectonics."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.ESS.4",
+    "strand": "Earth and Space Science",
+    "topic": "Physical Earth",
+    "description": "Evidence of the dynamic changes of Earth’s surface through time is found in the geologic record. Earth is approximately 4.6 billion years old. Earth history is based on observations of the geologic record and the understanding that processes observed at present day are similar to those that occurred in the past (uniformitarianism). There are different methods to determine relative and absolute age of some rock layers in the geologic record. Within a sequence of undisturbed sedimentary rocks, the oldest rocks are at the bottom (superposition). The geologic record can help identify past environmental and climate conditions."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.PS.1",
+    "strand": "Physical Science",
+    "topic": "Forces and Motion",
+    "description": "Objects can experience a force due to an external field such as magnetic, electrostatic, or gravitational fields. Magnetic, electrical and gravitational forces can act at a distance."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.PS.2",
+    "strand": "Physical Science",
+    "topic": "Forces and Motion",
+    "description": "Forces can act to change the motion of objects. The motion of an object is always measured with respect to a reference point. Forces can be added. The net force on an object is the sum of all of the forces acting on the object. If there is a nonzero net force acting on an object, its speed and/or direction will change. Kinetic friction and drag are forces that act in a direction opposite the relative motion of objects."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.LS.1",
+    "strand": "Life Science",
+    "topic": "Species and Reproduction",
+    "description": "Diversity of species, a result of variation of traits, occurs through the process of evolution and extinction over many generations. The fossil records provide evidence that changes have occurred in number and types of species. Fossils provide important evidence of how life and environmental conditions have changed. Changes in environmental conditions can affect how beneficial a trait will be for the survival and reproductive success of an organism or an entire species. Throughout Earth’s history, extinction of a species has occurred when the environment changes and the individual organisms of that species do not have the traits necessary to survive and reproduce in the changed environment. Most species (approximately 99 percent) that have lived on Earth are now extinct. Note: Population genetics and the ability to use statistic mathematics to predict changes in a gene pool are reserved for high school Biology."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.LS.2",
+    "strand": "Life Science",
+    "topic": "Species and Reproduction",
+    "description": "Every organism alive today comes from a long line of ancestors who reproduced successfully every generation. Reproduction is the transfer of genetic information from one generation to the next. It can occur with mixing of genes from two individuals (sexual reproduction). It can occur with the transfer of genes from one individual to the next generation (asexual reproduction). The ability to reproduce defines living things."
+  },
+  {
+    "state": "OH",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.LS.3",
+    "strand": "Life Science",
+    "topic": "Species and Reproduction",
+    "description": "The characteristics of an organism are a result of inherited traits received from parent(s). Expression of all traits is determined by genes and environmental factors to varying degrees. Many genes influence more than one trait, and many traits are influenced by more than one gene. During reproduction, genetic information (DNA) is transmitted between parent and offspring. In asexual reproduction, the lone parent contributes DNA to the offspring. In sexual reproduction, both parents contribute DNA to the offspring. Note 1: The focus should be the link between DNA and traits without being explicit about the mechanisms involved. Note 2: The ways in which bacteria reproduce is beyond the scope of this content statement. Note 3: The molecular structure of DNA is not appropriate at this grade level."
+  }
+]
