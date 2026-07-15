@@ -80,6 +80,13 @@ function primaryScope(s) {
     matchesSubtopic(std, subtopic);
 }
 
+// Questions always tag to ELAR standards at the set's hierarchy grade.
+function questionScope(s) {
+  if (!s.gaGrade) return null;
+  return std => std.subject === 'ela' &&
+    (std.state === 'ALL' || std.grade === 'All' || String(std.grade) === String(s.gaGrade));
+}
+
 const state = {
   standards: [],            // all standards, both states
   byKey: new Map(),         // `${state}:${code}` -> standard
@@ -830,8 +837,16 @@ function pickerHtml(section, index, restrictState, scope, scopeNote) {
     </div>`;
 }
 
-function questionBlockHtml(q, section, i, label, restrictState) {
+function questionBlockHtml(q, section, i, label, ctx) {
   const open = state.ui.openPicker && state.ui.openPicker.section === section && state.ui.openPicker.index === i;
+  // A tag already made stays visible even when the scope isn't resolvable, so it can be reviewed or removed.
+  const area = q.standard
+    ? tagChipHtml(q.standard, section, i)
+    : ctx.gate
+      ? `<div class="ps-hint">${esc(ctx.gate)}</div>`
+      : open
+        ? pickerHtml(section, i, ctx.restrictState, ctx.scope, ctx.scopeNote)
+        : tagChipHtml(null, section, i);
   return `
     <div class="q-card">
       <div class="q-head">
@@ -840,9 +855,7 @@ function questionBlockHtml(q, section, i, label, restrictState) {
       </div>
       <textarea class="ps-textarea q-text" data-q="${section}:${i}" rows="5"
         placeholder="Paste the entire question here, including all answer choices.">${esc(q.text)}</textarea>
-      <div class="q-tag-area">
-        ${open ? pickerHtml(section, i, restrictState) : tagChipHtml(q.standard, section, i)}
-      </div>
+      <div class="q-tag-area">${area}</div>
     </div>`;
 }
 
@@ -897,13 +910,18 @@ function renderSetEditor() {
   const setPickerOpen = state.ui.openPicker && state.ui.openPicker.section === 'set';
   const subtopics = gaSubtopicsFor(s.gaGrade, s.genre);
   const primaryState = primaryStateOf(s);
+  const qCtx = {
+    restrictState: primaryState,
+    scope: questionScope(s),
+    scopeNote: primaryState && s.gaGrade ? `Showing ${STATE_NAMES[primaryState]} ELAR standards for Grade ${s.gaGrade}.` : '',
+    gate: !primaryState
+      ? "Select a primary standard state first — question tagging pulls that state's ELAR standards."
+      : !s.gaGrade
+        ? 'Pick a hierarchy grade first — question tagging shows ELAR standards for that grade.'
+        : null,
+  };
 
   panel.innerHTML = `
-    <div class="editor-topbar">
-      <span class="ps-hint">Changes save automatically — Save confirms immediately.</span>
-      <button class="btn btn-primary" id="saveSetBtn">Save</button>
-    </div>
-
     <div class="ps-section">
       <div class="ps-section-title">Passage Set</div>
       <div class="ps-meta-row">
@@ -978,13 +996,13 @@ function renderSetEditor() {
 
     <div class="ps-section">
       <div class="ps-section-title">Question Set <span class="ps-hint">3–4 questions, each tagged to a standard</span></div>
-      ${s.questions.map((q, i) => questionBlockHtml(q, 'questions', i, `Question ${i + 1}`, primaryState)).join('')}
+      ${s.questions.map((q, i) => questionBlockHtml(q, 'questions', i, `Question ${i + 1}`, qCtx)).join('')}
       ${s.questions.length < MAX_QUESTIONS ? `<button class="act-btn" id="addQuestion">＋ Add question</button>` : ''}
     </div>
 
     <div class="ps-section">
       <div class="ps-section-title">Peer Revision Task <span class="chip ga-chip">Georgia only</span></div>
-      ${s.peerRevision.map((q, i) => questionBlockHtml(q, 'peer', i, `Task ${i + 1}`, 'GA')).join('')}
+      ${s.peerRevision.map((q, i) => questionBlockHtml(q, 'peer', i, `Task ${i + 1}`, { restrictState: 'GA' })).join('')}
       ${s.peerRevision.length < MAX_QUESTIONS ? `<button class="act-btn" id="addPeer">＋ Add task</button>` : ''}
     </div>
 
@@ -995,6 +1013,11 @@ function renderSetEditor() {
       </div>
       <textarea class="ps-textarea" id="promptText" rows="4" style="margin-top:10px"
         placeholder="Paste the writing prompt here.">${esc(s.writingPrompt.text)}</textarea>
+    </div>
+
+    <div class="editor-savebar">
+      <span class="ps-hint">Changes save automatically — Save confirms immediately.</span>
+      <button class="btn btn-primary" id="saveSetBtn">Save</button>
     </div>`;
 
   wireSetEditor(panel, s);
@@ -1112,7 +1135,7 @@ function wireSetEditor(panel, s) {
   if (picker) {
     const [section, iStr] = picker.dataset.picker.split(':');
     const restrictState = section === 'peer' ? 'GA' : primaryStateOf(s);
-    const scope = section === 'set' ? primaryScope(s) : null;
+    const scope = section === 'set' ? primaryScope(s) : section === 'questions' ? questionScope(s) : null;
     const results = picker.querySelector('.picker-results');
     picker.querySelector('.picker-search').addEventListener('input', e => {
       results.innerHTML = pickerResultsHtml(e.target.value, restrictState, scope);
