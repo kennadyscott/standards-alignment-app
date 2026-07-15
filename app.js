@@ -12,9 +12,13 @@ const GENRES = [
   { key: 'literary_nonfiction', label: 'Literary Non-Fiction' },
 ];
 const GA_GRADES = ['2','3','4','5','6','7','8'];
+const ITEM_SET_TYPES = [
+  { key: 'informative', label: 'Informative' },
+  { key: 'opinion', label: 'Opinion' },
+];
 const GA_SUBTOPICS = {
   '2': {
-    literary: ['Narrative Fiction', 'Traditional Literature', 'Short Literary Forms'],
+    literary: ['Poetry', 'Narrative Fiction', 'Traditional Literature', 'Short Literary Forms'],
     literary_nonfiction: ['Biographies', 'True Narratives'],
     informational: ['Science', 'Social Studies'],
   },
@@ -28,6 +32,12 @@ function gaSubtopicsFor(grade, genre) {
   if (!grade || !genre) return [];
   const band = grade === '2' ? '2' : '3-8';
   return GA_SUBTOPICS[band][genre] || [];
+}
+function gradeLabel(g) { return g === 'All' ? 'All grades' : `G${g}`; }
+// Universal (all-state) standards whose domain matches a hierarchy subtopic
+function universalForDomain(domain) {
+  if (!domain) return [];
+  return state.standards.filter(s => s.state === 'ALL' && (s.strand || '') === domain);
 }
 
 const state = {
@@ -657,6 +667,7 @@ function newPassageSet() {
   const s = {
     id: 'ps-' + Date.now(),
     title: '', passageId: '',
+    itemSetType: null,                 // informative | opinion
     genre: null,                       // informational | literary | literary_nonfiction
     gaGrade: null, gaSubtopic: null,   // Georgia tagging hierarchy
     standard: null,                    // set-level primary standard tag
@@ -710,7 +721,7 @@ function tagChipHtml(tag, section, index, showAlign = true) {
     return `
       <div class="tag-row">
         <span class="tag-chip">
-          <b>${esc(tag.code)}</b> · ${STATE_NAMES[tag.state]}${std && std.grade ? ` · G${esc(std.grade)}` : ''}
+          <b>${esc(tag.code)}</b> · ${STATE_NAMES[tag.state]}${std && std.grade ? ` · ${esc(gradeLabel(std.grade))}` : ''}
           <button class="tag-x" data-untag="${section}:${index}" title="Remove tag">✕</button>
         </span>
         ${std ? `<span class="tag-desc">${esc(std.description.slice(0, 110))}${std.description.length > 110 ? '…' : ''}</span>` : ''}
@@ -745,7 +756,7 @@ function pickerResultsHtml(query, restrictState) {
     html += `
     <div class="picker-item" data-tag="${esc(s.state)}|${esc(s.code)}">
       <span class="align-mini-code">${esc(s.code)}</span>
-      <span class="chip">G${esc(s.grade)}</span>
+      <span class="chip">${esc(gradeLabel(s.grade))}</span>
       <span class="align-mini-desc">${esc(s.description.slice(0, 100))}${s.description.length > 100 ? '…' : ''}</span>
     </div>`;
   });
@@ -846,7 +857,12 @@ function renderSetEditor() {
 
     <div class="ps-section">
       <div class="ps-section-title">Classification</div>
-      <div class="ps-field"><label>Genre</label>
+      <div class="ps-field"><label>Item Set Type</label>
+        <div class="chips-row">
+          ${ITEM_SET_TYPES.map(t => `<button class="pill-btn ${s.itemSetType === t.key ? 'active' : ''}" data-itemset="${t.key}">${t.label}</button>`).join('')}
+        </div>
+      </div>
+      <div class="ps-field" style="margin-top:12px"><label>Genre</label>
         <div class="chips-row">
           ${GENRES.map(g => `<button class="pill-btn ${s.genre === g.key ? 'active' : ''}" data-genre="${g.key}">${g.label}</button>`).join('')}
         </div>
@@ -861,6 +877,15 @@ function renderSetEditor() {
           ? `<div class="chips-row">${subtopics.map(t => `<button class="pill-btn ${s.gaSubtopic === t ? 'active' : ''}" data-subtopic="${esc(t)}">${esc(t)}</button>`).join('')}</div>`
           : `<div class="ps-hint">Pick a genre and Georgia grade first — subtopics depend on both.</div>`}
       </div>
+      ${(() => {
+        const uni = universalForDomain(s.gaSubtopic);
+        if (!uni.length) return '';
+        return `<div class="ps-field" style="margin-top:12px"><label>${esc(s.gaSubtopic)} standards — all states, all grades</label>
+          <div class="chips-row">${uni.map(u => `
+            <button class="pill-btn ${s.standard && s.standard.code === u.code ? 'active' : ''}" data-unistd="${esc(u.code)}" title="${esc(u.description)}">
+              ${esc(u.code)}: ${esc(u.description.slice(0, 60))}${u.description.length > 60 ? '…' : ''}</button>`).join('')}
+          </div></div>`;
+      })()}
       <div class="ps-field" style="margin-top:14px"><label>Primary standard</label>
         <div class="q-tag-area">${setPickerOpen ? pickerHtml('set', 0, null) : tagChipHtml(s.standard, 'set', 0, false)}</div>
         <div class="ps-hint" style="margin-top:6px">Cross-state alignments for this standard appear in the panel on the right.</div>
@@ -911,6 +936,16 @@ function wireSetEditor(panel, s) {
 
   on('#saveSetBtn', 'click', () => flushState());
 
+  on('[data-itemset]', 'click', e => {
+    s.itemSetType = e.currentTarget.dataset.itemset;
+    saveSets(); renderPassages();
+  });
+  on('[data-unistd]', 'click', e => {
+    s.standard = { state: 'ALL', code: e.currentTarget.dataset.unistd };
+    saveSets();
+    toast(`Tagged ${s.standard.code}`);
+    renderPassages();
+  });
   on('[data-genre]', 'click', e => {
     s.genre = e.currentTarget.dataset.genre;
     if (!gaSubtopicsFor(s.gaGrade, s.genre).includes(s.gaSubtopic)) s.gaSubtopic = null;
@@ -1012,8 +1047,10 @@ function renderSetSide() {
   if (!s) { panel.innerHTML = ''; return; }
 
   const genreLabel = (GENRES.find(g => g.key === s.genre) || {}).label;
+  const istLabel = (ITEM_SET_TYPES.find(t => t.key === s.itemSetType) || {}).label;
   let html = `<div class="side-title">Cross-State Alignment</div>
     <div class="side-summary">
+      ${istLabel ? `<span class="chip">${esc(istLabel)}</span>` : '<span class="chip chip-warn">No item set type</span>'}
       ${genreLabel ? `<span class="chip">${esc(genreLabel)}</span>` : '<span class="chip chip-warn">No genre</span>'}
       ${s.gaGrade ? `<span class="chip">GA Grade ${esc(s.gaGrade)}</span>` : ''}
       ${s.gaSubtopic ? `<span class="chip">${esc(s.gaSubtopic)}</span>` : ''}
@@ -1033,7 +1070,7 @@ function renderSetSide() {
       <div class="align-mini-item">
         <span class="align-mini-code">${esc(tag.code)}</span>
         <span class="chip">${STATE_NAMES[tag.state]}</span>
-        ${std && std.grade ? `<span class="chip">G${esc(std.grade)}</span>` : ''}
+        ${std && std.grade ? `<span class="chip">${esc(gradeLabel(std.grade))}</span>` : ''}
         ${cmsChip(tag.state, tag.code)}
       </div>
       ${std ? `<div class="align-mini-desc" style="margin-top:4px">${esc(std.description)}</div>` : ''}

@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "state": "ALL",
+    "subject": "ela",
+    "grade": "All",
+    "code": "POETRY.1",
+    "strand": "Poetry",
+    "description": "Analyze poetry for meaning"
+  },
+  {
+    "state": "ALL",
+    "subject": "ela",
+    "grade": "All",
+    "code": "POETRY.2",
+    "strand": "Poetry",
+    "description": "Describe how words and phrases (e.g., regular beats, alliteration, rhymes, repeated lines) supply rhythm and meaning in a story, poem, or song."
+  }
+]
