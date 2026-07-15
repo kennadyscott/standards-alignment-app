@@ -224,6 +224,7 @@ body {
   padding: 2px 10px; border-radius: 99px;
   background: var(--bg); color: var(--ink-soft);
 }
+.chip-cross { background: var(--amber-soft); color: var(--amber); font-weight: 700; }
 .card-desc { font-size: 14px; color: var(--ink); }
 .stem-note {
   font-size: 12px; color: var(--ink-faint);

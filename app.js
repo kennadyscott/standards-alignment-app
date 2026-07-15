@@ -2,7 +2,7 @@
 
 const GRADES = ['K','1','2','3','4','5','6','7','8'];
 const STATE_NAMES = { OH: 'Ohio', GA: 'Georgia', ALL: 'All States' };
-const SUBJECT_NAMES = { social_studies: 'Social Studies', science: 'Science', ela: 'ELA' };
+const SUBJECT_NAMES = { social_studies: 'Social Studies', science: 'Science', ela: 'ELAR' };
 const OTHER = { OH: 'GA', GA: 'OH' };
 
 /* Passage-set genres and Georgia's grade→genre→subtopic tagging hierarchy */
@@ -38,6 +38,46 @@ function gradeLabel(g) { return g === 'All' ? 'All grades' : `G${g}`; }
 function universalForDomain(domain) {
   if (!domain) return [];
   return state.standards.filter(s => s.state === 'ALL' && (s.strand || '') === domain);
+}
+
+/* A hierarchy subtopic names a content domain; each state expresses that domain
+   under its own strand names (Ohio "History" ↔ Georgia "Historical Understandings").
+   Content-area subtopics resolve to a subject or a strand list; literary and
+   literary-nonfiction subtopics resolve to ELAR reading standards, excluding the
+   opposite reading strand rather than naming strands we may not have loaded yet. */
+const SUBTOPIC_RULES = {
+  'Science': { subjects: ['science'] },
+  'Social Studies': { subjects: ['social_studies'] },
+  'History': { strands: ['History', 'Historical Understandings'] },
+  'Geography': { strands: ['Geography', 'Geographic Understandings'] },
+  'Government': { strands: ['Government', 'Government/Civic Understandings'] },
+  'Economics': { strands: ['Economics', 'Economic Understandings'] },
+  'Poetry': { subjects: ['ela'], excludeStrand: /informational/i },
+  'Narrative Fiction': { subjects: ['ela'], excludeStrand: /informational/i },
+  'Traditional Literature': { subjects: ['ela'], excludeStrand: /informational/i },
+  'Short Literary Forms': { subjects: ['ela'], excludeStrand: /informational/i },
+  'Biographies': { subjects: ['ela'], excludeStrand: /literature/i },
+  'True Narratives': { subjects: ['ela'], excludeStrand: /literature/i },
+};
+
+function matchesSubtopic(std, subtopic) {
+  // Universal standards belong to the domain named by their strand.
+  if (std.state === 'ALL') return (std.strand || '') === subtopic;
+  const rule = SUBTOPIC_RULES[subtopic];
+  if (!rule) return true;
+  if (rule.strands) return rule.strands.includes(std.strand || '');
+  if (rule.subjects && !rule.subjects.includes(std.subject)) return false;
+  if (rule.excludeStrand && rule.excludeStrand.test(std.strand || '')) return false;
+  return true;
+}
+
+// Grade + subtopic scope for the set-level primary standard picker.
+function primaryScope(s) {
+  const grade = s.gaGrade, subtopic = s.gaSubtopic;
+  if (!grade || !subtopic) return null;
+  return std =>
+    (std.state === 'ALL' || std.grade === 'All' || String(std.grade) === String(grade)) &&
+    matchesSubtopic(std, subtopic);
 }
 
 const state = {
@@ -275,8 +315,10 @@ async function loadData() {
   const files = [
     'data/ohio_science.json',
     'data/ohio_social_studies.json',
+    'data/ohio_ela.json',
     'data/georgia_science.json',
     'data/georgia_social_studies.json',
+    'data/georgia_ela.json',
     'data/universal_ela.json', // state:"ALL" — Literary / Literary Non-Fiction domains+standards, shown for every state
   ];
   const results = await Promise.all(files.map(fetchJson));
@@ -424,6 +466,15 @@ function pairSide(std, stateCode) {
     </div>`;
 }
 
+// Amber chip shown when the two sides of a pair sit at different grade levels
+// (the states sequence this content differently).
+function crossGradeChip(a) {
+  const oh = state.byKey.get(`OH:${a.oh}`);
+  const ga = state.byKey.get(`GA:${a.ga}`);
+  if (!oh || !ga || String(oh.grade) === String(ga.grade)) return '';
+  return `<span class="chip chip-cross" title="These standards sit at different grade levels — the states sequence this content differently.">⇄ Cross-grade · OH G${esc(oh.grade)} / GA G${esc(ga.grade)}</span>`;
+}
+
 function alignCard(a) {
   const oh = state.byKey.get(`OH:${a.oh}`);
   const ga = state.byKey.get(`GA:${a.ga}`);
@@ -445,6 +496,7 @@ function alignCard(a) {
       </div>
       <div class="review-foot">
         <span class="conf-chip">confidence: ${esc(a.confidence || '—')}</span>
+        ${crossGradeChip(a)}
         ${a.rationale ? `<div class="rationale"><b>Why:</b> ${esc(a.rationale)}</div>` : ''}
         ${actions}
       </div>
@@ -610,6 +662,7 @@ function renderReview() {
         </div>
         <div class="review-foot">
           <span class="conf-chip">confidence: ${esc(a.confidence || '—')}</span>
+          ${crossGradeChip(a)}
           <div class="rationale"><b>Why:</b> ${esc(a.rationale || '')}</div>
           ${st === 'pending'
             ? `<button class="act-btn approve" data-act="approved" data-id="${a.id}">✓ Approve</button>
@@ -669,7 +722,8 @@ function newPassageSet() {
     title: '', passageId: '',
     itemSetType: null,                 // informative | opinion
     genre: null,                       // informational | literary | literary_nonfiction
-    gaGrade: null, gaSubtopic: null,   // Georgia tagging hierarchy
+    gaGrade: null, gaSubtopic: null,   // tagging hierarchy
+    primaryState: null,                // OH | GA — feeds the set + question pickers
     standard: null,                    // set-level primary standard tag
     passages: [''],
     questions: [
@@ -703,7 +757,9 @@ function tagAlignHtml(tag) {
       return `<div class="align-mini-item">
         <span class="align-mini-code">${esc(a[otherSide])}</span>
         <span class="chip">${STATE_NAMES[otherState]}</span>
-        ${o ? `<span class="chip">Grade ${esc(o.grade)}</span><span class="align-mini-desc">${esc(o.description)}</span>` : ''}
+        ${o ? `<span class="chip">Grade ${esc(o.grade)}</span>` : ''}
+        ${crossGradeChip(a)}
+        ${o ? `<span class="align-mini-desc">${esc(o.description)}</span>` : ''}
       </div>`;
     }).join('');
   } else if (state.noAlign[`${tag.state}:${tag.code}`]) {
@@ -731,11 +787,12 @@ function tagChipHtml(tag, section, index, showAlign = true) {
   return `<button class="act-btn tag-open" data-pick="${section}:${index}">＋ Tag standard</button>`;
 }
 
-function pickerCandidates(query, restrictState) {
+function pickerCandidates(query, restrictState, scope) {
   const q = query.toLowerCase().trim();
   // Universal (state:"ALL") standards always show, even in state-restricted pickers.
   let list = state.standards;
   if (restrictState) list = list.filter(s => s.state === restrictState || s.state === 'ALL');
+  if (scope) list = list.filter(scope);
   if (q) {
     list = list.filter(s =>
       `${s.code} ${s.description} ${s.strand || ''} ${SUBJECT_NAMES[s.subject] || s.subject} grade ${s.grade}`.toLowerCase().includes(q));
@@ -743,8 +800,8 @@ function pickerCandidates(query, restrictState) {
   return list.slice(0, 60);
 }
 
-function pickerResultsHtml(query, restrictState) {
-  const list = pickerCandidates(query, restrictState);
+function pickerResultsHtml(query, restrictState, scope) {
+  const list = pickerCandidates(query, restrictState, scope);
   if (!list.length) return `<div class="align-mini-empty">No standards match.</div>`;
   let html = '', lastGroup = null;
   list.forEach(s => {
@@ -763,11 +820,12 @@ function pickerResultsHtml(query, restrictState) {
   return html;
 }
 
-function pickerHtml(section, index, restrictState) {
+function pickerHtml(section, index, restrictState, scope, scopeNote) {
   return `
     <div class="tag-picker" data-picker="${section}:${index}">
       <input type="search" class="picker-search" placeholder="Search ${restrictState ? STATE_NAMES[restrictState] + ' ' : ''}standards by code or text…">
-      <div class="picker-results">${pickerResultsHtml('', restrictState)}</div>
+      ${scopeNote ? `<div class="ps-hint" style="margin:2px 0 6px">${esc(scopeNote)}</div>` : ''}
+      <div class="picker-results">${pickerResultsHtml('', restrictState, scope)}</div>
       <button class="act-btn picker-cancel">Cancel</button>
     </div>`;
 }
@@ -838,6 +896,7 @@ function renderSetEditor() {
 
   const setPickerOpen = state.ui.openPicker && state.ui.openPicker.section === 'set';
   const subtopics = gaSubtopicsFor(s.gaGrade, s.genre);
+  const primaryState = primaryStateOf(s);
 
   panel.innerHTML = `
     <div class="editor-topbar">
@@ -856,26 +915,28 @@ function renderSetEditor() {
     </div>
 
     <div class="ps-section">
-      <div class="ps-section-title">Classification</div>
-      <div class="ps-field"><label>Item Set Type</label>
-        <div class="chips-row">
-          ${ITEM_SET_TYPES.map(t => `<button class="pill-btn ${s.itemSetType === t.key ? 'active' : ''}" data-itemset="${t.key}">${t.label}</button>`).join('')}
-        </div>
+      <div class="ps-section-title">Item Set Type</div>
+      <div class="chips-row">
+        ${ITEM_SET_TYPES.map(t => `<button class="pill-btn ${s.itemSetType === t.key ? 'active' : ''}" data-itemset="${t.key}">${t.label}</button>`).join('')}
       </div>
-      <div class="ps-field" style="margin-top:12px"><label>Genre</label>
+    </div>
+
+    <div class="ps-section">
+      <div class="ps-section-title">Classification</div>
+      <div class="ps-field"><label>Genre</label>
         <div class="chips-row">
           ${GENRES.map(g => `<button class="pill-btn ${s.genre === g.key ? 'active' : ''}" data-genre="${g.key}">${g.label}</button>`).join('')}
         </div>
       </div>
-      <div class="ps-field" style="margin-top:12px"><label>Georgia hierarchy — grade</label>
+      <div class="ps-field" style="margin-top:12px"><label>Hierarchy — grade</label>
         <div class="chips-row">
           ${GA_GRADES.map(g => `<button class="pill-btn ${s.gaGrade === g ? 'active' : ''}" data-gagrade="${g}">Grade ${g}</button>`).join('')}
         </div>
       </div>
-      <div class="ps-field" style="margin-top:12px"><label>Georgia hierarchy — subtopic</label>
+      <div class="ps-field" style="margin-top:12px"><label>Hierarchy — subtopic</label>
         ${s.genre && s.gaGrade
           ? `<div class="chips-row">${subtopics.map(t => `<button class="pill-btn ${s.gaSubtopic === t ? 'active' : ''}" data-subtopic="${esc(t)}">${esc(t)}</button>`).join('')}</div>`
-          : `<div class="ps-hint">Pick a genre and Georgia grade first — subtopics depend on both.</div>`}
+          : `<div class="ps-hint">Pick a genre and grade first — subtopics depend on both.</div>`}
       </div>
       ${(() => {
         const uni = universalForDomain(s.gaSubtopic);
@@ -886,8 +947,20 @@ function renderSetEditor() {
               ${esc(u.code)}: ${esc(u.description.slice(0, 60))}${u.description.length > 60 ? '…' : ''}</button>`).join('')}
           </div></div>`;
       })()}
-      <div class="ps-field" style="margin-top:14px"><label>Primary standard</label>
-        <div class="q-tag-area">${setPickerOpen ? pickerHtml('set', 0, null) : tagChipHtml(s.standard, 'set', 0, false)}</div>
+      <div class="ps-field" style="margin-top:14px"><label>Primary standard — state</label>
+        <select id="psPrimaryState" class="ps-input" style="max-width:240px">
+          <option value="">Select a state…</option>
+          ${['OH', 'GA'].map(st => `<option value="${st}" ${primaryState === st ? 'selected' : ''}>${STATE_NAMES[st]}</option>`).join('')}
+        </select>
+      </div>
+      <div class="ps-field" style="margin-top:12px"><label>Primary standard</label>
+        <div class="q-tag-area">${!primaryState
+          ? `<div class="ps-hint">Select a state first — the standard picker pulls from that state's loaded standards.</div>`
+          : !primaryScope(s)
+            ? `<div class="ps-hint">Pick a hierarchy grade and subtopic first — the picker shows only standards for that grade and subtopic.</div>`
+            : setPickerOpen
+              ? pickerHtml('set', 0, primaryState, primaryScope(s), `Showing ${STATE_NAMES[primaryState]} standards for Grade ${s.gaGrade} · ${s.gaSubtopic}.`)
+              : tagChipHtml(s.standard, 'set', 0, false)}</div>
         <div class="ps-hint" style="margin-top:6px">Cross-state alignments for this standard appear in the panel on the right.</div>
       </div>
     </div>
@@ -905,7 +978,7 @@ function renderSetEditor() {
 
     <div class="ps-section">
       <div class="ps-section-title">Question Set <span class="ps-hint">3–4 questions, each tagged to a standard</span></div>
-      ${s.questions.map((q, i) => questionBlockHtml(q, 'questions', i, `Question ${i + 1}`, null)).join('')}
+      ${s.questions.map((q, i) => questionBlockHtml(q, 'questions', i, `Question ${i + 1}`, primaryState)).join('')}
       ${s.questions.length < MAX_QUESTIONS ? `<button class="act-btn" id="addQuestion">＋ Add question</button>` : ''}
     </div>
 
@@ -931,6 +1004,23 @@ function tagTarget(s, section, i) {
   return section === 'set' ? s : section === 'peer' ? s.peerRevision[i] : s.questions[i];
 }
 
+// Changing the hierarchy can move the tagged primary standard out of scope; drop it
+// rather than leave a tag the picker would no longer offer.
+function dropOutOfScopePrimary(s) {
+  const scope = primaryScope(s);
+  if (!s.standard || !scope) return;
+  const std = state.byKey.get(`${s.standard.state}:${s.standard.code}`);
+  if (!std || !scope(std)) s.standard = null;
+}
+
+// The state whose standards feed the set's pickers: explicit dropdown choice,
+// falling back to the tagged primary standard's state on older sets.
+function primaryStateOf(s) {
+  if (s.primaryState) return s.primaryState;
+  if (s.standard && s.standard.state !== 'ALL') return s.standard.state;
+  return null;
+}
+
 function wireSetEditor(panel, s) {
   const on = (sel, ev, fn) => panel.querySelectorAll(sel).forEach(n => n.addEventListener(ev, fn));
 
@@ -938,6 +1028,13 @@ function wireSetEditor(panel, s) {
 
   on('[data-itemset]', 'click', e => {
     s.itemSetType = e.currentTarget.dataset.itemset;
+    saveSets(); renderPassages();
+  });
+  on('#psPrimaryState', 'change', e => {
+    s.primaryState = e.target.value || null;
+    // a tagged standard from a different state no longer fits (universal ALL tags stay)
+    if (s.standard && s.standard.state !== 'ALL' && s.standard.state !== s.primaryState) s.standard = null;
+    state.ui.openPicker = null;
     saveSets(); renderPassages();
   });
   on('[data-unistd]', 'click', e => {
@@ -949,15 +1046,18 @@ function wireSetEditor(panel, s) {
   on('[data-genre]', 'click', e => {
     s.genre = e.currentTarget.dataset.genre;
     if (!gaSubtopicsFor(s.gaGrade, s.genre).includes(s.gaSubtopic)) s.gaSubtopic = null;
+    dropOutOfScopePrimary(s);
     saveSets(); renderPassages();
   });
   on('[data-gagrade]', 'click', e => {
     s.gaGrade = e.currentTarget.dataset.gagrade;
     if (!gaSubtopicsFor(s.gaGrade, s.genre).includes(s.gaSubtopic)) s.gaSubtopic = null;
+    dropOutOfScopePrimary(s);
     saveSets(); renderPassages();
   });
   on('[data-subtopic]', 'click', e => {
     s.gaSubtopic = e.currentTarget.dataset.subtopic;
+    dropOutOfScopePrimary(s);
     saveSets(); renderPassages();
   });
 
@@ -1011,10 +1111,11 @@ function wireSetEditor(panel, s) {
   const picker = panel.querySelector('.tag-picker');
   if (picker) {
     const [section, iStr] = picker.dataset.picker.split(':');
-    const restrictState = section === 'peer' ? 'GA' : null;
+    const restrictState = section === 'peer' ? 'GA' : primaryStateOf(s);
+    const scope = section === 'set' ? primaryScope(s) : null;
     const results = picker.querySelector('.picker-results');
     picker.querySelector('.picker-search').addEventListener('input', e => {
-      results.innerHTML = pickerResultsHtml(e.target.value, restrictState);
+      results.innerHTML = pickerResultsHtml(e.target.value, restrictState, scope);
     });
     picker.querySelector('.picker-cancel').addEventListener('click', () => {
       state.ui.openPicker = null;
@@ -1099,6 +1200,7 @@ function renderSetSide() {
         <div class="align-mini-item">
           <span class="align-mini-code">${esc(code)}</span>
           ${o && o.grade ? `<span class="chip">G${esc(o.grade)}</span>` : ''}
+          ${crossGradeChip(a)}
           ${cmsChip(otherState, code)}
         </div>
         ${o ? `<div class="align-mini-desc">${esc(o.description)}</div>` : ''}
