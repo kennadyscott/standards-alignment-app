@@ -1,18 +1,23 @@
 [
-  {
-    "state": "ALL",
-    "subject": "ela",
-    "grade": "All",
-    "code": "POETRY.1",
-    "strand": "Poetry",
-    "description": "Analyze poetry for meaning"
-  },
-  {
-    "state": "ALL",
-    "subject": "ela",
-    "grade": "All",
-    "code": "POETRY.2",
-    "strand": "Poetry",
-    "description": "Describe how words and phrases (e.g., regular beats, alliteration, rhymes, repeated lines) supply rhythm and meaning in a story, poem, or song."
-  }
+  { "state": "ALL", "subject": "ela", "grade": "All", "code": "POETRY.1", "strand": "Poetry", "description": "Analyze poetry for meaning" },
+  { "state": "ALL", "subject": "ela", "grade": "All", "code": "POETRY.2", "strand": "Poetry", "description": "Describe how words and phrases (e.g., regular beats, alliteration, rhymes, repeated lines) supply rhythm and meaning in a story, poem, or song." },
+
+  { "state": "ALL", "subject": "ela", "grade": "All", "code": "FANTASY", "strand": "Narrative Fiction", "description": "Fantasy: magical or imaginary worlds (dragons, powers, etc.)" },
+  { "state": "ALL", "subject": "ela", "grade": "All", "code": "HIST-FIC", "strand": "Narrative Fiction", "description": "Historical Fiction: stories set in the past with real-world context" },
+  { "state": "ALL", "subject": "ela", "grade": "All", "code": "REAL-FIC", "strand": "Narrative Fiction", "description": "Realistic Fiction: stories that could happen in real life" },
+  { "state": "ALL", "subject": "ela", "grade": "All", "code": "SCI-FI", "strand": "Narrative Fiction", "description": "Science Fiction: futuristic or science-based imagined worlds" },
+
+  { "state": "ALL", "subject": "ela", "grade": "All", "code": "FOLKTALE", "strand": "Traditional Literature", "description": "Folktales: stories passed down — trickster tales, cultural stories, etc." },
+  { "state": "ALL", "subject": "ela", "grade": "All", "code": "FABLE", "strand": "Traditional Literature", "description": "Fables: short stories with a moral (often with animals)" },
+  { "state": "ALL", "subject": "ela", "grade": "All", "code": "FAIRY-TALE", "strand": "Traditional Literature", "description": "Fairy Tales: magical stories" },
+  { "state": "ALL", "subject": "ela", "grade": "All", "code": "LEGEND", "strand": "Traditional Literature", "description": "Legends: based on real people/events but exaggerated" },
+  { "state": "ALL", "subject": "ela", "grade": "All", "code": "MYTH", "strand": "Traditional Literature", "description": "Myths: explain natural events or beliefs" },
+
+  { "state": "ALL", "subject": "ela", "grade": "All", "code": "SHORT-STORY", "strand": "Short Literary Forms", "description": "Short Stories: complete narratives in brief format" },
+  { "state": "ALL", "subject": "ela", "grade": "All", "code": "VIGNETTE", "strand": "Short Literary Forms", "description": "Vignettes: short, descriptive scenes (no full plot required)" },
+
+  { "state": "ALL", "subject": "ela", "grade": "All", "code": "BIOGRAPHY", "strand": "Biographies", "description": "Biographies: write a passage about a relevant person from past or present" },
+
+  { "state": "ALL", "subject": "ela", "grade": "All", "code": "HIST-ACCOUNT", "strand": "True Narratives", "description": "Historical Accounts: write a passage about real events brought to life with storytelling" },
+  { "state": "ALL", "subject": "ela", "grade": "All", "code": "TRUE-ADVENTURE", "strand": "True Narratives", "description": "True Adventure Stories: survival stories, exploration, real-life challenges" }
 ]

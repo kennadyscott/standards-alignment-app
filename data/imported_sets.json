@@ -60,5 +60,1951 @@
       "text": "Which way of communicating do you think is better: sending a letter or using a video call? In your own words, write a multi-paragraph response that explains your opinion. Include evidence from the passage that supports your opinion."
     },
     "id": "ps-ecr2-001"
+  },
+  {
+    "title": "Jobs Around the World",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "informational",
+    "gaGrade": "2",
+    "gaSubtopic": "Social Studies",
+    "primaryState": "OH",
+    "standard": {
+      "state": "OH",
+      "subject": "social_studies",
+      "code": "2.SS.6"
+    },
+    "passages": [
+      {
+        "title": "Jobs Around the World",
+        "text": "(1) The place where people live can affect the work they do. Different places have different land, weather, and natural resources. These human and physical characteristics often help determine which jobs are common in a community.\n\n(2) In coastal towns near the ocean, many people work in jobs connected to the water. Some people catch fish, while others operate boats or work at harbors. Tourism is also important in many coastal areas. Visitors often travel to beaches, creating jobs for hotel workers, restaurant employees, and tour guides.\n\n(3) In farming regions, the land and climate help crops grow. Farmers plant and harvest fruits, vegetables, and grains. Other workers drive farm equipment, transport crops, or help sell food at markets. The work people do depends on the type of crops that can grow in that area.\n\n(4) Large cities often have different types of jobs. Because many people live and work close together, cities may have offices, stores, hospitals, schools, and factories. People might work as teachers, nurses, engineers, construction workers, or business owners. The large population creates a need for many different services.\n\n(5) Whether people live near the ocean, on farmland, or in a busy city, the characteristics of a place can influence the jobs available there. The environment and the needs of the community often work together to shape how people earn a living."
+      }
+    ],
+    "questions": [
+      {
+        "text": "In coastal towns near the ocean, what kind of work do many people do?\nA  Work that is connected to the water ✓\nB  Work on big farms\nC  Work in tall office buildings\nD  Work that helps crops grow",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "In paragraph 3, the word harvest means to [ ▾ ] crops.\ngather ✓\nplant\nthrow away\nwash",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.4"
+        },
+        "type": "cloze"
+      },
+      {
+        "text": "Select two things the passage says can affect the jobs people do in a place.\nA  The land and weather ✓\nB  The natural resources ✓\nC  The color of the houses\nD  The names of the people\nE  The kind of pets people own",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.1"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": "Which place do you think would offer the most interesting jobs: a coastal town, a farming region, or a large city? In your own words, write a multi-paragraph response that explains your opinion. Include evidence from the passage that supports your opinion."
+    },
+    "id": "ps-ecr2-002"
+  },
+  {
+    "title": "Planting Trees in the Neighborhood",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "informational",
+    "gaGrade": "2",
+    "gaSubtopic": "Social Studies",
+    "primaryState": "OH",
+    "standard": {
+      "state": "OH",
+      "subject": "social_studies",
+      "code": "2.SS.7"
+    },
+    "passages": [
+      {
+        "title": "Planting Trees in the Neighborhood",
+        "text": "(1) Several years ago, a neighborhood park had very few trees. During the summer, the playground became hot because there was little shade. Birds and squirrels were not often seen in the area, and many people chose to visit other parks instead.\n\n(2) Community members decided they wanted to improve the park. Families, teachers, and students worked together to plant young trees around the playground and walking paths. Volunteers watered the trees and helped care for them as they grew.\n\n(3) Over time, the park began to change. The growing trees provided shade on warm days. More birds and small animals returned to the area. Families visited more often, and children had a cooler place to play.\n\n(4) By planting trees, the community changed the physical environment in a positive way. Their efforts improved the park and made it more enjoyable for both people and wildlife."
+      },
+      {
+        "title": "Trash Along the River",
+        "text": "(5) A river flowed through a small town and provided water for plants and animals. People enjoyed fishing near the river and walking along its banks. For many years, the area remained clean and healthy.\n\n(6) As the town grew, more people began visiting the river. Unfortunately, some visitors left behind plastic bottles, food wrappers, and other trash. During rainstorms, litter washed into the water.\n\n(7) The pollution affected the environment. Some animals had difficulty finding clean places to live, and trash collected along the shoreline. People also noticed that the river looked less beautiful than it once had.\n\n(8) Community leaders encouraged residents to help clean the area. Volunteers collected trash and placed recycling bins near popular gathering spots. Although the cleanup helped, many people realized that preventing pollution was just as important as removing it.\n\n(9) The river showed how human activities can change the physical environment in negative ways. It also showed that people can work together to improve environmental problems."
+      }
+    ],
+    "questions": [
+      {
+        "text": "In Passage 1, why did the park get hot in the summer?\nA  There were many cars.\nB  There was little shade. ✓\nC  The river dried up.\nD  There was too much trash.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "In paragraph (7), the word pollution means [ ▾ ].\nclean, fresh water\ntrash and litter in the area ✓\ntall growing trees\nhappy fish swimming",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.4"
+        },
+        "type": "cloze"
+      },
+      {
+        "text": "Both passages show people working together to help the environment. Select two things the people did to help.\nA  They planted young trees in the park. ✓\nB  They built a new playground.\nC  They collected trash by the river. ✓\nD  They went fishing every day.\nE  They closed the park for good.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.9"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-003"
+  },
+  {
+    "title": "A New Pond for Wildlife",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "informational",
+    "gaGrade": "2",
+    "gaSubtopic": "Social Studies",
+    "primaryState": "OH",
+    "standard": {
+      "state": "OH",
+      "subject": "social_studies",
+      "code": "2.SS.7"
+    },
+    "passages": [
+      {
+        "title": "A New Pond for Wildlife",
+        "text": "(1) A school sat near an empty field that was covered with short grass. Although students enjoyed playing outside, there were not many animals in the area. Teachers noticed that birds rarely stopped there, and students seldom saw frogs, turtles, or insects.\n\n(2) One year, the community decided to create a small pond beside the field. Workers carefully dug the pond and planted native plants around the edges. Students helped by spreading seeds and learning how to care for the new habitat.\n\n(3) Over the next few months, the area began to change. Rain filled the pond, and plants started to grow. Soon, dragonflies buzzed above the water. Frogs appeared along the shore, and ducks occasionally stopped to rest.\n\n(4) Students enjoyed observing the wildlife during science lessons. The pond provided water for animals and created a new habitat where many living things could survive. By changing the land in a thoughtful way, people helped improve the local environment."
+      },
+      {
+        "title": "Too Many Trails",
+        "text": "(5) A forest near a town became a popular place for hiking and biking. At first, visitors stayed on the marked trails. The forest remained healthy, and many plants and animals lived there.\n\n(6) As more people visited the area, some began creating their own paths through the woods. New trails appeared in places where plants once grew. People sometimes walked over young trees and flowers without realizing the damage they were causing.\n\n(7) After several years, parts of the forest looked different. Some plants had disappeared, and areas of bare soil appeared where vegetation once grew. During heavy rains, soil washed away more easily because fewer plants remained to hold it in place.\n\n(8) Park workers posted signs asking visitors to stay on the marked trails. Volunteers also planted new vegetation in damaged areas. Slowly, parts of the forest began to recover.\n\n(9) The forest showed that human activities can change the environment in negative ways, even when people do not mean to cause harm. It also showed that people can take steps to repair environmental damage."
+      }
+    ],
+    "questions": [
+      {
+        "text": "In Passage 1, what did the community make next to the field?\nA  A small pond ✓\nB  A new school\nC  A big trail\nD  A tall fence",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "In paragraph 7, the word \"bare\" means the soil had [ ▾ ].\nno plants on it ✓\nlots of trees on it\nwater all over it\nmany animals on it",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.4"
+        },
+        "type": "cloze"
+      },
+      {
+        "text": "Both passages show that people changed the land. Select two ways people in the passages helped the environment.\nA  They planted native plants by the pond. (paragraph 2) ✓\nB  They planted new vegetation in damaged areas. (paragraph 8) ✓\nC  They made their own paths through the woods. (paragraph 6)\nD  They walked over young trees and flowers. (paragraph 6)\nE  They stopped birds from coming to the field. (paragraph 1)",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.9"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-004"
+  },
+  {
+    "title": "The Air Around Us",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "informational",
+    "gaGrade": "2",
+    "gaSubtopic": "Science",
+    "primaryState": "OH",
+    "standard": {
+      "state": "OH",
+      "subject": "science",
+      "code": "2.ESS.1"
+    },
+    "passages": [
+      {
+        "title": "The Air Around Us",
+        "text": "(1) The atmosphere is the layer of air that surrounds Earth. Although people cannot usually see air, it is all around us. The atmosphere stretches from the ground high into the sky. It helps make life on Earth possible.\n\n(2) Air is made up of different gases. Most of the atmosphere is made of a gas called nitrogen. Another important gas is oxygen. People and animals need oxygen to breathe. Plants also depend on the gases in the atmosphere to grow and survive.\n\n(3) The atmosphere does more than provide air to breathe. It helps keep Earth warm enough for living things. It also protects the planet from some harmful energy that comes from the Sun. Without the atmosphere, Earth would be a very different place.\n\n(4) Weather happens in the atmosphere, too. Clouds, wind, rain, and snow all form in the air around us. Meteorologists, or weather scientists, study the atmosphere to learn about weather patterns and make forecasts.\n\n(5) Every time people take a breath, fly a kite, or watch clouds move across the sky, they are experiencing the atmosphere. Even though it is invisible, the atmosphere is an important part of daily life on Earth."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Why do people and animals need oxygen?\nA  To breathe ✓\nB  To see air\nC  To make clouds\nD  To stay cold",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "What is this passage mostly about?\nA  The atmosphere and the air around Earth ✓\nB  How to fly a kite in the wind\nC  The different jobs that scientists do\nD  Why plants grow in the ground",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.2"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "Read the sentence. Pick the best word to finish it.\n\nThe word invisible in paragraph 5 means something you cannot [ ▾ ].\nsee ✓\nhear\nhold\nbreathe",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.4"
+        },
+        "type": "cloze"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": "Which job do you think is more important: helping people breathe by providing oxygen or helping protect Earth from harmful energy from the Sun? In your own words, write a multi-paragraph response that explains your opinion. Include evidence from the passage that supports your opinion."
+    },
+    "id": "ps-ecr2-005"
+  },
+  {
+    "title": "Water in the Air",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "informational",
+    "gaGrade": "2",
+    "gaSubtopic": "Science",
+    "primaryState": "OH",
+    "standard": {
+      "state": "OH",
+      "subject": "science",
+      "code": "2.ESS.2"
+    },
+    "passages": [
+      {
+        "title": "Water in the Air",
+        "text": "(1) When people think about water, they often think about oceans, lakes, rivers, or puddles. However, water can also be found in the atmosphere. The atmosphere is the layer of air that surrounds Earth. Even when the sky looks clear, small amounts of water are often present in the air around us.\n\n(2) Water in the atmosphere is called water vapor. Water vapor is a gas, so people usually cannot see it. It forms when liquid water from oceans, lakes, rivers, and other sources warms up and changes into a gas. This process is called evaporation.\n\n(3) As water vapor rises into the atmosphere, it cools. Tiny drops of water may form and gather together. When many tiny droplets collect in one place, clouds can form. Different types of clouds may look fluffy, thin, or gray, depending on the weather.\n\n(4) Water in the atmosphere is an important part of the water cycle. After clouds form, some of the water may fall back to Earth as rain, snow, sleet, or hail. This process is called precipitation. The water can then collect in lakes, rivers, and oceans before the cycle begins again.\n\n(5) The next time you see clouds floating across the sky, remember that they are made of water that was once on Earth's surface. Even though water vapor is often invisible, water is present in the atmosphere and plays an important role in Earth's weather and water cycle."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What is the name for water in the air?\nA  Water vapor ✓\nB  Ocean water\nC  A puddle\nD  A river",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "Use the passage to finish the sentence. The word evaporation means liquid water [ ▾ ] .\nwarms up and changes into a gas ✓\nfalls down as rain or snow\nturns into clouds in the sky\ncollects in lakes and rivers",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.4"
+        },
+        "type": "cloze"
+      },
+      {
+        "text": "Why did the author write this passage?\nA  To teach that water is in the air ✓\nB  To tell a story about a rainy day\nC  To show how to swim in a lake\nD  To list the names of all oceans",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.6"
+        },
+        "type": "multiple_choice"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": "Which part of the water cycle described in the passage do you think is more important: evaporation or precipitation? In your own words, write a multi-paragraph response that explains your opinion. Include evidence from the passage that supports your opinion."
+    },
+    "id": "ps-ecr2-006"
+  },
+  {
+    "title": "Warm Days and Cool Days",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "informational",
+    "gaGrade": "2",
+    "gaSubtopic": "Science",
+    "primaryState": "OH",
+    "standard": {
+      "state": "OH",
+      "subject": "science",
+      "code": "2.ESS.3"
+    },
+    "passages": [
+      {
+        "title": "Warm Days and Cool Days",
+        "text": "(1) The Sun gives Earth energy. On days when the Sun's energy warms the ground and air, temperatures can rise. During the summer, many places receive more energy from the Sun. As a result, the weather is often warmer. People may wear shorts, play outside, or look for shade on hot afternoons.\n\n(2) At other times of the year, the Sun's energy reaches Earth at a different angle. The ground and air do not warm as much, so temperatures stay cooler. People may wear jackets and spend less time outdoors. These changes happen over weeks and months and help create different seasons.\n\n(3) Changes in the amount of energy Earth receives can lead to longer-term weather patterns. Warm periods and cool periods are examples of weather changes that can last for many days or even months."
+      },
+      {
+        "title": "Clouds and Storms",
+        "text": "(4) Weather can also change over a short period of time. On some days, the sky is clear in the morning but cloudy by the afternoon. Energy from the Sun warms the air near Earth's surface. Warm air rises, and cooler air moves into its place.\n\n(5) As warm air rises, clouds can begin to form. If enough water gathers in the clouds, rain may fall. Sometimes strong winds, thunder, and lightning can develop as part of a storm.\n\n(6) After a storm passes, the weather may feel very different. The air can become cooler, and the sky may clear again. These short-term weather changes can happen within just a few hours.\n\n(7) Both long-term and short-term weather changes are connected to energy. Energy from the Sun helps warm Earth's surface, while changes in the atmosphere can lead to clouds, rain, wind, and storms."
+      }
+    ],
+    "questions": [
+      {
+        "text": "In Passage 1, what gives Earth energy?\nA  The Sun ✓\nB  The rain\nC  The wind\nD  The clouds",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "In paragraph 4, the words \"short period of time\" mean weather can change in a [ ▾ ].\nshort time, like a few hours ✓\nlong time, like many months\nlong time, like one year\nlong time, like one season",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.4"
+        },
+        "type": "cloze"
+      },
+      {
+        "text": "Both passages tell about weather. Select two ideas that are true about both passages.\nA  Both tell about weather changes. ✓\nB  Both say energy is part of weather. ✓\nC  Both are only about summer.\nD  Both tell how to make a cloud.\nE  Both say the Sun is cold.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.9"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-007"
+  },
+  {
+    "title": "Ancient Giants",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "informational",
+    "gaGrade": "2",
+    "gaSubtopic": "Science",
+    "primaryState": "OH",
+    "standard": {
+      "state": "OH",
+      "subject": "science",
+      "code": "2.LS.2"
+    },
+    "passages": [
+      {
+        "title": "Ancient Giants",
+        "text": "(1) Millions of years ago, dinosaurs lived on Earth. Some dinosaurs were as tall as buildings, while others were no larger than a chicken. They lived in many different environments and ate different kinds of food. For a long time, dinosaurs were successful animals.\n\n(2) Then a major event changed life on Earth. Scientists believe a large asteroid struck Earth about 66 million years ago. The impact caused big changes to the environment. Many plants and animals could not survive these changes.\n\n(3) Dinosaurs became extinct, which means they no longer live on Earth today. Although people can see dinosaur fossils, they cannot see living dinosaurs in nature. Fossils help scientists learn about animals that lived long ago.\n\n(4) Not all ancient organisms disappeared. Some groups of living things survived and changed over time. Scientists study fossils to understand how life on Earth has changed through millions of years."
+      },
+      {
+        "title": "Living Relatives",
+        "text": "(5) Many organisms alive today have ancestors that lived long ago. For example, birds share some features with certain dinosaurs. Scientists have found fossils that show similarities between ancient animals and modern birds.\n\n(6) Over many generations, organisms can change. Some traits help organisms survive in their environments. These traits may be passed from parents to offspring. As a result, groups of organisms can look different from their ancient ancestors.\n\n(7) Today, people can see many kinds of birds living around the world. Although birds are not dinosaurs, scientists believe some birds and certain dinosaurs are related through long lines of ancestors.\n\n(8) Scientists also know that not every organism from the past has living relatives today. Some organisms became extinct and left no living descendants. Fossils provide clues about these ancient forms of life and help scientists understand Earth's history.\n\n(9) By studying both fossils and living organisms, scientists learn how life has changed over time. They can see that some organisms alive today are connected to ancestors from the past, while other ancient organisms are no longer represented by living things."
+      }
+    ],
+    "questions": [
+      {
+        "text": "In Passage 1, why did many plants and animals die long ago?\nA  A big asteroid hit Earth and changed the environment. ✓\nB  Dinosaurs ate all of the plants.\nC  People hunted the animals.\nD  Birds moved to new places.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "In paragraph 3, the word \"extinct\" means [ ▾ ].\nno longer living on Earth ✓\nvery large in size\nliving in the water\nnew to Earth",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.4"
+        },
+        "type": "cloze"
+      },
+      {
+        "text": "Both passages tell about fossils. Select two things both passages say fossils can do.\nA  Help scientists learn about life long ago. ✓\nB  Help scientists understand how life has changed. ✓\nC  Bring extinct animals back to life.\nD  Show what people ate long ago.\nE  Make new kinds of birds.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.9"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-008"
+  },
+  {
+    "title": "The Little Seed",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary",
+    "gaGrade": "2",
+    "gaSubtopic": "Poetry",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "POETRY.1"
+    },
+    "passages": [
+      {
+        "title": "The Little Seed",
+        "text": "(1) A little seed slept in the ground,(2) Quiet and safe without a sound.\n\n(3) Rain fell softly from the sky.(4) Clouds drifted slowly way up high.\n\n(5) Warm sunshine reached the sleeping seed.(6) It gave the plant the help it needed.\n\n(7) Soon a tiny sprout appeared.(8) It stretched up high and showed no fear.\n\n(9) Day by day, the plant grew tall.(10) It stood through sunshine, wind, and all.\n\n(11) Green leaves opened wide and bright.(12) They soaked up sunshine every light.\n\n(13) At last a flower bloomed one day.(14) Its colorful petals swayed and played.\n\n(15) Bees buzzed near and butterflies flew.(16) The little seed had grown and grew.\n\n(17) What began so small and deep(18) Became a flower tall and sweet.\n\n(19) The seed had changed through work and time.(20) Its growing journey was a climb."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Where did the little seed sleep at the start of the poem?\nA  In the ground ✓\nB  On a leaf\nC  In the sky\nD  On a flower",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "The poet uses words that rhyme. Choose the word that rhymes with \"ground\" in line (1). A little seed slept in the ground, / Quiet and safe without a [ ▾ ].\nsound ✓\nsky\nhigh\nseed",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "cloze"
+      },
+      {
+        "text": "What does the poem teach about the seed? Select two.\nA  It grew slowly over time. ✓\nB  It became a flower. ✓\nC  It stayed small forever.\nD  It flew up into the sky.\nE  It never changed at all.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.2"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-009"
+  },
+  {
+    "title": "Saturday at the Skate Park",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary",
+    "gaGrade": "2",
+    "gaSubtopic": "Poetry",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "POETRY.2"
+    },
+    "passages": [
+      {
+        "title": "Saturday at the Skate Park",
+        "text": "(1) Wheels go whirring down the ramp.(2) Boards go bumping, not a stamp.\n\n(3) Scooters zip and riders glide.(4) Smiles grow wide from side to side.\n\n(5) Click-clack, click-clack, wheels spin fast.(6) Some rides are quick, and some rides last.\n\n(7) Tyler tries a brand-new trick.(8) He misses once, but learns it quick.\n\n(9) Up he rolls and down he flies.(10) His friends all cheer and shout, \"Nice try!\"\n\n(11) Click-clack, click-clack, hear that sound.(12) It echoes softly all around.\n\n(13) Brave boards bounce and racers race.(14) Busy wheels sweep through the place.\n\n(15) As the afternoon slips away,(16) Riders enjoy one more play.\n\n(17) The ramps grow quiet. The park grows still.(18) Tomorrow the riders will return the hill."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Why does the poet repeat the words \"Click-clack, click-clack\" in the poem?\nA  To show the sound the wheels make ✓\nB  To name the riders at the park\nC  To tell what time the park opens\nD  To show that the park is empty",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "Read line (13): \"Brave boards bounce and racers race.\" Select two words that begin with the same sound.\nA  Brave ✓\nB  racers\nC  bounce ✓\nD  glide\nE  afternoon",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "multi_select"
+      },
+      {
+        "text": "When Tyler misses his new trick, he [ ▾ ].\nlearns it quick ✓\ngoes home sad\nstops to rest\nbreaks his board",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "cloze"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-010"
+  },
+  {
+    "title": "The Bike Race",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary",
+    "gaGrade": "2",
+    "gaSubtopic": "Poetry",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "POETRY.1"
+    },
+    "passages": [
+      {
+        "title": "The Bike Race",
+        "text": "(1) Pedal fast, pedal fast, down the street we go.(2) Pedal fast, pedal fast, wheels begin to glow.\n\n(3) Spinning spokes flash in the sun.(4) Racing riders having fun.\n\n(5) Speedy Sam slides past the tree.(6) Swift and strong as he can be.\n\n(7) Pedal fast, pedal fast, hear the people cheer.(8) Pedal fast, pedal fast, the finish line is near!\n\n(9) Tires roll with a steady beat.(10) Thump-thump, thump-thump goes every seat.\n\n(11) One last push and then the race is done.(12) Smiles shine bright in the afternoon sun."
+      },
+      {
+        "title": "The Drum Parade",
+        "text": "(13) Boom-boom, boom-boom, drums begin to play.(14) Boom-boom, boom-boom, leading the parade today.\n\n(15) Marching musicians move in line.(16) Keeping perfect marching time.\n\n(17) Big brass horns begin to sing.(18) Bright notes dance and loudly ring.\n\n(19) Boom-boom, boom-boom, hear the steady sound.(20) Boom-boom, boom-boom, echoing around.\n\n(21) Flags wave high above the crowd.(22) Families clap and cheer aloud.\n\n(23) The drums keep beating all the way.(24) Their rhythm guides the whole parade."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Which words are said over and over in Poem 1?\nA  \"Pedal fast\" (1) ✓\nB  \"Spinning spokes\" (3)\nC  \"Speedy Sam\" (5)\nD  \"finish line\" (8)",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "Both poems use repeated sound words to make a beat. Select two repeated sound words from the poems.\nA  \"Pedal fast\" (1)\nB  \"Thump-thump\" (10) ✓\nC  \"Boom-boom\" (13) ✓\nD  \"Marching\" (15)\nE  \"Flags\" (21)",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "multi_select"
+      },
+      {
+        "text": "In line (4), \"Racing riders having fun\" means the riders feel [ ▾ ].\nhappy ✓\ntired\nscared\nangry",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "cloze"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-011"
+  },
+  {
+    "title": "The Mountain Trail",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary",
+    "gaGrade": "2",
+    "gaSubtopic": "Poetry",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "POETRY.1"
+    },
+    "passages": [
+      {
+        "title": "The Mountain Trail",
+        "text": "(1) The trail climbs high along the hill.(2) The morning air is cool and still.\n\n(3) Tall pine trees stand side by side.(4) Small birds sing as hikers stride.\n\n(5) Step by step, the path grows steep.(6) Rocks and roots are scattered deep.\n\n(7) At last the hikers reach the top.(8) They pause a while and simply stop.\n\n(9) Mountains stretch for miles around.(10) Not a busy city sound.\n\n(11) The climb was hard from start to end.(12) The view feels like a special friend."
+      },
+      {
+        "title": "The Ocean Shore",
+        "text": "(13) Waves roll gently to the sand.(14) Sea shells sparkle across the land.\n\n(15) Seagulls circle through the sky.(16) Boats drift slowly floating by.\n\n(17) Splashing feet run near the tide.(18) Children laugh and jump with pride.\n\n(19) The salty breeze blows cool and light.(20) The water shines in sunlight bright.\n\n(21) The shore is busy, full of sound.(22) New treasures wait to be found.\n\n(23) Each wave brings something to explore.(24) Adventure waits along the shore."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Read these lines from Poem 1.\n\n\"The trail climbs high along the hill. / The morning air is cool and still.\" (1)(2)\n\nWhich two words rhyme?\nA  hill and still ✓\nB  trail and air\nC  high and cool\nD  climbs and along",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "In Poem 2, what do the children do at the shore?\nA  They laugh and jump. ✓\nB  They climb a tall hill.\nC  They sing with the birds.\nD  They sit and stay quiet.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "How are the two places in the poems different? Select two answers.\nA  The mountain top is quiet, with no city sound. ✓\nB  The ocean shore is busy and full of sound. ✓\nC  Both places are full of tall pine trees.\nD  Both places have waves that roll to the sand.\nE  Neither place has any animals.\nENTERED IN STANDARDS-ALIGNMENT SYSTEM",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-012"
+  },
+  {
+    "title": "The Dragon's Missing Flame",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary",
+    "gaGrade": "2",
+    "gaSubtopic": "Narrative Fiction",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "FANTASY"
+    },
+    "passages": [
+      {
+        "title": "The Dragon's Missing Flame",
+        "text": "(1) In the magical land of Skyvale, dragons soared through the clouds every day. Some dragons breathed blue fire, while others breathed green or gold flames. The colorful flames lit up the sky each evening and made the kingdom sparkle.\n\n(2) One morning, a young dragon named Ember woke up and tried to breathe fire. She puffed out her cheeks and took a deep breath.\n\n(3) \"Pffff!\"\n\n(4) Only a tiny cloud of smoke drifted from her nose.\n\n(5) Ember tried again. \"Pffff!\"\n\n(6) Still no flame appeared.\n\n(7) Worried, Ember flew to the Crystal Cave, where an old wizard named Rowan lived. The wizard listened carefully as Ember explained the problem.\n\n(8) \"Have you visited the Flame Flower Field lately?\" Rowan asked.\n\n(9) Ember shook her head. \"No. Why?\"\n\n(10) \"Dragon flames grow strong when dragons spend time near Flame Flowers,\" the wizard explained. \"The flowers fill the air with magical sparks.\"\n\n(11) Ember thanked him and flew toward the field. Along the way, she crossed a rainbow river and soared above floating islands. Soon she reached a valley covered with bright orange Flame Flowers.\n\n(12) Tiny golden sparks danced above the petals. Ember spent the afternoon exploring the field and playing among the glowing blossoms.\n\n(13) As the sun began to set, she felt a warm tingling in her throat.\n\n(14) \"Maybe it's working,\" she whispered.\n\n(15) Ember took a deep breath and opened her mouth.\n\n(16) WHOOSH!\n\n(17) A beautiful stream of golden fire burst into the air. It sparkled like a thousand tiny stars.\n\n(18) Ember laughed with joy. She thanked the Flame Flowers and flew home through the evening sky.\n\n(19) That night, the dragons gathered above Skyvale. When it was Ember's turn, she breathed her golden flame high into the air. The other dragons cheered as the sky shimmered with light.\n\n(20) Ember learned that sometimes solving a problem takes patience, help from others, and a little bit of magic."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Why does Ember fly to the Crystal Cave?\nA  She wants to play with the wizard.\nB  She cannot breathe fire and needs help. ✓\nC  She wants to see the Flame Flowers.\nD  She is looking for the other dragons.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "What lesson does Ember learn in the story? Select two.\nA  Solving a problem can take patience. ✓\nB  Help from others can be important. ✓\nC  Dragons should never breathe fire.\nD  Flowers are better than friends.\nE  Wizards are scary.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.2"
+        },
+        "type": "multi_select"
+      },
+      {
+        "text": "Read the sentence. The author uses the word [ ▾ ] in paragraph (16) to show a loud, fast sound when the fire comes out.\nWHOOSH ✓\nPffff\nWorried\ntingling",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "cloze"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-013"
+  },
+  {
+    "title": "The One-Room Schoolhouse",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary",
+    "gaGrade": "2",
+    "gaSubtopic": "Narrative Fiction",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "HIST-FIC"
+    },
+    "passages": [
+      {
+        "title": "The One-Room Schoolhouse",
+        "text": "(1) In the spring of 1895, eight-year-old Clara walked along a dirt road toward her schoolhouse. The small wooden building stood at the edge of a farming community. Unlike many schools today, it had only one room. Students of different ages learned together with a single teacher.\n\n(2) Clara carried a lunch pail and a small stack of books. As she entered the schoolhouse, she greeted her classmates and hung her coat by the door. A potbellied stove stood near the center of the room. During cold weather, it helped keep everyone warm.\n\n(3) When the school day began, the teacher rang a handbell. The younger students practiced reading while older students worked on arithmetic problems. Because there were students of many ages, the teacher often met with small groups throughout the day.\n\n(4) Clara enjoyed reading lessons the most. She listened carefully as students took turns reading aloud from their books. Later, she practiced writing neatly on a slate board. If she made a mistake, she could erase it and try again.\n\n(5) At lunchtime, the students hurried outside. Some played games in the field beside the schoolhouse. Others sat beneath a tree and shared stories about life on nearby farms. The laughter and conversation filled the warm spring air.\n\n(6) In the afternoon, the class learned about geography. The teacher pointed to places on a large wall map and explained how people traveled between towns and cities. Clara imagined what it would be like to visit distant places she had only read about.\n\n(7) As the day ended, the teacher dismissed the students. Clara gathered her books and started the walk home. The setting sun cast long shadows across the fields. Along the way, she thought about the stories she had read and the lessons she had learned.\n\n(8) Although Clara's school looked very different from many schools today, students still came to learn, make friends, and prepare for the future. The one-room schoolhouse was an important part of life in many communities during the late 1800s."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What did the teacher do to start the school day?\nA  Rang a handbell ✓\nB  Lit the stove\nC  Read a book aloud\nD  Drew a map",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "What did Clara do in the story? Select two.\nA  She practiced writing on a slate board. ✓\nB  She walked to school along a dirt road. ✓\nC  She rang the handbell for the class.\nD  She drew a map of faraway towns.\nE  She cooked lunch on the stove.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multi_select"
+      },
+      {
+        "text": "In paragraph (7), the sun \"cast long shadows across the fields.\" This phrase helps the reader know it was [ ▾ ].\nthe end of the day ✓\nearly morning\nthe middle of winter\nraining hard",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "cloze"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-014"
+  },
+  {
+    "title": "The Missing Library Book",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary",
+    "gaGrade": "2",
+    "gaSubtopic": "Narrative Fiction",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "REAL-FIC"
+    },
+    "passages": [
+      {
+        "title": "The Missing Library Book",
+        "text": "(1) Ava loved visiting the library after school. Every week, she borrowed new books and carefully returned them on time. One afternoon, she checked out a mystery novel she had been waiting to read for weeks.\n\n(2) That evening, Ava read several chapters before placing the book on a shelf in her room. The next day, she planned to continue reading. However, when she looked for the book after school, it was gone.\n\n(3) Ava searched her room, the living room, and even the kitchen. She checked under furniture and inside backpacks. The book seemed to have disappeared.\n\n(4) As the return date grew closer, Ava became worried. She knew library books belonged to everyone in the community. If she could not find it, other readers would not be able to enjoy the story.\n\n(5) Finally, Ava remembered that her younger brother had been playing near her bookshelf. Together, they searched his room. The missing book was tucked beneath a pile of board games.\n\n(6) Relieved, Ava returned the book to the library the next day. She was glad she had not given up looking for it. The experience reminded her that being responsible sometimes means putting in extra effort to solve a problem."
+      },
+      {
+        "title": "The Soccer Practice",
+        "text": "(7) Jordan looked forward to soccer practice all week. He enjoyed playing with his teammates and learning new skills. One afternoon, he packed his cleats, water bottle, and soccer ball before heading to school.\n\n(8) After classes ended, Jordan hurried to the field. As practice was about to begin, he opened his backpack and realized something was missing. His soccer ball was not inside.\n\n(9) Jordan felt frustrated. He remembered using the ball in his backyard the night before. He must have left it outside.\n\n(10) For a moment, he considered sitting out during practice. Then he decided to ask a teammate if they could share a ball.\n\n(11) His teammate agreed right away. The two players took turns during drills and helped each other practice new moves. By the end of practice, both players had improved their skills.\n\n(12) When Jordan arrived home, he found the ball exactly where he had left it. He promised himself that he would double-check his equipment before future practices.\n\n(13) Although forgetting the ball created a problem, Jordan's decision to ask for help allowed him to participate and enjoy practice."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What did Ava do when she could not find her library book?\nA  She bought a new book.\nB  She looked all around her house. ✓\nC  She told the library to wait.\nD  She gave up looking for it.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "In paragraph (8), Jordan saw that his soccer ball was missing. The word missing means the ball was [ ▾ ].\nnew and clean\nnot there ✓\ntoo big\nhis favorite",
+        "standard": null,
+        "type": "cloze"
+      },
+      {
+        "text": "Both stories teach a lesson about solving a problem. Select two sentences that tell a lesson from these stories.\nA  Being responsible can take extra work. (6) ✓\nB  Asking for help can solve a problem. (13) ✓\nC  It is fun to play soccer with friends. (7)\nD  Ava read several chapters at night. (2)\nE  Reading books in your room is quiet. (2)",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.2"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-015"
+  },
+  {
+    "title": "The Moon Garden",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary",
+    "gaGrade": "2",
+    "gaSubtopic": "Narrative Fiction",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "SCI-FI"
+    },
+    "passages": [
+      {
+        "title": "The Moon Garden",
+        "text": "(1) In the year 2150, people lived in cities on the Moon. Large glass domes protected the cities from the harsh environment outside. Inside the domes, families lived, worked, and attended school.\n\n(2) Ten-year-old Leo loved helping in the Moon Garden. The garden was filled with vegetables, flowers, and fruit trees. Special lights provided the energy plants needed to grow.\n\n(3) One morning, Leo noticed that several plants looked weak. Their leaves were drooping, and some flowers had stopped blooming. He checked the control screen and discovered that one section of the garden was not receiving enough light.\n\n(4) Leo reported the problem to the garden manager. Together, they examined the equipment and found a damaged light panel. The manager replaced the panel, and the plants soon began to recover.\n\n(5) A week later, the garden was healthy again. Bright green leaves filled the growing area, and colorful flowers bloomed beneath the lights. Leo felt proud that he had noticed the problem before it became worse.\n\n(6) Living on the Moon required people to work together and use technology carefully. Even small problems could affect daily life inside the dome."
+      },
+      {
+        "title": "The Ocean City",
+        "text": "(7) Far beneath the ocean's surface, the city of Seawatch rested inside a series of strong glass tunnels and buildings. Scientists, engineers, and families lived there while studying ocean life.\n\n(8) Maya enjoyed exploring the city's observation halls. Through the glass walls, she could watch fish, sea turtles, and other animals swim through the water.\n\n(9) One afternoon, Maya noticed that a sensor near an observation window was flashing. The sensor helped monitor the water pressure outside the city.\n\n(10) She quickly informed an engineer. After checking the equipment, the engineer discovered that the sensor was giving incorrect readings. Although the city was safe, the faulty sensor needed to be repaired.\n\n(11) The engineer thanked Maya for speaking up. If the problem had gone unnoticed, workers might not have received accurate information about conditions outside the city.\n\n(12) That evening, Maya watched schools of fish glide past the windows. She smiled, knowing she had helped keep the city running smoothly.\n\n(13) In Seawatch, advanced technology made life beneath the ocean possible. People depended on both technology and teamwork to stay safe and successful."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What did Leo do when he saw the weak plants?\nA  He told the garden manager about the problem. (4) ✓\nB  He picked the drooping flowers. (3)\nC  He turned off all the lights. (3)\nD  He went home to rest. (5)",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "In paragraph 3, the plants' leaves were drooping. The word drooping means the leaves were [ ▾ ].\nbending down ✓\ngrowing tall\nvery bright\nturning red",
+        "standard": null,
+        "type": "cloze"
+      },
+      {
+        "text": "How are Leo and Maya alike in the two stories? Select two answers.\nA  They both noticed a problem and spoke up. (3, 4, 9, 10) ✓\nB  They both felt good about helping their city. (5, 12) ✓\nC  They both lived on the Moon. (1, 7)\nD  They both fixed the broken machine by themselves. (4, 10)\nE  They both were scared and ran away. (4, 11)",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-016"
+  },
+  {
+    "title": "Anansi and the Basket of Wisdom",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary",
+    "gaGrade": "2",
+    "gaSubtopic": "Traditional Literature",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "FOLKTALE"
+    },
+    "passages": [
+      {
+        "title": "Anansi and the Basket of Wisdom",
+        "text": "(1) Long ago in West Africa, there lived a clever spider named Anansi. Anansi loved collecting things, especially things that might make him seem important. One day, he heard that a magical basket held all the wisdom in the world.\n\n(2) Anansi searched high and low until he found the basket. When he looked inside, he smiled. \"Now I will be the wisest creature in the world!\" he said.\n\n(3) Anansi did not want anyone else to have the wisdom. He decided to hide the basket at the top of a tall tree. He tied the basket to the front of his body and began to climb.\n\n(4) Up he went. The basket bumped against the tree trunk. It got in his way every time he tried to climb higher.\n\n(5) Anansi grumbled and tried again. He pulled himself up a few more feet, but the basket kept getting in the way.\n\n(6) Nearby, Anansi's young son watched quietly.\n\n(7) \"Father,\" he called, \"why don't you tie the basket to your back instead of your front?\"\n\n(8) Anansi stopped climbing. He thought about his son's idea. Then he moved the basket to his back and quickly climbed much higher.\n\n(9) Suddenly, Anansi became upset. He had spent so much time trying to collect all the wisdom in the world, yet his son had thought of a better solution than he had.\n\n(10) \"If my son can think of something I did not,\" Anansi said, \"then one creature cannot hold all the wisdom.\"\n\n(11) In his frustration, Anansi tossed the basket into the air. The basket opened, and wisdom scattered across the land.\n\n(12) Some wisdom landed in villages. Some landed in forests. Some landed near rivers and mountains. Soon, people everywhere had a chance to learn and share ideas.\n\n(13) From that day on, wisdom belonged to everyone instead of just one creature. People passed knowledge from one generation to the next, and communities grew stronger by learning from one another.\n\n(14) Many versions of this folktale have been told for generations. The story reminds listeners that no one knows everything and that people can learn valuable lessons from one another."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Why does Anansi move the basket to his back?\nA  So the basket will not get in his way ✓\nB  So the basket will look nicer\nC  So his son can carry it\nD  So he can hide it in the grass",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "What lesson does this folktale teach?\nA  No one person knows everything ✓\nB  Spiders are the wisest of all\nC  It is best to climb trees alone\nD  Baskets are hard to carry",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.2"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "Read the sentence. In paragraph (2), Anansi \"searched high and low\" for the basket. This phrase means he looked [ ▾ ].\neverywhere for it ✓\none time for it\nup at the sky\nfor a new tree",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "cloze"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-017"
+  },
+  {
+    "title": "The Fox and the Full Cart",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary",
+    "gaGrade": "2",
+    "gaSubtopic": "Traditional Literature",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "FABLE"
+    },
+    "passages": [
+      {
+        "title": "The Fox and the Full Cart",
+        "text": "(1) A fox was walking along a country road when he spotted a farmer's cart filled with apples. The cart was parked beside a field while the farmer worked nearby.\n\n(2) The fox loved apples. He wanted as many as he could get.\n\n(3) \"If I take just one apple,\" thought the fox, \"I will still be hungry. I should take a whole pile!\"\n\n(4) The fox climbed into the cart and began pushing apples toward the edge. One apple fell to the ground. Then another. Then another.\n\n(5) Soon, apples were rolling in every direction.\n\n(6) A rabbit hopping by stopped and watched.\n\n(7) \"Why are you throwing away so many apples?\" asked the rabbit.\n\n(8) \"I am making a pile for myself,\" said the fox. \"Then I will have more apples than anyone else.\"\n\n(9) The rabbit shook his head and continued on his way.\n\n(10) Just then, the farmer heard the apples falling. He turned around and saw the fox standing in the cart.\n\n(11) \"Hey!\" shouted the farmer.\n\n(12) The startled fox jumped from the cart and ran as fast as he could. He raced across the field and disappeared into the woods.\n\n(13) After a while, the fox stopped to rest. He looked around and realized he had not brought a single apple with him.\n\n(14) All the apples he had knocked from the cart were still back on the road.\n\n(15) Meanwhile, the farmer gathered the fallen apples and placed them back in the cart.\n\n(16) That evening, the fox sat beneath a tree with an empty stomach.\n\n(17) \"If I had taken only one apple,\" he said, \"I would have something to eat right now.\"\n\n(18) The fox learned that greed can cause people to lose what they already have."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What lesson does the fox learn in the story?\nA  Being greedy can make you lose what you have.\nB  Apples are the best food to eat. ✓\nC  Rabbits are good friends to have.\nD  Farmers work hard all day long.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.2"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "How does the fox act when the farmer shouts at him?\nA  He jumps out and runs away fast. ✓\nB  He keeps pushing apples out.\nC  He hides inside the cart.\nD  He gives the apples back.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "Read the sentence. The word startled in paragraph (12) means the fox felt [ ▾ ].\nsurprised and scared ✓\nhappy and full\nsleepy and slow\ncalm and still",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "cloze"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-018"
+  },
+  {
+    "title": "Johnny Kaw and the Giant Furrows",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary",
+    "gaGrade": "2",
+    "gaSubtopic": "Traditional Literature",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "LEGEND"
+    },
+    "passages": [
+      {
+        "title": "Johnny Kaw and the Giant Furrows",
+        "text": "(1) Long ago, settlers on the Great Plains told stories about a giant named Johnny Kaw. According to legend, Johnny was taller than a house and stronger than a team of oxen. He lived in what is now Kansas and spent his days helping people shape the land.\n\n(2) One story says that Johnny used a giant plow to prepare fields for farmers. As he pulled the plow across the prairie, the ground rolled and folded beneath it. People claimed that the hills and valleys of the region were formed by the giant furrows he left behind.\n\n(3) Another tale tells of Johnny digging streams and ponds to provide water for crops and animals. With a single scoop of his enormous shovel, he could move more dirt than a hundred workers.\n\n(4) Of course, no giant really created the landscape of Kansas. The hills, rivers, and plains were shaped by natural forces over long periods of time. Still, people enjoyed telling stories about Johnny Kaw because he represented hard work, strength, and the determination of early settlers.\n\n(5) Today, Johnny Kaw remains an important folk hero in Kansas. Although the stories are exaggerated, they help people remember the challenges faced by those who settled the region."
+      },
+      {
+        "title": "Pecos Bill and the Wild West",
+        "text": "(6) Another famous American legend tells the story of Pecos Bill, a cowboy whose adventures supposedly took place in the American Southwest. According to the stories, Bill was raised by coyotes after becoming separated from his family as a baby.\n\n(7) As he grew older, Bill became known for his incredible skills. Legends claimed he could ride the fastest horses, lasso storms, and perform amazing feats that no ordinary person could accomplish.\n\n(8) One story says that a huge drought threatened the land. To help the people, Pecos Bill rode across the countryside searching for water. When he found a hidden river, he supposedly dug a channel so the water could flow to farms and towns.\n\n(9) Like Johnny Kaw, Pecos Bill was not a real historical figure. His stories grew larger with each retelling. The exaggerated adventures reflected the excitement, challenges, and imagination of life in the American West.\n\n(10) Although the events in the stories never happened, Pecos Bill became a symbol of courage and determination. His legend continues to be shared because people enjoy tales about heroes who overcome enormous obstacles."
+      }
+    ],
+    "questions": [
+      {
+        "text": "In Text 1, what did Johnny Kaw use to dig streams and ponds?\nA  A giant shovel ✓\nB  A giant plow\nC  A fast horse\nD  A long rope",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "In paragraph (3), it says Johnny had an 'enormous shovel.' The word enormous means the shovel was very [ ▾ ].\nbig ✓\nold\nshiny\nheavy",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "cloze"
+      },
+      {
+        "text": "Both legends tell about a hero who helped bring water to the land. Select two ways the heroes helped people get water.\nA  Johnny Kaw dug streams and ponds for crops and animals. ✓\nB  Pecos Bill dug a channel so a river could flow to farms. ✓\nC  Johnny Kaw rode the fastest horses across the land.\nD  Pecos Bill was raised by coyotes when he was a baby.\nE  Johnny Kaw made the hills and valleys with a rope.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-019"
+  },
+  {
+    "title": "The Silver Swan",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary",
+    "gaGrade": "2",
+    "gaSubtopic": "Traditional Literature",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "FAIRY-TALE"
+    },
+    "passages": [
+      {
+        "title": "The Silver Swan",
+        "text": "(1) Long ago, in a kingdom surrounded by lakes and forests, there lived a young girl named Eliza. She loved visiting the water near her village and watching the swans glide across its surface.\n\n(2) One winter morning, Eliza discovered a swan trapped in thick ice near the shore. The bird struggled to move. Without hesitation, Eliza carefully chipped away the ice and helped the swan escape.\n\n(3) The swan spread its wings and stepped onto the frozen lake. Then something amazing happened. The bird began to glow with silver light.\n\n(4) \"Thank you for your kindness,\" the swan said. \"I am no ordinary bird. I am the guardian of this lake.\"\n\n(5) With a sweep of its wings, the swan created a shining silver feather.\n\n(6) \"Keep this feather,\" the swan said. \"If you ever face trouble, it will help you.\"\n\n(7) Months later, a terrible drought struck the kingdom. Streams dried up, and crops stopped growing. Eliza remembered the feather and carried it to the lake.\n\n(8) As she placed the feather on the water, it began to glow. Rain clouds gathered overhead, and gentle rain soon fell across the kingdom.\n\n(9) The people celebrated, and the lake returned to normal. Eliza never saw the magical swan again, but she always remembered that kindness had led to something wonderful."
+      },
+      {
+        "title": "The Enchanted Paintbrush",
+        "text": "(10) In a distant village, a boy named Kai loved to draw. Every day, he filled pages with pictures of animals, trees, and mountains.\n\n(11) One evening, an old traveler visited the village. He noticed Kai's drawings and smiled.\n\n(12) \"You have a special gift,\" the traveler said. Before leaving, he handed Kai a paintbrush carved from golden wood.\n\n(13) The next morning, Kai used the brush to paint a bird. To his surprise, the bird fluttered off the page and flew into the sky.\n\n(14) Kai soon discovered that anything he painted could become real.\n\n(15) At first, he used the brush to help others. When a farmer needed tools, Kai painted them. When families needed food, he painted baskets of fruit.\n\n(16) Word of the magical paintbrush spread throughout the region. People traveled from far away to ask for help.\n\n(17) Although Kai could have used the brush to become rich, he chose to help his community instead.\n\n(18) Over time, the village became a happier and more successful place. People remembered Kai not because of his magic but because he used it wisely."
+      }
+    ],
+    "questions": [
+      {
+        "text": "In Text 1, what does Eliza do when she finds the swan stuck in the ice?\nA  She runs back to her village.\nB  She chips away the ice to free it. ✓\nC  She watches the swan from far away.\nD  She asks the swan for a feather.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "Read the sentence about Text 1. Choose the word that best completes it.\n\nIn paragraph (7), a 'drought' is a long time with no [ ▾ ].\nrain ✓\nwind\nsnow\nice",
+        "standard": null,
+        "type": "cloze"
+      },
+      {
+        "text": "Both fairy tales teach a lesson about kindness. Select two sentences that tell what the lesson is.\nA  Being kind can lead to something good. (paragraphs 9, 18) ✓\nB  Helping others is a good way to use a gift. (paragraphs 15, 17) ✓\nC  You should keep magic a secret from everyone. (paragraph 4)\nD  It is best to use magic to become rich. (paragraph 17)\nE  Animals are smarter than people. (paragraph 4)",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.2"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-020"
+  },
+  {
+    "title": "The Lost Lunch Box",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary",
+    "gaGrade": "2",
+    "gaSubtopic": "Short Literary Forms",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "SHORT-STORY"
+    },
+    "passages": [
+      {
+        "title": "The Lost Lunch Box",
+        "text": "(1) Ben zipped up his backpack and hurried into school. It was Friday, and he was excited because his class was going on a nature walk that afternoon. Before leaving home, he had packed his favorite lunch in a bright blue lunch box.\n\n(2) During the morning, Ben worked on math, reading, and science. When lunchtime arrived, he reached into his backpack.\n\n(3) His lunch box was gone.\n\n(4) Ben looked inside every pocket. He checked under his desk and inside his cubby. The lunch box was nowhere to be found.\n\n(5) \"Maybe I left it on the bus,\" Ben said.\n\n(6) His friend Olivia offered to help. Together, they retraced Ben's steps. They looked in the hallway, the library, and the cafeteria.\n\n(7) Ben started to worry. His lunch box had his name on it, but he still hoped someone would find it before the end of the day.\n\n(8) After lunch, the class prepared for the nature walk. Just as Ben was lining up at the door, the school secretary entered the room carrying a bright blue lunch box.\n\n(9) \"Is this yours?\" she asked.\n\n(10) Ben smiled. \"Yes!\"\n\n(11) The secretary explained that another student had found the lunch box near the bus area and turned it in to the office.\n\n(12) \"I'm glad someone was honest,\" Ben said.\n\n(13) Later that afternoon, Ben enjoyed the nature walk with his class. As they explored the trail, he thought about the student who had returned the lunch box.\n\n(14) When he got home, Ben told his family what had happened.\n\n(15) \"I learned two things today,\" he said. \"I should double-check my backpack, and it's important to return things that belong to other people.\"\n\n(16) His family agreed. Sometimes a small act of honesty can make a big difference."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Where did the student find Ben's lunch box?\nA  In the library\nB  Near the bus area ✓\nC  Under Ben's desk\nD  In Ben's cubby",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "How does Ben act after he sees that his lunch box is gone? Select two.\nA  He looks in every pocket of his backpack. ✓\nB  He goes home early.\nC  He gets help from his friend Olivia. ✓\nD  He buys a new lunch box.\nE  He yells at his teacher.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multi_select"
+      },
+      {
+        "text": "Read the sentence from paragraph (6). \"Together, they [ ▾ ] Ben's steps.\" In this sentence, the word retraced means they [ ▾ ].\nwent back over ✓\nran away from\nforgot about\nmade fun of",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "cloze"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-021"
+  },
+  {
+    "title": "A Morning at the Bus Stop",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary",
+    "gaGrade": "2",
+    "gaSubtopic": "Short Literary Forms",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "VIGNETTE"
+    },
+    "passages": [
+      {
+        "title": "A Morning at the Bus Stop",
+        "text": "(1) The neighborhood was just beginning to wake up. Porch lights glowed softly in the early morning darkness, and the sky was painted with shades of pink, orange, and pale blue. A cool breeze rustled the leaves on nearby trees.\n\n(2) Near the corner of the street, a small group of students waited at the bus stop. Some chatted with friends while others held backpacks close to their sides. A few parents stood nearby, waving as younger children climbed aboard the bus.\n\n(3) Birds chirped from the branches overhead. A dog barked in the distance. The smell of fresh pancakes drifted from an open kitchen window. Cars rolled slowly down the street as people headed to work and school.\n\n(4) The students watched for the familiar yellow bus. Every few moments, someone looked down the road and then turned back to continue a conversation. Laughter mixed with the sounds of the morning, creating a cheerful start to the day.\n\n(5) Finally, the bus appeared around the corner. Its lights flashed as it approached the stop. Backpacks were lifted, conversations ended, and students lined up near the curb.\n\n(6) Within a few minutes, the bus doors closed and the vehicle continued down the street. The corner became quiet again. The birds still sang, the trees still swayed, and the neighborhood slowly settled into the rhythm of an ordinary school day."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Where do the students wait in the morning?\nA  At the bus stop ✓\nB  In the kitchen\nC  On a porch\nD  In the trees",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "Complete the sentence about the ending. After the bus leaves, the corner becomes [ ▾ ] again.\nquiet ✓\nloud\ndark\ncold",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.5"
+        },
+        "type": "cloze"
+      },
+      {
+        "text": "Read this sentence from paragraph (3): 'The smell of fresh pancakes drifted from an open kitchen window.' What does the word drifted mean?\nA  Moved slowly through the air ✓\nB  Cooked on a stove\nC  Fell to the ground\nD  Got very loud",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "multiple_choice"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-022"
+  },
+  {
+    "title": "The New Student",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary",
+    "gaGrade": "2",
+    "gaSubtopic": "Short Literary Forms",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "SHORT-STORY"
+    },
+    "passages": [
+      {
+        "title": "The New Student",
+        "text": "(1) On Monday morning, Emma noticed a new student sitting quietly at a desk near the window. During reading time, the student kept looking around the room but did not talk to anyone.\n\n(2) At recess, groups of children ran to the playground. The new student stood near the fence and watched the others play.\n\n(3) Emma remembered how nervous she had felt when she started at a new school. She walked over and introduced herself.\n\n(4) \"Would you like to play with us?\" Emma asked.\n\n(5) The student's face brightened. \"Okay,\" he said with a smile.\n\n(6) Soon, they were playing tag with several classmates. By the end of recess, the new student was laughing and talking with the group.\n\n(7) After school, the student thanked Emma for including him.\n\n(8) Emma felt happy. A simple invitation had helped someone feel welcome."
+      },
+      {
+        "title": "The Forgotten Homework",
+        "text": "(9) One evening, Noah finished his homework and carefully placed it inside his folder. He set the folder on the kitchen table so he would remember it the next morning.\n\n(10) Before leaving for school, Noah grabbed his backpack and rushed out the door. He felt proud because he had completed all of his work.\n\n(11) Later that day, the teacher asked students to turn in their homework. Noah reached into his backpack and froze.\n\n(12) His folder was not there.\n\n(13) Suddenly, he remembered leaving it on the kitchen table.\n\n(14) Noah felt disappointed. He had worked hard, but he had forgotten to bring the assignment.\n\n(15) After school, he told his family what had happened. Together, they came up with a plan. From then on, Noah packed his backpack completely before going to bed.\n\n(16) The next morning, everything he needed was ready to go.\n\n(17) Noah learned that being prepared can help prevent problems."
+      }
+    ],
+    "questions": [
+      {
+        "text": "In Text 1, why did Emma walk over to the new student?\nA  She wanted to win the tag game.\nB  She remembered feeling nervous at a new school. ✓\nC  The teacher told her to help.\nD  She wanted to sit by the window.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "In paragraph (5), the student's face brightened. This phrase means he became [ ▾ ].\nhappy ✓\nsleepy\nangry\nscared",
+        "standard": null,
+        "type": "cloze"
+      },
+      {
+        "text": "Each story teaches a lesson. Select two sentences that tell a lesson from the stories.\nA  A kind invitation can help someone feel welcome. ✓\nB  Being ready ahead of time can stop problems. ✓\nC  Recess is the best part of school.\nD  New students should sit by the window.\nE  Homework should always be done at the table.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.2"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-023"
+  },
+  {
+    "title": "The Ice Cream Shop",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary",
+    "gaGrade": "2",
+    "gaSubtopic": "Short Literary Forms",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "VIGNETTE"
+    },
+    "passages": [
+      {
+        "title": "The Ice Cream Shop",
+        "text": "(1) The ice cream shop buzzed with activity on a warm summer afternoon. Families stood in line studying the menu while the smell of fresh waffle cones drifted through the air. The bright display case sparkled beneath the lights, showing rows of colorful flavors.\n\n(2) Children pointed excitedly at swirls of chocolate, strawberry, and mint. The sound of laughter mixed with the clink of scoops against metal containers. Outside the shop, sunlight reflected off parked bicycles and cars.\n\n(3) Near the counter, customers balanced towering cones topped with sprinkles. Some hurried outside before the ice cream could melt. Others lingered at small tables, enjoying the cool treat and the cheerful atmosphere."
+      },
+      {
+        "title": "The First Snowfall",
+        "text": "(4) Early one morning, tiny snowflakes drifted from a gray winter sky. The neighborhood looked quiet as the snow settled gently on rooftops, trees, and sidewalks. Everything seemed softer beneath the growing blanket of white.\n\n(5) Bare branches held sparkling layers of snow. Footprints appeared along walkways where people had stepped outside to look around. The air felt crisp and cold, and each breath created a small cloud.\n\n(6) The usual sounds of the neighborhood seemed distant. Cars moved slowly, and voices were quieter than usual. The fresh snow transformed familiar streets into a peaceful winter scene."
+      }
+    ],
+    "questions": [
+      {
+        "text": "In Text 1, where does the story take place?\nA  At an ice cream shop ✓\nB  At a snowy park\nC  At a school\nD  At a beach",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "In paragraph (4), the snow settled gently on rooftops. The word gently means it landed [ ▾ ].\nin a soft, quiet way ✓\nin a loud, hard way\nvery fast\nwith a big crash",
+        "standard": null,
+        "type": "cloze"
+      },
+      {
+        "text": "How is the ice cream shop in Text 1 different from the snowy neighborhood in Text 2? Select two answers.\nA  The shop is loud, but the neighborhood is quiet. ✓\nB  The shop is warm, but the neighborhood is cold. ✓\nC  Both places are full of snow.\nD  Both places are quiet and still.\nE  The shop has snow, but the neighborhood has ice cream.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-024"
+  },
+  {
+    "title": "Simone Biles: Reaching New Heights",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary_nonfiction",
+    "gaGrade": "2",
+    "gaSubtopic": "Biographies",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "BIOGRAPHY"
+    },
+    "passages": [
+      {
+        "title": "Simone Biles: Reaching New Heights",
+        "text": "(1) Simone Biles is one of the most successful gymnasts in history. She was born in Ohio in 1997 and discovered gymnastics when she was a young child. After visiting a gymnastics center on a field trip, she became interested in the sport and began taking lessons.\n\n(2) As Simone practiced, she learned new skills and became stronger. Gymnastics required balance, flexibility, and many hours of training. Some skills were difficult to master, but Simone continued working hard to improve.\n\n(3) Over time, Simone began competing in gymnastics meets. Her powerful routines and exciting performances helped her stand out from other athletes. She won many competitions and earned medals at national and international events.\n\n(4) Simone became known for performing skills that few gymnasts could do. In some cases, she was the first woman to successfully complete certain moves during major competitions. Her achievements inspired other athletes to challenge themselves and pursue their goals.\n\n(5) Although Simone experienced success, she also faced challenges. Like many athletes, she had to overcome setbacks and make difficult decisions. Throughout her career, she showed determination and courage both on and off the competition floor.\n\n(6) Today, Simone Biles is admired around the world. Many people respect her not only for her athletic accomplishments but also for her perseverance and leadership. Her story shows how dedication and hard work can help people achieve their goals."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Where was Simone Biles born?\nA  In Ohio ✓\nB  At a gym meet\nC  On a field trip\nD  In a gym class",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "How did Simone act when skills were hard? Select two answers.\nA  She kept working hard. ✓\nB  She did not give up. ✓\nC  She quit the sport.\nD  She stopped going to lessons.\nE  She let others win.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multi_select"
+      },
+      {
+        "text": "In paragraph 5, the word setbacks means [ ▾ ].\nproblems that get in the way ✓\neasy wins\nnew gym skills\nhappy days",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "cloze"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-025"
+  },
+  {
+    "title": "Jane Goodall: A Friend to Chimpanzees",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary_nonfiction",
+    "gaGrade": "2",
+    "gaSubtopic": "Biographies",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "BIOGRAPHY"
+    },
+    "passages": [
+      {
+        "title": "Jane Goodall: A Friend to Chimpanzees",
+        "text": "(1) Jane Goodall is a scientist who became famous for studying chimpanzees. She was born in England in 1934. As a child, she loved animals and spent hours reading about nature. She dreamed of traveling to Africa to learn more about wildlife.\n\n(2) In 1960, Jane traveled to Tanzania in East Africa. There, she began observing chimpanzees in a forest called Gombe. At first, the animals were nervous around her and stayed far away.\n\n(3) Jane was patient. Day after day, she quietly watched the chimpanzees and took notes about their behavior. Over time, the animals became more comfortable with her presence.\n\n(4) Jane made important discoveries. She observed chimpanzees using sticks to collect insects from small holes. Before then, many people believed that only humans used tools. Her observations helped scientists learn that chimpanzees were more intelligent than they had realized.\n\n(5) As the years passed, Jane continued studying animals and teaching others about conservation. Conservation means protecting animals and their habitats. She traveled around the world, encouraging people to care for wildlife and the environment.\n\n(6) Today, Jane Goodall is respected by scientists, students, and animal lovers everywhere. Her work helped people better understand chimpanzees and inspired many others to study and protect nature. Her story shows how curiosity, patience, and determination can lead to important discoveries."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Where did Jane Goodall go to study chimpanzees?\nA  England\nB  Tanzania ✓\nC  her school\nD  a zoo",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "Read the sentence. Choose the word that best completes it.\n\nThe text says conservation means [ ▾ ].\nprotecting animals and their habitats ✓\ntraveling around the world\ntaking notes about animals\nreading about nature",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "cloze"
+      },
+      {
+        "text": "How did Jane act while she watched the chimpanzees? Select two.\nA  She was patient. ✓\nB  She was quiet. ✓\nC  She was scared.\nD  She gave up fast.\nE  She was loud.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-026"
+  },
+  {
+    "title": "Temple Grandin",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary_nonfiction",
+    "gaGrade": "2",
+    "gaSubtopic": "Biographies",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "BIOGRAPHY"
+    },
+    "passages": [
+      {
+        "title": "Temple Grandin",
+        "text": "(1) Temple Grandin is a scientist, inventor, and author who has helped improve the way animals are cared for on farms. She was born in 1947 and grew up loving animals. As a child, she spent a great deal of time observing how animals behaved.\n\n(2) Temple noticed details that other people sometimes overlooked. She paid close attention to how animals reacted to sights, sounds, and movement. This helped her understand why animals might become nervous or calm in different situations.\n\n(3) As an adult, Temple studied animal science and designed equipment that helped move animals more safely and comfortably. Many farms around the world use ideas she developed.\n\n(4) Temple also wrote books and gave speeches to teach others about animals. Her work has helped many people better understand how animals experience the world around them."
+      },
+      {
+        "title": "Steve Irwin",
+        "text": "(5) Steve Irwin was a wildlife expert who became famous for teaching people about animals. He was born in Australia in 1962 and grew up helping care for wildlife at a family-owned animal park.\n\n(6) From a young age, Steve enjoyed learning about reptiles, birds, and other animals. He spent years studying wildlife and sharing what he learned with others.\n\n(7) Steve became known for his exciting television programs, where he introduced viewers to animals from around the world. His enthusiasm encouraged many people to become interested in nature and conservation.\n\n(8) Throughout his life, Steve worked to protect animals and their habitats. He believed that people were more likely to care for wildlife if they learned about it and understood its importance.\n\n(9) Today, many people remember Steve Irwin for his energy, passion, and dedication to helping animals."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What did Temple do as a child that helped her later work?\nA  She watched how animals behaved. ✓\nB  She wrote many books for kids.\nC  She lived on a big farm.\nD  She made television programs.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "In paragraph 7, the word \"enthusiasm\" shows that Steve was very [ ▾ ] about animals.\nexcited ✓\nquiet\nafraid\ntired",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.4"
+        },
+        "type": "cloze"
+      },
+      {
+        "text": "Select two ideas that are true about BOTH texts.\nA  Learning about animals helps people care for them. ✓\nB  Both people worked to help animals. ✓\nC  Both people were born in Australia.\nD  Both people made television shows.\nE  Both people were afraid of wild animals.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.2"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-027"
+  },
+  {
+    "title": "Misty Copeland",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary_nonfiction",
+    "gaGrade": "2",
+    "gaSubtopic": "Biographies",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "BIOGRAPHY"
+    },
+    "passages": [
+      {
+        "title": "Misty Copeland",
+        "text": "(1) Misty Copeland is a ballet dancer who inspired many people through her hard work and determination. She was born in Missouri in 1982 and did not begin ballet lessons until she was thirteen years old. Many dancers start much younger, so Misty had to learn quickly.\n\n(2) As she practiced, Misty showed great talent and dedication. She spent many hours improving her skills and learning difficult dance routines. Her teachers recognized her potential and encouraged her to continue pursuing ballet.\n\n(3) Over time, Misty performed in larger productions and earned important roles. In 2015, she became the first Black woman to be promoted to principal dancer at the American Ballet Theatre, one of the most respected ballet companies in the United States.\n\n(4) Today, Misty continues to perform, write books, and encourage young people to follow their dreams. Her story shows how perseverance can help people achieve challenging goals."
+      },
+      {
+        "title": "José Hernández",
+        "text": "(5) José Hernández is an engineer and former astronaut. He was born in California in 1962. As a child, he spent part of each year helping his family harvest crops on farms. Because his family moved often for work, attending school regularly could be difficult.\n\n(6) José enjoyed learning about science and dreamed of traveling to space. He worked hard in school and later studied engineering. Even when challenges appeared, he remained focused on his goal.\n\n(7) José applied to become an astronaut many times before being selected by NASA. Instead of giving up after being rejected, he continued improving his skills and gaining experience.\n\n(8) In 2009, José traveled to space aboard the Space Shuttle Discovery. His journey showed that determination and hard work can help people accomplish their dreams.\n\n(9) Today, José Hernández shares his story with students and encourages them to work toward their goals, no matter how difficult those goals may seem."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Why did Misty have to learn ballet quickly?\nA  She wanted to write books.\nB  She started ballet when she was older than most dancers. ✓\nC  She was born in Missouri.\nD  She had many ballet teachers.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "Select two ways both Misty and José showed they did not give up.\nA  Misty practiced for many hours to get better. (paragraph 2) ✓\nB  José tried to become an astronaut many times. (paragraph 7) ✓\nC  Misty was born in Missouri. (paragraph 1)\nD  José helped his family pick crops. (paragraph 5)\nE  Misty wrote books for fun. (paragraph 4)",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multi_select"
+      },
+      {
+        "text": "In paragraph 8, the word journey means a [ ▾ ].\ntrip to a place ✓\nkind of book\nschool class\nfarm job",
+        "standard": null,
+        "type": "cloze"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-028"
+  },
+  {
+    "title": "The Day the Lights Came Back",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary_nonfiction",
+    "gaGrade": "2",
+    "gaSubtopic": "True Narratives",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "HIST-ACCOUNT"
+    },
+    "passages": [
+      {
+        "title": "The Day the Lights Came Back",
+        "text": "(1) In December 1952, a powerful storm swept across parts of New England. Heavy snow fell for hours, covering roads, trees, and rooftops. Strong winds blew through towns and cities, making travel difficult and knocking down power lines.\n\n(2) As the storm grew stronger, many homes lost electricity. Lights flickered and went dark. Televisions stopped working, and electric heaters could no longer warm houses. Families gathered together and waited for the storm to pass.\n\n(3) In one small town, workers from the electric company prepared to head out into the snow. Even though the weather was dangerous, they knew people were depending on them. They loaded trucks with tools and supplies and carefully drove along icy roads.\n\n(4) Throughout the day, the workers searched for damaged power lines. Snow piled up around their boots as they repaired broken equipment. In some places, fallen tree branches had damaged poles. In other places, strong winds had caused wires to snap.\n\n(5) The work was slow and difficult. The storm had affected many communities, and there was a lot to repair. Still, the crews continued working through the cold weather.\n\n(6) As evening approached, something exciting began to happen. One by one, homes started lighting up again. Lamps glowed in living rooms. Kitchen lights turned on. Families cheered as electricity returned to their neighborhoods.\n\n(7) By the end of the recovery effort, power had been restored to thousands of people. The storm had caused many problems, but it also showed how communities can work together during difficult times.\n\n(8) Today, storms still sometimes cause power outages. When they do, utility workers continue the important job of repairing equipment and restoring electricity. Their efforts help communities return to normal after severe weather."
+      }
+    ],
+    "questions": [
+      {
+        "text": "What did the utility workers do during the storm?\nA  They fixed the broken power lines. ✓\nB  They stayed home and waited.\nC  They cooked food for the town.\nD  They drove children to school.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "Select two things that happened during the storm.\nA  The power lines were broken. ✓\nB  Families had to wait without power. ✓\nC  School was canceled forever.\nD  The families moved away.\nE  The workers planted new trees.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multi_select"
+      },
+      {
+        "text": "The families stayed patient while they waited. In this account, patient means [ ▾ ].\ncalm and willing to wait ✓\nloud and angry\nfast and in a hurry\ncold and wet",
+        "standard": null,
+        "type": "cloze"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-029"
+  },
+  {
+    "title": "Trapped in a Cave",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary_nonfiction",
+    "gaGrade": "2",
+    "gaSubtopic": "True Narratives",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "TRUE-ADVENTURE"
+    },
+    "passages": [
+      {
+        "title": "Trapped in a Cave",
+        "text": "(1) In 2018, a soccer team in Thailand went exploring in a large cave with their coach. After practice, the group entered the cave to explore its winding tunnels. At first, the adventure seemed exciting and fun.\n\n(2) While the team was inside, heavy rain began to fall outside. Water quickly flowed into the cave and filled some of the passageways. When the group tried to leave, they discovered that rising water had blocked their path.\n\n(3) The players and their coach moved deeper into the cave to find a safe, dry area. There they waited and hoped rescuers would find them. Although the situation was frightening, the coach encouraged everyone to stay calm and work together.\n\n(4) Soon, family members realized the team was missing. Rescue workers began searching the cave. Experts from several countries traveled to Thailand to help. The cave was dark, flooded, and difficult to navigate, making the rescue very challenging.\n\n(5) For many days, rescuers searched through the underground passages. Finally, divers located the team. The players and their coach were tired, but they were safe.\n\n(6) Bringing everyone out of the cave was not easy. Rescue teams carefully planned each step. Divers guided the players through the flooded tunnels one at a time. It took several days to complete the rescue.\n\n(7) At last, every member of the team and their coach reached safety. People around the world celebrated the successful rescue. The event showed how courage, teamwork, and careful planning can help people overcome difficult challenges.\n\n(8) Today, the rescue is remembered as one of the most remarkable survival stories in recent history. The players stayed calm during a frightening situation, and rescuers worked together to bring them home safely."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Where does this true story take place?\nA  In a cave ✓\nB  At a school\nC  On a boat\nD  In a park",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "Select two things the team did when they were in trouble.\nA  They stayed calm ✓\nB  They worked together ✓\nC  They went to sleep\nD  They gave up\nE  They built a sandcastle",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multi_select"
+      },
+      {
+        "text": "The team was trapped in the cave. In this story, trapped means they could not [ ▾ ].\nget out ✓\nfall asleep\nfeel happy\nrun fast",
+        "standard": null,
+        "type": "cloze"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-030"
+  },
+  {
+    "title": "Across the Antarctic Ice",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary_nonfiction",
+    "gaGrade": "2",
+    "gaSubtopic": "True Narratives",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "TRUE-ADVENTURE"
+    },
+    "passages": [
+      {
+        "title": "Across the Antarctic Ice",
+        "text": "(1) In 1914, explorer Ernest Shackleton and his crew set out on a journey to Antarctica. Their goal was to cross the frozen continent. They traveled aboard a ship called the Endurance.\n\n(2) As the ship moved through icy waters, thick sea ice began to surround it. Soon, the Endurance became trapped. The ice squeezed the ship until it was badly damaged.\n\n(3) Shackleton and his crew had to leave the ship and live on the ice. The weather was bitterly cold, and food was limited. Even so, the group worked together and stayed focused on survival.\n\n(4) For months, they camped on floating ice and traveled across dangerous waters in small boats. Shackleton encouraged his crew and helped them stay hopeful during the difficult journey.\n\n(5) After a long rescue effort, every member of the expedition survived. Although the explorers never crossed Antarctica, their teamwork and determination helped them overcome incredible challenges."
+      },
+      {
+        "title": "Lost in the Amazon",
+        "text": "(6) In 1981, a young woman named Juliane Koepcke was traveling on an airplane above the Amazon rainforest in South America. During a severe storm, the plane broke apart in the air.\n\n(7) Juliane survived the crash and found herself alone in the rainforest. She had only a few supplies and was surrounded by thick jungle.\n\n(8) Instead of panicking, Juliane used what she had learned from her parents, who were scientists. She knew that following a stream could help lead her toward people.\n\n(9) For days, she walked through the rainforest. She faced insects, heat, and exhaustion. Even when she felt discouraged, she continued moving forward.\n\n(10) After more than a week alone, Juliane found a small camp used by local workers. Eventually, rescuers helped her return home safely.\n\n(11) Her survival amazed people around the world. Juliane's knowledge, courage, and determination helped her overcome a dangerous situation."
+      }
+    ],
+    "questions": [
+      {
+        "text": "In Text 3, why did Juliane follow a stream?\nA  She wanted to go swimming.\nB  She knew it could lead her toward people. ✓\nC  She wanted to find her airplane.\nD  She was looking for food to eat.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "In paragraph (9), the word exhaustion means [ ▾ ].\nfeeling very tired ✓\nfeeling happy\nfeeling cold\nfeeling hungry",
+        "standard": null,
+        "type": "cloze"
+      },
+      {
+        "text": "Select two ways that BOTH Shackleton's crew (Text 2) and Juliane (Text 3) acted during their challenges.\nA  They gave up quickly.\nB  They kept going even when it was hard. ✓\nC  They stayed hopeful and brave. ✓\nD  They flew away in an airplane.\nE  They crossed Antarctica.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.3"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-031"
+  },
+  {
+    "title": "The Race Across America",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "literary_nonfiction",
+    "gaGrade": "2",
+    "gaSubtopic": "True Narratives",
+    "primaryState": "OH",
+    "standard": {
+      "state": "ALL",
+      "subject": "ela",
+      "code": "HIST-ACCOUNT"
+    },
+    "passages": [
+      {
+        "title": "The Race Across America",
+        "text": "(1) In 1860, sending a message across the United States could take many days. Letters often traveled by stagecoach or wagon. People wanted a faster way to share important news.\n\n(2) To solve this problem, a company started the Pony Express. Young riders carried mail on horseback between Missouri and California. The route stretched across deserts, rivers, and mountains.\n\n(3) Riders traveled day and night. At stations along the route, they quickly switched horses and continued their journey. Speed was important because people were counting on the mail to arrive quickly.\n\n(4) The work was difficult and sometimes dangerous. Riders faced bad weather, rough trails, and long hours in the saddle. Even so, they continued moving forward.\n\n(5) The Pony Express operated for only a short time, but it captured people's imaginations. The riders helped connect distant communities and showed how determination and hard work could overcome great challenges."
+      },
+      {
+        "title": "The Bell That Traveled the Country",
+        "text": "(6) In 1885, the Statue of Liberty was being completed in France. Before the statue could be assembled in New York Harbor, Americans wanted to raise money for the pedestal that would support it.\n\n(7) To help gather support, the Liberty Bell traveled to cities across the United States. Crowds gathered wherever the famous bell appeared. People came to see it, learn about the project, and donate money.\n\n(8) In town after town, newspapers reported on the visits. Families lined the streets, and children waved flags as the bell arrived.\n\n(9) The journey helped spread excitement about the Statue of Liberty. As more people learned about the project, donations increased. Eventually, enough money was raised to complete the pedestal.\n\n(10) In 1886, the Statue of Liberty was dedicated in New York Harbor. Today, it remains one of the most recognized symbols in the United States. The traveling bell helped bring communities together to support a shared goal."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Who carried the mail for the Pony Express?\nA  Young riders on horseback ✓\nB  Sailors on big ships\nC  Workers on a train\nD  Drivers in a wagon",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "Read the sentence. Pick the word that means the same as the underlined word.\n\nThe riders showed determination as they kept moving forward even when the work was hard. \"Determination\" means [ ▾ ].\nnot giving up ✓\nfeeling sleepy\nbeing afraid\ngoing home",
+        "standard": null,
+        "type": "cloze"
+      },
+      {
+        "text": "Both true accounts share a lesson about people. Select two sentences that tell a lesson both texts show.\nA  Working together helped people reach a big goal. ✓\nB  Hard work and not giving up can do great things. ✓\nC  It is best to travel only by ship.\nD  People should never ask others for help.\nE  Fast horses are the only way to send mail.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RL.2.2"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": ""
+    },
+    "id": "ps-ecr2-032"
   }
 ]
