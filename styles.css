@@ -793,3 +793,5 @@ body {
 .dash-table tbody tr:last-child td { border-bottom: 1px solid var(--line); }
 .dash-table tfoot td { font-weight: 700; color: var(--ink); border-bottom: 0; padding-top: 8px; }
 .dash-total { font-weight: 700; color: var(--ink); }
+.cms-chip.disabled { opacity: .55; cursor: default; }
+.cms-chip.disabled:hover { border-color: var(--line); }

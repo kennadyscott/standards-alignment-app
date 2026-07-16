@@ -1665,40 +1665,54 @@ function renderSetSide() {
     return;
   }
 
-  if (tag.state === 'ALL') {
-    html += `<div class="side-block"><div class="align-mini-empty">Universal standard — applies to all states. This passage populates Passage Input for every state at its hierarchy grade, unchecked in CMS until developed there.</div></div>`;
-    panel.innerHTML = html;
-    wireCmsChips(panel);
-    return;
-  }
-
-  // The Master Passage List stays clean: just which states this passage reaches, at what
-  // grade. The aligned state standard — and the assign/override decision — lives in State
-  // Lists, where each state's list is reviewed on its own.
-  const hits = alignedTo(std).filter(h => withinGradeSpan(std, h.std, std.subject));
-  const reached = otherStates(std.state).map(os => {
-    const inState = hits.filter(h => h.std.state === os);
-    const grades = [...new Set(inState.map(h => h.std.grade))].sort();
-    return { os, count: inState.length, grades };
-  }).filter(r => r.count);
-
-  if (reached.length) {
+  // The Master Passage List stays clean: which state lists this passage reaches, at what
+  // grade — plus the In CMS mark, unlockable here once the set has a passage ID. The
+  // aligned state standard (assign/override) still lives in State Lists.
+  // One row per (state, grade) — a set can reach the same grade via several alignments;
+  // aligned beats needs-approval when both exist.
+  const byList = new Map();
+  setServes(s, true).forEach(v => {
+    const kk = `${v.state}:${v.grade}`;
+    const prev = byList.get(kk);
+    if (!prev || (prev.cat !== 'aligned' && v.cat === 'aligned')) byList.set(kk, v);
+  });
+  const serves = [...byList.values()];
+  if (serves.length) {
     html += `<div class="side-block">
       <div class="align-mini-title">Populates these state lists</div>
-      ${reached.map(r => `<div class="align-mini-item">
-        <span class="chip">${STATE_NAMES[r.os]}</span>
-        ${r.grades.map(g => `<span class="chip">G${esc(g)}</span>`).join('')}
-      </div>`).join('')}
+      ${s.passageId ? '' : `<div class="align-mini-desc" style="margin-bottom:6px">Add a passage ID above to mark these In CMS.</div>`}
+      ${serves.map(v => {
+        const k = inputKey(s.id, v.state, v.grade);
+        const inCms = !!state.setCms[k];
+        const toggle = v.cat !== 'aligned'
+          ? '<span class="chip chip-warn">needs approval in State Lists</span>'
+          : s.passageId
+            ? `<button class="cms-chip ${inCms ? 'loaded' : ''}" data-setcms="${esc(k)}" title="Click to toggle">${inCms ? '✓ In CMS' : 'Not in CMS'}</button>`
+            : `<span class="cms-chip disabled" title="Add a passage ID first">Not in CMS</span>`;
+        return `<div class="align-mini-item">
+          <span class="chip">${STATE_NAMES[v.state]}</span><span class="chip">G${esc(v.grade)}</span>
+          ${v.universal ? '<span class="chip chip-concept">◆ Universal</span>' : ''}
+          ${toggle}</div>`;
+      }).join('')}
       <div class="align-mini-desc" style="margin-top:8px">Open <b>State Lists</b> to assign or override the aligned standard for each.</div>
     </div>`;
-  } else if (isNoAlign(std)) {
+  }
+  if (tag.state !== 'ALL' && isNoAlign(std)) {
     html += `<div class="side-block"><div class="noalign-inline">🚫 No Alignment Possible — this passage stays in ${STATE_NAMES[std.state]} only.</div></div>`;
-  } else {
+  } else if (tag.state !== 'ALL' && serves.every(v => v.own)) {
     html += `<div class="side-block"><div class="align-mini-empty">No approved alignment within one grade yet — this passage is in ${STATE_NAMES[std.state]} only until its primary standard is aligned.</div></div>`;
   }
 
   panel.innerHTML = html;
   wireCmsChips(panel);
+  panel.querySelectorAll('[data-setcms]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const k = btn.dataset.setcms;
+      if (state.setCms[k]) delete state.setCms[k]; else state.setCms[k] = true;
+      pushState();
+      renderSetSide();
+    });
+  });
 }
 
 // A push decision is per (passage set, aligned standard). The standard key carries its
@@ -1744,8 +1758,9 @@ function setNativeGrade(s) {
 }
 
 // Every (state, grade) this passage set serves, and its category there.
-function setServes(s) {
-  if (isDraft(s)) return [];   // drafts don't populate the passage library until approved
+// includeDraft: the master side panel previews (and pre-marks CMS for) drafts too.
+function setServes(s, includeDraft) {
+  if (isDraft(s) && !includeDraft) return [];   // drafts don't populate the passage library until approved
   const std = tagStd(s.standard);
   if (!std) return [];
   const native = setNativeGrade(s);
@@ -1916,7 +1931,10 @@ function renderInputDetail(row, st, grade) {
        ${nativeRow ? '' : `<button class="act-btn" data-iact="override|${esc(k)}">Override standard</button>`}
        <button class="act-btn reject" data-iact="${dismissAct}">✕ Dismiss</button>`;
   } else {
-    actions = `<button class="act-btn approve" data-iact="cms|${esc(k)}">✓ Entered in CMS</button>
+    // In CMS is only markable once the set has a passage ID (given on the Master list).
+    actions = `${s.passageId
+        ? `<button class="act-btn approve" data-iact="cms|${esc(k)}">✓ Entered in CMS</button>`
+        : `<span class="cms-chip disabled" title="Add a passage ID on the Master Passage List first">Not in CMS — needs a passage ID</span>`}
        ${nativeRow ? '' : `<button class="act-btn" data-iact="override|${esc(k)}">Override</button>`}
        <button class="act-btn reject" data-iact="${dismissAct}" title="Remove from this grade">Dismiss</button>`;
   }
