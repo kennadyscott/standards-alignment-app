@@ -455,8 +455,9 @@ function autoRejectReason(l) {
   if (l.confidence === 'partial') return 'partial confidence';
   const oh = state.byKey.get(anchorKeyOf(l));
   const other = state.byKey.get(linkedKeyOf(l));
-  if (isCrossGrade(oh, other) && l.confidence !== 'strong') {
-    return `cross-grade but only ${l.confidence || 'unrated'} confidence`;
+  if (isCrossGrade(oh, other)) {
+    if (l.subject === 'ela') return 'ELAR can’t align across grades';
+    if (l.confidence !== 'strong') return `cross-grade but only ${l.confidence || 'unrated'} confidence`;
   }
   return null;
 }
@@ -484,6 +485,8 @@ function alignedTo(std) {
     if (key === selfKey || out.has(key)) return;
     const o = state.byKey.get(key);
     if (!o || o.state === std.state || isSevered(selfKey, key)) return;
+    // ELAR never aligns across grades — including sibling alignments through a shared anchor.
+    if (std.subject === 'ela' && o.subject === 'ela' && String(std.grade) !== String(o.grade)) return;
     out.set(key, { std: o, via, link });
   };
 
@@ -629,20 +632,25 @@ function pairSide(std, stateCode) {
     </div>`;
 }
 
-/* How far apart two standards' grades are. Beyond one grade the alignment isn't worth a
-   reviewer's time — word choice and expectation shift too far for a Grade 3 standard and
-   a Grade 6 one to be usefully "the same content". Drafts outside the span are held back
-   from the queue rather than rejected: the rule is about what's worth showing, so if it
-   ever loosens they come back untouched. Decisions already made are never revoked. */
+/* How far apart two standards' grades may be and still align.
+   - Social studies / science: ±1. States sequence content a year apart; beyond that the
+     match isn't worth a reviewer's time.
+   - ELAR: 0 — same grade only. Reading word-choice and text-complexity expectations are
+     grade-specific, so a cross-grade ELAR alignment is never valid, not merely low-value.
+   Drafts outside the span are held back from the queue rather than rejected: the rule is
+   about what's worth showing, so if it ever loosens they come back untouched. */
 const MAX_GRADE_SPAN = 1;
+function maxSpanFor(subject) { return subject === 'ela' ? 0 : MAX_GRADE_SPAN; }
 function gradeNum(g) { return g === 'K' ? 0 : parseInt(g, 10); }
 function gradeSpan(a, b) {
   if (!a || !b || a.grade === 'All' || b.grade === 'All') return 0;
   return Math.abs(gradeNum(a.grade) - gradeNum(b.grade));
 }
-function withinGradeSpan(a, b) { return gradeSpan(a, b) <= MAX_GRADE_SPAN; }
+function withinGradeSpan(a, b, subject) {
+  return gradeSpan(a, b) <= maxSpanFor(subject || (a && a.subject));
+}
 function linkWithinSpan(l) {
-  return withinGradeSpan(state.byKey.get(anchorKeyOf(l)), state.byKey.get(linkedKeyOf(l)));
+  return withinGradeSpan(state.byKey.get(anchorKeyOf(l)), state.byKey.get(linkedKeyOf(l)), l.subject);
 }
 
 function isCrossGrade(a, b) { return a && b && String(a.grade) !== String(b.grade); }
@@ -1562,7 +1570,7 @@ function renderSetSide() {
   }
 
   if (tag.state === 'ALL') {
-    html += `<div class="side-block"><div class="align-mini-empty">Universal standard — applies to all states; no cross-state alignment needed.</div></div>`;
+    html += `<div class="side-block"><div class="align-mini-empty">Universal standard — applies to all states. This passage populates Passage Input for every state at its hierarchy grade, unchecked in CMS until developed there.</div></div>`;
     panel.innerHTML = html;
     wireCmsChips(panel);
     return;
@@ -1638,8 +1646,18 @@ function setNativeGrade(s) {
 // Every (state, grade) this passage set serves, and how it got there.
 function setServes(s) {
   const std = tagStd(s.standard);
-  if (!std || std.state === 'ALL') return [];
+  if (!std) return [];
   const native = setNativeGrade(s);
+
+  // Universal standard (Literary / Literary Non-Fiction — applies to every state): the
+  // passage serves ALL states at its hierarchy grade, the active ones now and any state
+  // added later, with no alignment needed. Each state's "in CMS" starts unchecked, so it
+  // shows in Passage Input but isn't marked developed until someone checks it off there.
+  if (std.state === 'ALL') {
+    if (!native) return [];   // needs a hierarchy grade to know where it lands
+    return STATES.map(st => ({ state: st, grade: native, via: null, unlisted: false, universal: true, std }));
+  }
+
   const out = [];
   out.push({ state: std.state, grade: String(std.grade), via: null, unlisted: false, std });
   alignedTo(std).forEach(h => {
@@ -1681,9 +1699,13 @@ function inputCard(row, st, grade) {
         <div class="concept-desc">${titles.length ? esc(titles.join(' · ')) : `${s.passages.length} passage${s.passages.length !== 1 ? 's' : ''}, untitled`}</div>
         <div class="concept-meta">
           ${s.passageId ? `<span class="chip">ID ${esc(s.passageId)}</span>` : ''}
-          <span class="chip ${hit.unlisted ? 'chip-cross' : ''}">${hit.unlisted ? '⇄ Unlisted — written for G' + esc(setNativeGrade(s)) : 'Listed'}</span>
+          ${hit.universal
+            ? '<span class="chip chip-concept">◆ Universal — applies to all states</span>'
+            : `<span class="chip ${hit.unlisted ? 'chip-cross' : ''}">${hit.unlisted ? '⇄ Unlisted — written for G' + esc(setNativeGrade(s)) : 'Listed'}</span>`}
           <span class="chip">${esc(hit.std.code)}</span>
-          ${hit.via ? `<span class="chip chip-concept">arrived via ${STATE_NAMES[hit.via.state]} ${esc(hit.via.code)}</span>` : '<span class="chip">tagged directly</span>'}
+          ${hit.universal
+            ? ''
+            : hit.via ? `<span class="chip chip-concept">arrived via ${STATE_NAMES[hit.via.state]} ${esc(hit.via.code)}</span>` : '<span class="chip">tagged directly</span>'}
           <span class="chip">${tagged} question${tagged === 1 ? '' : 's'} tagged</span>
         </div>
       </div>
@@ -1711,14 +1733,15 @@ function renderInput() {
 
   const st = state.ui.inState, grade = state.ui.inGrade;
   const rows = setsForGrade(st, grade);
-  const listed = rows.filter(r => !r.hit.unlisted);
-  const unlisted = rows.filter(r => r.hit.unlisted);
+  const universal = rows.filter(r => r.hit.universal);
+  const listed = rows.filter(r => !r.hit.universal && !r.hit.unlisted);
+  const unlisted = rows.filter(r => !r.hit.universal && r.hit.unlisted);
   const done = rows.filter(r => state.setCms[inputKey(r.set.id, st, grade)]).length;
   const dismissed = state.sets.filter(s => state.setDismiss[inputKey(s.id, st, grade)]).length;
 
   document.getElementById('inputProgress').textContent =
     `${rows.length} passage${rows.length === 1 ? '' : 's'} for ${STATE_NAMES[st]} Grade ${grade} · `
-    + `${listed.length} listed, ${unlisted.length} unlisted · ${done} in CMS`
+    + `${listed.length} listed, ${universal.length} universal, ${unlisted.length} unlisted · ${done} in CMS`
     + (dismissed ? ` · ${dismissed} dismissed` : '');
 
   const box = document.getElementById('inputList');
@@ -1727,7 +1750,8 @@ function renderInput() {
     box.appendChild(el(`<div class="review-empty">
       No passages serve ${STATE_NAMES[st]} Grade ${grade} yet.<br>
       <span style="font-size:12.5px; color:var(--ink-faint)">A passage lands here when its primary standard is a ${STATE_NAMES[st]} Grade ${grade} standard,
-      or is aligned to one. Build sets in Passage Sets, and approve alignments in the Review Queue to make them cross over.</span>
+      is aligned to one, or is tagged to a universal (all-state) standard at this grade. Build sets in Passage Sets,
+      and approve alignments in the Review Queue to make them cross over.</span>
     </div>`));
     return;
   }
@@ -1742,6 +1766,7 @@ function renderInput() {
     });
   };
   section('Listed — written for this grade', listed);
+  section('Universal — applies to every state', universal);
   section('Unlisted — arrived from another grade', unlisted);
 }
 
