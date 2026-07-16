@@ -1,0 +1,64 @@
+[
+  {
+    "title": "From Letters to Video Calls",
+    "passageId": "",
+    "status": "draft",
+    "itemSetType": "opinion",
+    "genre": "informational",
+    "gaGrade": "2",
+    "gaSubtopic": "Social Studies",
+    "primaryState": "OH",
+    "standard": {
+      "state": "OH",
+      "subject": "social_studies",
+      "code": "2.SS.3"
+    },
+    "passages": [
+      {
+        "title": "From Letters to Video Calls",
+        "text": "(1) Long ago, people had fewer ways to communicate with friends and family who lived far away. If someone wanted to share news, they often wrote a letter. The letter traveled by horse, train, or mail truck before reaching its destination. Sometimes people waited days or even weeks to receive a reply.\n\n(2) As technology improved, new inventions changed how people communicated. Telephones allowed people to hear each other's voices without being in the same place. Later, computers and the internet made it possible to send messages in just a few seconds. Families could share news much more quickly than before.\n\n(3) Today, many people use smartphones, tablets, and computers to stay connected. Video calls allow friends and family to see and talk to each other even when they are hundreds of miles apart. Students can learn online, and people can share photos and videos with just a few taps on a screen.\n\n(4) These changes have made daily life different in many ways. People can communicate faster, find information more easily, and connect with others around the world. While letters are still used today, technology has given people many new ways to stay in touch."
+      }
+    ],
+    "questions": [
+      {
+        "text": "Long ago, how did a letter travel to another place?\nA  By horse, train, or mail truck ✓\nB  By video call\nC  By telephone\nD  By computer",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.1"
+        },
+        "type": "multiple_choice"
+      },
+      {
+        "text": "Read the sentence. Choose the best word to complete it. In paragraph 1, the word \"communicate\" means to [ ▾ ] with others.\nshare news ✓\ntravel far\nwait a long time\nbuild a truck",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.4"
+        },
+        "type": "cloze"
+      },
+      {
+        "text": "Select two ways that technology has changed daily life, according to the passage.\nA  People can communicate faster. ✓\nB  People can see each other on video calls. ✓\nC  People can no longer send letters.\nD  People must wait weeks for every reply.\nE  People can only talk in the same room.",
+        "standard": {
+          "state": "OH",
+          "subject": "ela",
+          "code": "RI.2.2"
+        },
+        "type": "multi_select"
+      }
+    ],
+    "peerRevision": [
+      {
+        "text": "",
+        "standard": null,
+        "type": null
+      }
+    ],
+    "writingPrompt": {
+      "type": "opinion",
+      "text": "Which way of communicating do you think is better: sending a letter or using a video call? In your own words, write a multi-paragraph response that explains your opinion. Include evidence from the passage that supports your opinion."
+    },
+    "id": "ps-ecr2-001"
+  }
+]

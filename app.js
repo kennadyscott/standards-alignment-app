@@ -352,6 +352,7 @@ function mergeServerState(s) {
     state.setDismiss = merged.setDismiss;
     state.sets = merged.sets;
     normalizeSets();
+    mergeImportedDrafts();   // re-add any imported draft the server copy doesn't have
     mirrorLocal();
     if (localHadData) pushState(); // persist anything local-only up to the server
   } catch { /* server without /api/state — localStorage only */ }
@@ -430,6 +431,18 @@ async function loadData() {
   state.links = ((doc && doc.links) || []).filter(l =>
     state.byKey.has(anchorKeyOf(l)) && state.byKey.has(linkedKeyOf(l)));
   indexLinks();
+
+  // Imported ECR drafts live in a read-only data file, not the mutable state file, so a
+  // browser save can't wipe them. They're merged into state.sets only if the reviewer
+  // hasn't already got that set (by id) — once approved/edited it lives in the state file
+  // and that copy wins.
+  state.importedDrafts = (await fetchJson('data/imported_sets.json')) || [];
+}
+
+function mergeImportedDrafts() {
+  const have = new Set(state.sets.map(s => s.id));
+  (state.importedDrafts || []).forEach(d => { if (!have.has(d.id)) state.sets.push({ ...d }); });
+  normalizeSets();
 }
 
 function anchorKeyOf(l) { return stdKey(ANCHOR, l.subject, l.oh); }
@@ -1989,6 +2002,7 @@ function init() {
   // hand to tell an orphan from a not-yet-loaded link.
   Promise.all([loadData(), loadPersisted()]).then(() => {
     pruneOrphanDecisions();
+    mergeImportedDrafts();
     renderAll();
   });
 }
