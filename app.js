@@ -1857,41 +1857,51 @@ function detailQuestionHtml(q, i, s, st, grade) {
   const typeLabel = (QUESTION_TYPES.find(t => t.key === q.type) || {}).label;
   const native = q.standard;
   const isNativeState = native && native.state === st;
+  const nstd = native && tagStd(native);
+  // Full standard text everywhere — same side-by-side layout as the Review Queue,
+  // native (Ohio) standard on the left, this state's standard on the right.
+  const nativeSide = nstd
+    ? pairSide(nstd, native.state)
+    : native
+      ? `<div class="pair-side"><div class="side-label">${STATE_NAMES[native.state] || native.state}</div><div class="pair-code">${esc(native.code)}</div><div class="pair-desc">(standard not loaded)</div></div>`
+      : `<div class="pair-side"><div class="side-label">No standard tagged</div></div>`;
   let tagArea = '';
   if (isNativeState) {
-    tagArea = `<div class="q-tag-area"><span class="tag-chip"><b>${esc(native.code)}</b> · ${STATE_NAMES[st]}</span></div>`;
+    tagArea = `<div class="q-tag-area"><div class="review-pair q-pair">${nativeSide}</div></div>`;
   } else {
     const tag = (q.stateStandards || {})[st];
     const open = state.ui.openPicker && state.ui.openPicker.section === 'qstate'
       && state.ui.openPicker.index === i && state.ui.openPicker.setId === s.id;
     let inner;
     if (tag) {
-      inner = `<span class="tag-chip"><b>${esc(tag.code)}</b> · ${STATE_NAMES[st]}
-           <button class="tag-x" data-qsuntag="${i}" title="Remove tag">✕</button></span>`;
+      inner = `<div class="review-pair q-pair">
+          ${nativeSide}<div class="pair-mid">⇄</div>${pairSide(tagStd(tag) || { code: tag.code, grade, description: '' }, st)}
+        </div>
+        <button class="act-btn reject" data-qsuntag="${i}">✕ Remove ${STATE_NAMES[st]} tag</button>`;
     } else if (open) {
-      inner = pickerHtml('qstate', i, st, qstateScope(grade), `Showing ${STATE_NAMES[st]} ELAR standards for Grade ${grade}.`);
+      inner = `<div class="review-pair q-pair">${nativeSide}</div>
+        ${pickerHtml('qstate', i, st, qstateScope(grade), `Showing ${STATE_NAMES[st]} ELAR standards for Grade ${grade}.`)}`;
     } else {
       // Recommend from the alignment work already done: the question's native standard's
       // approved alignments into this state at this grade. Accept in one click, or pick another.
-      const nstd = native && tagStd(native);
       const recs = nstd
         ? alignedTo(nstd).filter(h => h.std.state === st && String(h.std.grade) === String(grade)).slice(0, 3)
         : [];
       inner = recs.length
         ? `<div class="q-recs">
-            <div class="align-mini-title" style="margin-bottom:4px">Recommended from approved alignments</div>
-            ${recs.map(h => `<div class="q-rec-row">
-              <span class="align-mini-code">${esc(h.std.code)}</span>
-              <span class="q-rec-desc">${esc(h.std.description.slice(0, 90))}${h.std.description.length > 90 ? '…' : ''}</span>
-              <button class="act-btn approve" data-qsrec="${i}|${esc(h.std.subject)}|${esc(h.std.code)}">✓ Accept</button>
+            <div class="align-mini-title">Recommended from approved alignments</div>
+            ${recs.map(h => `<div class="q-rec-pair">
+              <div class="review-pair q-pair">
+                ${nativeSide}<div class="pair-mid">⇄</div>${pairSide(h.std, st)}
+              </div>
+              <button class="act-btn approve" data-qsrec="${i}|${esc(h.std.subject)}|${esc(h.std.code)}">✓ Accept ${esc(h.std.code)}</button>
             </div>`).join('')}
             <button class="act-btn tag-open" data-qspick="${i}">Choose a different standard…</button>
           </div>`
-        : `<button class="act-btn tag-open" data-qspick="${i}">＋ Tag ${STATE_NAMES[st]} standard</button>`;
+        : `<div class="review-pair q-pair">${nativeSide}</div>
+           <button class="act-btn tag-open" data-qspick="${i}">＋ Tag ${STATE_NAMES[st]} standard</button>`;
     }
-    tagArea = `<div class="q-tag-area">
-      ${native ? `<div class="concept-meta" style="margin-bottom:6px"><span class="chip">${esc(native.code)} · ${STATE_NAMES[native.state] || native.state}</span></div>` : ''}
-      ${inner}</div>`;
+    tagArea = `<div class="q-tag-area q-tag-stack">${inner}</div>`;
   }
   return `
     <div class="q-card">
