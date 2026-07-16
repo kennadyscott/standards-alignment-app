@@ -1,0 +1,658 @@
+[
+  {
+    "id": "m-technology-changes-work-and-life-oh",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "OH:social_studies:2.SS.3",
+    "confidence": "partial",
+    "rationale": "Cross-grade (GA grade 4). Ohio: science and technology have changed daily life. Georgia SS4E1f gives examples of technological advancements (cotton gin, steamboat, locomotive) and their impact, a partial overlap centered on business productivity rather than daily life.",
+    "source": "seed"
+  },
+  {
+    "id": "m-technology-changes-work-and-life-ga",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "GA:social_studies:SS4E1f",
+    "confidence": "partial",
+    "rationale": "Cross-grade (GA grade 4). Ohio: science and technology have changed daily life. Georgia SS4E1f gives examples of technological advancements (cotton gin, steamboat, locomotive) and their impact, a partial overlap centered on business productivity rather than daily life.",
+    "source": "seed"
+  },
+  {
+    "id": "m-individual-actions-shape-history-oh",
+    "conceptId": "c-individual-actions-shape-history",
+    "key": "OH:social_studies:2.SS.4",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 1). Ohio: biographies show how people's actions have shaped the world. Georgia SS1H1a identifies the contributions made by historical figures such as Franklin and Jefferson.",
+    "source": "seed"
+  },
+  {
+    "id": "m-individual-actions-shape-history-ga",
+    "conceptId": "c-individual-actions-shape-history",
+    "key": "GA:social_studies:SS1H1a",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 1). Ohio: biographies show how people's actions have shaped the world. Georgia SS1H1a identifies the contributions made by historical figures such as Franklin and Jefferson.",
+    "source": "seed"
+  },
+  {
+    "id": "m-respecting-rights-of-others-oh",
+    "conceptId": "c-respecting-rights-of-others",
+    "key": "OH:social_studies:2.SS.10",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 3). Ohio: respect for the rights of self and others includes responsible choices and accountability. Georgia SS3CG2a explains the necessity of respecting the rights of others and promoting the common good.",
+    "source": "seed"
+  },
+  {
+    "id": "m-respecting-rights-of-others-ga",
+    "conceptId": "c-respecting-rights-of-others",
+    "key": "GA:social_studies:SS3CG2a",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 3). Ohio: respect for the rights of self and others includes responsible choices and accountability. Georgia SS3CG2a explains the necessity of respecting the rights of others and promoting the common good.",
+    "source": "seed"
+  },
+  {
+    "id": "m-the-need-for-rules-and-laws-oh",
+    "conceptId": "c-the-need-for-rules-and-laws",
+    "key": "OH:social_studies:2.SS.12",
+    "confidence": "moderate",
+    "rationale": "Same-grade match. Ohio: different rules and laws govern behavior in different settings. Georgia SS2CG1 defines the concept of government and the need for rules and laws.",
+    "source": "seed"
+  },
+  {
+    "id": "m-the-need-for-rules-and-laws-ga",
+    "conceptId": "c-the-need-for-rules-and-laws",
+    "key": "GA:social_studies:SS2CG1",
+    "confidence": "moderate",
+    "rationale": "Same-grade match. Ohio: different rules and laws govern behavior in different settings. Georgia SS2CG1 defines the concept of government and the need for rules and laws.",
+    "source": "seed"
+  },
+  {
+    "id": "m-how-rules-are-made-and-why-oh",
+    "conceptId": "c-how-rules-are-made-and-why",
+    "key": "OH:social_studies:2.SS.12",
+    "confidence": "partial",
+    "rationale": "Cross-grade (GA grade K). Ohio: there are different rules and laws that govern behavior. Georgia SSKCG1a explains how rules are made and why, a partial overlap on the nature and purpose of rules.",
+    "source": "seed"
+  },
+  {
+    "id": "m-how-rules-are-made-and-why-ga",
+    "conceptId": "c-how-rules-are-made-and-why",
+    "key": "GA:social_studies:SSKCG1a",
+    "confidence": "partial",
+    "rationale": "Cross-grade (GA grade K). Ohio: there are different rules and laws that govern behavior. Georgia SSKCG1a explains how rules are made and why, a partial overlap on the nature and purpose of rules.",
+    "source": "seed"
+  },
+  {
+    "id": "m-goods-and-services-people-produce-oh",
+    "conceptId": "c-goods-and-services-people-produce",
+    "key": "OH:social_studies:2.SS.15",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 1). Ohio: most people work in jobs producing specific goods and services. Georgia SS1E1 identifies goods that people make and services that people provide for each other.",
+    "source": "seed"
+  },
+  {
+    "id": "m-goods-and-services-people-produce-ga",
+    "conceptId": "c-goods-and-services-people-produce",
+    "key": "GA:social_studies:SS1E1",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 1). Ohio: most people work in jobs producing specific goods and services. Georgia SS1E1 identifies goods that people make and services that people provide for each other.",
+    "source": "seed"
+  },
+  {
+    "id": "m-money-as-medium-of-exchange-oh",
+    "conceptId": "c-money-as-medium-of-exchange",
+    "key": "OH:social_studies:2.SS.16",
+    "confidence": "strong",
+    "rationale": "Same-grade match. Ohio: people use money to buy and sell goods and services. Georgia SS2E3 explains that people usually use money to obtain the goods and services they want and how money makes trade easier than barter.",
+    "source": "seed"
+  },
+  {
+    "id": "m-money-as-medium-of-exchange-ga",
+    "conceptId": "c-money-as-medium-of-exchange",
+    "key": "GA:social_studies:SS2E3",
+    "confidence": "strong",
+    "rationale": "Same-grade match. Ohio: people use money to buy and sell goods and services. Georgia SS2E3 explains that people usually use money to obtain the goods and services they want and how money makes trade easier than barter.",
+    "source": "seed"
+  },
+  {
+    "id": "m-people-earn-income-by-working-oh",
+    "conceptId": "c-people-earn-income-by-working",
+    "key": "OH:social_studies:2.SS.17",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade K). Ohio: people earn income by working. Georgia SSKE2 explains that people earn income by working, a near-identical statement.",
+    "source": "seed"
+  },
+  {
+    "id": "m-people-earn-income-by-working-ga",
+    "conceptId": "c-people-earn-income-by-working",
+    "key": "GA:social_studies:SSKE2",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade K). Ohio: people earn income by working. Georgia SSKE2 explains that people earn income by working, a near-identical statement.",
+    "source": "seed"
+  },
+  {
+    "id": "m-people-earn-income-by-working-2-oh",
+    "conceptId": "c-people-earn-income-by-working-2",
+    "key": "OH:social_studies:2.SS.17",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 1). Ohio: people earn income by working. Georgia SS1E4 explains that people earn income by working and must make choices about saving and spending, extending the same core idea.",
+    "source": "seed"
+  },
+  {
+    "id": "m-people-earn-income-by-working-2-ga",
+    "conceptId": "c-people-earn-income-by-working-2",
+    "key": "GA:social_studies:SS1E4",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 1). Ohio: people earn income by working. Georgia SS1E4 explains that people earn income by working and must make choices about saving and spending, extending the same core idea.",
+    "source": "seed"
+  },
+  {
+    "id": "m-geography-shapes-economic-activity-oh",
+    "conceptId": "c-geography-shapes-economic-activity",
+    "key": "OH:social_studies:3.SS.5",
+    "confidence": "moderate",
+    "rationale": "Same-grade match. Ohio: daily life is influenced by the agriculture, industry and natural resources in different communities. Georgia SS3G3c: explain how the physical geography of the New England, Mid-Atlantic, and Southern colonies helped determine economic activities.",
+    "source": "seed"
+  },
+  {
+    "id": "m-geography-shapes-economic-activity-ga",
+    "conceptId": "c-geography-shapes-economic-activity",
+    "key": "GA:social_studies:SS3G3c",
+    "confidence": "moderate",
+    "rationale": "Same-grade match. Ohio: daily life is influenced by the agriculture, industry and natural resources in different communities. Georgia SS3G3c: explain how the physical geography of the New England, Mid-Atlantic, and Southern colonies helped determine economic activities.",
+    "source": "seed"
+  },
+  {
+    "id": "m-cultural-diversity-in-communities-oh",
+    "conceptId": "c-cultural-diversity-in-communities",
+    "key": "OH:social_studies:3.SS.8",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade K). Ohio: communities may include diverse cultural groups. Georgia SSKG1: describe the diversity of American culture by explaining the customs and celebrations of various families and communities.",
+    "source": "seed"
+  },
+  {
+    "id": "m-cultural-diversity-in-communities-ga",
+    "conceptId": "c-cultural-diversity-in-communities",
+    "key": "GA:social_studies:SSKG1",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade K). Ohio: communities may include diverse cultural groups. Georgia SSKG1: describe the diversity of American culture by explaining the customs and celebrations of various families and communities.",
+    "source": "seed"
+  },
+  {
+    "id": "m-citizens-rights-and-responsibilities-oh",
+    "conceptId": "c-citizens-rights-and-responsibilities",
+    "key": "OH:social_studies:3.SS.9",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 5). Ohio: members of local communities have rights and responsibilities. Georgia SS5CG1a: explain the responsibilities of a citizen.",
+    "source": "seed"
+  },
+  {
+    "id": "m-citizens-rights-and-responsibilities-ga",
+    "conceptId": "c-citizens-rights-and-responsibilities",
+    "key": "GA:social_studies:SS5CG1a",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 5). Ohio: members of local communities have rights and responsibilities. Georgia SS5CG1a: explain the responsibilities of a citizen.",
+    "source": "seed"
+  },
+  {
+    "id": "m-purposes-laws-serve-in-a-community-oh",
+    "conceptId": "c-purposes-laws-serve-in-a-community",
+    "key": "OH:social_studies:3.SS.11",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 2). Ohio: laws are rules that apply to all people, promote order and security, and protect rights. Georgia SS2CG1: define the concept of government and the need for rules and laws.",
+    "source": "seed"
+  },
+  {
+    "id": "m-purposes-laws-serve-in-a-community-ga",
+    "conceptId": "c-purposes-laws-serve-in-a-community",
+    "key": "GA:social_studies:SS2CG1",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 2). Ohio: laws are rules that apply to all people, promote order and security, and protect rights. Georgia SS2CG1: define the concept of government and the need for rules and laws.",
+    "source": "seed"
+  },
+  {
+    "id": "m-incentives-influence-choices-oh",
+    "conceptId": "c-incentives-influence-choices",
+    "key": "OH:social_studies:3.SS.15",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 4). Ohio: both positive and negative incentives affect individuals' choices and behaviors. Georgia SS4E1b: explain how price incentives affect people's behavior and choices; GA limits this to price incentives, so the overlap is clear but narrower.",
+    "source": "seed"
+  },
+  {
+    "id": "m-incentives-influence-choices-ga",
+    "conceptId": "c-incentives-influence-choices",
+    "key": "GA:social_studies:SS4E1b",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 4). Ohio: both positive and negative incentives affect individuals' choices and behaviors. Georgia SS4E1b: explain how price incentives affect people's behavior and choices; GA limits this to price incentives, so the overlap is clear but narrower.",
+    "source": "seed"
+  },
+  {
+    "id": "m-scarcity-choice-and-opportunity-cost-oh",
+    "conceptId": "c-scarcity-choice-and-opportunity-cost",
+    "key": "OH:social_studies:3.SS.16",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade 2). Ohio: individuals must make decisions because of scarcity of resources, and making a decision involves a trade-off. Georgia SS2E1: explain that because of scarcity, people must make choices that result in opportunity costs.",
+    "source": "seed"
+  },
+  {
+    "id": "m-scarcity-choice-and-opportunity-cost-ga",
+    "conceptId": "c-scarcity-choice-and-opportunity-cost",
+    "key": "GA:social_studies:SS2E1",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade 2). Ohio: individuals must make decisions because of scarcity of resources, and making a decision involves a trade-off. Georgia SS2E1: explain that because of scarcity, people must make choices that result in opportunity costs.",
+    "source": "seed"
+  },
+  {
+    "id": "m-scarcity-choice-and-opportunity-cost-2-oh",
+    "conceptId": "c-scarcity-choice-and-opportunity-cost-2",
+    "key": "OH:social_studies:3.SS.16",
+    "confidence": "moderate",
+    "rationale": "Same-grade match. Ohio: making a decision involves a trade-off due to scarcity. Georgia SS3E4: explain the concept of opportunity cost as it relates to making a saving or spending choice.",
+    "source": "seed"
+  },
+  {
+    "id": "m-scarcity-choice-and-opportunity-cost-2-ga",
+    "conceptId": "c-scarcity-choice-and-opportunity-cost-2",
+    "key": "GA:social_studies:SS3E4",
+    "confidence": "moderate",
+    "rationale": "Same-grade match. Ohio: making a decision involves a trade-off due to scarcity. Georgia SS3E4: explain the concept of opportunity cost as it relates to making a saving or spending choice.",
+    "source": "seed"
+  },
+  {
+    "id": "m-producers-and-consumers-interdepend-oh",
+    "conceptId": "c-producers-and-consumers-interdepend",
+    "key": "OH:social_studies:3.SS.17",
+    "confidence": "strong",
+    "rationale": "Same-grade match. Ohio: a consumer's wants are satisfied by using goods and services while a producer makes goods and provides services. Georgia SS3E3a: describe the interdependence of consumers and producers.",
+    "source": "seed"
+  },
+  {
+    "id": "m-producers-and-consumers-interdepend-ga",
+    "conceptId": "c-producers-and-consumers-interdepend",
+    "key": "GA:social_studies:SS3E3a",
+    "confidence": "strong",
+    "rationale": "Same-grade match. Ohio: a consumer's wants are satisfied by using goods and services while a producer makes goods and provides services. Georgia SS3E3a: describe the interdependence of consumers and producers.",
+    "source": "seed"
+  },
+  {
+    "id": "m-roles-of-producer-and-consumer-oh",
+    "conceptId": "c-roles-of-producer-and-consumer",
+    "key": "OH:social_studies:3.SS.17",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 1). Ohio distinguishes consumers from producers. Georgia SS1E3: describe how people are both producers and consumers.",
+    "source": "seed"
+  },
+  {
+    "id": "m-roles-of-producer-and-consumer-ga",
+    "conceptId": "c-roles-of-producer-and-consumer",
+    "key": "GA:social_studies:SS1E3",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 1). Ohio distinguishes consumers from producers. Georgia SS1E3: describe how people are both producers and consumers.",
+    "source": "seed"
+  },
+  {
+    "id": "m-markets-exchange-goods-and-services-oh",
+    "conceptId": "c-markets-exchange-goods-and-services",
+    "key": "OH:social_studies:3.SS.18",
+    "confidence": "strong",
+    "rationale": "Same-grade match. Ohio: a market is where buyers and sellers exchange goods and services. Georgia SS3E3b: describe how goods and services are allocated by price in the marketplace.",
+    "source": "seed"
+  },
+  {
+    "id": "m-markets-exchange-goods-and-services-ga",
+    "conceptId": "c-markets-exchange-goods-and-services",
+    "key": "GA:social_studies:SS3E3b",
+    "confidence": "strong",
+    "rationale": "Same-grade match. Ohio: a market is where buyers and sellers exchange goods and services. Georgia SS3E3b: describe how goods and services are allocated by price in the marketplace.",
+    "source": "seed"
+  },
+  {
+    "id": "m-weighing-costs-and-benefits-oh",
+    "conceptId": "c-weighing-costs-and-benefits",
+    "key": "OH:social_studies:3.SS.19",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade 2). Ohio: making decisions involves weighing costs and benefits. Georgia SS2E4: describe the costs and benefits of personal saving and spending choices.",
+    "source": "seed"
+  },
+  {
+    "id": "m-weighing-costs-and-benefits-ga",
+    "conceptId": "c-weighing-costs-and-benefits",
+    "key": "GA:social_studies:SS2E4",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade 2). Ohio: making decisions involves weighing costs and benefits. Georgia SS2E4: describe the costs and benefits of personal saving and spending choices.",
+    "source": "seed"
+  },
+  {
+    "id": "m-grievances-that-sparked-revolution-oh",
+    "conceptId": "c-grievances-that-sparked-revolution",
+    "key": "OH:social_studies:4.SS.4",
+    "confidence": "strong",
+    "rationale": "Ohio: the 13 colonies uniting around a common cause of liberty and justice. Georgia SS4H1a traces the events that shaped that revolutionary movement (Stamp Act, 'no taxation without representation,' Sons/Daughters of Liberty, Boston Massacre, Boston Tea Party).",
+    "source": "seed"
+  },
+  {
+    "id": "m-grievances-that-sparked-revolution-ga",
+    "conceptId": "c-grievances-that-sparked-revolution",
+    "key": "GA:social_studies:SS4H1a",
+    "confidence": "strong",
+    "rationale": "Ohio: the 13 colonies uniting around a common cause of liberty and justice. Georgia SS4H1a traces the events that shaped that revolutionary movement (Stamp Act, 'no taxation without representation,' Sons/Daughters of Liberty, Boston Massacre, Boston Tea Party).",
+    "source": "seed"
+  },
+  {
+    "id": "m-course-and-outcome-of-independence-war-oh",
+    "conceptId": "c-course-and-outcome-of-independence-war",
+    "key": "OH:social_studies:4.SS.4",
+    "confidence": "strong",
+    "rationale": "Ohio: colonies uniting to fight for independence during the American Revolution. Georgia SS4H1c covers the major events of that fight and the factors leading to American victory (Lexington and Concord, Saratoga, Yorktown).",
+    "source": "seed"
+  },
+  {
+    "id": "m-course-and-outcome-of-independence-war-ga",
+    "conceptId": "c-course-and-outcome-of-independence-war",
+    "key": "GA:social_studies:SS4H1c",
+    "confidence": "strong",
+    "rationale": "Ohio: colonies uniting to fight for independence during the American Revolution. Georgia SS4H1c covers the major events of that fight and the factors leading to American victory (Lexington and Concord, Saratoga, Yorktown).",
+    "source": "seed"
+  },
+  {
+    "id": "m-declaration-of-independence-ideals-oh",
+    "conceptId": "c-declaration-of-independence-ideals",
+    "key": "OH:social_studies:4.SS.4",
+    "confidence": "moderate",
+    "rationale": "Ohio's 'common cause of liberty and justice... to form a new nation' is expressed in Georgia SS4H1d through the Declaration of Independence — why it was necessary and how it responded to tyranny. Matches the ideals half of Ohio's statement.",
+    "source": "seed"
+  },
+  {
+    "id": "m-declaration-of-independence-ideals-ga",
+    "conceptId": "c-declaration-of-independence-ideals",
+    "key": "GA:social_studies:SS4H1d",
+    "confidence": "moderate",
+    "rationale": "Ohio's 'common cause of liberty and justice... to form a new nation' is expressed in Georgia SS4H1d through the Declaration of Independence — why it was necessary and how it responded to tyranny. Matches the ideals half of Ohio's statement.",
+    "source": "seed"
+  },
+  {
+    "id": "m-first-amendment-freedoms-oh",
+    "conceptId": "c-first-amendment-freedoms",
+    "key": "OH:social_studies:4.SS.18",
+    "confidence": "strong",
+    "rationale": "Both explicitly target the First Amendment. Ohio: the Constitution protects citizens' rights, five addressed in the First Amendment. Georgia SS4CG2: the importance of freedoms guaranteed by the First Amendment.",
+    "source": "seed"
+  },
+  {
+    "id": "m-first-amendment-freedoms-ga",
+    "conceptId": "c-first-amendment-freedoms",
+    "key": "GA:social_studies:SS4CG2",
+    "confidence": "strong",
+    "rationale": "Both explicitly target the First Amendment. Ohio: the Constitution protects citizens' rights, five addressed in the First Amendment. Georgia SS4CG2: the importance of freedoms guaranteed by the First Amendment.",
+    "source": "seed"
+  },
+  {
+    "id": "m-bill-of-rights-limits-government-oh",
+    "conceptId": "c-bill-of-rights-limits-government",
+    "key": "OH:social_studies:4.SS.18",
+    "confidence": "moderate",
+    "rationale": "Ohio's 'system of limited government and protects citizens' rights' maps to SS4CG3b: the rights in the Bill of Rights and how it places limits on the powers of government. GA works through the full Bill of Rights rather than the First Amendment.",
+    "source": "seed"
+  },
+  {
+    "id": "m-bill-of-rights-limits-government-ga",
+    "conceptId": "c-bill-of-rights-limits-government",
+    "key": "GA:social_studies:SS4CG3b",
+    "confidence": "moderate",
+    "rationale": "Ohio's 'system of limited government and protects citizens' rights' maps to SS4CG3b: the rights in the Bill of Rights and how it places limits on the powers of government. GA works through the full Bill of Rights rather than the First Amendment.",
+    "source": "seed"
+  },
+  {
+    "id": "m-regional-differences-and-sectionalism-oh",
+    "conceptId": "c-regional-differences-and-sectionalism",
+    "key": "OH:social_studies:4.SS.11",
+    "confidence": "partial",
+    "rationale": "Ohio: North, South and West regions developing from physical environments and economies. Georgia SS4H5b: states' rights and slavery increasing tensions between North and South. Both build sectional understanding; OH is geographic-economic, GA is a Civil War cause.",
+    "source": "seed"
+  },
+  {
+    "id": "m-regional-differences-and-sectionalism-ga",
+    "conceptId": "c-regional-differences-and-sectionalism",
+    "key": "GA:social_studies:SS4H5b",
+    "confidence": "partial",
+    "rationale": "Ohio: North, South and West regions developing from physical environments and economies. Georgia SS4H5b: states' rights and slavery increasing tensions between North and South. Both build sectional understanding; OH is geographic-economic, GA is a Civil War cause.",
+    "source": "seed"
+  },
+  {
+    "id": "m-personal-budgeting-and-saving-oh",
+    "conceptId": "c-personal-budgeting-and-saving",
+    "key": "OH:social_studies:4.SS.22",
+    "confidence": "strong",
+    "rationale": "Direct financial-literacy match. Ohio: saving a portion of income contributes to financial well-being; reducing spending to save more. Georgia SS4E2: elements of a personal budget (income, expenditures, saving) and why spending/saving decisions matter.",
+    "source": "seed"
+  },
+  {
+    "id": "m-personal-budgeting-and-saving-ga",
+    "conceptId": "c-personal-budgeting-and-saving",
+    "key": "GA:social_studies:SS4E2",
+    "confidence": "strong",
+    "rationale": "Direct financial-literacy match. Ohio: saving a portion of income contributes to financial well-being; reducing spending to save more. Georgia SS4E2: elements of a personal budget (income, expenditures, saving) and why spending/saving decisions matter.",
+    "source": "seed"
+  },
+  {
+    "id": "m-indigenous-cultures-and-environment-oh",
+    "conceptId": "c-indigenous-cultures-and-environment",
+    "key": "OH:social_studies:5.SS.8",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade 3). Ohio: American Indians developed unique cultures with different ways of life. GA SS3H1b: compare and contrast how American Indians in each region used their environment to obtain food, clothing, and shelter.",
+    "source": "seed"
+  },
+  {
+    "id": "m-indigenous-cultures-and-environment-ga",
+    "conceptId": "c-indigenous-cultures-and-environment",
+    "key": "GA:social_studies:SS3H1b",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade 3). Ohio: American Indians developed unique cultures with different ways of life. GA SS3H1b: compare and contrast how American Indians in each region used their environment to obtain food, clothing, and shelter.",
+    "source": "seed"
+  },
+  {
+    "id": "m-migration-and-its-impact-on-regions-oh",
+    "conceptId": "c-migration-and-its-impact-on-regions",
+    "key": "OH:social_studies:5.SS.9",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 6). Ohio: political, environmental, social and economic factors cause people to move in the Western Hemisphere. GA SS6H1d: explain the impact of poverty, the war on drugs, and migration to the United States on Latin America.",
+    "source": "seed"
+  },
+  {
+    "id": "m-migration-and-its-impact-on-regions-ga",
+    "conceptId": "c-migration-and-its-impact-on-regions",
+    "key": "GA:social_studies:SS6H1d",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 6). Ohio: political, environmental, social and economic factors cause people to move in the Western Hemisphere. GA SS6H1d: explain the impact of poverty, the war on drugs, and migration to the United States on Latin America.",
+    "source": "seed"
+  },
+  {
+    "id": "m-reasons-people-migrate-and-settle-oh",
+    "conceptId": "c-reasons-people-migrate-and-settle",
+    "key": "OH:social_studies:5.SS.9",
+    "confidence": "moderate",
+    "rationale": "Same-grade match. Ohio: factors cause people to move from place to place in the Western Hemisphere. GA SS5H1d: describe the reasons people immigrated to the United States, from where they emigrated, and where they settled.",
+    "source": "seed"
+  },
+  {
+    "id": "m-reasons-people-migrate-and-settle-ga",
+    "conceptId": "c-reasons-people-migrate-and-settle",
+    "key": "GA:social_studies:SS5H1d",
+    "confidence": "moderate",
+    "rationale": "Same-grade match. Ohio: factors cause people to move from place to place in the Western Hemisphere. GA SS5H1d: describe the reasons people immigrated to the United States, from where they emigrated, and where they settled.",
+    "source": "seed"
+  },
+  {
+    "id": "m-choices-have-future-consequences-oh",
+    "conceptId": "c-choices-have-future-consequences",
+    "key": "OH:social_studies:5.SS.14",
+    "confidence": "strong",
+    "rationale": "Same-grade match. Ohio: the choices made by individuals and governments have present and future consequences. GA SS5E1a: describe opportunity costs and their relationship to decision-making across time.",
+    "source": "seed"
+  },
+  {
+    "id": "m-choices-have-future-consequences-ga",
+    "conceptId": "c-choices-have-future-consequences",
+    "key": "GA:social_studies:SS5E1a",
+    "confidence": "strong",
+    "rationale": "Same-grade match. Ohio: the choices made by individuals and governments have present and future consequences. GA SS5E1a: describe opportunity costs and their relationship to decision-making across time.",
+    "source": "seed"
+  },
+  {
+    "id": "m-productive-resources-of-an-economy-oh",
+    "conceptId": "c-productive-resources-of-an-economy",
+    "key": "OH:social_studies:5.SS.15",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade 3). Ohio: availability of productive resources (entrepreneurship, human, capital, natural) promotes specialization. GA SS3E1d: entrepreneurship as combining natural, human, and capital resources to make a profit; names the same productive resources.",
+    "source": "seed"
+  },
+  {
+    "id": "m-productive-resources-of-an-economy-ga",
+    "conceptId": "c-productive-resources-of-an-economy",
+    "key": "GA:social_studies:SS3E1d",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade 3). Ohio: availability of productive resources (entrepreneurship, human, capital, natural) promotes specialization. GA SS3E1d: entrepreneurship as combining natural, human, and capital resources to make a profit; names the same productive resources.",
+    "source": "seed"
+  },
+  {
+    "id": "m-division-of-labor-and-productivity-oh",
+    "conceptId": "c-division-of-labor-and-productivity",
+    "key": "OH:social_studies:5.SS.16",
+    "confidence": "strong",
+    "rationale": "Same-grade match. Ohio: productive resources and the division of labor impact productive capacity. GA SS5E1c: describe how specialization can improve standards of living and productivity, using Henry Ford's assembly line.",
+    "source": "seed"
+  },
+  {
+    "id": "m-division-of-labor-and-productivity-ga",
+    "conceptId": "c-division-of-labor-and-productivity",
+    "key": "GA:social_studies:SS5E1c",
+    "confidence": "strong",
+    "rationale": "Same-grade match. Ohio: productive resources and the division of labor impact productive capacity. GA SS5E1c: describe how specialization can improve standards of living and productivity, using Henry Ford's assembly line.",
+    "source": "seed"
+  },
+  {
+    "id": "m-specialization-leads-to-trade-oh",
+    "conceptId": "c-specialization-leads-to-trade",
+    "key": "OH:social_studies:5.SS.17",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade 6). Ohio: regions become interdependent when they specialize in what they produce best and trade. GA SS6E2a: explain how specialization encourages trade between countries.",
+    "source": "seed"
+  },
+  {
+    "id": "m-specialization-leads-to-trade-ga",
+    "conceptId": "c-specialization-leads-to-trade",
+    "key": "GA:social_studies:SS6E2a",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade 6). Ohio: regions become interdependent when they specialize in what they produce best and trade. GA SS6E2a: explain how specialization encourages trade between countries.",
+    "source": "seed"
+  },
+  {
+    "id": "m-trade-promotes-economic-activity-oh",
+    "conceptId": "c-trade-promotes-economic-activity",
+    "key": "OH:social_studies:5.SS.17",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 4). Ohio: specialization and trade increase the goods and services available. GA SS4E1e: describe how trade promotes economic activity.",
+    "source": "seed"
+  },
+  {
+    "id": "m-trade-promotes-economic-activity-ga",
+    "conceptId": "c-trade-promotes-economic-activity",
+    "key": "GA:social_studies:SS4E1e",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 4). Ohio: specialization and trade increase the goods and services available. GA SS4E1e: describe how trade promotes economic activity.",
+    "source": "seed"
+  },
+  {
+    "id": "m-earning-income-through-labor-oh",
+    "conceptId": "c-earning-income-through-labor",
+    "key": "OH:social_studies:5.SS.18",
+    "confidence": "moderate",
+    "rationale": "Same-grade match. Ohio: workers earn income and can improve their earning ability. GA SS5E3b: describe how people earn income by selling their labor to businesses; overlaps on labor and income though not on skill-building.",
+    "source": "seed"
+  },
+  {
+    "id": "m-earning-income-through-labor-ga",
+    "conceptId": "c-earning-income-through-labor",
+    "key": "GA:social_studies:SS5E3b",
+    "confidence": "moderate",
+    "rationale": "Same-grade match. Ohio: workers earn income and can improve their earning ability. GA SS5E3b: describe how people earn income by selling their labor to businesses; overlaps on labor and income though not on skill-building.",
+    "source": "seed"
+  },
+  {
+    "id": "m-world-religions-and-belief-systems-oh",
+    "conceptId": "c-world-religions-and-belief-systems",
+    "key": "OH:social_studies:6.SS.8",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 7). Ohio: major world religions including Buddhism and Hinduism, plus cultural diffusion, impacted the Eastern Hemisphere. Georgia SS7G12b: compare and contrast the belief systems originating in Southern and Eastern Asia (Buddhism, Hinduism, Shintoism and Confucianism).",
+    "source": "seed"
+  },
+  {
+    "id": "m-world-religions-and-belief-systems-ga",
+    "conceptId": "c-world-religions-and-belief-systems",
+    "key": "GA:social_studies:SS7G12b",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 7). Ohio: major world religions including Buddhism and Hinduism, plus cultural diffusion, impacted the Eastern Hemisphere. Georgia SS7G12b: compare and contrast the belief systems originating in Southern and Eastern Asia (Buddhism, Hinduism, Shintoism and Confucianism).",
+    "source": "seed"
+  },
+  {
+    "id": "m-economic-systems-and-basic-questions-oh",
+    "conceptId": "c-economic-systems-and-basic-questions",
+    "key": "OH:social_studies:6.SS.13",
+    "confidence": "strong",
+    "rationale": "Same-grade match. Ohio: the fundamental questions of economics are what to produce, how to produce and for whom to produce. Georgia SS6E1a: compare how traditional, command and market economies answer what, how and for whom to produce.",
+    "source": "seed"
+  },
+  {
+    "id": "m-economic-systems-and-basic-questions-ga",
+    "conceptId": "c-economic-systems-and-basic-questions",
+    "key": "GA:social_studies:SS6E1a",
+    "confidence": "strong",
+    "rationale": "Same-grade match. Ohio: the fundamental questions of economics are what to produce, how to produce and for whom to produce. Georgia SS6E1a: compare how traditional, command and market economies answer what, how and for whom to produce.",
+    "source": "seed"
+  },
+  {
+    "id": "m-specialization-leads-to-trade-2-oh",
+    "conceptId": "c-specialization-leads-to-trade-2",
+    "key": "OH:social_studies:6.SS.14",
+    "confidence": "strong",
+    "rationale": "Same-grade match. Ohio: when regions/countries specialize, global trade occurs. Georgia SS6E2a: explain how specialization encourages trade between countries.",
+    "source": "seed"
+  },
+  {
+    "id": "m-specialization-leads-to-trade-2-ga",
+    "conceptId": "c-specialization-leads-to-trade-2",
+    "key": "GA:social_studies:SS6E2a",
+    "confidence": "strong",
+    "rationale": "Same-grade match. Ohio: when regions/countries specialize, global trade occurs. Georgia SS6E2a: explain how specialization encourages trade between countries.",
+    "source": "seed"
+  },
+  {
+    "id": "m-motives-for-european-colonization-oh",
+    "conceptId": "c-motives-for-european-colonization",
+    "key": "OH:social_studies:8.SS.2",
+    "confidence": "strong",
+    "rationale": "Cross-content (GA grade 8, Georgia angle). Ohio: North America, inhabited by American Indians, was explored and colonized by Europeans for economic and religious reasons. Georgia SS8H1b: explain reasons for European exploration and settlement of North America, emphasizing Spanish and British interests in the Southeast.",
+    "source": "seed"
+  },
+  {
+    "id": "m-motives-for-european-colonization-ga",
+    "conceptId": "c-motives-for-european-colonization",
+    "key": "GA:social_studies:SS8H1b",
+    "confidence": "strong",
+    "rationale": "Cross-content (GA grade 8, Georgia angle). Ohio: North America, inhabited by American Indians, was explored and colonized by Europeans for economic and religious reasons. Georgia SS8H1b: explain reasons for European exploration and settlement of North America, emphasizing Spanish and British interests in the Southeast.",
+    "source": "seed"
+  },
+  {
+    "id": "m-government-trade-barriers-oh",
+    "conceptId": "c-government-trade-barriers",
+    "key": "OH:social_studies:8.SS.26",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 6). Ohio: governments impact markets through trade barriers. Georgia SS6E2b: compare and contrast different types of trade barriers, such as tariffs, quotas, and embargos.",
+    "source": "seed"
+  },
+  {
+    "id": "m-government-trade-barriers-ga",
+    "conceptId": "c-government-trade-barriers",
+    "key": "GA:social_studies:SS6E2b",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 6). Ohio: governments impact markets through trade barriers. Georgia SS6E2b: compare and contrast different types of trade barriers, such as tariffs, quotas, and embargos.",
+    "source": "seed"
+  }
+]
