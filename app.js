@@ -1,12 +1,20 @@
-/* Standards Alignment — multi-state concept spine.
+/* Standards Alignment — Ohio-anchored.
 
-   Standards from every state attach to shared, state-neutral CONCEPTS. Two standards
-   are aligned when both hold an approved membership in the same concept — alignment is
-   derived, never stored pairwise. That keeps the reviewer's work linear in the number of
-   states (each new state maps its standards onto the existing concept library) instead
-   of quadratic in the number of state pairs. */
+   Every alignment runs through an Ohio standard. You align each new state to Ohio, one
+   pass, answering the only question that needs a human: "does this standard align to that
+   Ohio one?" Two other states are aligned when both link to the same Ohio standard, so
+   Georgia↔Texas costs nothing to review — it falls out.
+
+   Ohio's standards are the hubs. There is no invented layer above them: nothing to name,
+   nothing to curate. Adding state N costs ONE pass against Ohio, not one against every
+   state already here — which is what keeps this viable at fifty.
+
+   The tradeoff, stated plainly: Ohio is the ceiling. Content Ohio doesn't teach cannot be
+   aligned. For a passage library meant to serve several states, content only one state
+   teaches isn't much use anyway — but it is a real limit, not a free lunch. */
 
 const GRADES = ['K','1','2','3','4','5','6','7','8'];
+const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
 const STATES = ['OH', 'GA', 'TX'];
 const STATE_NAMES = { OH: 'Ohio', GA: 'Georgia', TX: 'Texas', ALL: 'All States' };
@@ -111,24 +119,19 @@ function questionScope(s) {
 const state = {
   standards: [],            // all standards, every state
   byKey: new Map(),         // `${state}:${subject}:${code}` -> standard
-  concepts: [],             // the concept library
-  conceptById: new Map(),
-  memberships: [],          // { id, conceptId, key, confidence, rationale, source }
-  byConcept: new Map(),     // conceptId -> memberships[]
-  byStandard: new Map(),    // standard key -> memberships[]
-  decisions: {},            // membership id (m-…) OR concept id (c-…) -> 'approved' | 'rejected'
-  conceptEdits: {},         // conceptId -> { title, description } (reviewer's wording wins)
-  merged: {},               // conceptId -> conceptId it was merged into
-  noAlign: {},              // `${state}:${subject}:${code}` -> true (reviewed: belongs to no concept)
+  links: [],                // { id, subject, oh, state, code, confidence, rationale }
+  byAnchor: new Map(),      // Ohio standard key -> links[]
+  byLinked: new Map(),      // other-state standard key -> links[]
+  decisions: {},            // link id -> 'approved' | 'rejected'
+  noAlign: {},              // `${state}:${subject}:${code}` -> true (reviewed: nothing aligns)
   cms: {},                  // `${state}:${subject}:${code}` -> true (standard is loaded in the CMS)
-  severed: {},              // `${keyA}||${keyB}` -> true (override: not aligned despite a shared concept)
+  severed: {},              // `${keyA}||${keyB}` -> true (override: not aligned despite a shared anchor)
   sets: [],                 // passage sets
   ui: {
     view: 'explorer',
     expState: 'OH', expSubject: 'social_studies', expGrade: '4',
     selectedKey: null, search: '',
     revSubject: 'social_studies', revGrade: '4', revStatus: 'pending', revState: 'ALL',
-    conSubject: 'social_studies', conStatus: 'pending', conSearch: '',
     currentSetId: null, openPicker: null,
   },
 };
@@ -142,8 +145,6 @@ const LS_MANUAL = 'sa_manual_v1';
 const LS_NOALIGN = 'sa_noalign_v1';
 const LS_CMS = 'sa_cms_v1';
 const LS_SEVERED = 'sa_severed_v1';
-const LS_CEDITS = 'sa_concept_edits_v1';
-const LS_MERGED = 'sa_merged_v1';
 
 function loadLocal() {
   try { state.decisions = JSON.parse(localStorage.getItem(LS_DECISIONS)) || {}; } catch { state.decisions = {}; }
@@ -151,8 +152,6 @@ function loadLocal() {
   try { state.noAlign = JSON.parse(localStorage.getItem(LS_NOALIGN)) || {}; } catch { state.noAlign = {}; }
   try { state.cms = JSON.parse(localStorage.getItem(LS_CMS)) || {}; } catch { state.cms = {}; }
   try { state.severed = JSON.parse(localStorage.getItem(LS_SEVERED)) || {}; } catch { state.severed = {}; }
-  try { state.conceptEdits = JSON.parse(localStorage.getItem(LS_CEDITS)) || {}; } catch { state.conceptEdits = {}; }
-  try { state.merged = JSON.parse(localStorage.getItem(LS_MERGED)) || {}; } catch { state.merged = {}; }
 }
 function mirrorLocal() {
   localStorage.setItem(LS_DECISIONS, JSON.stringify(state.decisions));
@@ -160,23 +159,18 @@ function mirrorLocal() {
   localStorage.setItem(LS_NOALIGN, JSON.stringify(state.noAlign));
   localStorage.setItem(LS_CMS, JSON.stringify(state.cms));
   localStorage.setItem(LS_SEVERED, JSON.stringify(state.severed));
-  localStorage.setItem(LS_CEDITS, JSON.stringify(state.conceptEdits));
-  localStorage.setItem(LS_MERGED, JSON.stringify(state.merged));
   localStorage.setItem(LS_SETS, JSON.stringify(state.sets));
 }
 
 function stateBody() {
   return JSON.stringify({
     // `decisions` holds membership ids now. The old pairwise ids (ss4-01…) are left in
-    // place untouched: they are the provenance for the seeded concepts and the only way
-    // back if the concept spine ever needs to be rebuilt. Never prune them.
+    // place untouched: link ids reuse the original pair ids, so these ARE the decisions.
     decisions: state.decisions,
     manual: state.manual,
     noAlign: state.noAlign,
     cms: state.cms,
     severed: state.severed,
-    conceptEdits: state.conceptEdits,
-    merged: state.merged,
     sets: state.sets,
     savedAt: new Date().toISOString(),
   });
@@ -313,8 +307,6 @@ function mergeServerState(s) {
       noAlign: { ...state.noAlign, ...(s.noAlign || {}) },
       cms: { ...state.cms, ...(s.cms || {}) },
       severed: { ...state.severed, ...(s.severed || {}) },
-      conceptEdits: { ...state.conceptEdits, ...(s.conceptEdits || {}) },
-      mergedMap: { ...state.merged, ...(s.merged || {}) },
       sets: dedupeById([...(s.sets || []), ...state.sets]),
     };
     state.decisions = merged.decisions;
@@ -322,8 +314,6 @@ function mergeServerState(s) {
     state.noAlign = merged.noAlign;
     state.cms = merged.cms;
     state.severed = merged.severed;
-    state.conceptEdits = merged.conceptEdits;
-    state.merged = merged.mergedMap;
     state.sets = merged.sets;
     normalizeSets();
     mirrorLocal();
@@ -338,7 +328,7 @@ function saveNoAlign() { pushState(); }
 /* ---------- data load ---------- */
 /* `cache: 'no-cache'` forces a revalidation against the server on every load. GitHub Pages
    serves these with max-age=600, so without it a browser happily shows ten-minute-old
-   concepts and memberships — which reads as "my review queue is empty" when it isn't.
+   links — which reads as "my review queue is empty" when it isn't.
    Revalidation is cheap: unchanged files come back 304 with no body. */
 async function fetchJson(path) {
   try {
@@ -386,97 +376,80 @@ async function loadData() {
   state.standards = expandElements(results.filter(Boolean).flat());
   state.standards.forEach(s => state.byKey.set(keyOf(s), s));
 
-  const [concepts, memberships] = await Promise.all([
-    fetchJson('data/concepts.json'), fetchJson('data/memberships.json'),
-  ]);
-  state.concepts = concepts || [];
-  state.memberships = (memberships || []).filter(m => state.byKey.has(m.key));
-  indexConcepts();
+  const doc = await fetchJson('data/links.json');
+  state.links = ((doc && doc.links) || []).filter(l =>
+    state.byKey.has(anchorKeyOf(l)) && state.byKey.has(linkedKeyOf(l)));
+  indexLinks();
 }
 
-// Follow a merge chain to the concept that actually holds the members now.
-function mergeTarget(id) {
-  const seen = new Set();
-  while (state.merged[id] && !seen.has(id)) { seen.add(id); id = state.merged[id]; }
-  return id;
-}
-function isMergedAway(id) { return !!state.merged[id]; }
+function anchorKeyOf(l) { return stdKey(ANCHOR, l.subject, l.oh); }
+function linkedKeyOf(l) { return stdKey(l.state, l.subject, l.code); }
 
-function indexConcepts() {
-  // The reviewer's wording wins over the drafted wording.
-  state.conceptById = new Map(state.concepts.map(c => {
-    const e = state.conceptEdits[c.id] || {};
-    return [c.id, { ...c, title: e.title ?? c.title, description: e.description ?? c.description }];
-  }));
-  state.byConcept = new Map();
-  state.byStandard = new Map();
-  state.memberships.forEach(m => {
-    const cid = mergeTarget(m.conceptId);
-    if (!state.byConcept.has(cid)) state.byConcept.set(cid, []);
-    state.byConcept.get(cid).push(m);
-    if (!state.byStandard.has(m.key)) state.byStandard.set(m.key, []);
-    state.byStandard.get(m.key).push(m);
+function indexLinks() {
+  state.byAnchor = new Map();
+  state.byLinked = new Map();
+  state.links.forEach(l => {
+    const a = anchorKeyOf(l), o = linkedKeyOf(l);
+    if (!state.byAnchor.has(a)) state.byAnchor.set(a, []);
+    state.byAnchor.get(a).push(l);
+    if (!state.byLinked.has(o)) state.byLinked.set(o, []);
+    state.byLinked.get(o).push(l);
   });
 }
 
-/* A concept is approved only if the reviewer approved it. Seeded concepts came from pairs
-   they had already approved, so those start approved; every drafted concept starts pending.
-   Nothing the reviewer has not approved may derive an alignment — that is the contract. */
-function conceptStatus(c) {
-  if (!c) return 'pending';
-  return state.decisions[c.id] || (c.source === 'seed' ? 'approved' : 'pending');
-}
-function effectiveConcept(id) { return state.conceptById.get(mergeTarget(id)); }
-function liveConcepts() { return state.concepts.filter(c => !isMergedAway(c.id)); }
-
-/* ---------- membership + derived-alignment helpers ----------
-   A membership says "this standard belongs to this concept". Seed memberships came from
-   pairs the reviewer already approved, so they start approved; everything else is pending
-   until reviewed. Alignment between two standards is DERIVED: both hold an approved
-   membership in a common concept, and the pair has not been explicitly severed. */
-function statusOf(m) {
-  return state.decisions[m.id] || (m.source === 'seed' ? 'approved' : 'pending');
-}
-function membershipsFor(std) { return state.byStandard.get(keyOf(std)) || []; }
-// Only APPROVED memberships in APPROVED concepts count. A pending concept derives nothing.
-function conceptsFor(std) {
-  const out = new Map();
-  membershipsFor(std).forEach(m => {
-    if (statusOf(m) !== 'approved') return;
-    const c = effectiveConcept(m.conceptId);
-    if (c && conceptStatus(c) === 'approved') out.set(c.id, c);
-  });
-  return [...out.values()];
+/* ---------- alignment ----------
+   Only the reviewer's approvals count; every link starts pending. */
+function statusOf(l) { return state.decisions[l.id] || 'pending'; }
+function linksFor(std) {
+  return std.state === ANCHOR
+    ? (state.byAnchor.get(keyOf(std)) || [])
+    : (state.byLinked.get(keyOf(std)) || []);
 }
 function severKey(a, b) { return [a, b].sort().join('||'); }
 function isSevered(a, b) { return !!state.severed[severKey(a, b)]; }
 
-// Every standard in other states that shares an approved concept with `std`.
-// Returns [{ std, concept, membership }], deduped, minus severed pairs.
+/* Everything aligned to `std`, in every other state.
+   From an Ohio standard: the states linked to it — one hop.
+   From any other state: the Ohio standards it links to, plus the OTHER states linked to
+   those same Ohio standards — the sibling alignments the reviewer never has to review.
+   `via` names the Ohio standard a sibling alignment runs through, so a derived alignment
+   always shows its reason. */
 function alignedTo(std) {
   const selfKey = keyOf(std);
   const out = new Map();
-  conceptsFor(std).forEach(concept => {
-    (state.byConcept.get(concept.id) || []).forEach(m => {
-      if (m.key === selfKey || statusOf(m) !== 'approved') return;
-      const other = state.byKey.get(m.key);
-      if (!other || other.state === std.state) return;
-      if (isSevered(selfKey, m.key)) return;
-      if (!out.has(m.key)) out.set(m.key, { std: other, concept, membership: m });
-    });
+  const add = (key, via, link) => {
+    if (key === selfKey || out.has(key)) return;
+    const o = state.byKey.get(key);
+    if (!o || o.state === std.state || isSevered(selfKey, key)) return;
+    out.set(key, { std: o, via, link });
+  };
+
+  if (std.state === ANCHOR) {
+    linksFor(std).filter(l => statusOf(l) === 'approved')
+      .forEach(l => add(linkedKeyOf(l), null, l));
+    return [...out.values()];
+  }
+
+  linksFor(std).filter(l => statusOf(l) === 'approved').forEach(l => {
+    const anchorKey = anchorKeyOf(l);
+    add(anchorKey, null, l);
+    const anchor = state.byKey.get(anchorKey);
+    (state.byAnchor.get(anchorKey) || [])
+      .filter(x => statusOf(x) === 'approved')
+      .forEach(x => add(linkedKeyOf(x), anchor, x));
   });
   return [...out.values()];
 }
 
 function isNoAlign(std) { return !!state.noAlign[keyOf(std)]; }
 
-// status dot for a standard in the list: approved (sits in ≥1 concept), noalign (reviewed:
-// belongs to no concept), pending (has ≥1 unreviewed membership), none (not yet reviewed)
+// status dot: approved (has an approved alignment), noalign (reviewed: nothing aligns),
+// pending (has an unreviewed draft), none (not looked at yet)
 function standardStatus(std) {
-  const list = membershipsFor(std);
-  if (list.some(m => statusOf(m) === 'approved')) return 'approved';
+  const list = linksFor(std);
+  if (list.some(l => statusOf(l) === 'approved')) return 'approved';
   if (isNoAlign(std)) return 'noalign';
-  if (list.some(m => statusOf(m) === 'pending')) return 'pending';
+  if (list.some(l => statusOf(l) === 'pending')) return 'pending';
   return 'none';
 }
 
@@ -593,23 +566,18 @@ function pairSide(std, stateCode) {
     </div>`;
 }
 
-// Amber chip when a standard sits at a different grade than the concept's band, or than
-// the standard it's aligned to — the states sequence the same content differently.
+// Amber chip when the two aligned standards sit at different grades — the states sequence
+// the same content differently. Expected, not an error.
 function crossGradeChip(a, b) {
   if (!a || !b || String(a.grade) === String(b.grade)) return '';
   return `<span class="chip chip-cross" title="These standards sit at different grade levels — the states sequence this content differently.">⇄ Cross-grade · ${esc(a.state)} G${esc(a.grade)} / ${esc(b.state)} G${esc(b.grade)}</span>`;
 }
 
-function conceptChip(c) {
-  if (!c) return '';
-  return `<span class="chip chip-concept" title="${esc(c.description || '')}">◈ ${esc(c.title)}</span>`;
-}
-
-/* One aligned standard, shown against the standard currently selected. The concept that
-   links them is named on the card — a derived alignment must always show its reason. */
+/* One aligned standard, shown against the standard currently selected. If the alignment is
+   a sibling one (Georgia↔Texas), it names the Ohio standard it runs through — a derived
+   alignment must always show its reason. */
 function alignedCard(sel, hit) {
-  const { std, concept, membership } = hit;
-  const st = statusOf(membership);
+  const { std, via, link } = hit;
   return `
     <div class="review-card">
       <div class="review-pair">
@@ -618,51 +586,49 @@ function alignedCard(sel, hit) {
         ${pairSide(std, std.state)}
       </div>
       <div class="review-foot">
-        ${conceptChip(concept)}
-        <span class="conf-chip">confidence: ${esc(membership.confidence || '—')}</span>
+        ${via ? `<span class="chip chip-concept" title="${esc(via.description || '')}">via Ohio ${esc(via.code)}</span>`
+              : '<span class="chip">direct link</span>'}
+        <span class="conf-chip">confidence: ${esc(link.confidence || '—')}</span>
         ${crossGradeChip(sel, std)}
-        ${membership.rationale ? `<div class="rationale"><b>Why:</b> ${esc(membership.rationale)}</div>` : ''}
+        ${link.rationale ? `<div class="rationale"><b>Why:</b> ${esc(link.rationale)}</div>` : ''}
         <button class="act-btn reject" data-act="sever" data-id="${esc(severKey(keyOf(sel), keyOf(std)))}"
-          title="These share a concept but are not actually aligned">✂ Not aligned</button>
+          title="These run through the same Ohio standard but are not actually aligned">✂ Not aligned</button>
       </div>
     </div>`;
 }
 
-/* A membership under review: does this standard belong to this concept? */
-function membershipCard(m) {
-  const std = state.byKey.get(m.key);
-  const concept = state.conceptById.get(m.conceptId);
-  if (!std || !concept) return '';
-  const st = statusOf(m);
-  // What this membership would newly align to, if approved — the real consequence.
-  const peers = (state.byConcept.get(m.conceptId) || [])
-    .filter(x => x.key !== m.key && statusOf(x) === 'approved')
-    .map(x => state.byKey.get(x.key)).filter(Boolean)
-    .filter(x => x.state !== std.state);
+/* A link under review — the only question that needs a human:
+   does this state's standard align to that Ohio one? */
+function linkCard(l) {
+  const oh = state.byKey.get(anchorKeyOf(l));
+  const other = state.byKey.get(linkedKeyOf(l));
+  if (!oh || !other) return '';
+  const st = statusOf(l);
+  // Approving also aligns it to every other state already on this Ohio standard — the
+  // sibling alignments you get without reviewing them. Show them; that's the payoff.
+  const siblings = (state.byAnchor.get(anchorKeyOf(l)) || [])
+    .filter(x => x.id !== l.id && statusOf(x) === 'approved')
+    .map(x => state.byKey.get(linkedKeyOf(x))).filter(Boolean)
+    .filter(x => x.state !== other.state);
   const actions = st === 'pending'
-    ? `<button class="act-btn approve" data-act="approved" data-id="${m.id}">✓ Approve</button>
-       <button class="act-btn reject" data-act="rejected" data-id="${m.id}">✕ Reject</button>`
+    ? `<button class="act-btn approve" data-act="approved" data-id="${l.id}">✓ Approve</button>
+       <button class="act-btn reject" data-act="rejected" data-id="${l.id}">✕ Reject</button>`
     : `<span class="status-chip ${st}">${st}</span>
-       <button class="act-btn reset" data-act="pending" data-id="${m.id}">Undo</button>`;
+       <button class="act-btn reset" data-act="pending" data-id="${l.id}">Undo</button>`;
   return `
     <div class="review-card ${st !== 'pending' ? 'decided-' + st : ''}">
-      <div class="concept-head">
-        <div class="concept-title">◈ ${esc(concept.title)}</div>
-        <div class="concept-desc">${esc(concept.description || '')}</div>
-        <div class="concept-meta">
-          <span class="chip">${SUBJECT_NAMES[concept.subject] || concept.subject}</span>
-          ${concept.gradeBand ? `<span class="chip">${esc(concept.gradeBand)}</span>` : ''}
-          ${m.source === 'seed' ? '<span class="chip">seeded from your approved pairs</span>' : ''}
-        </div>
+      <div class="review-pair">
+        ${pairSide(oh, ANCHOR)}
+        <div class="pair-mid">⇄</div>
+        ${pairSide(other, other.state)}
       </div>
-      <div class="member-q">Does this standard belong to the concept?</div>
-      ${pairSide(std, std.state)}
-      ${peers.length ? `<div class="member-peers"><b>Approving aligns it to:</b> ${peers.map(p =>
-        `<span class="chip">${STATE_NAMES[p.state]} ${esc(p.code)} · G${esc(p.grade)}</span>`).join(' ')}</div>`
-        : `<div class="member-peers member-peers-empty">No other state has an approved standard in this concept yet.</div>`}
+      ${siblings.length ? `<div class="member-peers"><b>Approving also aligns it to:</b> ${siblings.map(p =>
+        `<span class="chip">${STATE_NAMES[p.state]} ${esc(p.code)} · G${esc(p.grade)}</span>`).join(' ')}
+        <span class="chip chip-concept">no extra review — they share this Ohio standard</span></div>` : ''}
       <div class="review-foot">
-        <span class="conf-chip">confidence: ${esc(m.confidence || '—')}</span>
-        ${m.rationale ? `<div class="rationale"><b>Why:</b> ${esc(m.rationale)}</div>` : ''}
+        <span class="conf-chip">confidence: ${esc(l.confidence || '—')}</span>
+        ${crossGradeChip(oh, other)}
+        ${l.rationale ? `<div class="rationale"><b>Why:</b> ${esc(l.rationale)}</div>` : ''}
         ${actions}
       </div>
     </div>`;
@@ -677,32 +643,22 @@ function renderDetail() {
   content.classList.remove('hidden');
 
   const hits = alignedTo(std);
-  const pending = membershipsFor(std).filter(m => statusOf(m) === 'pending');
-  const concepts = conceptsFor(std);
+  const pending = linksFor(std).filter(l => statusOf(l) === 'pending');
+  const approved = linksFor(std).filter(l => statusOf(l) === 'approved');
   const naKey = keyOf(std);
 
   let html = stdCard(std, `Selected standard — ${STATE_NAMES[std.state]} · ${SUBJECT_NAMES[std.subject]} · Grade ${std.grade}`);
 
-  // The concepts this standard belongs to — the reason any alignment below exists.
-  if (concepts.length) {
-    html += `<div class="align-section-title">Concepts this standard belongs to (${concepts.length})<span class="rule"></span></div>
-      <div class="concept-list">${concepts.map(c => `
-        <div class="concept-row">
-          <div class="concept-title">◈ ${esc(c.title)}</div>
-          <div class="concept-desc">${esc(c.description || '')}</div>
-        </div>`).join('')}</div>`;
-  }
-
-  // One section per other state — this is what "all states at once" looks like.
+  // One section per other state.
   otherStates(std.state).forEach(os => {
     const inState = hits.filter(h => h.std.state === os);
     html += `<div class="align-section-title">Aligned standards in ${STATE_NAMES[os]} (${inState.length})<span class="rule"></span></div>`;
     if (inState.length) {
       html += inState.map(h => alignedCard(std, h)).join('');
     } else if (isNoAlign(std)) {
-      html += `<div class="no-align">Reviewed — belongs to no concept, so no ${STATE_NAMES[os]} equivalent.</div>`;
+      html += `<div class="no-align">Reviewed — no ${STATE_NAMES[os]} equivalent.</div>`;
     } else {
-      html += `<div class="no-align">No ${STATE_NAMES[os]} standard shares an approved concept with this one yet.</div>`;
+      html += `<div class="no-align">Nothing in ${STATE_NAMES[os]} is aligned to this yet.</div>`;
     }
   });
 
@@ -710,20 +666,20 @@ function renderDetail() {
     html += `
       <div class="noalign-box">
         <div class="noalign-title">🚫 No Alignment Possible</div>
-        <div class="noalign-sub">Reviewed — this standard belongs to no concept, in any state.</div>
+        <div class="noalign-sub">Reviewed — nothing aligns to this standard, in any state.</div>
         <button class="act-btn reset" data-act="unmark-noalign" data-id="${esc(naKey)}">Undo</button>
       </div>`;
-  } else if (!concepts.length) {
+  } else if (!approved.length) {
     html += `
       <div class="no-align">
-        Not in any concept yet${pending.length ? ' — review the pending memberships below' : ''}.<br>
+        Nothing aligned yet${pending.length ? ' — review the drafts below' : ''}.<br>
         <button class="act-btn reject" data-act="mark-noalign" data-id="${esc(naKey)}" style="margin-top:10px">🚫 Mark as No Alignment Possible</button>
       </div>`;
   }
 
   if (pending.length) {
-    html += `<div class="align-section-title">Pending concept memberships (${pending.length})<span class="rule"></span></div>`;
-    html += pending.map(m => membershipCard(m)).join('');
+    html += `<div class="align-section-title">Pending drafts (${pending.length})<span class="rule"></span></div>`;
+    html += pending.map(l => linkCard(l)).join('');
   }
 
   html += renderManualAdd(std);
@@ -735,19 +691,24 @@ function renderDetail() {
   wireManualAdd(content, std);
 }
 
-// Manual attach: put this standard into an existing concept. Aligning it to every other
-// state's standards in that concept follows automatically — that is the whole point.
+/* Manual add. From an Ohio standard you pick the other state's match; from any other state
+   you pick its Ohio anchor. Either way the record is the same link. */
 function renderManualAdd(std) {
+  const isAnchor = std.state === ANCHOR;
   return `
-    <div class="align-section-title">Attach to a concept<span class="rule"></span></div>
+    <div class="align-section-title">Add an alignment<span class="rule"></span></div>
     <div class="source-card" style="margin-bottom:0">
       <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap">
+        ${isAnchor ? `<select id="manualState" style="font:inherit; padding:8px 10px; border:1px solid var(--line); border-radius:8px">
+          ${otherStates(ANCHOR).map(s => `<option value="${s}">${STATE_NAMES[s]}</option>`).join('')}
+        </select>` : ''}
         <select id="manualPick" style="font:inherit; padding:8px 10px; border:1px solid var(--line); border-radius:8px; flex:1; min-width:260px"></select>
-        <button class="act-btn approve" id="manualAddBtn">+ Attach as approved</button>
+        <button class="act-btn approve" id="manualAddBtn">+ Add as approved</button>
       </div>
       <div style="font-size:12px; color:var(--ink-faint); margin-top:8px">
-        Pick a ${SUBJECT_NAMES[std.subject]} concept this standard belongs to. It becomes aligned to every
-        other state's approved standards in that concept.
+        ${isAnchor
+          ? `Pick the ${SUBJECT_NAMES[std.subject]} standard in another state (any grade) that matches this one.`
+          : `Pick the Ohio ${SUBJECT_NAMES[std.subject]} standard (any grade) this one matches. It then aligns to every other state on that Ohio standard.`}
       </div>
     </div>`;
 }
@@ -756,28 +717,41 @@ function wireManualAdd(content, std) {
   const sel = content.querySelector('#manualPick');
   const btn = content.querySelector('#manualAddBtn');
   if (!sel) return;
-  const already = new Set(membershipsFor(std).map(m => m.conceptId));
-  const options = state.concepts
-    .filter(c => c.subject === std.subject && !already.has(c.id))
-    .sort((a, b) => a.title.localeCompare(b.title));
-  sel.innerHTML = '<option value="">Choose a concept…</option>' + options.map(c =>
-    `<option value="${esc(c.id)}">${esc(c.title)}${c.gradeBand ? ` · ${esc(c.gradeBand)}` : ''}</option>`
-  ).join('');
+  const stateSel = content.querySelector('#manualState');
+  const isAnchor = std.state === ANCHOR;
+
+  const fill = () => {
+    const target = isAnchor ? (stateSel ? stateSel.value : otherStates(ANCHOR)[0]) : ANCHOR;
+    const existing = new Set(linksFor(std).map(l => isAnchor ? linkedKeyOf(l) : anchorKeyOf(l)));
+    const options = state.standards
+      .filter(s => s.state === target && s.subject === std.subject && !existing.has(keyOf(s)))
+      .sort((a, b) => GRADES.indexOf(a.grade) - GRADES.indexOf(b.grade));
+    sel.innerHTML = '<option value="">Choose a standard…</option>' + options.map(s =>
+      `<option value="${esc(keyOf(s))}">G${esc(s.grade)} · ${esc(s.code)} — ${esc(s.description.slice(0, 90))}${s.description.length > 90 ? '…' : ''}</option>`
+    ).join('');
+  };
+  fill();
+  if (stateSel) stateSel.addEventListener('change', fill);
+
   btn.addEventListener('click', () => {
     if (!sel.value) return;
-    const m = {
-      id: `m-manual-${Date.now()}`,
-      conceptId: sel.value,
-      key: keyOf(std),
+    const picked = state.byKey.get(sel.value);
+    if (!picked) return;
+    const oh = isAnchor ? std : picked;
+    const other = isAnchor ? picked : std;
+    const l = {
+      id: `lnk-manual-${Date.now()}`,
+      subject: std.subject,
+      oh: oh.code, state: other.state, code: other.code,
       confidence: 'manual',
-      rationale: 'Attached manually by reviewer.',
+      rationale: 'Aligned manually by reviewer.',
       source: 'manual',
     };
-    state.memberships.push(m);
-    state.decisions[m.id] = 'approved';
-    indexConcepts();
+    state.links.push(l);
+    state.decisions[l.id] = 'approved';
+    indexLinks();
     pushState();
-    toast(`Attached to ${state.conceptById.get(sel.value).title}`);
+    toast(`Aligned ${oh.code} ↔ ${other.code}`);
     renderAll();
   });
 }
@@ -785,9 +759,9 @@ function wireManualAdd(content, std) {
 function handleAction(act, id) {
   if (act === 'mark-noalign') {
     state.noAlign[id] = true;
-    // belongs to no concept ⇒ reject its still-pending memberships
-    (state.byStandard.get(id) || []).filter(m => statusOf(m) === 'pending')
-      .forEach(m => { state.decisions[m.id] = 'rejected'; });
+    const std = state.byKey.get(id);
+    if (std) linksFor(std).filter(l => statusOf(l) === 'pending')
+      .forEach(l => { state.decisions[l.id] = 'rejected'; });
     saveNoAlign();
     toast('Marked: No Alignment Possible');
   } else if (act === 'unmark-noalign') {
@@ -795,8 +769,8 @@ function handleAction(act, id) {
     saveNoAlign();
     toast('No-alignment mark removed');
   } else if (act === 'sever') {
-    // Escape hatch: these two share a concept but are not actually aligned. Overrides the
-    // derivation for this pair only, without disturbing either membership.
+    // Escape hatch: these two run through the same Ohio standard but are not actually
+    // aligned. Overrides this pair only, without disturbing either link.
     state.severed[id] = true;
     pushState();
     toast('Marked as not aligned');
@@ -811,34 +785,34 @@ function handleAction(act, id) {
   } else {
     state.decisions[id] = act;
     saveDecisions();
-    toast(act === 'approved' ? 'Membership approved ✓' : 'Membership rejected');
+    toast(act === 'approved' ? 'Alignment approved ✓' : 'Alignment rejected');
   }
   renderAll();
 }
 
 /* ---------- review queue ----------
-   The reviewable unit is a MEMBERSHIP — "does this standard belong to this concept?" —
-   not a state pair. That is what keeps the work linear: a new state costs one pass over
-   its own standards, no matter how many states are already in the library. */
+   One question per card: does this state's standard align to that Ohio one? Grade filters
+   on the OHIO side, because Ohio is the spine — you walk Ohio grade by grade and confirm
+   what each state maps onto it. The other side is often a different grade, by design. */
 function reviewScope() {
   const { revSubject, revGrade, revState } = state.ui;
-  return state.memberships.filter(m => {
-    const std = state.byKey.get(m.key);
-    if (!std || std.subject !== revSubject) return false;
-    if (String(std.grade) !== String(revGrade) && std.grade !== 'All') return false;
-    return revState === 'ALL' || std.state === revState;
+  return state.links.filter(l => {
+    if (l.subject !== revSubject) return false;
+    const oh = state.byKey.get(anchorKeyOf(l));
+    if (!oh || String(oh.grade) !== String(revGrade)) return false;
+    return revState === 'ALL' || l.state === revState;
   });
 }
 
 function renderReview() {
   const { revSubject, revGrade, revStatus, revState } = state.ui;
   const inScope = reviewScope();
-  const shown = inScope.filter(m => revStatus === 'all' || statusOf(m) === revStatus);
-  const done = inScope.filter(m => statusOf(m) !== 'pending').length;
+  const shown = inScope.filter(l => revStatus === 'all' || statusOf(l) === revStatus);
+  const done = inScope.filter(l => statusOf(l) !== 'pending').length;
 
   const stateLabel = revState === 'ALL' ? 'all states' : STATE_NAMES[revState];
   document.getElementById('reviewProgress').textContent = inScope.length
-    ? `${done} of ${inScope.length} memberships reviewed · Grade ${revGrade} ${SUBJECT_NAMES[revSubject]} · ${stateLabel}`
+    ? `${done} of ${inScope.length} reviewed · Ohio Grade ${revGrade} ${SUBJECT_NAMES[revSubject]} · ${stateLabel}`
     : '';
 
   const box = document.getElementById('reviewList');
@@ -846,25 +820,26 @@ function renderReview() {
   if (!shown.length) {
     box.appendChild(el(`<div class="review-empty">${
       inScope.length
-        ? (revStatus === 'pending' ? '🎉 All memberships for this grade are reviewed.' : `No ${revStatus === 'all' ? '' : revStatus + ' '}memberships here.`)
-        : 'No concept memberships drafted for this grade/subject yet.'
+        ? (revStatus === 'pending' ? '🎉 Everything for this Ohio grade is reviewed.' : `No ${revStatus === 'all' ? '' : revStatus + ' '}drafts here.`)
+        : 'No drafts for this Ohio grade/subject yet.'
     }</div>`));
     return;
   }
 
-  // Group by concept so the reviewer sees a concept once with its candidates together,
-  // rather than the same concept restated on every card.
+  // Group by the Ohio standard, so you see one Ohio standard with every state's candidate
+  // beneath it rather than the same Ohio text restated on each card.
   const groups = new Map();
-  shown.forEach(m => {
-    if (!groups.has(m.conceptId)) groups.set(m.conceptId, []);
-    groups.get(m.conceptId).push(m);
+  shown.forEach(l => {
+    const k = anchorKeyOf(l);
+    if (!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(l);
   });
 
-  [...groups.entries()].forEach(([cid, ms]) => {
-    const c = state.conceptById.get(cid);
-    box.appendChild(el(`<div class="align-section-title">◈ ${esc(c ? c.title : cid)} <span class="rule"></span></div>`));
-    ms.forEach(m => {
-      const card = el(membershipCard(m) || '<div></div>');
+  [...groups.entries()].forEach(([k, ls]) => {
+    const oh = state.byKey.get(k);
+    box.appendChild(el(`<div class="align-section-title">Ohio ${esc(oh ? oh.code : k)} <span class="rule"></span></div>`));
+    ls.forEach(l => {
+      const card = el(linkCard(l) || '<div></div>');
       card.querySelectorAll('[data-act]').forEach(btn => {
         btn.addEventListener('click', () => handleAction(btn.dataset.act, btn.dataset.id));
       });
@@ -874,263 +849,36 @@ function renderReview() {
 }
 
 function renderBadge() {
-  const pending = state.memberships.filter(m => statusOf(m) === 'pending').length;
+  const pending = state.links.filter(l => statusOf(l) === 'pending').length;
   document.getElementById('pendingBadge').textContent = pending;
-  const conPending = liveConcepts().filter(c => conceptStatus(state.conceptById.get(c.id)) === 'pending').length;
-  document.getElementById('conceptBadge').textContent = conPending;
 }
-
-/* ---------- concepts ----------
-   The concept library is the spine: every state that ever joins maps onto it, so a wrong
-   concept is wrong everywhere at once. This is where the reviewer curates it — approve,
-   reword, merge duplicates, or reject. Nothing derives an alignment until approved. */
-function conceptScope() {
-  const { conSubject, conStatus, conSearch } = state.ui;
-  const q = conSearch.toLowerCase().trim();
-  return liveConcepts()
-    .map(c => state.conceptById.get(c.id))
-    .filter(c => c.subject === conSubject)
-    .filter(c => {
-      const st = conceptStatus(c);
-      if (conStatus === 'all') return true;
-      if (conStatus === 'flagged') return !!c.needsReview;
-      if (conStatus === 'merge') return !!(c.mergeCandidates && c.mergeCandidates.some(id => !isMergedAway(id)));
-      return st === conStatus;
-    })
-    .filter(c => !q || `${c.title} ${c.description}`.toLowerCase().includes(q));
-}
-
-function conceptCard(c) {
-  const st = conceptStatus(c);
-  // Show EVERY candidate member, not just approved ones — a concept can't be judged
-  // without seeing the standards it would gather, and drafted members are still pending.
-  const all = state.byConcept.get(c.id) || [];
-  const rejected = new Set(all.filter(m => statusOf(m) === 'rejected').map(m => m.id));
-  const byState = {};
-  all.forEach(m => {
-    if (rejected.has(m.id)) return;
-    const s = state.byKey.get(m.key);
-    if (!s) return;
-    (byState[s.state] = byState[s.state] || []).push({ std: s, pending: statusOf(m) !== 'approved' });
-  });
-  // Alignments live today (approved concept + approved memberships on both sides).
-  const approvedByState = {};
-  all.filter(m => statusOf(m) === 'approved').forEach(m => {
-    const s = state.byKey.get(m.key);
-    if (s) (approvedByState[s.state] = approvedByState[s.state] || []).push(s);
-  });
-  const countPairs = map => {
-    const ks = Object.keys(map);
-    let n = 0;
-    for (let i = 0; i < ks.length; i++)
-      for (let j = i + 1; j < ks.length; j++) n += map[ks[i]].length * map[ks[j]].length;
-    return n;
-  };
-  const stateList = Object.keys(byState);
-  const pairs = countPairs(approvedByState);
-  const potential = countPairs(Object.fromEntries(stateList.map(s => [s, byState[s]])));
-
-  const mergeInto = (c.mergeCandidates || []).filter(id => !isMergedAway(id) && id !== c.id);
-  const actions = st === 'pending'
-    ? `<button class="act-btn approve" data-cact="approved" data-id="${c.id}">✓ Approve concept</button>
-       <button class="act-btn reject" data-cact="rejected" data-id="${c.id}">✕ Reject</button>`
-    : `<span class="status-chip ${st}">${st}</span>
-       <button class="act-btn reset" data-cact="pending" data-id="${c.id}">Undo</button>`;
-
-  return `
-    <div class="review-card ${st !== 'pending' ? 'decided-' + st : ''}">
-      <div class="concept-head">
-        <div class="concept-meta" style="margin:0 0 8px">
-          <span class="chip">${SUBJECT_NAMES[c.subject] || c.subject}</span>
-          ${c.gradeBand ? `<span class="chip">${esc(c.gradeBand)}</span>` : ''}
-          <span class="chip">${c.source === 'seed' ? 'seeded from your approved pairs' : 'drafted — needs your approval'}</span>
-          ${c.needsReview ? '<span class="chip chip-warn">⚠ needs review</span>' : ''}
-          ${mergeInto.length ? '<span class="chip chip-warn">⧉ duplicate</span>' : ''}
-        </div>
-        <label class="c-lbl">Title</label>
-        <input type="text" class="ps-input c-title" data-ctitle="${c.id}" value="${esc(c.title)}">
-        <label class="c-lbl" style="margin-top:8px">Membership test — a standard belongs here if…</label>
-        <textarea class="ps-textarea c-desc" data-cdesc="${c.id}" rows="2">${esc(c.description || '')}</textarea>
-      </div>
-      ${c.note ? `<div class="concept-note"><b>Flagged:</b> ${esc(c.note)}</div>` : ''}
-      ${c.suggestedDescription && c.suggestedDescription !== c.description
-        ? `<div class="concept-suggest">
-             <b>Suggested membership test</b> — names the specific event so another state's equivalent can't pass:
-             <div class="suggest-text">${esc(c.suggestedDescription)}</div>
-             <button class="act-btn" data-capply="${c.id}">Use this wording</button>
-           </div>`
-        : ''}
-      ${c.mergeWhy ? `<div class="concept-note"><b>Duplicate of ${esc((c.mergeCandidates || []).join(', '))}:</b> ${esc(c.mergeWhy)}${
-          c.mergeSurvivor ? ` <b>Recommended survivor:</b> ${esc(c.mergeSurvivor)}${c.mergeSurvivor === c.id ? ' (this one)' : ''}` : ''}</div>` : ''}
-      <div class="member-peers">
-        <b>Members:</b>
-        ${stateList.length
-          ? stateList.map(s => byState[s].map(x =>
-              `<span class="chip ${x.pending ? 'chip-pend' : ''}" title="${x.pending ? 'Membership still pending in the Review Queue' : 'Approved membership'}">${STATE_NAMES[s]} ${esc(x.std.code)} · G${esc(x.std.grade)}${x.pending ? ' ·' : ' ✓'}</span>`).join(' ')).join(' ')
-          : '<span class="member-peers-empty">none yet</span>'}
-      </div>
-      <div class="member-peers">
-        <b>Derives now:</b> ${pairs} cross-state alignment${pairs === 1 ? '' : 's'}
-        ${potential > pairs
-          ? `<span class="chip chip-warn">${potential} once its pending memberships are approved too</span>` : ''}
-        ${st !== 'approved' && potential ? '<span class="chip chip-warn">nothing active until this concept is approved</span>' : ''}
-        ${stateList.length === 1
-          ? `<span class="chip chip-warn">only ${STATE_NAMES[stateList[0]]} standards so far — derives nothing until another state is mapped into it</span>`
-          : ''}
-      </div>
-      <div class="review-foot">
-        ${mergeInto.length ? `<span class="conf-chip">merge into:</span>
-          <select class="c-merge" data-cmerge="${c.id}" style="font:inherit; padding:6px 8px; border:1px solid var(--line); border-radius:8px">
-            <option value="">choose…</option>
-            ${mergeInto.map(id => { const t = state.conceptById.get(id); return t ? `<option value="${id}">${esc(t.title)}</option>` : ''; }).join('')}
-          </select>` : ''}
-        ${actions}
-      </div>
-    </div>`;
-}
-
-function renderConcepts() {
-  const shown = conceptScope();
-  const all = liveConcepts().map(c => state.conceptById.get(c.id)).filter(c => c.subject === state.ui.conSubject);
-  const done = all.filter(c => conceptStatus(c) !== 'pending').length;
-  document.getElementById('conceptProgress').textContent = all.length
-    ? `${done} of ${all.length} concepts reviewed · ${SUBJECT_NAMES[state.ui.conSubject]}`
-    : `No concepts for ${SUBJECT_NAMES[state.ui.conSubject]} yet.`;
-
-  const box = document.getElementById('conceptList');
-  box.innerHTML = '';
-  if (!shown.length) {
-    box.appendChild(el(`<div class="review-empty">${all.length
-      ? 'Nothing matches this filter.'
-      : `No ${SUBJECT_NAMES[state.ui.conSubject]} concepts exist yet — the library is seeded from approved alignments, and none have been drafted for this subject.`}</div>`));
-    return;
-  }
-  shown.forEach(c => {
-    const card = el(conceptCard(c));
-    card.querySelectorAll('[data-cact]').forEach(b =>
-      b.addEventListener('click', () => handleConceptAction(b.dataset.cact, b.dataset.id)));
-    const t = card.querySelector('[data-ctitle]');
-    if (t) t.addEventListener('input', e => editConcept(e.target.dataset.ctitle, { title: e.target.value }));
-    const d = card.querySelector('[data-cdesc]');
-    if (d) d.addEventListener('input', e => editConcept(e.target.dataset.cdesc, { description: e.target.value }));
-    const m = card.querySelector('[data-cmerge]');
-    if (m) m.addEventListener('change', e => {
-      if (!e.target.value) return;
-      mergeConcepts(e.target.dataset.cmerge, e.target.value);
-    });
-    const ap = card.querySelector('[data-capply]');
-    if (ap) ap.addEventListener('click', () => applySuggested(ap.dataset.capply));
-    box.appendChild(card);
-  });
-}
-
-/* Narrowing a membership test invalidates the approvals made against the old one — a
-   member judged against "a declaration of independence" was never judged against "the
-   1776 Declaration". Reset them to pending rather than silently keep an answer the
-   reviewer didn't give to this question. */
-function applySuggested(id) {
-  const c = state.conceptById.get(id);
-  const base = state.concepts.find(x => x.id === id);
-  if (!c || !base || !base.suggestedDescription) return;
-  editConcept(id, { description: base.suggestedDescription });
-  let retest = 0;
-  (state.byConcept.get(mergeTarget(id)) || []).forEach(m => {
-    if (statusOf(m) === 'approved') { state.decisions[m.id] = 'pending'; retest++; }
-  });
-  pushState();
-  toast(retest
-    ? `Wording updated — ${retest} membership${retest > 1 ? 's' : ''} reset to pending for re-test`
-    : 'Wording updated');
-  renderAll();
-}
-
-function editConcept(id, patch) {
-  const base = state.concepts.find(c => c.id === id);
-  if (!base) return;
-  const cur = state.conceptEdits[id] || {};
-  const next = { ...cur, ...patch };
-  // Drop the override once it matches the drafted wording again — keeps the diff honest.
-  if ((next.title ?? base.title) === base.title && (next.description ?? base.description) === base.description) {
-    delete state.conceptEdits[id];
-  } else {
-    state.conceptEdits[id] = next;
-  }
-  indexConcepts();
-  pushState();
-  renderBadgeSoon();
-}
-
-/* Merging moves `fromId`'s members onto `intoId`; the source concept stops existing for
-   every purpose but provenance, so the merge stays reversible from the state file.
-
-   If the two membership tests differ, the moved memberships are reset to pending. They
-   were approved against the OLD wording, and carrying that approval across would assert
-   a judgement the reviewer never made — the merges that matter most here are exactly the
-   ones where a vague test is replaced by a precise one, and some members legitimately
-   fall out under it. Identical tests must yield identical verdicts, so those carry over. */
-function mergeConcepts(fromId, intoId) {
-  if (fromId === intoId) return;
-  if (mergeTarget(intoId) === fromId) { toast('⚠ That would make a merge loop'); return; }
-  const from = state.conceptById.get(fromId);
-  const into = state.conceptById.get(intoId);
-  const sameTest = from && into && (from.description || '') === (into.description || '');
-  let retest = 0;
-  if (!sameTest) {
-    (state.byConcept.get(mergeTarget(fromId)) || []).forEach(m => {
-      if (m.conceptId !== fromId) return;
-      if (statusOf(m) === 'approved') { state.decisions[m.id] = 'pending'; retest++; }
-    });
-  }
-  state.merged[fromId] = intoId;
-  indexConcepts();
-  pushState();
-  toast(retest
-    ? `Merged into "${into ? into.title : intoId}" — ${retest} membership${retest > 1 ? 's' : ''} reset to pending (different test)`
-    : `Merged into "${into ? into.title : intoId}"`);
-  renderAll();
-}
-
-function handleConceptAction(act, id) {
-  if (act === 'pending') { delete state.decisions[id]; toast('Concept reset to pending'); }
-  else {
-    state.decisions[id] = act;
-    toast(act === 'approved' ? 'Concept approved ✓ — its alignments are now live' : 'Concept rejected — its alignments are off');
-  }
-  pushState();
-  renderAll();
-}
-
-let badgeTimer;
-function renderBadgeSoon() { clearTimeout(badgeTimer); badgeTimer = setTimeout(renderBadge, 400); }
 
 /* ---------- export ----------
-   Exports the concept library, its approved memberships, and the cross-state alignments
-   they derive — so a consumer can use the alignments directly or re-derive them. */
+   Exports the approved Ohio-anchored links plus every alignment they derive (including the
+   sibling ones between other states), so a consumer can use them directly or re-derive. */
 function exportData() {
-  const approvedMembers = state.memberships.filter(m => statusOf(m) === 'approved');
+  const approvedLinks = state.links.filter(l => statusOf(l) === 'approved');
   const derived = [];
   const seen = new Set();
-  approvedMembers.forEach(m => {
-    const std = state.byKey.get(m.key);
-    if (!std) return;
+  state.standards.forEach(std => {
     alignedTo(std).forEach(h => {
       const pair = severKey(keyOf(std), keyOf(h.std));
       if (seen.has(pair)) return;
       seen.add(pair);
       derived.push({
-        a: keyOf(std), b: keyOf(h.std), concept: h.concept.id,
+        a: keyOf(std), b: keyOf(h.std),
+        via: h.via ? keyOf(h.via) : null,
         cross_grade: String(std.grade) !== String(h.std.grade),
       });
     });
   });
   const out = {
     exported_at: new Date().toISOString(),
-    model: 'concept-spine',
+    model: 'anchor-ohio',
     states: STATES,
-    concepts: state.concepts,
-    memberships: approvedMembers.map(m => ({
-      concept: m.conceptId, standard: m.key,
-      confidence: m.confidence, rationale: m.rationale, source: m.source || 'ai_draft',
+    links: approvedLinks.map(l => ({
+      ohio: anchorKeyOf(l), standard: linkedKeyOf(l),
+      confidence: l.confidence, rationale: l.rationale, source: l.source || 'ai_draft',
     })),
     derived_alignments: derived,
     severed: Object.keys(state.severed),
@@ -1216,7 +964,7 @@ function tagAlignHtml(tag) {
   if (!hits.length) {
     if (isNoAlign(std)) {
       return `<div class="align-mini noalign"><div class="align-mini-title">Aligned standards — other states</div>
-        <div class="align-mini-item"><b>🚫 No Alignment Possible</b><span class="align-mini-desc">Reviewed — belongs to no concept.</span></div></div>`;
+        <div class="align-mini-item"><b>🚫 No Alignment Possible</b><span class="align-mini-desc">Reviewed — nothing aligns to this.</span></div></div>`;
     }
     return `<div class="align-mini"><div class="align-mini-title">Approved aligned standards — other states</div>
       <div class="align-mini-empty">No approved alignment yet${pending ? ` — ${pending} membership${pending > 1 ? 's' : ''} pending in the Review Queue` : ''}.</div></div>`;
@@ -1689,15 +1437,8 @@ function renderSetSide() {
     return;
   }
 
-  const concepts = conceptsFor(std);
-  if (concepts.length) {
-    html += `<div class="side-block"><div class="align-mini-title">Concepts</div>
-      ${concepts.map(c => `<div class="align-mini-item"><span class="chip chip-concept" title="${esc(c.description || '')}">◈ ${esc(c.title)}</span></div>`).join('')}
-    </div>`;
-  }
-
   const hits = alignedTo(std);
-  const pending = membershipsFor(std).filter(m => statusOf(m) === 'pending').length;
+  const pending = linksFor(std).filter(l => statusOf(l) === 'pending').length;
 
   // One block per other state — scales to however many states are loaded.
   otherStates(std.state).forEach(os => {
@@ -1714,7 +1455,7 @@ function renderSetSide() {
         <div class="align-mini-desc">${esc(h.std.description)}</div>
       </div>`).join('');
     } else if (isNoAlign(std)) {
-      html += `<div class="noalign-inline">🚫 No Alignment Possible — reviewed, belongs to no concept.</div>`;
+      html += `<div class="noalign-inline">🚫 No Alignment Possible — reviewed, no ${STATE_NAMES[os]} equivalent.</div>`;
     } else {
       html += `<div class="align-mini-empty">Nothing approved yet${pending ? ` — ${pending} membership${pending > 1 ? 's' : ''} pending in the Review Queue` : ''}.</div>`;
     }
@@ -1752,7 +1493,6 @@ function renderPassages() {
 function renderAll() {
   renderStdList();
   renderDetail();
-  renderConcepts();
   renderReview();
   renderBadge();
   renderPassages();
@@ -1765,7 +1505,6 @@ function init() {
     state.ui.view = tab.dataset.view;
     document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t === tab));
     document.getElementById('explorerView').classList.toggle('hidden', state.ui.view !== 'explorer');
-    document.getElementById('conceptsView').classList.toggle('hidden', state.ui.view !== 'concepts');
     document.getElementById('reviewView').classList.toggle('hidden', state.ui.view !== 'review');
     document.getElementById('passagesView').classList.toggle('hidden', state.ui.view !== 'passages');
   });
@@ -1796,11 +1535,6 @@ function init() {
   bindSeg('revSubjectSeg', 'revSubject', v => { state.ui.revSubject = v; renderReview(); });
   bindSeg('revStateSeg', 'revState', v => { state.ui.revState = v; renderReview(); });
   bindSeg('revStatusSeg', 'revStatus', v => { state.ui.revStatus = v; renderReview(); });
-  bindSeg('conSubjectSeg', 'conSubject', v => { state.ui.conSubject = v; renderConcepts(); });
-  bindSeg('conStatusSeg', 'conStatus', v => { state.ui.conStatus = v; renderConcepts(); });
-  document.getElementById('conSearch').addEventListener('input', e => {
-    state.ui.conSearch = e.target.value; renderConcepts();
-  });
 
   renderGradeRow('gradeRow', state.ui.expGrade, g => {
     state.ui.expGrade = g; state.ui.selectedKey = null;
