@@ -678,3 +678,4 @@ body {
 }
 .toast-undo:hover { background: rgba(255,255,255,.3); }
 .push-row { display: flex; gap: 8px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
+.section-hint { font-size: 12px; font-weight: 500; color: var(--ink-faint); text-transform: none; letter-spacing: 0; }

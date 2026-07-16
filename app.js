@@ -1700,46 +1700,46 @@ function renderPassages() {
 
 /* ---------- passage input ----------
    The point of the whole alignment exercise: a per-grade passage library you don't have to
-   keep building. A set tagged to one state's standard automatically serves every state
-   aligned to it, so Georgia Grade 4 fills up with passages written for Ohio Grade 4.
+   keep building. Passages auto-populate the states they align to; Passage Input sorts them
+   into three buckets so nothing lands as "done" without a human eye:
 
-   LISTED   — the set was built for this grade.
-   UNLISTED — it arrived over a cross-grade alignment you assigned (Ohio G4 → Texas G5).
-              Cross-grade alignments only carry passages once assigned; until then the
-              content stays where it was written. */
+   LISTED IN CMS  — someone marked "Developed in CMS" for this passage in this state's list.
+   ALIGNED        — confirmed for this grade: the set's own home grade, a universal passage,
+                    or an aligned one the reviewer approved (pushed).
+   NEEDS APPROVAL — auto-populated from an approved ±1-grade alignment, not yet reviewed. */
 function setNativeGrade(s) {
   if (s.gaGrade) return String(s.gaGrade);
   const std = tagStd(s.standard);
   return std ? String(std.grade) : null;
 }
 
-// Every (state, grade) this passage set serves, and how it got there.
+// Every (state, grade) this passage set serves, and its category there.
 function setServes(s) {
   const std = tagStd(s.standard);
   if (!std) return [];
   const native = setNativeGrade(s);
 
-  // Universal standard (Literary / Literary Non-Fiction — applies to every state): the
-  // passage serves ALL states at its hierarchy grade, the active ones now and any state
-  // added later, with no alignment needed. Each state's "in CMS" starts unchecked, so it
-  // shows in Passage Input but isn't marked developed until someone checks it off there.
+  // Universal standard (Literary / Literary Non-Fiction): serves ALL states at its
+  // hierarchy grade, active now and any state added later. Aligned, not needs-approval.
   if (std.state === 'ALL') {
     if (!native) return [];   // needs a hierarchy grade to know where it lands
-    return STATES.map(st => ({ state: st, grade: native, via: null, unlisted: false, universal: true, std }));
+    return STATES.map(st => ({ state: st, grade: native, universal: true, std, cat: 'aligned' }));
   }
 
   const out = [];
-  // The passage's own tagged state + grade — always listed; it was built for this.
-  out.push({ state: std.state, grade: String(std.grade), via: null, unlisted: false, std });
-  // An aligned state/grade populates only once the reviewer pushes it from the side panel,
-  // and only when the alignment is approved and within ±1 grade (ELAR: same grade).
+  // The passage's own tagged state + grade — always aligned; it was built for this.
+  out.push({ state: std.state, grade: String(std.grade), std, own: true, cat: 'aligned' });
+  // Approved, within-±1 alignments auto-populate. Pushed → aligned; dismissed → gone;
+  // otherwise → needs approval.
   alignedTo(std).forEach(h => {
     if (!withinGradeSpan(std, h.std, std.subject)) return;
-    if (state.setPush[pushKey(s.id, h.std)] !== 'pushed') return;
+    const p = state.setPush[pushKey(s.id, h.std)];
+    if (p === 'dismissed') return;
     out.push({
       state: h.std.state, grade: String(h.std.grade), via: h.via || std,
       unlisted: String(h.std.grade) !== String(native),
-      std: h.std,
+      std: h.std, pk: pushKey(s.id, h.std),
+      cat: p === 'pushed' ? 'aligned' : 'needs',
     });
   });
   return out;
@@ -1747,48 +1747,75 @@ function setServes(s) {
 
 function inputKey(setId, st, grade) { return `${setId}|${st}:${grade}`; }
 
+// The push keys for every alignment carrying a set into one state+grade — approve/dismiss
+// in Passage Input is a per-(set, state, grade) call, so it acts on all of them at once.
+function pushKeysFor(setId, st, grade) {
+  const s = state.sets.find(x => x.id === setId);
+  const std = s && tagStd(s.standard);
+  if (!std || std.state === 'ALL') return [];
+  return alignedTo(std)
+    .filter(h => h.std.state === st && String(h.std.grade) === String(grade) && withinGradeSpan(std, h.std, std.subject))
+    .map(h => pushKey(setId, h.std));
+}
+
+// One row per set per state+grade. A set can reach a grade via several alignments; the
+// row's category is the best across them (CMS-developed > aligned > needs).
 function setsForGrade(st, grade) {
   const rows = [];
   state.sets.forEach(s => {
-    const hit = setServes(s).find(x => x.state === st && x.grade === String(grade));
-    if (!hit) return;
-    if (state.setDismiss[inputKey(s.id, st, grade)]) return;
-    rows.push({ set: s, hit });
+    const hits = setServes(s).filter(x => x.state === st && x.grade === String(grade));
+    if (!hits.length || state.setDismiss[inputKey(s.id, st, grade)]) return;
+    let category, hit;
+    if (state.setCms[inputKey(s.id, st, grade)]) { category = 'cms'; hit = hits[0]; }
+    else if (hits.some(h => h.cat === 'aligned')) { category = 'aligned'; hit = hits.find(h => h.cat === 'aligned'); }
+    else { category = 'needs'; hit = hits[0]; }
+    rows.push({ set: s, hit, category });
   });
   return rows;
 }
 
 function inputCard(row, st, grade) {
-  const { set: s, hit } = row;
+  const { set: s, hit, category } = row;
   const k = inputKey(s.id, st, grade);
-  const inCms = !!state.setCms[k];
   const titles = s.passages.filter(p => p.title).map(p => p.title);
   const tagged = [...s.questions, ...s.peerRevision].filter(q => q.standard).length;
+
+  // Source badge: how this passage reached this grade.
+  const source = hit.universal ? '<span class="chip chip-concept">◆ Universal — all states</span>'
+    : hit.own ? '<span class="chip">tagged directly</span>'
+    : `<span class="chip ${hit.unlisted ? 'chip-cross' : ''}">${hit.unlisted ? '⇄ from G' + esc(setNativeGrade(s)) : 'aligned'}</span>
+       ${hit.via ? `<span class="chip chip-concept">via ${STATE_NAMES[hit.via.state]} ${esc(hit.via.code)}</span>` : ''}`;
+
+  // own/universal rows have no alignment to push; they dismiss via setDismiss.
+  const nativeRow = hit.own || hit.universal;
+  const dismissAct = nativeRow ? `dismiss|${esc(k)}` : `pushdismiss|${esc(k)}`;
+  let actions;
+  if (category === 'cms') {
+    actions = `<span class="status-chip approved">✓ Developed in CMS</span>
+       <button class="act-btn reset" data-iact="uncms|${esc(k)}">Undo</button>`;
+  } else if (category === 'needs') {
+    // auto-populated, awaiting a call
+    actions = `<button class="act-btn approve" data-iact="approve|${esc(k)}">✓ Approve</button>
+       <button class="act-btn reject" data-iact="${dismissAct}">✕ Dismiss</button>`;
+  } else {
+    // aligned & confirmed — ready to develop
+    actions = `<button class="act-btn approve" data-iact="cms|${esc(k)}">✓ Developed in CMS</button>
+       <button class="act-btn reject" data-iact="${dismissAct}" title="Remove from this grade">Dismiss</button>`;
+  }
+
   return `
-    <div class="review-card ${inCms ? 'decided-approved' : ''}">
+    <div class="review-card ${category === 'cms' ? 'decided-approved' : ''}">
       <div class="concept-head">
         <div class="concept-title">${esc(s.title || 'Untitled set')}</div>
         <div class="concept-desc">${titles.length ? esc(titles.join(' · ')) : `${s.passages.length} passage${s.passages.length !== 1 ? 's' : ''}, untitled`}</div>
         <div class="concept-meta">
           ${s.passageId ? `<span class="chip">ID ${esc(s.passageId)}</span>` : ''}
-          ${hit.universal
-            ? '<span class="chip chip-concept">◆ Universal — applies to all states</span>'
-            : `<span class="chip ${hit.unlisted ? 'chip-cross' : ''}">${hit.unlisted ? '⇄ Unlisted — written for G' + esc(setNativeGrade(s)) : 'Listed'}</span>`}
+          ${source}
           <span class="chip">${esc(hit.std.code)}</span>
-          ${hit.universal
-            ? ''
-            : hit.via ? `<span class="chip chip-concept">arrived via ${STATE_NAMES[hit.via.state]} ${esc(hit.via.code)}</span>` : '<span class="chip">tagged directly</span>'}
           <span class="chip">${tagged} question${tagged === 1 ? '' : 's'} tagged</span>
         </div>
       </div>
-      <div class="review-foot">
-        ${inCms
-          ? `<span class="status-chip approved">✓ Developed in CMS</span>
-             <button class="act-btn reset" data-iact="uncms" data-id="${esc(k)}">Undo</button>`
-          : `<button class="act-btn approve" data-iact="cms" data-id="${esc(k)}">✓ Developed in CMS</button>`}
-        <button class="act-btn reject" data-iact="dismiss" data-id="${esc(k)}"
-          title="This passage doesn't belong in this grade">Dismiss from Grade</button>
-      </div>
+      <div class="review-foot">${actions}</div>
     </div>`;
 }
 
@@ -1805,15 +1832,14 @@ function renderInput() {
 
   const st = state.ui.inState, grade = state.ui.inGrade;
   const rows = setsForGrade(st, grade);
-  const universal = rows.filter(r => r.hit.universal);
-  const listed = rows.filter(r => !r.hit.universal && !r.hit.unlisted);
-  const unlisted = rows.filter(r => !r.hit.universal && r.hit.unlisted);
-  const done = rows.filter(r => state.setCms[inputKey(r.set.id, st, grade)]).length;
+  const inCms = rows.filter(r => r.category === 'cms');
+  const aligned = rows.filter(r => r.category === 'aligned');
+  const needs = rows.filter(r => r.category === 'needs');
   const dismissed = state.sets.filter(s => state.setDismiss[inputKey(s.id, st, grade)]).length;
 
   document.getElementById('inputProgress').textContent =
     `${rows.length} passage${rows.length === 1 ? '' : 's'} for ${STATE_NAMES[st]} Grade ${grade} · `
-    + `${listed.length} listed, ${universal.length} universal, ${unlisted.length} unlisted · ${done} in CMS`
+    + `${inCms.length} in CMS, ${aligned.length} aligned, ${needs.length} need approval`
     + (dismissed ? ` · ${dismissed} dismissed` : '');
 
   const box = document.getElementById('inputList');
@@ -1822,32 +1848,51 @@ function renderInput() {
     box.appendChild(el(`<div class="review-empty">
       No passages serve ${STATE_NAMES[st]} Grade ${grade} yet.<br>
       <span style="font-size:12.5px; color:var(--ink-faint)">A passage lands here when its primary standard is a ${STATE_NAMES[st]} Grade ${grade} standard,
-      is aligned to one, or is tagged to a universal (all-state) standard at this grade. Build sets in Passage Sets,
-      and approve alignments in the Review Queue to make them cross over.</span>
+      is aligned to one within a grade, or is tagged to a universal (all-state) standard at this grade.
+      Build sets in Passage Sets, and approve alignments in the Review Queue to make them cross over.</span>
     </div>`));
     return;
   }
-  const section = (label, list) => {
+  const section = (label, list, hint) => {
     if (!list.length) return;
-    box.appendChild(el(`<div class="align-section-title">${label} (${list.length})<span class="rule"></span></div>`));
+    box.appendChild(el(`<div class="align-section-title">${label} (${list.length})${hint ? ` <span class="section-hint">${hint}</span>` : ''}<span class="rule"></span></div>`));
     list.forEach(r => {
       const card = el(inputCard(r, st, grade));
       card.querySelectorAll('[data-iact]').forEach(b =>
-        b.addEventListener('click', () => handleInputAction(b.dataset.iact, b.dataset.id)));
+        b.addEventListener('click', () => handleInputAction(b.dataset.iact)));
       box.appendChild(card);
     });
   };
-  section('Listed — written for this grade', listed);
-  section('Universal — applies to every state', universal);
-  section('Unlisted — arrived from another grade', unlisted);
+  section('Listed in CMS', inCms, 'developed here');
+  section('Aligned Passages', aligned, 'confirmed for this grade — ready to develop');
+  section('Needs Approval', needs, 'auto-populated from an alignment');
 }
 
-function handleInputAction(act, key) {
-  if (act === 'cms') { state.setCms[key] = true; toast('Marked developed in CMS'); }
-  else if (act === 'uncms') { delete state.setCms[key]; toast('CMS mark removed'); }
-  else if (act === 'dismiss') { state.setDismiss[key] = true; toast('Dismissed from this grade'); }
-  pushState();
-  renderInput();
+// action is "verb|inputKey" (setId|state:grade). approve/dismiss act on every alignment
+// that carries the set into that grade, and carry a 15-second undo.
+function handleInputAction(spec) {
+  // key is an inputKey `${setId}|${state}:${grade}`, which itself contains a '|' — split
+  // only on the first separator so the key stays intact.
+  const cut = spec.indexOf('|');
+  const act = spec.slice(0, cut);
+  const key = spec.slice(cut + 1);
+  const [setId, sg] = [key.slice(0, key.indexOf('|')), key.slice(key.indexOf('|') + 1)];
+  const [stt, grd] = sg.split(':');
+  if (act === 'cms') { state.setCms[key] = true; pushState(); renderInput(); toast('Marked developed in CMS'); }
+  else if (act === 'uncms') { delete state.setCms[key]; pushState(); renderInput(); toast('CMS mark removed'); }
+  else if (act === 'dismiss') {
+    state.setDismiss[key] = true; pushState(); renderInput();
+    toastUndo('Dismissed from this grade', () => { delete state.setDismiss[key]; pushState(); renderInput(); });
+  } else if (act === 'approve' || act === 'pushdismiss') {
+    const pks = pushKeysFor(setId, stt, grd);
+    const snap = pks.map(pk => [pk, state.setPush[pk]]);
+    const val = act === 'approve' ? 'pushed' : 'dismissed';
+    pks.forEach(pk => { state.setPush[pk] = val; });
+    pushState(); renderInput();
+    toastUndo(act === 'approve' ? 'Approved — moved to Aligned Passages' : 'Dismissed — removed from the list',
+      () => { snap.forEach(([pk, prev]) => { if (prev) state.setPush[pk] = prev; else delete state.setPush[pk]; });
+              pushState(); renderInput(); });
+  }
 }
 
 /* ---------- view switching + init ---------- */
