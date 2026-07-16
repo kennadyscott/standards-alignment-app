@@ -350,6 +350,20 @@ function mergeServerState(s) {
   } catch { /* server without /api/state — localStorage only */ }
 }
 
+/* Drop decisions whose link no longer exists — a standard or a whole grade left the system.
+   They're inert, but the localStorage mirror merges local-only keys back up on every save,
+   so without this they resurrect forever and the state file never stops growing. Only runs
+   once the link set is known-good: if links.json failed to load we'd otherwise wipe
+   everything. */
+function pruneOrphanDecisions() {
+  if (!state.links.length) return 0;
+  const ids = new Set(state.links.map(l => l.id));
+  const dead = Object.keys(state.decisions).filter(k => !ids.has(k));
+  dead.forEach(k => delete state.decisions[k]);
+  if (dead.length) { mirrorLocal(); pushState(); }
+  return dead.length;
+}
+
 function saveDecisions() { pushState(); }
 function saveManual() { pushState(); }
 function saveNoAlign() { pushState(); }
@@ -1812,7 +1826,12 @@ function init() {
   });
   document.getElementById('exportBtn').addEventListener('click', exportData);
 
-  Promise.all([loadData(), loadPersisted()]).then(renderAll);
+  // Prune before the first render: both the links and the reviewer's decisions must be in
+  // hand to tell an orphan from a not-yet-loaded link.
+  Promise.all([loadData(), loadPersisted()]).then(() => {
+    pruneOrphanDecisions();
+    renderAll();
+  });
 }
 
 init();
