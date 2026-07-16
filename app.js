@@ -130,6 +130,7 @@ const state = {
   cms: {},                  // `${state}:${subject}:${code}` -> true (standard is loaded in the CMS)
   severed: {},              // `${keyA}||${keyB}` -> true (override: not aligned despite a shared anchor)
   crossOk: {},              // `${keyA}||${keyB}` -> true (cross-grade accepted: passages may cross it)
+  setPush: {},              // `${setId}||${alignedKey}` -> 'pushed' | 'dismissed' (per-alignment: send this passage to that state/grade's input, or keep it out)
   setCms: {},               // `${setId}|${state}:${grade}` -> true (developed in the CMS for that grade)
   setDismiss: {},           // `${setId}|${state}:${grade}` -> true (this passage doesn't belong in that grade)
   sets: [],                 // passage sets
@@ -153,6 +154,7 @@ const LS_NOALIGN = 'sa_noalign_v1';
 const LS_CMS = 'sa_cms_v1';
 const LS_SEVERED = 'sa_severed_v1';
 const LS_CROSSOK = 'sa_crossok_v1';
+const LS_SETPUSH = 'sa_setpush_v1';
 const LS_SETCMS = 'sa_setcms_v1';
 const LS_SETDISMISS = 'sa_setdismiss_v1';
 
@@ -167,6 +169,7 @@ function loadLocal() {
   state.cms = readLS(LS_CMS, {});
   state.severed = readLS(LS_SEVERED, {});
   state.crossOk = readLS(LS_CROSSOK, {});
+  state.setPush = readLS(LS_SETPUSH, {});
   state.setCms = readLS(LS_SETCMS, {});
   state.setDismiss = readLS(LS_SETDISMISS, {});
 }
@@ -177,6 +180,7 @@ function mirrorLocal() {
   localStorage.setItem(LS_CMS, JSON.stringify(state.cms));
   localStorage.setItem(LS_SEVERED, JSON.stringify(state.severed));
   localStorage.setItem(LS_CROSSOK, JSON.stringify(state.crossOk));
+  localStorage.setItem(LS_SETPUSH, JSON.stringify(state.setPush));
   localStorage.setItem(LS_SETCMS, JSON.stringify(state.setCms));
   localStorage.setItem(LS_SETDISMISS, JSON.stringify(state.setDismiss));
   localStorage.setItem(LS_SETS, JSON.stringify(state.sets));
@@ -192,6 +196,7 @@ function stateBody() {
     cms: state.cms,
     severed: state.severed,
     crossOk: state.crossOk,
+    setPush: state.setPush,
     setCms: state.setCms,
     setDismiss: state.setDismiss,
     sets: state.sets,
@@ -331,6 +336,7 @@ function mergeServerState(s) {
       cms: { ...state.cms, ...(s.cms || {}) },
       severed: { ...state.severed, ...(s.severed || {}) },
       crossOk: { ...state.crossOk, ...(s.crossOk || {}) },
+      setPush: { ...state.setPush, ...(s.setPush || {}) },
       setCms: { ...state.setCms, ...(s.setCms || {}) },
       setDismiss: { ...state.setDismiss, ...(s.setDismiss || {}) },
       sets: dedupeById([...(s.sets || []), ...state.sets]),
@@ -341,6 +347,7 @@ function mergeServerState(s) {
     state.cms = merged.cms;
     state.severed = merged.severed;
     state.crossOk = merged.crossOk;
+    state.setPush = merged.setPush;
     state.setCms = merged.setCms;
     state.setDismiss = merged.setDismiss;
     state.sets = merged.sets;
@@ -537,6 +544,27 @@ function toast(msg) {
   toastTimer = setTimeout(() => t.classList.remove('show'), 1800);
 }
 
+/* A toast that offers to undo the action for 15 seconds. */
+let undoTimer;
+function toastUndo(msg, undoFn) {
+  const t = document.getElementById('toast');
+  clearTimeout(toastTimer);
+  clearTimeout(undoTimer);
+  t.innerHTML = '';
+  t.append(document.createTextNode(msg + '  '));
+  const btn = document.createElement('button');
+  btn.className = 'toast-undo';
+  btn.textContent = 'Undo';
+  btn.addEventListener('click', () => {
+    clearTimeout(undoTimer);
+    t.classList.remove('show');
+    undoFn();
+  });
+  t.append(btn);
+  t.classList.add('show');
+  undoTimer = setTimeout(() => t.classList.remove('show'), 15000);
+}
+
 function bindSeg(id, key, onChange) {
   const seg = document.getElementById(id);
   seg.addEventListener('click', e => {
@@ -704,10 +732,8 @@ function alignedCard(sel, hit) {
         <span class="conf-chip">confidence: ${esc(link.confidence || '—')}</span>
         ${crossGradeChip(sel, std)}
         ${link.rationale ? `<div class="rationale"><b>Why:</b> ${esc(link.rationale)}</div>` : ''}
-        ${isCrossGrade(sel, std)
-          ? crossGradeControls(sel, std)
-          : `<button class="act-btn reject" data-act="sever" data-id="${esc(severKey(keyOf(sel), keyOf(std)))}"
-              title="These run through the same Ohio standard but are not actually aligned">✂ Not aligned</button>`}
+        <button class="act-btn reject" data-act="sever" data-id="${esc(severKey(keyOf(sel), keyOf(std)))}"
+          title="These run through the same Ohio standard but are not actually aligned">✂ Not aligned</button>
       </div>
     </div>`;
 }
@@ -744,8 +770,6 @@ function linkCard(l) {
       ${siblings.length ? `<div class="member-peers"><b>Approving also aligns it to:</b> ${siblings.map(p =>
         `<span class="chip">${STATE_NAMES[p.state]} ${esc(p.code)} · G${esc(p.grade)}</span>`).join(' ')}
         <span class="chip chip-concept">no extra review — they share this Ohio standard</span></div>` : ''}
-      ${st === 'approved' && isCrossGrade(oh, other)
-        ? `<div class="member-peers"><b>Grade placement:</b> ${crossGradeControls(oh, other)}</div>` : ''}
       <div class="review-foot">
         <span class="conf-chip">confidence: ${esc(l.confidence || '—')}</span>
         ${crossGradeChip(oh, other)}
@@ -1576,33 +1600,79 @@ function renderSetSide() {
     return;
   }
 
-  const hits = alignedTo(std);
+  // Only approved alignments within ±1 grade (ELAR: same grade) are candidates to push —
+  // beyond that the passage doesn't belong in the other grade.
+  const hits = alignedTo(std).filter(h => withinGradeSpan(std, h.std, std.subject));
   const pending = linksFor(std).filter(l => statusOf(l) === 'pending' && linkWithinSpan(l)).length;
 
-  // One block per other state — scales to however many states are loaded.
+  // One block per other state. Each aligned standard is a review item: push the passage
+  // into that state/grade's Passage Input list, or dismiss it.
   otherStates(std.state).forEach(os => {
     const inState = hits.filter(h => h.std.state === os);
-    html += `<div class="side-block"><div class="align-mini-title">${STATE_NAMES[os]} — approved</div>`;
+    html += `<div class="side-block"><div class="align-mini-title">${STATE_NAMES[os]} — for review</div>`;
     if (inState.length) {
-      html += inState.map(h => `<div class="side-align-item">
-        <div class="align-mini-item">
-          <span class="align-mini-code">${esc(h.std.code)}</span>
-          <span class="chip">G${esc(h.std.grade)}</span>
-          ${crossGradeChip(std, h.std)}
-          ${cmsChip(h.std)}
-        </div>
-        <div class="align-mini-desc">${esc(h.std.description)}</div>
-      </div>`).join('');
+      html += inState.map(h => {
+        const pk = pushKey(s.id, h.std);
+        const st = state.setPush[pk];
+        return `<div class="side-align-item">
+          <div class="align-mini-item">
+            <span class="align-mini-code">${esc(h.std.code)}</span>
+            <span class="chip">G${esc(h.std.grade)}</span>
+            ${crossGradeChip(std, h.std)}
+          </div>
+          <div class="align-mini-desc">${esc(h.std.description)}</div>
+          <div class="push-row">
+            ${st === 'pushed'
+              ? `<span class="status-chip approved">✓ Pushed to Input</span>
+                 <button class="act-btn reset" data-push="clear|${esc(pk)}">Undo</button>`
+              : st === 'dismissed'
+                ? `<span class="status-chip rejected">Dismissed</span>
+                   <button class="act-btn reset" data-push="clear|${esc(pk)}">Undo</button>`
+                : `<button class="act-btn approve" data-push="push|${esc(pk)}">↗ Push for Input</button>
+                   <button class="act-btn reject" data-push="dismiss|${esc(pk)}">Dismiss</button>`}
+          </div>
+        </div>`;
+      }).join('');
     } else if (isNoAlign(std)) {
       html += `<div class="noalign-inline">🚫 No Alignment Possible — reviewed, no ${STATE_NAMES[os]} equivalent.</div>`;
     } else {
-      html += `<div class="align-mini-empty">Nothing approved yet${pending ? ` — ${pending} membership${pending > 1 ? 's' : ''} pending in the Review Queue` : ''}.</div>`;
+      html += `<div class="align-mini-empty">Nothing approved within one grade yet${pending ? ` — ${pending} draft${pending > 1 ? 's' : ''} pending in the Review Queue` : ''}.</div>`;
     }
     html += `</div>`;
   });
 
   panel.innerHTML = html;
   wireCmsChips(panel);
+  wirePushRows(panel);
+}
+
+// A push decision is per (passage set, aligned standard). The standard key carries its
+// state, grade and code, which is exactly what Passage Input needs.
+function pushKey(setId, otherStd) { return `${setId}||${keyOf(otherStd)}`; }
+
+function wirePushRows(panel) {
+  panel.querySelectorAll('[data-push]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const [act, pk] = btn.dataset.push.split('|');
+      const prev = state.setPush[pk];
+      if (act === 'clear') delete state.setPush[pk];
+      else state.setPush[pk] = act === 'push' ? 'pushed' : 'dismissed';
+      pushState();
+      renderSetSide();
+      if (act === 'push') {
+        toastUndo('Pushed to Passage Input', () => { restorePush(pk, prev); });
+      } else if (act === 'dismiss') {
+        toastUndo('Dismissed — removed from the list', () => { restorePush(pk, prev); });
+      } else {
+        toast('Reset to review');
+      }
+    });
+  });
+}
+function restorePush(pk, prev) {
+  if (prev) state.setPush[pk] = prev; else delete state.setPush[pk];
+  pushState();
+  renderSetSide();
 }
 
 function cmsChip(std) {
@@ -1659,11 +1729,13 @@ function setServes(s) {
   }
 
   const out = [];
+  // The passage's own tagged state + grade — always listed; it was built for this.
   out.push({ state: std.state, grade: String(std.grade), via: null, unlisted: false, std });
+  // An aligned state/grade populates only once the reviewer pushes it from the side panel,
+  // and only when the alignment is approved and within ±1 grade (ELAR: same grade).
   alignedTo(std).forEach(h => {
-    const cross = isCrossGrade(std, h.std);
-    // A cross-grade alignment carries passages only once it's been assigned.
-    if (cross && !isCrossAssigned(keyOf(std), keyOf(h.std))) return;
+    if (!withinGradeSpan(std, h.std, std.subject)) return;
+    if (state.setPush[pushKey(s.id, h.std)] !== 'pushed') return;
     out.push({
       state: h.std.state, grade: String(h.std.grade), via: h.via || std,
       unlisted: String(h.std.grade) !== String(native),

@@ -670,3 +670,11 @@ body {
   pointer-events: none;
 }
 .toast.show { transform: translateX(-50%) translateY(0); }
+.toast:has(.toast-undo) { pointer-events: auto; }
+.toast-undo {
+  font: inherit; font-weight: 700; color: #fff;
+  background: rgba(255,255,255,.18); border: 0; cursor: pointer;
+  padding: 4px 12px; border-radius: 7px; margin-left: 4px;
+}
+.toast-undo:hover { background: rgba(255,255,255,.3); }
+.push-row { display: flex; gap: 8px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
