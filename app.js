@@ -592,6 +592,22 @@ function pairSide(std, stateCode) {
     </div>`;
 }
 
+/* How far apart two standards' grades are. Beyond one grade the alignment isn't worth a
+   reviewer's time — word choice and expectation shift too far for a Grade 3 standard and
+   a Grade 6 one to be usefully "the same content". Drafts outside the span are held back
+   from the queue rather than rejected: the rule is about what's worth showing, so if it
+   ever loosens they come back untouched. Decisions already made are never revoked. */
+const MAX_GRADE_SPAN = 1;
+function gradeNum(g) { return g === 'K' ? 0 : parseInt(g, 10); }
+function gradeSpan(a, b) {
+  if (!a || !b || a.grade === 'All' || b.grade === 'All') return 0;
+  return Math.abs(gradeNum(a.grade) - gradeNum(b.grade));
+}
+function withinGradeSpan(a, b) { return gradeSpan(a, b) <= MAX_GRADE_SPAN; }
+function linkWithinSpan(l) {
+  return withinGradeSpan(state.byKey.get(anchorKeyOf(l)), state.byKey.get(linkedKeyOf(l)));
+}
+
 function isCrossGrade(a, b) { return a && b && String(a.grade) !== String(b.grade); }
 
 // Amber chip when the two aligned standards sit at different grades — the states sequence
@@ -699,7 +715,7 @@ function renderDetail() {
   content.classList.remove('hidden');
 
   const hits = alignedTo(std);
-  const pending = linksFor(std).filter(l => statusOf(l) === 'pending');
+  const pending = linksFor(std).filter(l => statusOf(l) === 'pending' && linkWithinSpan(l));
   const approved = linksFor(std).filter(l => statusOf(l) === 'approved');
   const naKey = keyOf(std);
 
@@ -865,7 +881,10 @@ function reviewScope() {
     if (l.subject !== revSubject) return false;
     const oh = state.byKey.get(anchorKeyOf(l));
     if (!oh || String(oh.grade) !== String(revGrade)) return false;
-    return revState === 'ALL' || l.state === revState;
+    if (revState !== 'ALL' && l.state !== revState) return false;
+    // More than one grade apart isn't worth reviewing — unless it's already decided, in
+    // which case it stays visible so the decision can be found and undone.
+    return linkWithinSpan(l) || !!state.decisions[l.id];
   });
 }
 
@@ -914,7 +933,8 @@ function renderReview() {
 }
 
 function renderBadge() {
-  const pending = state.links.filter(l => statusOf(l) === 'pending').length;
+  // Count only drafts the reviewer will actually be shown — out-of-span ones are held back.
+  const pending = state.links.filter(l => statusOf(l) === 'pending' && linkWithinSpan(l)).length;
   document.getElementById('pendingBadge').textContent = pending;
 }
 
@@ -1025,14 +1045,14 @@ function tagAlignHtml(tag) {
   const std = tagStd(tag);
   if (!std) return '';
   const hits = alignedTo(std);
-  const pending = membershipsFor(std).filter(m => statusOf(m) === 'pending').length;
+  const pending = linksFor(std).filter(l => statusOf(l) === 'pending' && linkWithinSpan(l)).length;
   if (!hits.length) {
     if (isNoAlign(std)) {
       return `<div class="align-mini noalign"><div class="align-mini-title">Aligned standards — other states</div>
         <div class="align-mini-item"><b>🚫 No Alignment Possible</b><span class="align-mini-desc">Reviewed — nothing aligns to this.</span></div></div>`;
     }
     return `<div class="align-mini"><div class="align-mini-title">Approved aligned standards — other states</div>
-      <div class="align-mini-empty">No approved alignment yet${pending ? ` — ${pending} membership${pending > 1 ? 's' : ''} pending in the Review Queue` : ''}.</div></div>`;
+      <div class="align-mini-empty">No approved alignment yet${pending ? ` — ${pending} draft${pending > 1 ? 's' : ''} pending in the Review Queue` : ''}.</div></div>`;
   }
   const inner = otherStates(std.state).map(os => {
     const inState = hits.filter(h => h.std.state === os);
@@ -1503,7 +1523,7 @@ function renderSetSide() {
   }
 
   const hits = alignedTo(std);
-  const pending = linksFor(std).filter(l => statusOf(l) === 'pending').length;
+  const pending = linksFor(std).filter(l => statusOf(l) === 'pending' && linkWithinSpan(l)).length;
 
   // One block per other state — scales to however many states are loaded.
   otherStates(std.state).forEach(os => {
