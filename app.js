@@ -131,6 +131,7 @@ const state = {
   severed: {},              // `${keyA}||${keyB}` -> true (override: not aligned despite a shared anchor)
   crossOk: {},              // `${keyA}||${keyB}` -> true (cross-grade accepted: passages may cross it)
   setPush: {},              // `${setId}||${alignedKey}` -> 'pushed' | 'dismissed' (per-alignment: send this passage to that state/grade's input, or keep it out)
+  setStateStd: {},          // `${setId}|${state}:${grade}` -> code (the standard this passage is assigned to in that state — overrides the auto-aligned one)
   setCms: {},               // `${setId}|${state}:${grade}` -> true (developed in the CMS for that grade)
   setDismiss: {},           // `${setId}|${state}:${grade}` -> true (this passage doesn't belong in that grade)
   sets: [],                 // passage sets
@@ -139,7 +140,7 @@ const state = {
     expState: 'OH', expSubject: 'social_studies', expGrade: '4',
     selectedKey: null, search: '',
     revSubject: 'social_studies', revGrade: '4', revStatus: 'pending', revState: 'ALL',
-    inState: 'OH', inGrade: '4',
+    inState: 'OH', inGrade: '4', overrideKey: null,
     currentSetId: null, openPicker: null,
   },
 };
@@ -155,6 +156,7 @@ const LS_CMS = 'sa_cms_v1';
 const LS_SEVERED = 'sa_severed_v1';
 const LS_CROSSOK = 'sa_crossok_v1';
 const LS_SETPUSH = 'sa_setpush_v1';
+const LS_SETSTATESTD = 'sa_setstatestd_v1';
 const LS_SETCMS = 'sa_setcms_v1';
 const LS_SETDISMISS = 'sa_setdismiss_v1';
 
@@ -170,6 +172,7 @@ function loadLocal() {
   state.severed = readLS(LS_SEVERED, {});
   state.crossOk = readLS(LS_CROSSOK, {});
   state.setPush = readLS(LS_SETPUSH, {});
+  state.setStateStd = readLS(LS_SETSTATESTD, {});
   state.setCms = readLS(LS_SETCMS, {});
   state.setDismiss = readLS(LS_SETDISMISS, {});
 }
@@ -181,6 +184,7 @@ function mirrorLocal() {
   localStorage.setItem(LS_SEVERED, JSON.stringify(state.severed));
   localStorage.setItem(LS_CROSSOK, JSON.stringify(state.crossOk));
   localStorage.setItem(LS_SETPUSH, JSON.stringify(state.setPush));
+  localStorage.setItem(LS_SETSTATESTD, JSON.stringify(state.setStateStd));
   localStorage.setItem(LS_SETCMS, JSON.stringify(state.setCms));
   localStorage.setItem(LS_SETDISMISS, JSON.stringify(state.setDismiss));
   localStorage.setItem(LS_SETS, JSON.stringify(state.sets));
@@ -197,6 +201,7 @@ function stateBody() {
     severed: state.severed,
     crossOk: state.crossOk,
     setPush: state.setPush,
+    setStateStd: state.setStateStd,
     setCms: state.setCms,
     setDismiss: state.setDismiss,
     sets: state.sets,
@@ -337,6 +342,7 @@ function mergeServerState(s) {
       severed: { ...state.severed, ...(s.severed || {}) },
       crossOk: { ...state.crossOk, ...(s.crossOk || {}) },
       setPush: { ...state.setPush, ...(s.setPush || {}) },
+      setStateStd: { ...state.setStateStd, ...(s.setStateStd || {}) },
       setCms: { ...state.setCms, ...(s.setCms || {}) },
       setDismiss: { ...state.setDismiss, ...(s.setDismiss || {}) },
       sets: dedupeById([...(s.sets || []), ...state.sets]),
@@ -348,6 +354,7 @@ function mergeServerState(s) {
     state.severed = merged.severed;
     state.crossOk = merged.crossOk;
     state.setPush = merged.setPush;
+    state.setStateStd = merged.setStateStd;
     state.setCms = merged.setCms;
     state.setDismiss = merged.setDismiss;
     state.sets = merged.sets;
@@ -1169,8 +1176,9 @@ function tagChipHtml(tag, section, index, showAlign = true) {
           <button class="tag-x" data-untag="${section}:${index}" title="Remove tag">✕</button>
         </span>
         ${std ? `<span class="tag-desc">${esc(std.description.slice(0, 110))}${std.description.length > 110 ? '…' : ''}</span>` : ''}
-      </div>
-      ${showAlign ? tagAlignHtml(tag) : ''}`;
+      </div>`;
+    // Cross-state alignments are intentionally NOT shown here — the Master Passage List
+    // stays clean; the aligned state standard is shown (and assigned) in State Lists.
   }
   return `<button class="act-btn tag-open" data-pick="${section}:${index}">＋ Tag standard</button>`;
 }
@@ -1629,80 +1637,38 @@ function renderSetSide() {
     return;
   }
 
-  // Only approved alignments within ±1 grade (ELAR: same grade) are candidates to push —
-  // beyond that the passage doesn't belong in the other grade.
+  // The Master Passage List stays clean: just which states this passage reaches, at what
+  // grade. The aligned state standard — and the assign/override decision — lives in State
+  // Lists, where each state's list is reviewed on its own.
   const hits = alignedTo(std).filter(h => withinGradeSpan(std, h.std, std.subject));
-  const pending = linksFor(std).filter(l => statusOf(l) === 'pending' && linkWithinSpan(l)).length;
-
-  // One block per other state. Each aligned standard is a review item: push the passage
-  // into that state/grade's Passage Input list, or dismiss it.
-  otherStates(std.state).forEach(os => {
+  const reached = otherStates(std.state).map(os => {
     const inState = hits.filter(h => h.std.state === os);
-    html += `<div class="side-block"><div class="align-mini-title">${STATE_NAMES[os]} — for review</div>`;
-    if (inState.length) {
-      html += inState.map(h => {
-        const pk = pushKey(s.id, h.std);
-        const st = state.setPush[pk];
-        return `<div class="side-align-item">
-          <div class="align-mini-item">
-            <span class="align-mini-code">${esc(h.std.code)}</span>
-            <span class="chip">G${esc(h.std.grade)}</span>
-            ${crossGradeChip(std, h.std)}
-          </div>
-          <div class="align-mini-desc">${esc(h.std.description)}</div>
-          <div class="push-row">
-            ${st === 'pushed'
-              ? `<span class="status-chip approved">✓ Pushed to Input</span>
-                 <button class="act-btn reset" data-push="clear|${esc(pk)}">Undo</button>`
-              : st === 'dismissed'
-                ? `<span class="status-chip rejected">Dismissed</span>
-                   <button class="act-btn reset" data-push="clear|${esc(pk)}">Undo</button>`
-                : `<button class="act-btn approve" data-push="push|${esc(pk)}">↗ Push for Input</button>
-                   <button class="act-btn reject" data-push="dismiss|${esc(pk)}">Dismiss</button>`}
-          </div>
-        </div>`;
-      }).join('');
-    } else if (isNoAlign(std)) {
-      html += `<div class="noalign-inline">🚫 No Alignment Possible — reviewed, no ${STATE_NAMES[os]} equivalent.</div>`;
-    } else {
-      html += `<div class="align-mini-empty">Nothing approved within one grade yet${pending ? ` — ${pending} draft${pending > 1 ? 's' : ''} pending in the Review Queue` : ''}.</div>`;
-    }
-    html += `</div>`;
-  });
+    const grades = [...new Set(inState.map(h => h.std.grade))].sort();
+    return { os, count: inState.length, grades };
+  }).filter(r => r.count);
+
+  if (reached.length) {
+    html += `<div class="side-block">
+      <div class="align-mini-title">Populates these state lists</div>
+      ${reached.map(r => `<div class="align-mini-item">
+        <span class="chip">${STATE_NAMES[r.os]}</span>
+        ${r.grades.map(g => `<span class="chip">G${esc(g)}</span>`).join('')}
+      </div>`).join('')}
+      <div class="align-mini-desc" style="margin-top:8px">Open <b>State Lists</b> to assign or override the aligned standard for each.</div>
+    </div>`;
+  } else if (isNoAlign(std)) {
+    html += `<div class="side-block"><div class="noalign-inline">🚫 No Alignment Possible — this passage stays in ${STATE_NAMES[std.state]} only.</div></div>`;
+  } else {
+    html += `<div class="side-block"><div class="align-mini-empty">No approved alignment within one grade yet — this passage is in ${STATE_NAMES[std.state]} only until its primary standard is aligned.</div></div>`;
+  }
 
   panel.innerHTML = html;
   wireCmsChips(panel);
-  wirePushRows(panel);
 }
 
 // A push decision is per (passage set, aligned standard). The standard key carries its
 // state, grade and code, which is exactly what Passage Input needs.
 function pushKey(setId, otherStd) { return `${setId}||${keyOf(otherStd)}`; }
-
-function wirePushRows(panel) {
-  panel.querySelectorAll('[data-push]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const [act, pk] = btn.dataset.push.split('|');
-      const prev = state.setPush[pk];
-      if (act === 'clear') delete state.setPush[pk];
-      else state.setPush[pk] = act === 'push' ? 'pushed' : 'dismissed';
-      pushState();
-      renderSetSide();
-      if (act === 'push') {
-        toastUndo('Pushed to Passage Input', () => { restorePush(pk, prev); });
-      } else if (act === 'dismiss') {
-        toastUndo('Dismissed — removed from the list', () => { restorePush(pk, prev); });
-      } else {
-        toast('Reset to review');
-      }
-    });
-  });
-}
-function restorePush(pk, prev) {
-  if (prev) state.setPush[pk] = prev; else delete state.setPush[pk];
-  pushState();
-  renderSetSide();
-}
 
 function cmsChip(std) {
   const key = keyOf(std);
@@ -1804,32 +1770,57 @@ function setsForGrade(st, grade) {
   return rows;
 }
 
+// The standard this passage is assigned to in a given state — the reviewer's override if
+// they set one, otherwise the auto-aligned standard the row came in on.
+function assignedStateStd(s, hit, st, grade) {
+  const code = state.setStateStd[inputKey(s.id, st, grade)];
+  if (code && !hit.own && !hit.universal) {
+    return state.byKey.get(stdKey(st, hit.std.subject, code)) || hit.std;
+  }
+  return hit.std;
+}
+
 function inputCard(row, st, grade) {
   const { set: s, hit, category } = row;
   const k = inputKey(s.id, st, grade);
   const titles = s.passages.filter(p => p.title).map(p => p.title);
-  const tagged = [...s.questions, ...s.peerRevision].filter(q => q.standard).length;
-
-  // Source badge: how this passage reached this grade.
-  const source = hit.universal ? '<span class="chip chip-concept">◆ Universal — all states</span>'
-    : hit.own ? '<span class="chip">tagged directly</span>'
-    : `<span class="chip ${hit.unlisted ? 'chip-cross' : ''}">${hit.unlisted ? '⇄ from G' + esc(setNativeGrade(s)) : 'aligned'}</span>
-       ${hit.via ? `<span class="chip chip-concept">via ${STATE_NAMES[hit.via.state]} ${esc(hit.via.code)}</span>` : ''}`;
-
-  // own/universal rows have no alignment to push; they dismiss via setDismiss.
   const nativeRow = hit.own || hit.universal;
+  const assigned = assignedStateStd(s, hit, st, grade);
   const dismissAct = nativeRow ? `dismiss|${esc(k)}` : `pushdismiss|${esc(k)}`;
+  const overriding = state.ui.overrideKey === k;
+
+  // Just the aligned state standard for THIS state — the thing being assigned.
+  const stdLine = nativeRow
+    ? `<div class="concept-meta">${hit.universal
+        ? '<span class="chip chip-concept">◆ Universal — all states</span>'
+        : '<span class="chip">tagged directly</span>'}
+        <span class="chip">${esc(assigned.code)}</span></div>`
+    : `<div class="align-mini-item"><span class="align-mini-code">${esc(assigned.code)}</span>
+         <span class="chip">${STATE_NAMES[st]}</span><span class="chip">G${esc(assigned.grade)}</span>
+         ${state.setStateStd[k] ? '<span class="chip chip-warn">overridden</span>' : ''}</div>
+       <div class="align-mini-desc" style="margin:4px 0 8px">${esc(assigned.description)}</div>`;
+
   let actions;
-  if (category === 'cms') {
+  if (overriding) {
+    // Inline picker: any standard in this state at this grade (same subject as the alignment).
+    const opts = state.standards
+      .filter(x => x.state === st && x.subject === assigned.subject && String(x.grade) === String(grade))
+      .sort((a, b) => a.code.localeCompare(b.code));
+    actions = `<select class="ps-input" data-override="${esc(k)}" style="max-width:100%">
+        <option value="">Choose the ${STATE_NAMES[st]} Grade ${grade} standard…</option>
+        ${opts.map(x => `<option value="${esc(x.code)}" ${assigned.code === x.code ? 'selected' : ''}>${esc(x.code)} — ${esc(x.description.slice(0, 70))}${x.description.length > 70 ? '…' : ''}</option>`).join('')}
+      </select>
+      <button class="act-btn reset" data-iact="canceloverride|${esc(k)}">Cancel</button>`;
+  } else if (category === 'cms') {
     actions = `<span class="status-chip approved">✓ Developed in CMS</span>
        <button class="act-btn reset" data-iact="uncms|${esc(k)}">Undo</button>`;
   } else if (category === 'needs') {
-    // auto-populated, awaiting a call
-    actions = `<button class="act-btn approve" data-iact="approve|${esc(k)}">✓ Approve</button>
+    actions = `<button class="act-btn approve" data-iact="approve|${esc(k)}">✓ Assign</button>
+       ${nativeRow ? '' : `<button class="act-btn" data-iact="override|${esc(k)}">Override standard</button>`}
        <button class="act-btn reject" data-iact="${dismissAct}">✕ Dismiss</button>`;
   } else {
-    // aligned & confirmed — ready to develop
     actions = `<button class="act-btn approve" data-iact="cms|${esc(k)}">✓ Developed in CMS</button>
+       ${nativeRow ? '' : `<button class="act-btn" data-iact="override|${esc(k)}">Override</button>`}
        <button class="act-btn reject" data-iact="${dismissAct}" title="Remove from this grade">Dismiss</button>`;
   }
 
@@ -1838,13 +1829,9 @@ function inputCard(row, st, grade) {
       <div class="concept-head">
         <div class="concept-title">${esc(s.title || 'Untitled set')}</div>
         <div class="concept-desc">${titles.length ? esc(titles.join(' · ')) : `${s.passages.length} passage${s.passages.length !== 1 ? 's' : ''}, untitled`}</div>
-        <div class="concept-meta">
-          ${s.passageId ? `<span class="chip">ID ${esc(s.passageId)}</span>` : ''}
-          ${source}
-          <span class="chip">${esc(hit.std.code)}</span>
-          <span class="chip">${tagged} question${tagged === 1 ? '' : 's'} tagged</span>
-        </div>
+        ${s.passageId ? `<div class="concept-meta"><span class="chip">ID ${esc(s.passageId)}</span></div>` : ''}
       </div>
+      <div style="padding:10px 16px 0">${stdLine}</div>
       <div class="review-foot">${actions}</div>
     </div>`;
 }
@@ -1890,6 +1877,19 @@ function renderInput() {
       const card = el(inputCard(r, st, grade));
       card.querySelectorAll('[data-iact]').forEach(b =>
         b.addEventListener('click', () => handleInputAction(b.dataset.iact)));
+      const sel = card.querySelector('[data-override]');
+      if (sel) sel.addEventListener('change', e => {
+        if (!e.target.value) return;
+        const key = e.target.dataset.override;
+        state.setStateStd[key] = e.target.value;   // record the chosen standard
+        state.ui.overrideKey = null;
+        // overriding also assigns (approves) the passage into this state.
+        const [setId, sg] = [key.slice(0, key.indexOf('|')), key.slice(key.indexOf('|') + 1)];
+        const [stt, grd] = sg.split(':');
+        pushKeysFor(setId, stt, grd).forEach(pk => { state.setPush[pk] = 'pushed'; });
+        pushState(); renderInput();
+        toast(`Assigned to ${e.target.value}`);
+      });
       box.appendChild(card);
     });
   };
@@ -1908,6 +1908,8 @@ function handleInputAction(spec) {
   const key = spec.slice(cut + 1);
   const [setId, sg] = [key.slice(0, key.indexOf('|')), key.slice(key.indexOf('|') + 1)];
   const [stt, grd] = sg.split(':');
+  if (act === 'override') { state.ui.overrideKey = key; renderInput(); return; }
+  if (act === 'canceloverride') { state.ui.overrideKey = null; renderInput(); return; }
   if (act === 'cms') { state.setCms[key] = true; pushState(); renderInput(); toast('Marked developed in CMS'); }
   else if (act === 'uncms') { delete state.setCms[key]; pushState(); renderInput(); toast('CMS mark removed'); }
   else if (act === 'dismiss') {
