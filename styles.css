@@ -240,6 +240,15 @@ body {
   font-size: 12.5px; color: #8a6508; background: var(--amber-soft);
   padding: 8px 16px; border-bottom: 1px solid var(--line);
 }
+.concept-suggest {
+  font-size: 12.5px; color: #1e6e42; background: #e9f7ef;
+  padding: 10px 16px; border-bottom: 1px solid var(--line);
+}
+.concept-suggest .suggest-text {
+  color: var(--ink); background: var(--panel);
+  border: 1px solid var(--line); border-radius: 8px;
+  padding: 8px 10px; margin: 6px 0 8px;
+}
 
 /* Concept spine */
 .concept-head { padding: 14px 16px; border-bottom: 1px solid var(--line); background: #faf9ff; }

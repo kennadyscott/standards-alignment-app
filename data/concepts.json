@@ -35,7 +35,12 @@
     "subject": "social_studies",
     "gradeBand": "K-2",
     "source": "seed",
-    "seededFrom": "ss2-13"
+    "seededFrom": "ss2-13",
+    "mergeCandidates": [
+      "c-purposes-laws-serve-in-a-community"
+    ],
+    "mergeSurvivor": "c-purposes-laws-serve-in-a-community",
+    "mergeWhy": "'Why groups and communities need rules and laws at all' and 'what laws accomplish for a community' are the same question answered at two vocabulary levels, and the K-2 framing is not a separate concept because concepts are grade-agnostic; the survivor's test is stronger because it enumerates the purposes (order, security, public services, protection of rights) and explicitly excludes standards that only assert laws exist (see report: close call)."
   },
   {
     "id": "c-how-rules-are-made-and-why",
@@ -64,7 +69,12 @@
     "subject": "social_studies",
     "gradeBand": "K-2",
     "source": "seed",
-    "seededFrom": "ss2-17"
+    "seededFrom": "ss2-17",
+    "mergeCandidates": [
+      "c-currency-enables-exchange-in-trade"
+    ],
+    "mergeSurvivor": "c-money-as-medium-of-exchange",
+    "mergeWhy": "Both reduce to 'exchange runs on money rather than direct barter' — the survivor states it plainly and c-currency-enables-exchange-in-trade is that same proposition at a higher grade, as its own curator note already suspects; its extra cross-border currency-conversion clause is a genuinely different idea that belongs in its own concept, not as a reason to keep two barter-vs-money tests that both admit the same standards."
   },
   {
     "id": "c-people-earn-income-by-working",
@@ -77,8 +87,11 @@
     "needsReview": true,
     "note": "Duplicate concept: seed-008 and seed-009 state the same idea and carry identical title and description. Both pair the same coarse standard about earning income by working with a counterpart standard; seed-009's counterpart extends into saving and spending choices, but that extension is not shared ground, so it does not change the concept. Merge candidates for the curation pass.",
     "mergeCandidates": [
+      "c-earning-income-through-labor",
       "c-people-earn-income-by-working-2"
-    ]
+    ],
+    "mergeSurvivor": "c-people-earn-income-by-working",
+    "mergeWhy": "The first two are byte-identical twins and the third is the same claim restated at 3-5 ('people earn income by selling their labor'); survivor has the cleanest test, and the third's extra human-capital clause ('skills and experience change what that labor earns') is a genuinely different idea that should be split into its own concept rather than kept as a reason to hold this duplicate open."
   },
   {
     "id": "c-people-earn-income-by-working-2",
@@ -91,8 +104,11 @@
     "needsReview": true,
     "note": "Duplicate concept: seed-008 and seed-009 state the same idea and carry identical title and description. Both pair the same coarse standard about earning income by working with a counterpart standard; seed-009's counterpart extends into saving and spending choices, but that extension is not shared ground, so it does not change the concept. Merge candidates for the curation pass.",
     "mergeCandidates": [
+      "c-earning-income-through-labor",
       "c-people-earn-income-by-working"
-    ]
+    ],
+    "mergeSurvivor": "c-people-earn-income-by-working",
+    "mergeWhy": "The first two are byte-identical twins and the third is the same claim restated at 3-5 ('people earn income by selling their labor'); survivor has the cleanest test, and the third's extra human-capital clause ('skills and experience change what that labor earns') is a genuinely different idea that should be split into its own concept rather than kept as a reason to hold this duplicate open."
   },
   {
     "id": "c-geography-shapes-economic-activity",
@@ -119,7 +135,12 @@
     "subject": "social_studies",
     "gradeBand": "3-5",
     "source": "seed",
-    "seededFrom": "ss3-05"
+    "seededFrom": "ss3-05",
+    "mergeCandidates": [
+      "c-civic-participation-and-responsibility"
+    ],
+    "mergeSurvivor": "c-citizens-rights-and-responsibilities",
+    "mergeWhy": "c-civic-participation-and-responsibility's own curator note concedes it is a bridge whose Georgia member already passes the survivor's test ('the duties they owe in return') and whose Ohio member passes neither cleanly; the survivor is the single idea, has 13 members to 2, and the unmatched participation-pays-off half should be rejected rather than preserved as a duplicate."
   },
   {
     "id": "c-purposes-laws-serve-in-a-community",
@@ -128,7 +149,12 @@
     "subject": "social_studies",
     "gradeBand": "K-5",
     "source": "seed",
-    "seededFrom": "ss3-07"
+    "seededFrom": "ss3-07",
+    "mergeCandidates": [
+      "c-the-need-for-rules-and-laws"
+    ],
+    "mergeSurvivor": "c-purposes-laws-serve-in-a-community",
+    "mergeWhy": "'Why groups and communities need rules and laws at all' and 'what laws accomplish for a community' are the same question answered at two vocabulary levels, and the K-2 framing is not a separate concept because concepts are grade-agnostic; the survivor's test is stronger because it enumerates the purposes (order, security, public services, protection of rights) and explicitly excludes standards that only assert laws exist (see report: close call)."
   },
   {
     "id": "c-incentives-influence-choices",
@@ -151,7 +177,9 @@
     "note": "Duplicate concept: seed-015 and seed-016 state the same idea and carry identical title and description. Both pair the same coarse scarcity-and-trade-off standard with an opportunity-cost counterpart; seed-016's counterpart applies it to a saving-or-spending choice, which is a context, not a different concept. Merge candidates for the curation pass. Also adjacent to seed-020 and seed-031, which I judged genuinely distinct (cost-benefit weighing, and consequences over time) rather than duplicates — worth a human look.",
     "mergeCandidates": [
       "c-scarcity-choice-and-opportunity-cost-2"
-    ]
+    ],
+    "mergeSurvivor": "c-scarcity-choice-and-opportunity-cost",
+    "mergeWhy": "Byte-identical title and description; the twin's counterpart merely applies the idea to a saving-or-spending choice, which is a context and not a different concept, and the survivor carries 4 members to 2."
   },
   {
     "id": "c-scarcity-choice-and-opportunity-cost-2",
@@ -165,7 +193,9 @@
     "note": "Duplicate concept: seed-015 and seed-016 state the same idea and carry identical title and description. Both pair the same coarse scarcity-and-trade-off standard with an opportunity-cost counterpart; seed-016's counterpart applies it to a saving-or-spending choice, which is a context, not a different concept. Merge candidates for the curation pass.",
     "mergeCandidates": [
       "c-scarcity-choice-and-opportunity-cost"
-    ]
+    ],
+    "mergeSurvivor": "c-scarcity-choice-and-opportunity-cost",
+    "mergeWhy": "Byte-identical title and description; the twin's counterpart merely applies the idea to a saving-or-spending choice, which is a context and not a different concept, and the survivor carries 4 members to 2."
   },
   {
     "id": "c-producers-and-consumers-interdepend",
@@ -195,7 +225,9 @@
     "seededFrom": "ss3-15",
     "mergeCandidates": [
       "c-markets-exchange-goods-and-services-2"
-    ]
+    ],
+    "mergeSurvivor": "c-markets-exchange-goods-and-services",
+    "mergeWhy": "Byte-identical title and description; survivor is the original and carries more members (3 vs 2)."
   },
   {
     "id": "c-weighing-costs-and-benefits",
@@ -213,7 +245,10 @@
     "subject": "social_studies",
     "gradeBand": "3-5",
     "source": "seed",
-    "seededFrom": "ss4-01"
+    "seededFrom": "ss4-01",
+    "needsReview": true,
+    "suggestedDescription": "A standard belongs here if it asks students to trace the British taxes, acts, protests, and incidents of the 1760s and 1770s — such as the Stamp Act, the Boston Massacre, and the Boston Tea Party — that turned the grievances of the thirteen American colonies into a united movement against British rule.",
+    "note": "UNDER-SPECIFIED: Says 'colonial grievances' against 'imperial rule' in the abstract, never naming the British colonies or the 1760s-70s. Texas standards on colonists' grievances against Mexico before 1836 pass this test literally, as would any colonial independence movement, producing the same false 1776/1836 alignment as the declaration concept one step upstream."
   },
   {
     "id": "c-course-and-outcome-of-independence-war",
@@ -222,7 +257,10 @@
     "subject": "social_studies",
     "gradeBand": "3-5",
     "source": "seed",
-    "seededFrom": "ss4-02"
+    "seededFrom": "ss4-02",
+    "needsReview": true,
+    "suggestedDescription": "A standard belongs here if it asks students to describe the major battles, campaigns, or turning points of the American Revolutionary War of 1775-1783 and explain why the thirteen colonies prevailed over Britain — not the course of some other people's war for independence.",
+    "note": "UNDER-SPECIFIED: Says 'a colonial war for independence' in the abstract. The Texas Revolution of 1835-36 (the Alamo, Goliad, San Jacinto) is a colonial war for independence against imperial rule and is taught explicitly in Texas grades 4 and 7, so it passes this test and would be falsely aligned to Ohio and Georgia standards about the American Revolutionary War. Same defect class as the declaration concept and equally live."
   },
   {
     "id": "c-declaration-of-independence-ideals",
@@ -231,7 +269,16 @@
     "subject": "social_studies",
     "gradeBand": "3-5",
     "source": "seed",
-    "seededFrom": "ss4-03"
+    "seededFrom": "ss4-03",
+    "mergeCandidates": [
+      "c-declaration-of-independence-1776",
+      "c-declaration-of-independence-1776-2"
+    ],
+    "mergeSurvivor": "c-declaration-of-independence-1776",
+    "mergeWhy": "All three are the same concept at two levels of specificity; the survivor names the 1776 document while c-declaration-of-independence-ideals says 'a declaration of independence' in the abstract, which Texas's 1836 Declaration of Independence passes literally and would falsely align — tradeoff: the abstract one is an approved seed carrying 6 reviewer-decided memberships against the survivor's 2, so all 6 must be re-tested against the tighter wording as part of the merge rather than carried over.",
+    "needsReview": true,
+    "suggestedDescription": "A standard belongs here if it asks students to explain the writing, structure, purpose, or founding ideals of the 1776 Declaration of Independence by which the thirteen American colonies broke from British rule — including how it answered tyranny and the abuse of power — and not a declaration of independence issued by some other people in some other era.",
+    "note": "UNDER-SPECIFIED: Says 'a declaration of independence' in the abstract, so the Texas Declaration of Independence of 1836 (Texas Essential Knowledge and Skills grades 4 and 7) passes the test literally and would be falsely aligned to Ohio and Georgia standards about the 1776 document — two unrelated events reported to a teacher as the same content. This is an approved seed carrying 6 memberships, so the false alignments are already live."
   },
   {
     "id": "c-first-amendment-freedoms",
@@ -243,7 +290,9 @@
     "seededFrom": "ss4-04",
     "mergeCandidates": [
       "c-first-amendment-freedoms-2"
-    ]
+    ],
+    "mergeSurvivor": "c-first-amendment-freedoms",
+    "mergeWhy": "Byte-identical title and description; survivor carries 6 members to the twin's 2, and 'the First Amendment' names its document unambiguously so no rewrite is needed."
   },
   {
     "id": "c-bill-of-rights-limits-government",
@@ -252,7 +301,15 @@
     "subject": "social_studies",
     "gradeBand": "3-5",
     "source": "seed",
-    "seededFrom": "ss4-05"
+    "seededFrom": "ss4-05",
+    "mergeCandidates": [
+      "c-us-bill-of-rights-limits-government"
+    ],
+    "mergeSurvivor": "c-us-bill-of-rights-limits-government",
+    "mergeWhy": "Same concept at two levels of specificity; the survivor names the ten amendments added to the U.S. Constitution in 1791 while the other says 'an enumerated bill of rights' and 'a constitution' in the abstract, which the Texas Bill of Rights (Art. I of the state constitution) and Georgia's state constitution pass literally — tradeoff: the abstract one is an approved seed with 7 memberships against the survivor's 2, so those 7 must be re-tested, and some state-constitution members will legitimately fall out (they belong with c-state-and-local-government-structure).",
+    "needsReview": true,
+    "suggestedDescription": "A standard belongs here if it asks students to explain how the Bill of Rights — the first ten amendments added to the U.S. Constitution in 1791 — protects individual rights by constraining what the national government may do, and why those limits were written into that document; a standard about a state's own constitutional bill of rights does not belong here.",
+    "note": "UNDER-SPECIFIED: Says 'an enumerated bill of rights' constrains 'a constitution' in the abstract. Nearly every state constitution contains a bill of rights — Texas's is Article I of its 1876 constitution and Georgia teaches its own state constitution in SS8CG1 — so a standard about a state's own bill of rights passes this test and would be falsely aligned to standards about the 1791 federal amendments. This is an approved seed carrying 7 memberships."
   },
   {
     "id": "c-regional-differences-and-sectionalism",
@@ -263,7 +320,12 @@
     "source": "seed",
     "seededFrom": "ss4-12",
     "needsReview": true,
-    "note": "Genuine mismatch — recommend rejecting the pair. One member is a geography standard about how regions developed from their physical environments and economies; the other is a history standard naming states' rights and slavery as causes of the Civil War. They share a vocabulary (North, South) but not an idea, and the reviewer's own rationale concedes the split. The title above is a bridge invented to hold them together, and it is broad enough that a pure regional-geography standard and a pure Civil-War-causes standard would both attach — exactly the discrimination failure the concept spine is meant to prevent. Reviewer confidence on this pair is 'partial'."
+    "note": "Genuine mismatch — recommend rejecting the pair. One member is a geography standard about how regions developed from their physical environments and economies; the other is a history standard naming states' rights and slavery as causes of the Civil War. They share a vocabulary (North, South) but not an idea, and the reviewer's own rationale concedes the split. The title above is a bridge invented to hold them together, and it is broad enough that a pure regional-geography standard and a pure Civil-War-causes standard would both attach — exactly the discrimination failure the concept spine is meant to prevent. Reviewer confidence on this pair is 'partial'.",
+    "mergeCandidates": [
+      "c-causes-of-the-american-civil-war"
+    ],
+    "mergeSurvivor": "c-causes-of-the-american-civil-war",
+    "mergeWhy": "The sectionalism concept's test ('differing regional economies, environments, or institutions produced conflicting interests between sections of a nation') is a subset of the Civil-War-causes test and admits the same standards, which is precisely the discrimination failure its own curator note calls a 'genuine mismatch' and recommends rejecting; merging it here resolves that flag, but its pure regional-geography members do not belong at the survivor and should be re-homed to c-geography-shapes-economic-activity or dropped rather than carried over."
   },
   {
     "id": "c-personal-budgeting-and-saving",
@@ -345,7 +407,9 @@
     "mergeCandidates": [
       "c-specialization-leads-to-trade-2",
       "c-specialization-leads-to-trade-3"
-    ]
+    ],
+    "mergeSurvivor": "c-specialization-leads-to-trade",
+    "mergeWhy": "Byte-identical title and description across three seeds that differ only in the grade of the paired standard; survivor is the original and ties the most members (3)."
   },
   {
     "id": "c-trade-promotes-economic-activity",
@@ -367,7 +431,13 @@
     "source": "seed",
     "seededFrom": "ss5-26",
     "needsReview": true,
-    "note": "Partial pair. One member is about human capital — knowledge and skills raising earning power; the other is about selling labor to businesses for income. Shared ground is only 'labor produces income,' which is also seed-008's idea at a lower grade. Neither member states the other's substance, and the reviewer noted the skill-building half is unmatched."
+    "note": "Partial pair. One member is about human capital — knowledge and skills raising earning power; the other is about selling labor to businesses for income. Shared ground is only 'labor produces income,' which is also seed-008's idea at a lower grade. Neither member states the other's substance, and the reviewer noted the skill-building half is unmatched.",
+    "mergeCandidates": [
+      "c-people-earn-income-by-working",
+      "c-people-earn-income-by-working-2"
+    ],
+    "mergeSurvivor": "c-people-earn-income-by-working",
+    "mergeWhy": "The first two are byte-identical twins and the third is the same claim restated at 3-5 ('people earn income by selling their labor'); survivor has the cleanest test, and the third's extra human-capital clause ('skills and experience change what that labor earns') is a genuinely different idea that should be split into its own concept rather than kept as a reason to hold this duplicate open."
   },
   {
     "id": "c-world-religions-and-belief-systems",
@@ -402,7 +472,9 @@
     "mergeCandidates": [
       "c-specialization-leads-to-trade",
       "c-specialization-leads-to-trade-3"
-    ]
+    ],
+    "mergeSurvivor": "c-specialization-leads-to-trade",
+    "mergeWhy": "Byte-identical title and description across three seeds that differ only in the grade of the paired standard; survivor is the original and ties the most members (3)."
   },
   {
     "id": "c-specialization-leads-to-trade-3",
@@ -417,7 +489,9 @@
     "mergeCandidates": [
       "c-specialization-leads-to-trade",
       "c-specialization-leads-to-trade-2"
-    ]
+    ],
+    "mergeSurvivor": "c-specialization-leads-to-trade",
+    "mergeWhy": "Byte-identical title and description across three seeds that differ only in the grade of the paired standard; survivor is the original and ties the most members (3)."
   },
   {
     "id": "c-markets-exchange-goods-and-services-2",
@@ -431,7 +505,9 @@
     "note": "Duplicate of existing concept c-markets-exchange-goods-and-services; title and description copied verbatim so the merge is greppable. Also asymmetric grain: the grade-7 member is a broad historical claim (the growth of cities and empires fostered markets, and market exchange drove specialization and the shift from barter to monetary economies), of which only 'markets exist and exchange happens in them' is shared with a grade-3 standard about price allocation. That member attaches on a fraction of what it says; its barter-to-money half lives in seed-042.",
     "mergeCandidates": [
       "c-markets-exchange-goods-and-services"
-    ]
+    ],
+    "mergeSurvivor": "c-markets-exchange-goods-and-services",
+    "mergeWhy": "Byte-identical title and description; survivor is the original and carries more members (3 vs 2)."
   },
   {
     "id": "c-currency-enables-exchange-in-trade",
@@ -442,7 +518,12 @@
     "source": "seed",
     "seededFrom": "ss7-12",
     "needsReview": true,
-    "note": "Thin, half-shared pair; reviewer confidence 'partial' and I agree. The Ohio member's actual claim is that market exchange in growing cities and empires drove a transition from barter to monetary economies; the Georgia member's is that international trade requires a currency-exchange system. They meet only at 'exchange runs on money rather than barter,' and neither states the other's substance. That shared proposition is also already stated by existing concept c-money-as-medium-of-exchange ('why money works better than direct barter') at K-2 — this may be that concept at a higher grade rather than a new one. Curation should decide between merging into c-money-as-medium-of-exchange and rejecting the pair."
+    "note": "Thin, half-shared pair; reviewer confidence 'partial' and I agree. The Ohio member's actual claim is that market exchange in growing cities and empires drove a transition from barter to monetary economies; the Georgia member's is that international trade requires a currency-exchange system. They meet only at 'exchange runs on money rather than barter,' and neither states the other's substance. That shared proposition is also already stated by existing concept c-money-as-medium-of-exchange ('why money works better than direct barter') at K-2 — this may be that concept at a higher grade rather than a new one. Curation should decide between merging into c-money-as-medium-of-exchange and rejecting the pair.",
+    "mergeCandidates": [
+      "c-money-as-medium-of-exchange"
+    ],
+    "mergeSurvivor": "c-money-as-medium-of-exchange",
+    "mergeWhy": "Both reduce to 'exchange runs on money rather than direct barter' — the survivor states it plainly and c-currency-enables-exchange-in-trade is that same proposition at a higher grade, as its own curator note already suspects; its extra cross-border currency-conversion clause is a genuinely different idea that belongs in its own concept, not as a reason to keep two barter-vs-money tests that both admit the same standards."
   },
   {
     "id": "c-motives-for-european-colonization",
@@ -464,8 +545,11 @@
     "needsReview": true,
     "note": "Near-duplicate of existing concept c-declaration-of-independence-ideals — recommend merging, but NOT by copying that concept's wording. I deliberately did not reuse its description verbatim: it says 'a declaration of independence' in the abstract, which is the under-specification already flagged in this library, and a state standard about its own 1836-style declaration would pass that test and be wrongly aligned to the 1776 document. The description above names the event. Recommend the existing concept be retitled and rewritten to this wording as part of the merge.",
     "mergeCandidates": [
-      "c-declaration-of-independence-1776-2"
-    ]
+      "c-declaration-of-independence-1776-2",
+      "c-declaration-of-independence-ideals"
+    ],
+    "mergeSurvivor": "c-declaration-of-independence-1776",
+    "mergeWhy": "All three are the same concept at two levels of specificity; the survivor names the 1776 document while c-declaration-of-independence-ideals says 'a declaration of independence' in the abstract, which Texas's 1836 Declaration of Independence passes literally and would falsely align — tradeoff: the abstract one is an approved seed carrying 6 reviewer-decided memberships against the survivor's 2, so all 6 must be re-tested against the tighter wording as part of the merge rather than carried over."
   },
   {
     "id": "c-declaration-of-independence-1776-2",
@@ -478,8 +562,11 @@
     "needsReview": true,
     "note": "Duplicate of seed-044 (identical title and description, verbatim, so the merge is greppable), and a near-duplicate of existing concept c-declaration-of-independence-ideals. Both seeds share the same Ohio member and pair it with a Georgia standard about the same document; seed-044's counterpart interprets the document's three parts at grade 8, seed-045's explains its writing and purpose at grade 4. Grade and emphasis differ; the concept does not. Merge all three into one.",
     "mergeCandidates": [
-      "c-declaration-of-independence-1776"
-    ]
+      "c-declaration-of-independence-1776",
+      "c-declaration-of-independence-ideals"
+    ],
+    "mergeSurvivor": "c-declaration-of-independence-1776",
+    "mergeWhy": "All three are the same concept at two levels of specificity; the survivor names the 1776 document while c-declaration-of-independence-ideals says 'a declaration of independence' in the abstract, which Texas's 1836 Declaration of Independence passes literally and would falsely align — tradeoff: the abstract one is an approved seed carrying 6 reviewer-decided memberships against the survivor's 2, so all 6 must be re-tested against the tighter wording as part of the merge rather than carried over."
   },
   {
     "id": "c-articles-of-confederation-weaknesses",
@@ -488,7 +575,12 @@
     "subject": "social_studies",
     "gradeBand": "6-8",
     "source": "seed",
-    "seededFrom": "ss8-12"
+    "seededFrom": "ss8-12",
+    "mergeCandidates": [
+      "c-creating-and-ratifying-a-constitution"
+    ],
+    "mergeSurvivor": "c-articles-of-confederation-weaknesses",
+    "mergeWhy": "Same concept — weaknesses of the first charter driving the writing and ratification of the Constitution — but here the polarity is inverted from the usual: the ai_draft is the abstract one ('an earlier governing charter', 'a constitutional convention', 'the resulting constitution', which Georgia SS8CG1 and Texas's own state constitutional conventions pass literally) and the seed names the Articles and 1787, so the seed survives on merit despite having fewer members (2 vs 3); the survivor's description should absorb the draft's 'issues debated at the convention' and 'ratification debate' clauses."
   },
   {
     "id": "c-causes-of-the-american-civil-war",
@@ -499,8 +591,12 @@
     "source": "seed",
     "seededFrom": "ss8-20",
     "mergeCandidates": [
-      "c-causes-of-the-american-civil-war-2"
-    ]
+      "c-causes-of-the-american-civil-war-2",
+      "c-regional-differences-and-sectionalism",
+      "c-sectional-disputes-cause-civil-war"
+    ],
+    "mergeSurvivor": "c-causes-of-the-american-civil-war",
+    "mergeWhy": "The sectionalism concept's test ('differing regional economies, environments, or institutions produced conflicting interests between sections of a nation') is a subset of the Civil-War-causes test and admits the same standards, which is precisely the discrimination failure its own curator note calls a 'genuine mismatch' and recommends rejecting; merging it here resolves that flag, but its pure regional-geography members do not belong at the survivor and should be re-homed to c-geography-shapes-economic-activity or dropped rather than carried over."
   },
   {
     "id": "c-causes-of-the-american-civil-war-2",
@@ -513,8 +609,11 @@
     "needsReview": true,
     "note": "Duplicate of seed-047 (identical title and description, verbatim, so the merge is greppable). Both seeds share the same Ohio member; seed-047 pairs it with a grade-8 enumeration of the war's causes and seed-048 with a grade-4 standard naming states' rights and slavery as the sources of North-South tension. Only grade and grain differ. Note also that existing concept c-regional-differences-and-sectionalism was flagged as a genuine mismatch partly because a Civil-War-causes standard attaches to it; if this concept is adopted, that one loses its history half and should be re-examined or rejected.",
     "mergeCandidates": [
-      "c-causes-of-the-american-civil-war"
-    ]
+      "c-causes-of-the-american-civil-war",
+      "c-sectional-disputes-cause-civil-war"
+    ],
+    "mergeSurvivor": "c-causes-of-the-american-civil-war",
+    "mergeWhy": "The first two are byte-identical twins and the 6-8 draft states the same causal claim; survivor wins on test quality because it names the 1861-1865 war, the 1850s compromises and court decisions, and the 1860 secession crisis, whereas the draft's 'drove a nation into civil war' is the same abstract defect flagged elsewhere in this library — tradeoff: the draft carries 6 members to the survivor's 2, so the survivor inherits them."
   },
   {
     "id": "c-civic-participation-and-responsibility",
@@ -525,7 +624,12 @@
     "source": "seed",
     "seededFrom": "ss8-37",
     "needsReview": true,
-    "note": "Thin shared ground and an unresolved overlap. The Ohio member is about the payoff of participation (joining civic groups attains individual and public goals); the Georgia member is a bare list of a citizen's responsibilities. They meet only at the general proposition that citizens are expected to act, and the title above is a bridge holding two halves together rather than one idea. Separately, the Georgia member also passes the membership test of existing concept c-citizens-rights-and-responsibilities ('the duties they owe in return'), so this concept and that one will compete for it; the Ohio member passes neither cleanly. Curation should decide whether the participation half is a distinct concept or this pair should be rejected."
+    "note": "Thin shared ground and an unresolved overlap. The Ohio member is about the payoff of participation (joining civic groups attains individual and public goals); the Georgia member is a bare list of a citizen's responsibilities. They meet only at the general proposition that citizens are expected to act, and the title above is a bridge holding two halves together rather than one idea. Separately, the Georgia member also passes the membership test of existing concept c-citizens-rights-and-responsibilities ('the duties they owe in return'), so this concept and that one will compete for it; the Ohio member passes neither cleanly. Curation should decide whether the participation half is a distinct concept or this pair should be rejected.",
+    "mergeCandidates": [
+      "c-citizens-rights-and-responsibilities"
+    ],
+    "mergeSurvivor": "c-citizens-rights-and-responsibilities",
+    "mergeWhy": "c-civic-participation-and-responsibility's own curator note concedes it is a bridge whose Georgia member already passes the survivor's test ('the duties they owe in return') and whose Ohio member passes neither cleanly; the survivor is the single idea, has 13 members to 2, and the unmatched participation-pays-off half should be rejected rather than preserved as a duplicate."
   },
   {
     "id": "c-separation-of-powers-and-checks",
@@ -534,7 +638,12 @@
     "subject": "social_studies",
     "gradeBand": "3-8",
     "source": "seed",
-    "seededFrom": "ss8-38"
+    "seededFrom": "ss8-38",
+    "mergeCandidates": [
+      "c-constitutional-principles-of-government"
+    ],
+    "mergeSurvivor": "c-separation-of-powers-and-checks",
+    "mergeWhy": "c-constitutional-principles-of-government is an umbrella whose test enumerates separation of powers, checks and balances, and federalism as examples, so every member of c-separation-of-powers-and-checks and c-federalism-national-and-state-powers passes it automatically; the umbrella should be dissolved into those two existing, better-discriminating concepts rather than kept, even though it has 3 members to the survivor's 2 (see report: close call — an alternative is to narrow the umbrella to popular sovereignty and republicanism, which currently have no home)."
   },
   {
     "id": "c-federalism-national-and-state-powers",
@@ -554,7 +663,12 @@
     "source": "seed",
     "seededFrom": "ss8-41",
     "needsReview": true,
-    "note": "Near-duplicate of existing concept c-bill-of-rights-limits-government — recommend merging, but I did not copy its wording verbatim. That description says 'an enumerated bill of rights' and 'a constitution' in the abstract, which is the same under-specification already flagged for the declaration concepts: most states' own constitutions contain a bill of rights, so a state standard about its own document would pass that test literally and be wrongly aligned to standards about the federal one. The description above names the 1791 federal amendments. Recommend the existing concept be rewritten to this wording as part of the merge."
+    "note": "Near-duplicate of existing concept c-bill-of-rights-limits-government — recommend merging, but I did not copy its wording verbatim. That description says 'an enumerated bill of rights' and 'a constitution' in the abstract, which is the same under-specification already flagged for the declaration concepts: most states' own constitutions contain a bill of rights, so a state standard about its own document would pass that test literally and be wrongly aligned to standards about the federal one. The description above names the 1791 federal amendments. Recommend the existing concept be rewritten to this wording as part of the merge.",
+    "mergeCandidates": [
+      "c-bill-of-rights-limits-government"
+    ],
+    "mergeSurvivor": "c-us-bill-of-rights-limits-government",
+    "mergeWhy": "Same concept at two levels of specificity; the survivor names the ten amendments added to the U.S. Constitution in 1791 while the other says 'an enumerated bill of rights' and 'a constitution' in the abstract, which the Texas Bill of Rights (Art. I of the state constitution) and Georgia's state constitution pass literally — tradeoff: the abstract one is an approved seed with 7 memberships against the survivor's 2, so those 7 must be re-tested, and some state-constitution members will legitimately fall out (they belong with c-state-and-local-government-structure)."
   },
   {
     "id": "c-first-amendment-freedoms-2",
@@ -568,7 +682,9 @@
     "note": "Duplicate of existing concept c-first-amendment-freedoms; title and description copied verbatim so the merge is greppable (no rewrite needed here — 'the First Amendment' names its document unambiguously and does not carry the under-specification problem). But the pair itself is weak and probably adds nothing: the Ohio member says only that the Constitution protects citizens' rights by limiting the powers of government and never mentions the First Amendment, so it attaches on a fraction of what it says and passes seed-052's Bill-of-Rights test just as well. Same Ohio standard as seed-052, paired with a narrower Georgia element. Consider rejecting this pair and letting seed-052 carry that member.",
     "mergeCandidates": [
       "c-first-amendment-freedoms"
-    ]
+    ],
+    "mergeSurvivor": "c-first-amendment-freedoms",
+    "mergeWhy": "Byte-identical title and description; survivor carries 6 members to the twin's 2, and 'the First Amendment' names its document unambiguously so no rewrite is needed."
   },
   {
     "id": "c-taxation-and-public-goods",
@@ -608,7 +724,13 @@
     "subject": "social_studies",
     "gradeBand": "K-2",
     "source": "ai_draft",
-    "note": "The library has no concept about geographic tools at all; the nearest geography concepts are about environment shaping economic activity and about migration. Map and globe skills are a core, recurring K-5 standard in every state's geography strand."
+    "note": "The library has no concept about geographic tools at all; the nearest geography concepts are about environment shaping economic activity and about migration. Map and globe skills are a core, recurring K-5 standard in every state's geography strand.",
+    "mergeCandidates": [
+      "c-map-elements-and-map-reading-skills",
+      "c-using-geographic-tools-to-analyze-data"
+    ],
+    "mergeSurvivor": "c-using-maps-and-globes-to-locate-places",
+    "mergeWhy": "One map/geographic-tools skill concept proposed once per band — a standard like 'use a grid system to locate a place' passes all three tests at once, which is exactly the double-membership the Duplicates filter exists to catch; the merged description should absorb the named map elements from the 3-5 version and the gather/analyze/report purpose from the 6-8 version (see report: this set is the closest call, because the 6-8 version's graphs-and-charts reach is arguably wider than map skills)."
   },
   {
     "id": "c-physical-characteristics-of-places",
@@ -680,7 +802,13 @@
     "subject": "social_studies",
     "gradeBand": "K-2",
     "source": "ai_draft",
-    "note": "The library contains no historical-inquiry concept of any kind — every concept is content, not method. Learning that photographs, letters, and artifacts are evidence about the past is a recurring primary-grade history standard across states, distinct from generic research or communication skills."
+    "note": "The library contains no historical-inquiry concept of any kind — every concept is content, not method. Learning that photographs, letters, and artifacts are evidence about the past is a recurring primary-grade history standard across states, distinct from generic research or communication skills.",
+    "mergeCandidates": [
+      "c-primary-and-secondary-sources",
+      "c-using-primary-and-secondary-sources"
+    ],
+    "mergeSurvivor": "c-using-primary-and-secondary-sources",
+    "mergeWhy": "One historical-source concept proposed three times, once per band, differing only in vocabulary (artifacts/photographs at K-2, primary-vs-secondary at 3-5 and 6-8); the survivor has the cleanest test because the 3-5 version's 'question the reliability' clause collides with c-evaluating-source-credibility-and-bias, which the library keeps as a separate concept — the merged description should absorb the K-2 word 'artifacts' so object-based primary-grade standards still pass."
   },
   {
     "id": "c-sequencing-events-and-measuring-time",
@@ -698,7 +826,14 @@
     "subject": "social_studies",
     "gradeBand": "K-2",
     "source": "ai_draft",
-    "note": "c-geography-shapes-economic-activity runs the other direction — environment shaping people. Human-environment interaction in the people-act-on-environment direction has no concept in the library and is a standard element of every state's geography strand."
+    "note": "c-geography-shapes-economic-activity runs the other direction — environment shaping people. Human-environment interaction in the people-act-on-environment direction has no concept in the library and is a standard element of every state's geography strand.",
+    "mergeCandidates": [
+      "c-adapting-to-and-modifying-environment",
+      "c-consequences-of-modifying-environment",
+      "c-people-adapt-to-and-modify-environment"
+    ],
+    "mergeSurvivor": "c-adapting-to-and-modifying-environment",
+    "mergeWhy": "All four are the same human-environment-interaction idea proposed once per grade band by agents who could not see each other; the 6-8 survivor's test is the union of the other three (adapt + deliberately modify + positive and negative consequences), and the 'consequences' split is not a separate concept because two of the other three already name consequences in their own descriptions."
   },
   {
     "id": "c-people-adapt-to-and-modify-environment",
@@ -707,7 +842,14 @@
     "subject": "social_studies",
     "gradeBand": "3-5",
     "source": "ai_draft",
-    "note": "The library's only geography-and-people concept, c-geography-shapes-economic-activity, runs one direction only (environment shapes work). Nothing in the library tests for human adaptation to, or deliberate modification of, the environment — a core human-environment-interaction idea that Ohio, Georgia, and Texas all carry at multiple grades."
+    "note": "The library's only geography-and-people concept, c-geography-shapes-economic-activity, runs one direction only (environment shapes work). Nothing in the library tests for human adaptation to, or deliberate modification of, the environment — a core human-environment-interaction idea that Ohio, Georgia, and Texas all carry at multiple grades.",
+    "mergeCandidates": [
+      "c-adapting-to-and-modifying-environment",
+      "c-consequences-of-modifying-environment",
+      "c-humans-modify-physical-environment"
+    ],
+    "mergeSurvivor": "c-adapting-to-and-modifying-environment",
+    "mergeWhy": "All four are the same human-environment-interaction idea proposed once per grade band by agents who could not see each other; the 6-8 survivor's test is the union of the other three (adapt + deliberately modify + positive and negative consequences), and the 'consequences' split is not a separate concept because two of the other three already name consequences in their own descriptions."
   },
   {
     "id": "c-consequences-of-modifying-environment",
@@ -716,7 +858,14 @@
     "subject": "social_studies",
     "gradeBand": "3-5",
     "source": "ai_draft",
-    "note": "Distinct from the adaptation-and-modification concept above: that one tests for describing what people do and why; this one tests for evaluating what results. Texas separates them into their own elements at three grades, and the evaluative move (positive vs negative consequences) is a different cognitive demand that other states also assess separately."
+    "note": "Distinct from the adaptation-and-modification concept above: that one tests for describing what people do and why; this one tests for evaluating what results. Texas separates them into their own elements at three grades, and the evaluative move (positive vs negative consequences) is a different cognitive demand that other states also assess separately.",
+    "mergeCandidates": [
+      "c-adapting-to-and-modifying-environment",
+      "c-humans-modify-physical-environment",
+      "c-people-adapt-to-and-modify-environment"
+    ],
+    "mergeSurvivor": "c-adapting-to-and-modifying-environment",
+    "mergeWhy": "All four are the same human-environment-interaction idea proposed once per grade band by agents who could not see each other; the 6-8 survivor's test is the union of the other three (adapt + deliberately modify + positive and negative consequences), and the 'consequences' split is not a separate concept because two of the other three already name consequences in their own descriptions."
   },
   {
     "id": "c-map-elements-and-map-reading-skills",
@@ -725,7 +874,13 @@
     "subject": "social_studies",
     "gradeBand": "3-5",
     "source": "ai_draft",
-    "note": "The library carries no geographic-skills concept at all. Map and globe skills are a named, separately assessed strand in Ohio, Georgia, and Texas alike, and the test here is concrete enough (named map elements, applied) not to swallow general geography content."
+    "note": "The library carries no geographic-skills concept at all. Map and globe skills are a named, separately assessed strand in Ohio, Georgia, and Texas alike, and the test here is concrete enough (named map elements, applied) not to swallow general geography content.",
+    "mergeCandidates": [
+      "c-using-geographic-tools-to-analyze-data",
+      "c-using-maps-and-globes-to-locate-places"
+    ],
+    "mergeSurvivor": "c-using-maps-and-globes-to-locate-places",
+    "mergeWhy": "One map/geographic-tools skill concept proposed once per band — a standard like 'use a grid system to locate a place' passes all three tests at once, which is exactly the double-membership the Duplicates filter exists to catch; the merged description should absorb the named map elements from the 3-5 version and the gather/analyze/report purpose from the 6-8 version (see report: this set is the closest call, because the 6-8 version's graphs-and-charts reach is arguably wider than map skills)."
   },
   {
     "id": "c-primary-and-secondary-sources",
@@ -734,7 +889,13 @@
     "subject": "social_studies",
     "gradeBand": "3-5",
     "source": "ai_draft",
-    "note": "The library carries no historical-inquiry concept. The primary/secondary distinction is a named strand in Ohio, Georgia, and Texas at every grade in this band, and the test is specific to source type rather than to generic critical thinking, so it will not swallow the rest of the skills strand."
+    "note": "The library carries no historical-inquiry concept. The primary/secondary distinction is a named strand in Ohio, Georgia, and Texas at every grade in this band, and the test is specific to source type rather than to generic critical thinking, so it will not swallow the rest of the skills strand.",
+    "mergeCandidates": [
+      "c-sources-and-artifacts-of-the-past",
+      "c-using-primary-and-secondary-sources"
+    ],
+    "mergeSurvivor": "c-using-primary-and-secondary-sources",
+    "mergeWhy": "One historical-source concept proposed three times, once per band, differing only in vocabulary (artifacts/photographs at K-2, primary-vs-secondary at 3-5 and 6-8); the survivor has the cleanest test because the 3-5 version's 'question the reliability' clause collides with c-evaluating-source-credibility-and-bias, which the library keeps as a separate concept — the merged description should absorb the K-2 word 'artifacts' so object-based primary-grade standards still pass."
   },
   {
     "id": "c-supply-and-demand-shape-prices",
@@ -779,7 +940,9 @@
     "subject": "social_studies",
     "gradeBand": "3-5",
     "source": "ai_draft",
-    "note": "Nothing in the library touches territorial expansion; the closest concepts are about migration (why individuals move) and sectionalism (why regions conflict), neither of which tests for national territorial growth. Louisiana Purchase / Lewis and Clark / Manifest Destiny is a fixed block of elementary US history in Ohio and Georgia. Proposed on one Texas member because the cross-state pull is high, not because Texas coverage is deep — reviewer should weigh that."
+    "note": "UNDER-SPECIFIED: Says 'a nation expanded its territory westward across a continent' in the abstract. Lower risk than the founding-document defects because no second state's westward expansion appears in the current corpus, but the wording admits any continental expansion (Russian expansion east of the Urals, Canadian westward settlement) and gives the tool no way to reject it. | earlier note: Nothing in the library touches territorial expansion; the closest concepts are about migration (why individuals move) and sectionalism (why regions conflict), neither of which tests for national territorial growth. Louisiana Purchase / Lewis and Clark / Manifest Destiny is a fixed block of elementary US history in Ohio and Georgia. Proposed on one Texas member because the cross-state pull is high, not because Texas coverage is deep — reviewer should weigh that.",
+    "needsReview": true,
+    "suggestedDescription": "A standard belongs here if it asks students to identify the acquisitions, expeditions, or ideologies by which the United States expanded westward across North America between 1803 and 1853 — such as the Louisiana Purchase, Lewis and Clark, Manifest Destiny, the Oregon Territory, or the Mexican Cession."
   },
   {
     "id": "c-civil-war-aftermath-and-reconstruction",
@@ -788,7 +951,12 @@
     "subject": "social_studies",
     "gradeBand": "3-5",
     "source": "ai_draft",
-    "note": "c-regional-differences-and-sectionalism covers the causes of sectional conflict only; nothing in the library covers what a civil war left behind. Ohio and Georgia both carry Civil War effects and Reconstruction in this band, and the two Texas members here sit at different grades, which is itself evidence the idea is grade-portable."
+    "note": "c-regional-differences-and-sectionalism covers the causes of sectional conflict only; nothing in the library covers what a civil war left behind. Ohio and Georgia both carry Civil War effects and Reconstruction in this band, and the two Texas members here sit at different grades, which is itself evidence the idea is grade-portable.",
+    "mergeCandidates": [
+      "c-reconstruction-after-civil-war"
+    ],
+    "mergeSurvivor": "c-reconstruction-after-civil-war",
+    "mergeWhy": "Same concept proposed by the 3-5 and 6-8 agents; the survivor's test is more specific (names the reform programs, lingering problems, and the constitutional amendments) and carries 5 members to 2, though the merged description should still name U.S. Reconstruction (1865-1877) rather than 'a civil war' and 'a nation'."
   },
   {
     "id": "c-adapting-to-and-modifying-environment",
@@ -797,7 +965,14 @@
     "subject": "social_studies",
     "gradeBand": "6-8",
     "source": "ai_draft",
-    "note": "The library has c-geography-shapes-economic-activity for environment-shapes-people, but nothing for the reverse direction — people acting on the environment. This is a distinct, universally taught human-systems idea; Ohio states it in five separate standards across grades 3, 4, 5, 6, and 8 (e.g. 'People have modified the environment throughout history resulting in both positive and negative consequences', 'human activities modify the physical environment'), none of which currently has a home."
+    "note": "The library has c-geography-shapes-economic-activity for environment-shapes-people, but nothing for the reverse direction — people acting on the environment. This is a distinct, universally taught human-systems idea; Ohio states it in five separate standards across grades 3, 4, 5, 6, and 8 (e.g. 'People have modified the environment throughout history resulting in both positive and negative consequences', 'human activities modify the physical environment'), none of which currently has a home.",
+    "mergeCandidates": [
+      "c-consequences-of-modifying-environment",
+      "c-humans-modify-physical-environment",
+      "c-people-adapt-to-and-modify-environment"
+    ],
+    "mergeSurvivor": "c-adapting-to-and-modifying-environment",
+    "mergeWhy": "All four are the same human-environment-interaction idea proposed once per grade band by agents who could not see each other; the 6-8 survivor's test is the union of the other three (adapt + deliberately modify + positive and negative consequences), and the 'consequences' split is not a separate concept because two of the other three already name consequences in their own descriptions."
   },
   {
     "id": "c-cultural-diffusion-among-societies",
@@ -824,7 +999,13 @@
     "subject": "social_studies",
     "gradeBand": "6-8",
     "source": "ai_draft",
-    "note": "The library contains no inquiry-skills concepts, so Ohio's three primary/secondary source standards (3.SS.2, 4.SS.2, 8.SS.1) have no home. Texas repeats the same standard verbatim in each of grades 6, 7, and 8. This is core and recurring in every state's social studies framework."
+    "note": "The library contains no inquiry-skills concepts, so Ohio's three primary/secondary source standards (3.SS.2, 4.SS.2, 8.SS.1) have no home. Texas repeats the same standard verbatim in each of grades 6, 7, and 8. This is core and recurring in every state's social studies framework.",
+    "mergeCandidates": [
+      "c-primary-and-secondary-sources",
+      "c-sources-and-artifacts-of-the-past"
+    ],
+    "mergeSurvivor": "c-using-primary-and-secondary-sources",
+    "mergeWhy": "One historical-source concept proposed three times, once per band, differing only in vocabulary (artifacts/photographs at K-2, primary-vs-secondary at 3-5 and 6-8); the survivor has the cleanest test because the 3-5 version's 'question the reliability' clause collides with c-evaluating-source-credibility-and-bias, which the library keeps as a separate concept — the merged description should absorb the K-2 word 'artifacts' so object-based primary-grade standards still pass."
   },
   {
     "id": "c-evaluating-source-credibility-and-bias",
@@ -851,7 +1032,12 @@
     "subject": "social_studies",
     "gradeBand": "6-8",
     "source": "ai_draft",
-    "note": "c-bill-of-rights-limits-government covers only the rights-limiting half of constitutional government; nothing covers the structural principles. Ohio 8.SS.22 ('established a federal republic... separation of powers, and checks and balances') and Georgia SS4CG1 (popular sovereignty, federal system, representative republic), SS4CG3a (checks and balances, separation of powers), and SS8CG1a/b (a state constitution's structure and its relationship to the national one, separation of powers among a state's three branches) all state it and none has a home."
+    "note": "c-bill-of-rights-limits-government covers only the rights-limiting half of constitutional government; nothing covers the structural principles. Ohio 8.SS.22 ('established a federal republic... separation of powers, and checks and balances') and Georgia SS4CG1 (popular sovereignty, federal system, representative republic), SS4CG3a (checks and balances, separation of powers), and SS8CG1a/b (a state constitution's structure and its relationship to the national one, separation of powers among a state's three branches) all state it and none has a home.",
+    "mergeCandidates": [
+      "c-separation-of-powers-and-checks"
+    ],
+    "mergeSurvivor": "c-separation-of-powers-and-checks",
+    "mergeWhy": "c-constitutional-principles-of-government is an umbrella whose test enumerates separation of powers, checks and balances, and federalism as examples, so every member of c-separation-of-powers-and-checks and c-federalism-national-and-state-powers passes it automatically; the umbrella should be dissolved into those two existing, better-discriminating concepts rather than kept, even though it has 3 members to the survivor's 2 (see report: close call — an alternative is to narrow the umbrella to popular sovereignty and republicanism, which currently have no home)."
   },
   {
     "id": "c-creating-and-ratifying-a-constitution",
@@ -860,7 +1046,14 @@
     "subject": "social_studies",
     "gradeBand": "6-8",
     "source": "ai_draft",
-    "note": "Nothing in the library covers the founding-charter transition. Ohio 8.SS.8 states it as a single content statement ('Problems arising under the Articles of Confederation led to debate over the adoption of the U.S. Constitution'), and Georgia states it twice (SS4H2b: weaknesses of the Articles, the Great Compromise, the Three-Fifths Compromise; SS8H3d: how the weaknesses of the Articles led to writing a new federal Constitution). Distinct from c-declaration-of-independence-ideals and from constitutional-principles, which test the finished document rather than its making."
+    "note": "UNDER-SPECIFIED: Says 'an earlier governing charter', 'a constitutional convention', and 'the resulting constitution' in the abstract. Georgia SS8CG1 (the state constitution) and Texas's own constitutional conventions of 1836/1876 pass this test literally, so state-founding standards would be falsely aligned to the 1787 federal convention. Same defect class as the declaration and bill-of-rights concepts, but introduced by an ai_draft rather than a seed. | earlier note: Nothing in the library covers the founding-charter transition. Ohio 8.SS.8 states it as a single content statement ('Problems arising under the Articles of Confederation led to debate over the adoption of the U.S. Constitution'), and Georgia states it twice (SS4H2b: weaknesses of the Articles, the Great Compromise, the Three-Fifths Compromise; SS8H3d: how the weaknesses of the Articles led to writing a new federal Constitution). Distinct from c-declaration-of-independence-ideals and from constitutional-principles, which test the finished document rather than its making.",
+    "mergeCandidates": [
+      "c-articles-of-confederation-weaknesses"
+    ],
+    "mergeSurvivor": "c-articles-of-confederation-weaknesses",
+    "mergeWhy": "Same concept — weaknesses of the first charter driving the writing and ratification of the Constitution — but here the polarity is inverted from the usual: the ai_draft is the abstract one ('an earlier governing charter', 'a constitutional convention', 'the resulting constitution', which Georgia SS8CG1 and Texas's own state constitutional conventions pass literally) and the seed names the Articles and 1787, so the seed survives on merit despite having fewer members (2 vs 3); the survivor's description should absorb the draft's 'issues debated at the convention' and 'ratification debate' clauses.",
+    "needsReview": true,
+    "suggestedDescription": "A standard belongs here if it asks students to explain the weaknesses of the Articles of Confederation, the issues and compromises debated at the 1787 Philadelphia Convention, or the Federalist-Antifederalist debate over ratifying the United States Constitution — not the drafting of a state's own constitution."
   },
   {
     "id": "c-reconstruction-after-civil-war",
@@ -869,7 +1062,12 @@
     "subject": "social_studies",
     "gradeBand": "6-8",
     "source": "ai_draft",
-    "note": "Reconstruction has no concept, though all three states teach it: Ohio 8.SS.14 ('The Reconstruction period resulted in changes to the U.S. Constitution, an affirmation of federal authority and lingering social and political differences'), Georgia SS4H6 (13th/14th/15th Amendments, Freedmen's Bureau, sharecropping, Jim Crow) and Georgia SS8H6 (Reconstruction's impact on a state, including the amendments and the removal of Black legislators)."
+    "note": "Reconstruction has no concept, though all three states teach it: Ohio 8.SS.14 ('The Reconstruction period resulted in changes to the U.S. Constitution, an affirmation of federal authority and lingering social and political differences'), Georgia SS4H6 (13th/14th/15th Amendments, Freedmen's Bureau, sharecropping, Jim Crow) and Georgia SS8H6 (Reconstruction's impact on a state, including the amendments and the removal of Black legislators).",
+    "mergeCandidates": [
+      "c-civil-war-aftermath-and-reconstruction"
+    ],
+    "mergeSurvivor": "c-reconstruction-after-civil-war",
+    "mergeWhy": "Same concept proposed by the 3-5 and 6-8 agents; the survivor's test is more specific (names the reform programs, lingering problems, and the constitutional amendments) and carries 5 members to 2, though the merged description should still name U.S. Reconstruction (1865-1877) rather than 'a civil war' and 'a nation'."
   },
   {
     "id": "c-sectional-disputes-cause-civil-war",
@@ -878,7 +1076,13 @@
     "subject": "social_studies",
     "gradeBand": "6-8",
     "source": "ai_draft",
-    "note": "The nearest existing concept, c-regional-differences-and-sectionalism, is a bridge the curator's own note calls a 'genuine mismatch' and recommends rejecting: it forces a regional-geography standard and a Civil-War-causes standard together and explicitly warns that 'a pure Civil-War-causes standard' attaching to it is the discrimination failure the spine is meant to prevent. This is the clean causal half, not a duplicate: Ohio 8.SS.12 ('Disputes over the nature of federalism, complicated by economic developments... resulted in sectional issues, including slavery, which led to the American Civil War') and Georgia SS8H5a (slavery, states' rights, nullification, Compromise of 1850) and SS4H5b (states' rights and slavery increased tensions between North and South) all state it. If the reviewer rejects the bridge concept, its Civil-War-causes member belongs here."
+    "note": "The nearest existing concept, c-regional-differences-and-sectionalism, is a bridge the curator's own note calls a 'genuine mismatch' and recommends rejecting: it forces a regional-geography standard and a Civil-War-causes standard together and explicitly warns that 'a pure Civil-War-causes standard' attaching to it is the discrimination failure the spine is meant to prevent. This is the clean causal half, not a duplicate: Ohio 8.SS.12 ('Disputes over the nature of federalism, complicated by economic developments... resulted in sectional issues, including slavery, which led to the American Civil War') and Georgia SS8H5a (slavery, states' rights, nullification, Compromise of 1850) and SS4H5b (states' rights and slavery increased tensions between North and South) all state it. If the reviewer rejects the bridge concept, its Civil-War-causes member belongs here.",
+    "mergeCandidates": [
+      "c-causes-of-the-american-civil-war",
+      "c-causes-of-the-american-civil-war-2"
+    ],
+    "mergeSurvivor": "c-causes-of-the-american-civil-war",
+    "mergeWhy": "The first two are byte-identical twins and the 6-8 draft states the same causal claim; survivor wins on test quality because it names the 1861-1865 war, the 1850s compromises and court decisions, and the 1860 secession crisis, whereas the draft's 'drove a nation into civil war' is the same abstract defect flagged elsewhere in this library — tradeoff: the draft carries 6 members to the survivor's 2, so the survivor inherits them."
   },
   {
     "id": "c-forced-removal-of-indigenous-peoples",
@@ -923,7 +1127,9 @@
     "subject": "social_studies",
     "gradeBand": "6-8",
     "source": "ai_draft",
-    "note": "The library has c-course-and-outcome-of-independence-war for a war of independence but no counterpart for a civil war, though all three states teach it: Ohio 8.SS.13 ('Key events and significant figures in American history influenced the course and outcome of the Civil War'), Georgia SS4H5c (Fort Sumter, Gettysburg, Appomattox) and SS4H5d (Lincoln, Lee, Grant, Davis), and Georgia SS8H5b (a state's role in the war). Not a duplicate — the independence-war concept tests a colonial war against imperial rule."
+    "note": "UNDER-SPECIFIED: Says 'a civil war' in the abstract, so any civil war a state teaches (the English Civil War in a world-history strand, for instance) passes the test and would be falsely aligned to American Civil War battle-and-figure standards. Lower live risk than the declaration and bill-of-rights defects because all current members are American, but the same latent trap as more states are added — and note its sibling c-causes-of-the-american-civil-war names its war correctly, so the library is inconsistent with itself. | earlier note: The library has c-course-and-outcome-of-independence-war for a war of independence but no counterpart for a civil war, though all three states teach it: Ohio 8.SS.13 ('Key events and significant figures in American history influenced the course and outcome of the Civil War'), Georgia SS4H5c (Fort Sumter, Gettysburg, Appomattox) and SS4H5d (Lincoln, Lee, Grant, Davis), and Georgia SS8H5b (a state's role in the war). Not a duplicate — the independence-war concept tests a colonial war against imperial rule.",
+    "needsReview": true,
+    "suggestedDescription": "A standard belongs here if it asks students to describe the major battles, turning-point events, or significant figures of the American Civil War of 1861-1865 — such as Fort Sumter, Antietam, Gettysburg, Appomattox, Lincoln, Lee, Grant, or Davis — and how they shaped its course and outcome."
   },
   {
     "id": "c-using-geographic-tools-to-analyze-data",
@@ -932,6 +1138,12 @@
     "subject": "social_studies",
     "gradeBand": "6-8",
     "source": "ai_draft",
-    "note": "No concept covers geographic tools, leaving Ohio 6.SS.3 ('Geographic tools can be used to gather, process and report information about people, places and environments'), Ohio 7.SS.12 (maps used to trace human settlement over time), and Ohio 6.SS.4 (latitude and longitude for absolute location) unhoused. Texas restates it in every grade of the band. Distinct from geography-shapes-historical-events, which tests a causal claim rather than a tool skill."
+    "note": "No concept covers geographic tools, leaving Ohio 6.SS.3 ('Geographic tools can be used to gather, process and report information about people, places and environments'), Ohio 7.SS.12 (maps used to trace human settlement over time), and Ohio 6.SS.4 (latitude and longitude for absolute location) unhoused. Texas restates it in every grade of the band. Distinct from geography-shapes-historical-events, which tests a causal claim rather than a tool skill.",
+    "mergeCandidates": [
+      "c-map-elements-and-map-reading-skills",
+      "c-using-maps-and-globes-to-locate-places"
+    ],
+    "mergeSurvivor": "c-using-maps-and-globes-to-locate-places",
+    "mergeWhy": "One map/geographic-tools skill concept proposed once per band — a standard like 'use a grid system to locate a place' passes all three tests at once, which is exactly the double-membership the Duplicates filter exists to catch; the merged description should absorb the named map elements from the 3-5 version and the gather/analyze/report purpose from the 6-8 version (see report: this set is the closest call, because the 6-8 version's graphs-and-charts reach is arguably wider than map skills)."
   }
 ]

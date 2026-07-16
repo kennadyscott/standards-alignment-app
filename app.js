@@ -943,6 +943,15 @@ function conceptCard(c) {
         <textarea class="ps-textarea c-desc" data-cdesc="${c.id}" rows="2">${esc(c.description || '')}</textarea>
       </div>
       ${c.note ? `<div class="concept-note"><b>Flagged:</b> ${esc(c.note)}</div>` : ''}
+      ${c.suggestedDescription && c.suggestedDescription !== c.description
+        ? `<div class="concept-suggest">
+             <b>Suggested membership test</b> — names the specific event so another state's equivalent can't pass:
+             <div class="suggest-text">${esc(c.suggestedDescription)}</div>
+             <button class="act-btn" data-capply="${c.id}">Use this wording</button>
+           </div>`
+        : ''}
+      ${c.mergeWhy ? `<div class="concept-note"><b>Duplicate of ${esc((c.mergeCandidates || []).join(', '))}:</b> ${esc(c.mergeWhy)}${
+          c.mergeSurvivor ? ` <b>Recommended survivor:</b> ${esc(c.mergeSurvivor)}${c.mergeSurvivor === c.id ? ' (this one)' : ''}` : ''}</div>` : ''}
       <div class="member-peers">
         <b>Members:</b>
         ${stateList.length
@@ -999,8 +1008,30 @@ function renderConcepts() {
       if (!e.target.value) return;
       mergeConcepts(e.target.dataset.cmerge, e.target.value);
     });
+    const ap = card.querySelector('[data-capply]');
+    if (ap) ap.addEventListener('click', () => applySuggested(ap.dataset.capply));
     box.appendChild(card);
   });
+}
+
+/* Narrowing a membership test invalidates the approvals made against the old one — a
+   member judged against "a declaration of independence" was never judged against "the
+   1776 Declaration". Reset them to pending rather than silently keep an answer the
+   reviewer didn't give to this question. */
+function applySuggested(id) {
+  const c = state.conceptById.get(id);
+  const base = state.concepts.find(x => x.id === id);
+  if (!c || !base || !base.suggestedDescription) return;
+  editConcept(id, { description: base.suggestedDescription });
+  let retest = 0;
+  (state.byConcept.get(mergeTarget(id)) || []).forEach(m => {
+    if (statusOf(m) === 'approved') { state.decisions[m.id] = 'pending'; retest++; }
+  });
+  pushState();
+  toast(retest
+    ? `Wording updated — ${retest} membership${retest > 1 ? 's' : ''} reset to pending for re-test`
+    : 'Wording updated');
+  renderAll();
 }
 
 function editConcept(id, patch) {
@@ -1019,16 +1050,33 @@ function editConcept(id, patch) {
   renderBadgeSoon();
 }
 
-// Merging moves `fromId`'s members onto `intoId`; the source concept stops existing for
-// every purpose but provenance, so the merge stays reversible from the state file.
+/* Merging moves `fromId`'s members onto `intoId`; the source concept stops existing for
+   every purpose but provenance, so the merge stays reversible from the state file.
+
+   If the two membership tests differ, the moved memberships are reset to pending. They
+   were approved against the OLD wording, and carrying that approval across would assert
+   a judgement the reviewer never made — the merges that matter most here are exactly the
+   ones where a vague test is replaced by a precise one, and some members legitimately
+   fall out under it. Identical tests must yield identical verdicts, so those carry over. */
 function mergeConcepts(fromId, intoId) {
   if (fromId === intoId) return;
   if (mergeTarget(intoId) === fromId) { toast('⚠ That would make a merge loop'); return; }
+  const from = state.conceptById.get(fromId);
+  const into = state.conceptById.get(intoId);
+  const sameTest = from && into && (from.description || '') === (into.description || '');
+  let retest = 0;
+  if (!sameTest) {
+    (state.byConcept.get(mergeTarget(fromId)) || []).forEach(m => {
+      if (m.conceptId !== fromId) return;
+      if (statusOf(m) === 'approved') { state.decisions[m.id] = 'pending'; retest++; }
+    });
+  }
   state.merged[fromId] = intoId;
   indexConcepts();
   pushState();
-  const t = state.conceptById.get(intoId);
-  toast(`Merged into "${t ? t.title : intoId}"`);
+  toast(retest
+    ? `Merged into "${into ? into.title : intoId}" — ${retest} membership${retest > 1 ? 's' : ''} reset to pending (different test)`
+    : `Merged into "${into ? into.title : intoId}"`);
   renderAll();
 }
 
