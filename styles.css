@@ -707,3 +707,47 @@ body {
   padding-bottom: 8px;
 }
 .peer-inline .q-card { width: 100%; }
+
+/* Master list filters */
+.set-filters { display: flex; flex-direction: column; gap: 6px; }
+.set-filters .ps-hint { margin: 0; }
+
+/* State Lists split view: titles left, full passage set right */
+.input-split { flex: 1; display: flex; min-height: 0; }
+.input-list-panel {
+  width: 330px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  background: var(--panel);
+  border-right: 1px solid var(--line);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.input-list-panel .align-section-title { margin: 10px 0 2px; }
+.input-list-panel .std-item { cursor: pointer; }
+.input-detail-panel {
+  flex: 1;
+  overflow-y: auto;
+  padding: 22px 28px 40px;
+  max-width: 940px;
+}
+.detail-head { padding-bottom: 14px; border-bottom: 1px solid var(--line); margin-bottom: 16px; }
+.detail-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 12px; }
+.detail-passage { margin-bottom: 14px; }
+.detail-ptitle { font-weight: 700; margin-bottom: 4px; }
+.detail-text {
+  white-space: pre-wrap;
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.q-detail-text { margin-bottom: 10px; }
+.chip-entered { background: #e5f6ec; color: #177245; border-color: #bfe8cf; }
+@media (max-width: 900px) {
+  .input-list-panel { width: 240px; }
+}

@@ -99,6 +99,17 @@
 <main id="passagesView" class="view hidden">
   <aside class="sets-panel">
     <button class="btn btn-primary" id="newSetBtn">+ New Passage Set</button>
+    <div class="set-filters">
+      <select id="setFilterStatus" class="ps-input">
+        <option value="all">All statuses</option>
+        <option value="draft">Drafts</option>
+        <option value="approved">Approved</option>
+      </select>
+      <select id="setFilterGrade" class="ps-input">
+        <option value="all">All grades</option>
+      </select>
+      <div class="ps-hint" id="setFilterCount"></div>
+    </div>
     <div class="set-list" id="setList"></div>
   </aside>
   <section class="editor-panel" id="setEditor"></section>
@@ -112,10 +123,18 @@
       <select id="inState" class="ps-input" style="max-width:160px"></select>
       <label class="in-lbl">Grade</label>
       <select id="inGrade" class="ps-input" style="max-width:110px"></select>
+      <div class="seg" id="inCmsSeg">
+        <button class="seg-btn active" data-val="all">All</button>
+        <button class="seg-btn" data-val="entered">Entered in CMS</button>
+        <button class="seg-btn" data-val="needs">Needs to be Entered</button>
+      </div>
     </div>
     <div class="review-progress" id="inputProgress"></div>
   </div>
-  <div class="review-list" id="inputList"></div>
+  <div class="input-split">
+    <aside class="input-list-panel" id="inputList"></aside>
+    <section class="input-detail-panel" id="inputDetail"></section>
+  </div>
 </main>
 
 <div class="toast" id="toast"></div>

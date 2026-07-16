@@ -141,6 +141,8 @@ const state = {
     selectedKey: null, search: '',
     revSubject: 'social_studies', revGrade: '4', revStatus: 'pending', revState: 'ALL',
     inState: 'OH', inGrade: '4', overrideKey: null,
+    inCms: 'all', inSelected: null,                    // State Lists: CMS filter + selected set
+    setFilterStatus: 'all', setFilterGrade: 'all',     // Master list filters
     currentSetId: null, openPicker: null,
   },
 };
@@ -1264,8 +1266,24 @@ function renderSetList() {
     box.appendChild(el(`<div class="review-empty">No passage sets yet.<br>Create one to get started.</div>`));
     return;
   }
-  // Drafts first — they're the review queue.
-  const sorted = [...state.sets].sort((a, b) => (isDraft(b) ? 1 : 0) - (isDraft(a) ? 1 : 0));
+  // Filters: work the drafts grade by grade (add IDs, approve) without wading through 300 sets.
+  const fs = state.ui.setFilterStatus, fg = state.ui.setFilterGrade;
+  const list = state.sets.filter(s =>
+    (fs === 'all' || (fs === 'draft') === isDraft(s)) &&
+    (fg === 'all' || String(s.gaGrade) === fg));
+  const countEl = document.getElementById('setFilterCount');
+  if (countEl) countEl.textContent = list.length === state.sets.length
+    ? `${state.sets.length} sets`
+    : `${list.length} of ${state.sets.length} sets`;
+  if (!list.length) {
+    box.appendChild(el(`<div class="review-empty">No sets match these filters.</div>`));
+    return;
+  }
+  // Drafts first — they're the review queue — then by grade, then title.
+  const sorted = [...list].sort((a, b) =>
+    ((isDraft(b) ? 1 : 0) - (isDraft(a) ? 1 : 0))
+    || ((+a.gaGrade || 99) - (+b.gaGrade || 99))
+    || (a.title || '').localeCompare(b.title || ''));
   sorted.forEach(s => {
     const tags = [...s.questions, ...s.peerRevision].filter(q => q.standard).length;
     const item = el(`
@@ -1274,7 +1292,7 @@ function renderSetList() {
           <span class="std-code">${isDraft(s) ? '<span class="draft-tag">DRAFT</span> ' : ''}${esc(s.title || 'Untitled set')}</span>
           <button class="q-remove" data-del-set="${s.id}" title="Delete set">✕</button>
         </div>
-        <div class="std-desc">${esc(s.passageId ? 'ID: ' + s.passageId : 'No passage ID')} · ${s.passages.length} passage${s.passages.length !== 1 ? 's' : ''} · ${tags} tagged</div>
+        <div class="std-desc">${s.gaGrade ? `G${esc(s.gaGrade)} · ` : ''}${esc(s.passageId ? 'ID: ' + s.passageId : 'No passage ID')} · ${s.passages.length} passage${s.passages.length !== 1 ? 's' : ''} · ${tags} tagged</div>
         ${s.passages.some(p => p.title)
           ? `<div class="std-desc set-passage-titles">${s.passages.filter(p => p.title).map(p => esc(p.title)).join(' · ')}</div>`
           : ''}
@@ -1694,7 +1712,7 @@ function renderPassages() {
    keep building. Passages auto-populate the states they align to; Passage Input sorts them
    into three buckets so nothing lands as "done" without a human eye:
 
-   LISTED IN CMS  — someone marked "Developed in CMS" for this passage in this state's list.
+   ENTERED IN CMS — someone marked "Entered in CMS" for this passage in this state's list.
    ALIGNED        — confirmed for this grade: the set's own home grade, a universal passage,
                     or an aligned one the reviewer approved (pushed).
    NEEDS APPROVAL — auto-populated from an approved ±1-grade alignment, not yet reviewed. */
@@ -1776,10 +1794,72 @@ function assignedStateStd(s, hit, st, grade) {
   return hit.std;
 }
 
-function inputCard(row, st, grade) {
+// Compact left-panel row: title + ID + grade + status, click to open the full set.
+function inputListItem(row, selected) {
+  const { set: s, category } = row;
+  const catChip = category === 'cms'
+    ? '<span class="chip chip-entered">✓ Entered in CMS</span>'
+    : category === 'needs'
+      ? '<span class="chip chip-warn">Needs approval</span>'
+      : '<span class="chip">Aligned</span>';
+  return `
+    <div class="std-item ${selected ? 'active' : ''}" data-insel="${esc(s.id)}">
+      <div class="std-item-top">
+        <span class="std-code">${isDraft(s) ? '<span class="draft-tag">DRAFT</span> ' : ''}${esc(s.title || 'Untitled set')}</span>
+      </div>
+      <div class="std-desc">${s.gaGrade ? `G${esc(s.gaGrade)} · ` : ''}${s.passageId ? 'ID ' + esc(s.passageId) : 'No ID'}</div>
+      <div class="concept-meta" style="margin-top:4px">${catChip}</div>
+    </div>`;
+}
+
+// Per-question row in the detail panel: read-only text plus a tag area for THIS state's
+// standard — where question-level state standards get identified when a set crosses over.
+function detailQuestionHtml(q, i, s, st, grade) {
+  const typeLabel = (QUESTION_TYPES.find(t => t.key === q.type) || {}).label;
+  const native = q.standard;
+  const isNativeState = native && native.state === st;
+  let tagArea = '';
+  if (isNativeState) {
+    tagArea = `<div class="q-tag-area"><span class="tag-chip"><b>${esc(native.code)}</b> · ${STATE_NAMES[st]}</span></div>`;
+  } else {
+    const tag = (q.stateStandards || {})[st];
+    const open = state.ui.openPicker && state.ui.openPicker.section === 'qstate'
+      && state.ui.openPicker.index === i && state.ui.openPicker.setId === s.id;
+    const inner = tag
+      ? `<span class="tag-chip"><b>${esc(tag.code)}</b> · ${STATE_NAMES[st]}
+           <button class="tag-x" data-qsuntag="${i}" title="Remove tag">✕</button></span>`
+      : open
+        ? pickerHtml('qstate', i, st, qstateScope(grade), `Showing ${STATE_NAMES[st]} ELAR standards for Grade ${grade}.`)
+        : `<button class="act-btn tag-open" data-qspick="${i}">＋ Tag ${STATE_NAMES[st]} standard</button>`;
+    tagArea = `<div class="q-tag-area">
+      ${native ? `<div class="concept-meta" style="margin-bottom:6px"><span class="chip">${esc(native.code)} · ${STATE_NAMES[native.state] || native.state}</span></div>` : ''}
+      ${inner}</div>`;
+  }
+  return `
+    <div class="q-card">
+      <div class="q-head"><span class="q-label">Question ${i + 1}</span>
+        ${typeLabel ? `<span class="chip">${esc(typeLabel)}</span>` : ''}</div>
+      <div class="detail-text q-detail-text">${esc(q.text)}</div>
+      ${tagArea}
+    </div>`;
+}
+
+function qstateScope(grade) {
+  return std => std.subject === 'ela' &&
+    (std.grade === 'All' || String(std.grade) === String(grade));
+}
+
+function renderInputDetail(row, st, grade) {
+  const box = document.getElementById('inputDetail');
+  if (!box) return;
+  if (!row) {
+    box.innerHTML = `<div class="empty-state">
+      <div class="empty-icon">☰</div><h2>Select a passage</h2>
+      <p>Pick a title on the left to see the full set — passages, questions, and the ${STATE_NAMES[st]} standards to assign.</p></div>`;
+    return;
+  }
   const { set: s, hit, category } = row;
   const k = inputKey(s.id, st, grade);
-  const titles = s.passages.filter(p => p.title).map(p => p.title);
   const nativeRow = hit.own || hit.universal;
   const assigned = assignedStateStd(s, hit, st, grade);
   const dismissAct = nativeRow ? `dismiss|${esc(k)}` : `pushdismiss|${esc(k)}`;
@@ -1808,58 +1888,127 @@ function inputCard(row, st, grade) {
       </select>
       <button class="act-btn reset" data-iact="canceloverride|${esc(k)}">Cancel</button>`;
   } else if (category === 'cms') {
-    actions = `<span class="status-chip approved">✓ Developed in CMS</span>
+    actions = `<span class="status-chip approved">✓ Entered in CMS</span>
        <button class="act-btn reset" data-iact="uncms|${esc(k)}">Undo</button>`;
   } else if (category === 'needs') {
     actions = `<button class="act-btn approve" data-iact="approve|${esc(k)}">✓ Assign</button>
        ${nativeRow ? '' : `<button class="act-btn" data-iact="override|${esc(k)}">Override standard</button>`}
        <button class="act-btn reject" data-iact="${dismissAct}">✕ Dismiss</button>`;
   } else {
-    actions = `<button class="act-btn approve" data-iact="cms|${esc(k)}">✓ Developed in CMS</button>
+    actions = `<button class="act-btn approve" data-iact="cms|${esc(k)}">✓ Entered in CMS</button>
        ${nativeRow ? '' : `<button class="act-btn" data-iact="override|${esc(k)}">Override</button>`}
        <button class="act-btn reject" data-iact="${dismissAct}" title="Remove from this grade">Dismiss</button>`;
   }
 
   // Peer revision is a Georgia deliverable — authored here on the Georgia list,
   // not on the master list (which stays a clean cross-state source of truth).
-  let peerHtml = '';
-  if (st === 'GA') {
-    const peerOpen = state.ui.peerOpen === s.id;
-    const peerN = s.peerRevision.filter(t => (t.text || '').trim() || t.standard).length;
-    peerHtml = `
-      <div class="peer-inline">
-        <button class="act-btn" data-peertoggle="${esc(s.id)}">${peerOpen ? '▾' : '▸'} Peer Revision Task${peerN ? ` · ${peerN} task${peerN !== 1 ? 's' : ''}` : ''}</button>
-        <span class="chip ga-chip">Georgia only</span>
-        ${peerOpen ? `<div class="peer-editor">
-          ${s.peerRevision.map((q, i) => questionBlockHtml(q, 'peer', i, `Task ${i + 1}`, { restrictState: 'GA', setId: s.id })).join('')}
-          ${s.peerRevision.length < MAX_QUESTIONS ? `<button class="act-btn" data-add-peer="1">＋ Add task</button>` : ''}
-        </div>` : ''}
-      </div>`;
+  const peerHtml = st !== 'GA' ? '' : `
+    <div class="ps-section">
+      <div class="ps-section-title">Peer Revision Task <span class="chip ga-chip">Georgia only</span></div>
+      <div class="peer-editor">
+        ${s.peerRevision.map((q, i) => questionBlockHtml(q, 'peer', i, `Task ${i + 1}`, { restrictState: 'GA', setId: s.id })).join('')}
+        ${s.peerRevision.length < MAX_QUESTIONS ? `<button class="act-btn" data-add-peer="1">＋ Add task</button>` : ''}
+      </div>
+    </div>`;
+
+  const genreLabel = (GENRES.find(g => g.key === s.genre) || {}).label;
+  const istLabel = (ITEM_SET_TYPES.find(t => t.key === s.itemSetType) || {}).label;
+
+  box.innerHTML = `
+    <div class="detail-head ${category === 'cms' ? 'decided-approved' : ''}">
+      <div class="concept-title" style="font-size:18px">${isDraft(s) ? '<span class="draft-tag">DRAFT</span> ' : ''}${esc(s.title || 'Untitled set')}</div>
+      <div class="concept-meta" style="margin-top:6px">
+        ${s.passageId ? `<span class="chip">ID ${esc(s.passageId)}</span>` : '<span class="chip chip-warn">No passage ID</span>'}
+        ${s.gaGrade ? `<span class="chip">Grade ${esc(s.gaGrade)}</span>` : ''}
+        ${istLabel ? `<span class="chip">${esc(istLabel)}</span>` : ''}
+        ${genreLabel ? `<span class="chip">${esc(genreLabel)}</span>` : ''}
+        ${s.gaSubtopic ? `<span class="chip">${esc(s.gaSubtopic)}</span>` : ''}
+      </div>
+      <div style="margin-top:10px">${stdLine}</div>
+      <div class="detail-actions">${actions}</div>
+    </div>
+
+    <div class="ps-section">
+      <div class="ps-section-title">Passages</div>
+      ${s.passages.map(p => `
+        <div class="detail-passage">
+          ${p.title ? `<div class="detail-ptitle">${esc(p.title)}</div>` : ''}
+          <div class="detail-text">${esc(p.text)}</div>
+        </div>`).join('')}
+    </div>
+
+    <div class="ps-section">
+      <div class="ps-section-title">Question Set
+        <span class="ps-hint">tag each question with its ${STATE_NAMES[st]} standard</span></div>
+      ${s.questions.map((q, i) => detailQuestionHtml(q, i, s, st, grade)).join('')}
+    </div>
+
+    ${peerHtml}
+
+    <div class="ps-section">
+      <div class="ps-section-title">Writing Prompt</div>
+      <div class="detail-text">${esc(s.writingPrompt.text || '')}</div>
+    </div>`;
+
+  // actions (Assign / Override / Dismiss / Entered in CMS)
+  box.querySelectorAll('[data-iact]').forEach(b =>
+    b.addEventListener('click', () => handleInputAction(b.dataset.iact)));
+  const sel = box.querySelector('[data-override]');
+  if (sel) sel.addEventListener('change', e => {
+    if (!e.target.value) return;
+    const key = e.target.dataset.override;
+    state.setStateStd[key] = e.target.value;
+    state.ui.overrideKey = null;
+    const [setId, sg] = [key.slice(0, key.indexOf('|')), key.slice(key.indexOf('|') + 1)];
+    const [stt, grd] = sg.split(':');
+    pushKeysFor(setId, stt, grd).forEach(pk => { state.setPush[pk] = 'pushed'; });
+    pushState(); renderInput();
+    toast(`Assigned to ${e.target.value}`);
+  });
+
+  // question-level state tagging
+  box.querySelectorAll('[data-qspick]').forEach(b => b.addEventListener('click', () => {
+    state.ui.openPicker = { section: 'qstate', index: +b.dataset.qspick, setId: s.id };
+    renderInput();
+    const inp = document.querySelector('#inputDetail .tag-picker[data-picker^="qstate:"] .picker-search');
+    if (inp) inp.focus();
+  }));
+  box.querySelectorAll('[data-qsuntag]').forEach(b => b.addEventListener('click', () => {
+    const q = s.questions[+b.dataset.qsuntag];
+    if (q.stateStandards) delete q.stateStandards[st];
+    saveSets(); renderInput();
+  }));
+  const qp = box.querySelector('.tag-picker[data-picker^="qstate:"]');
+  if (qp) {
+    const iStr = qp.dataset.picker.split(':')[1];
+    const results = qp.querySelector('.picker-results');
+    qp.querySelector('.picker-search').addEventListener('input', e => {
+      results.innerHTML = pickerResultsHtml(e.target.value, st, qstateScope(grade));
+    });
+    qp.querySelector('.picker-cancel').addEventListener('click', () => {
+      state.ui.openPicker = null; renderInput();
+    });
+    results.addEventListener('click', e => {
+      const item = e.target.closest('.picker-item');
+      if (!item) return;
+      const [tst, subject, code] = item.dataset.tag.split('|');
+      const q = s.questions[+iStr];
+      q.stateStandards = q.stateStandards || {};
+      q.stateStandards[st] = { state: tst, subject, code };
+      state.ui.openPicker = null;
+      saveSets();
+      toast(`Tagged ${code} for ${STATE_NAMES[st]}`);
+      renderInput();
+    });
   }
 
-  return `
-    <div class="review-card ${category === 'cms' ? 'decided-approved' : ''}">
-      <div class="concept-head">
-        <div class="concept-title">${esc(s.title || 'Untitled set')}</div>
-        <div class="concept-desc">${titles.length ? esc(titles.join(' · ')) : `${s.passages.length} passage${s.passages.length !== 1 ? 's' : ''}, untitled`}</div>
-        ${s.passageId ? `<div class="concept-meta"><span class="chip">ID ${esc(s.passageId)}</span></div>` : ''}
-      </div>
-      <div style="padding:10px 16px 0">${stdLine}</div>
-      ${peerHtml}
-      <div class="review-foot">${actions}</div>
-    </div>`;
+  if (st === 'GA') wirePeerInline(box, s);
 }
 
 /* Inline editor wiring for the Georgia peer-revision block on a State Lists card.
    Mirrors the master editor's question handlers, but re-renders the input view. */
 function wirePeerInline(card, s) {
   const on = (sel, ev, fn) => card.querySelectorAll(sel).forEach(n => n.addEventListener(ev, fn));
-  on('[data-peertoggle]', 'click', e => {
-    const id = e.currentTarget.dataset.peertoggle;
-    state.ui.peerOpen = state.ui.peerOpen === id ? null : id;
-    state.ui.openPicker = null;
-    renderInput();
-  });
   on('[data-q]', 'input', e => {
     s.peerRevision[+e.target.dataset.q.split(':')[1]].text = e.target.value;
     saveSets();
@@ -1890,7 +2039,7 @@ function wirePeerInline(card, s) {
     s.peerRevision[+e.currentTarget.dataset.untag.split(':')[1]].standard = null;
     saveSets(); renderInput();
   });
-  const picker = card.querySelector('.tag-picker');
+  const picker = card.querySelector('.tag-picker[data-picker^="peer:"]');
   if (picker) {
     const iStr = picker.dataset.picker.split(':')[1];
     const results = picker.querySelector('.picker-results');
@@ -1934,8 +2083,12 @@ function renderInput() {
 
   document.getElementById('inputProgress').textContent =
     `${rows.length} passage${rows.length === 1 ? '' : 's'} for ${STATE_NAMES[st]} Grade ${grade} · `
-    + `${inCms.length} in CMS, ${aligned.length} aligned, ${needs.length} need approval`
+    + `${inCms.length} entered in CMS, ${aligned.length} to be entered, ${needs.length} need approval`
     + (dismissed ? ` · ${dismissed} dismissed` : '');
+
+  // CMS filter: All / Entered in CMS / Needs to be Entered (everything not yet entered).
+  const f = state.ui.inCms;
+  const visible = f === 'entered' ? inCms : f === 'needs' ? [...aligned, ...needs] : rows;
 
   const box = document.getElementById('inputList');
   box.innerHTML = '';
@@ -1946,35 +2099,38 @@ function renderInput() {
       is aligned to one within a grade, or is tagged to a universal (all-state) standard at this grade.
       Build sets in Passage Sets, and approve alignments in the Review Queue to make them cross over.</span>
     </div>`));
+    renderInputDetail(null, st, grade);
     return;
   }
-  const section = (label, list, hint) => {
+  if (!visible.length) {
+    box.appendChild(el(`<div class="review-empty">Nothing ${f === 'entered' ? 'entered in CMS' : 'left to enter'} for ${STATE_NAMES[st]} Grade ${grade}.</div>`));
+    renderInputDetail(null, st, grade);
+    return;
+  }
+
+  // keep the selection if it's still visible; otherwise select the first row
+  if (!visible.some(r => r.set.id === state.ui.inSelected)) state.ui.inSelected = visible[0].set.id;
+  const selId = state.ui.inSelected;
+
+  const group = (label, list, hint) => {
     if (!list.length) return;
     box.appendChild(el(`<div class="align-section-title">${label} (${list.length})${hint ? ` <span class="section-hint">${hint}</span>` : ''}<span class="rule"></span></div>`));
     list.forEach(r => {
-      const card = el(inputCard(r, st, grade));
-      card.querySelectorAll('[data-iact]').forEach(b =>
-        b.addEventListener('click', () => handleInputAction(b.dataset.iact)));
-      const sel = card.querySelector('[data-override]');
-      if (sel) sel.addEventListener('change', e => {
-        if (!e.target.value) return;
-        const key = e.target.dataset.override;
-        state.setStateStd[key] = e.target.value;   // record the chosen standard
+      const item = el(inputListItem(r, r.set.id === selId));
+      item.addEventListener('click', () => {
+        state.ui.inSelected = r.set.id;
+        state.ui.openPicker = null;
         state.ui.overrideKey = null;
-        // overriding also assigns (approves) the passage into this state.
-        const [setId, sg] = [key.slice(0, key.indexOf('|')), key.slice(key.indexOf('|') + 1)];
-        const [stt, grd] = sg.split(':');
-        pushKeysFor(setId, stt, grd).forEach(pk => { state.setPush[pk] = 'pushed'; });
-        pushState(); renderInput();
-        toast(`Assigned to ${e.target.value}`);
+        renderInput();
       });
-      if (st === 'GA') wirePeerInline(card, r.set);
-      box.appendChild(card);
+      box.appendChild(item);
     });
   };
-  section('Listed in CMS', inCms, 'developed here');
-  section('Aligned Passages', aligned, 'confirmed for this grade — ready to develop');
-  section('Needs Approval', needs, 'auto-populated from an alignment');
+  group('Entered in CMS', visible.filter(r => r.category === 'cms'), 'entered here');
+  group('Aligned Passages', visible.filter(r => r.category === 'aligned'), 'confirmed — ready to enter');
+  group('Needs Approval', visible.filter(r => r.category === 'needs'), 'auto-populated from an alignment');
+
+  renderInputDetail(visible.find(r => r.set.id === selId), st, grade);
 }
 
 // action is "verb|inputKey" (setId|state:grade). approve/dismiss act on every alignment
@@ -1989,7 +2145,7 @@ function handleInputAction(spec) {
   const [stt, grd] = sg.split(':');
   if (act === 'override') { state.ui.overrideKey = key; renderInput(); return; }
   if (act === 'canceloverride') { state.ui.overrideKey = null; renderInput(); return; }
-  if (act === 'cms') { state.setCms[key] = true; pushState(); renderInput(); toast('Marked developed in CMS'); }
+  if (act === 'cms') { state.setCms[key] = true; pushState(); renderInput(); toast('Marked entered in CMS'); }
   else if (act === 'uncms') { delete state.setCms[key]; pushState(); renderInput(); toast('CMS mark removed'); }
   else if (act === 'dismiss') {
     state.setDismiss[key] = true; pushState(); renderInput();
@@ -2029,13 +2185,22 @@ function init() {
   });
 
   document.getElementById('inState').addEventListener('change', e => {
-    state.ui.inState = e.target.value; renderInput();
+    state.ui.inState = e.target.value; state.ui.inSelected = null; state.ui.openPicker = null; renderInput();
   });
   document.getElementById('inGrade').addEventListener('change', e => {
-    state.ui.inGrade = e.target.value; renderInput();
+    state.ui.inGrade = e.target.value; state.ui.inSelected = null; state.ui.openPicker = null; renderInput();
   });
+  bindSeg('inCmsSeg', 'inCms', v => { state.ui.inCms = v; state.ui.openPicker = null; renderInput(); });
 
   document.getElementById('newSetBtn').addEventListener('click', newPassageSet);
+
+  // Master list filters: status + grade (grade options come from GRADES)
+  const fgSel = document.getElementById('setFilterGrade');
+  fgSel.innerHTML = `<option value="all">All grades</option>` + GRADES.map(g => `<option value="${g}">Grade ${g}</option>`).join('');
+  fgSel.addEventListener('change', e => { state.ui.setFilterGrade = e.target.value; renderSetList(); });
+  document.getElementById('setFilterStatus').addEventListener('change', e => {
+    state.ui.setFilterStatus = e.target.value; renderSetList();
+  });
 
   document.getElementById('saveBadge').addEventListener('click', async () => {
     const t = prompt('Paste your GitHub access token to enable cloud saving (stored only in this browser):', ghToken || '');
