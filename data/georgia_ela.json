@@ -1,1253 +1,983 @@
 [
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "K",
-  "code": "K.T.C.1",
-  "strand": "Texts: Context",
-  "description": "Purpose & Audience: Explain how authors of texts use language for a specific purpose and a target audience.",
-  "elements": [
-   "a. Identify the general purpose (e.g., to tell stories, to provide information, to share opinions) and target audience in a variety of texts. (I)",
-   "b. With adult support, identify different modes of communication: print, digital, auditory, and visual. (I)",
-   "c. With adult support, create texts in various modes (e.g., print, digital, auditory, and/or visual). (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "K",
-  "code": "K.T.C.2",
-  "strand": "Texts: Context",
-  "description": "Authors & Speakers: Investigate the relationships between authors and speakers in texts.",
-  "elements": [
-   "a. Identify the authors and illustrators of picture books and explain their roles. (I)",
-   "b. This progression begins in 6th grade.",
-   "c. This progression begins in 3rd grade.",
-   "d. This progression begins in 6th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "K",
-  "code": "K.T.SS.1",
-  "strand": "Texts: Structure & Style",
-  "description": "Organization: Identify and use organizational structures to craft meaning.",
-  "elements": [
-   "a. Identify and use text features, including titles, headings, photos, and illustrations, to determine if a text is fiction or nonfiction. (I)",
-   "b. With adult support, use text features, including titles, illustrations, and/or labels, to add clarity/coherence to texts. (C)",
-   "c. With adult support, retell events and actions in sequence. (C)",
-   "d. This progression begins in 3rd grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "K",
-  "code": "K.T.SS.2",
-  "strand": "Texts: Structure & Style",
-  "description": "Craft: Identify and use descriptive and engaging language.",
-  "elements": [
-   "a. Identify interesting and/or descriptive words that express feelings or appeal to the senses in texts. (I)",
-   "b. With adult support, use interesting and/or descriptive words to craft engaging texts. (C)",
-   "c. This progression begins in 6th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "K",
-  "code": "K.T.T.1",
-  "strand": "Texts: Techniques",
-  "description": "Narrative Techniques: Identify and use narrative techniques to shape understanding.",
-  "elements": [
-   "a. Identify techniques used to craft stories, including characters, setting, and major events. (I)",
-   "b. This progression begins in 1st grade.",
-   "c. With adult support, demonstrate an understanding of the central message, lesson, or moral of the story based on the words and actions of the main characters. (I)",
-   "d. With adult support, compare and contrast characters and their experiences in stories across diverse cultures. (I)",
-   "e. Use a combination of drawing, labeling, writing, and dictating* to create a text with narrative techniques (e.g., characters, setting, events) told in the order in which they occurred. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "K",
-  "code": "K.T.T.2",
-  "strand": "Texts: Techniques",
-  "description": "Expository Techniques: Identify and use expository techniques to shape understanding.",
-  "elements": [
-   "a. Identify techniques used to craft expository texts, including main topic. (I)",
-   "b. With adult support, describe the connection between two individuals, events, ideas, or pieces of information in a text. (I)",
-   "c. This progression begins in 3rd grade.",
-   "d. Use a combination of drawing, labeling, writing, and dictating* to create a text with expository techniques that includes a topic and information about the topic. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "K",
-  "code": "K.T.T.3",
-  "strand": "Texts: Techniques",
-  "description": "Opinion Techniques: Identify and use opinion techniques to shape understanding.",
-  "elements": [
-   "a. Explain the difference between opinions and facts about a topic. (I)",
-   "b. This progression begins in 9th grade.",
-   "c. Use a combination of drawing, labeling, writing, and dictating* to express an opinion about a topic. (C)",
-   "d. This progression begins in 9th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "K",
-  "code": "K.T.T.4",
-  "strand": "Texts: Techniques",
-  "description": "Poetic Techniques: Identify and use poetic techniques to shape understanding.",
-  "elements": [
-   "a. Identify poetic techniques used to craft poetic texts, including rhyme. (I)",
-   "b. With adult support, use poetic techniques to create poems that may or may not rhyme. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "K",
-  "code": "K.T.RA.1",
-  "strand": "Texts: Research & Analysis",
-  "description": "Research & Inquiry: Build knowledge about the world by asking or generating questions about topics of interest, researching the answers, using multiple sources, and communicating relevant and accurate information about the topic.",
-  "elements": [
-   "a. With adult support, ask questions about topics of interest for research. (I)",
-   "b. With adult support, collaborate to conduct research on a shared topic of interest by gathering and organizing information from provided sources (including print, digital, and personal communication) using graphic organizers or other support aids. (I)",
-   "c. With adult support, share relevant and accurate information through a variety of different modes. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "K",
-  "code": "K.T.RA.2",
-  "strand": "Texts: Research & Analysis",
-  "description": "Curating Sources & Evidence: Reference parts of texts to address a specific topic or question and explore various sources of information to make connections across a broad range of topics.",
-  "elements": [
-   "a. With adult support, refer to parts of texts when supporting an idea, answer, or opinion. (I)",
-   "b. With adult support, explore various sources of information, including print, digital, and personal communication. (I)",
-   "c. This progression begins in 5th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "1",
-  "code": "1.T.C.1",
-  "strand": "Texts: Context",
-  "description": "Purpose & Audience: Explain how authors of texts use language for a specific purpose and a target audience.",
-  "elements": [
-   "a. Identify the general purpose (e.g., to tell stories, to provide information, to share opinions, to explain ideas) and target audience in a variety of texts. (I)",
-   "b. Identify different modes of communication: print, digital, auditory, and visual. (I)",
-   "c. Create texts in teacher-selected modes (e.g., print, digital, auditory, and/or visual). (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "1",
-  "code": "1.T.C.2",
-  "strand": "Texts: Context",
-  "description": "Authors & Speakers: Investigate the relationships between authors and speakers in texts.",
-  "elements": [
-   "a. Identify who is speaking or telling the story at various points in a text. (I)",
-   "b. This progression begins in 6th grade.",
-   "c. This progression begins in 3rd grade.",
-   "d. This progression begins in 6th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "1",
-  "code": "1.T.SS.1",
-  "strand": "Texts: Structure & Style",
-  "description": "Organization: Identify and use organizational structures to craft meaning.",
-  "elements": [
-   "a. Identify and use various text features (e.g., diagrams, tables of contents) to locate information and make meaning in texts. (I)",
-   "b. Use text features (e.g., illustrations, page numbers, bold print, headings) to add clarity and meaning to texts. (C)",
-   "c. Use transition words or phrases, such as *once upon a time*, *next*, and *last*, to sequence events and actions. (C)",
-   "d. This progression begins in 3rd grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "1",
-  "code": "1.T.SS.2",
-  "strand": "Texts: Structure & Style",
-  "description": "Craft: Identify and use descriptive and engaging language.",
-  "elements": [
-   "a. Identify and explain the use of descriptive words in texts. (I)",
-   "b. Use descriptive words to craft engaging texts. (C)",
-   "c. This progression begins in 6th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "1",
-  "code": "1.T.T.1",
-  "strand": "Texts: Techniques",
-  "description": "Narrative Techniques: Identify and use narrative techniques to shape understanding.",
-  "elements": [
-   "a. Identify techniques used to craft stories, including characters, setting, major events, and dialogue. (I)",
-   "b. Identify a simple plot with a problem and solution. (I)",
-   "c. Describe traits of the main characters and explain how their words and actions support the central message, lesson, or moral of the story. (I)",
-   "d. With adult support, compare and contrast characters and their experiences in stories across diverse cultures. (I)",
-   "e. Use knowledge of narrative techniques (e.g., characters, settings, events) to create texts that share real or imagined experiences and events with a sense of closure. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "1",
-  "code": "1.T.T.2",
-  "strand": "Texts: Techniques",
-  "description": "Expository Techniques: Identify and use expository techniques to shape understanding.",
-  "elements": [
-   "a. Identify techniques used to craft expository texts, including main topic and supporting details. (I)",
-   "b. Describe the connection between two individuals, events, ideas, or pieces of information in a text. (I)",
-   "c. This progression begins in 3rd grade.",
-   "d. Use knowledge of expository techniques to introduce a topic, supply facts about the topic, and provide a sense of closure. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "1",
-  "code": "1.T.T.3",
-  "strand": "Texts: Techniques",
-  "description": "Opinion Techniques: Identify and use opinion techniques to shape understanding.",
-  "elements": [
-   "a. Identify techniques used to craft opinion texts, including the author’s opinion and supporting reasons. (I)",
-   "b. This progression begins in 9th grade.",
-   "c. Use knowledge of opinion techniques to create opinion pieces that introduce the topic, state an opinion about the topic, and provide two or more reasons to support the opinion with linking words *and* and *because*. (C)",
-   "d. This progression begins in 9th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "1",
-  "code": "1.T.T.4",
-  "strand": "Texts: Techniques",
-  "description": "Poetic Techniques: Identify and use poetic techniques to shape understanding.",
-  "elements": [
-   "a. Identify and describe poetic techniques used to craft texts, including rhyme, alliteration, and repeated lines. (I)",
-   "b. Use poetic techniques to create poems using simple words and/or phrases that may or may not rhyme. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "1",
-  "code": "1.T.RA.1",
-  "strand": "Texts: Research & Analysis",
-  "description": "Research & Inquiry: Build knowledge about the world by asking or generating questions about topics of interest, researching the answers, using multiple sources, and communicating relevant and accurate information about the topic.",
-  "elements": [
-   "a. Ask questions about topics of interest for research. (I)",
-   "b. Work collaboratively or individually to conduct research on a shared or personal topic of interest by gathering and organizing information from provided sources (including print, digital, and personal communication) using graphic organizers or other support aids. (I)",
-   "c. Share relevant and accurate information through a variety of different modes. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "1",
-  "code": "1.T.RA.2",
-  "strand": "Texts: Research & Analysis",
-  "description": "Curating Sources & Evidence: Reference parts of texts to address a specific topic or question and explore various sources of information to make connections across a broad range of topics.",
-  "elements": [
-   "a. Refer to parts of texts when supporting an idea, answer, or opinion. (I)",
-   "b. Explore various sources of information, including print, digital, and personal communication. (I)",
-   "c. This progression begins in 5th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "2",
-  "code": "2.T.C.1",
-  "strand": "Texts: Context",
-  "description": "Purpose & Audience: Explain how authors of texts use language for a specific purpose and a target audience.",
-  "elements": [
-   "a. Determine the general purpose and target audience in a variety of texts. (I)",
-   "b. Recognize different modes of communication: print, digital, auditory, spoken, visual, and multimodal. (I)",
-   "c. Choose two or more modes and create a multimodal text on a self-selected topic. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "2",
-  "code": "2.T.C.2",
-  "strand": "Texts: Context",
-  "description": "Authors & Speakers: Investigate the relationships between authors and speakers in texts.",
-  "elements": [
-   "a. Use examples of language from the text to identify various points of view (e.g., first person, third person). (I)",
-   "b. This progression begins in 6th grade.",
-   "c. This progression begins in 3rd grade.",
-   "d. This progression begins in 6th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "2",
-  "code": "2.T.SS.1",
-  "strand": "Texts: Structure & Style",
-  "description": "Organization: Identify and use organizational structures to craft meaning.",
-  "elements": [
-   "a. Explain how various text features (e.g., captions, subheadings, charts, indexes) contribute to meaning and organization of texts. (I)",
-   "b. Use text features (e.g., illustrations, page numbers, bold print, headings) to add clarity and meaning to texts. (C)",
-   "c. Use conjunctions and transition words or phrases to sequence events and actions. (C)",
-   "d. This progression begins in 3rd grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "2",
-  "code": "2.T.SS.2",
-  "strand": "Texts: Structure & Style",
-  "description": "Craft: Identify and use descriptive and engaging language.",
-  "elements": [
-   "a. Identify the difference between literal and nonliteral or figurative language in texts. (I)",
-   "b. Use descriptive words to craft engaging texts. (C)",
-   "c. This progression begins in 6th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "2",
-  "code": "2.T.T.1",
-  "strand": "Texts: Techniques",
-  "description": "Narrative Techniques: Identify and use narrative techniques to shape understanding.",
-  "elements": [
-   "a. Identify and describe techniques used to craft stories, including characters, setting, major events, and dialogue. (I)",
-   "b. Identify the major plot events that occur between a problem and solution. (I)",
-   "c. Identify and describe how characters’ responses to major challenges or events support the central message, lesson, or moral of the story. (I)",
-   "d. Compare and contrast two or more versions of the same story by different authors or from diverse cultures. (I)",
-   "e. Use knowledge of narrative techniques (e.g., characters, settings, events, dialogue) to create texts that recount real or imagined experiences and events with a sense of closure. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "2",
-  "code": "2.T.T.2",
-  "strand": "Texts: Techniques",
-  "description": "Expository Techniques: Identify and use expository techniques to shape understanding.",
-  "elements": [
-   "a. Identify and describe techniques used to craft expository texts, including main idea and key supporting details within specific paragraphs. (I)",
-   "b. Describe the connection between a series of historical events, scientific ideas or concepts, or steps in technical procedures in a text. (I)",
-   "c. This progression begins in 3rd grade.",
-   "d. Use knowledge of expository techniques to create texts that introduce a topic, use facts and definitions to develop the topic, and provide a concluding statement or section. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "2",
-  "code": "2.T.T.3",
-  "strand": "Texts: Techniques",
-  "description": "Opinion Techniques: Identify and use opinion techniques to shape understanding.",
-  "elements": [
-   "a. Identify and describe techniques used to craft opinion texts, including the author’s opinion, supporting reasons, and facts. (I)",
-   "b. This progression begins in 9th grade.",
-   "c. Use knowledge of opinion techniques to create opinion pieces that introduce the topic, state an opinion about the topic, supply reasons to support the opinion with linking words (e.g., because, and, also), and provide a conclusion. (C)",
-   "d. This progression begins in 9th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "2",
-  "code": "2.T.T.4",
-  "strand": "Texts: Techniques",
-  "description": "Poetic Techniques: Identify and use poetic techniques to shape understanding.",
-  "elements": [
-   "a. Identify, classify, and describe poetic techniques used to craft texts, including rhyme, alliteration, repeated lines, stanzas, and line breaks. (I)",
-   "b. Use poetic techniques to create poems using words and/or phrases that may or may not rhyme. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "2",
-  "code": "2.T.RA.1",
-  "strand": "Texts: Research & Analysis",
-  "description": "Research & Inquiry: Build knowledge about the world by asking or generating questions about topics of interest, researching the answers, using multiple sources, and communicating relevant and accurate information about the topic.",
-  "elements": [
-   "a. Generate questions about self-selected topics of interest for research. (I)",
-   "b. Work collaboratively or individually to conduct research to answer questions on a shared or personal topic of interest by gathering and organizing information from multiple sources using graphic organizers or other support aids. (I)",
-   "c. Organize and share related, relevant, and accurate information through a variety of different modes. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "2",
-  "code": "2.T.RA.2",
-  "strand": "Texts: Research & Analysis",
-  "description": "Curating Sources & Evidence: Reference parts of texts to address a specific topic or question and explore various sources of information to make connections across a broad range of topics.",
-  "elements": [
-   "a. Refer to specific parts of texts when supporting an idea, answer, or opinion. (I)",
-   "b. Explore various sources of information, including print, digital, and personal communication, and discuss connections to various topics. (I)",
-   "c. This progression begins in 5th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "3",
-  "code": "3.T.C.1",
-  "strand": "Texts: Context",
-  "description": "Purpose & Audience: Use knowledge of purposes and audiences, as well as the language that develops those relationships, to make meaning of texts in multiple modes.",
-  "elements": [
-   "a. Determine the purpose (e.g., entertain, inform, persuade) and target audience of a text. (I)",
-   "b. Determine common text features of print, digital, auditory, spoken, and visual modes and describe how they contribute to the overall purpose and effect. (I)",
-   "c. Create multimodal texts, using features of pre-selected modes for a specific purpose and audience. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "3",
-  "code": "3.T.C.2",
-  "strand": "Texts: Context",
-  "description": "Authors & Speakers: Make connections between authors of texts, speakers in texts, varying perspectives, and the circumstances in which texts are produced.",
-  "elements": [
-   "a. Describe different perspectives of the narrator or speakers and distinguish them from their own. (I)",
-   "b. This progression begins in 6th grade.",
-   "c. With adult support, identify the context in which a text is written (e.g., time period, individual, situational). (I)",
-   "d. This progression begins in 6th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "3",
-  "code": "3.T.SS.1",
-  "strand": "Texts: Structure & Style",
-  "description": "Organization: Demonstrate and apply understanding of organizational structures and elements to create coherent and engaging texts.",
-  "elements": [
-   "a. Describe how texts are arranged to represent information and ideas using text features (e.g., map, captions) and organizational structures (e.g., cause/effect), referring to parts of texts using terms such as chapter or section. (I)",
-   "b. Design texts using a variety of text structures and features, according to purpose and audience. (C)",
-   "c. Use conjunctions and transition words or phrases, such as *although* and *since,* to add cohesion and link ideas and information. (C)",
-   "d. Craft related sentences into clear and cohesive paragraphs. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "3",
-  "code": "3.T.SS.2",
-  "strand": "Texts: Structure & Style",
-  "description": "Craft: Use language to interpret meaning and craft engaging texts.",
-  "elements": [
-   "a. Identify and describe the use of figurative language, such as similes, metaphors, and idioms in a wide variety of texts. (I)",
-   "b. Use figurative language, such as similes, metaphors, and idioms, to show relationships between ideas and information. (C)",
-   "c. This progression begins in 6th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "3",
-  "code": "3.T.T.1",
-  "strand": "Texts: Techniques",
-  "description": "Narrative Techniques: Explain, analyze, and use narrative techniques to shape understandings.",
-  "elements": [
-   "a. Explain how narrative techniques are used to present ideas, design texts, and convey information about characters, setting, and plot. (I)",
-   "b. Explain how characters, setting, problem, and solution function in the plot. (I)",
-   "c. Describe characters’ traits, motivations, actions, thoughts, and feelings and explain their connection to the central message, lesson, or moral of the story. (I)",
-   "d. Compare and contrast two or more characters, settings, central messages, or events within texts across diverse cultures. (I)",
-   "e. Apply narrative techniques (e.g., character, setting, problem, resolution, dialogue) to develop a real or imagined experience using descriptive details, clear event sequences, and a sense of closure. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "3",
-  "code": "3.T.T.2",
-  "strand": "Texts: Techniques",
-  "description": "Expository Techniques: Explain, analyze, and use expository techniques to shape understandings.",
-  "elements": [
-   "a. Describe the techniques used to present and design expository texts, including facts and key details used to support the main idea. (I)",
-   "b. Describe the relationship between a series of historical events, scientific ideas or concepts, or steps in technical procedures in a text. (I)",
-   "c. Integrate and explain information from two texts on the same topic in relationship to important points and key details. (I)",
-   "d. Apply expository techniques to introduce a topic, develop the topic with facts and other information (e.g., definitions, details, illustrations), and provide a concluding statement or section. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "3",
-  "code": "3.T.T.3",
-  "strand": "Texts: Techniques",
-  "description": "Opinion Techniques: Explain, analyze, and use opinion techniques to shape understandings.",
-  "elements": [
-   "a. Describe and discuss the techniques used to present and design opinion texts, including author’s opinion statement, supporting reasons, and evidence. (I)",
-   "b. This progression begins in 9th grade.",
-   "c. Apply opinion techniques to create opinion pieces that introduce the topic, state an opinion about the topic, supply reasons to support the opinion with linking words (e.g., because, therefore, since, for example) to connect the opinion and reasons, and provide a concluding statement or section. (C)",
-   "d. This progression begins in 9th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "3",
-  "code": "3.T.T.4",
-  "strand": "Texts: Techniques",
-  "description": "Poetic Techniques: Explain, analyze, and use poetic techniques to shape understandings.",
-  "elements": [
-   "a. Discuss and explain techniques used to present and design poetry, including rhyme scheme. (I)",
-   "b. Apply poetic techniques to produce poetry and engage audiences that use rhyme in at least two stanzas to achieve an intended effect. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "3",
-  "code": "3.T.RA.1",
-  "strand": "Texts: Research & Analysis",
-  "description": "Research & Inquiry: Conduct research to ask and answer questions that clarify, deepen, and extend understanding of a topic of interest using credible sources and communicating relevant and accurate information.",
-  "elements": [
-   "a. Generate questions about a self-selected topic of interest to be researched, formulating additional questions to clarify or deepen understanding. (I)",
-   "b. Conduct research by locating, gathering, selecting, and organizing information from multiple credible sources, including print, digital, and personal communication, about a self-selected topic. (I)",
-   "c. Summarize researched, relevant, and accurate information from at least two credible sources about a self-selected topic. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "3",
-  "code": "3.T.RA.2",
-  "strand": "Texts: Research & Analysis",
-  "description": "Curating Sources & Evidence: Integrate evidence from print and digital sources, assessing credibility and relevance and avoiding plagiarism.",
-  "elements": [
-   "a. Refer to specific passages from a text to support an idea, answer, or opinion. (I)",
-   "b. Determine what makes a source text credible and relevant and identify examples. (I)",
-   "c. This progression begins in 5th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "4",
-  "code": "4.T.C.1",
-  "strand": "Texts: Context",
-  "description": "Purpose & Audience: Use knowledge of purposes and audiences, as well as the language that develops those relationships, to make meaning of texts in multiple modes.",
-  "elements": [
-   "a. Determine audience and identify the development of the purpose across a text. (I)",
-   "b. Classify various texts by mode and describe how the author's choice of mode influences audiences and contributes to the overall purpose and effect. (I)",
-   "c. Create multimodal texts, using features of pre-selected modes for a specific purpose and audience. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "4",
-  "code": "4.T.C.2",
-  "strand": "Texts: Context",
-  "description": "Authors & Speakers: Make connections between authors of texts, speakers in texts, varying perspectives, and the circumstances in which texts are produced.",
-  "elements": [
-   "a. Compare and contrast the perspectives of different narrators or speakers in a text. (I)",
-   "b. This progression begins in 6th grade.",
-   "c. Identify the context in which a text is written (e.g., time period, individual, situational). (I)",
-   "d. This progression begins in 6th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "4",
-  "code": "4.T.SS.1",
-  "strand": "Texts: Structure & Style",
-  "description": "Organization: Demonstrate and apply understanding of organizational structures and elements to create coherent and engaging texts.",
-  "elements": [
-   "a. Compare and contrast the text features (e.g., icons, hyperlinks) and organizational structures (e.g. chronological order, rhyme pattern) of texts written in different genres/for certain purposes, on the same topic. (I)",
-   "b. Design texts using a variety of text structures and features, according to purpose and audience. (C)",
-   "c. Use conjunctions and transition words or phrases, such as *similarly* and *in contrast,* to show relationships between ideas and information. (C)",
-   "d. Craft related sentences into cohesive paragraphs that follow a chosen structure using transitions. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "4",
-  "code": "4.T.SS.2",
-  "strand": "Texts: Structure & Style",
-  "description": "Craft: Use language to interpret meaning and craft engaging texts.",
-  "elements": [
-   "a. Identify and explain how figurative language, such as hyperboles and personification, shapes how ideas and information in texts are understood. (I)",
-   "b. Use figurative language for intentional effects when expressing ideas or conveying information. (C)",
-   "c. This progression begins in 6th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "4",
-  "code": "4.T.T.1",
-  "strand": "Texts: Techniques",
-  "description": "Narrative Techniques: Explain, analyze, and use narrative techniques to shape understandings.",
-  "elements": [
-   "a. Analyze the use of narrative techniques to present ideas, design texts, and convey information about characters, setting, and plot. (I)",
-   "b. Describe how the text’s protagonist and antagonist function in the plot, drive the conflict, and contribute to the development of other characters. (I)",
-   "c. Identify and describe common themes in texts (e.g., good vs. evil) that are revealed through details about characters. (I)",
-   "d. Compare and contrast the approach to similar themes and topics (e.g., opposition of good and evil) and patterns of events (e.g., the quest) in stories, myths, and traditional literature from diverse cultures. (I)",
-   "e. Apply narrative techniques (e.g., character, setting, problem, resolution, and dialogue) to develop a real or imagined experience using descriptive details, clear event sequences, and a conclusion. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "4",
-  "code": "4.T.T.2",
-  "strand": "Texts: Techniques",
-  "description": "Expository Techniques: Explain, analyze, and use expository techniques to shape understandings.",
-  "elements": [
-   "a. Discuss and evaluate techniques used to present and design expository texts, including facts and key details used to support the main idea. (I)",
-   "b. Explain events, procedures, ideas, or concepts in a historical, scientific, or technical text, including what happened and why, based on specific information in the text. (I)",
-   "c. Integrate and classify information from multiple texts on the same topic in relationship to important points and key details. (I)",
-   "d. Apply expository techniques that clearly introduce a topic, group paragraphs or sections to develop the topic with facts and other information (e.g., definitions, concrete details, quotations), use precise language, and provide a concluding statement or section."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "4",
-  "code": "4.T.T.3",
-  "strand": "Texts: Techniques",
-  "description": "Opinion Techniques: Explain, analyze, and use opinion techniques to shape understandings.",
-  "elements": [
-   "a. Discuss and evaluate techniques used to present and design opinion and argumentative texts, including author’s opinion or claim, supporting reasons, and evidence. (I)",
-   "b. This progression begins in 9th grade.",
-   "c. Apply opinion techniques to create opinion pieces that introduce the topic, state an opinion about the topic, supply reasons and evidence to support the opinion with linking words (e.g., because, therefore, since, for example) to connect the opinion and reasons, and provide a concluding statement or section. (C)",
-   "d. This progression begins in 9th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "4",
-  "code": "4.T.T.4",
-  "strand": "Texts: Techniques",
-  "description": "Poetic Techniques: Explain, analyze, and use poetic techniques to shape understandings.",
-  "elements": [
-   "a. Discuss and explain techniques used to present and design different types of poetry, including free verse, rhymed verse, haiku, and limerick. (I)",
-   "b. Apply poetic techniques to produce poetry and engage audiences that use a predetermined rhyme scheme to achieve an intended effect. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "4",
-  "code": "4.T.RA.1",
-  "strand": "Texts: Research & Analysis",
-  "description": "Research & Inquiry: Conduct research to ask and answer questions that clarify, deepen, and extend understanding of a topic of interest using credible sources and communicating relevant and accurate information.",
-  "elements": [
-   "a. Generate questions about a self-selected topic of interest to be researched, asking open-ended questions to deepen and extend understanding of the topic and related ideas and information. (I)",
-   "b. Conduct research by locating, gathering, curating, and integrating information from multiple credible sources, including print, digital, and personal communication, about a self-selected topic. (I)",
-   "c. Consider and integrate information from research, including relevant and accurate evidence from two or more credible sources. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "4",
-  "code": "4.T.RA.2",
-  "strand": "Texts: Research & Analysis",
-  "description": "Curating Sources & Evidence: Integrate evidence from print and digital sources, assessing credibility and relevance and avoiding plagiarism.",
-  "elements": [
-   "a. Refer to specific passages or quotations from a text to support an idea, answer, or opinion. (I)",
-   "b. Determine the credibility and relevance of a source text based on known information about the author and/or organization. (I)",
-   "c. This progression begins in 5th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "5",
-  "code": "5.T.C.1",
-  "strand": "Texts: Context",
-  "description": "Purpose & Audience: Use knowledge of purposes and audiences, as well as the language that develops those relationships, to make meaning of texts in multiple modes.",
-  "elements": [
-   "a. Determine audience and explain multiple purposes found across a text. (I)",
-   "b. Classify various texts by mode and describe how the author's choice of mode influences audiences and contributes to the overall purpose and effect. (I)",
-   "c. Create multimodal texts, using features of pre-selected modes for a specific purpose and audience. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "5",
-  "code": "5.T.C.2",
-  "strand": "Texts: Context",
-  "description": "Authors & Speakers: Make connections between authors of texts, speakers in texts, varying perspectives, and the circumstances in which texts are produced.",
-  "elements": [
-   "a. Describe how a narrator or speaker’s perspective influences the text. (I)",
-   "b. This progression begins in 6th grade.",
-   "c. Make inferences about the context in which the text is written (e.g., time period, individual, situational). (I)",
-   "d. This progression begins in 6th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "5",
-  "code": "5.T.SS.1",
-  "strand": "Texts: Structure & Style",
-  "description": "Organization: Demonstrate and apply understanding of organizational structures and elements to create cohesive and engaging texts.",
-  "elements": [
-   "a. Describe how text features (e.g., chapter titles, diagrams) and organizational structure (e.g., chapters, problem/solution) function in conjunction to represent ideas and information coherently in texts. (I)",
-   "b. Design texts using a variety of text structures and features, according to purpose and audience. (C)",
-   "c. Use conjunctions and transition words or phrases, such as *similarly* and *in contrast,* to show relationships between ideas and information. (C)",
-   "d. Craft related ideas into coherent paragraphs that follow a logical structure using transitions. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "5",
-  "code": "5.T.SS.2",
-  "strand": "Texts: Structure & Style",
-  "description": "Craft: Use language to interpret meaning and craft engaging texts.",
-  "elements": [
-   "a. Describe the impact of the use of figurative language such as similes, metaphors, idioms, hyperboles, and personification in response to audience and purpose, in various modes and genres. (I)",
-   "b. Use figurative language for intentional effects when expressing ideas or conveying information. (C)",
-   "c. This progression begins in 6th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "5",
-  "code": "5.T.T.1",
-  "strand": "Texts: Techniques",
-  "description": "Narrative Techniques: Explain, analyze, and use narrative techniques to shape understandings.",
-  "elements": [
-   "a. Analyze the use of narrative techniques to present ideas, design texts, and convey information about characters, setting, and plot. (I)",
-   "b. Analyze how setting, events, conflict, and characterization contribute to the plot. (I)",
-   "c. Explain how a theme is demonstrated through a character’s growth or conflict resolution. (I)",
-   "d. Compare and contrast stories in the same genre (e.g., mysteries, adventures) from diverse cultures on their approaches to similar themes and topics. (I)",
-   "e. Apply narrative techniques (e.g., character, setting, conflict, climax, resolution, and dialogue) to develop a real or imagined experience using descriptive details, clear event sequences, and a conclusion. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "5",
-  "code": "5.T.T.2",
-  "strand": "Texts: Techniques",
-  "description": "Expository Techniques: Explain, analyze, and use expository techniques to shape understandings.",
-  "elements": [
-   "a. Discuss and evaluate techniques used to present and design expository texts, including multiple main ideas, facts, and key details used to support the main idea. (I)",
-   "b. Explain the relationships or interactions between two or more individuals, events, ideas, or concepts in a historical, scientific, or technical text based on specific information in the text. (I)",
-   "c. Compare and contrast first and secondhand accounts of the same event or topic using primary and/or secondary sources. (I)",
-   "d. Apply expository techniques that clearly introduce a topic, group paragraphs or sections to develop the topic with facts and other information (e.g., definitions, concrete details, quotations), use precise language, and provide a concluding statement or section. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "5",
-  "code": "5.T.T.3",
-  "strand": "Texts: Techniques",
-  "description": "Opinion Techniques: Explain, analyze, and use opinion techniques to shape understandings.",
-  "elements": [
-   "a. Discuss and evaluate techniques used to present and design opinion and argumentative texts, including author’s opinion or claim, supporting reasons, and evidence. (I)",
-   "b. This progression begins in 9th grade.",
-   "c. Apply opinion techniques to create opinion pieces that introduce the topic, state an opinion about the topic, supply reasons and evidence to support the opinion with linking words (e.g., because, therefore, since, for example) to connect the opinion and reasons, and provide a concluding statement or section. [This progression resumes as argumentative techniques in 6th grade; students will reinforce skills during 5th grade.] (C)",
-   "d. This progression begins in 9th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "5",
-  "code": "5.T.T.4",
-  "strand": "Texts: Techniques",
-  "description": "Poetic Techniques: Explain, analyze, and use poetic techniques to shape understandings.",
-  "elements": [
-   "a. Discuss and explain techniques used to present and design poetry, including rhyme and structure. (I)",
-   "b. Apply poetic techniques (e.g., rhyme, rhyme scheme, structure) to produce different types of poetry (e.g., free verse, rhymed verse, haiku, limerick). (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "5",
-  "code": "5.T.RA.1",
-  "strand": "Texts: Research & Analysis",
-  "description": "Research & Inquiry: Conduct research to ask and answer questions that clarify, deepen, and extend understanding of a topic of interest using credible sources and communicating relevant and accurate information.",
-  "elements": [
-   "a. Generate questions about a self-selected topic of interest to be researched, asking probing questions to compare and contrast related topics. (I)",
-   "b. Conduct research by locating, gathering, curating, and integrating information from multiple credible sources, including print, digital, and personal communication, about a self-selected topic. (I)",
-   "c. *Consider and integrate information from research, including relevant and accurate evidence from two or more credible sources. (C)*"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "5",
-  "code": "5.T.RA.2",
-  "strand": "Texts: Research & Analysis",
-  "description": "Curating Sources & Evidence: Integrate evidence from print and digital sources, assessing credibility and relevance and avoiding plagiarism.",
-  "elements": [
-   "a. Refer to specific passages or quotations from a text to support an idea, answer, or opinion, recording the referenced information’s page number. (I)",
-   "b. Determine credibility and relevance by assessing the strengths and weaknesses of source texts to support a topic or message. (I)",
-   "c. Use basic parenthetical citations to credit the source used. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "6",
-  "code": "6.T.C.1",
-  "strand": "Texts: Context",
-  "description": "Purpose & Audience: Analyze the impact of purpose and audience on a wide variety of texts.",
-  "elements": [
-   "a. Analyze the development of multiple purposes within a single text and how those purposes target specific audiences. (I)",
-   "b. Use text mode features to aid comprehension and analysis of a variety of disciplinary texts and their related contexts. (I)",
-   "c. Construct multimodal texts and/or presentations for a specific purpose and audience. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "6",
-  "code": "6.T.C.2",
-  "strand": "Texts: Context",
-  "description": "Authors & Speakers: Analyze how authors’ and/or speakers’ perspectives influence texts and how circumstances shape their creation.",
-  "elements": [
-   "a. Describe and analyze the development and interaction of two or more perspectives conveyed by a single text. (I)",
-   "b. Explain how the author’s choice of evidence reveals the author’s perspective and impacts credibility. (I)",
-   "c. Identify and analyze the impact of background information and context (e.g., geography, location, era, historical happenings) on text development. (I)",
-   "d. Use credible sources to research the answers to questions on academic and individual topics of interest. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "6",
-  "code": "6.T.SS.1",
-  "strand": "Texts: Structure & Style",
-  "description": "Organization: Analyze and use organizational structures to craft meaning.",
-  "elements": [
-   "a. Explain how authors modify organizational structures or features to convey meaning, respond to the audience, or achieve specific purposes. (I)",
-   "b. Design texts, flexibly employing a variety of text structures and text features to convey information and add style, as appropriate to purpose and audience. (C)",
-   "c. Use concept repetition and connected terms to support transitions, clarify the relationship between ideas and information in texts, and increase text cohesion. (C)",
-   "d. Craft multi-paragraph texts using a coherent structure to organize ideas with an introduction; supporting facts, reasons, details, descriptions, and/or events; and a conclusion. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "6",
-  "code": "6.T.SS.2",
-  "strand": "Texts: Structure & Style",
-  "description": "Craft: Interpret and use language to craft engaging texts.",
-  "elements": [
-   "a. Determine how figurative and connotative language choices contribute to meaning, mood, or tone in a wide variety of texts. (I)",
-   "b. Use figurative language or literary devices for intentional effects when creating texts to achieve specific purposes or appeal to the target audience. (C)",
-   "c. Compare and contrast characteristics of formal style (e.g., jargon, complete sentences) with those of informal style (e.g., contractions, slang, sentence fragments) and apply understandings to writing and speaking. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "6",
-  "code": "6.T.T.1",
-  "strand": "Texts: Techniques",
-  "description": "Narrative Techniques: Analyze and apply narrative techniques.",
-  "elements": [
-   "a. Describe how narrative techniques are used across the text to develop plot, characters, and setting. (I)",
-   "b. Analyze how setting, events, conflict, and characterization influence plot pacing. (I)",
-   "c. Identify multiple themes and describe how the relationships and interactions between characters influence and shape themes. (I)",
-   "d. Compare and contrast literary texts in different modes and genres (e.g., historical novels and fantasy texts) in terms of their approaches to similar themes and topics. (I)",
-   "e. Apply narrative techniques to enhance writing, engage audiences, and achieve specific purposes. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "6",
-  "code": "6.T.T.2",
-  "strand": "Texts: Techniques",
-  "description": "Expository Techniques: Analyze and apply expository techniques.",
-  "elements": [
-   "a. Recognize and describe expository techniques used to present and design content, including main ideas, facts, key details, and a sense of closure. (I)",
-   "b. Compare and contrast one author’s presentation of events with that of another on the same historical event or topic. (I)",
-   "c. This progression ends in 5th grade.",
-   "d. Apply expository techniques (e.g., main idea, facts, key details, sense of closure) to enhance writing and engage audiences. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "6",
-  "code": "6.T.T.3",
-  "strand": "Texts: Techniques",
-  "description": "Argumentative Techniques: Analyze and apply argumentative techniques.",
-  "elements": [
-   "a. Recognize and explain argumentative techniques used to present and design content, including an author’s claim, supporting relevant evidence, an identified counterclaim, and a conclusion that logically follows the argument. (I)",
-   "b. This progression begins in 9th grade.",
-   "c. Apply argumentative techniques (e.g., author’s claim, supporting relevant evidence, an identified counterclaim, and a logical conclusion) to enhance writing and engage audiences. (C)",
-   "d. This progression begins in 9th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "6",
-  "code": "6.T.T.4",
-  "strand": "Texts: Techniques",
-  "description": "Poetic Techniques: Analyze and apply poetic techniques.",
-  "elements": [
-   "a. Recognize and describe poetic techniques used to present and design content, including stanzas, rhyme scheme, imagery, figurative language, and/or sound devices. (I)",
-   "b. Apply poetic techniques (e.g., stanzas, rhyme/rhyme scheme, imagery, figurative language, sound devices) to produce poetry and engage audiences. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "6",
-  "code": "6.T.RA.1",
-  "strand": "Texts: Research & Analysis",
-  "description": "Research & Inquiry: Conduct research, generating questions to guide investigations of complex topics of interest and using credible sources to support analyses.",
-  "elements": [
-   "a. Generate questions to guide research and make connections between related topics of interest, formulating questions to investigate complex topics and ideas. (I)",
-   "b. Conduct research by locating, gathering, curating, and integrating information from credible sources (including print, digital, and personal communication) about texts and related topics. (I)",
-   "c. Draw from accumulated knowledge and research to analyze texts, supporting, challenging, or extending ideas and information. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "6",
-  "code": "6.T.RA.2",
-  "strand": "Texts: Research & Analysis",
-  "description": "Curating Sources & Evidence: Utilize multiple print and digital texts to address a specific topic or question, assessing source credibility and relevance and integrating evidence properly to avoid plagiarism.",
-  "elements": [
-   "a. Locate evidence in print and digital sources to support a central idea or question, recording basic bibliographic information, such as author, title, and page number. (I)",
-   "b. Analyze print and digital texts to identify features of credible, relevant sources and to determine indicators that might signal unreliable sources. (I)",
-   "c. Use basic parenthetical citations to credit authors when quoting or paraphrasing texts, ensuring each source is accompanied by a basic entry on a works cited page. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "6",
-  "code": "6.T.PM.1",
-  "strand": "Texts: Periods & Movements",
-  "description": "Periods & Movements: Demonstrate knowledge of dominant themes, genres, and verbal styles of literature from a particular time period.",
-  "elements": [
-   "a. Read and comprehend myths and stories (fictional or historical) that modern writers have adapted into their own works. (I)",
-   "b. Read and comprehend one genre of literature from a particular time period. (I)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "7",
-  "code": "7.T.C.1",
-  "strand": "Texts: Context",
-  "description": "Purpose & Audience: Analyze the impact of purpose and audience on a wide variety of texts.",
-  "elements": [
-   "a. Analyze the development of multiple purposes within a single text and how those purposes target specific audiences. (I)",
-   "b. Use text mode features to aid comprehension and analysis of a variety of disciplinary texts and their related contexts. (I)",
-   "c. Construct multimodal texts and/or presentations for a specific purpose and audience, using multiple, clearly identifiable features of incorporated modes. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "7",
-  "code": "7.T.C.2",
-  "strand": "Texts: Context",
-  "description": "Authors & Speakers: Analyze how authors’ and/or speakers’ perspectives influence texts and how circumstances shape their creation.",
-  "elements": [
-   "a. Determine the prevailing perspective in a text and analyze how the author distinguishes or corroborates that position. (I)",
-   "b. Analyze how evidence and tone reveal the author’s perspective and impact credibility. (I)",
-   "c. Analyze the impact of background information and context (e.g., geography, location, era, historical happenings) on text development. (I)",
-   "d. Use credible sources to research the answers to questions on academic and individual topics of interes. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "7",
-  "code": "7.T.SS.1",
-  "strand": "Texts: Structure & Style",
-  "description": "Organization: Analyze and use organizational structures to craft meaning.",
-  "elements": [
-   "a. Analyze how authors modify organizational structures or features to convey meaning, respond to the audience, or achieve specific purposes. (I)",
-   "b. Design texts, flexibly employing a variety of text structures and text features to convey information and add style, as appropriate to purpose and audience. (C)",
-   "c. Use varied transition words and phrases to connect ideas, sentences, paragraphs, and sections of text. (C)",
-   "d. Craft multi-paragraph texts using a coherent structure with an introduction that guides the focus; supporting facts, reasons, details, descriptions, and/or events; and a conclusion. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "7",
-  "code": "7.T.SS.2",
-  "strand": "Texts: Structure & Style",
-  "description": "Craft: Interpret and use language to craft engaging texts.",
-  "elements": [
-   "a. Explain how figurative language, connotative language, and/or literary device choices contribute to meaning, mood, or tone in a wide variety of texts. (I)",
-   "b. Use figurative language, literary devices, or connotative language for intentional effects when creating texts to achieve specific purposes or appeal to the target audience. (C)",
-   "c. Determine situational use for formal or informal style and apply that determination to choices when writing or speaking. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "7",
-  "code": "7.T.T.1",
-  "strand": "Texts: Techniques",
-  "description": "Narrative Techniques: Analyze and apply narrative techniques.",
-  "elements": [
-   "a. Analyze how narrative techniques are used across the text to develop plot, characters, and setting. (I)",
-   "b. Analyze the use of plot structures, conflict, and narrative devices (e.g., flashback, foreshadowing) within a text. (I)",
-   "c. Compare and contrast how themes are developed and expressed in texts through characters, events, and plot structure. (I)",
-   "d. Compare and contrast a fictional portrayal of a time, place, or character with a historical account of the same period. (I)",
-   "e. Apply narrative techniques to enhance writing, engage audiences, and achieve specific purposes. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "7",
-  "code": "7.T.T.2",
-  "strand": "Texts: Techniques",
-  "description": "Expository Techniques: Analyze and apply expository techniques.",
-  "elements": [
-   "a. Analyze expository techniques used to present and design content, including main ideas, facts, statistics, key details, information from text features, and a sense of closure. (I)",
-   "b. Analyze how two or more authors writing about the same topic shape their presentations of key information by emphasizing different evidence or advancing different interpretations of facts. (I)",
-   "c. This progression ends in 5th grade.",
-   "d. Apply expository techniques (e.g., main idea, facts, statistics, key details, text features, sense of closure) to enhance writing and engage audiences. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "7",
-  "code": "7.T.T.3",
-  "strand": "Texts: Techniques",
-  "description": "Argumentative Techniques: Analyze and apply argumentative techniques.",
-  "elements": [
-   "a. Analyze argumentative techniques used to present and design content, including an author’s claim, supporting relevant evidence, an identified counterclaim, and a conclusion that logically follows the argument. (I)",
-   "b. This progression begins in 9th grade.",
-   "c. Apply argumentative techniques (e.g., author’s claim, supporting relevant evidence, an identified counterclaim, and a logical conclusion) to enhance writing and engage audiences. (C)",
-   "d. This progression begins in 9th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "7",
-  "code": "7.T.T.4",
-  "strand": "Texts: Techniques",
-  "description": "Poetic Techniques: Analyze and apply poetic techniques.",
-  "elements": [
-   "a. Analyze poetic techniques used to present and design content, including stanzas, rhyme scheme, imagery, figurative language, and/or sound devices. (I)",
-   "b. Apply poetic techniques (e.g., stanzas, rhyme/rhyme scheme, imagery, figurative language, sound devices) to produce poetry and engage audiences. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "7",
-  "code": "7.T.RA.1",
-  "strand": "Texts: Research & Analysis",
-  "description": "Research & Inquiry: Conduct research, generating questions to guide investigations of complex topics of interest and using credible sources to support analyses.",
-  "elements": [
-   "a. Generate questions to guide research and make connections between related topics of interest, formulating questions to investigate complex topics and ideas. (I)",
-   "b. Conduct research by locating, gathering, curating, and integrating information from credible sources (including print, digital, and personal communication) about texts and related topics. (C)",
-   "c. Draw from accumulated knowledge and research to analyze texts, supporting, challenging, or extending ideas and information. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "7",
-  "code": "7.T.RA.2",
-  "strand": "Texts: Research & Analysis",
-  "description": "Curating Sources & Evidence: Utilize multiple print and digital texts to address a specific topic or question, assessing source credibility and relevance and integrating evidence properly to avoid plagiarism.",
-  "elements": [
-   "a. Locate evidence in print and digital sources to support a central idea or question, recording standard bibliographic information, such as author, title, website name, page number, and year of publication. (I)",
-   "b. Analyze print and digital texts for credibility and relevance, determining whether the ideas and information support the topic under investigation. (I)",
-   "c. Follow a standard format for citation when integrating textual evidence, clearly identifying and citing the ideas and information of others and ensuring each source is accompanied by a standard entry on a works cited page. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "7",
-  "code": "7.T.PM.1",
-  "strand": "Texts: Periods & Movements",
-  "description": "Periods & Movements: Demonstrate knowledge of dominant themes, genres, and verbal styles of literature from a particular time period.",
-  "elements": [
-   "a. Read and comprehend to analyze myths and stories (fictional or historical) that modern writers have adapted into their own works and identify key features of style and theme. (I)",
-   "b. Read and comprehend to analyze one genre of literature from a particular time period and identify key features of style and theme. (I)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "8",
-  "code": "8.T.C.1",
-  "strand": "Texts: Context",
-  "description": "Purpose & Audience: Analyze the impact of purpose and audience on a wide variety of texts.",
-  "elements": [
-   "a. *Analyze the development of multiple purposes within a single text and how those purposes target specific audiences.* (I)",
-   "b. *Use text mode features to aid comprehension and analysis of a variety of disciplinary texts and their related contexts.* (I)",
-   "c. Construct multimodal texts and/or presentations that serve more than one purpose and target a specific audience, using multiple, clearly identifiable features of incorporated modes. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "8",
-  "code": "8.T.C.2",
-  "strand": "Texts: Context",
-  "description": "Authors & Speakers: Analyze how authors’ and/or speakers’ perspectives influence texts and how circumstances shape their creation.",
-  "elements": [
-   "a. Compare and contrast varying perspectives on a particular topic found across a variety of texts, analyzing how texts establish and develop perspective to shape perceptions or beliefs. (I)",
-   "b. Identify an author’s bias and determine how that bias impacts text credibility. (I)",
-   "c. *Analyze the impact of background information and context (e.g., geography, location, era, historical happenings) on text development*. (I)",
-   "d. Use a variety of credible sources to research the answers to questions on academic and individual topics of interest. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "8",
-  "code": "8.T.SS.1",
-  "strand": "Texts: Structure & Style",
-  "description": "Organization: Analyze and use organizational structures to craft meaning.",
-  "elements": [
-   "a. Analyze how authors modify organizational structures or features to convey meaning, respond to the audience, or achieve specific purposes. (I)",
-   "b. Design texts, flexibly employing a variety of text structures and text features to convey information and add style, as appropriate to purpose and audience. (C)",
-   "c. Use varied words, phrases, and clauses to transition between ideas and to aid overall cohesion. (C)",
-   "d. Craft multi-paragraph texts using a coherent structure with an introduction that guides the focus; logically organized and integrated supporting facts, reasons, explanations, details, descriptions, and/or events; and a conclusion with a sense of finality. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "8",
-  "code": "8.T.SS.2",
-  "strand": "Texts: Structure & Style",
-  "description": "Craft: Interpret and use language to craft engaging texts.",
-  "elements": [
-   "a. Analyze how figurative language, connotative language, and/or literary device choices are used strategically to achieve specific purposes for target audiences. (I)",
-   "b. Use figurative language, literary devices, or connotative language for intentional effects when creating texts to achieve specific purposes or appeal to the target audience. (C)",
-   "c. Use formal or informal style characteristics as indicated by a text’s purpose, audience, and disciplinary context. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "8",
-  "code": "8.T.T.1",
-  "strand": "Texts: Techniques",
-  "description": "Narrative Techniques: Analyze and apply narrative techniques.",
-  "elements": [
-   "a. *Analyze how narrative techniques are used across the text to develop plot, characters, and setting*. (I)",
-   "b. Analyze how plot structures, conflict, and narrative devices (e.g., flashback, foreshadowing) work together to create an intended effect (e.g., suspense, tension, humor) on the audience. (I)",
-   "c. Analyze how authors convey and reveal themes through characters, events, and plot structure. (I)",
-   "d. Analyze how a modern literary work draws on themes, event patterns, or character types from different time periods. (I)",
-   "e. Apply narrative techniques to enhance writing, engage audiences, and achieve specific purposes. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "8",
-  "code": "8.T.T.2",
-  "strand": "Texts: Techniques",
-  "description": "Expository Techniques: Analyze and apply expository techniques.",
-  "elements": [
-   "a. Analyze the development of expository techniques used to present and design content, including multiple main ideas, facts, statistics, key details, information from text features, and a sense of closure. (I)",
-   "b. Analyze and evaluate how two or more authors writing about the same topic shape their presentations of key information by emphasizing different evidence or advancing different interpretations of facts. (I)",
-   "c. This progression ends in 5th grade.",
-   "d. Apply multiple expository techniques (e.g., main idea, facts, statistics, key details, text features, sense of closure) to enhance writing and engage audiences. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "8",
-  "code": "8.T.T.3",
-  "strand": "Texts: Techniques",
-  "description": "Argumentative Techniques: Analyze and apply argumentative techniques.",
-  "elements": [
-   "a. Analyze the development of argumentative techniques used to present and design content, including an author’s claim, supporting relevant and logical evidence, an identified counterclaim, a rebuttal, and a conclusion that logically follows the argument. (I)",
-   "b. This progression begins in 9th grade.",
-   "c. Apply argumentative techniques (e.g., author’s claim, supporting relevant and logical evidence, an identified counterclaim, a rebuttal, and a conclusion) to enhance writing and engage audiences. (C)",
-   "d. This progression begins in 9th grade."
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "8",
-  "code": "8.T.T.4",
-  "strand": "Texts: Techniques",
-  "description": "Poetic Techniques: Analyze and apply poetic techniques.",
-  "elements": [
-   "a. Analyze the development of poetic techniques used to present and design content, including stanzas, rhyme scheme, imagery, figurative language, and/or cacophony.",
-   "b. Apply poetic techniques (e.g., stanzas, rhyme/rhyme scheme, imagery, figurative language, sound devices) to produce poetry and engage audiences. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "8",
-  "code": "8.T.RA.1",
-  "strand": "Texts: Research & Analysis",
-  "description": "Research & Inquiry: Conduct research, generating questions to guide investigations of complex topics of interest and using credible sources to support analyses.",
-  "elements": [
-   "a. Generate questions to guide research and make connections between related topics of interest, formulating questions to investigate complex topics and ideas. (I)",
-   "b. *Conduct research by locating, gathering, curating, and integrating information from credible sources (including print, digital, and personal communication) about texts and related topics.* (I)",
-   "c. *Draw from accumulated knowledge and research to analyze texts, supporting, challenging, or extending ideas and information.* (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "8",
-  "code": "8.T.RA.2",
-  "strand": "Texts: Research & Analysis",
-  "description": "Curating Sources & Evidence: Utilize multiple print and digital texts to address a specific topic or question, assessing source credibility and relevance and integrating evidence properly to avoid plagiarism.",
-  "elements": [
-   "a. Locate evidence in print, digital, and multimodal sources to support a central idea or question, consulting Modern Language Association (MLA) guidelines to determine the specific information needed to document particular modes and genres. (I)",
-   "b. Analyze print, digital, and multimodal sources for accuracy, credibility, and relevance, determining whether the ideas and information support the topic under investigation and appeal to the target audience. (I)",
-   "c. Follow Modern Language Association (MLA) guidelines when integrating textual evidence, clearly identifying and citing the ideas and information of others and ensuring each source is accompanied by a properly formatted entry on a works cited page. (C)"
-  ]
- },
- {
-  "state": "GA",
-  "subject": "ela",
-  "grade": "8",
-  "code": "8.T.PM.1",
-  "strand": "Texts: Periods & Movements",
-  "description": "Periods & Movements: Demonstrate knowledge of dominant themes, genres, and verbal styles of literature from a particular time period.",
-  "elements": [
-   "a. Read and compare and contrast myths and stories (fictional or historical) that modern writers have adapted into their own works. (I)",
-   "b. Compare and contrast the treatment of a common theme by different writers within a time period. (I)"
-  ]
- }
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "2",
+    "code": "2.T.C.1",
+    "strand": "Texts: Context",
+    "description": "Purpose & Audience: Explain how authors of texts use language for a specific purpose and a target audience.",
+    "elements": [
+      "a. Determine the general purpose and target audience in a variety of texts. (I)",
+      "b. Recognize different modes of communication: print, digital, auditory, spoken, visual, and multimodal. (I)",
+      "c. Choose two or more modes and create a multimodal text on a self-selected topic. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "2",
+    "code": "2.T.C.2",
+    "strand": "Texts: Context",
+    "description": "Authors & Speakers: Investigate the relationships between authors and speakers in texts.",
+    "elements": [
+      "a. Use examples of language from the text to identify various points of view (e.g., first person, third person). (I)",
+      "b. This progression begins in 6th grade.",
+      "c. This progression begins in 3rd grade.",
+      "d. This progression begins in 6th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "2",
+    "code": "2.T.SS.1",
+    "strand": "Texts: Structure & Style",
+    "description": "Organization: Identify and use organizational structures to craft meaning.",
+    "elements": [
+      "a. Explain how various text features (e.g., captions, subheadings, charts, indexes) contribute to meaning and organization of texts. (I)",
+      "b. Use text features (e.g., illustrations, page numbers, bold print, headings) to add clarity and meaning to texts. (C)",
+      "c. Use conjunctions and transition words or phrases to sequence events and actions. (C)",
+      "d. This progression begins in 3rd grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "2",
+    "code": "2.T.SS.2",
+    "strand": "Texts: Structure & Style",
+    "description": "Craft: Identify and use descriptive and engaging language.",
+    "elements": [
+      "a. Identify the difference between literal and nonliteral or figurative language in texts. (I)",
+      "b. Use descriptive words to craft engaging texts. (C)",
+      "c. This progression begins in 6th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "2",
+    "code": "2.T.T.1",
+    "strand": "Texts: Techniques",
+    "description": "Narrative Techniques: Identify and use narrative techniques to shape understanding.",
+    "elements": [
+      "a. Identify and describe techniques used to craft stories, including characters, setting, major events, and dialogue. (I)",
+      "b. Identify the major plot events that occur between a problem and solution. (I)",
+      "c. Identify and describe how characters’ responses to major challenges or events support the central message, lesson, or moral of the story. (I)",
+      "d. Compare and contrast two or more versions of the same story by different authors or from diverse cultures. (I)",
+      "e. Use knowledge of narrative techniques (e.g., characters, settings, events, dialogue) to create texts that recount real or imagined experiences and events with a sense of closure. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "2",
+    "code": "2.T.T.2",
+    "strand": "Texts: Techniques",
+    "description": "Expository Techniques: Identify and use expository techniques to shape understanding.",
+    "elements": [
+      "a. Identify and describe techniques used to craft expository texts, including main idea and key supporting details within specific paragraphs. (I)",
+      "b. Describe the connection between a series of historical events, scientific ideas or concepts, or steps in technical procedures in a text. (I)",
+      "c. This progression begins in 3rd grade.",
+      "d. Use knowledge of expository techniques to create texts that introduce a topic, use facts and definitions to develop the topic, and provide a concluding statement or section. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "2",
+    "code": "2.T.T.3",
+    "strand": "Texts: Techniques",
+    "description": "Opinion Techniques: Identify and use opinion techniques to shape understanding.",
+    "elements": [
+      "a. Identify and describe techniques used to craft opinion texts, including the author’s opinion, supporting reasons, and facts. (I)",
+      "b. This progression begins in 9th grade.",
+      "c. Use knowledge of opinion techniques to create opinion pieces that introduce the topic, state an opinion about the topic, supply reasons to support the opinion with linking words (e.g., because, and, also), and provide a conclusion. (C)",
+      "d. This progression begins in 9th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "2",
+    "code": "2.T.T.4",
+    "strand": "Texts: Techniques",
+    "description": "Poetic Techniques: Identify and use poetic techniques to shape understanding.",
+    "elements": [
+      "a. Identify, classify, and describe poetic techniques used to craft texts, including rhyme, alliteration, repeated lines, stanzas, and line breaks. (I)",
+      "b. Use poetic techniques to create poems using words and/or phrases that may or may not rhyme. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "2",
+    "code": "2.T.RA.1",
+    "strand": "Texts: Research & Analysis",
+    "description": "Research & Inquiry: Build knowledge about the world by asking or generating questions about topics of interest, researching the answers, using multiple sources, and communicating relevant and accurate information about the topic.",
+    "elements": [
+      "a. Generate questions about self-selected topics of interest for research. (I)",
+      "b. Work collaboratively or individually to conduct research to answer questions on a shared or personal topic of interest by gathering and organizing information from multiple sources using graphic organizers or other support aids. (I)",
+      "c. Organize and share related, relevant, and accurate information through a variety of different modes. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "2",
+    "code": "2.T.RA.2",
+    "strand": "Texts: Research & Analysis",
+    "description": "Curating Sources & Evidence: Reference parts of texts to address a specific topic or question and explore various sources of information to make connections across a broad range of topics.",
+    "elements": [
+      "a. Refer to specific parts of texts when supporting an idea, answer, or opinion. (I)",
+      "b. Explore various sources of information, including print, digital, and personal communication, and discuss connections to various topics. (I)",
+      "c. This progression begins in 5th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "3",
+    "code": "3.T.C.1",
+    "strand": "Texts: Context",
+    "description": "Purpose & Audience: Use knowledge of purposes and audiences, as well as the language that develops those relationships, to make meaning of texts in multiple modes.",
+    "elements": [
+      "a. Determine the purpose (e.g., entertain, inform, persuade) and target audience of a text. (I)",
+      "b. Determine common text features of print, digital, auditory, spoken, and visual modes and describe how they contribute to the overall purpose and effect. (I)",
+      "c. Create multimodal texts, using features of pre-selected modes for a specific purpose and audience. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "3",
+    "code": "3.T.C.2",
+    "strand": "Texts: Context",
+    "description": "Authors & Speakers: Make connections between authors of texts, speakers in texts, varying perspectives, and the circumstances in which texts are produced.",
+    "elements": [
+      "a. Describe different perspectives of the narrator or speakers and distinguish them from their own. (I)",
+      "b. This progression begins in 6th grade.",
+      "c. With adult support, identify the context in which a text is written (e.g., time period, individual, situational). (I)",
+      "d. This progression begins in 6th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "3",
+    "code": "3.T.SS.1",
+    "strand": "Texts: Structure & Style",
+    "description": "Organization: Demonstrate and apply understanding of organizational structures and elements to create coherent and engaging texts.",
+    "elements": [
+      "a. Describe how texts are arranged to represent information and ideas using text features (e.g., map, captions) and organizational structures (e.g., cause/effect), referring to parts of texts using terms such as chapter or section. (I)",
+      "b. Design texts using a variety of text structures and features, according to purpose and audience. (C)",
+      "c. Use conjunctions and transition words or phrases, such as *although* and *since,* to add cohesion and link ideas and information. (C)",
+      "d. Craft related sentences into clear and cohesive paragraphs. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "3",
+    "code": "3.T.SS.2",
+    "strand": "Texts: Structure & Style",
+    "description": "Craft: Use language to interpret meaning and craft engaging texts.",
+    "elements": [
+      "a. Identify and describe the use of figurative language, such as similes, metaphors, and idioms in a wide variety of texts. (I)",
+      "b. Use figurative language, such as similes, metaphors, and idioms, to show relationships between ideas and information. (C)",
+      "c. This progression begins in 6th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "3",
+    "code": "3.T.T.1",
+    "strand": "Texts: Techniques",
+    "description": "Narrative Techniques: Explain, analyze, and use narrative techniques to shape understandings.",
+    "elements": [
+      "a. Explain how narrative techniques are used to present ideas, design texts, and convey information about characters, setting, and plot. (I)",
+      "b. Explain how characters, setting, problem, and solution function in the plot. (I)",
+      "c. Describe characters’ traits, motivations, actions, thoughts, and feelings and explain their connection to the central message, lesson, or moral of the story. (I)",
+      "d. Compare and contrast two or more characters, settings, central messages, or events within texts across diverse cultures. (I)",
+      "e. Apply narrative techniques (e.g., character, setting, problem, resolution, dialogue) to develop a real or imagined experience using descriptive details, clear event sequences, and a sense of closure. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "3",
+    "code": "3.T.T.2",
+    "strand": "Texts: Techniques",
+    "description": "Expository Techniques: Explain, analyze, and use expository techniques to shape understandings.",
+    "elements": [
+      "a. Describe the techniques used to present and design expository texts, including facts and key details used to support the main idea. (I)",
+      "b. Describe the relationship between a series of historical events, scientific ideas or concepts, or steps in technical procedures in a text. (I)",
+      "c. Integrate and explain information from two texts on the same topic in relationship to important points and key details. (I)",
+      "d. Apply expository techniques to introduce a topic, develop the topic with facts and other information (e.g., definitions, details, illustrations), and provide a concluding statement or section. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "3",
+    "code": "3.T.T.3",
+    "strand": "Texts: Techniques",
+    "description": "Opinion Techniques: Explain, analyze, and use opinion techniques to shape understandings.",
+    "elements": [
+      "a. Describe and discuss the techniques used to present and design opinion texts, including author’s opinion statement, supporting reasons, and evidence. (I)",
+      "b. This progression begins in 9th grade.",
+      "c. Apply opinion techniques to create opinion pieces that introduce the topic, state an opinion about the topic, supply reasons to support the opinion with linking words (e.g., because, therefore, since, for example) to connect the opinion and reasons, and provide a concluding statement or section. (C)",
+      "d. This progression begins in 9th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "3",
+    "code": "3.T.T.4",
+    "strand": "Texts: Techniques",
+    "description": "Poetic Techniques: Explain, analyze, and use poetic techniques to shape understandings.",
+    "elements": [
+      "a. Discuss and explain techniques used to present and design poetry, including rhyme scheme. (I)",
+      "b. Apply poetic techniques to produce poetry and engage audiences that use rhyme in at least two stanzas to achieve an intended effect. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "3",
+    "code": "3.T.RA.1",
+    "strand": "Texts: Research & Analysis",
+    "description": "Research & Inquiry: Conduct research to ask and answer questions that clarify, deepen, and extend understanding of a topic of interest using credible sources and communicating relevant and accurate information.",
+    "elements": [
+      "a. Generate questions about a self-selected topic of interest to be researched, formulating additional questions to clarify or deepen understanding. (I)",
+      "b. Conduct research by locating, gathering, selecting, and organizing information from multiple credible sources, including print, digital, and personal communication, about a self-selected topic. (I)",
+      "c. Summarize researched, relevant, and accurate information from at least two credible sources about a self-selected topic. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "3",
+    "code": "3.T.RA.2",
+    "strand": "Texts: Research & Analysis",
+    "description": "Curating Sources & Evidence: Integrate evidence from print and digital sources, assessing credibility and relevance and avoiding plagiarism.",
+    "elements": [
+      "a. Refer to specific passages from a text to support an idea, answer, or opinion. (I)",
+      "b. Determine what makes a source text credible and relevant and identify examples. (I)",
+      "c. This progression begins in 5th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "4",
+    "code": "4.T.C.1",
+    "strand": "Texts: Context",
+    "description": "Purpose & Audience: Use knowledge of purposes and audiences, as well as the language that develops those relationships, to make meaning of texts in multiple modes.",
+    "elements": [
+      "a. Determine audience and identify the development of the purpose across a text. (I)",
+      "b. Classify various texts by mode and describe how the author's choice of mode influences audiences and contributes to the overall purpose and effect. (I)",
+      "c. Create multimodal texts, using features of pre-selected modes for a specific purpose and audience. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "4",
+    "code": "4.T.C.2",
+    "strand": "Texts: Context",
+    "description": "Authors & Speakers: Make connections between authors of texts, speakers in texts, varying perspectives, and the circumstances in which texts are produced.",
+    "elements": [
+      "a. Compare and contrast the perspectives of different narrators or speakers in a text. (I)",
+      "b. This progression begins in 6th grade.",
+      "c. Identify the context in which a text is written (e.g., time period, individual, situational). (I)",
+      "d. This progression begins in 6th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "4",
+    "code": "4.T.SS.1",
+    "strand": "Texts: Structure & Style",
+    "description": "Organization: Demonstrate and apply understanding of organizational structures and elements to create coherent and engaging texts.",
+    "elements": [
+      "a. Compare and contrast the text features (e.g., icons, hyperlinks) and organizational structures (e.g. chronological order, rhyme pattern) of texts written in different genres/for certain purposes, on the same topic. (I)",
+      "b. Design texts using a variety of text structures and features, according to purpose and audience. (C)",
+      "c. Use conjunctions and transition words or phrases, such as *similarly* and *in contrast,* to show relationships between ideas and information. (C)",
+      "d. Craft related sentences into cohesive paragraphs that follow a chosen structure using transitions. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "4",
+    "code": "4.T.SS.2",
+    "strand": "Texts: Structure & Style",
+    "description": "Craft: Use language to interpret meaning and craft engaging texts.",
+    "elements": [
+      "a. Identify and explain how figurative language, such as hyperboles and personification, shapes how ideas and information in texts are understood. (I)",
+      "b. Use figurative language for intentional effects when expressing ideas or conveying information. (C)",
+      "c. This progression begins in 6th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "4",
+    "code": "4.T.T.1",
+    "strand": "Texts: Techniques",
+    "description": "Narrative Techniques: Explain, analyze, and use narrative techniques to shape understandings.",
+    "elements": [
+      "a. Analyze the use of narrative techniques to present ideas, design texts, and convey information about characters, setting, and plot. (I)",
+      "b. Describe how the text’s protagonist and antagonist function in the plot, drive the conflict, and contribute to the development of other characters. (I)",
+      "c. Identify and describe common themes in texts (e.g., good vs. evil) that are revealed through details about characters. (I)",
+      "d. Compare and contrast the approach to similar themes and topics (e.g., opposition of good and evil) and patterns of events (e.g., the quest) in stories, myths, and traditional literature from diverse cultures. (I)",
+      "e. Apply narrative techniques (e.g., character, setting, problem, resolution, and dialogue) to develop a real or imagined experience using descriptive details, clear event sequences, and a conclusion. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "4",
+    "code": "4.T.T.2",
+    "strand": "Texts: Techniques",
+    "description": "Expository Techniques: Explain, analyze, and use expository techniques to shape understandings.",
+    "elements": [
+      "a. Discuss and evaluate techniques used to present and design expository texts, including facts and key details used to support the main idea. (I)",
+      "b. Explain events, procedures, ideas, or concepts in a historical, scientific, or technical text, including what happened and why, based on specific information in the text. (I)",
+      "c. Integrate and classify information from multiple texts on the same topic in relationship to important points and key details. (I)",
+      "d. Apply expository techniques that clearly introduce a topic, group paragraphs or sections to develop the topic with facts and other information (e.g., definitions, concrete details, quotations), use precise language, and provide a concluding statement or section."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "4",
+    "code": "4.T.T.3",
+    "strand": "Texts: Techniques",
+    "description": "Opinion Techniques: Explain, analyze, and use opinion techniques to shape understandings.",
+    "elements": [
+      "a. Discuss and evaluate techniques used to present and design opinion and argumentative texts, including author’s opinion or claim, supporting reasons, and evidence. (I)",
+      "b. This progression begins in 9th grade.",
+      "c. Apply opinion techniques to create opinion pieces that introduce the topic, state an opinion about the topic, supply reasons and evidence to support the opinion with linking words (e.g., because, therefore, since, for example) to connect the opinion and reasons, and provide a concluding statement or section. (C)",
+      "d. This progression begins in 9th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "4",
+    "code": "4.T.T.4",
+    "strand": "Texts: Techniques",
+    "description": "Poetic Techniques: Explain, analyze, and use poetic techniques to shape understandings.",
+    "elements": [
+      "a. Discuss and explain techniques used to present and design different types of poetry, including free verse, rhymed verse, haiku, and limerick. (I)",
+      "b. Apply poetic techniques to produce poetry and engage audiences that use a predetermined rhyme scheme to achieve an intended effect. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "4",
+    "code": "4.T.RA.1",
+    "strand": "Texts: Research & Analysis",
+    "description": "Research & Inquiry: Conduct research to ask and answer questions that clarify, deepen, and extend understanding of a topic of interest using credible sources and communicating relevant and accurate information.",
+    "elements": [
+      "a. Generate questions about a self-selected topic of interest to be researched, asking open-ended questions to deepen and extend understanding of the topic and related ideas and information. (I)",
+      "b. Conduct research by locating, gathering, curating, and integrating information from multiple credible sources, including print, digital, and personal communication, about a self-selected topic. (I)",
+      "c. Consider and integrate information from research, including relevant and accurate evidence from two or more credible sources. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "4",
+    "code": "4.T.RA.2",
+    "strand": "Texts: Research & Analysis",
+    "description": "Curating Sources & Evidence: Integrate evidence from print and digital sources, assessing credibility and relevance and avoiding plagiarism.",
+    "elements": [
+      "a. Refer to specific passages or quotations from a text to support an idea, answer, or opinion. (I)",
+      "b. Determine the credibility and relevance of a source text based on known information about the author and/or organization. (I)",
+      "c. This progression begins in 5th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "5",
+    "code": "5.T.C.1",
+    "strand": "Texts: Context",
+    "description": "Purpose & Audience: Use knowledge of purposes and audiences, as well as the language that develops those relationships, to make meaning of texts in multiple modes.",
+    "elements": [
+      "a. Determine audience and explain multiple purposes found across a text. (I)",
+      "b. Classify various texts by mode and describe how the author's choice of mode influences audiences and contributes to the overall purpose and effect. (I)",
+      "c. Create multimodal texts, using features of pre-selected modes for a specific purpose and audience. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "5",
+    "code": "5.T.C.2",
+    "strand": "Texts: Context",
+    "description": "Authors & Speakers: Make connections between authors of texts, speakers in texts, varying perspectives, and the circumstances in which texts are produced.",
+    "elements": [
+      "a. Describe how a narrator or speaker’s perspective influences the text. (I)",
+      "b. This progression begins in 6th grade.",
+      "c. Make inferences about the context in which the text is written (e.g., time period, individual, situational). (I)",
+      "d. This progression begins in 6th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "5",
+    "code": "5.T.SS.1",
+    "strand": "Texts: Structure & Style",
+    "description": "Organization: Demonstrate and apply understanding of organizational structures and elements to create cohesive and engaging texts.",
+    "elements": [
+      "a. Describe how text features (e.g., chapter titles, diagrams) and organizational structure (e.g., chapters, problem/solution) function in conjunction to represent ideas and information coherently in texts. (I)",
+      "b. Design texts using a variety of text structures and features, according to purpose and audience. (C)",
+      "c. Use conjunctions and transition words or phrases, such as *similarly* and *in contrast,* to show relationships between ideas and information. (C)",
+      "d. Craft related ideas into coherent paragraphs that follow a logical structure using transitions. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "5",
+    "code": "5.T.SS.2",
+    "strand": "Texts: Structure & Style",
+    "description": "Craft: Use language to interpret meaning and craft engaging texts.",
+    "elements": [
+      "a. Describe the impact of the use of figurative language such as similes, metaphors, idioms, hyperboles, and personification in response to audience and purpose, in various modes and genres. (I)",
+      "b. Use figurative language for intentional effects when expressing ideas or conveying information. (C)",
+      "c. This progression begins in 6th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "5",
+    "code": "5.T.T.1",
+    "strand": "Texts: Techniques",
+    "description": "Narrative Techniques: Explain, analyze, and use narrative techniques to shape understandings.",
+    "elements": [
+      "a. Analyze the use of narrative techniques to present ideas, design texts, and convey information about characters, setting, and plot. (I)",
+      "b. Analyze how setting, events, conflict, and characterization contribute to the plot. (I)",
+      "c. Explain how a theme is demonstrated through a character’s growth or conflict resolution. (I)",
+      "d. Compare and contrast stories in the same genre (e.g., mysteries, adventures) from diverse cultures on their approaches to similar themes and topics. (I)",
+      "e. Apply narrative techniques (e.g., character, setting, conflict, climax, resolution, and dialogue) to develop a real or imagined experience using descriptive details, clear event sequences, and a conclusion. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "5",
+    "code": "5.T.T.2",
+    "strand": "Texts: Techniques",
+    "description": "Expository Techniques: Explain, analyze, and use expository techniques to shape understandings.",
+    "elements": [
+      "a. Discuss and evaluate techniques used to present and design expository texts, including multiple main ideas, facts, and key details used to support the main idea. (I)",
+      "b. Explain the relationships or interactions between two or more individuals, events, ideas, or concepts in a historical, scientific, or technical text based on specific information in the text. (I)",
+      "c. Compare and contrast first and secondhand accounts of the same event or topic using primary and/or secondary sources. (I)",
+      "d. Apply expository techniques that clearly introduce a topic, group paragraphs or sections to develop the topic with facts and other information (e.g., definitions, concrete details, quotations), use precise language, and provide a concluding statement or section. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "5",
+    "code": "5.T.T.3",
+    "strand": "Texts: Techniques",
+    "description": "Opinion Techniques: Explain, analyze, and use opinion techniques to shape understandings.",
+    "elements": [
+      "a. Discuss and evaluate techniques used to present and design opinion and argumentative texts, including author’s opinion or claim, supporting reasons, and evidence. (I)",
+      "b. This progression begins in 9th grade.",
+      "c. Apply opinion techniques to create opinion pieces that introduce the topic, state an opinion about the topic, supply reasons and evidence to support the opinion with linking words (e.g., because, therefore, since, for example) to connect the opinion and reasons, and provide a concluding statement or section. [This progression resumes as argumentative techniques in 6th grade; students will reinforce skills during 5th grade.] (C)",
+      "d. This progression begins in 9th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "5",
+    "code": "5.T.T.4",
+    "strand": "Texts: Techniques",
+    "description": "Poetic Techniques: Explain, analyze, and use poetic techniques to shape understandings.",
+    "elements": [
+      "a. Discuss and explain techniques used to present and design poetry, including rhyme and structure. (I)",
+      "b. Apply poetic techniques (e.g., rhyme, rhyme scheme, structure) to produce different types of poetry (e.g., free verse, rhymed verse, haiku, limerick). (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "5",
+    "code": "5.T.RA.1",
+    "strand": "Texts: Research & Analysis",
+    "description": "Research & Inquiry: Conduct research to ask and answer questions that clarify, deepen, and extend understanding of a topic of interest using credible sources and communicating relevant and accurate information.",
+    "elements": [
+      "a. Generate questions about a self-selected topic of interest to be researched, asking probing questions to compare and contrast related topics. (I)",
+      "b. Conduct research by locating, gathering, curating, and integrating information from multiple credible sources, including print, digital, and personal communication, about a self-selected topic. (I)",
+      "c. *Consider and integrate information from research, including relevant and accurate evidence from two or more credible sources. (C)*"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "5",
+    "code": "5.T.RA.2",
+    "strand": "Texts: Research & Analysis",
+    "description": "Curating Sources & Evidence: Integrate evidence from print and digital sources, assessing credibility and relevance and avoiding plagiarism.",
+    "elements": [
+      "a. Refer to specific passages or quotations from a text to support an idea, answer, or opinion, recording the referenced information’s page number. (I)",
+      "b. Determine credibility and relevance by assessing the strengths and weaknesses of source texts to support a topic or message. (I)",
+      "c. Use basic parenthetical citations to credit the source used. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "6",
+    "code": "6.T.C.1",
+    "strand": "Texts: Context",
+    "description": "Purpose & Audience: Analyze the impact of purpose and audience on a wide variety of texts.",
+    "elements": [
+      "a. Analyze the development of multiple purposes within a single text and how those purposes target specific audiences. (I)",
+      "b. Use text mode features to aid comprehension and analysis of a variety of disciplinary texts and their related contexts. (I)",
+      "c. Construct multimodal texts and/or presentations for a specific purpose and audience. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "6",
+    "code": "6.T.C.2",
+    "strand": "Texts: Context",
+    "description": "Authors & Speakers: Analyze how authors’ and/or speakers’ perspectives influence texts and how circumstances shape their creation.",
+    "elements": [
+      "a. Describe and analyze the development and interaction of two or more perspectives conveyed by a single text. (I)",
+      "b. Explain how the author’s choice of evidence reveals the author’s perspective and impacts credibility. (I)",
+      "c. Identify and analyze the impact of background information and context (e.g., geography, location, era, historical happenings) on text development. (I)",
+      "d. Use credible sources to research the answers to questions on academic and individual topics of interest. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "6",
+    "code": "6.T.SS.1",
+    "strand": "Texts: Structure & Style",
+    "description": "Organization: Analyze and use organizational structures to craft meaning.",
+    "elements": [
+      "a. Explain how authors modify organizational structures or features to convey meaning, respond to the audience, or achieve specific purposes. (I)",
+      "b. Design texts, flexibly employing a variety of text structures and text features to convey information and add style, as appropriate to purpose and audience. (C)",
+      "c. Use concept repetition and connected terms to support transitions, clarify the relationship between ideas and information in texts, and increase text cohesion. (C)",
+      "d. Craft multi-paragraph texts using a coherent structure to organize ideas with an introduction; supporting facts, reasons, details, descriptions, and/or events; and a conclusion. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "6",
+    "code": "6.T.SS.2",
+    "strand": "Texts: Structure & Style",
+    "description": "Craft: Interpret and use language to craft engaging texts.",
+    "elements": [
+      "a. Determine how figurative and connotative language choices contribute to meaning, mood, or tone in a wide variety of texts. (I)",
+      "b. Use figurative language or literary devices for intentional effects when creating texts to achieve specific purposes or appeal to the target audience. (C)",
+      "c. Compare and contrast characteristics of formal style (e.g., jargon, complete sentences) with those of informal style (e.g., contractions, slang, sentence fragments) and apply understandings to writing and speaking. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "6",
+    "code": "6.T.T.1",
+    "strand": "Texts: Techniques",
+    "description": "Narrative Techniques: Analyze and apply narrative techniques.",
+    "elements": [
+      "a. Describe how narrative techniques are used across the text to develop plot, characters, and setting. (I)",
+      "b. Analyze how setting, events, conflict, and characterization influence plot pacing. (I)",
+      "c. Identify multiple themes and describe how the relationships and interactions between characters influence and shape themes. (I)",
+      "d. Compare and contrast literary texts in different modes and genres (e.g., historical novels and fantasy texts) in terms of their approaches to similar themes and topics. (I)",
+      "e. Apply narrative techniques to enhance writing, engage audiences, and achieve specific purposes. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "6",
+    "code": "6.T.T.2",
+    "strand": "Texts: Techniques",
+    "description": "Expository Techniques: Analyze and apply expository techniques.",
+    "elements": [
+      "a. Recognize and describe expository techniques used to present and design content, including main ideas, facts, key details, and a sense of closure. (I)",
+      "b. Compare and contrast one author’s presentation of events with that of another on the same historical event or topic. (I)",
+      "c. This progression ends in 5th grade.",
+      "d. Apply expository techniques (e.g., main idea, facts, key details, sense of closure) to enhance writing and engage audiences. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "6",
+    "code": "6.T.T.3",
+    "strand": "Texts: Techniques",
+    "description": "Argumentative Techniques: Analyze and apply argumentative techniques.",
+    "elements": [
+      "a. Recognize and explain argumentative techniques used to present and design content, including an author’s claim, supporting relevant evidence, an identified counterclaim, and a conclusion that logically follows the argument. (I)",
+      "b. This progression begins in 9th grade.",
+      "c. Apply argumentative techniques (e.g., author’s claim, supporting relevant evidence, an identified counterclaim, and a logical conclusion) to enhance writing and engage audiences. (C)",
+      "d. This progression begins in 9th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "6",
+    "code": "6.T.T.4",
+    "strand": "Texts: Techniques",
+    "description": "Poetic Techniques: Analyze and apply poetic techniques.",
+    "elements": [
+      "a. Recognize and describe poetic techniques used to present and design content, including stanzas, rhyme scheme, imagery, figurative language, and/or sound devices. (I)",
+      "b. Apply poetic techniques (e.g., stanzas, rhyme/rhyme scheme, imagery, figurative language, sound devices) to produce poetry and engage audiences. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "6",
+    "code": "6.T.RA.1",
+    "strand": "Texts: Research & Analysis",
+    "description": "Research & Inquiry: Conduct research, generating questions to guide investigations of complex topics of interest and using credible sources to support analyses.",
+    "elements": [
+      "a. Generate questions to guide research and make connections between related topics of interest, formulating questions to investigate complex topics and ideas. (I)",
+      "b. Conduct research by locating, gathering, curating, and integrating information from credible sources (including print, digital, and personal communication) about texts and related topics. (I)",
+      "c. Draw from accumulated knowledge and research to analyze texts, supporting, challenging, or extending ideas and information. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "6",
+    "code": "6.T.RA.2",
+    "strand": "Texts: Research & Analysis",
+    "description": "Curating Sources & Evidence: Utilize multiple print and digital texts to address a specific topic or question, assessing source credibility and relevance and integrating evidence properly to avoid plagiarism.",
+    "elements": [
+      "a. Locate evidence in print and digital sources to support a central idea or question, recording basic bibliographic information, such as author, title, and page number. (I)",
+      "b. Analyze print and digital texts to identify features of credible, relevant sources and to determine indicators that might signal unreliable sources. (I)",
+      "c. Use basic parenthetical citations to credit authors when quoting or paraphrasing texts, ensuring each source is accompanied by a basic entry on a works cited page. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "6",
+    "code": "6.T.PM.1",
+    "strand": "Texts: Periods & Movements",
+    "description": "Periods & Movements: Demonstrate knowledge of dominant themes, genres, and verbal styles of literature from a particular time period.",
+    "elements": [
+      "a. Read and comprehend myths and stories (fictional or historical) that modern writers have adapted into their own works. (I)",
+      "b. Read and comprehend one genre of literature from a particular time period. (I)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "7",
+    "code": "7.T.C.1",
+    "strand": "Texts: Context",
+    "description": "Purpose & Audience: Analyze the impact of purpose and audience on a wide variety of texts.",
+    "elements": [
+      "a. Analyze the development of multiple purposes within a single text and how those purposes target specific audiences. (I)",
+      "b. Use text mode features to aid comprehension and analysis of a variety of disciplinary texts and their related contexts. (I)",
+      "c. Construct multimodal texts and/or presentations for a specific purpose and audience, using multiple, clearly identifiable features of incorporated modes. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "7",
+    "code": "7.T.C.2",
+    "strand": "Texts: Context",
+    "description": "Authors & Speakers: Analyze how authors’ and/or speakers’ perspectives influence texts and how circumstances shape their creation.",
+    "elements": [
+      "a. Determine the prevailing perspective in a text and analyze how the author distinguishes or corroborates that position. (I)",
+      "b. Analyze how evidence and tone reveal the author’s perspective and impact credibility. (I)",
+      "c. Analyze the impact of background information and context (e.g., geography, location, era, historical happenings) on text development. (I)",
+      "d. Use credible sources to research the answers to questions on academic and individual topics of interes. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "7",
+    "code": "7.T.SS.1",
+    "strand": "Texts: Structure & Style",
+    "description": "Organization: Analyze and use organizational structures to craft meaning.",
+    "elements": [
+      "a. Analyze how authors modify organizational structures or features to convey meaning, respond to the audience, or achieve specific purposes. (I)",
+      "b. Design texts, flexibly employing a variety of text structures and text features to convey information and add style, as appropriate to purpose and audience. (C)",
+      "c. Use varied transition words and phrases to connect ideas, sentences, paragraphs, and sections of text. (C)",
+      "d. Craft multi-paragraph texts using a coherent structure with an introduction that guides the focus; supporting facts, reasons, details, descriptions, and/or events; and a conclusion. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "7",
+    "code": "7.T.SS.2",
+    "strand": "Texts: Structure & Style",
+    "description": "Craft: Interpret and use language to craft engaging texts.",
+    "elements": [
+      "a. Explain how figurative language, connotative language, and/or literary device choices contribute to meaning, mood, or tone in a wide variety of texts. (I)",
+      "b. Use figurative language, literary devices, or connotative language for intentional effects when creating texts to achieve specific purposes or appeal to the target audience. (C)",
+      "c. Determine situational use for formal or informal style and apply that determination to choices when writing or speaking. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "7",
+    "code": "7.T.T.1",
+    "strand": "Texts: Techniques",
+    "description": "Narrative Techniques: Analyze and apply narrative techniques.",
+    "elements": [
+      "a. Analyze how narrative techniques are used across the text to develop plot, characters, and setting. (I)",
+      "b. Analyze the use of plot structures, conflict, and narrative devices (e.g., flashback, foreshadowing) within a text. (I)",
+      "c. Compare and contrast how themes are developed and expressed in texts through characters, events, and plot structure. (I)",
+      "d. Compare and contrast a fictional portrayal of a time, place, or character with a historical account of the same period. (I)",
+      "e. Apply narrative techniques to enhance writing, engage audiences, and achieve specific purposes. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "7",
+    "code": "7.T.T.2",
+    "strand": "Texts: Techniques",
+    "description": "Expository Techniques: Analyze and apply expository techniques.",
+    "elements": [
+      "a. Analyze expository techniques used to present and design content, including main ideas, facts, statistics, key details, information from text features, and a sense of closure. (I)",
+      "b. Analyze how two or more authors writing about the same topic shape their presentations of key information by emphasizing different evidence or advancing different interpretations of facts. (I)",
+      "c. This progression ends in 5th grade.",
+      "d. Apply expository techniques (e.g., main idea, facts, statistics, key details, text features, sense of closure) to enhance writing and engage audiences. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "7",
+    "code": "7.T.T.3",
+    "strand": "Texts: Techniques",
+    "description": "Argumentative Techniques: Analyze and apply argumentative techniques.",
+    "elements": [
+      "a. Analyze argumentative techniques used to present and design content, including an author’s claim, supporting relevant evidence, an identified counterclaim, and a conclusion that logically follows the argument. (I)",
+      "b. This progression begins in 9th grade.",
+      "c. Apply argumentative techniques (e.g., author’s claim, supporting relevant evidence, an identified counterclaim, and a logical conclusion) to enhance writing and engage audiences. (C)",
+      "d. This progression begins in 9th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "7",
+    "code": "7.T.T.4",
+    "strand": "Texts: Techniques",
+    "description": "Poetic Techniques: Analyze and apply poetic techniques.",
+    "elements": [
+      "a. Analyze poetic techniques used to present and design content, including stanzas, rhyme scheme, imagery, figurative language, and/or sound devices. (I)",
+      "b. Apply poetic techniques (e.g., stanzas, rhyme/rhyme scheme, imagery, figurative language, sound devices) to produce poetry and engage audiences. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "7",
+    "code": "7.T.RA.1",
+    "strand": "Texts: Research & Analysis",
+    "description": "Research & Inquiry: Conduct research, generating questions to guide investigations of complex topics of interest and using credible sources to support analyses.",
+    "elements": [
+      "a. Generate questions to guide research and make connections between related topics of interest, formulating questions to investigate complex topics and ideas. (I)",
+      "b. Conduct research by locating, gathering, curating, and integrating information from credible sources (including print, digital, and personal communication) about texts and related topics. (C)",
+      "c. Draw from accumulated knowledge and research to analyze texts, supporting, challenging, or extending ideas and information. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "7",
+    "code": "7.T.RA.2",
+    "strand": "Texts: Research & Analysis",
+    "description": "Curating Sources & Evidence: Utilize multiple print and digital texts to address a specific topic or question, assessing source credibility and relevance and integrating evidence properly to avoid plagiarism.",
+    "elements": [
+      "a. Locate evidence in print and digital sources to support a central idea or question, recording standard bibliographic information, such as author, title, website name, page number, and year of publication. (I)",
+      "b. Analyze print and digital texts for credibility and relevance, determining whether the ideas and information support the topic under investigation. (I)",
+      "c. Follow a standard format for citation when integrating textual evidence, clearly identifying and citing the ideas and information of others and ensuring each source is accompanied by a standard entry on a works cited page. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "7",
+    "code": "7.T.PM.1",
+    "strand": "Texts: Periods & Movements",
+    "description": "Periods & Movements: Demonstrate knowledge of dominant themes, genres, and verbal styles of literature from a particular time period.",
+    "elements": [
+      "a. Read and comprehend to analyze myths and stories (fictional or historical) that modern writers have adapted into their own works and identify key features of style and theme. (I)",
+      "b. Read and comprehend to analyze one genre of literature from a particular time period and identify key features of style and theme. (I)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "8",
+    "code": "8.T.C.1",
+    "strand": "Texts: Context",
+    "description": "Purpose & Audience: Analyze the impact of purpose and audience on a wide variety of texts.",
+    "elements": [
+      "a. *Analyze the development of multiple purposes within a single text and how those purposes target specific audiences.* (I)",
+      "b. *Use text mode features to aid comprehension and analysis of a variety of disciplinary texts and their related contexts.* (I)",
+      "c. Construct multimodal texts and/or presentations that serve more than one purpose and target a specific audience, using multiple, clearly identifiable features of incorporated modes. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "8",
+    "code": "8.T.C.2",
+    "strand": "Texts: Context",
+    "description": "Authors & Speakers: Analyze how authors’ and/or speakers’ perspectives influence texts and how circumstances shape their creation.",
+    "elements": [
+      "a. Compare and contrast varying perspectives on a particular topic found across a variety of texts, analyzing how texts establish and develop perspective to shape perceptions or beliefs. (I)",
+      "b. Identify an author’s bias and determine how that bias impacts text credibility. (I)",
+      "c. *Analyze the impact of background information and context (e.g., geography, location, era, historical happenings) on text development*. (I)",
+      "d. Use a variety of credible sources to research the answers to questions on academic and individual topics of interest. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "8",
+    "code": "8.T.SS.1",
+    "strand": "Texts: Structure & Style",
+    "description": "Organization: Analyze and use organizational structures to craft meaning.",
+    "elements": [
+      "a. Analyze how authors modify organizational structures or features to convey meaning, respond to the audience, or achieve specific purposes. (I)",
+      "b. Design texts, flexibly employing a variety of text structures and text features to convey information and add style, as appropriate to purpose and audience. (C)",
+      "c. Use varied words, phrases, and clauses to transition between ideas and to aid overall cohesion. (C)",
+      "d. Craft multi-paragraph texts using a coherent structure with an introduction that guides the focus; logically organized and integrated supporting facts, reasons, explanations, details, descriptions, and/or events; and a conclusion with a sense of finality. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "8",
+    "code": "8.T.SS.2",
+    "strand": "Texts: Structure & Style",
+    "description": "Craft: Interpret and use language to craft engaging texts.",
+    "elements": [
+      "a. Analyze how figurative language, connotative language, and/or literary device choices are used strategically to achieve specific purposes for target audiences. (I)",
+      "b. Use figurative language, literary devices, or connotative language for intentional effects when creating texts to achieve specific purposes or appeal to the target audience. (C)",
+      "c. Use formal or informal style characteristics as indicated by a text’s purpose, audience, and disciplinary context. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "8",
+    "code": "8.T.T.1",
+    "strand": "Texts: Techniques",
+    "description": "Narrative Techniques: Analyze and apply narrative techniques.",
+    "elements": [
+      "a. *Analyze how narrative techniques are used across the text to develop plot, characters, and setting*. (I)",
+      "b. Analyze how plot structures, conflict, and narrative devices (e.g., flashback, foreshadowing) work together to create an intended effect (e.g., suspense, tension, humor) on the audience. (I)",
+      "c. Analyze how authors convey and reveal themes through characters, events, and plot structure. (I)",
+      "d. Analyze how a modern literary work draws on themes, event patterns, or character types from different time periods. (I)",
+      "e. Apply narrative techniques to enhance writing, engage audiences, and achieve specific purposes. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "8",
+    "code": "8.T.T.2",
+    "strand": "Texts: Techniques",
+    "description": "Expository Techniques: Analyze and apply expository techniques.",
+    "elements": [
+      "a. Analyze the development of expository techniques used to present and design content, including multiple main ideas, facts, statistics, key details, information from text features, and a sense of closure. (I)",
+      "b. Analyze and evaluate how two or more authors writing about the same topic shape their presentations of key information by emphasizing different evidence or advancing different interpretations of facts. (I)",
+      "c. This progression ends in 5th grade.",
+      "d. Apply multiple expository techniques (e.g., main idea, facts, statistics, key details, text features, sense of closure) to enhance writing and engage audiences. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "8",
+    "code": "8.T.T.3",
+    "strand": "Texts: Techniques",
+    "description": "Argumentative Techniques: Analyze and apply argumentative techniques.",
+    "elements": [
+      "a. Analyze the development of argumentative techniques used to present and design content, including an author’s claim, supporting relevant and logical evidence, an identified counterclaim, a rebuttal, and a conclusion that logically follows the argument. (I)",
+      "b. This progression begins in 9th grade.",
+      "c. Apply argumentative techniques (e.g., author’s claim, supporting relevant and logical evidence, an identified counterclaim, a rebuttal, and a conclusion) to enhance writing and engage audiences. (C)",
+      "d. This progression begins in 9th grade."
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "8",
+    "code": "8.T.T.4",
+    "strand": "Texts: Techniques",
+    "description": "Poetic Techniques: Analyze and apply poetic techniques.",
+    "elements": [
+      "a. Analyze the development of poetic techniques used to present and design content, including stanzas, rhyme scheme, imagery, figurative language, and/or cacophony.",
+      "b. Apply poetic techniques (e.g., stanzas, rhyme/rhyme scheme, imagery, figurative language, sound devices) to produce poetry and engage audiences. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "8",
+    "code": "8.T.RA.1",
+    "strand": "Texts: Research & Analysis",
+    "description": "Research & Inquiry: Conduct research, generating questions to guide investigations of complex topics of interest and using credible sources to support analyses.",
+    "elements": [
+      "a. Generate questions to guide research and make connections between related topics of interest, formulating questions to investigate complex topics and ideas. (I)",
+      "b. *Conduct research by locating, gathering, curating, and integrating information from credible sources (including print, digital, and personal communication) about texts and related topics.* (I)",
+      "c. *Draw from accumulated knowledge and research to analyze texts, supporting, challenging, or extending ideas and information.* (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "8",
+    "code": "8.T.RA.2",
+    "strand": "Texts: Research & Analysis",
+    "description": "Curating Sources & Evidence: Utilize multiple print and digital texts to address a specific topic or question, assessing source credibility and relevance and integrating evidence properly to avoid plagiarism.",
+    "elements": [
+      "a. Locate evidence in print, digital, and multimodal sources to support a central idea or question, consulting Modern Language Association (MLA) guidelines to determine the specific information needed to document particular modes and genres. (I)",
+      "b. Analyze print, digital, and multimodal sources for accuracy, credibility, and relevance, determining whether the ideas and information support the topic under investigation and appeal to the target audience. (I)",
+      "c. Follow Modern Language Association (MLA) guidelines when integrating textual evidence, clearly identifying and citing the ideas and information of others and ensuring each source is accompanied by a properly formatted entry on a works cited page. (C)"
+    ]
+  },
+  {
+    "state": "GA",
+    "subject": "ela",
+    "grade": "8",
+    "code": "8.T.PM.1",
+    "strand": "Texts: Periods & Movements",
+    "description": "Periods & Movements: Demonstrate knowledge of dominant themes, genres, and verbal styles of literature from a particular time period.",
+    "elements": [
+      "a. Read and compare and contrast myths and stories (fictional or historical) that modern writers have adapted into their own works. (I)",
+      "b. Compare and contrast the treatment of a common theme by different writers within a time period. (I)"
+    ]
+  }
 ]

@@ -13,7 +13,10 @@
    aligned. For a passage library meant to serve several states, content only one state
    teaches isn't much use anyway — but it is a real limit, not a free lunch. */
 
-const GRADES = ['K','1','2','3','4','5','6','7','8'];
+// Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
+// the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
+// PDFs in data/raw/ if that ever changes.
+const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
 const STATES = ['OH', 'GA', 'TX'];

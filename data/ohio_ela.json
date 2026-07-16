@@ -2,42 +2,10 @@
   {
     "state": "OH",
     "subject": "ela",
-    "grade": "K",
-    "code": "RL.K.1",
-    "strand": "Reading Literature",
-    "description": "With prompting and support, ask and answer questions about key details in a text."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RL.1.1",
-    "strand": "Reading Literature",
-    "description": "Ask and answer questions about key details in a text."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
     "grade": "2",
     "code": "RL.2.1",
     "strand": "Reading Literature",
     "description": "Ask and answer such questions as who, what, where, when, why, and how to demonstrate understanding of key details in a text."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "K",
-    "code": "RL.K.2",
-    "strand": "Reading Literature",
-    "description": "With prompting and support, retell familiar stories, including key details."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RL.1.2",
-    "strand": "Reading Literature",
-    "description": "Analyze literary text development. a. Demonstrate understanding of the lesson. b. Retell stories, including key details."
   },
   {
     "state": "OH",
@@ -50,42 +18,10 @@
   {
     "state": "OH",
     "subject": "ela",
-    "grade": "K",
-    "code": "RL.K.3",
-    "strand": "Reading Literature",
-    "description": "With prompting and support, identify characters, settings, and major events in a story."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RL.1.3",
-    "strand": "Reading Literature",
-    "description": "Describe characters, settings, and major events in a story, using key details."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
     "grade": "2",
     "code": "RL.2.3",
     "strand": "Reading Literature",
     "description": "Describe how characters in a story respond to major events and challenges."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "K",
-    "code": "RL.K.4",
-    "strand": "Reading Literature",
-    "description": "Ask and answer questions about unknown words in a text."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RL.1.4",
-    "strand": "Reading Literature",
-    "description": "Identify words and phrases in stories or poems that suggest feelings or appeal to the senses."
   },
   {
     "state": "OH",
@@ -98,42 +34,10 @@
   {
     "state": "OH",
     "subject": "ela",
-    "grade": "K",
-    "code": "RL.K.5",
-    "strand": "Reading Literature",
-    "description": "Recognize common types of texts (e.g., storybooks, poems)."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RL.1.5",
-    "strand": "Reading Literature",
-    "description": "Explain major differences between books that tell stories and books that give information, drawing on a wide reading of a range of text types."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
     "grade": "2",
     "code": "RL.2.5",
     "strand": "Reading Literature",
     "description": "Describe the overall structure of a story, including describing how the beginning introduces the story and the ending concludes the action."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "K",
-    "code": "RL.K.6",
-    "strand": "Reading Literature",
-    "description": "With prompting and support, name the author and illustrator of a story and define the role of each in telling the story."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RL.1.6",
-    "strand": "Reading Literature",
-    "description": "Identify who is telling the story at various points in a text."
   },
   {
     "state": "OH",
@@ -146,22 +50,6 @@
   {
     "state": "OH",
     "subject": "ela",
-    "grade": "K",
-    "code": "RL.K.7",
-    "strand": "Reading Literature",
-    "description": "With prompting and support, describe the relationship between illustrations and the story in which they appear (e.g., what moment in a story an illustration depicts)."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RL.1.7",
-    "strand": "Reading Literature",
-    "description": "Use illustrations and details in a story to describe its characters, setting, or events."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
     "grade": "2",
     "code": "RL.2.7",
     "strand": "Reading Literature",
@@ -170,42 +58,10 @@
   {
     "state": "OH",
     "subject": "ela",
-    "grade": "K",
-    "code": "RL.K.9",
-    "strand": "Reading Literature",
-    "description": "With prompting and support, compare and contrast the adventures and experiences of characters in familiar stories."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RL.1.9",
-    "strand": "Reading Literature",
-    "description": "Compare and contrast the adventures and experiences of characters in stories."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
     "grade": "2",
     "code": "RL.2.9",
     "strand": "Reading Literature",
     "description": "Compare and contrast two or more versions of the same story (e.g., Cinderella stories) by different authors or from different cultures."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "K",
-    "code": "RL.K.10",
-    "strand": "Reading Literature",
-    "description": "Actively engage in group reading activities with purpose and understanding. Activate prior knowledge and draw on previous experiences in order to make text-to-self or text-to-text connections and comparisons."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RL.1.10",
-    "strand": "Reading Literature",
-    "description": "With prompting and support, read prose and poetry of appropriate complexity for grade 1. Activate prior knowledge and draw on previous experiences in order to make text-to-self or text-to-text connections and comparisons."
   },
   {
     "state": "OH",
@@ -650,42 +506,10 @@
   {
     "state": "OH",
     "subject": "ela",
-    "grade": "K",
-    "code": "RI.K.1",
-    "strand": "Reading Informational Text",
-    "description": "With prompting and support, ask and answer questions about key details in a text."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RI.1.1",
-    "strand": "Reading Informational Text",
-    "description": "Ask and answer questions about key details in a text."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
     "grade": "2",
     "code": "RI.2.1",
     "strand": "Reading Informational Text",
     "description": "Ask and answer such questions as who, what, where, when, why, and how to demonstrate understanding of key details in a text."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "K",
-    "code": "RI.K.2",
-    "strand": "Reading Informational Text",
-    "description": "With prompting and support, identify the main topic and retell key details of a text."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RI.1.2",
-    "strand": "Reading Informational Text",
-    "description": "Analyze informational text development. a. Identify the main topic. b. Retell key details of a text."
   },
   {
     "state": "OH",
@@ -698,42 +522,10 @@
   {
     "state": "OH",
     "subject": "ela",
-    "grade": "K",
-    "code": "RI.K.3",
-    "strand": "Reading Informational Text",
-    "description": "With prompting and support, describe the connection between two individuals, events, ideas, or pieces of information in a text."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RI.1.3",
-    "strand": "Reading Informational Text",
-    "description": "Describe the connection between two individuals, events, ideas, or pieces of information in a text."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
     "grade": "2",
     "code": "RI.2.3",
     "strand": "Reading Informational Text",
     "description": "Describe the connection between a series of historical events, scientific ideas or concepts, or steps in technical procedures in a text."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "K",
-    "code": "RI.K.4",
-    "strand": "Reading Informational Text",
-    "description": "With prompting and support, ask and answer questions about unknown words in a text."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RI.1.4",
-    "strand": "Reading Informational Text",
-    "description": "Ask and answer questions to help determine or clarify the meaning of words and phrases in a text."
   },
   {
     "state": "OH",
@@ -746,42 +538,10 @@
   {
     "state": "OH",
     "subject": "ela",
-    "grade": "K",
-    "code": "RI.K.5",
-    "strand": "Reading Informational Text",
-    "description": "Identify the front cover, back cover, and title page of a book."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RI.1.5",
-    "strand": "Reading Informational Text",
-    "description": "Know and use various text features (e.g., headings, tables of contents, glossaries, electronic menus, icons) to locate key facts or information in a text."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
     "grade": "2",
     "code": "RI.2.5",
     "strand": "Reading Informational Text",
     "description": "Know and use various text features (e.g., captions, bold print, subheadings, glossaries, indexes, electronic menus, icons) to locate key facts or information in a text efficiently."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "K",
-    "code": "RI.K.6",
-    "strand": "Reading Informational Text",
-    "description": "Name the author and illustrator of a text and define the role of each in presenting the ideas or information in a text."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RI.1.6",
-    "strand": "Reading Informational Text",
-    "description": "Distinguish between information provided by pictures or other illustrations and information provided by the words in a text."
   },
   {
     "state": "OH",
@@ -794,42 +554,10 @@
   {
     "state": "OH",
     "subject": "ela",
-    "grade": "K",
-    "code": "RI.K.7",
-    "strand": "Reading Informational Text",
-    "description": "With prompting and support, describe the relationship between illustrations and the text in which they appear (e.g., what person, place, thing, or idea in the text an illustration depicts)."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RI.1.7",
-    "strand": "Reading Informational Text",
-    "description": "Use the illustrations and details in a text to describe its key ideas."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
     "grade": "2",
     "code": "RI.2.7",
     "strand": "Reading Informational Text",
     "description": "Explain how specific images (e.g., a diagram showing how a machine works) contribute to and clarify a text."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "K",
-    "code": "RI.K.8",
-    "strand": "Reading Informational Text",
-    "description": "With prompting and support, identify the reasons an author gives to support points in a text."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RI.1.8",
-    "strand": "Reading Informational Text",
-    "description": "Identify the reasons an author gives to support points in a text."
   },
   {
     "state": "OH",
@@ -842,42 +570,10 @@
   {
     "state": "OH",
     "subject": "ela",
-    "grade": "K",
-    "code": "RI.K.9",
-    "strand": "Reading Informational Text",
-    "description": "With prompting and support, identify basic similarities in and differences between two texts on the same topic (e.g., in illustrations, descriptions, or procedures)."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RI.1.9",
-    "strand": "Reading Informational Text",
-    "description": "Identify basic similarities in and differences between two texts on the same topic (e.g., in illustrations, descriptions, or procedures)."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
     "grade": "2",
     "code": "RI.2.9",
     "strand": "Reading Informational Text",
     "description": "Compare and contrast the most important points presented by two texts on the same topic."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "K",
-    "code": "RI.K.10",
-    "strand": "Reading Informational Text",
-    "description": "Actively engage in group reading activities with purpose and understanding."
-  },
-  {
-    "state": "OH",
-    "subject": "ela",
-    "grade": "1",
-    "code": "RI.1.10",
-    "strand": "Reading Informational Text",
-    "description": "With prompting and support, read informational texts appropriately complex for grade 1."
   },
   {
     "state": "OH",

@@ -4,716 +4,6 @@
   "note": "Every alignment runs through an Ohio standard. Two non-Ohio standards are aligned when both link to the same Ohio standard.",
   "links": [
     {
-      "id": "sciK-01",
-      "subject": "science",
-      "oh": "K.ESS.1",
-      "state": "GA",
-      "code": "S1E1c",
-      "confidence": "strong",
-      "rationale": "Cross-grade (GA grade 1). Ohio: wind, temperature and precipitation can be used to document short-term weather changes that are observable. Georgia S1E1c: observe and measure current weather conditions with simple instruments and record temperature, precipitation and sky conditions.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sciK-02",
-      "subject": "science",
-      "oh": "K.ESS.1",
-      "state": "GA",
-      "code": "S1E1d",
-      "confidence": "strong",
-      "rationale": "Cross-grade (GA grade 1). Ohio: yearly weather changes (seasons) are observable patterns in daily weather changes. Georgia S1E1d: analyze data to identify seasonal patterns of change such as temperature and rainfall/snowfall.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sciK-03",
-      "subject": "science",
-      "oh": "K.ESS.1",
-      "state": "GA",
-      "code": "S1E1a",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 1). Ohio: weather changes occur throughout the day and from day to day and can be described by wind, temperature and precipitation. Georgia S1E1a: represent data in tables/graphs to identify and describe different types of weather and their characteristics; overlapping content with a data-representation framing.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sciK-04",
-      "subject": "science",
-      "oh": "K.ESS.2",
-      "state": "GA",
-      "code": "SKE1a",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: the moon, sun and stars can be observed at different times of the day or night. Georgia SKE1a: classify objects according to those seen in the day sky, the night sky, and both.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sciK-05",
-      "subject": "science",
-      "oh": "K.ESS.2",
-      "state": "GA",
-      "code": "SKE1b",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: sun, moon and stars appear in different positions at different times of the day or night. Georgia SKE1b: model the changes that occur in the sky during the day, as day turns into night, during the night, and as night turns into day.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sciK-06",
-      "subject": "science",
-      "oh": "K.ESS.2",
-      "state": "GA",
-      "code": "S2E2d",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 2). Ohio: the observable shape of the moon changes in size very slowly throughout the month. Georgia S2E2d: use personal observations to describe, illustrate, and predict how the appearance of the moon changes over time in a pattern; same content at a later grade with prediction added.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sciK-07",
-      "subject": "science",
-      "oh": "K.PS.1",
-      "state": "GA",
-      "code": "SKP1a",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: objects can be sorted and described by the properties of the materials from which they are made. Georgia SKP1a: compare and sort objects made of different materials such as clay, cloth, plastic, wood, paper, and metal.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sciK-08",
-      "subject": "science",
-      "oh": "K.PS.1",
-      "state": "GA",
-      "code": "SKP1b",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: objects and materials can be sorted and described by properties including color, size and texture. Georgia SKP1b: classify common objects according to their physical attributes (color, size, shape, weight, and texture).",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sciK-09",
-      "subject": "science",
-      "oh": "K.PS.2",
-      "state": "GA",
-      "code": "S1P1d",
-      "confidence": "strong",
-      "rationale": "Cross-grade (GA grade 1). Ohio: some objects and materials can be made to vibrate to produce sound; sound is produced when objects vibrate. Georgia S1P1d: construct an explanation supported by evidence that vibrating materials can make sound and that sound can make materials vibrate.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sciK-10",
-      "subject": "science",
-      "oh": "K.LS.1",
-      "state": "GA",
-      "code": "SKL1a",
-      "confidence": "moderate",
-      "rationale": "Same-grade match. Ohio: living things have specific characteristics and traits, and they grow and reproduce. Georgia SKL1a: use observations to recognize the differences between organisms and nonliving objects; both hinge on what characterizes living things, but Georgia frames it as a living/nonliving distinction.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sciK-11",
-      "subject": "science",
-      "oh": "K.LS.1",
-      "state": "GA",
-      "code": "SKL1b",
-      "confidence": "moderate",
-      "rationale": "Same-grade match. Ohio: living things have specific characteristics and traits. Georgia SKL1b: model how a set of organisms and nonliving objects are sorted into groups based on their attributes; overlaps on using characteristics of living things, with Georgia adding nonliving objects.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sciK-12",
-      "subject": "science",
-      "oh": "K.LS.1",
-      "state": "GA",
-      "code": "SKL2c",
-      "confidence": "partial",
-      "rationale": "Same-grade match. Ohio: living things grow and reproduce. Georgia SKL2c: observe similarities and differences of offspring to their parents and to other members of the same species; touches the reproduction idea but from the narrower offspring-resemblance angle.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sciK-13",
-      "subject": "science",
-      "oh": "K.LS.2",
-      "state": "GA",
-      "code": "SKL2a",
-      "confidence": "moderate",
-      "rationale": "Same-grade match. Ohio: living things have physical traits, some of which are observable structures. Georgia SKL2a: argue from evidence how animals can be grouped according to their features; both center on observable physical traits, though Georgia is grouping-focused and animal-only.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sciK-14",
-      "subject": "science",
-      "oh": "K.LS.2",
-      "state": "GA",
-      "code": "SKL2b",
-      "confidence": "moderate",
-      "rationale": "Same-grade match. Ohio: living things are made up of a variety of structures and some traits are observable. Georgia SKL2b: argue from evidence how plants can be grouped according to their features; the plant counterpart of the observable-traits idea.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sciK-15",
-      "subject": "science",
-      "oh": "K.LS.2",
-      "state": "GA",
-      "code": "S3L1b",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 3). Ohio: some structures and behaviors of living things influence their survival. Georgia S3L1b: explain how external features and adaptations (camouflage, hibernation, migration, mimicry) allow animals to survive in their habitat; same traits-influence-survival idea at greater depth.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-01",
-      "subject": "social_studies",
-      "oh": "K.SS.1",
-      "state": "GA",
-      "code": "SSKH3e",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: time can be measured. Georgia SSKH3e: correctly use the time-measurement words day, week, month, year; both introduce units for measuring time.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-02",
-      "subject": "social_studies",
-      "oh": "K.SS.1",
-      "state": "GA",
-      "code": "SSKH3c",
-      "confidence": "moderate",
-      "rationale": "Same-grade match. Ohio: time can be measured. Georgia SSKH3c: correctly use today, tomorrow, yesterday; relative time vocabulary rather than units of measure, so the overlap is on marking time.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-03",
-      "subject": "social_studies",
-      "oh": "K.SS.3",
-      "state": "GA",
-      "code": "SSKG1",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: heritage is reflected through diverse cultures and shown through arts, customs, traditions, family celebrations and language. Georgia SSKG1: describe the diversity of American culture by explaining the customs and celebrations of various families and communities.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-04",
-      "subject": "social_studies",
-      "oh": "K.SS.4",
-      "state": "GA",
-      "code": "SSKH2a",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: symbols and practices of the United States include the flag. Georgia SSKH2a: identify the national and state flags (United States and Georgia flags).",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-05",
-      "subject": "social_studies",
-      "oh": "K.SS.4",
-      "state": "GA",
-      "code": "SSKH2b",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: symbols and practices of the United States include the Pledge of Allegiance. Georgia SSKH2b: identify the Pledge of Allegiance as an American symbol/practice.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-06",
-      "subject": "social_studies",
-      "oh": "K.SS.4",
-      "state": "GA",
-      "code": "SSKH2c",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: symbols and practices of the United States include the National Anthem. Georgia SSKH2c: identify the Star Spangled Banner as the national anthem.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-07",
-      "subject": "social_studies",
-      "oh": "K.SS.5",
-      "state": "GA",
-      "code": "SSKG3",
-      "confidence": "partial",
-      "rationale": "Same-grade match. Ohio: terms of direction and distance, symbols and landmarks are used to talk about the relative location of familiar places. Georgia SSKG3: state the street address, city, state, and country where the student lives; both describe the location of familiar places, but Georgia targets absolute address rather than relative-location vocabulary.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-08",
-      "subject": "social_studies",
-      "oh": "K.SS.6",
-      "state": "GA",
-      "code": "SSKG2a",
-      "confidence": "moderate",
-      "rationale": "Same-grade match. Ohio: models and maps represent real places. Georgia SSKG2a: differentiate land and water features on simple maps and globes; applies the maps-represent-real-places idea to specific features.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-09",
-      "subject": "social_studies",
-      "oh": "K.SS.6",
-      "state": "GA",
-      "code": "SSKG2b",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: models and maps represent real places. Georgia SSKG2b: explain that maps and globes show a view from above; both establish how maps/globes represent the real world.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-10",
-      "subject": "social_studies",
-      "oh": "K.SS.6",
-      "state": "GA",
-      "code": "SSKG2c",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: models and maps represent real places. Georgia SSKG2c: explain that maps and globes show features in a smaller size; both address maps/globes as scaled representations of real places.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-11",
-      "subject": "social_studies",
-      "oh": "K.SS.7",
-      "state": "GA",
-      "code": "SS3H1b",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 3). Ohio: humans depend on and impact the physical environment in order to supply food, clothing and shelter. Georgia SS3H1b: compare how American Indians in each region used their environment to obtain food, clothing, and shelter; the same depend-on-environment concept in a historical context.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-12",
-      "subject": "social_studies",
-      "oh": "K.SS.7",
-      "state": "GA",
-      "code": "SS2G2b",
-      "confidence": "partial",
-      "rationale": "Cross-grade (GA grade 2). Ohio: humans depend on and impact the physical environment. Georgia SS2G2b: describe how historic figures and the Muscogee (Creek) and Cherokee adapted to and were influenced by their environments; human-environment interaction, but tied to specific Georgia figures.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-13",
-      "subject": "social_studies",
-      "oh": "K.SS.9",
-      "state": "GA",
-      "code": "SSKCG2",
-      "confidence": "partial",
-      "rationale": "Same-grade match. Ohio: individuals share responsibilities and take action toward common goals in homes, schools and communities. Georgia SSKCG2: describe positive character traits of good citizens such as honesty, courtesy, respect and self-control; both address being a contributing community member, but Georgia frames it as traits rather than shared responsibility.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-14",
-      "subject": "social_studies",
-      "oh": "K.SS.10",
-      "state": "GA",
-      "code": "SSKCG1a",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: the purpose of rules and authority figures is to provide order, security and safety. Georgia SSKCG1a: explain how rules are made and why.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-15",
-      "subject": "social_studies",
-      "oh": "K.SS.10",
-      "state": "GA",
-      "code": "SSKCG1b",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: rules provide order, security and safety in the home, school and community. Georgia SSKCG1b: explain why rules should be followed.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-16",
-      "subject": "social_studies",
-      "oh": "K.SS.10",
-      "state": "GA",
-      "code": "SS2CG1",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 2). Ohio: purpose of rules and authority figures is order, security and safety. Georgia SS2CG1: define the concept of government and the need for rules and laws; same purpose-of-rules idea extended to government.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-17",
-      "subject": "social_studies",
-      "oh": "K.SS.11",
-      "state": "GA",
-      "code": "SSKE4",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: individuals have many wants and make decisions to satisfy those wants. Georgia SSKE4: explain that people must make choices because they cannot have everything they want.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-18",
-      "subject": "social_studies",
-      "oh": "K.SS.11",
-      "state": "GA",
-      "code": "SS2E1",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 2). Ohio: decisions to satisfy wants impact others. Georgia SS2E1: because of scarcity, people must make choices that result in opportunity costs; extends the choices-have-consequences idea with the opportunity-cost concept.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-19",
-      "subject": "social_studies",
-      "oh": "K.SS.12",
-      "state": "GA",
-      "code": "SSKE3a",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: goods are objects that satisfy wants and services are actions that satisfy wants. Georgia SSKE3a: distinguish goods from services.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ssK-20",
-      "subject": "social_studies",
-      "oh": "K.SS.12",
-      "state": "GA",
-      "code": "SS1E1",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 1). Ohio: goods are objects and services are actions that satisfy wants. Georgia SS1E1: identify goods that people make and services that people provide for each other; same goods/services distinction with a producer framing.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci1-01",
-      "subject": "science",
-      "oh": "1.ESS.1",
-      "state": "GA",
-      "code": "S3P1b",
-      "confidence": "strong",
-      "rationale": "Cross-grade (GA grade 3). Ohio: sunlight warms Earth's land, air and water, and amount of exposure affects warming or cooling. Georgia S3P1b: investigate with thermometers and chart the effect of sunlight on various objects — the same core idea that sunlight exposure warms materials.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci1-02",
-      "subject": "science",
-      "oh": "1.ESS.1",
-      "state": "GA",
-      "code": "S3P1a",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 3). Ohio names the sun as the principal source of energy that warms Earth; Georgia S3P1a asks questions to identify sources of heat energy, explicitly including sunlight. Overlap is clear but Georgia frames it within a broader heat-energy standard.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci1-03",
-      "subject": "science",
-      "oh": "1.ESS.2",
-      "state": "GA",
-      "code": "S2P1c",
-      "confidence": "strong",
-      "rationale": "Cross-grade (GA grade 2). Ohio: water changes from liquid to solid and solid to liquid due to changing energy. Georgia S2P1c: construct an explanation that some changes in matter caused by heating or cooling can be reversed, with heating or freezing of water as a named example.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci1-04",
-      "subject": "science",
-      "oh": "1.ESS.2",
-      "state": "GA",
-      "code": "S1E1b",
-      "confidence": "partial",
-      "rationale": "Same-grade match. Ohio: water on Earth is present in many forms and can change between liquid and solid. Georgia S1E1b: identify forms of precipitation (rain, snow, sleet, hail) as either solid (ice) or liquid (water) — touches solid vs. liquid water but only in a weather context, not the change process.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci1-05",
-      "subject": "science",
-      "oh": "1.ESS.2",
-      "state": "GA",
-      "code": "S5P1b",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 5). Ohio: physical properties of water change between solid and liquid due to changing energy. Georgia S5P1b: argue from observations that physical changes in the state of water are due to temperature changes — same phenomenon, but Georgia adds a particle-motion depth beyond Ohio grade 1.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci1-06",
-      "subject": "science",
-      "oh": "1.PS.1",
-      "state": "GA",
-      "code": "S2P1c",
-      "confidence": "strong",
-      "rationale": "Cross-grade (GA grade 2). Ohio: properties of objects and materials change when exposed to conditions such as heating or cooling, and not all materials change the same way. Georgia S2P1c: explain that some changes in matter caused by heating or cooling are reversible and some are irreversible — the same core content.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci1-07",
-      "subject": "science",
-      "oh": "1.PS.1",
-      "state": "GA",
-      "code": "S2P1a",
-      "confidence": "partial",
-      "rationale": "Cross-grade (GA grade 2). Ohio addresses properties of objects and materials and how they change; Georgia S2P1a has students describe and classify objects by physical properties (color, mass, texture, hardness). Overlaps on material properties but Georgia's element omits the change-under-conditions idea.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci1-08",
-      "subject": "science",
-      "oh": "1.PS.2",
-      "state": "GA",
-      "code": "SKP2a",
-      "confidence": "strong",
-      "rationale": "Cross-grade (GA grade K). Ohio: objects move in ways such as straight, zigzag, circular and back and forth, and pushes or pulls affect motion. Georgia SKP2a: investigate the relationship between an object's attributes and its motion (straight, circular, back and forth, fast and slow) when a force such as a push or pull is applied.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci1-09",
-      "subject": "science",
-      "oh": "1.PS.2",
-      "state": "GA",
-      "code": "S2P2a",
-      "confidence": "strong",
-      "rationale": "Cross-grade (GA grade 2). Ohio: a push or pull is a force that can make an object move faster, slower or change direction. Georgia S2P2a: plan and carry out an investigation to demonstrate how pushing and pulling on an object affects its motion — same core force-and-motion content.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci1-10",
-      "subject": "science",
-      "oh": "1.PS.2",
-      "state": "GA",
-      "code": "S2P2b",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 2). Ohio states that a force can make an object go faster, slower or in a different direction; Georgia S2P2b has students design a device to change the speed or direction of an object — same concept applied through an engineering-design framing.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci1-11",
-      "subject": "science",
-      "oh": "1.LS.1",
-      "state": "GA",
-      "code": "S1L1b",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: living things have basic needs met by obtaining materials, energy and water from the environment. Georgia S1L1b: compare and contrast the basic needs of plants (air, water, light, nutrients) and animals (air, water, food, shelter) — the same basic-needs core content.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci1-12",
-      "subject": "science",
-      "oh": "1.LS.1",
-      "state": "GA",
-      "code": "S4L1b",
-      "confidence": "partial",
-      "rationale": "Cross-grade (GA grade 4). Ohio: plants get energy from sunlight and animals get energy from plants and other animals. Georgia S4L1b: model the flow of energy through a food web/food chain beginning with sunlight — the same energy-flow idea, but at food-web depth well beyond Ohio grade 1.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci1-13",
-      "subject": "science",
-      "oh": "1.LS.2",
-      "state": "GA",
-      "code": "S3L1c",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 3). Ohio: living things survive only in environments that meet their needs. Georgia S3L1c: use evidence to explain why some organisms can thrive in one habitat and not in another — the same survival-environment relationship, framed through Georgia habitats at a later grade.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci1-14",
-      "subject": "science",
-      "oh": "1.LS.2",
-      "state": "GA",
-      "code": "S1L1c",
-      "confidence": "moderate",
-      "rationale": "Same-grade match. Ohio: living things interact with their environments as they meet their needs, and resources must be available to meet those needs. Georgia S1L1c: design a solution to ensure that a plant or animal has all of its needs met — same needs-met-by-environment content with a design framing.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci1-15",
-      "subject": "science",
-      "oh": "1.LS.2",
-      "state": "GA",
-      "code": "S1E1d",
-      "confidence": "partial",
-      "rationale": "Same-grade match. Ohio notes that seasonal changes in the local environment directly impact the availability of resources. Georgia S1E1d: analyze data to identify seasonal patterns of change, including changes to the environment — overlaps on seasonal environmental change but not the resource-availability link.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-01",
-      "subject": "social_studies",
-      "oh": "1.SS.1",
-      "state": "GA",
-      "code": "SSKH3f",
-      "confidence": "strong",
-      "rationale": "Cross-grade (GA grade K). Ohio: time can be divided into categories such as past, present and future. Georgia SSKH3f: correctly use the chronology terms past, present, and future — the same time-category vocabulary.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-02",
-      "subject": "social_studies",
-      "oh": "1.SS.1",
-      "state": "GA",
-      "code": "SSKH3e",
-      "confidence": "strong",
-      "rationale": "Cross-grade (GA grade K). Ohio includes dividing time into categories such as months of the year. Georgia SSKH3e: correctly use the time words day, week, month, year — the same calendar-based time categories.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-03",
-      "subject": "social_studies",
-      "oh": "1.SS.3",
-      "state": "GA",
-      "code": "SS1H1b",
-      "confidence": "moderate",
-      "rationale": "Same-grade match. Ohio: the ways basic human needs are met have changed over time. Georgia SS1H1b: describe how everyday life of historical figures (food, clothing, homes, transportation, communication) is similar to and different from life today — same past-vs-present daily-needs comparison, framed through specific figures.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-04",
-      "subject": "social_studies",
-      "oh": "1.SS.4",
-      "state": "GA",
-      "code": "SS1G2",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: maps can be used to locate and identify places. Georgia SS1G2: identify and locate the student's city, county, state, nation, and continent on a simple map or globe — the same map-use-to-locate-places skill.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-05",
-      "subject": "social_studies",
-      "oh": "1.SS.4",
-      "state": "GA",
-      "code": "SSKG2a",
-      "confidence": "partial",
-      "rationale": "Cross-grade (GA grade K). Ohio: maps can be used to locate and identify places. Georgia SSKG2a: differentiate land and water features on simple maps and globes — overlapping map-reading skill, but limited to land/water features rather than locating places.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-06",
-      "subject": "social_studies",
-      "oh": "1.SS.5",
-      "state": "GA",
-      "code": "SS1G3c",
-      "confidence": "partial",
-      "rationale": "Same-grade match. Ohio: places are distinctive because of physical characteristics (landforms, bodies of water) and human characteristics (structures). Georgia SS1G3c: identify and describe landforms (mountains, deserts, valleys, coasts) — covers the physical-characteristics half but not human characteristics.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-07",
-      "subject": "social_studies",
-      "oh": "1.SS.6",
-      "state": "GA",
-      "code": "SS2G2b",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 2). Ohio: families interact with the physical environment differently in different times and places. Georgia SS2G2b: describe how historic figures and the Muscogee (Creek) and Cherokee adapted to and were influenced by their environments — the same people-environment interaction across times and places, anchored to specific groups.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-08",
-      "subject": "social_studies",
-      "oh": "1.SS.7",
-      "state": "GA",
-      "code": "SSKG1",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade K). Ohio: diverse cultural practices address basic human needs in various ways and may change over time. Georgia SSKG1: describe the diversity of American culture by explaining the customs and celebrations of various families and communities — same cultural-diversity core, without Ohio's change-over-time element.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-09",
-      "subject": "social_studies",
-      "oh": "1.SS.7",
-      "state": "GA",
-      "code": "SS2H2a",
-      "confidence": "partial",
-      "rationale": "Cross-grade (GA grade 2). Ohio: cultural practices address needs in various ways and may change over time. Georgia SS2H2a: compare and contrast Muscogee (Creek) and Cherokee cultures of the past to those of Georgians today — captures cultural practices changing over time, but only for two specific cultures.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-10",
-      "subject": "social_studies",
-      "oh": "1.SS.8",
-      "state": "GA",
-      "code": "SSKCG2",
-      "confidence": "partial",
-      "rationale": "Cross-grade (GA grade K). Ohio: individuals have responsibility to take action toward common goals in homes, schools and communities and are accountable. Georgia SSKCG2: describe positive character traits of good citizens such as honesty, respect, and self-control — overlapping civic-disposition content, but traits rather than responsibility for common goals.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-11",
-      "subject": "social_studies",
-      "oh": "1.SS.10",
-      "state": "GA",
-      "code": "SSKCG1a",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade K). Ohio: rules exist in different settings and fairness should guide rules and consequences. Georgia SSKCG1a: explain how rules are made and why — same rules-and-their-purpose content, without Ohio's explicit fairness principle.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-12",
-      "subject": "social_studies",
-      "oh": "1.SS.10",
-      "state": "GA",
-      "code": "SSKCG1b",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade K). Ohio addresses rules and the consequences for breaking them. Georgia SSKCG1b: explain why rules should be followed — same core content on the purpose of following rules.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-13",
-      "subject": "social_studies",
-      "oh": "1.SS.10",
-      "state": "GA",
-      "code": "SS2CG1",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 2). Ohio: rules exist in different settings and should be guided by fairness. Georgia SS2CG1: define the concept of government and the need for rules and laws — clear overlap on why rules exist, framed at the government level.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-14",
-      "subject": "social_studies",
-      "oh": "1.SS.11",
-      "state": "GA",
-      "code": "SS1E2",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: wants are unlimited and resources are limited, so individuals make choices. Georgia SS1E2: explain that scarcity is when unlimited wants are greater than limited resources — the same scarcity concept in nearly identical terms.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-15",
-      "subject": "social_studies",
-      "oh": "1.SS.11",
-      "state": "GA",
-      "code": "SSKE4",
-      "confidence": "strong",
-      "rationale": "Cross-grade (GA grade K). Ohio: individuals make choices because they cannot have everything they want. Georgia SSKE4: explain that people must make choices because they cannot have everything they want — essentially the same statement.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-16",
-      "subject": "social_studies",
-      "oh": "1.SS.12",
-      "state": "GA",
-      "code": "SS1E3",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: people produce and consume goods and services in the community. Georgia SS1E3: describe how people are both producers and consumers — the same production/consumption core content.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-17",
-      "subject": "social_studies",
-      "oh": "1.SS.12",
-      "state": "GA",
-      "code": "SS1E1",
-      "confidence": "strong",
-      "rationale": "Same-grade match. Ohio: people produce and consume goods and services. Georgia SS1E1: identify goods that people make and services that people provide for each other — the same goods-and-services content from the production side.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-18",
-      "subject": "social_studies",
-      "oh": "1.SS.13",
-      "state": "GA",
-      "code": "SS2E3",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 2). Ohio: people trade to obtain goods and services they want. Georgia SS2E3: explain that people usually use money to obtain goods and services and how money makes trade easier than barter — same trade-for-goods-and-services idea with added money/barter depth.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-19",
-      "subject": "social_studies",
-      "oh": "1.SS.14",
-      "state": "GA",
-      "code": "SSKE3b",
-      "confidence": "strong",
-      "rationale": "Cross-grade (GA grade K). Ohio: currency is used as a means of economic exchange. Georgia SSKE3b: identify that U.S. coins and dollar bills (paper money) are used as currency — the same currency-as-exchange concept.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss1-20",
-      "subject": "social_studies",
-      "oh": "1.SS.14",
-      "state": "GA",
-      "code": "SS2E3",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 2). Ohio: currency is used as a means of economic exchange. Georgia SS2E3: explain that people usually use money to obtain goods and services and that money makes trade easier than barter — same money-as-exchange concept with an added barter comparison.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci2-01",
-      "subject": "science",
-      "oh": "2.ESS.1",
-      "state": "GA",
-      "code": "S1E1c",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 1). Ohio: wind results from energy transfer in the atmosphere and wind speed/direction can be measured. Georgia S1E1c: measure current weather conditions with simple instruments including a wind vane and record the data.",
-      "source": "ai_draft"
-    },
-    {
       "id": "sci2-02",
       "subject": "science",
       "oh": "2.ESS.1",
@@ -744,26 +34,6 @@
       "source": "ai_draft"
     },
     {
-      "id": "sci2-05",
-      "subject": "science",
-      "oh": "2.ESS.3",
-      "state": "GA",
-      "code": "S1E1d",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 1). Ohio: short- and long-term weather changes affect temperature, precipitation, and wind. Georgia S1E1d analyzes data to identify seasonal patterns of change such as temperature and rainfall/snowfall.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci2-06",
-      "subject": "science",
-      "oh": "2.ESS.3",
-      "state": "GA",
-      "code": "S1E1a",
-      "confidence": "partial",
-      "rationale": "Cross-grade (GA grade 1). Ohio addresses changing weather including temperature and precipitation; Georgia S1E1a represents data to identify and describe different types of weather and their characteristics, a partial overlap with Ohio's focus on change over time.",
-      "source": "ai_draft"
-    },
-    {
       "id": "sci2-07",
       "subject": "science",
       "oh": "2.PS.1",
@@ -781,16 +51,6 @@
       "code": "S2P2b",
       "confidence": "strong",
       "rationale": "Same-grade match. Ohio: the change in motion depends on the force applied and motion can change direction. Georgia S2P2b designs a device to change the speed or direction of an object.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci2-09",
-      "subject": "science",
-      "oh": "2.PS.1",
-      "state": "GA",
-      "code": "S1P2b",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 1). Ohio notes some forces act without touching, such as a magnet moving an object. Georgia S1P2b investigates how magnets attract and repel and their effect on common objects.",
       "source": "ai_draft"
     },
     {
@@ -834,16 +94,6 @@
       "source": "ai_draft"
     },
     {
-      "id": "ss2-01",
-      "subject": "social_studies",
-      "oh": "2.SS.3",
-      "state": "GA",
-      "code": "SS1H1b",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 1). Ohio: science and technology have changed daily life. Georgia SS1H1b describes how everyday life of historical figures differs from the present in areas like transportation and communication.",
-      "source": "ai_draft"
-    },
-    {
       "id": "ss2-02",
       "subject": "social_studies",
       "oh": "2.SS.3",
@@ -851,26 +101,6 @@
       "code": "SS4E1f",
       "confidence": "partial",
       "rationale": "Cross-grade (GA grade 4). Ohio: science and technology have changed daily life. Georgia SS4E1f gives examples of technological advancements (cotton gin, steamboat, locomotive) and their impact, a partial overlap centered on business productivity rather than daily life.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss2-03",
-      "subject": "social_studies",
-      "oh": "2.SS.4",
-      "state": "GA",
-      "code": "SS1H1a",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 1). Ohio: biographies show how people's actions have shaped the world. Georgia SS1H1a identifies the contributions made by historical figures such as Franklin and Jefferson.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss2-04",
-      "subject": "social_studies",
-      "oh": "2.SS.5",
-      "state": "GA",
-      "code": "SS1G2",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 1). Ohio: maps and their symbols can be interpreted to answer questions about location. Georgia SS1G2 identifies and locates the student's city, county, state, nation, and continent on a simple map or globe.",
       "source": "ai_draft"
     },
     {
@@ -964,36 +194,6 @@
       "source": "ai_draft"
     },
     {
-      "id": "ss2-14",
-      "subject": "social_studies",
-      "oh": "2.SS.12",
-      "state": "GA",
-      "code": "SSKCG1a",
-      "confidence": "partial",
-      "rationale": "Cross-grade (GA grade K). Ohio: there are different rules and laws that govern behavior. Georgia SSKCG1a explains how rules are made and why, a partial overlap on the nature and purpose of rules.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss2-15",
-      "subject": "social_studies",
-      "oh": "2.SS.15",
-      "state": "GA",
-      "code": "SS1E1",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 1). Ohio: most people work in jobs producing specific goods and services. Georgia SS1E1 identifies goods that people make and services that people provide for each other.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss2-16",
-      "subject": "social_studies",
-      "oh": "2.SS.15",
-      "state": "GA",
-      "code": "SSKE1",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade K). Ohio: most people work in jobs producing goods and services. Georgia SSKE1 describes the work that people do, such as police officer, farmer, doctor, and teacher.",
-      "source": "ai_draft"
-    },
-    {
       "id": "ss2-17",
       "subject": "social_studies",
       "oh": "2.SS.16",
@@ -1001,36 +201,6 @@
       "code": "SS2E3",
       "confidence": "strong",
       "rationale": "Same-grade match. Ohio: people use money to buy and sell goods and services. Georgia SS2E3 explains that people usually use money to obtain the goods and services they want and how money makes trade easier than barter.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss2-18",
-      "subject": "social_studies",
-      "oh": "2.SS.16",
-      "state": "GA",
-      "code": "SSKE3b",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade K). Ohio: people use money to buy and sell goods and services. Georgia SSKE3b identifies that U.S. coins and dollar bills are used as currency.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss2-19",
-      "subject": "social_studies",
-      "oh": "2.SS.17",
-      "state": "GA",
-      "code": "SSKE2",
-      "confidence": "strong",
-      "rationale": "Cross-grade (GA grade K). Ohio: people earn income by working. Georgia SSKE2 explains that people earn income by working, a near-identical statement.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss2-20",
-      "subject": "social_studies",
-      "oh": "2.SS.17",
-      "state": "GA",
-      "code": "SS1E4",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 1). Ohio: people earn income by working. Georgia SS1E4 explains that people earn income by working and must make choices about saving and spending, extending the same core idea.",
       "source": "ai_draft"
     },
     {
@@ -1051,16 +221,6 @@
       "code": "S3E1a",
       "confidence": "strong",
       "rationale": "Same-grade match. Ohio: rocks have specific observable characteristics that allow them to be sorted and compared. Georgia S3E1a: ask questions and analyze data to classify rocks by physical attributes (color, texture, luster, hardness) using simple tests.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci3-03",
-      "subject": "science",
-      "oh": "3.ESS.1",
-      "state": "GA",
-      "code": "SKE2a",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade K). Ohio: air and water are also nonliving Earth resources alongside soil and rock. Georgia SKE2a: ask questions to identify and describe earth materials—soil, rocks, water, and air—covering the same nonliving resources at an earlier grade.",
       "source": "ai_draft"
     },
     {
@@ -1121,16 +281,6 @@
       "code": "S5L2b",
       "confidence": "strong",
       "rationale": "Cross-grade (GA grade 5). Ohio: individual organisms inherit many traits from their parents. Georgia S5L2b: ask questions to compare and contrast inherited and acquired physical traits.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "sci3-10",
-      "subject": "science",
-      "oh": "3.LS.1",
-      "state": "GA",
-      "code": "SKL2c",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade K). Ohio: offspring resemble their parents and each other. Georgia SKL2c: make observations to identify the similarities and differences of offspring to their parents and to other members of the same species.",
       "source": "ai_draft"
     },
     {
@@ -1201,16 +351,6 @@
       "code": "SS8E1a",
       "confidence": "moderate",
       "rationale": "Cross-grade (GA grade 8). Ohio: systems of transportation move people, products and ideas from place to place. Georgia SS8E1a: evaluate how the Interstate Highway System, airport, deepwater ports, and railroads interact to support the exchange of goods and services domestically and internationally.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss3-03",
-      "subject": "social_studies",
-      "oh": "3.SS.8",
-      "state": "GA",
-      "code": "SSKG1",
-      "confidence": "strong",
-      "rationale": "Cross-grade (GA grade K). Ohio: communities may include diverse cultural groups. Georgia SSKG1: describe the diversity of American culture by explaining the customs and celebrations of various families and communities.",
       "source": "ai_draft"
     },
     {
@@ -1311,16 +451,6 @@
       "code": "SS3E3a",
       "confidence": "strong",
       "rationale": "Same-grade match. Ohio: a consumer's wants are satisfied by using goods and services while a producer makes goods and provides services. Georgia SS3E3a: describe the interdependence of consumers and producers.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "ss3-14",
-      "subject": "social_studies",
-      "oh": "3.SS.17",
-      "state": "GA",
-      "code": "SS1E3",
-      "confidence": "moderate",
-      "rationale": "Cross-grade (GA grade 1). Ohio distinguishes consumers from producers. Georgia SS1E3: describe how people are both producers and consumers.",
       "source": "ai_draft"
     },
     {
@@ -3504,36 +2634,6 @@
       "source": "ai_draft"
     },
     {
-      "id": "lnk-tx-0350",
-      "subject": "social_studies",
-      "oh": "2.SS.3",
-      "state": "TX",
-      "code": "K.12C",
-      "confidence": "moderate",
-      "rationale": "Asks students to describe how their life might be different without modern technology, which is the concept's test of explaining how technological advances changed how people live, approached counterfactually.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "lnk-tx-0351",
-      "subject": "social_studies",
-      "oh": "2.SS.3",
-      "state": "TX",
-      "code": "1.15A",
-      "confidence": "strong",
-      "rationale": "Asks students to describe how technology has affected the ways families live, which is the concept's test of explaining how technological advances changed how people live.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "lnk-tx-0352",
-      "subject": "social_studies",
-      "oh": "2.SS.3",
-      "state": "TX",
-      "code": "1.15B",
-      "confidence": "strong",
-      "rationale": "Asks students to describe how technology has affected communication, transportation, and recreation — technological advances and their effect on how people live.",
-      "source": "ai_draft"
-    },
-    {
       "id": "lnk-tx-0353",
       "subject": "social_studies",
       "oh": "2.SS.3",
@@ -3674,46 +2774,6 @@
       "source": "ai_draft"
     },
     {
-      "id": "lnk-tx-0367",
-      "subject": "social_studies",
-      "oh": "2.SS.4",
-      "state": "TX",
-      "code": "K.2",
-      "confidence": "strong",
-      "rationale": "Asks students to identify the contributions of named historical figures who helped shape the state and nation, which is exactly the concept's test of studying individuals' contributions to see how their actions shaped the present world.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "lnk-tx-0368",
-      "subject": "social_studies",
-      "oh": "2.SS.4",
-      "state": "TX",
-      "code": "1.2A",
-      "confidence": "strong",
-      "rationale": "Asks students to identify contributions of named historical figures who influenced the state and nation, directly satisfying the concept's membership test.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "lnk-tx-0369",
-      "subject": "social_studies",
-      "oh": "2.SS.4",
-      "state": "TX",
-      "code": "1.2B",
-      "confidence": "moderate",
-      "rationale": "Asks students to compare the lives of historical figures who influenced the state and nation, which is the 'study the lives of specific historical figures' half of the test; the comparison framing is an added demand the concept does not name.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "lnk-tx-0370",
-      "subject": "social_studies",
-      "oh": "2.SS.4",
-      "state": "TX",
-      "code": "1.15C",
-      "confidence": "moderate",
-      "rationale": "Asks students to identify the contributions of named scientists and inventors, which satisfies the concept's test of studying specific individuals' contributions to the world people live in now; the standard does not itself state the 'shaped the world' inference.",
-      "source": "ai_draft"
-    },
-    {
       "id": "lnk-tx-0371",
       "subject": "social_studies",
       "oh": "2.SS.4",
@@ -3814,46 +2874,6 @@
       "source": "ai_draft"
     },
     {
-      "id": "lnk-tx-0381",
-      "subject": "social_studies",
-      "oh": "2.SS.12",
-      "state": "TX",
-      "code": "K.7A",
-      "confidence": "strong",
-      "rationale": "Asks students to identify purposes for having rules, which is the concept's test of explaining why groups need rules at all rather than the content of any rule.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "lnk-tx-0382",
-      "subject": "social_studies",
-      "oh": "2.SS.12",
-      "state": "TX",
-      "code": "K.7B",
-      "confidence": "moderate",
-      "rationale": "Identifies rules that provide order, security, and safety, which states what rules accomplish and thus why they are needed, though it stays at the home/school level rather than the community level.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "lnk-tx-0383",
-      "subject": "social_studies",
-      "oh": "2.SS.12",
-      "state": "TX",
-      "code": "1.10A",
-      "confidence": "strong",
-      "rationale": "Asks students to explain the purpose for rules and laws in the home, school, and community, which is the concept's test of explaining why groups and communities need rules and laws at all.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "lnk-tx-0384",
-      "subject": "social_studies",
-      "oh": "2.SS.15",
-      "state": "TX",
-      "code": "1.9B",
-      "confidence": "strong",
-      "rationale": "Asks students to describe how various jobs contribute to the production of goods and services, which is the concept's test that people work at jobs to make goods or provide services.",
-      "source": "ai_draft"
-    },
-    {
       "id": "lnk-tx-0385",
       "subject": "social_studies",
       "oh": "2.SS.17",
@@ -3861,26 +2881,6 @@
       "code": "2.6A",
       "confidence": "strong",
       "rationale": "Asks students to explain how work provides income, which is precisely the concept's test that people earn income by working. Note the concept has an unresolved duplicate (c-people-earn-income-by-working-2); attached to the primary only.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "lnk-tx-0386",
-      "subject": "social_studies",
-      "oh": "3.SS.5",
-      "state": "TX",
-      "code": "K.4B",
-      "confidence": "moderate",
-      "rationale": "Asks students to identify how geographic location influences shelter, clothing, food, and activities, satisfying the 'how they live there' half of the test; cross-grade (concept is 3-5, standard is K) and it does not reach the 'work people do' half.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "lnk-tx-0387",
-      "subject": "social_studies",
-      "oh": "3.SS.5",
-      "state": "TX",
-      "code": "1.5B",
-      "confidence": "moderate",
-      "rationale": "Asks students to identify and describe how geographic location influences shelter, clothing, food, and activities, satisfying the 'how they live there' half of the test; cross-grade (concept is 3-5, standard is grade 1).",
       "source": "ai_draft"
     },
     {
@@ -4114,16 +3114,6 @@
       "source": "ai_draft"
     },
     {
-      "id": "lnk-tx-0411",
-      "subject": "social_studies",
-      "oh": "3.SS.11",
-      "state": "TX",
-      "code": "1.10B",
-      "confidence": "moderate",
-      "rationale": "Identifies rules and laws that establish order, provide security, and manage conflict, naming what laws accomplish rather than merely that they exist — the concept's stated test.",
-      "source": "ai_draft"
-    },
-    {
       "id": "lnk-tx-0412",
       "subject": "social_studies",
       "oh": "3.SS.11",
@@ -4141,16 +3131,6 @@
       "code": "2.8B",
       "confidence": "moderate",
       "rationale": "Asks students to identify governmental services in the community and explain their value, which is the 'public services' purpose the concept enumerates; framed as government services rather than as what laws accomplish.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "lnk-tx-0414",
-      "subject": "social_studies",
-      "oh": "3.SS.16",
-      "state": "TX",
-      "code": "1.8B",
-      "confidence": "moderate",
-      "rationale": "Asks students to explain why wanting more than they can have requires that people make choices, which is the 'limited resources force people to choose' half of the test; it does not reach the opportunity-cost half.",
       "source": "ai_draft"
     },
     {
@@ -4181,16 +3161,6 @@
       "code": "2.7B",
       "confidence": "strong",
       "rationale": "Asks students to identify ways in which people are both producers and consumers, which is the concept's explicit 'one person can occupy both roles' clause.",
-      "source": "ai_draft"
-    },
-    {
-      "id": "lnk-tx-0418",
-      "subject": "social_studies",
-      "oh": "3.SS.18",
-      "state": "TX",
-      "code": "1.7C",
-      "confidence": "moderate",
-      "rationale": "Asks students to identify the role of markets in the exchange of goods and services, which is the concept's test of explaining how goods and services move between buyers and sellers; cross-grade (concept is 3-5, standard is grade 1) and it does not reach the role of price.",
       "source": "ai_draft"
     },
     {
