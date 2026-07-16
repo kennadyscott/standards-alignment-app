@@ -624,6 +624,54 @@
     "source": "seed"
   },
   {
+    "id": "m-specialization-leads-to-trade-3-oh",
+    "conceptId": "c-specialization-leads-to-trade-3",
+    "key": "OH:social_studies:7.SS.20",
+    "confidence": "moderate",
+    "rationale": "Same-grade match. Ohio: uneven distribution of productive resources contributed to specialization, trade, and interdependence. Georgia SS7E2a explains how specialization encourages trade between countries.",
+    "source": "seed"
+  },
+  {
+    "id": "m-specialization-leads-to-trade-3-ga",
+    "conceptId": "c-specialization-leads-to-trade-3",
+    "key": "GA:social_studies:SS7E2a",
+    "confidence": "moderate",
+    "rationale": "Same-grade match. Ohio: uneven distribution of productive resources contributed to specialization, trade, and interdependence. Georgia SS7E2a explains how specialization encourages trade between countries.",
+    "source": "seed"
+  },
+  {
+    "id": "m-markets-exchange-goods-and-services-2-oh",
+    "conceptId": "c-markets-exchange-goods-and-services-2",
+    "key": "OH:social_studies:7.SS.21",
+    "confidence": "partial",
+    "rationale": "Cross-grade (GA grade 3). Ohio: the growth of cities and empires fostered the growth of markets and market exchanges. Georgia SS3E3b describes how goods and services are allocated by price in the marketplace, the market-exchange concept at an earlier grade.",
+    "source": "seed"
+  },
+  {
+    "id": "m-markets-exchange-goods-and-services-2-ga",
+    "conceptId": "c-markets-exchange-goods-and-services-2",
+    "key": "GA:social_studies:SS3E3b",
+    "confidence": "partial",
+    "rationale": "Cross-grade (GA grade 3). Ohio: the growth of cities and empires fostered the growth of markets and market exchanges. Georgia SS3E3b describes how goods and services are allocated by price in the marketplace, the market-exchange concept at an earlier grade.",
+    "source": "seed"
+  },
+  {
+    "id": "m-currency-enables-exchange-in-trade-oh",
+    "conceptId": "c-currency-enables-exchange-in-trade",
+    "key": "OH:social_studies:7.SS.21",
+    "confidence": "partial",
+    "rationale": "Same-grade match. Ohio: market exchanges encouraged the transition from barter to monetary economies. Georgia SS7E2c explains why international trade requires a system for exchanging currencies between nations, touching the monetary-exchange concept.",
+    "source": "seed"
+  },
+  {
+    "id": "m-currency-enables-exchange-in-trade-ga",
+    "conceptId": "c-currency-enables-exchange-in-trade",
+    "key": "GA:social_studies:SS7E2c",
+    "confidence": "partial",
+    "rationale": "Same-grade match. Ohio: market exchanges encouraged the transition from barter to monetary economies. Georgia SS7E2c explains why international trade requires a system for exchanging currencies between nations, touching the monetary-exchange concept.",
+    "source": "seed"
+  },
+  {
     "id": "m-motives-for-european-colonization-oh",
     "conceptId": "c-motives-for-european-colonization",
     "key": "OH:social_studies:8.SS.2",
@@ -637,6 +685,182 @@
     "key": "GA:social_studies:SS8H1b",
     "confidence": "strong",
     "rationale": "Cross-content (GA grade 8, Georgia angle). Ohio: North America, inhabited by American Indians, was explored and colonized by Europeans for economic and religious reasons. Georgia SS8H1b: explain reasons for European exploration and settlement of North America, emphasizing Spanish and British interests in the Southeast.",
+    "source": "seed"
+  },
+  {
+    "id": "m-declaration-of-independence-1776-oh",
+    "conceptId": "c-declaration-of-independence-1776",
+    "key": "OH:social_studies:8.SS.5",
+    "confidence": "strong",
+    "rationale": "Cross-content (GA grade 8). Ohio: colonists wrote the Declaration of Independence. Georgia SS8H3b: interpret the three parts of the Declaration of Independence and identify the three Georgia signers.",
+    "source": "seed"
+  },
+  {
+    "id": "m-declaration-of-independence-1776-ga",
+    "conceptId": "c-declaration-of-independence-1776",
+    "key": "GA:social_studies:SS8H3b",
+    "confidence": "strong",
+    "rationale": "Cross-content (GA grade 8). Ohio: colonists wrote the Declaration of Independence. Georgia SS8H3b: interpret the three parts of the Declaration of Independence and identify the three Georgia signers.",
+    "source": "seed"
+  },
+  {
+    "id": "m-declaration-of-independence-1776-2-oh",
+    "conceptId": "c-declaration-of-independence-1776-2",
+    "key": "OH:social_studies:8.SS.5",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 4). Ohio: Enlightenment ideas and dissatisfaction with colonial rule led to the Declaration of Independence. Georgia SS4H1d: explain the writing of the Declaration of Independence as a response to tyranny and the abuse of power.",
+    "source": "seed"
+  },
+  {
+    "id": "m-declaration-of-independence-1776-2-ga",
+    "conceptId": "c-declaration-of-independence-1776-2",
+    "key": "GA:social_studies:SS4H1d",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 4). Ohio: Enlightenment ideas and dissatisfaction with colonial rule led to the Declaration of Independence. Georgia SS4H1d: explain the writing of the Declaration of Independence as a response to tyranny and the abuse of power.",
+    "source": "seed"
+  },
+  {
+    "id": "m-articles-of-confederation-weaknesses-oh",
+    "conceptId": "c-articles-of-confederation-weaknesses",
+    "key": "OH:social_studies:8.SS.8",
+    "confidence": "strong",
+    "rationale": "Cross-content (GA grade 8). Ohio: problems under the Articles of Confederation led to debate over adopting the U.S. Constitution. Georgia SS8H3d: analyze the weaknesses of the Articles of Confederation and explain how they led to writing a new federal Constitution.",
+    "source": "seed"
+  },
+  {
+    "id": "m-articles-of-confederation-weaknesses-ga",
+    "conceptId": "c-articles-of-confederation-weaknesses",
+    "key": "GA:social_studies:SS8H3d",
+    "confidence": "strong",
+    "rationale": "Cross-content (GA grade 8). Ohio: problems under the Articles of Confederation led to debate over adopting the U.S. Constitution. Georgia SS8H3d: analyze the weaknesses of the Articles of Confederation and explain how they led to writing a new federal Constitution.",
+    "source": "seed"
+  },
+  {
+    "id": "m-causes-of-the-american-civil-war-oh",
+    "conceptId": "c-causes-of-the-american-civil-war",
+    "key": "OH:social_studies:8.SS.12",
+    "confidence": "strong",
+    "rationale": "Cross-content (GA grade 8). Ohio: disputes over federalism and sectional issues including slavery led to the Civil War. Georgia SS8H5a: explain key issues and events that led to the Civil War, including slavery, states' rights, nullification, the Compromise of 1850, Dred Scott, and secession.",
+    "source": "seed"
+  },
+  {
+    "id": "m-causes-of-the-american-civil-war-ga",
+    "conceptId": "c-causes-of-the-american-civil-war",
+    "key": "GA:social_studies:SS8H5a",
+    "confidence": "strong",
+    "rationale": "Cross-content (GA grade 8). Ohio: disputes over federalism and sectional issues including slavery led to the Civil War. Georgia SS8H5a: explain key issues and events that led to the Civil War, including slavery, states' rights, nullification, the Compromise of 1850, Dred Scott, and secession.",
+    "source": "seed"
+  },
+  {
+    "id": "m-causes-of-the-american-civil-war-2-oh",
+    "conceptId": "c-causes-of-the-american-civil-war-2",
+    "key": "OH:social_studies:8.SS.12",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade 4). Ohio: sectional issues including slavery led to the Civil War. Georgia SS4H5b: discuss how the issues of states' rights and slavery increased tensions between the North and South.",
+    "source": "seed"
+  },
+  {
+    "id": "m-causes-of-the-american-civil-war-2-ga",
+    "conceptId": "c-causes-of-the-american-civil-war-2",
+    "key": "GA:social_studies:SS4H5b",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade 4). Ohio: sectional issues including slavery led to the Civil War. Georgia SS4H5b: discuss how the issues of states' rights and slavery increased tensions between the North and South.",
+    "source": "seed"
+  },
+  {
+    "id": "m-civic-participation-and-responsibility-oh",
+    "conceptId": "c-civic-participation-and-responsibility",
+    "key": "OH:social_studies:8.SS.20",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 5). Ohio: active participation in social and civic groups can lead to individual and public goals. Georgia SS5CG1a: explain the responsibilities of a citizen.",
+    "source": "seed"
+  },
+  {
+    "id": "m-civic-participation-and-responsibility-ga",
+    "conceptId": "c-civic-participation-and-responsibility",
+    "key": "GA:social_studies:SS5CG1a",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 5). Ohio: active participation in social and civic groups can lead to individual and public goals. Georgia SS5CG1a: explain the responsibilities of a citizen.",
+    "source": "seed"
+  },
+  {
+    "id": "m-separation-of-powers-and-checks-oh",
+    "conceptId": "c-separation-of-powers-and-checks",
+    "key": "OH:social_studies:8.SS.22",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade 4). Ohio: the Constitution established separation of powers and checks and balances. Georgia SS4CG3a: describe how the three branches of government interact through checks and balances and separation of powers.",
+    "source": "seed"
+  },
+  {
+    "id": "m-separation-of-powers-and-checks-ga",
+    "conceptId": "c-separation-of-powers-and-checks",
+    "key": "GA:social_studies:SS4CG3a",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade 4). Ohio: the Constitution established separation of powers and checks and balances. Georgia SS4CG3a: describe how the three branches of government interact through checks and balances and separation of powers.",
+    "source": "seed"
+  },
+  {
+    "id": "m-federalism-national-and-state-powers-oh",
+    "conceptId": "c-federalism-national-and-state-powers",
+    "key": "OH:social_studies:8.SS.22",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 4). Ohio: the Constitution framed a national government within a federal system. Georgia SS4CG1c: the federal system of government in the U.S. (federal powers, state powers, and shared powers).",
+    "source": "seed"
+  },
+  {
+    "id": "m-federalism-national-and-state-powers-ga",
+    "conceptId": "c-federalism-national-and-state-powers",
+    "key": "GA:social_studies:SS4CG1c",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 4). Ohio: the Constitution framed a national government within a federal system. Georgia SS4CG1c: the federal system of government in the U.S. (federal powers, state powers, and shared powers).",
+    "source": "seed"
+  },
+  {
+    "id": "m-us-bill-of-rights-limits-government-oh",
+    "conceptId": "c-us-bill-of-rights-limits-government",
+    "key": "OH:social_studies:8.SS.23",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade 4). Ohio: the Constitution protects citizens' rights by limiting the powers of government. Georgia SS4CG3b: identify the rights in the Bill of Rights and describe how it places limits on the powers of government.",
+    "source": "seed"
+  },
+  {
+    "id": "m-us-bill-of-rights-limits-government-ga",
+    "conceptId": "c-us-bill-of-rights-limits-government",
+    "key": "GA:social_studies:SS4CG3b",
+    "confidence": "strong",
+    "rationale": "Cross-grade (GA grade 4). Ohio: the Constitution protects citizens' rights by limiting the powers of government. Georgia SS4CG3b: identify the rights in the Bill of Rights and describe how it places limits on the powers of government.",
+    "source": "seed"
+  },
+  {
+    "id": "m-first-amendment-freedoms-2-oh",
+    "conceptId": "c-first-amendment-freedoms-2",
+    "key": "OH:social_studies:8.SS.23",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 4). Ohio: the Constitution protects citizens' rights. Georgia SS4CG2: explain the importance of freedoms guaranteed by the First Amendment.",
+    "source": "seed"
+  },
+  {
+    "id": "m-first-amendment-freedoms-2-ga",
+    "conceptId": "c-first-amendment-freedoms-2",
+    "key": "GA:social_studies:SS4CG2",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 4). Ohio: the Constitution protects citizens' rights. Georgia SS4CG2: explain the importance of freedoms guaranteed by the First Amendment.",
+    "source": "seed"
+  },
+  {
+    "id": "m-taxation-and-public-goods-oh",
+    "conceptId": "c-taxation-and-public-goods",
+    "key": "OH:social_studies:8.SS.26",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 5). Ohio: governments impact markets through spending and taxes. Georgia SS5E2d: describe the government function in taxation and providing public goods and services.",
+    "source": "seed"
+  },
+  {
+    "id": "m-taxation-and-public-goods-ga",
+    "conceptId": "c-taxation-and-public-goods",
+    "key": "GA:social_studies:SS5E2d",
+    "confidence": "moderate",
+    "rationale": "Cross-grade (GA grade 5). Ohio: governments impact markets through spending and taxes. Georgia SS5E2d: describe the government function in taxation and providing public goods and services.",
     "source": "seed"
   },
   {
@@ -654,5 +878,2021 @@
     "confidence": "moderate",
     "rationale": "Cross-grade (GA grade 6). Ohio: governments impact markets through trade barriers. Georgia SS6E2b: compare and contrast different types of trade barriers, such as tariffs, quotas, and embargos.",
     "source": "seed"
+  },
+  {
+    "id": "m-tx-social-studies-k-2-individual-actions-shape-history",
+    "conceptId": "c-individual-actions-shape-history",
+    "key": "TX:social_studies:K.2",
+    "confidence": "strong",
+    "rationale": "Asks students to identify the contributions of named historical figures who helped shape the state and nation, which is exactly the concept's test of studying individuals' contributions to see how their actions shaped the present world.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-4b-geography-shapes-economic-activity",
+    "conceptId": "c-geography-shapes-economic-activity",
+    "key": "TX:social_studies:K.4B",
+    "confidence": "moderate",
+    "rationale": "Asks students to identify how geographic location influences shelter, clothing, food, and activities, satisfying the 'how they live there' half of the test; cross-grade (concept is 3-5, standard is K) and it does not reach the 'work people do' half.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-7a-the-need-for-rules-and-laws",
+    "conceptId": "c-the-need-for-rules-and-laws",
+    "key": "TX:social_studies:K.7A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify purposes for having rules, which is the concept's test of explaining why groups need rules at all rather than the content of any rule.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-7b-the-need-for-rules-and-laws",
+    "conceptId": "c-the-need-for-rules-and-laws",
+    "key": "TX:social_studies:K.7B",
+    "confidence": "moderate",
+    "rationale": "Identifies rules that provide order, security, and safety, which states what rules accomplish and thus why they are needed, though it stays at the home/school level rather than the community level.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-12c-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:K.12C",
+    "confidence": "moderate",
+    "rationale": "Asks students to describe how their life might be different without modern technology, which is the concept's test of explaining how technological advances changed how people live, approached counterfactually.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-2a-individual-actions-shape-history",
+    "conceptId": "c-individual-actions-shape-history",
+    "key": "TX:social_studies:1.2A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify contributions of named historical figures who influenced the state and nation, directly satisfying the concept's membership test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-2b-individual-actions-shape-history",
+    "conceptId": "c-individual-actions-shape-history",
+    "key": "TX:social_studies:1.2B",
+    "confidence": "moderate",
+    "rationale": "Asks students to compare the lives of historical figures who influenced the state and nation, which is the 'study the lives of specific historical figures' half of the test; the comparison framing is an added demand the concept does not name.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-5b-geography-shapes-economic-activity",
+    "conceptId": "c-geography-shapes-economic-activity",
+    "key": "TX:social_studies:1.5B",
+    "confidence": "moderate",
+    "rationale": "Asks students to identify and describe how geographic location influences shelter, clothing, food, and activities, satisfying the 'how they live there' half of the test; cross-grade (concept is 3-5, standard is grade 1).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-7c-markets-exchange-goods-and-services",
+    "conceptId": "c-markets-exchange-goods-and-services",
+    "key": "TX:social_studies:1.7C",
+    "confidence": "moderate",
+    "rationale": "Asks students to identify the role of markets in the exchange of goods and services, which is the concept's test of explaining how goods and services move between buyers and sellers; cross-grade (concept is 3-5, standard is grade 1) and it does not reach the role of price.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-8b-scarcity-choice-and-opportunity-cost",
+    "conceptId": "c-scarcity-choice-and-opportunity-cost",
+    "key": "TX:social_studies:1.8B",
+    "confidence": "moderate",
+    "rationale": "Asks students to explain why wanting more than they can have requires that people make choices, which is the 'limited resources force people to choose' half of the test; it does not reach the opportunity-cost half.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-9b-goods-and-services-people-produce",
+    "conceptId": "c-goods-and-services-people-produce",
+    "key": "TX:social_studies:1.9B",
+    "confidence": "strong",
+    "rationale": "Asks students to describe how various jobs contribute to the production of goods and services, which is the concept's test that people work at jobs to make goods or provide services.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-10a-the-need-for-rules-and-laws",
+    "conceptId": "c-the-need-for-rules-and-laws",
+    "key": "TX:social_studies:1.10A",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the purpose for rules and laws in the home, school, and community, which is the concept's test of explaining why groups and communities need rules and laws at all.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-10b-purposes-laws-serve-in-a-community",
+    "conceptId": "c-purposes-laws-serve-in-a-community",
+    "key": "TX:social_studies:1.10B",
+    "confidence": "moderate",
+    "rationale": "Identifies rules and laws that establish order, provide security, and manage conflict, naming what laws accomplish rather than merely that they exist — the concept's stated test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-15a-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:1.15A",
+    "confidence": "strong",
+    "rationale": "Asks students to describe how technology has affected the ways families live, which is the concept's test of explaining how technological advances changed how people live.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-15b-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:1.15B",
+    "confidence": "strong",
+    "rationale": "Asks students to describe how technology has affected communication, transportation, and recreation — technological advances and their effect on how people live.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-15c-individual-actions-shape-history",
+    "conceptId": "c-individual-actions-shape-history",
+    "key": "TX:social_studies:1.15C",
+    "confidence": "moderate",
+    "rationale": "Asks students to identify the contributions of named scientists and inventors, which satisfies the concept's test of studying specific individuals' contributions to the world people live in now; the standard does not itself state the 'shaped the world' inference.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-2a-individual-actions-shape-history",
+    "conceptId": "c-individual-actions-shape-history",
+    "key": "TX:social_studies:2.2A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify contributions of named historical figures who influenced the state and nation, directly satisfying the concept's membership test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-2b-individual-actions-shape-history",
+    "conceptId": "c-individual-actions-shape-history",
+    "key": "TX:social_studies:2.2B",
+    "confidence": "moderate",
+    "rationale": "Asks students to describe how people have influenced local community history, which is the concept's test at community scale; the standard also covers events, which the concept does not.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-6a-people-earn-income-by-working",
+    "conceptId": "c-people-earn-income-by-working",
+    "key": "TX:social_studies:2.6A",
+    "confidence": "strong",
+    "rationale": "Asks students to explain how work provides income, which is precisely the concept's test that people earn income by working. Note the concept has an unresolved duplicate (c-people-earn-income-by-working-2); attached to the primary only.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-6b-personal-budgeting-and-saving",
+    "conceptId": "c-personal-budgeting-and-saving",
+    "key": "TX:social_studies:2.6B",
+    "confidence": "partial",
+    "rationale": "Asks students to explain the choices people can make about earning, spending, and saving money, which touches the concept's saving-versus-spending test but does not ask why saving affects financial well-being or name the parts of a budget; cross-grade (concept is 3-5, standard is grade 2).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-7a-roles-of-producer-and-consumer",
+    "conceptId": "c-roles-of-producer-and-consumer",
+    "key": "TX:social_studies:2.7A",
+    "confidence": "strong",
+    "rationale": "Asks students to distinguish between producing and consuming, which is the concept's test of distinguishing the producer role from the consumer role.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-7b-roles-of-producer-and-consumer",
+    "conceptId": "c-roles-of-producer-and-consumer",
+    "key": "TX:social_studies:2.7B",
+    "confidence": "strong",
+    "rationale": "Asks students to identify ways in which people are both producers and consumers, which is the concept's explicit 'one person can occupy both roles' clause.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-8a-purposes-laws-serve-in-a-community",
+    "conceptId": "c-purposes-laws-serve-in-a-community",
+    "key": "TX:social_studies:2.8A",
+    "confidence": "moderate",
+    "rationale": "Asks students to identify functions of government such as establishing order, providing security, and managing conflict — the order-and-security purposes the concept enumerates, though the standard frames them as functions of government rather than of laws.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-8b-purposes-laws-serve-in-a-community",
+    "conceptId": "c-purposes-laws-serve-in-a-community",
+    "key": "TX:social_studies:2.8B",
+    "confidence": "moderate",
+    "rationale": "Asks students to identify governmental services in the community and explain their value, which is the 'public services' purpose the concept enumerates; framed as government services rather than as what laws accomplish.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-12a-cultural-diversity-in-communities",
+    "conceptId": "c-cultural-diversity-in-communities",
+    "key": "TX:social_studies:2.12A",
+    "confidence": "moderate",
+    "rationale": "Asks students to identify the significance of various ethnic and cultural celebrations, which is the concept's test that communities contain distinct cultural groups known by their customs and celebrations.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-12b-cultural-diversity-in-communities",
+    "conceptId": "c-cultural-diversity-in-communities",
+    "key": "TX:social_studies:2.12B",
+    "confidence": "moderate",
+    "rationale": "Asks students to compare ethnic and cultural celebrations, which requires recognizing multiple distinct cultural groups and the celebrations that distinguish them.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-13a-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:2.13A",
+    "confidence": "strong",
+    "rationale": "Asks students to describe how science and technology have affected communication, transportation, and recreation — technological advances and their effect on how people live.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-13b-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:2.13B",
+    "confidence": "moderate",
+    "rationale": "Asks students to explain how science and technology have affected the ways people meet basic needs, which is a change in how people live brought about by technology.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-14-individual-actions-shape-history",
+    "conceptId": "c-individual-actions-shape-history",
+    "key": "TX:social_studies:2.14",
+    "confidence": "partial",
+    "rationale": "Asks students to identify named individuals for their inventiveness, which overlaps the concept's test of studying specific individuals' contributions, but the standard's demand is a character framing (individualism and inventiveness) rather than how their actions shaped the present world.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-3a-describing-relative-location",
+    "conceptId": "c-describing-relative-location",
+    "key": "TX:social_studies:K.3A",
+    "confidence": "strong",
+    "rationale": "Asks students to use spatial terms including over, under, near, far, left, and right to describe relative location.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-3b-describing-relative-location",
+    "conceptId": "c-describing-relative-location",
+    "key": "TX:social_studies:K.3B",
+    "confidence": "strong",
+    "rationale": "Asks students to locate places on the school campus and describe their relative locations.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-3a-describing-relative-location",
+    "conceptId": "c-describing-relative-location",
+    "key": "TX:social_studies:1.3A",
+    "confidence": "strong",
+    "rationale": "Asks students to describe the location of self and objects relative to other locations using spatial terms.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-3b-describing-relative-location",
+    "conceptId": "c-describing-relative-location",
+    "key": "TX:social_studies:1.3B",
+    "confidence": "moderate",
+    "rationale": "Asks students to locate places using the four cardinal directions, which is directional language used to fix location relative to a reference.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-3c-using-maps-and-globes-to-locate-places",
+    "conceptId": "c-using-maps-and-globes-to-locate-places",
+    "key": "TX:social_studies:K.3C",
+    "confidence": "strong",
+    "rationale": "Asks students to identify and use geographic tools that aid in determining location, including maps and globes.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-4a-using-maps-and-globes-to-locate-places",
+    "conceptId": "c-using-maps-and-globes-to-locate-places",
+    "key": "TX:social_studies:1.4A",
+    "confidence": "strong",
+    "rationale": "Asks students to create and use simple maps of the home, classroom, school, and community.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-4b-using-maps-and-globes-to-locate-places",
+    "conceptId": "c-using-maps-and-globes-to-locate-places",
+    "key": "TX:social_studies:1.4B",
+    "confidence": "strong",
+    "rationale": "Asks students to locate the community, state, and nation on maps and globes.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-3a-using-maps-and-globes-to-locate-places",
+    "conceptId": "c-using-maps-and-globes-to-locate-places",
+    "key": "TX:social_studies:2.3A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify and use information on maps and globes using basic map elements such as title, cardinal directions, and legend.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-3b-using-maps-and-globes-to-locate-places",
+    "conceptId": "c-using-maps-and-globes-to-locate-places",
+    "key": "TX:social_studies:2.3B",
+    "confidence": "strong",
+    "rationale": "Asks students to create maps showing places and routes within the home, school, and community.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-4a-using-maps-and-globes-to-locate-places",
+    "conceptId": "c-using-maps-and-globes-to-locate-places",
+    "key": "TX:social_studies:2.4A",
+    "confidence": "moderate",
+    "rationale": "Asks students to identify major landforms, bodies of water, continents, and oceans on maps and globes — using the tool to locate places.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-4b-using-maps-and-globes-to-locate-places",
+    "conceptId": "c-using-maps-and-globes-to-locate-places",
+    "key": "TX:social_studies:2.4B",
+    "confidence": "strong",
+    "rationale": "Asks students to locate the local community, state, nation, capitals, and bordering countries on maps and globes.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-4a-physical-characteristics-of-places",
+    "conceptId": "c-physical-characteristics-of-places",
+    "key": "TX:social_studies:K.4A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify the physical characteristics of place such as landforms, bodies of water, Earth's resources, and weather.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-5a-physical-characteristics-of-places",
+    "conceptId": "c-physical-characteristics-of-places",
+    "key": "TX:social_studies:1.5A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify and describe the physical characteristics of place such as landforms, bodies of water, Earth's resources, and weather.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-5a-identifying-basic-human-needs-and-wants",
+    "conceptId": "c-identifying-basic-human-needs-and-wants",
+    "key": "TX:social_studies:K.5A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify basic human needs of food, clothing, and shelter.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-5b-identifying-basic-human-needs-and-wants",
+    "conceptId": "c-identifying-basic-human-needs-and-wants",
+    "key": "TX:social_studies:K.5B",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the difference between needs and wants.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-5c-how-people-meet-basic-needs",
+    "conceptId": "c-how-people-meet-basic-needs",
+    "key": "TX:social_studies:K.5C",
+    "confidence": "strong",
+    "rationale": "Asks students to explain how basic human needs and wants can be met.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-6a-how-people-meet-basic-needs",
+    "conceptId": "c-how-people-meet-basic-needs",
+    "key": "TX:social_studies:1.6A",
+    "confidence": "strong",
+    "rationale": "Asks students to describe ways that families meet basic human needs.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-6b-how-people-meet-basic-needs",
+    "conceptId": "c-how-people-meet-basic-needs",
+    "key": "TX:social_studies:1.6B",
+    "confidence": "moderate",
+    "rationale": "Asks students to describe similarities and differences in ways families meet basic human needs — the same test with an added comparison demand.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-8a-authority-figures-and-their-roles",
+    "conceptId": "c-authority-figures-and-their-roles",
+    "key": "TX:social_studies:K.8A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify authority figures in the home, school, and community.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-8b-authority-figures-and-their-roles",
+    "conceptId": "c-authority-figures-and-their-roles",
+    "key": "TX:social_studies:K.8B",
+    "confidence": "moderate",
+    "rationale": "Asks students to explain how authority figures enforce rules — enforcement is the role such figures carry out.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-11a-authority-figures-and-their-roles",
+    "conceptId": "c-authority-figures-and-their-roles",
+    "key": "TX:social_studies:1.11A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify the responsibilities of authority figures in the home, school, and community.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-11b-authority-figures-and-their-roles",
+    "conceptId": "c-authority-figures-and-their-roles",
+    "key": "TX:social_studies:1.11B",
+    "confidence": "strong",
+    "rationale": "Asks students to identify and describe the roles of public officials in the community, state, and nation.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-9a-authority-figures-and-their-roles",
+    "conceptId": "c-authority-figures-and-their-roles",
+    "key": "TX:social_studies:2.9A",
+    "confidence": "moderate",
+    "rationale": "Asks students to name current public officials including mayor, governor, and president — the identification half of the test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-9b-authority-figures-and-their-roles",
+    "conceptId": "c-authority-figures-and-their-roles",
+    "key": "TX:social_studies:2.9B",
+    "confidence": "strong",
+    "rationale": "Asks students to compare the roles of public officials including mayor, governor, and president.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-9c-voting-as-a-way-groups-make-decisions",
+    "conceptId": "c-voting-as-a-way-groups-make-decisions",
+    "key": "TX:social_studies:K.9C",
+    "confidence": "strong",
+    "rationale": "Asks students to use voting as a method for group decision making.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-15a-voting-as-a-way-groups-make-decisions",
+    "conceptId": "c-voting-as-a-way-groups-make-decisions",
+    "key": "TX:social_studies:K.15A",
+    "confidence": "strong",
+    "rationale": "Asks students to use democratic procedures to collaborate with others when making decisions on classroom, school, or community issues.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-13d-voting-as-a-way-groups-make-decisions",
+    "conceptId": "c-voting-as-a-way-groups-make-decisions",
+    "key": "TX:social_studies:1.13D",
+    "confidence": "strong",
+    "rationale": "Asks students to explain and practice voting as a way of making choices and decisions.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-18a-voting-as-a-way-groups-make-decisions",
+    "conceptId": "c-voting-as-a-way-groups-make-decisions",
+    "key": "TX:social_studies:1.18A",
+    "confidence": "strong",
+    "rationale": "Asks students to use democratic procedures to collaborate with others when making decisions on classroom, school, or community issues.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-9c-voting-as-a-way-groups-make-decisions",
+    "conceptId": "c-voting-as-a-way-groups-make-decisions",
+    "key": "TX:social_studies:2.9C",
+    "confidence": "partial",
+    "rationale": "Asks students to identify ways public officials are selected, including election — voting used to select a leader — but it also covers appointment, which the concept does not address.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-11c-voting-as-a-way-groups-make-decisions",
+    "conceptId": "c-voting-as-a-way-groups-make-decisions",
+    "key": "TX:social_studies:2.11C",
+    "confidence": "strong",
+    "rationale": "Asks students to use voting as a method for group decision making.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-17a-voting-as-a-way-groups-make-decisions",
+    "conceptId": "c-voting-as-a-way-groups-make-decisions",
+    "key": "TX:social_studies:2.17A",
+    "confidence": "strong",
+    "rationale": "Asks students to use democratic procedures to collaborate with others when making decisions on classroom, school, or community issues.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-11a-family-and-community-traditions",
+    "conceptId": "c-family-and-community-traditions",
+    "key": "TX:social_studies:K.11A",
+    "confidence": "strong",
+    "rationale": "Asks students to describe and explain the importance of family traditions.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-11b-family-and-community-traditions",
+    "conceptId": "c-family-and-community-traditions",
+    "key": "TX:social_studies:K.11B",
+    "confidence": "moderate",
+    "rationale": "Asks students to compare traditions among families, which requires describing family traditions; the comparison demand extends past the concept's wording.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-14a-family-and-community-traditions",
+    "conceptId": "c-family-and-community-traditions",
+    "key": "TX:social_studies:1.14A",
+    "confidence": "strong",
+    "rationale": "Asks students to describe and explain the importance of beliefs, language, and traditions of families and communities.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-12a-characteristics-of-good-citizenship",
+    "conceptId": "c-characteristics-of-good-citizenship",
+    "key": "TX:social_studies:1.12A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify characteristics of good citizenship including truthfulness, justice, equality, respect, responsibility, and participation in government.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-12b-characteristics-of-good-citizenship",
+    "conceptId": "c-characteristics-of-good-citizenship",
+    "key": "TX:social_studies:1.12B",
+    "confidence": "partial",
+    "rationale": "Asks students to identify individuals who have exemplified good citizenship, which is the exemplar clause of the test rather than the traits themselves.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-9d-characteristics-of-good-citizenship",
+    "conceptId": "c-characteristics-of-good-citizenship",
+    "key": "TX:social_studies:2.9D",
+    "confidence": "moderate",
+    "rationale": "Asks students to identify how citizens participate in their own governance by staying informed, providing input, and volunteering — the civic-participation actions the concept names.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-10a-characteristics-of-good-citizenship",
+    "conceptId": "c-characteristics-of-good-citizenship",
+    "key": "TX:social_studies:2.10A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify characteristics of good citizenship including truthfulness, justice, equality, respect, responsibility, and participation in government.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-10b-characteristics-of-good-citizenship",
+    "conceptId": "c-characteristics-of-good-citizenship",
+    "key": "TX:social_studies:2.10B",
+    "confidence": "partial",
+    "rationale": "Asks students to identify individuals who have exemplified good citizenship, which is the exemplar clause of the test rather than the traits themselves.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-10c-characteristics-of-good-citizenship",
+    "conceptId": "c-characteristics-of-good-citizenship",
+    "key": "TX:social_studies:2.10C",
+    "confidence": "strong",
+    "rationale": "Asks students to identify ways to actively practice good citizenship, including involvement in community service.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-13b-sources-and-artifacts-of-the-past",
+    "conceptId": "c-sources-and-artifacts-of-the-past",
+    "key": "TX:social_studies:K.13B",
+    "confidence": "strong",
+    "rationale": "Asks students to identify different kinds of historical sources and artifacts and explain how they can be used to study the past.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-16b-sources-and-artifacts-of-the-past",
+    "conceptId": "c-sources-and-artifacts-of-the-past",
+    "key": "TX:social_studies:1.16B",
+    "confidence": "strong",
+    "rationale": "Asks students to identify different kinds of historical sources and artifacts and explain how they can be used to study the past.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-15b-sources-and-artifacts-of-the-past",
+    "conceptId": "c-sources-and-artifacts-of-the-past",
+    "key": "TX:social_studies:2.15B",
+    "confidence": "strong",
+    "rationale": "Asks students to identify different kinds of historical sources and artifacts and explain how they can be used to study the past.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-14a-sequencing-events-and-measuring-time",
+    "conceptId": "c-sequencing-events-and-measuring-time",
+    "key": "TX:social_studies:K.14A",
+    "confidence": "strong",
+    "rationale": "Asks students to place events in chronological order.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-k-14b-sequencing-events-and-measuring-time",
+    "conceptId": "c-sequencing-events-and-measuring-time",
+    "key": "TX:social_studies:K.14B",
+    "confidence": "strong",
+    "rationale": "Asks students to use time and chronology terminology including before, after, next, first, last, yesterday, today, and tomorrow.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-17a-sequencing-events-and-measuring-time",
+    "conceptId": "c-sequencing-events-and-measuring-time",
+    "key": "TX:social_studies:1.17A",
+    "confidence": "strong",
+    "rationale": "Asks students to use a simple timeline to distinguish among past, present, and future.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-1-17b-sequencing-events-and-measuring-time",
+    "conceptId": "c-sequencing-events-and-measuring-time",
+    "key": "TX:social_studies:1.17B",
+    "confidence": "moderate",
+    "rationale": "Asks students to use a calendar to describe and measure time in days, weeks, months, and years — a tool for describing when things happen.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-16a-sequencing-events-and-measuring-time",
+    "conceptId": "c-sequencing-events-and-measuring-time",
+    "key": "TX:social_studies:2.16A",
+    "confidence": "strong",
+    "rationale": "Asks students to describe the order of events using designations of time periods such as historical and present times.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-16b-sequencing-events-and-measuring-time",
+    "conceptId": "c-sequencing-events-and-measuring-time",
+    "key": "TX:social_studies:2.16B",
+    "confidence": "strong",
+    "rationale": "Asks students to apply vocabulary related to chronology including past, present, and future.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-16c-sequencing-events-and-measuring-time",
+    "conceptId": "c-sequencing-events-and-measuring-time",
+    "key": "TX:social_studies:2.16C",
+    "confidence": "strong",
+    "rationale": "Asks students to create and interpret timelines for events in the past and present.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-5a-humans-modify-physical-environment",
+    "conceptId": "c-humans-modify-physical-environment",
+    "key": "TX:social_studies:2.5A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify ways in which people have modified the physical environment such as clearing land, building roads, farming, and drilling for oil.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-2-5b-humans-modify-physical-environment",
+    "conceptId": "c-humans-modify-physical-environment",
+    "key": "TX:social_studies:2.5B",
+    "confidence": "strong",
+    "rationale": "Asks students to identify consequences of human modification of the physical environment.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-1a-individual-actions-shape-history",
+    "conceptId": "c-individual-actions-shape-history",
+    "key": "TX:social_studies:3.1A",
+    "confidence": "moderate",
+    "rationale": "Asks students to describe how individuals have changed communities past and present, which is the concept's claim that individual actions shaped the world people live in now; cross-grade (K-2 concept, TX G3), and only the 'individuals' strand of this bundled standard attaches.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-1b-individual-actions-shape-history",
+    "conceptId": "c-individual-actions-shape-history",
+    "key": "TX:social_studies:3.1B",
+    "confidence": "strong",
+    "rationale": "Asks students to identify named historical figures who helped shape communities, exactly the concept's test of studying specific figures' contributions; cross-grade (K-2 concept, TX G3).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-1c-individual-actions-shape-history",
+    "conceptId": "c-individual-actions-shape-history",
+    "key": "TX:social_studies:3.1C",
+    "confidence": "strong",
+    "rationale": "Asks students to describe how named individuals contributed to the expansion and creation of communities, satisfying the concept's test that individual actions shaped the world people live in now; cross-grade (K-2 concept, TX G3).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-5a-personal-budgeting-and-saving",
+    "conceptId": "c-personal-budgeting-and-saving",
+    "key": "TX:social_studies:3.5A",
+    "confidence": "partial",
+    "rationale": "Identifies ways of earning, spending, saving, and donating money, which names the components of personal finance but stops short of the concept's test of laying out a budget or explaining why saving over spending matters.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-5b-personal-budgeting-and-saving",
+    "conceptId": "c-personal-budgeting-and-saving",
+    "key": "TX:social_studies:3.5B",
+    "confidence": "strong",
+    "rationale": "Asks students to create a budget allocating money for spending and saving, which is directly the concept's test of identifying the parts of a personal budget.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-6b-scarcity-choice-and-opportunity-cost",
+    "conceptId": "c-scarcity-choice-and-opportunity-cost",
+    "key": "TX:social_studies:3.6B",
+    "confidence": "partial",
+    "rationale": "Defines and exemplifies scarcity, the limited-resources half of the concept's test, but never reaches the forced choice or the alternative given up; attached to the K-5 duplicate only, not its merge twin.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-8a-declaration-of-independence-ideals",
+    "conceptId": "c-declaration-of-independence-ideals",
+    "key": "TX:social_studies:3.8A",
+    "confidence": "moderate",
+    "rationale": "Asks students to identify the purposes of the Declaration of Independence, which is the 'purpose' clause of the concept's test, though the standard bundles the Constitution and Bill of Rights alongside it.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-8a-bill-of-rights-limits-government",
+    "conceptId": "c-bill-of-rights-limits-government",
+    "key": "TX:social_studies:3.8A",
+    "confidence": "partial",
+    "rationale": "Asks for the purpose of the Bill of Rights, which gestures at why such limits were written into a constitution, but the standard never states that the document constrains government.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-8b-declaration-of-independence-ideals",
+    "conceptId": "c-declaration-of-independence-ideals",
+    "key": "TX:social_studies:3.8B",
+    "confidence": "partial",
+    "rationale": "'Consent of the governed' is a founding ideal of a declaration of independence and sits under a stem about ideas in historical documents, but the standard does not tie the ideal to the document itself.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-13c-declaration-of-independence-ideals",
+    "conceptId": "c-declaration-of-independence-ideals",
+    "key": "TX:social_studies:4.13C",
+    "confidence": "moderate",
+    "rationale": "Asks students to identify the intent, meaning, and importance of the Declaration of Independence, which is the concept's purpose-and-ideals test; the standard bundles two other documents alongside it. Cross-grade context: TX G4 is Texas history but this element is US founding content.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-13c-bill-of-rights-limits-government",
+    "conceptId": "c-bill-of-rights-limits-government",
+    "key": "TX:social_studies:4.13C",
+    "confidence": "partial",
+    "rationale": "Asks for the intent and importance of the Bill of Rights, approaching the concept's 'why such limits were written' clause, but never states that the document constrains government power.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-14a-declaration-of-independence-ideals",
+    "conceptId": "c-declaration-of-independence-ideals",
+    "key": "TX:social_studies:5.14A",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the purposes, key elements, and importance of the Declaration of Independence, which is squarely the concept's membership test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-14c-bill-of-rights-limits-government",
+    "conceptId": "c-bill-of-rights-limits-government",
+    "key": "TX:social_studies:5.14C",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the reasons for the creation of the Bill of Rights and its importance, which is the concept's test of why limits on government were written into a constitution.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-19-first-amendment-freedoms",
+    "conceptId": "c-first-amendment-freedoms",
+    "key": "TX:social_studies:5.19",
+    "confidence": "moderate",
+    "rationale": "Enumerates freedom of religion, speech, press, assembly, and petition and asks students to describe them, satisfying the concept's test of identifying First Amendment freedoms; the standard also carries non-First-Amendment rights that have no home here.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-9a-citizens-rights-and-responsibilities",
+    "conceptId": "c-citizens-rights-and-responsibilities",
+    "key": "TX:social_studies:3.9A",
+    "confidence": "partial",
+    "rationale": "Lists the duties of good citizenship including participation in government and voting, which is the duties half of the concept's test; the standard never addresses the rights citizens hold.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-9c-citizens-rights-and-responsibilities",
+    "conceptId": "c-citizens-rights-and-responsibilities",
+    "key": "TX:social_studies:3.9C",
+    "confidence": "moderate",
+    "rationale": "Asks students to identify and describe individual acts of civic responsibility — obeying laws, jury service, voting — which is the concept's test of the duties citizens owe as members of a community.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-15b-citizens-rights-and-responsibilities",
+    "conceptId": "c-citizens-rights-and-responsibilities",
+    "key": "TX:social_studies:4.15B",
+    "confidence": "partial",
+    "rationale": "Explains how individuals participate voluntarily in civic affairs, which enumerates civic duties but frames them as optional participation rather than duties owed, and omits rights entirely.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-15c-citizens-rights-and-responsibilities",
+    "conceptId": "c-citizens-rights-and-responsibilities",
+    "key": "TX:social_studies:4.15C",
+    "confidence": "moderate",
+    "rationale": "Explicitly asks students to explain the duty of the individual in elections, which is the duties clause of the concept's test; cross-grade content-wise this is generic civics inside TX's Texas-history year.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-17a-citizens-rights-and-responsibilities",
+    "conceptId": "c-citizens-rights-and-responsibilities",
+    "key": "TX:social_studies:5.17A",
+    "confidence": "moderate",
+    "rationale": "Asks students to explain why individuals have a duty to participate in civic affairs, which is the concept's test of the duties citizens owe in return for membership; rights are not addressed.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-10a-cultural-diversity-in-communities",
+    "conceptId": "c-cultural-diversity-in-communities",
+    "key": "TX:social_studies:3.10A",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the significance of ethnic and cultural celebrations across communities, which is the concept's test that communities contain diverse cultural groups distinguished by their celebrations.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-10b-cultural-diversity-in-communities",
+    "conceptId": "c-cultural-diversity-in-communities",
+    "key": "TX:social_studies:3.10B",
+    "confidence": "strong",
+    "rationale": "Asks students to compare ethnic and cultural celebrations between the local community and others, directly satisfying the concept's test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-17a-cultural-diversity-in-communities",
+    "conceptId": "c-cultural-diversity-in-communities",
+    "key": "TX:social_studies:4.17A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify the customs, celebrations, and traditions of various cultural, regional, and local groups, which is exactly the concept's test; the content is generic cultural diversity despite sitting in TX's Texas-history year.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-21a-cultural-diversity-in-communities",
+    "conceptId": "c-cultural-diversity-in-communities",
+    "key": "TX:social_studies:5.21A",
+    "confidence": "strong",
+    "rationale": "Asks students to describe the customs and traditions of various racial, ethnic, and religious groups, satisfying the concept's test that communities contain diverse cultural groups with distinguishing customs.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-13b-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:3.13B",
+    "confidence": "strong",
+    "rationale": "Asks students to describe the impact of named scientific breakthroughs and technologies on communities, which is the concept's test of giving examples of advances and explaining how they changed how people live.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-4c-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:4.4C",
+    "confidence": "moderate",
+    "rationale": "Asks students to explain the effects of the railroad on life, cities, and industries — a technological advance and how it changed how people work and live; the Texas setting is context, the claim is generic. Cross-grade: K-5 concept, TX G4.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-11d-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:4.11D",
+    "confidence": "moderate",
+    "rationale": "Asks students to explain how developments in transportation and communication influenced economic activities, which is the concept's test of a technological advance changing how people work.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-18b-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:4.18B",
+    "confidence": "moderate",
+    "rationale": "Asks students to describe how scientific discoveries and innovations have benefited individuals, businesses, and society, satisfying the concept's test of advances changing how people work and live.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-22b-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:5.22B",
+    "confidence": "moderate",
+    "rationale": "Asks students to identify how scientific discoveries and technological innovations advanced economic development, which is the concept's test of advances changing how people work.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-22c-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:5.22C",
+    "confidence": "strong",
+    "rationale": "Asks students to explain how innovations in medicine, communication, and transportation have benefited individuals and society, squarely the concept's test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-1b-indigenous-cultures-and-environment",
+    "conceptId": "c-indigenous-cultures-and-environment",
+    "key": "TX:social_studies:4.1B",
+    "confidence": "partial",
+    "rationale": "Asks students to compare the ways of life of distinct Indigenous groups, which is the comparison the concept tests, but the standard never states that those ways of life arose from the environments the groups lived in.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-1c-indigenous-cultures-and-environment",
+    "conceptId": "c-indigenous-cultures-and-environment",
+    "key": "TX:social_studies:4.1C",
+    "confidence": "partial",
+    "rationale": "Describes the cultural regions Indigenous peoples lived in, supplying the concept's region-to-culture link but not the ways of life the concept asks students to derive from those environments.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-2a-motives-for-european-colonization",
+    "conceptId": "c-motives-for-european-colonization",
+    "key": "TX:social_studies:4.2A",
+    "confidence": "strong",
+    "rationale": "Asks students to summarize economic and expansionist motivations for European exploration and settlement of lands already inhabited by Indigenous peoples, which is the concept's test verbatim; cross-grade (6-8 concept, TX G4).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-2c-motives-for-european-colonization",
+    "conceptId": "c-motives-for-european-colonization",
+    "key": "TX:social_studies:4.2C",
+    "confidence": "moderate",
+    "rationale": "Asks why the Spanish established settlements and Catholic missions, which is the religious-and-political-reasons clause of the concept's test; the Texas locale is context, the motive question is generic. Cross-grade (6-8 concept, TX G4).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-1a-motives-for-european-colonization",
+    "conceptId": "c-motives-for-european-colonization",
+    "key": "TX:social_studies:5.1A",
+    "confidence": "strong",
+    "rationale": "Asks students to explain why groups explored, colonized, and settled, naming the search for religious freedom and economic gain, which is the concept's test; cross-grade (6-8 concept, TX G5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-11b-geography-shapes-economic-activity",
+    "conceptId": "c-geography-shapes-economic-activity",
+    "key": "TX:social_studies:4.11B",
+    "confidence": "strong",
+    "rationale": "Asks students to explain how climate and natural resources influenced the location of economic activities, which is the concept's test that physical geography shapes the work people do.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-12b-geography-shapes-economic-activity",
+    "conceptId": "c-geography-shapes-economic-activity",
+    "key": "TX:social_studies:5.12B",
+    "confidence": "strong",
+    "rationale": "Asks students to identify and explain how geographic factors have influenced the location of economic activities, directly the concept's test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-11c-migration-and-its-impact-on-regions",
+    "conceptId": "c-migration-and-its-impact-on-regions",
+    "key": "TX:social_studies:4.11C",
+    "confidence": "partial",
+    "rationale": "The immigration-and-migration strand asks for their effects on economic development and growth of a region, which is the concept's test, but the standard bundles exploration and limited resources, which have no home here.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-12c-migration-and-its-impact-on-regions",
+    "conceptId": "c-migration-and-its-impact-on-regions",
+    "key": "TX:social_studies:5.12C",
+    "confidence": "strong",
+    "rationale": "Asks students to analyze the effects of immigration and migration on economic development and growth, which is the concept's test that movement of people into a region changes conditions there; cross-grade band (3-8 concept, TX G5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-2a-grievances-that-sparked-revolution",
+    "conceptId": "c-grievances-that-sparked-revolution",
+    "key": "TX:social_studies:5.2A",
+    "confidence": "strong",
+    "rationale": "Asks students to analyze the taxation following the French and Indian War and colonist responses such as the Boston Tea Party, which is the concept's test of tracing the taxes and protests that turned grievances into a movement against imperial rule.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-2c-course-and-outcome-of-independence-war",
+    "conceptId": "c-course-and-outcome-of-independence-war",
+    "key": "TX:social_studies:5.2C",
+    "confidence": "partial",
+    "rationale": "Asks students to summarize the results of a colonial war for independence including the founding of the new nation, matching the concept's outcome framing but not the description's clause about major battles or why one side prevailed.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-4b-regional-differences-and-sectionalism",
+    "conceptId": "c-regional-differences-and-sectionalism",
+    "key": "TX:social_studies:5.4B",
+    "confidence": "strong",
+    "rationale": "Asks students to explain how Industrial Revolution changes led to conflict among sections, which is the concept's test that differing regional economies produced conflicting interests between sections of a nation. (Concept is flagged needsReview as over-broad.)",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-4d-regional-differences-and-sectionalism",
+    "conceptId": "c-regional-differences-and-sectionalism",
+    "key": "TX:social_studies:5.4D",
+    "confidence": "strong",
+    "rationale": "Asks students to explain how the expansion of slavery — a regional institution — caused sectionalism and states'-rights conflict, which is the concept's test of institutions producing conflicting sectional interests.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-12d-division-of-labor-and-productivity",
+    "conceptId": "c-division-of-labor-and-productivity",
+    "key": "TX:social_studies:5.12D",
+    "confidence": "strong",
+    "rationale": "Asks students to describe the impact of mass production, specialization, and division of labor on economic growth, which is the concept's test that dividing work into specialized tasks changes how much can be produced.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-3b-people-adapt-to-and-modify-environment",
+    "conceptId": "c-people-adapt-to-and-modify-environment",
+    "key": "TX:social_studies:3.3B",
+    "confidence": "strong",
+    "rationale": "Asks students to identify and compare how people in different communities adapt to or modify the physical environment they live in — the membership test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-8a-people-adapt-to-and-modify-environment",
+    "conceptId": "c-people-adapt-to-and-modify-environment",
+    "key": "TX:social_studies:4.8A",
+    "confidence": "strong",
+    "rationale": "Asks students to describe ways people have adapted to and modified their environment; the Texas examples are context, the claim is generic. Cross-grade note: sits in TX's Texas-history year but states a universal geography idea.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-8b-people-adapt-to-and-modify-environment",
+    "conceptId": "c-people-adapt-to-and-modify-environment",
+    "key": "TX:social_studies:4.8B",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the reasons people have adapted to and modified their environment, which is the 'reasons they do so' clause of the test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-8a-people-adapt-to-and-modify-environment",
+    "conceptId": "c-people-adapt-to-and-modify-environment",
+    "key": "TX:social_studies:5.8A",
+    "confidence": "strong",
+    "rationale": "Asks students to describe how and why people have adapted to and modified their environment, satisfying both clauses of the test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-3c-consequences-of-modifying-environment",
+    "conceptId": "c-consequences-of-modifying-environment",
+    "key": "TX:social_studies:3.3C",
+    "confidence": "moderate",
+    "rationale": "Asks students to describe the effects of human processes such as building, conservation, and pollution in shaping the landscape — consequences of modification, though the standard does not ask students to sort them as positive or negative.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-8c-consequences-of-modifying-environment",
+    "conceptId": "c-consequences-of-modifying-environment",
+    "key": "TX:social_studies:4.8C",
+    "confidence": "strong",
+    "rationale": "Asks students to compare the positive and negative consequences of human modification of the environment — the membership test verbatim; the Texas setting is context only.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-8b-consequences-of-modifying-environment",
+    "conceptId": "c-consequences-of-modifying-environment",
+    "key": "TX:social_studies:5.8B",
+    "confidence": "strong",
+    "rationale": "Asks students to analyze the positive and negative consequences of human modification of the environment — the membership test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-4a-map-elements-and-map-reading-skills",
+    "conceptId": "c-map-elements-and-map-reading-skills",
+    "key": "TX:social_studies:3.4A",
+    "confidence": "strong",
+    "rationale": "Asks students to use cardinal and intermediate directions to locate places on maps and globes — applying a map element to locate places.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-4b-map-elements-and-map-reading-skills",
+    "conceptId": "c-map-elements-and-map-reading-skills",
+    "key": "TX:social_studies:3.4B",
+    "confidence": "strong",
+    "rationale": "Asks students to use a scale to determine distance between places on maps and globes — applying a named map element.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-4c-map-elements-and-map-reading-skills",
+    "conceptId": "c-map-elements-and-map-reading-skills",
+    "key": "TX:social_studies:3.4C",
+    "confidence": "strong",
+    "rationale": "Asks students to identify, create, and interpret maps containing title, compass rose, legend, scale, and grid system — the membership test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-20a-map-elements-and-map-reading-skills",
+    "conceptId": "c-map-elements-and-map-reading-skills",
+    "key": "TX:social_studies:4.20A",
+    "confidence": "strong",
+    "rationale": "Asks students to apply grid systems, legends, symbols, scales, and compass roses to create and interpret maps — the membership test verbatim; content-neutral despite sitting in TX's Texas-history year.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-24a-map-elements-and-map-reading-skills",
+    "conceptId": "c-map-elements-and-map-reading-skills",
+    "key": "TX:social_studies:5.24A",
+    "confidence": "strong",
+    "rationale": "Asks students to apply grid systems, legends, symbols, scales, and compass roses to create and interpret maps — the membership test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-14b-primary-and-secondary-sources",
+    "conceptId": "c-primary-and-secondary-sources",
+    "key": "TX:social_studies:3.14B",
+    "confidence": "strong",
+    "rationale": "Asks students to differentiate and compare the information about an issue or event provided in primary and secondary sources — the membership test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-19a-primary-and-secondary-sources",
+    "conceptId": "c-primary-and-secondary-sources",
+    "key": "TX:social_studies:4.19A",
+    "confidence": "strong",
+    "rationale": "Asks students to differentiate between, locate, and use valid primary and secondary sources to acquire information; the Texas subject matter is context, the skill is generic.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-19b-primary-and-secondary-sources",
+    "conceptId": "c-primary-and-secondary-sources",
+    "key": "TX:social_studies:4.19B",
+    "confidence": "strong",
+    "rationale": "Asks students to differentiate and compare the information about an issue or event provided in primary and secondary sources — the membership test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-23a-primary-and-secondary-sources",
+    "conceptId": "c-primary-and-secondary-sources",
+    "key": "TX:social_studies:5.23A",
+    "confidence": "strong",
+    "rationale": "Asks students to differentiate between, locate, and use valid primary and secondary sources to acquire information — the membership test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-23b-primary-and-secondary-sources",
+    "conceptId": "c-primary-and-secondary-sources",
+    "key": "TX:social_studies:5.23B",
+    "confidence": "moderate",
+    "rationale": "Asks students to question the credibility of different kinds of primary and secondary sources, which is the reliability clause of the test, though it does not itself ask for the distinction to be drawn.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-3-6a-supply-and-demand-shape-prices",
+    "conceptId": "c-supply-and-demand-shape-prices",
+    "key": "TX:social_studies:3.6A",
+    "confidence": "strong",
+    "rationale": "Asks students to explain how supply and demand affect the price of a good or service — the membership test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-11a-supply-and-demand-shape-prices",
+    "conceptId": "c-supply-and-demand-shape-prices",
+    "key": "TX:social_studies:5.11A",
+    "confidence": "strong",
+    "rationale": "Asks students to explain how supply and demand affects consumers, which is the consumer-behavior clause of the test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-11b-supply-and-demand-shape-prices",
+    "conceptId": "c-supply-and-demand-shape-prices",
+    "key": "TX:social_studies:5.11B",
+    "confidence": "moderate",
+    "rationale": "Asks students to evaluate the effects of supply and demand on industry and agriculture, which is the producer-behavior clause of the test, applied to historical cases.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-13b-branches-of-government-and-functions",
+    "conceptId": "c-branches-of-government-and-functions",
+    "key": "TX:social_studies:4.13B",
+    "confidence": "strong",
+    "rationale": "Asks students to identify and explain the basic functions of the three branches of government — the membership test verbatim; the constitution named is Texas's, but the structure-and-function claim is state-neutral and Ohio and Georgia teach the same idea about their own and the national government.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-15a-branches-of-government-and-functions",
+    "conceptId": "c-branches-of-government-and-functions",
+    "key": "TX:social_studies:5.15A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify and explain the basic functions of the three branches of government — the membership test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-7a-geographic-factors-shape-settlement",
+    "conceptId": "c-geographic-factors-shape-settlement",
+    "key": "TX:social_studies:4.7A",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the geographic factors such as landforms and climate that influence patterns of settlement and distribution of population — the membership test verbatim; the Texas setting is context. Cross-grade context: TX G4 is Texas history but the claim is generic.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-7b-geographic-factors-shape-settlement",
+    "conceptId": "c-geographic-factors-shape-settlement",
+    "key": "TX:social_studies:5.7B",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the geographic factors that influence patterns of settlement and the distribution of population — the membership test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-7c-geographic-factors-shape-settlement",
+    "conceptId": "c-geographic-factors-shape-settlement",
+    "key": "TX:social_studies:5.7C",
+    "confidence": "moderate",
+    "rationale": "Asks students to analyze the geographic factors influencing the location of the largest urban areas and explain their distribution, which is the test applied to a specific set of cities.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-13a-representative-government-in-colonies",
+    "conceptId": "c-representative-government-in-colonies",
+    "key": "TX:social_studies:5.13A",
+    "confidence": "strong",
+    "rationale": "Asks students to compare the systems of government of early European colonists, including representative government and monarchy — the membership test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-13b-representative-government-in-colonies",
+    "conceptId": "c-representative-government-in-colonies",
+    "key": "TX:social_studies:5.13B",
+    "confidence": "strong",
+    "rationale": "Asks students to identify examples of representative government in the colonies such as the Mayflower Compact and the House of Burgesses — the early-instances clause of the test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-4c-westward-territorial-expansion",
+    "conceptId": "c-westward-territorial-expansion",
+    "key": "TX:social_studies:5.4C",
+    "confidence": "strong",
+    "rationale": "Asks students to identify significant events and concepts of U.S. territorial expansion including the Louisiana Purchase, the Lewis and Clark expedition, and Manifest Destiny — the membership test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-4-4a-civil-war-aftermath-and-reconstruction",
+    "conceptId": "c-civil-war-aftermath-and-reconstruction",
+    "key": "TX:social_studies:4.4A",
+    "confidence": "moderate",
+    "rationale": "Asks students to describe the impact of the Civil War and Reconstruction on a region, which is the regional-effects clause of the test; the standard does not reach the constitutional changes clause. Cross-grade: TX teaches this in G4 (Texas history), other states in G5.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-5-4e-civil-war-aftermath-and-reconstruction",
+    "conceptId": "c-civil-war-aftermath-and-reconstruction",
+    "key": "TX:social_studies:5.4E",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the effects of the Civil War including Reconstruction and the 13th, 14th, and 15th amendments — the membership test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-2a-individual-actions-shape-history",
+    "conceptId": "c-individual-actions-shape-history",
+    "key": "TX:social_studies:6.2A",
+    "confidence": "moderate",
+    "rationale": "Asks for the historical influence of individuals on contemporary societies, which is the concept's test that individual actions shaped the world people live in now; cross-grade (concept band K-2).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-2b-individual-actions-shape-history",
+    "conceptId": "c-individual-actions-shape-history",
+    "key": "TX:social_studies:6.2B",
+    "confidence": "moderate",
+    "rationale": "Asks students to describe the contributions of individuals from past and present societies, the same ask as the concept's existing 'contributions made by these figures' member; cross-grade (concept band K-2).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-3b-migration-and-its-impact-on-regions",
+    "conceptId": "c-migration-and-its-impact-on-regions",
+    "key": "TX:social_studies:6.3B",
+    "confidence": "strong",
+    "rationale": "States exactly the membership test: human migration into a place changes the character of that place and region.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-4a-geography-shapes-economic-activity",
+    "conceptId": "c-geography-shapes-economic-activity",
+    "key": "TX:social_studies:6.4A",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the geographic factors responsible for where economic activities are located, i.e. how physical geography shapes the work people do; cross-grade (concept band 3-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-6a-productive-resources-of-an-economy",
+    "conceptId": "c-productive-resources-of-an-economy",
+    "key": "TX:social_studies:6.6A",
+    "confidence": "strong",
+    "rationale": "Names the four-resource taxonomy verbatim (natural resources, labor, capital, entrepreneurs) and asks how they shape an economy's production; cross-grade (concept band 3-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-6c-specialization-leads-to-trade",
+    "conceptId": "c-specialization-leads-to-trade",
+    "key": "TX:social_studies:6.6C",
+    "confidence": "moderate",
+    "rationale": "Asks students to explain how the distribution of resources produces international trade and economic interdependence; the causal chain matches the concept but the standard implies rather than states specialization; cross-grade (concept band 3-8).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-6c-specialization-leads-to-trade-2",
+    "conceptId": "c-specialization-leads-to-trade-2",
+    "key": "TX:social_studies:6.6C",
+    "confidence": "moderate",
+    "rationale": "Same verdict as c-specialization-leads-to-trade, which carries an identical membership test; the two are flagged merge candidates, so an identical description must yield an identical membership.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-7a-economic-systems-and-basic-questions",
+    "conceptId": "c-economic-systems-and-basic-questions",
+    "key": "TX:social_studies:6.7A",
+    "confidence": "strong",
+    "rationale": "Asks students to compare how various societies organize the production and distribution of goods and services, i.e. how different systems answer what/how/for whom.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-7b-economic-systems-and-basic-questions",
+    "conceptId": "c-economic-systems-and-basic-questions",
+    "key": "TX:social_studies:6.7B",
+    "confidence": "strong",
+    "rationale": "Asks students to compare and contrast free enterprise, socialist, and communist economies, which is the concept's 'compare how different economic systems answer those questions' clause.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-11a-citizens-rights-and-responsibilities",
+    "conceptId": "c-citizens-rights-and-responsibilities",
+    "key": "TX:social_studies:6.11A",
+    "confidence": "moderate",
+    "rationale": "Asks students to describe the roles and responsibilities of citizens across societies; satisfies the duties half of the test but not the rights half; cross-grade (concept band 3-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-12a-citizens-rights-and-responsibilities",
+    "conceptId": "c-citizens-rights-and-responsibilities",
+    "key": "TX:social_studies:6.12A",
+    "confidence": "moderate",
+    "rationale": "Asks students to explain the duty of civic participation, which is a duty citizens owe as members of a nation; the rights half of the test is absent; cross-grade (concept band 3-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-12b-citizens-rights-and-responsibilities",
+    "conceptId": "c-citizens-rights-and-responsibilities",
+    "key": "TX:social_studies:6.12B",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the relationships among rights, responsibilities, and duties, which is precisely the rights-and-duties-in-return test; cross-grade (concept band 3-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-13b-cultural-diversity-in-communities",
+    "conceptId": "c-cultural-diversity-in-communities",
+    "key": "TX:social_studies:6.13B",
+    "confidence": "moderate",
+    "rationale": "Asks students to define a multicultural society, i.e. to recognize that a society contains diverse cultural groups; the customs-and-celebrations clause is absent; cross-grade (concept band K-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-17a-world-religions-and-belief-systems",
+    "conceptId": "c-world-religions-and-belief-systems",
+    "key": "TX:social_studies:6.17A",
+    "confidence": "moderate",
+    "rationale": "Asks students to explain the relationship among religious ideas, philosophical ideas, and cultures, i.e. belief systems and their influence on the cultures that hold them.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-17b-world-religions-and-belief-systems",
+    "conceptId": "c-world-religions-and-belief-systems",
+    "key": "TX:social_studies:6.17B",
+    "confidence": "moderate",
+    "rationale": "Names the major world religions through their observances and asks for their significance in the contemporary societies that hold them, satisfying the identify-and-influence test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-18a-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:6.18A",
+    "confidence": "moderate",
+    "rationale": "Asks for examples of inventions, discoveries, and inventors that shaped the world; matches the concept's example-listing test, though it stops short of explaining the change to work or life; cross-grade (concept band K-5). Concept is flagged needsReview as over-broad.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-2a-indigenous-cultures-and-environment",
+    "conceptId": "c-indigenous-cultures-and-environment",
+    "key": "TX:social_studies:7.2A",
+    "confidence": "moderate",
+    "rationale": "Asks students to compare Indigenous cultures grouped by region (Gulf, Plains, Puebloan, Southeastern), which is the concept's compare-Indigenous-ways-of-life-across-regions test; the environment-as-cause clause is implied, not stated. Cross-grade (concept band 3-5) and a rare case where Texas-history content generalizes.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-10a-reasons-people-migrate-and-settle",
+    "conceptId": "c-reasons-people-migrate-and-settle",
+    "key": "TX:social_studies:7.10A",
+    "confidence": "strong",
+    "rationale": "States the membership test almost verbatim: why immigrant groups came and where they settled. Cross-grade (concept band 3-5); the state setting is incidental to the idea.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-10b-migration-and-its-impact-on-regions",
+    "conceptId": "c-migration-and-its-impact-on-regions",
+    "key": "TX:social_studies:7.10B",
+    "confidence": "strong",
+    "rationale": "Asks students to explain how immigration and migration into a region changed that region, which is the membership test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-10d-migration-and-its-impact-on-regions",
+    "conceptId": "c-migration-and-its-impact-on-regions",
+    "key": "TX:social_studies:7.10D",
+    "confidence": "partial",
+    "rationale": "Changing population distribution producing new needs for services is movement of people changing conditions in a region, but the standard is framed around growth and demography rather than migration.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-15a-citizens-rights-and-responsibilities",
+    "conceptId": "c-citizens-rights-and-responsibilities",
+    "key": "TX:social_studies:7.15A",
+    "confidence": "moderate",
+    "rationale": "Asks students to explain the rights citizens hold; satisfies the rights half of the test, and matches the shape of a state-constitution civics standard. The duties half is carried by 7.15B.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-15b-citizens-rights-and-responsibilities",
+    "conceptId": "c-citizens-rights-and-responsibilities",
+    "key": "TX:social_studies:7.15B",
+    "confidence": "moderate",
+    "rationale": "Asks students to explain citizens' civic responsibilities and the importance of civic participation, i.e. the duties owed; the rights half is carried by 7.15A.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-16b-first-amendment-freedoms",
+    "conceptId": "c-first-amendment-freedoms",
+    "key": "TX:social_studies:7.16B",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the importance of free speech and press, which are First Amendment freedoms, in a democratic society; cross-grade (concept band 3-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-18a-cultural-diversity-in-communities",
+    "conceptId": "c-cultural-diversity-in-communities",
+    "key": "TX:social_studies:7.18A",
+    "confidence": "strong",
+    "rationale": "Asks students to explain how a society's diversity shows up in its cultural activities and celebrations, which is the concept's test including its customs-and-celebrations clause; cross-grade (concept band K-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-2a-motives-for-european-colonization",
+    "conceptId": "c-motives-for-european-colonization",
+    "key": "TX:social_studies:8.2A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify the reasons English, Spanish, and French explored and colonized North America, which is the membership test verbatim; cross-grade (concept band 6-8, matches).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-2b-motives-for-european-colonization",
+    "conceptId": "c-motives-for-european-colonization",
+    "key": "TX:social_studies:8.2B",
+    "confidence": "strong",
+    "rationale": "Asks students to compare the political, economic, religious, and social reasons the English colonies were established, i.e. the motives for settling lands already inhabited by Indigenous peoples.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-4a-grievances-that-sparked-revolution",
+    "conceptId": "c-grievances-that-sparked-revolution",
+    "key": "TX:social_studies:8.4A",
+    "confidence": "strong",
+    "rationale": "Traces the taxes, acts, and incidents (Stamp Act, Intolerable Acts, lack of representation, post-French-and-Indian-War policy) that turned colonial grievances into revolt; cross-grade (concept band 3-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-4b-individual-actions-shape-history",
+    "conceptId": "c-individual-actions-shape-history",
+    "key": "TX:social_studies:8.4B",
+    "confidence": "partial",
+    "rationale": "Asks for the roles significant individuals played in a historical event, which touches the concept's contributions-of-figures test but is anchored to the Revolution rather than to shaping the present; cross-grade (concept band K-2).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-4c-course-and-outcome-of-independence-war",
+    "conceptId": "c-course-and-outcome-of-independence-war",
+    "key": "TX:social_studies:8.4C",
+    "confidence": "strong",
+    "rationale": "Names the major battles of a colonial war for independence and its concluding treaty, matching the concept's battles-and-outcome test; cross-grade (concept band 3-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-11a-geography-shapes-economic-activity",
+    "conceptId": "c-geography-shapes-economic-activity",
+    "key": "TX:social_studies:8.11A",
+    "confidence": "strong",
+    "rationale": "Asks students to analyze how physical characteristics of the environment influenced economic activities and settlement, which is the membership test; cross-grade (concept band 3-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-15c-bill-of-rights-limits-government",
+    "conceptId": "c-bill-of-rights-limits-government",
+    "key": "TX:social_studies:8.15C",
+    "confidence": "moderate",
+    "rationale": "Asks students to explain how colonial grievances were addressed in the Constitution and the Bill of Rights, i.e. why such limits were written into a constitution; cross-grade (concept band 3-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-19b-bill-of-rights-limits-government",
+    "conceptId": "c-bill-of-rights-limits-government",
+    "key": "TX:social_studies:8.19B",
+    "confidence": "moderate",
+    "rationale": "Asks students to summarize the rights enumerated in a bill of rights; satisfies the enumeration half of the test, less so the explicit constrains-government half; cross-grade (concept band 3-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-19c-citizens-rights-and-responsibilities",
+    "conceptId": "c-citizens-rights-and-responsibilities",
+    "key": "TX:social_studies:8.19C",
+    "confidence": "strong",
+    "rationale": "Asks students to identify examples of responsible citizenship (obeying laws, staying informed, voting, jury service), which is the duties-owed half of the test stated directly; cross-grade (concept band 3-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-21b-first-amendment-freedoms",
+    "conceptId": "c-first-amendment-freedoms",
+    "key": "TX:social_studies:8.21B",
+    "confidence": "strong",
+    "rationale": "Asks students to describe the importance of free speech and press, First Amendment freedoms, in a constitutional republic; cross-grade (concept band 3-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-22b-individual-actions-shape-history",
+    "conceptId": "c-individual-actions-shape-history",
+    "key": "TX:social_studies:8.22B",
+    "confidence": "moderate",
+    "rationale": "Asks students to describe the contributions of significant historical figures, the same ask as the concept's existing contributions-of-figures member; cross-grade (concept band K-2).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-23a-reasons-people-migrate-and-settle",
+    "conceptId": "c-reasons-people-migrate-and-settle",
+    "key": "TX:social_studies:8.23A",
+    "confidence": "strong",
+    "rationale": "States the membership test almost verbatim: which groups settled and why they immigrated; cross-grade (concept band 3-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-25c-first-amendment-freedoms",
+    "conceptId": "c-first-amendment-freedoms",
+    "key": "TX:social_studies:8.25C",
+    "confidence": "strong",
+    "rationale": "Asks students to analyze the impact of the First Amendment's religious-freedom guarantee on American life, i.e. the importance of a First Amendment freedom; cross-grade (concept band 3-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-27a-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:8.27A",
+    "confidence": "strong",
+    "rationale": "Asks for the effects of specific inventions (steamboat, cotton gin, telegraph, interchangeable parts) — the same inventions and the same ask as the concept's industrial-era-inventions member; cross-grade (concept band K-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-27b-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:8.27B",
+    "confidence": "moderate",
+    "rationale": "Asks how technological innovations changed the way goods were manufactured and distributed, i.e. how invention changed how people work; cross-grade (concept band K-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-27c-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:8.27C",
+    "confidence": "moderate",
+    "rationale": "Asks how technological innovations (factory system, railroad) produced economic growth, matching the concept member framed on inventions' effect on business productivity; cross-grade (concept band K-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-28a-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:8.28A",
+    "confidence": "strong",
+    "rationale": "Asks students to compare how scientific discoveries and technological innovations influenced daily life, which is the membership test stated directly; cross-grade (concept band K-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-28b-technology-changes-work-and-life",
+    "conceptId": "c-technology-changes-work-and-life",
+    "key": "TX:social_studies:8.28B",
+    "confidence": "moderate",
+    "rationale": "Asks for examples of how industrialization changed life; satisfies the changed-how-people-live test, though its subject is industrialization rather than named inventions; cross-grade (concept band K-5).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-5b-adapting-to-and-modifying-environment",
+    "conceptId": "c-adapting-to-and-modifying-environment",
+    "key": "TX:social_studies:6.5B",
+    "confidence": "strong",
+    "rationale": "Asks students to identify and analyze the ways people have adapted to the physical environment across places and regions, which is the adaptation half of the test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-5c-adapting-to-and-modifying-environment",
+    "conceptId": "c-adapting-to-and-modifying-environment",
+    "key": "TX:social_studies:6.5C",
+    "confidence": "strong",
+    "rationale": "Asks students to identify and analyze how people have modified the physical environment (mining, irrigation, transportation infrastructure), which is the modification half of the test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-9a-adapting-to-and-modifying-environment",
+    "conceptId": "c-adapting-to-and-modifying-environment",
+    "key": "TX:social_studies:7.9A",
+    "confidence": "strong",
+    "rationale": "Asks for both adaptation and modification of the environment plus the positive and negative consequences of the modifications, satisfying every clause of the test; the state setting is incidental to the idea.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-11b-adapting-to-and-modifying-environment",
+    "conceptId": "c-adapting-to-and-modifying-environment",
+    "key": "TX:social_studies:8.11B",
+    "confidence": "strong",
+    "rationale": "Asks students to describe the positive and negative consequences of human modification of the physical environment, which is the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-15a-cultural-diffusion-among-societies",
+    "conceptId": "c-cultural-diffusion-among-societies",
+    "key": "TX:social_studies:6.15A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify and describe the means of cultural diffusion (trade, travel, war), which is the mechanism half of the test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-15b-cultural-diffusion-among-societies",
+    "conceptId": "c-cultural-diffusion-among-societies",
+    "key": "TX:social_studies:6.15B",
+    "confidence": "moderate",
+    "rationale": "Asks for the factors that drive cultural change — improvements in communication, transportation, economic development — which is what facilitates diffusion, though the standard names the effect as 'cultural change' rather than diffusion.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-15c-cultural-diffusion-among-societies",
+    "conceptId": "c-cultural-diffusion-among-societies",
+    "key": "TX:social_studies:6.15C",
+    "confidence": "moderate",
+    "rationale": "Asks students to analyze the impact of improved communication technology among cultures, which is the technology-facilitates-diffusion clause.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-15d-cultural-diffusion-among-societies",
+    "conceptId": "c-cultural-diffusion-among-societies",
+    "key": "TX:social_studies:6.15D",
+    "confidence": "strong",
+    "rationale": "Asks students to identify the impact of cultural diffusion on individuals and world societies, which is the results half of the test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-9a-comparing-forms-of-government",
+    "conceptId": "c-comparing-forms-of-government",
+    "key": "TX:social_studies:6.9A",
+    "confidence": "strong",
+    "rationale": "Asks students to describe and compare limited and unlimited governments (constitutional vs. totalitarian), which is the classify-by-how-far-power-is-limited test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-9b-comparing-forms-of-government",
+    "conceptId": "c-comparing-forms-of-government",
+    "key": "TX:social_studies:6.9B",
+    "confidence": "moderate",
+    "rationale": "Asks for the reasons to limit governmental power, which is the rationale behind the limited/unlimited axis the concept classifies on.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-10a-comparing-forms-of-government",
+    "conceptId": "c-comparing-forms-of-government",
+    "key": "TX:social_studies:6.10A",
+    "confidence": "strong",
+    "rationale": "Asks students to identify governments with rule by one, few, or many, which is the classify-by-how-power-is-held test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-10b-comparing-forms-of-government",
+    "conceptId": "c-comparing-forms-of-government",
+    "key": "TX:social_studies:6.10B",
+    "confidence": "strong",
+    "rationale": "Asks students to compare how various societies organize government and how those governments function, which is the comparison test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-11b-comparing-forms-of-government",
+    "conceptId": "c-comparing-forms-of-government",
+    "key": "TX:social_studies:6.11B",
+    "confidence": "strong",
+    "rationale": "Asks students to explain how opportunities for citizens to participate in and influence the political process vary among societies, which is the citizen-participation-across-forms clause.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-19a-using-primary-and-secondary-sources",
+    "conceptId": "c-using-primary-and-secondary-sources",
+    "key": "TX:social_studies:6.19A",
+    "confidence": "strong",
+    "rationale": "Asks students to differentiate between, locate, and use valid primary and secondary sources to acquire information, which is the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-20a-using-primary-and-secondary-sources",
+    "conceptId": "c-using-primary-and-secondary-sources",
+    "key": "TX:social_studies:7.20A",
+    "confidence": "strong",
+    "rationale": "Asks students to differentiate between, locate, and use valid primary and secondary sources to acquire information, which is the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-29a-using-primary-and-secondary-sources",
+    "conceptId": "c-using-primary-and-secondary-sources",
+    "key": "TX:social_studies:8.29A",
+    "confidence": "strong",
+    "rationale": "Asks students to differentiate between, locate, and use valid primary and secondary sources to acquire information, which is the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-19f-evaluating-source-credibility-and-bias",
+    "conceptId": "c-evaluating-source-credibility-and-bias",
+    "key": "TX:social_studies:6.19F",
+    "confidence": "strong",
+    "rationale": "Asks students to evaluate a variety of historical and contemporary sources for validity, credibility, bias, and accuracy, which is the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-20f-evaluating-source-credibility-and-bias",
+    "conceptId": "c-evaluating-source-credibility-and-bias",
+    "key": "TX:social_studies:7.20F",
+    "confidence": "strong",
+    "rationale": "Asks students to evaluate a variety of historical and contemporary sources for validity, credibility, bias, and accuracy, which is the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-29f-evaluating-source-credibility-and-bias",
+    "conceptId": "c-evaluating-source-credibility-and-bias",
+    "key": "TX:social_studies:8.29F",
+    "confidence": "strong",
+    "rationale": "Asks students to evaluate a variety of historical and contemporary sources for validity, credibility, bias, and accuracy, which is the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-19e-claims-supported-by-evidence",
+    "conceptId": "c-claims-supported-by-evidence",
+    "key": "TX:social_studies:6.19E",
+    "confidence": "strong",
+    "rationale": "Asks students to formulate and communicate a claim supported by evidence and reasoning about a social studies topic, which is the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-20e-claims-supported-by-evidence",
+    "conceptId": "c-claims-supported-by-evidence",
+    "key": "TX:social_studies:7.20E",
+    "confidence": "strong",
+    "rationale": "Asks students to formulate and communicate a claim supported by evidence and reasoning about a social studies topic, which is the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-29e-claims-supported-by-evidence",
+    "conceptId": "c-claims-supported-by-evidence",
+    "key": "TX:social_studies:8.29E",
+    "confidence": "strong",
+    "rationale": "Asks students to formulate and communicate a claim supported by evidence and reasoning about a social studies topic, which is the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-15d-constitutional-principles-of-government",
+    "conceptId": "c-constitutional-principles-of-government",
+    "key": "TX:social_studies:8.15D",
+    "confidence": "strong",
+    "rationale": "Asks students to analyze how a constitution reflects limited government, republicanism, checks and balances, federalism, separation of powers, popular sovereignty, and individual rights — the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-13a-constitutional-principles-of-government",
+    "conceptId": "c-constitutional-principles-of-government",
+    "key": "TX:social_studies:7.13A",
+    "confidence": "moderate",
+    "rationale": "Asks how a state constitution reflects the same list of structural principles; matches the shape of a state-constitution civics standard, and the principles rather than the state are the content.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-13b-constitutional-principles-of-government",
+    "conceptId": "c-constitutional-principles-of-government",
+    "key": "TX:social_studies:7.13B",
+    "confidence": "moderate",
+    "rationale": "Asks students to compare the principles of a state constitution to the national constitution, which tests the same structural principles across two charters.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-4d-creating-and-ratifying-a-constitution",
+    "conceptId": "c-creating-and-ratifying-a-constitution",
+    "key": "TX:social_studies:8.4D",
+    "confidence": "strong",
+    "rationale": "Asks students to analyze the issues of the constitutional convention including the Great Compromise and the Three-Fifths Compromise, which is the convention-debates clause verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-15b-creating-and-ratifying-a-constitution",
+    "conceptId": "c-creating-and-ratifying-a-constitution",
+    "key": "TX:social_studies:8.15B",
+    "confidence": "strong",
+    "rationale": "Asks students to summarize the strengths and weaknesses of the earlier governing charter, which is the first clause of the test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-17a-creating-and-ratifying-a-constitution",
+    "conceptId": "c-creating-and-ratifying-a-constitution",
+    "key": "TX:social_studies:8.17A",
+    "confidence": "strong",
+    "rationale": "Asks students to analyze the Federalist and Anti-Federalist arguments, which is the ratification-debate clause.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-9a-reconstruction-after-civil-war",
+    "conceptId": "c-reconstruction-after-civil-war",
+    "key": "TX:social_studies:8.9A",
+    "confidence": "strong",
+    "rationale": "Asks students to evaluate the legislative reform programs of the Reconstruction Congress and reconstructed state governments, which is the reform-programs clause.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-9b-reconstruction-after-civil-war",
+    "conceptId": "c-reconstruction-after-civil-war",
+    "key": "TX:social_studies:8.9B",
+    "confidence": "moderate",
+    "rationale": "Asks for the impact of electing African Americans from the South during Reconstruction, a political change of the period; the concept's counterpart standard covers the same ground from the opposite direction (the removal of Black legislators).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-9c-reconstruction-after-civil-war",
+    "conceptId": "c-reconstruction-after-civil-war",
+    "key": "TX:social_studies:8.9C",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the economic, political, and social problems of Reconstruction and their impact on different groups, which is the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-16b-reconstruction-after-civil-war",
+    "conceptId": "c-reconstruction-after-civil-war",
+    "key": "TX:social_studies:8.16B",
+    "confidence": "strong",
+    "rationale": "Asks students to describe the impact of the 13th, 14th, and 15th Amendments, which is the amendments clause and is stated identically in two counterpart standards.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-5c-reconstruction-after-civil-war",
+    "conceptId": "c-reconstruction-after-civil-war",
+    "key": "TX:social_studies:7.5C",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the political, economic, and social effects of the Civil War and Reconstruction on one state — the same ask, at the same grain, as a state-history Reconstruction standard.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-8b-sectional-disputes-cause-civil-war",
+    "conceptId": "c-sectional-disputes-cause-civil-war",
+    "key": "TX:social_studies:8.8B",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the central role of the expansion of slavery in causing sectionalism, disagreement over states' rights, and the Civil War — the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-7d-sectional-disputes-cause-civil-war",
+    "conceptId": "c-sectional-disputes-cause-civil-war",
+    "key": "TX:social_studies:8.7D",
+    "confidence": "moderate",
+    "rationale": "Asks students to analyze the impact of slavery on different sections of the nation, which is the slavery-as-sectional-divider clause, though the standard stops short of naming the war as the outcome.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-7e-sectional-disputes-cause-civil-war",
+    "conceptId": "c-sectional-disputes-cause-civil-war",
+    "key": "TX:social_studies:8.7E",
+    "confidence": "moderate",
+    "rationale": "Asks students to compare the congressional conflicts and compromises before the Civil War, the sectional-dispute machinery named in a counterpart standard (Compromise of 1850, nullification).",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-7a-sectional-disputes-cause-civil-war",
+    "conceptId": "c-sectional-disputes-cause-civil-war",
+    "key": "TX:social_studies:8.7A",
+    "confidence": "moderate",
+    "rationale": "Asks students to analyze the impact of tariff policies on sections of the nation before the Civil War, which is the sectional-economic-interests clause.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-17b-sectional-disputes-cause-civil-war",
+    "conceptId": "c-sectional-disputes-cause-civil-war",
+    "key": "TX:social_studies:8.17B",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the constitutional issues over states' rights, including the Nullification Crisis and the Civil War, which is the states'-rights clause with the war as its stated outcome.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-5a-sectional-disputes-cause-civil-war",
+    "conceptId": "c-sectional-disputes-cause-civil-war",
+    "key": "TX:social_studies:7.5A",
+    "confidence": "moderate",
+    "rationale": "Asks students to explain the central role the expansion of slavery played in one state's entry into the Civil War — the same ask, at the same grain, as a state-history standard on the issues that led to the war.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-5h-forced-removal-of-indigenous-peoples",
+    "conceptId": "c-forced-removal-of-indigenous-peoples",
+    "key": "TX:social_studies:8.5H",
+    "confidence": "strong",
+    "rationale": "Asks students to analyze the reasons for the removal and resettlement of the Cherokee, naming the Indian Removal Act, Worcester v. Georgia, and the Trail of Tears — the same events a counterpart state standard names.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-10c-geography-shapes-historical-events",
+    "conceptId": "c-geography-shapes-historical-events",
+    "key": "TX:social_studies:8.10C",
+    "confidence": "strong",
+    "rationale": "Asks students to analyze the effects of physical geographic factors — weather, landforms, waterways — on major historical events, which is the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-8c-geography-shapes-historical-events",
+    "conceptId": "c-geography-shapes-historical-events",
+    "key": "TX:social_studies:7.8C",
+    "confidence": "strong",
+    "rationale": "Asks students to analyze the effects of climate, weather, landforms, and irrigation on major events in a state's history, which is the test verbatim at state grain.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-9b-geography-shapes-historical-events",
+    "conceptId": "c-geography-shapes-historical-events",
+    "key": "TX:social_studies:7.9B",
+    "confidence": "moderate",
+    "rationale": "Asks how geographic factors (a hurricane, the Dust Bowl, limited water) affected a state's political, economic, and social development; matches the test, though 'development' is broader than 'events'.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-14a-state-and-local-government-structure",
+    "conceptId": "c-state-and-local-government-structure",
+    "key": "TX:social_studies:7.14A",
+    "confidence": "strong",
+    "rationale": "Asks students to describe the structure and functions of government at municipal, county, and state levels, which is the first clause of the test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-14b-state-and-local-government-structure",
+    "conceptId": "c-state-and-local-government-structure",
+    "key": "TX:social_studies:7.14B",
+    "confidence": "strong",
+    "rationale": "Asks students to identify the major revenue sources for state and local governments (property taxes, sales taxes, bonds, fees), which is the funding clause.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-12b-slave-trade-and-plantation-economy",
+    "conceptId": "c-slave-trade-and-plantation-economy",
+    "key": "TX:social_studies:8.12B",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the reasons for the development of the plantation system, the transatlantic slave trade, and the spread of slavery, which is the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-8c-course-and-outcome-of-a-civil-war",
+    "conceptId": "c-course-and-outcome-of-a-civil-war",
+    "key": "TX:social_studies:8.8C",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the significant events of the Civil War — Fort Sumter, Antietam, Gettysburg, Vicksburg, the Emancipation Proclamation, Appomattox — which is the battles-and-turning-points clause, naming events a counterpart standard names.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-8a-course-and-outcome-of-a-civil-war",
+    "conceptId": "c-course-and-outcome-of-a-civil-war",
+    "key": "TX:social_studies:8.8A",
+    "confidence": "strong",
+    "rationale": "Asks students to explain the roles played by significant individuals during the Civil War (Davis, Grant, Lee, Lincoln), which is the significant-figures clause, naming the same figures a counterpart standard names.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-20b-using-geographic-tools-to-analyze-data",
+    "conceptId": "c-using-geographic-tools-to-analyze-data",
+    "key": "TX:social_studies:6.20B",
+    "confidence": "strong",
+    "rationale": "Asks students to pose and answer questions about geographic distributions and patterns shown on maps, graphs, and charts, which is the interpret-to-analyze test.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-20c-using-geographic-tools-to-analyze-data",
+    "conceptId": "c-using-geographic-tools-to-analyze-data",
+    "key": "TX:social_studies:6.20C",
+    "confidence": "strong",
+    "rationale": "Asks students to compare regions and countries using data from maps, graphs, and charts, which is the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-20d-using-geographic-tools-to-analyze-data",
+    "conceptId": "c-using-geographic-tools-to-analyze-data",
+    "key": "TX:social_studies:6.20D",
+    "confidence": "strong",
+    "rationale": "Asks students to create and interpret sketch maps, thematic maps, graphs, and charts depicting population and economic activity, which is the create-and-report clause.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-6-20a-using-geographic-tools-to-analyze-data",
+    "conceptId": "c-using-geographic-tools-to-analyze-data",
+    "key": "TX:social_studies:6.20A",
+    "confidence": "partial",
+    "rationale": "Asks students to answer geographic questions about location, including via latitude and longitude; matches the tool-use test but is framed as a questioning routine rather than as creating or interpreting a representation.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-21a-using-geographic-tools-to-analyze-data",
+    "conceptId": "c-using-geographic-tools-to-analyze-data",
+    "key": "TX:social_studies:7.21A",
+    "confidence": "strong",
+    "rationale": "Asks students to create and interpret thematic maps, graphs, and charts representing a region, which is the test verbatim.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-7-21b-using-geographic-tools-to-analyze-data",
+    "conceptId": "c-using-geographic-tools-to-analyze-data",
+    "key": "TX:social_studies:7.21B",
+    "confidence": "strong",
+    "rationale": "Asks students to analyze and interpret geographic distributions and patterns, which is the analyze clause.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-29g-using-geographic-tools-to-analyze-data",
+    "conceptId": "c-using-geographic-tools-to-analyze-data",
+    "key": "TX:social_studies:8.29G",
+    "confidence": "strong",
+    "rationale": "Asks students to create a visual representation of historical information such as thematic maps, graphs, and charts, which is the create-and-report clause.",
+    "source": "ai_draft"
+  },
+  {
+    "id": "m-tx-social-studies-8-29h-using-geographic-tools-to-analyze-data",
+    "conceptId": "c-using-geographic-tools-to-analyze-data",
+    "key": "TX:social_studies:8.29H",
+    "confidence": "strong",
+    "rationale": "Asks students to pose and answer questions about geographic distributions and patterns shown on maps, graphs, and charts, which is the interpret-to-analyze test.",
+    "source": "ai_draft"
   }
 ]

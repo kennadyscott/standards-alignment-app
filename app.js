@@ -110,7 +110,9 @@ const state = {
   memberships: [],          // { id, conceptId, key, confidence, rationale, source }
   byConcept: new Map(),     // conceptId -> memberships[]
   byStandard: new Map(),    // standard key -> memberships[]
-  decisions: {},            // membership id -> 'approved' | 'rejected'
+  decisions: {},            // membership id (m-…) OR concept id (c-…) -> 'approved' | 'rejected'
+  conceptEdits: {},         // conceptId -> { title, description } (reviewer's wording wins)
+  merged: {},               // conceptId -> conceptId it was merged into
   noAlign: {},              // `${state}:${subject}:${code}` -> true (reviewed: belongs to no concept)
   cms: {},                  // `${state}:${subject}:${code}` -> true (standard is loaded in the CMS)
   severed: {},              // `${keyA}||${keyB}` -> true (override: not aligned despite a shared concept)
@@ -120,6 +122,7 @@ const state = {
     expState: 'OH', expSubject: 'social_studies', expGrade: '4',
     selectedKey: null, search: '',
     revSubject: 'social_studies', revGrade: '4', revStatus: 'pending', revState: 'ALL',
+    conSubject: 'social_studies', conStatus: 'pending', conSearch: '',
     currentSetId: null, openPicker: null,
   },
 };
@@ -133,6 +136,8 @@ const LS_MANUAL = 'sa_manual_v1';
 const LS_NOALIGN = 'sa_noalign_v1';
 const LS_CMS = 'sa_cms_v1';
 const LS_SEVERED = 'sa_severed_v1';
+const LS_CEDITS = 'sa_concept_edits_v1';
+const LS_MERGED = 'sa_merged_v1';
 
 function loadLocal() {
   try { state.decisions = JSON.parse(localStorage.getItem(LS_DECISIONS)) || {}; } catch { state.decisions = {}; }
@@ -140,6 +145,8 @@ function loadLocal() {
   try { state.noAlign = JSON.parse(localStorage.getItem(LS_NOALIGN)) || {}; } catch { state.noAlign = {}; }
   try { state.cms = JSON.parse(localStorage.getItem(LS_CMS)) || {}; } catch { state.cms = {}; }
   try { state.severed = JSON.parse(localStorage.getItem(LS_SEVERED)) || {}; } catch { state.severed = {}; }
+  try { state.conceptEdits = JSON.parse(localStorage.getItem(LS_CEDITS)) || {}; } catch { state.conceptEdits = {}; }
+  try { state.merged = JSON.parse(localStorage.getItem(LS_MERGED)) || {}; } catch { state.merged = {}; }
 }
 function mirrorLocal() {
   localStorage.setItem(LS_DECISIONS, JSON.stringify(state.decisions));
@@ -147,6 +154,8 @@ function mirrorLocal() {
   localStorage.setItem(LS_NOALIGN, JSON.stringify(state.noAlign));
   localStorage.setItem(LS_CMS, JSON.stringify(state.cms));
   localStorage.setItem(LS_SEVERED, JSON.stringify(state.severed));
+  localStorage.setItem(LS_CEDITS, JSON.stringify(state.conceptEdits));
+  localStorage.setItem(LS_MERGED, JSON.stringify(state.merged));
   localStorage.setItem(LS_SETS, JSON.stringify(state.sets));
 }
 
@@ -160,6 +169,8 @@ function stateBody() {
     noAlign: state.noAlign,
     cms: state.cms,
     severed: state.severed,
+    conceptEdits: state.conceptEdits,
+    merged: state.merged,
     sets: state.sets,
     savedAt: new Date().toISOString(),
   });
@@ -296,6 +307,8 @@ function mergeServerState(s) {
       noAlign: { ...state.noAlign, ...(s.noAlign || {}) },
       cms: { ...state.cms, ...(s.cms || {}) },
       severed: { ...state.severed, ...(s.severed || {}) },
+      conceptEdits: { ...state.conceptEdits, ...(s.conceptEdits || {}) },
+      mergedMap: { ...state.merged, ...(s.merged || {}) },
       sets: dedupeById([...(s.sets || []), ...state.sets]),
     };
     state.decisions = merged.decisions;
@@ -303,6 +316,8 @@ function mergeServerState(s) {
     state.noAlign = merged.noAlign;
     state.cms = merged.cms;
     state.severed = merged.severed;
+    state.conceptEdits = merged.conceptEdits;
+    state.merged = merged.mergedMap;
     state.sets = merged.sets;
     normalizeSets();
     mirrorLocal();
@@ -369,17 +384,40 @@ async function loadData() {
   indexConcepts();
 }
 
+// Follow a merge chain to the concept that actually holds the members now.
+function mergeTarget(id) {
+  const seen = new Set();
+  while (state.merged[id] && !seen.has(id)) { seen.add(id); id = state.merged[id]; }
+  return id;
+}
+function isMergedAway(id) { return !!state.merged[id]; }
+
 function indexConcepts() {
-  state.conceptById = new Map(state.concepts.map(c => [c.id, c]));
+  // The reviewer's wording wins over the drafted wording.
+  state.conceptById = new Map(state.concepts.map(c => {
+    const e = state.conceptEdits[c.id] || {};
+    return [c.id, { ...c, title: e.title ?? c.title, description: e.description ?? c.description }];
+  }));
   state.byConcept = new Map();
   state.byStandard = new Map();
   state.memberships.forEach(m => {
-    if (!state.byConcept.has(m.conceptId)) state.byConcept.set(m.conceptId, []);
-    state.byConcept.get(m.conceptId).push(m);
+    const cid = mergeTarget(m.conceptId);
+    if (!state.byConcept.has(cid)) state.byConcept.set(cid, []);
+    state.byConcept.get(cid).push(m);
     if (!state.byStandard.has(m.key)) state.byStandard.set(m.key, []);
     state.byStandard.get(m.key).push(m);
   });
 }
+
+/* A concept is approved only if the reviewer approved it. Seeded concepts came from pairs
+   they had already approved, so those start approved; every drafted concept starts pending.
+   Nothing the reviewer has not approved may derive an alignment — that is the contract. */
+function conceptStatus(c) {
+  if (!c) return 'pending';
+  return state.decisions[c.id] || (c.source === 'seed' ? 'approved' : 'pending');
+}
+function effectiveConcept(id) { return state.conceptById.get(mergeTarget(id)); }
+function liveConcepts() { return state.concepts.filter(c => !isMergedAway(c.id)); }
 
 /* ---------- membership + derived-alignment helpers ----------
    A membership says "this standard belongs to this concept". Seed memberships came from
@@ -390,9 +428,15 @@ function statusOf(m) {
   return state.decisions[m.id] || (m.source === 'seed' ? 'approved' : 'pending');
 }
 function membershipsFor(std) { return state.byStandard.get(keyOf(std)) || []; }
+// Only APPROVED memberships in APPROVED concepts count. A pending concept derives nothing.
 function conceptsFor(std) {
-  return membershipsFor(std).filter(m => statusOf(m) === 'approved')
-    .map(m => state.conceptById.get(m.conceptId)).filter(Boolean);
+  const out = new Map();
+  membershipsFor(std).forEach(m => {
+    if (statusOf(m) !== 'approved') return;
+    const c = effectiveConcept(m.conceptId);
+    if (c && conceptStatus(c) === 'approved') out.set(c.id, c);
+  });
+  return [...out.values()];
 }
 function severKey(a, b) { return [a, b].sort().join('||'); }
 function isSevered(a, b) { return !!state.severed[severKey(a, b)]; }
@@ -822,7 +866,184 @@ function renderReview() {
 function renderBadge() {
   const pending = state.memberships.filter(m => statusOf(m) === 'pending').length;
   document.getElementById('pendingBadge').textContent = pending;
+  const conPending = liveConcepts().filter(c => conceptStatus(state.conceptById.get(c.id)) === 'pending').length;
+  document.getElementById('conceptBadge').textContent = conPending;
 }
+
+/* ---------- concepts ----------
+   The concept library is the spine: every state that ever joins maps onto it, so a wrong
+   concept is wrong everywhere at once. This is where the reviewer curates it — approve,
+   reword, merge duplicates, or reject. Nothing derives an alignment until approved. */
+function conceptScope() {
+  const { conSubject, conStatus, conSearch } = state.ui;
+  const q = conSearch.toLowerCase().trim();
+  return liveConcepts()
+    .map(c => state.conceptById.get(c.id))
+    .filter(c => c.subject === conSubject)
+    .filter(c => {
+      const st = conceptStatus(c);
+      if (conStatus === 'all') return true;
+      if (conStatus === 'flagged') return !!c.needsReview;
+      if (conStatus === 'merge') return !!(c.mergeCandidates && c.mergeCandidates.some(id => !isMergedAway(id)));
+      return st === conStatus;
+    })
+    .filter(c => !q || `${c.title} ${c.description}`.toLowerCase().includes(q));
+}
+
+function conceptCard(c) {
+  const st = conceptStatus(c);
+  // Show EVERY candidate member, not just approved ones — a concept can't be judged
+  // without seeing the standards it would gather, and drafted members are still pending.
+  const all = state.byConcept.get(c.id) || [];
+  const rejected = new Set(all.filter(m => statusOf(m) === 'rejected').map(m => m.id));
+  const byState = {};
+  all.forEach(m => {
+    if (rejected.has(m.id)) return;
+    const s = state.byKey.get(m.key);
+    if (!s) return;
+    (byState[s.state] = byState[s.state] || []).push({ std: s, pending: statusOf(m) !== 'approved' });
+  });
+  // Alignments live today (approved concept + approved memberships on both sides).
+  const approvedByState = {};
+  all.filter(m => statusOf(m) === 'approved').forEach(m => {
+    const s = state.byKey.get(m.key);
+    if (s) (approvedByState[s.state] = approvedByState[s.state] || []).push(s);
+  });
+  const countPairs = map => {
+    const ks = Object.keys(map);
+    let n = 0;
+    for (let i = 0; i < ks.length; i++)
+      for (let j = i + 1; j < ks.length; j++) n += map[ks[i]].length * map[ks[j]].length;
+    return n;
+  };
+  const stateList = Object.keys(byState);
+  const pairs = countPairs(approvedByState);
+  const potential = countPairs(Object.fromEntries(stateList.map(s => [s, byState[s]])));
+
+  const mergeInto = (c.mergeCandidates || []).filter(id => !isMergedAway(id) && id !== c.id);
+  const actions = st === 'pending'
+    ? `<button class="act-btn approve" data-cact="approved" data-id="${c.id}">✓ Approve concept</button>
+       <button class="act-btn reject" data-cact="rejected" data-id="${c.id}">✕ Reject</button>`
+    : `<span class="status-chip ${st}">${st}</span>
+       <button class="act-btn reset" data-cact="pending" data-id="${c.id}">Undo</button>`;
+
+  return `
+    <div class="review-card ${st !== 'pending' ? 'decided-' + st : ''}">
+      <div class="concept-head">
+        <div class="concept-meta" style="margin:0 0 8px">
+          <span class="chip">${SUBJECT_NAMES[c.subject] || c.subject}</span>
+          ${c.gradeBand ? `<span class="chip">${esc(c.gradeBand)}</span>` : ''}
+          <span class="chip">${c.source === 'seed' ? 'seeded from your approved pairs' : 'drafted — needs your approval'}</span>
+          ${c.needsReview ? '<span class="chip chip-warn">⚠ needs review</span>' : ''}
+          ${mergeInto.length ? '<span class="chip chip-warn">⧉ duplicate</span>' : ''}
+        </div>
+        <label class="c-lbl">Title</label>
+        <input type="text" class="ps-input c-title" data-ctitle="${c.id}" value="${esc(c.title)}">
+        <label class="c-lbl" style="margin-top:8px">Membership test — a standard belongs here if…</label>
+        <textarea class="ps-textarea c-desc" data-cdesc="${c.id}" rows="2">${esc(c.description || '')}</textarea>
+      </div>
+      ${c.note ? `<div class="concept-note"><b>Flagged:</b> ${esc(c.note)}</div>` : ''}
+      <div class="member-peers">
+        <b>Members:</b>
+        ${stateList.length
+          ? stateList.map(s => byState[s].map(x =>
+              `<span class="chip ${x.pending ? 'chip-pend' : ''}" title="${x.pending ? 'Membership still pending in the Review Queue' : 'Approved membership'}">${STATE_NAMES[s]} ${esc(x.std.code)} · G${esc(x.std.grade)}${x.pending ? ' ·' : ' ✓'}</span>`).join(' ')).join(' ')
+          : '<span class="member-peers-empty">none yet</span>'}
+      </div>
+      <div class="member-peers">
+        <b>Derives now:</b> ${pairs} cross-state alignment${pairs === 1 ? '' : 's'}
+        ${potential > pairs
+          ? `<span class="chip chip-warn">${potential} once its pending memberships are approved too</span>` : ''}
+        ${st !== 'approved' && potential ? '<span class="chip chip-warn">nothing active until this concept is approved</span>' : ''}
+        ${stateList.length === 1
+          ? `<span class="chip chip-warn">only ${STATE_NAMES[stateList[0]]} standards so far — derives nothing until another state is mapped into it</span>`
+          : ''}
+      </div>
+      <div class="review-foot">
+        ${mergeInto.length ? `<span class="conf-chip">merge into:</span>
+          <select class="c-merge" data-cmerge="${c.id}" style="font:inherit; padding:6px 8px; border:1px solid var(--line); border-radius:8px">
+            <option value="">choose…</option>
+            ${mergeInto.map(id => { const t = state.conceptById.get(id); return t ? `<option value="${id}">${esc(t.title)}</option>` : ''; }).join('')}
+          </select>` : ''}
+        ${actions}
+      </div>
+    </div>`;
+}
+
+function renderConcepts() {
+  const shown = conceptScope();
+  const all = liveConcepts().map(c => state.conceptById.get(c.id)).filter(c => c.subject === state.ui.conSubject);
+  const done = all.filter(c => conceptStatus(c) !== 'pending').length;
+  document.getElementById('conceptProgress').textContent = all.length
+    ? `${done} of ${all.length} concepts reviewed · ${SUBJECT_NAMES[state.ui.conSubject]}`
+    : `No concepts for ${SUBJECT_NAMES[state.ui.conSubject]} yet.`;
+
+  const box = document.getElementById('conceptList');
+  box.innerHTML = '';
+  if (!shown.length) {
+    box.appendChild(el(`<div class="review-empty">${all.length
+      ? 'Nothing matches this filter.'
+      : `No ${SUBJECT_NAMES[state.ui.conSubject]} concepts exist yet — the library is seeded from approved alignments, and none have been drafted for this subject.`}</div>`));
+    return;
+  }
+  shown.forEach(c => {
+    const card = el(conceptCard(c));
+    card.querySelectorAll('[data-cact]').forEach(b =>
+      b.addEventListener('click', () => handleConceptAction(b.dataset.cact, b.dataset.id)));
+    const t = card.querySelector('[data-ctitle]');
+    if (t) t.addEventListener('input', e => editConcept(e.target.dataset.ctitle, { title: e.target.value }));
+    const d = card.querySelector('[data-cdesc]');
+    if (d) d.addEventListener('input', e => editConcept(e.target.dataset.cdesc, { description: e.target.value }));
+    const m = card.querySelector('[data-cmerge]');
+    if (m) m.addEventListener('change', e => {
+      if (!e.target.value) return;
+      mergeConcepts(e.target.dataset.cmerge, e.target.value);
+    });
+    box.appendChild(card);
+  });
+}
+
+function editConcept(id, patch) {
+  const base = state.concepts.find(c => c.id === id);
+  if (!base) return;
+  const cur = state.conceptEdits[id] || {};
+  const next = { ...cur, ...patch };
+  // Drop the override once it matches the drafted wording again — keeps the diff honest.
+  if ((next.title ?? base.title) === base.title && (next.description ?? base.description) === base.description) {
+    delete state.conceptEdits[id];
+  } else {
+    state.conceptEdits[id] = next;
+  }
+  indexConcepts();
+  pushState();
+  renderBadgeSoon();
+}
+
+// Merging moves `fromId`'s members onto `intoId`; the source concept stops existing for
+// every purpose but provenance, so the merge stays reversible from the state file.
+function mergeConcepts(fromId, intoId) {
+  if (fromId === intoId) return;
+  if (mergeTarget(intoId) === fromId) { toast('⚠ That would make a merge loop'); return; }
+  state.merged[fromId] = intoId;
+  indexConcepts();
+  pushState();
+  const t = state.conceptById.get(intoId);
+  toast(`Merged into "${t ? t.title : intoId}"`);
+  renderAll();
+}
+
+function handleConceptAction(act, id) {
+  if (act === 'pending') { delete state.decisions[id]; toast('Concept reset to pending'); }
+  else {
+    state.decisions[id] = act;
+    toast(act === 'approved' ? 'Concept approved ✓ — its alignments are now live' : 'Concept rejected — its alignments are off');
+  }
+  pushState();
+  renderAll();
+}
+
+let badgeTimer;
+function renderBadgeSoon() { clearTimeout(badgeTimer); badgeTimer = setTimeout(renderBadge, 400); }
 
 /* ---------- export ----------
    Exports the concept library, its approved memberships, and the cross-state alignments
@@ -1456,6 +1677,7 @@ function renderPassages() {
 function renderAll() {
   renderStdList();
   renderDetail();
+  renderConcepts();
   renderReview();
   renderBadge();
   renderPassages();
@@ -1468,6 +1690,7 @@ function init() {
     state.ui.view = tab.dataset.view;
     document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t === tab));
     document.getElementById('explorerView').classList.toggle('hidden', state.ui.view !== 'explorer');
+    document.getElementById('conceptsView').classList.toggle('hidden', state.ui.view !== 'concepts');
     document.getElementById('reviewView').classList.toggle('hidden', state.ui.view !== 'review');
     document.getElementById('passagesView').classList.toggle('hidden', state.ui.view !== 'passages');
   });
@@ -1498,6 +1721,11 @@ function init() {
   bindSeg('revSubjectSeg', 'revSubject', v => { state.ui.revSubject = v; renderReview(); });
   bindSeg('revStateSeg', 'revState', v => { state.ui.revState = v; renderReview(); });
   bindSeg('revStatusSeg', 'revStatus', v => { state.ui.revStatus = v; renderReview(); });
+  bindSeg('conSubjectSeg', 'conSubject', v => { state.ui.conSubject = v; renderConcepts(); });
+  bindSeg('conStatusSeg', 'conStatus', v => { state.ui.conStatus = v; renderConcepts(); });
+  document.getElementById('conSearch').addEventListener('input', e => {
+    state.ui.conSearch = e.target.value; renderConcepts();
+  });
 
   renderGradeRow('gradeRow', state.ui.expGrade, g => {
     state.ui.expGrade = g; state.ui.selectedKey = null;

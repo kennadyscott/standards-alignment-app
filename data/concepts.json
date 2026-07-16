@@ -192,7 +192,10 @@
     "subject": "social_studies",
     "gradeBand": "3-5",
     "source": "seed",
-    "seededFrom": "ss3-15"
+    "seededFrom": "ss3-15",
+    "mergeCandidates": [
+      "c-markets-exchange-goods-and-services-2"
+    ]
   },
   {
     "id": "c-weighing-costs-and-benefits",
@@ -237,7 +240,10 @@
     "subject": "social_studies",
     "gradeBand": "3-5",
     "source": "seed",
-    "seededFrom": "ss4-04"
+    "seededFrom": "ss4-04",
+    "mergeCandidates": [
+      "c-first-amendment-freedoms-2"
+    ]
   },
   {
     "id": "c-bill-of-rights-limits-government",
@@ -337,7 +343,8 @@
     "needsReview": true,
     "note": "Duplicate concept: seed-034 and seed-039 state the same idea and carry identical title and description. They share one member outright and their other members both say specialization produces trade between regions or countries; only the grade differs. Merge candidates for the curation pass.",
     "mergeCandidates": [
-      "c-specialization-leads-to-trade-2"
+      "c-specialization-leads-to-trade-2",
+      "c-specialization-leads-to-trade-3"
     ]
   },
   {
@@ -393,8 +400,49 @@
     "needsReview": true,
     "note": "Duplicate concept: seed-034 and seed-039 state the same idea and carry identical title and description. They share one member outright and their other members both say specialization produces trade between regions or countries; only the grade differs. Merge candidates for the curation pass.",
     "mergeCandidates": [
-      "c-specialization-leads-to-trade"
+      "c-specialization-leads-to-trade",
+      "c-specialization-leads-to-trade-3"
     ]
+  },
+  {
+    "id": "c-specialization-leads-to-trade-3",
+    "title": "Specialization as a Driver of Trade",
+    "description": "A standard belongs here if it asks students to explain how specializing in what a person, region, or country produces best leads to trade and mutual interdependence.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "seed",
+    "seededFrom": "ss7-09",
+    "needsReview": true,
+    "note": "Duplicate of existing concept c-specialization-leads-to-trade (and its already-flagged twin c-specialization-leads-to-trade-2). Title and description copied verbatim so the merge is greppable. This seed's shared ground — uneven distribution of productive resources leading to specialization and trade between countries — is exactly what that concept states; the existing pair already carries the same causal claim at grades 5 and 6. Third member of the merge set.",
+    "mergeCandidates": [
+      "c-specialization-leads-to-trade",
+      "c-specialization-leads-to-trade-2"
+    ]
+  },
+  {
+    "id": "c-markets-exchange-goods-and-services-2",
+    "title": "Markets Where Buyers and Sellers Exchange",
+    "description": "A standard belongs here if it asks students to explain what a market is or how goods and services move between buyers and sellers within one, including the role of price.",
+    "subject": "social_studies",
+    "gradeBand": "3-8",
+    "source": "seed",
+    "seededFrom": "ss7-11",
+    "needsReview": true,
+    "note": "Duplicate of existing concept c-markets-exchange-goods-and-services; title and description copied verbatim so the merge is greppable. Also asymmetric grain: the grade-7 member is a broad historical claim (the growth of cities and empires fostered markets, and market exchange drove specialization and the shift from barter to monetary economies), of which only 'markets exist and exchange happens in them' is shared with a grade-3 standard about price allocation. That member attaches on a fraction of what it says; its barter-to-money half lives in seed-042.",
+    "mergeCandidates": [
+      "c-markets-exchange-goods-and-services"
+    ]
+  },
+  {
+    "id": "c-currency-enables-exchange-in-trade",
+    "title": "Currency as the Basis for Exchange in Trade",
+    "description": "A standard belongs here if it asks students to explain how money or an agreed currency system, rather than direct barter, is what makes exchange work — including why parties trading across borders need a means of converting one currency into another.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "seed",
+    "seededFrom": "ss7-12",
+    "needsReview": true,
+    "note": "Thin, half-shared pair; reviewer confidence 'partial' and I agree. The Ohio member's actual claim is that market exchange in growing cities and empires drove a transition from barter to monetary economies; the Georgia member's is that international trade requires a currency-exchange system. They meet only at 'exchange runs on money rather than barter,' and neither states the other's substance. That shared proposition is also already stated by existing concept c-money-as-medium-of-exchange ('why money works better than direct barter') at K-2 — this may be that concept at a higher grade rather than a new one. Curation should decide between merging into c-money-as-medium-of-exchange and rejecting the pair."
   },
   {
     "id": "c-motives-for-european-colonization",
@@ -406,6 +454,134 @@
     "seededFrom": "ss8-01"
   },
   {
+    "id": "c-declaration-of-independence-1776",
+    "title": "The 1776 Declaration of Independence and Its Ideals",
+    "description": "A standard belongs here if it asks students to explain the writing, structure, purpose, or founding ideals of the 1776 Declaration of Independence by which the thirteen American colonies broke from British rule — including how it answered tyranny and the abuse of power — and not a declaration of independence issued by some other people in some other era.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "seed",
+    "seededFrom": "ss8-07",
+    "needsReview": true,
+    "note": "Near-duplicate of existing concept c-declaration-of-independence-ideals — recommend merging, but NOT by copying that concept's wording. I deliberately did not reuse its description verbatim: it says 'a declaration of independence' in the abstract, which is the under-specification already flagged in this library, and a state standard about its own 1836-style declaration would pass that test and be wrongly aligned to the 1776 document. The description above names the event. Recommend the existing concept be retitled and rewritten to this wording as part of the merge.",
+    "mergeCandidates": [
+      "c-declaration-of-independence-1776-2"
+    ]
+  },
+  {
+    "id": "c-declaration-of-independence-1776-2",
+    "title": "The 1776 Declaration of Independence and Its Ideals",
+    "description": "A standard belongs here if it asks students to explain the writing, structure, purpose, or founding ideals of the 1776 Declaration of Independence by which the thirteen American colonies broke from British rule — including how it answered tyranny and the abuse of power — and not a declaration of independence issued by some other people in some other era.",
+    "subject": "social_studies",
+    "gradeBand": "3-8",
+    "source": "seed",
+    "seededFrom": "ss8-08",
+    "needsReview": true,
+    "note": "Duplicate of seed-044 (identical title and description, verbatim, so the merge is greppable), and a near-duplicate of existing concept c-declaration-of-independence-ideals. Both seeds share the same Ohio member and pair it with a Georgia standard about the same document; seed-044's counterpart interprets the document's three parts at grade 8, seed-045's explains its writing and purpose at grade 4. Grade and emphasis differ; the concept does not. Merge all three into one.",
+    "mergeCandidates": [
+      "c-declaration-of-independence-1776"
+    ]
+  },
+  {
+    "id": "c-articles-of-confederation-weaknesses",
+    "title": "From the Articles of Confederation to the Constitution",
+    "description": "A standard belongs here if it asks students to identify the weaknesses of the Articles of Confederation — the first national government of the United States after independence — and explain how those failures produced the debate over, and the writing and adoption of, the U.S. Constitution in 1787.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "seed",
+    "seededFrom": "ss8-12"
+  },
+  {
+    "id": "c-causes-of-the-american-civil-war",
+    "title": "Causes of the American Civil War",
+    "description": "A standard belongs here if it asks students to explain the issues and events that drove the United States to the Civil War of 1861-1865 — slavery, states' rights and disputes over the nature of federalism, sectional economic differences, the compromises and court decisions of the 1850s, and the secession crisis following the 1860 election.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "seed",
+    "seededFrom": "ss8-20",
+    "mergeCandidates": [
+      "c-causes-of-the-american-civil-war-2"
+    ]
+  },
+  {
+    "id": "c-causes-of-the-american-civil-war-2",
+    "title": "Causes of the American Civil War",
+    "description": "A standard belongs here if it asks students to explain the issues and events that drove the United States to the Civil War of 1861-1865 — slavery, states' rights and disputes over the nature of federalism, sectional economic differences, the compromises and court decisions of the 1850s, and the secession crisis following the 1860 election.",
+    "subject": "social_studies",
+    "gradeBand": "3-8",
+    "source": "seed",
+    "seededFrom": "ss8-21",
+    "needsReview": true,
+    "note": "Duplicate of seed-047 (identical title and description, verbatim, so the merge is greppable). Both seeds share the same Ohio member; seed-047 pairs it with a grade-8 enumeration of the war's causes and seed-048 with a grade-4 standard naming states' rights and slavery as the sources of North-South tension. Only grade and grain differ. Note also that existing concept c-regional-differences-and-sectionalism was flagged as a genuine mismatch partly because a Civil-War-causes standard attaches to it; if this concept is adopted, that one loses its history half and should be re-examined or rejected.",
+    "mergeCandidates": [
+      "c-causes-of-the-american-civil-war"
+    ]
+  },
+  {
+    "id": "c-civic-participation-and-responsibility",
+    "title": "Civic Participation and the Responsibilities of Citizens",
+    "description": "A standard belongs here if it asks students to explain what citizens are responsible for doing as members of a community or nation, or how taking active part in civic and social groups advances shared and personal goals.",
+    "subject": "social_studies",
+    "gradeBand": "3-8",
+    "source": "seed",
+    "seededFrom": "ss8-37",
+    "needsReview": true,
+    "note": "Thin shared ground and an unresolved overlap. The Ohio member is about the payoff of participation (joining civic groups attains individual and public goals); the Georgia member is a bare list of a citizen's responsibilities. They meet only at the general proposition that citizens are expected to act, and the title above is a bridge holding two halves together rather than one idea. Separately, the Georgia member also passes the membership test of existing concept c-citizens-rights-and-responsibilities ('the duties they owe in return'), so this concept and that one will compete for it; the Ohio member passes neither cleanly. Curation should decide whether the participation half is a distinct concept or this pair should be rejected."
+  },
+  {
+    "id": "c-separation-of-powers-and-checks",
+    "title": "Separation of Powers and Checks and Balances",
+    "description": "A standard belongs here if it asks students to explain how a constitution divides a government into separate branches with distinct powers and lets each branch check the others, whether at the national, state, or local level.",
+    "subject": "social_studies",
+    "gradeBand": "3-8",
+    "source": "seed",
+    "seededFrom": "ss8-38"
+  },
+  {
+    "id": "c-federalism-national-and-state-powers",
+    "title": "Federalism: Powers Divided Between National and State Governments",
+    "description": "A standard belongs here if it asks students to explain how a federal system distributes authority between a national government and the states or provinces within it, including which powers are delegated, reserved, or shared.",
+    "subject": "social_studies",
+    "gradeBand": "3-8",
+    "source": "seed",
+    "seededFrom": "ss8-40"
+  },
+  {
+    "id": "c-us-bill-of-rights-limits-government",
+    "title": "The U.S. Bill of Rights Limits Government Power",
+    "description": "A standard belongs here if it asks students to explain how the Bill of Rights — the first ten amendments added to the U.S. Constitution in 1791 — protects individual rights by constraining what the national government may do, and why those limits were written into the document.",
+    "subject": "social_studies",
+    "gradeBand": "3-8",
+    "source": "seed",
+    "seededFrom": "ss8-41",
+    "needsReview": true,
+    "note": "Near-duplicate of existing concept c-bill-of-rights-limits-government — recommend merging, but I did not copy its wording verbatim. That description says 'an enumerated bill of rights' and 'a constitution' in the abstract, which is the same under-specification already flagged for the declaration concepts: most states' own constitutions contain a bill of rights, so a state standard about its own document would pass that test literally and be wrongly aligned to standards about the federal one. The description above names the 1791 federal amendments. Recommend the existing concept be rewritten to this wording as part of the merge."
+  },
+  {
+    "id": "c-first-amendment-freedoms-2",
+    "title": "Fundamental Freedoms Protected by the First Amendment",
+    "description": "A standard belongs here if it asks students to identify or explain the importance of the freedoms guaranteed by the First Amendment.",
+    "subject": "social_studies",
+    "gradeBand": "3-8",
+    "source": "seed",
+    "seededFrom": "ss8-42",
+    "needsReview": true,
+    "note": "Duplicate of existing concept c-first-amendment-freedoms; title and description copied verbatim so the merge is greppable (no rewrite needed here — 'the First Amendment' names its document unambiguously and does not carry the under-specification problem). But the pair itself is weak and probably adds nothing: the Ohio member says only that the Constitution protects citizens' rights by limiting the powers of government and never mentions the First Amendment, so it attaches on a fraction of what it says and passes seed-052's Bill-of-Rights test just as well. Same Ohio standard as seed-052, paired with a narrower Georgia element. Consider rejecting this pair and letting seed-052 carry that member.",
+    "mergeCandidates": [
+      "c-first-amendment-freedoms"
+    ]
+  },
+  {
+    "id": "c-taxation-and-public-goods",
+    "title": "Government Taxation and Provision of Public Goods",
+    "description": "A standard belongs here if it asks students to explain how a government raises revenue through taxes and uses public spending to provide goods and services that markets do not supply on their own.",
+    "subject": "social_studies",
+    "gradeBand": "3-8",
+    "source": "seed",
+    "seededFrom": "ss8-49",
+    "needsReview": true,
+    "note": "Adjacent to existing concept c-government-trade-barriers, which shares this seed's exact Ohio member (governments impact markets via spending, regulations, taxes, and trade barriers) and whose broad description — 'governments act on markets or trade through tools such as tariffs, quotas, embargoes, taxes, or regulation' — would admit this seed's taxation-and-public-goods member too. That concept's existing note already predicted it would have to split into 'government intervention in markets' and 'trade barriers'; this concept is effectively the fiscal half of that split. Curation should reconcile the three at once rather than treating this as independent."
+  },
+  {
     "id": "c-government-trade-barriers",
     "title": "Government Trade Barriers and Market Intervention",
     "description": "A standard belongs here if it asks students to explain how governments act on markets or trade through tools such as tariffs, quotas, embargoes, taxes, or regulation.",
@@ -415,5 +591,347 @@
     "seededFrom": "ss8-50",
     "needsReview": true,
     "note": "Asymmetric grain — no single title fits both members well. One is broad (government affects markets via spending, regulation, taxes, and trade barriers); the other is narrow (comparing types of trade barriers). Written broadly, as above, the concept will swallow general fiscal and regulatory standards from future states; written narrowly, it drops three-quarters of the first member. This pair probably needs to become two concepts — government intervention in markets, and trade barriers — once more states arrive."
+  },
+  {
+    "id": "c-describing-relative-location",
+    "title": "Describing Relative Location Using Spatial and Directional Terms",
+    "description": "A standard belongs here if it asks students to describe where a person, object, or place is in relation to another using spatial or directional language such as near, far, left, right, or the cardinal directions.",
+    "subject": "social_studies",
+    "gradeBand": "K-2",
+    "source": "ai_draft",
+    "note": "No existing concept addresses spatial language or relative location; c-geography-shapes-economic-activity is about geography's influence on how people live and work, not about locating things. Relative location is a universal primary-grade geography standard and would attract standards from essentially every state."
+  },
+  {
+    "id": "c-using-maps-and-globes-to-locate-places",
+    "title": "Using Maps and Globes to Locate and Represent Places",
+    "description": "A standard belongs here if it asks students to use, read, or create maps and globes — including their basic elements — in order to locate or represent places.",
+    "subject": "social_studies",
+    "gradeBand": "K-2",
+    "source": "ai_draft",
+    "note": "The library has no concept about geographic tools at all; the nearest geography concepts are about environment shaping economic activity and about migration. Map and globe skills are a core, recurring K-5 standard in every state's geography strand."
+  },
+  {
+    "id": "c-physical-characteristics-of-places",
+    "title": "Identifying the Physical Characteristics of a Place",
+    "description": "A standard belongs here if it asks students to identify or describe the physical features of a place, such as landforms, bodies of water, natural resources, or weather.",
+    "subject": "social_studies",
+    "gradeBand": "K-2",
+    "source": "ai_draft",
+    "note": "c-geography-shapes-economic-activity requires explaining geography's influence on how people work and live; these standards stop at naming the physical features themselves, which is a distinct and earlier demand taught in every state's primary geography strand."
+  },
+  {
+    "id": "c-identifying-basic-human-needs-and-wants",
+    "title": "Basic Human Needs and the Difference Between Needs and Wants",
+    "description": "A standard belongs here if it asks students to identify basic human needs such as food, clothing, and shelter, or to distinguish a need from a want.",
+    "subject": "social_studies",
+    "gradeBand": "K-2",
+    "source": "ai_draft",
+    "note": "The library's economics concepts start at scarcity, goods and services, and income; none names basic needs or the needs/wants distinction, which is the entry-level economics standard in nearly every state's K-1 curriculum."
+  },
+  {
+    "id": "c-how-people-meet-basic-needs",
+    "title": "Ways People and Families Meet Their Basic Needs",
+    "description": "A standard belongs here if it asks students to describe the ways people or families meet their basic human needs, including how those ways differ from one family to another.",
+    "subject": "social_studies",
+    "gradeBand": "K-2",
+    "source": "ai_draft",
+    "note": "Distinct from identifying what the needs are and from the library's production and income concepts: this is about the household-level ways needs get met. It is a recurring K-1 standard across states and no existing concept states it."
+  },
+  {
+    "id": "c-authority-figures-and-their-roles",
+    "title": "Authority Figures and Public Officials and Their Roles",
+    "description": "A standard belongs here if it asks students to identify authority figures or public officials and describe the responsibilities or roles they carry out.",
+    "subject": "social_studies",
+    "gradeBand": "K-2",
+    "source": "ai_draft",
+    "note": "The library's government concepts cover why rules exist and what laws accomplish, but nothing covers the people who hold authority. Identifying leaders and their roles is a standard K-2 civics topic in every state."
+  },
+  {
+    "id": "c-voting-as-a-way-groups-make-decisions",
+    "title": "Voting and Democratic Procedures for Making Group Decisions",
+    "description": "A standard belongs here if it asks students to explain or practice voting or other democratic procedures as the means by which a group makes a decision or selects a leader.",
+    "subject": "social_studies",
+    "gradeBand": "K-2",
+    "source": "ai_draft",
+    "note": "No existing concept covers voting or collective decision procedures; c-citizens-rights-and-responsibilities is about the rights and duties citizens hold, not about the mechanism of deciding. Voting as group decision making is a core K-2 civics standard nationally."
+  },
+  {
+    "id": "c-family-and-community-traditions",
+    "title": "Family and Community Traditions and Why They Matter",
+    "description": "A standard belongs here if it asks students to describe family or community traditions, beliefs, or language and explain why they are important to the people who hold them.",
+    "subject": "social_studies",
+    "gradeBand": "K-2",
+    "source": "ai_draft",
+    "note": "c-cultural-diversity-in-communities tests for recognizing that a community contains multiple distinct cultural groups; these standards are about the significance of a family's or community's own traditions, which is a different demand and a staple of K-1 culture strands across states."
+  },
+  {
+    "id": "c-characteristics-of-good-citizenship",
+    "title": "Characteristics and Actions of a Good Citizen",
+    "description": "A standard belongs here if it asks students to identify the traits or actions that make someone a good citizen — such as honesty, respect for others, responsibility, community service, or participation in governance — including recognizing individuals who exemplify them.",
+    "subject": "social_studies",
+    "gradeBand": "K-2",
+    "source": "ai_draft",
+    "note": "c-citizens-rights-and-responsibilities tests for naming the rights citizens hold and the duties owed in return; these standards never mention rights and instead enumerate civic dispositions and actions. c-respecting-rights-of-others requires explaining why rights must be respected, which these do not ask. Good-citizenship traits are a distinct, widely taught K-2 civics topic."
+  },
+  {
+    "id": "c-sources-and-artifacts-of-the-past",
+    "title": "Using Historical Sources and Artifacts to Study the Past",
+    "description": "A standard belongs here if it asks students to identify kinds of historical sources or artifacts and explain how they can be used to learn about the past.",
+    "subject": "social_studies",
+    "gradeBand": "K-2",
+    "source": "ai_draft",
+    "note": "The library contains no historical-inquiry concept of any kind — every concept is content, not method. Learning that photographs, letters, and artifacts are evidence about the past is a recurring primary-grade history standard across states, distinct from generic research or communication skills."
+  },
+  {
+    "id": "c-sequencing-events-and-measuring-time",
+    "title": "Sequencing Events and Describing Time in the Past and Present",
+    "description": "A standard belongs here if it asks students to place events in order in time, or to use chronological vocabulary and tools such as timelines and calendars to describe when something happened.",
+    "subject": "social_studies",
+    "gradeBand": "K-2",
+    "source": "ai_draft",
+    "note": "No concept in the library addresses chronology. Sequencing events and using past/present/future vocabulary and timelines is an explicit, near-universal K-2 history standard (Georgia and Ohio both state it directly), so it would attract members from many states."
+  },
+  {
+    "id": "c-humans-modify-physical-environment",
+    "title": "How People Modify the Physical Environment and the Results",
+    "description": "A standard belongs here if it asks students to identify ways people change the physical environment to suit their purposes, or the consequences that follow from those changes.",
+    "subject": "social_studies",
+    "gradeBand": "K-2",
+    "source": "ai_draft",
+    "note": "c-geography-shapes-economic-activity runs the other direction — environment shaping people. Human-environment interaction in the people-act-on-environment direction has no concept in the library and is a standard element of every state's geography strand."
+  },
+  {
+    "id": "c-people-adapt-to-and-modify-environment",
+    "title": "How People Adapt To and Modify Their Physical Environment",
+    "description": "A standard belongs here if it asks students to describe or explain the ways people adapt to the physical environment where they live or deliberately modify it, and the reasons they do so.",
+    "subject": "social_studies",
+    "gradeBand": "3-5",
+    "source": "ai_draft",
+    "note": "The library's only geography-and-people concept, c-geography-shapes-economic-activity, runs one direction only (environment shapes work). Nothing in the library tests for human adaptation to, or deliberate modification of, the environment — a core human-environment-interaction idea that Ohio, Georgia, and Texas all carry at multiple grades."
+  },
+  {
+    "id": "c-consequences-of-modifying-environment",
+    "title": "Consequences of Human Modification of the Environment",
+    "description": "A standard belongs here if it asks students to identify or weigh the positive and negative consequences that follow when people modify the physical environment.",
+    "subject": "social_studies",
+    "gradeBand": "3-5",
+    "source": "ai_draft",
+    "note": "Distinct from the adaptation-and-modification concept above: that one tests for describing what people do and why; this one tests for evaluating what results. Texas separates them into their own elements at three grades, and the evaluative move (positive vs negative consequences) is a different cognitive demand that other states also assess separately."
+  },
+  {
+    "id": "c-map-elements-and-map-reading-skills",
+    "title": "Applying Map Elements to Locate Places and Interpret Maps",
+    "description": "A standard belongs here if it asks students to apply map elements — title, legend, symbols, scale, grid system, or compass rose and directions — in order to locate places on or create and interpret a map.",
+    "subject": "social_studies",
+    "gradeBand": "3-5",
+    "source": "ai_draft",
+    "note": "The library carries no geographic-skills concept at all. Map and globe skills are a named, separately assessed strand in Ohio, Georgia, and Texas alike, and the test here is concrete enough (named map elements, applied) not to swallow general geography content."
+  },
+  {
+    "id": "c-primary-and-secondary-sources",
+    "title": "Distinguishing and Using Primary and Secondary Sources",
+    "description": "A standard belongs here if it asks students to distinguish primary from secondary sources and to use, compare, or question the reliability of the information those sources provide.",
+    "subject": "social_studies",
+    "gradeBand": "3-5",
+    "source": "ai_draft",
+    "note": "The library carries no historical-inquiry concept. The primary/secondary distinction is a named strand in Ohio, Georgia, and Texas at every grade in this band, and the test is specific to source type rather than to generic critical thinking, so it will not swallow the rest of the skills strand."
+  },
+  {
+    "id": "c-supply-and-demand-shape-prices",
+    "title": "Supply and Demand Shape Prices and Market Behavior",
+    "description": "A standard belongs here if it asks students to explain how supply and demand determine the price of a good or service or change the behavior of consumers and producers.",
+    "subject": "social_studies",
+    "gradeBand": "3-5",
+    "source": "ai_draft",
+    "note": "c-markets-exchange-goods-and-services tests for what a market is and how goods move within one, mentioning price only as a role; it does not test for the supply-and-demand mechanism that sets price. Attaching these standards there would be the vocabulary overlap the model warns against. Supply and demand is canonical elementary economics in every state."
+  },
+  {
+    "id": "c-branches-of-government-and-functions",
+    "title": "The Branches of Government and Their Basic Functions",
+    "description": "A standard belongs here if it asks students to identify the branches of a government and explain the basic function each branch performs.",
+    "subject": "social_studies",
+    "gradeBand": "3-5",
+    "source": "ai_draft",
+    "note": "The library has concepts for founding documents and for rights, but none for governmental structure. Identifying the three branches and their functions is a fixed feature of elementary civics in every state, and the test is narrow enough not to absorb general 'levels of government' or checks-and-balances standards."
+  },
+  {
+    "id": "c-geographic-factors-shape-settlement",
+    "title": "Geographic Factors Influence Where People Settle",
+    "description": "A standard belongs here if it asks students to explain how physical geographic factors influence patterns of settlement or the distribution of population across a place.",
+    "subject": "social_studies",
+    "gradeBand": "3-5",
+    "source": "ai_draft",
+    "note": "c-geography-shapes-economic-activity tests for geography shaping the work people do; c-reasons-people-migrate-and-settle tests for why people leave one place for another. Neither tests for geography determining where population concentrates. Settlement-pattern geography is a standing element in Ohio, Georgia, and Texas."
+  },
+  {
+    "id": "c-representative-government-in-colonies",
+    "title": "Origins of Representative Government in Colonial Settlements",
+    "description": "A standard belongs here if it asks students to identify or compare the systems of government colonists established, including early instances of representative self-government as against monarchy.",
+    "subject": "social_studies",
+    "gradeBand": "3-5",
+    "source": "ai_draft",
+    "note": "The library's colonial concept (c-motives-for-european-colonization) covers only why Europeans came; its founding-document concepts begin at the Revolution. The colonial roots of representative government — compacts and colonial assemblies — is standard fare in Ohio and Georgia elementary US history and has no home in the library."
+  },
+  {
+    "id": "c-westward-territorial-expansion",
+    "title": "Westward Territorial Expansion of a Nation",
+    "description": "A standard belongs here if it asks students to identify the acquisitions, expeditions, or ideologies by which a nation expanded its territory westward across a continent.",
+    "subject": "social_studies",
+    "gradeBand": "3-5",
+    "source": "ai_draft",
+    "note": "Nothing in the library touches territorial expansion; the closest concepts are about migration (why individuals move) and sectionalism (why regions conflict), neither of which tests for national territorial growth. Louisiana Purchase / Lewis and Clark / Manifest Destiny is a fixed block of elementary US history in Ohio and Georgia. Proposed on one Texas member because the cross-state pull is high, not because Texas coverage is deep — reviewer should weigh that."
+  },
+  {
+    "id": "c-civil-war-aftermath-and-reconstruction",
+    "title": "Aftermath of Civil War and the Reconstruction That Followed",
+    "description": "A standard belongs here if it asks students to describe the effects a civil war and the reconstruction period that followed had on a nation or its regions, including changes made to its constitution.",
+    "subject": "social_studies",
+    "gradeBand": "3-5",
+    "source": "ai_draft",
+    "note": "c-regional-differences-and-sectionalism covers the causes of sectional conflict only; nothing in the library covers what a civil war left behind. Ohio and Georgia both carry Civil War effects and Reconstruction in this band, and the two Texas members here sit at different grades, which is itself evidence the idea is grade-portable."
+  },
+  {
+    "id": "c-adapting-to-and-modifying-environment",
+    "title": "Adapting to and Modifying the Physical Environment",
+    "description": "A standard belongs here if it asks students to describe how people adapt to or deliberately modify the physical environment, including the positive and negative consequences of those modifications.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "ai_draft",
+    "note": "The library has c-geography-shapes-economic-activity for environment-shapes-people, but nothing for the reverse direction — people acting on the environment. This is a distinct, universally taught human-systems idea; Ohio states it in five separate standards across grades 3, 4, 5, 6, and 8 (e.g. 'People have modified the environment throughout history resulting in both positive and negative consequences', 'human activities modify the physical environment'), none of which currently has a home."
+  },
+  {
+    "id": "c-cultural-diffusion-among-societies",
+    "title": "Cultural Diffusion Among Societies",
+    "description": "A standard belongs here if it asks students to explain how cultural practices, technologies, or ideas spread from one society to another, what facilitates that spread, or what results from it.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "ai_draft",
+    "note": "Cultural diffusion currently has no concept, so Ohio's three diffusion standards (6.SS.8 diffusion of practices/technology/religions; 7.SS.14 trade routes spreading ideas and technology; 7.SS.15 improvements in transportation and communication facilitating cultural diffusion) are unhoused — 6.SS.8 is in fact parked in c-world-religions-and-belief-systems, which the curator note flags as exactly this mis-fit ('one member is about diffusion... candidate for rejection, or for narrowing'). This concept is the clean home for the diffusion strand and is not a duplicate of the religions concept, which tests comparative belief systems."
+  },
+  {
+    "id": "c-comparing-forms-of-government",
+    "title": "Comparing Forms of Government and Citizen Participation",
+    "description": "A standard belongs here if it asks students to compare or classify forms of government by how power is held, how far that power is limited, or what role citizens play in choosing leaders.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "ai_draft",
+    "note": "The library has no concept for comparative government at all, despite this being one of the densest cross-state clusters in the corpus: Ohio 6.SS.10 categorizes governments as monarchies/theocracies/dictatorships/democracies and ties citizens' liberties to limits on governmental authority, and Georgia repeats 'Compare and contrast various forms of government' across five separate standards in grades 6 and 7. The nearest existing concept, c-bill-of-rights-limits-government, tests an enumerated bill of rights and does not reach government typology."
+  },
+  {
+    "id": "c-using-primary-and-secondary-sources",
+    "title": "Using Primary and Secondary Sources",
+    "description": "A standard belongs here if it asks students to distinguish between, locate, or use primary and secondary sources to acquire information about a topic or event.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "ai_draft",
+    "note": "The library contains no inquiry-skills concepts, so Ohio's three primary/secondary source standards (3.SS.2, 4.SS.2, 8.SS.1) have no home. Texas repeats the same standard verbatim in each of grades 6, 7, and 8. This is core and recurring in every state's social studies framework."
+  },
+  {
+    "id": "c-evaluating-source-credibility-and-bias",
+    "title": "Evaluating Sources for Credibility and Bias",
+    "description": "A standard belongs here if it asks students to judge a source's validity, credibility, accuracy, or bias rather than simply to use it.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "ai_draft",
+    "note": "Distinct from merely using sources: this is the evaluative move. Ohio 6.SS.9 states it directly ('Sources should be examined for accuracy and credibility') and it currently has no home. Texas repeats it verbatim in grades 6, 7, and 8. Kept separate from using-primary-and-secondary-sources because the tests discriminate different asks."
+  },
+  {
+    "id": "c-claims-supported-by-evidence",
+    "title": "Claims Supported by Evidence and Reasoning",
+    "description": "A standard belongs here if it asks students to formulate, communicate, or defend a claim or position about a social studies topic using evidence and reasoning.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "ai_draft",
+    "note": "Evidence-based argument in social studies has no concept, leaving Ohio 6.SS.9 ('used to effectively communicate and defend a claim based on evidence') and Ohio 8.SS.1 ('to present and defend a position') unhoused. Texas repeats the standard verbatim across grades 6, 7, and 8. Core and recurring wherever inquiry frameworks are adopted."
+  },
+  {
+    "id": "c-constitutional-principles-of-government",
+    "title": "Constitutional Principles That Structure Government",
+    "description": "A standard belongs here if it asks students to explain how a constitution structures a government through principles such as separation of powers, checks and balances, federalism, republicanism, or popular sovereignty.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "ai_draft",
+    "note": "c-bill-of-rights-limits-government covers only the rights-limiting half of constitutional government; nothing covers the structural principles. Ohio 8.SS.22 ('established a federal republic... separation of powers, and checks and balances') and Georgia SS4CG1 (popular sovereignty, federal system, representative republic), SS4CG3a (checks and balances, separation of powers), and SS8CG1a/b (a state constitution's structure and its relationship to the national one, separation of powers among a state's three branches) all state it and none has a home."
+  },
+  {
+    "id": "c-creating-and-ratifying-a-constitution",
+    "title": "Creating and Ratifying a National Constitution",
+    "description": "A standard belongs here if it asks students to explain the weaknesses of an earlier governing charter, the issues debated at a constitutional convention, or the debate over ratifying the resulting constitution.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "ai_draft",
+    "note": "Nothing in the library covers the founding-charter transition. Ohio 8.SS.8 states it as a single content statement ('Problems arising under the Articles of Confederation led to debate over the adoption of the U.S. Constitution'), and Georgia states it twice (SS4H2b: weaknesses of the Articles, the Great Compromise, the Three-Fifths Compromise; SS8H3d: how the weaknesses of the Articles led to writing a new federal Constitution). Distinct from c-declaration-of-independence-ideals and from constitutional-principles, which test the finished document rather than its making."
+  },
+  {
+    "id": "c-reconstruction-after-civil-war",
+    "title": "Reconstruction and Its Effects After Civil War",
+    "description": "A standard belongs here if it asks students to explain the political, economic, or social changes, reform programs, or lingering problems of the postwar Reconstruction period, including the constitutional amendments it produced.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "ai_draft",
+    "note": "Reconstruction has no concept, though all three states teach it: Ohio 8.SS.14 ('The Reconstruction period resulted in changes to the U.S. Constitution, an affirmation of federal authority and lingering social and political differences'), Georgia SS4H6 (13th/14th/15th Amendments, Freedmen's Bureau, sharecropping, Jim Crow) and Georgia SS8H6 (Reconstruction's impact on a state, including the amendments and the removal of Black legislators)."
+  },
+  {
+    "id": "c-sectional-disputes-cause-civil-war",
+    "title": "Sectional Disputes That Led to Civil War",
+    "description": "A standard belongs here if it asks students to explain how disputes over slavery, states' rights, or sectional economic interests drove a nation into civil war.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "ai_draft",
+    "note": "The nearest existing concept, c-regional-differences-and-sectionalism, is a bridge the curator's own note calls a 'genuine mismatch' and recommends rejecting: it forces a regional-geography standard and a Civil-War-causes standard together and explicitly warns that 'a pure Civil-War-causes standard' attaching to it is the discrimination failure the spine is meant to prevent. This is the clean causal half, not a duplicate: Ohio 8.SS.12 ('Disputes over the nature of federalism, complicated by economic developments... resulted in sectional issues, including slavery, which led to the American Civil War') and Georgia SS8H5a (slavery, states' rights, nullification, Compromise of 1850) and SS4H5b (states' rights and slavery increased tensions between North and South) all state it. If the reviewer rejects the bridge concept, its Civil-War-causes member belongs here."
+  },
+  {
+    "id": "c-forced-removal-of-indigenous-peoples",
+    "title": "Forced Removal of Indigenous Peoples From Their Lands",
+    "description": "A standard belongs here if it asks students to explain the reasons for, and the consequences of, a government forcibly removing Indigenous peoples from their lands.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "ai_draft",
+    "note": "No concept covers removal, though it is taught in every state that teaches national expansion. Georgia states it twice (SS8H4d/e: the removal of the Muscogee and the Cherokee, John Ross, Andrew Jackson, Worcester v. Georgia, the Trail of Tears; SS4H3b: the impact of westward expansion on American Indians including the Trail of Tears) and Ohio names it in 8.SS.11 ('the displacement of American Indians'). c-indigenous-cultures-and-environment tests precontact ways of life and does not reach removal."
+  },
+  {
+    "id": "c-geography-shapes-historical-events",
+    "title": "Geographic Factors Shape the Course of Historical Events",
+    "description": "A standard belongs here if it asks students to explain how physical geography — landforms, waterways, climate, weather — shaped the course or outcome of historical events in a place.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "ai_draft",
+    "note": "Distinct from c-geography-shapes-economic-activity, which tests geography's effect on the work people do, not on historical events. Ohio 8.SS.15 ('how historic events are shaped by geography'), Georgia SS4G2a (how each force used the physical geography of each battle site) and Georgia SS8G1d ('the importance of water in [a state's] historical development') all state it and none has a home."
+  },
+  {
+    "id": "c-state-and-local-government-structure",
+    "title": "Structure and Funding of State and Local Government",
+    "description": "A standard belongs here if it asks students to describe the structure and functions of government below the national level, or how state and local governments raise and spend revenue.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "ai_draft",
+    "note": "The library's civics concepts stop at rights, laws, and the national constitution; subnational government has no concept. Georgia devotes six standards to it (SS8CG1-CG6: the state constitution, the legislative, executive, and judicial branches, local governments, and — matching directly — 'Describe how state government is funded and how spending decisions are made' and 'Describe how local government is funded'). Every state teaches its own state and local government somewhere."
+  },
+  {
+    "id": "c-slave-trade-and-plantation-economy",
+    "title": "The Slave Trade and the Plantation Economy",
+    "description": "A standard belongs here if it asks students to explain how the slave trade and the forced labor of enslaved Africans developed and shaped a region's economy.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "ai_draft",
+    "note": "No concept covers slavery as an economic system, only as a cause of sectional conflict. Ohio 8.SS.4 states it directly ('The practice of race-based slavery led to the forced migration of Africans to the American colonies and contributed to colonial economic development') and it has no home. The transatlantic slave trade and plantation economy are taught in every state's early-national history."
+  },
+  {
+    "id": "c-course-and-outcome-of-a-civil-war",
+    "title": "Course and Outcome of a Civil War",
+    "description": "A standard belongs here if it asks students to describe the major battles, turning-point events, or significant figures of a civil war and how they shaped its course and outcome.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "ai_draft",
+    "note": "The library has c-course-and-outcome-of-independence-war for a war of independence but no counterpart for a civil war, though all three states teach it: Ohio 8.SS.13 ('Key events and significant figures in American history influenced the course and outcome of the Civil War'), Georgia SS4H5c (Fort Sumter, Gettysburg, Appomattox) and SS4H5d (Lincoln, Lee, Grant, Davis), and Georgia SS8H5b (a state's role in the war). Not a duplicate — the independence-war concept tests a colonial war against imperial rule."
+  },
+  {
+    "id": "c-using-geographic-tools-to-analyze-data",
+    "title": "Using Geographic Tools to Analyze Data",
+    "description": "A standard belongs here if it asks students to create or interpret maps, graphs, or charts in order to gather, analyze, and report information about people, places, and environments.",
+    "subject": "social_studies",
+    "gradeBand": "6-8",
+    "source": "ai_draft",
+    "note": "No concept covers geographic tools, leaving Ohio 6.SS.3 ('Geographic tools can be used to gather, process and report information about people, places and environments'), Ohio 7.SS.12 (maps used to trace human settlement over time), and Ohio 6.SS.4 (latitude and longitude for absolute location) unhoused. Texas restates it in every grade of the band. Distinct from geography-shapes-historical-events, which tests a causal claim rather than a tool skill."
   }
 ]

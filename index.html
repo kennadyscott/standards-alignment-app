@@ -20,6 +20,7 @@
   </div>
   <nav class="tabs" id="navTabs">
     <button class="tab active" data-view="explorer">Explorer</button>
+    <button class="tab" data-view="concepts">Concepts <span class="badge" id="conceptBadge">0</span></button>
     <button class="tab" data-view="review">Review Queue <span class="badge" id="pendingBadge">0</span></button>
     <button class="tab" data-view="passages">Passage Sets</button>
   </nav>
@@ -66,6 +67,29 @@
     </div>
     <div id="detailContent" class="hidden"></div>
   </section>
+</main>
+
+<main id="conceptsView" class="view hidden">
+  <div class="review-header">
+    <div class="review-filters">
+      <div class="seg" id="conSubjectSeg">
+        <button class="seg-btn active" data-val="social_studies">Social Studies</button>
+        <button class="seg-btn" data-val="science">Science</button>
+        <button class="seg-btn" data-val="ela">ELAR</button>
+      </div>
+      <div class="seg" id="conStatusSeg">
+        <button class="seg-btn active" data-val="pending">Pending</button>
+        <button class="seg-btn" data-val="flagged">Needs review</button>
+        <button class="seg-btn" data-val="merge">Duplicates</button>
+        <button class="seg-btn" data-val="approved">Approved</button>
+        <button class="seg-btn" data-val="rejected">Rejected</button>
+        <button class="seg-btn" data-val="all">All</button>
+      </div>
+      <input type="search" id="conSearch" placeholder="Filter concepts…" style="font:inherit; padding:7px 12px; border:1px solid var(--line); border-radius:8px; min-width:200px">
+    </div>
+    <div class="review-progress" id="conceptProgress"></div>
+  </div>
+  <div class="review-list" id="conceptList"></div>
 </main>
 
 <main id="reviewView" class="view hidden">
