@@ -141,7 +141,8 @@ const state = {
     selectedKey: null, search: '',
     revSubject: 'social_studies', revGrade: '4', revStatus: 'pending', revState: 'ALL',
     inState: 'OH', inGrade: '4', overrideKey: null,
-    inCms: 'all', inSelected: null,                    // State Lists: CMS filter + selected set
+    inStage: 'all', inSelected: null,                  // State Lists: stage filter + selected set
+    dashOpen: {},                                      // Dashboard: which grade sections are expanded
     setFilterStatus: 'all', setFilterGrade: 'all',     // Master list filters
     currentSetId: null, openPicker: null,
   },
@@ -1832,12 +1833,14 @@ function assignedStateStd(s, hit, st, grade) {
 
 // Compact left-panel row: title + ID + grade + status, click to open the full set.
 function inputListItem(row, selected) {
-  const { set: s, category } = row;
-  const catChip = category === 'cms'
-    ? '<span class="chip chip-entered">✓ Entered in CMS</span>'
-    : category === 'needs'
-      ? '<span class="chip chip-warn">Needs approval</span>'
-      : '<span class="chip">Aligned</span>';
+  const { set: s, stage } = row;
+  const catChip = {
+    entered: '<span class="chip chip-entered">✓ Entered in CMS</span>',
+    approval: '<span class="chip chip-warn">Needs approval</span>',
+    standards: '<span class="chip chip-stage">Needs standards</span>',
+    peer: '<span class="chip chip-stage">Needs peer task</span>',
+    enter: '<span class="chip">To be entered</span>',
+  }[stage] || '<span class="chip">Aligned</span>';
   return `
     <div class="std-item ${selected ? 'active' : ''}" data-insel="${esc(s.id)}">
       <div class="std-item-top">
@@ -1861,12 +1864,31 @@ function detailQuestionHtml(q, i, s, st, grade) {
     const tag = (q.stateStandards || {})[st];
     const open = state.ui.openPicker && state.ui.openPicker.section === 'qstate'
       && state.ui.openPicker.index === i && state.ui.openPicker.setId === s.id;
-    const inner = tag
-      ? `<span class="tag-chip"><b>${esc(tag.code)}</b> · ${STATE_NAMES[st]}
-           <button class="tag-x" data-qsuntag="${i}" title="Remove tag">✕</button></span>`
-      : open
-        ? pickerHtml('qstate', i, st, qstateScope(grade), `Showing ${STATE_NAMES[st]} ELAR standards for Grade ${grade}.`)
+    let inner;
+    if (tag) {
+      inner = `<span class="tag-chip"><b>${esc(tag.code)}</b> · ${STATE_NAMES[st]}
+           <button class="tag-x" data-qsuntag="${i}" title="Remove tag">✕</button></span>`;
+    } else if (open) {
+      inner = pickerHtml('qstate', i, st, qstateScope(grade), `Showing ${STATE_NAMES[st]} ELAR standards for Grade ${grade}.`);
+    } else {
+      // Recommend from the alignment work already done: the question's native standard's
+      // approved alignments into this state at this grade. Accept in one click, or pick another.
+      const nstd = native && tagStd(native);
+      const recs = nstd
+        ? alignedTo(nstd).filter(h => h.std.state === st && String(h.std.grade) === String(grade)).slice(0, 3)
+        : [];
+      inner = recs.length
+        ? `<div class="q-recs">
+            <div class="align-mini-title" style="margin-bottom:4px">Recommended from approved alignments</div>
+            ${recs.map(h => `<div class="q-rec-row">
+              <span class="align-mini-code">${esc(h.std.code)}</span>
+              <span class="q-rec-desc">${esc(h.std.description.slice(0, 90))}${h.std.description.length > 90 ? '…' : ''}</span>
+              <button class="act-btn approve" data-qsrec="${i}|${esc(h.std.subject)}|${esc(h.std.code)}">✓ Accept</button>
+            </div>`).join('')}
+            <button class="act-btn tag-open" data-qspick="${i}">Choose a different standard…</button>
+          </div>`
         : `<button class="act-btn tag-open" data-qspick="${i}">＋ Tag ${STATE_NAMES[st]} standard</button>`;
+    }
     tagArea = `<div class="q-tag-area">
       ${native ? `<div class="concept-meta" style="margin-bottom:6px"><span class="chip">${esc(native.code)} · ${STATE_NAMES[native.state] || native.state}</span></div>` : ''}
       ${inner}</div>`;
@@ -1931,10 +1953,17 @@ function renderInputDetail(row, st, grade) {
        ${nativeRow ? '' : `<button class="act-btn" data-iact="override|${esc(k)}">Override standard</button>`}
        <button class="act-btn reject" data-iact="${dismissAct}">✕ Dismiss</button>`;
   } else {
-    // In CMS is only markable once the set has a passage ID (given on the Master list).
-    actions = `${s.passageId
-        ? `<button class="act-btn approve" data-iact="cms|${esc(k)}">✓ Entered in CMS</button>`
-        : `<span class="cms-chip disabled" title="Add a passage ID on the Master Passage List first">Not in CMS — needs a passage ID</span>`}
+    // In CMS unlocks only at the To Be Entered stage, and only with a passage ID —
+    // earlier stages say what still blocks it.
+    const stage = row.stage || rowStage(row, st, grade);
+    const cmsPart = stage === 'standards'
+      ? `<span class="cms-chip disabled">Not in CMS — tag the ${STATE_NAMES[st]} standards below first</span>`
+      : stage === 'peer'
+        ? `<span class="cms-chip disabled">Not in CMS — create the peer revision task below</span>`
+        : s.passageId
+          ? `<button class="act-btn approve" data-iact="cms|${esc(k)}">✓ Entered in CMS</button>`
+          : `<span class="cms-chip disabled" title="Add a passage ID on the Master Passage List first">Not in CMS — needs a passage ID</span>`;
+    actions = `${cmsPart}
        ${nativeRow ? '' : `<button class="act-btn" data-iact="override|${esc(k)}">Override</button>`}
        <button class="act-btn reject" data-iact="${dismissAct}" title="Remove from this grade">Dismiss</button>`;
   }
@@ -1964,7 +1993,9 @@ function renderInputDetail(row, st, grade) {
         ${s.gaSubtopic ? `<span class="chip">${esc(s.gaSubtopic)}</span>` : ''}
       </div>
       <div style="margin-top:10px">${stdLine}</div>
-      <div class="detail-actions">${actions}</div>
+      <div class="detail-actions">${actions}
+        <button class="act-btn" id="editOnMaster" title="Passage text, questions and prompt live on the master set — editing there updates every state">✎ Edit set</button>
+      </div>
     </div>
 
     <div class="ps-section">
@@ -2004,6 +2035,27 @@ function renderInputDetail(row, st, grade) {
     pushState(); renderInput();
     toast(`Assigned to ${e.target.value}`);
   });
+
+  // Edit jumps to the Master editor — the set is one source of truth; passage text,
+  // questions and prompt edited there update every state's view.
+  const editBtn = box.querySelector('#editOnMaster');
+  if (editBtn) editBtn.addEventListener('click', () => {
+    state.ui.currentSetId = s.id;
+    state.ui.openPicker = null;
+    document.querySelector('#navTabs .tab[data-view="passages"]').click();
+    renderPassages();
+  });
+
+  // one-click accept of a recommended standard (from approved alignments)
+  box.querySelectorAll('[data-qsrec]').forEach(b => b.addEventListener('click', () => {
+    const [i, subject, code] = b.dataset.qsrec.split('|');
+    const q = s.questions[+i];
+    q.stateStandards = q.stateStandards || {};
+    q.stateStandards[st] = { state: st, subject, code };
+    saveSets();
+    toast(`Tagged ${code} for ${STATE_NAMES[st]}`);
+    renderInput();
+  }));
 
   // question-level state tagging
   box.querySelectorAll('[data-qspick]').forEach(b => b.addEventListener('click', () => {
@@ -2115,19 +2167,27 @@ function renderInput() {
 
   const st = state.ui.inState, grade = state.ui.inGrade;
   const rows = setsForGrade(st, grade);
-  const inCms = rows.filter(r => r.category === 'cms');
-  const aligned = rows.filter(r => r.category === 'aligned');
-  const needs = rows.filter(r => r.category === 'needs');
+  rows.forEach(r => { r.stage = rowStage(r, st, grade); });
+  const byStage = k => rows.filter(r => r.stage === k);
   const dismissed = state.sets.filter(s => state.setDismiss[inputKey(s.id, st, grade)]).length;
+
+  const stages = inputStages(st);
+  const counts = Object.fromEntries(stages.map(x => [x.key, byStage(x.key).length]));
 
   document.getElementById('inputProgress').textContent =
     `${rows.length} passage${rows.length === 1 ? '' : 's'} for ${STATE_NAMES[st]} Grade ${grade} · `
-    + `${inCms.length} entered in CMS, ${aligned.length} to be entered, ${needs.length} need approval`
+    + stages.map(x => `${counts[x.key]} ${x.short}`).join(', ')
     + (dismissed ? ` · ${dismissed} dismissed` : '');
 
-  // CMS filter: All / Entered in CMS / Needs to be Entered (everything not yet entered).
-  const f = state.ui.inCms;
-  const visible = f === 'entered' ? inCms : f === 'needs' ? [...aligned, ...needs] : rows;
+  // Stage filter seg (dynamic: Georgia carries the extra Peer Task stage).
+  const seg = document.getElementById('inStageSeg');
+  if (state.ui.inStage !== 'all' && !stages.some(x => x.key === state.ui.inStage)) state.ui.inStage = 'all';
+  seg.innerHTML = `<button class="seg-btn ${state.ui.inStage === 'all' ? 'active' : ''}" data-val="all">All to-dos</button>`
+    + stages.map(x => `<button class="seg-btn ${state.ui.inStage === x.key ? 'active' : ''}" data-val="${x.key}">${x.label}</button>`).join('');
+
+  // "All" is the working queue — Entered in CMS lives only under its own filter.
+  const f = state.ui.inStage;
+  const visible = f === 'all' ? rows.filter(r => r.stage !== 'entered') : byStage(f);
 
   const box = document.getElementById('inputList');
   box.innerHTML = '';
@@ -2142,15 +2202,16 @@ function renderInput() {
     return;
   }
   if (!visible.length) {
-    box.appendChild(el(`<div class="review-empty">Nothing ${f === 'entered' ? 'entered in CMS' : 'left to enter'} for ${STATE_NAMES[st]} Grade ${grade}.</div>`));
+    box.appendChild(el(`<div class="review-empty">${f === 'all'
+      ? `All ${rows.length} passage${rows.length === 1 ? '' : 's'} for ${STATE_NAMES[st]} Grade ${grade} are entered in CMS. 🎉`
+      : `Nothing in this stage for ${STATE_NAMES[st]} Grade ${grade}.`}</div>`));
     renderInputDetail(null, st, grade);
     return;
   }
 
   // keep the selection if it's still visible; otherwise select the first row as displayed
-  // (to-do items first — see group order below)
-  const rank = { aligned: 0, needs: 1, cms: 2 };
-  visible.sort((a, b) => rank[a.category] - rank[b.category]);
+  const order = Object.fromEntries(stages.map((x, ix) => [x.key, ix]));
+  visible.sort((a, b) => order[a.stage] - order[b.stage]);
   if (!visible.some(r => r.set.id === state.ui.inSelected)) state.ui.inSelected = visible[0].set.id;
   const selId = state.ui.inSelected;
 
@@ -2168,12 +2229,48 @@ function renderInput() {
       box.appendChild(item);
     });
   };
-  // To-do list ordering: what still needs posting into CMS sits on top; done work sinks.
-  group('To Be Entered', visible.filter(r => r.category === 'aligned'), 'confirmed — ready to enter in CMS');
-  group('Needs Approval', visible.filter(r => r.category === 'needs'), 'approve the alignment first');
-  group('Entered in CMS', visible.filter(r => r.category === 'cms'), 'done');
+  // Pipeline order — each group is one team's queue.
+  stages.forEach(x => {
+    if (f === 'all' && x.key === 'entered') return;
+    group(x.label, visible.filter(r => r.stage === x.key), x.hint);
+  });
 
   renderInputDetail(visible.find(r => r.set.id === selId), st, grade);
+}
+
+/* ---------- the State Lists pipeline ----------
+   A passage set walks four stages into a state's CMS (five in Georgia):
+     1. Needs Approval        — confirm the set really aligns into this state (Kennady)
+     2. Needs Standards       — tag each question with this state's standard (Kennady · Erin)
+     2b. Needs Peer Task      — Georgia only: author the peer revision task (Kennady · Erin)
+     3. To Be Entered         — tag the ECR set in CMS (Kayli · Han · Sophie)
+     4. Entered in CMS        — done; leaves the working queue, lives under its own filter. */
+function inputStages(st) {
+  const stages = [
+    { key: 'approval', label: 'Needs Approval', short: 'need approval', hint: 'confirm the alignment — Kennady' },
+    { key: 'standards', label: 'Needs Standards', short: 'need standards', hint: `tag each question's standard — Kennady · Erin` },
+  ];
+  if (st === 'GA') stages.push({ key: 'peer', label: 'Needs Peer Task', short: 'need peer task', hint: 'create the peer revision task — Kennady · Erin' });
+  stages.push(
+    { key: 'enter', label: 'To Be Entered', short: 'to be entered', hint: 'tag the ECR set in CMS — Kayli · Han · Sophie' },
+    { key: 'entered', label: 'Entered in CMS', short: 'entered', hint: 'done' });
+  return stages;
+}
+
+// Every question must carry a standard usable in this state: its native tag if it's
+// this state's, otherwise a per-state tag made in the detail panel.
+function questionsTagged(s, st) {
+  return s.questions.every(q =>
+    (q.standard && q.standard.state === st) || (q.stateStandards || {})[st]);
+}
+
+function rowStage(row, st, grade) {
+  const { set: s, category } = row;
+  if (category === 'cms') return 'entered';
+  if (category === 'needs') return 'approval';
+  if (!questionsTagged(s, st)) return 'standards';
+  if (st === 'GA' && !s.peerRevision.some(t => (t.text || '').trim())) return 'peer';
+  return 'enter';
 }
 
 // action is "verb|inputKey" (setId|state:grade). approve/dismiss act on every alignment
@@ -2232,12 +2329,32 @@ function setSubdomain(s) {
   return s.gaSubtopic || 'Untagged';
 }
 
-const DASH_ORDER = [
-  'Earth Science', 'Life Science', 'Physical Science',
-  'History', 'Geography', 'Government', 'Economics', 'Social Studies',
-  'Poetry', 'Narrative Fiction', 'Traditional Literature', 'Short Literary Forms',
-  'Biographies', 'True Narratives',
-];
+// The sub-domains a grade is EXPECTED to cover (the hierarchy) — missing ones must show,
+// in red. G2's informational level is coarser (Science / Social Studies as wholes).
+const DASH_EXPECT = {
+  '2': ['Science', 'Social Studies',
+        'Poetry', 'Narrative Fiction', 'Traditional Literature', 'Short Literary Forms',
+        'Biographies', 'True Narratives'],
+  '3-8': ['Earth Science', 'Life Science', 'Physical Science',
+          'History', 'Geography', 'Government', 'Economics',
+          'Poetry', 'Narrative Fiction', 'Traditional Literature', 'Short Literary Forms',
+          'Biographies', 'True Narratives'],
+};
+const DASH_GOAL = 4;   // sets per sub-domain per item-set type
+
+function dashSubdomain(s, grade) {
+  let dom = setSubdomain(s);
+  if (grade === '2') {   // fold fine strands back to G2's coarse hierarchy
+    if (['Earth Science', 'Life Science', 'Physical Science'].includes(dom)) dom = 'Science';
+    if (['History', 'Geography', 'Government', 'Economics'].includes(dom)) dom = 'Social Studies';
+  }
+  return dom;
+}
+
+function dashCell(n) {
+  const cls = n >= DASH_GOAL ? 'goal-met' : n > 0 ? 'goal-partial' : 'goal-missing';
+  return `<td class="dash-cell ${cls}">${n}</td>`;
+}
 
 function renderDash() {
   const wrap = document.getElementById('dashWrap');
@@ -2250,51 +2367,56 @@ function renderDash() {
 
   GRADES.forEach(g => {
     const sets = state.sets.filter(s => String(s.gaGrade) === g);
-    if (!sets.length) return;
+    const expect = DASH_EXPECT[g === '2' ? '2' : '3-8'];
+    const open = !!state.ui.dashOpen[g];
 
-    // sub-domain -> {single, multi}
-    const tally = new Map();
+    // sub-domain -> {informative, opinion}
+    const tally = new Map(expect.map(d => [d, { informative: 0, opinion: 0 }]));
     sets.forEach(s => {
-      const dom = setSubdomain(s);
-      const t = tally.get(dom) || { single: 0, multi: 0 };
-      if (s.passages.length > 1) t.multi++; else t.single++;
+      const dom = dashSubdomain(s, g);
+      const t = tally.get(dom) || { informative: 0, opinion: 0 };
+      t[s.itemSetType === 'informative' ? 'informative' : 'opinion']++;
       tally.set(dom, t);
     });
-    const doms = [...tally.keys()].sort((a, b) => {
-      const ia = DASH_ORDER.indexOf(a), ib = DASH_ORDER.indexOf(b);
-      return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib) || a.localeCompare(b);
-    });
-    const totS = sets.filter(s => s.passages.length === 1).length;
-    const totM = sets.length - totS;
-    const drafts = sets.filter(isDraft).length;
 
-    wrap.appendChild(el(`
-      <div class="dash-card">
-        <div class="dash-head">
-          <span class="dash-grade">Grade ${esc(g)}</span>
-          <span class="ps-hint">${sets.length} set${sets.length !== 1 ? 's' : ''}${drafts ? ` · ${drafts} draft${drafts !== 1 ? 's' : ''}` : ''}</span>
-        </div>
+    // summary: how many (sub-domain × type) cells hit the goal / are partial / missing
+    let met = 0, partial = 0, missing = 0;
+    expect.forEach(d => {
+      const t = tally.get(d);
+      [t.informative, t.opinion].forEach(n => { n >= DASH_GOAL ? met++ : n > 0 ? partial++ : missing++; });
+    });
+
+    const card = el(`
+      <div class="dash-card ${open ? 'open' : ''}">
+        <button class="dash-head dash-toggle" data-dashgrade="${esc(g)}">
+          <span class="dash-grade">${open ? '▾' : '▸'} Grade ${esc(g)}</span>
+          <span class="dash-summary">
+            <span class="dash-dot goal-met">${met}</span>
+            <span class="dash-dot goal-partial">${partial}</span>
+            <span class="dash-dot goal-missing">${missing}</span>
+            <span class="ps-hint">${sets.length} set${sets.length !== 1 ? 's' : ''}</span>
+          </span>
+        </button>
+        ${open ? `
         <table class="dash-table">
-          <thead><tr><th>Sub-domain</th><th>Single</th><th>Multi</th><th>Total</th></tr></thead>
+          <thead><tr><th>Sub-domain</th><th>Informational</th><th>Opinion</th></tr></thead>
           <tbody>
-            ${doms.map(d => {
+            ${expect.map(d => {
               const t = tally.get(d);
-              return `<tr>
-                <td>${esc(d)}</td>
-                <td>${t.single || '—'}</td>
-                <td>${t.multi || '—'}</td>
-                <td class="dash-total">${t.single + t.multi}</td>
-              </tr>`;
+              return `<tr><td>${esc(d)}</td>${dashCell(t.informative)}${dashCell(t.opinion)}</tr>`;
             }).join('')}
           </tbody>
-          <tfoot><tr><td>All sub-domains</td><td>${totS}</td><td>${totM}</td><td class="dash-total">${sets.length}</td></tr></tfoot>
-        </table>
-      </div>`));
+          <tfoot><tr><td>Goal: ${DASH_GOAL} per sub-domain per type</td>
+            <td>${expect.reduce((a, d) => a + tally.get(d).informative, 0)}</td>
+            <td>${expect.reduce((a, d) => a + tally.get(d).opinion, 0)}</td></tr></tfoot>
+        </table>` : ''}
+      </div>`);
+    card.querySelector('[data-dashgrade]').addEventListener('click', () => {
+      state.ui.dashOpen[g] = !state.ui.dashOpen[g];
+      renderDash();
+    });
+    wrap.appendChild(card);
   });
-
-  if (!wrap.children.length) {
-    wrap.appendChild(el(`<div class="review-empty">No sets carry a grade yet.</div>`));
-  }
 }
 
 function init() {
@@ -2317,7 +2439,7 @@ function init() {
   document.getElementById('inGrade').addEventListener('change', e => {
     state.ui.inGrade = e.target.value; state.ui.inSelected = null; state.ui.openPicker = null; renderInput();
   });
-  bindSeg('inCmsSeg', 'inCms', v => { state.ui.inCms = v; state.ui.openPicker = null; renderInput(); });
+  bindSeg('inStageSeg', 'inStage', v => { state.ui.inStage = v; state.ui.openPicker = null; renderInput(); });
 
   document.getElementById('newSetBtn').addEventListener('click', newPassageSet);
 
