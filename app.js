@@ -2108,7 +2108,10 @@ function renderInput() {
     return;
   }
 
-  // keep the selection if it's still visible; otherwise select the first row
+  // keep the selection if it's still visible; otherwise select the first row as displayed
+  // (to-do items first — see group order below)
+  const rank = { aligned: 0, needs: 1, cms: 2 };
+  visible.sort((a, b) => rank[a.category] - rank[b.category]);
   if (!visible.some(r => r.set.id === state.ui.inSelected)) state.ui.inSelected = visible[0].set.id;
   const selId = state.ui.inSelected;
 
@@ -2126,9 +2129,10 @@ function renderInput() {
       box.appendChild(item);
     });
   };
-  group('Entered in CMS', visible.filter(r => r.category === 'cms'), 'entered here');
-  group('Aligned Passages', visible.filter(r => r.category === 'aligned'), 'confirmed — ready to enter');
-  group('Needs Approval', visible.filter(r => r.category === 'needs'), 'auto-populated from an alignment');
+  // To-do list ordering: what still needs posting into CMS sits on top; done work sinks.
+  group('To Be Entered', visible.filter(r => r.category === 'aligned'), 'confirmed — ready to enter in CMS');
+  group('Needs Approval', visible.filter(r => r.category === 'needs'), 'approve the alignment first');
+  group('Entered in CMS', visible.filter(r => r.category === 'cms'), 'done');
 
   renderInputDetail(visible.find(r => r.set.id === selId), st, grade);
 }
