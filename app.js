@@ -1227,7 +1227,10 @@ function pickerHtml(section, index, restrictState, scope, scopeNote) {
 }
 
 function questionBlockHtml(q, section, i, label, ctx) {
-  const open = state.ui.openPicker && state.ui.openPicker.section === section && state.ui.openPicker.index === i;
+  // setId disambiguates pickers when many sets render at once (State Lists cards);
+  // the master editor never sets it, so null === null keeps its behavior unchanged.
+  const open = state.ui.openPicker && state.ui.openPicker.section === section && state.ui.openPicker.index === i
+    && (state.ui.openPicker.setId || null) === (ctx.setId || null);
   // A tag already made stays visible even when the scope isn't resolvable, so it can be reviewed or removed.
   const area = q.standard
     ? tagChipHtml(q.standard, section, i)
@@ -1404,12 +1407,6 @@ function renderSetEditor() {
     </div>
 
     <div class="ps-section">
-      <div class="ps-section-title">Peer Revision Task <span class="chip ga-chip">Georgia only</span></div>
-      ${s.peerRevision.map((q, i) => questionBlockHtml(q, 'peer', i, `Task ${i + 1}`, { restrictState: 'GA' })).join('')}
-      ${s.peerRevision.length < MAX_QUESTIONS ? `<button class="act-btn" id="addPeer">＋ Add task</button>` : ''}
-    </div>
-
-    <div class="ps-section">
       <div class="ps-section-title">Writing Prompt</div>
       <div class="seg" id="promptTypeSeg" style="max-width:420px">
         ${PROMPT_TYPES.map(t => `<button class="seg-btn ${s.writingPrompt.type === t ? 'active' : ''}" data-pt="${t}">${t[0].toUpperCase() + t.slice(1)}</button>`).join('')}
@@ -1520,7 +1517,6 @@ function wireSetEditor(panel, s) {
 
   on('#addPassage', 'click', () => { s.passages.push({ title: '', text: '' }); saveSets(); renderPassages(); });
   on('#addQuestion', 'click', () => { s.questions.push({ text: '', standard: null, type: null }); saveSets(); renderPassages(); });
-  on('#addPeer', 'click', () => { s.peerRevision.push({ text: '', standard: null, type: null }); saveSets(); renderPassages(); });
   on('[data-qtype]', 'click', e => {
     const [section, i, type] = e.currentTarget.dataset.qtype.split(':');
     const q = tagTarget(s, section, +i);
@@ -1824,6 +1820,23 @@ function inputCard(row, st, grade) {
        <button class="act-btn reject" data-iact="${dismissAct}" title="Remove from this grade">Dismiss</button>`;
   }
 
+  // Peer revision is a Georgia deliverable — authored here on the Georgia list,
+  // not on the master list (which stays a clean cross-state source of truth).
+  let peerHtml = '';
+  if (st === 'GA') {
+    const peerOpen = state.ui.peerOpen === s.id;
+    const peerN = s.peerRevision.filter(t => (t.text || '').trim() || t.standard).length;
+    peerHtml = `
+      <div class="peer-inline">
+        <button class="act-btn" data-peertoggle="${esc(s.id)}">${peerOpen ? '▾' : '▸'} Peer Revision Task${peerN ? ` · ${peerN} task${peerN !== 1 ? 's' : ''}` : ''}</button>
+        <span class="chip ga-chip">Georgia only</span>
+        ${peerOpen ? `<div class="peer-editor">
+          ${s.peerRevision.map((q, i) => questionBlockHtml(q, 'peer', i, `Task ${i + 1}`, { restrictState: 'GA', setId: s.id })).join('')}
+          ${s.peerRevision.length < MAX_QUESTIONS ? `<button class="act-btn" data-add-peer="1">＋ Add task</button>` : ''}
+        </div>` : ''}
+      </div>`;
+  }
+
   return `
     <div class="review-card ${category === 'cms' ? 'decided-approved' : ''}">
       <div class="concept-head">
@@ -1832,8 +1845,73 @@ function inputCard(row, st, grade) {
         ${s.passageId ? `<div class="concept-meta"><span class="chip">ID ${esc(s.passageId)}</span></div>` : ''}
       </div>
       <div style="padding:10px 16px 0">${stdLine}</div>
+      ${peerHtml}
       <div class="review-foot">${actions}</div>
     </div>`;
+}
+
+/* Inline editor wiring for the Georgia peer-revision block on a State Lists card.
+   Mirrors the master editor's question handlers, but re-renders the input view. */
+function wirePeerInline(card, s) {
+  const on = (sel, ev, fn) => card.querySelectorAll(sel).forEach(n => n.addEventListener(ev, fn));
+  on('[data-peertoggle]', 'click', e => {
+    const id = e.currentTarget.dataset.peertoggle;
+    state.ui.peerOpen = state.ui.peerOpen === id ? null : id;
+    state.ui.openPicker = null;
+    renderInput();
+  });
+  on('[data-q]', 'input', e => {
+    s.peerRevision[+e.target.dataset.q.split(':')[1]].text = e.target.value;
+    saveSets();
+  });
+  on('[data-qtype]', 'click', e => {
+    const [, i, type] = e.currentTarget.dataset.qtype.split(':');
+    const q = s.peerRevision[+i];
+    q.type = q.type === type ? null : type;
+    saveSets(); renderInput();
+  });
+  on('[data-remove-q]', 'click', e => {
+    s.peerRevision.splice(+e.currentTarget.dataset.removeQ.split(':')[1], 1);
+    if (!s.peerRevision.length) s.peerRevision.push({ text: '', standard: null, type: null });
+    saveSets(); renderInput();
+  });
+  on('[data-add-peer]', 'click', () => {
+    s.peerRevision.push({ text: '', standard: null, type: null });
+    saveSets(); renderInput();
+  });
+  on('[data-pick]', 'click', e => {
+    const [, i] = e.currentTarget.dataset.pick.split(':');
+    state.ui.openPicker = { section: 'peer', index: +i, setId: s.id };
+    renderInput();
+    const inp = document.querySelector('#inputList .picker-search');
+    if (inp) inp.focus();
+  });
+  on('[data-untag]', 'click', e => {
+    s.peerRevision[+e.currentTarget.dataset.untag.split(':')[1]].standard = null;
+    saveSets(); renderInput();
+  });
+  const picker = card.querySelector('.tag-picker');
+  if (picker) {
+    const iStr = picker.dataset.picker.split(':')[1];
+    const results = picker.querySelector('.picker-results');
+    picker.querySelector('.picker-search').addEventListener('input', e => {
+      results.innerHTML = pickerResultsHtml(e.target.value, 'GA', null);
+    });
+    picker.querySelector('.picker-cancel').addEventListener('click', () => {
+      state.ui.openPicker = null;
+      renderInput();
+    });
+    results.addEventListener('click', e => {
+      const item = e.target.closest('.picker-item');
+      if (!item) return;
+      const [tst, subject, code] = item.dataset.tag.split('|');
+      s.peerRevision[+iStr].standard = { state: tst, subject, code };
+      state.ui.openPicker = null;
+      saveSets();
+      toast(`Tagged ${code}`);
+      renderInput();
+    });
+  }
 }
 
 function renderInput() {
@@ -1890,6 +1968,7 @@ function renderInput() {
         pushState(); renderInput();
         toast(`Assigned to ${e.target.value}`);
       });
+      if (st === 'GA') wirePeerInline(card, r.set);
       box.appendChild(card);
     });
   };

@@ -687,3 +687,23 @@ body {
 .toast-undo:hover { background: rgba(255,255,255,.3); }
 .push-row { display: flex; gap: 8px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
 .section-hint { font-size: 12px; font-weight: 500; color: var(--ink-faint); text-transform: none; letter-spacing: 0; }
+
+/* Georgia-only peer-revision editor on State Lists cards */
+.peer-inline {
+  padding: 10px 16px 2px;
+  margin-top: 10px;
+  border-top: 1px dashed var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.peer-inline .peer-editor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  padding-bottom: 8px;
+}
+.peer-inline .q-card { width: 100%; }
