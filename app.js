@@ -304,6 +304,7 @@ function mergeServerState(s) {
     state.cms = merged.cms;
     state.severed = merged.severed;
     state.sets = merged.sets;
+    normalizeSets();
     mirrorLocal();
     if (localHadData) pushState(); // persist anything local-only up to the server
   } catch { /* server without /api/state — localStorage only */ }
@@ -873,9 +874,20 @@ const MAX_QUESTIONS = 4;
 
 function loadSets() {
   try { state.sets = JSON.parse(localStorage.getItem(LS_SETS)) || []; } catch { state.sets = []; }
+  normalizeSets();
 }
 function saveSets() { pushState(); }
 function currentSet() { return state.sets.find(s => s.id === state.ui.currentSetId) || null; }
+
+/* Passages were plain strings before each one carried its own title. Sets saved then are
+   still on the server, so widen them on the way in rather than migrating the state file. */
+function normalizeSets() {
+  state.sets.forEach(s => {
+    if (!Array.isArray(s.passages)) return;
+    s.passages = s.passages.map(p =>
+      typeof p === 'string' ? { title: '', text: p } : { title: p.title || '', text: p.text || '' });
+  });
+}
 
 function newPassageSet() {
   const s = {
@@ -886,7 +898,7 @@ function newPassageSet() {
     gaGrade: null, gaSubtopic: null,   // tagging hierarchy
     primaryState: null,                // OH | GA — feeds the set + question pickers
     standard: null,                    // set-level primary standard tag
-    passages: [''],
+    passages: [{ title: '', text: '' }],
     questions: [
       { text: '', standard: null },
       { text: '', standard: null },
@@ -1036,6 +1048,9 @@ function renderSetList() {
           <button class="q-remove" data-del-set="${s.id}" title="Delete set">✕</button>
         </div>
         <div class="std-desc">${esc(s.passageId ? 'ID: ' + s.passageId : 'No passage ID')} · ${s.passages.length} passage${s.passages.length !== 1 ? 's' : ''} · ${tags} tagged</div>
+        ${s.passages.some(p => p.title)
+          ? `<div class="std-desc set-passage-titles">${s.passages.filter(p => p.title).map(p => esc(p.title)).join(' · ')}</div>`
+          : ''}
       </div>`);
     item.addEventListener('click', e => {
       if (e.target.dataset.delSet) {
@@ -1150,7 +1165,10 @@ function renderSetEditor() {
         <div class="q-card">
           <div class="q-head"><span class="q-label">Passage ${i + 1}</span>
             <button class="q-remove" data-remove-p="${i}" title="Remove">✕</button></div>
-          <textarea class="ps-textarea" data-p="${i}" rows="7" placeholder="Paste the passage text here.">${esc(p)}</textarea>
+          <div class="ps-field" style="margin-bottom:10px"><label>Passage title</label>
+            <input type="text" class="ps-input" data-ptitle="${i}" value="${esc(p.title)}"
+              placeholder="e.g., The Wright Brothers Take Flight"></div>
+          <textarea class="ps-textarea" data-p="${i}" rows="7" placeholder="Paste the passage text here.">${esc(p.text)}</textarea>
         </div>`).join('')}
       <button class="act-btn" id="addPassage">＋ Add passage</button>
     </div>
@@ -1247,7 +1265,8 @@ function wireSetEditor(panel, s) {
 
   on('#psTitle', 'input', e => { s.title = e.target.value; saveSets(); renderSetListSoon(); });
   on('#psId', 'input', e => { s.passageId = e.target.value; saveSets(); renderSetListSoon(); });
-  on('[data-p]', 'input', e => { s.passages[+e.target.dataset.p] = e.target.value; saveSets(); });
+  on('[data-p]', 'input', e => { s.passages[+e.target.dataset.p].text = e.target.value; saveSets(); });
+  on('[data-ptitle]', 'input', e => { s.passages[+e.target.dataset.ptitle].title = e.target.value; saveSets(); renderSetListSoon(); });
   on('[data-q]', 'input', e => {
     const [section, i] = e.target.dataset.q.split(':');
     (section === 'peer' ? s.peerRevision : s.questions)[+i].text = e.target.value;
@@ -1261,13 +1280,13 @@ function wireSetEditor(panel, s) {
     panel.querySelectorAll('#promptTypeSeg .seg-btn').forEach(b => b.classList.toggle('active', b === e.currentTarget));
   });
 
-  on('#addPassage', 'click', () => { s.passages.push(''); saveSets(); renderPassages(); });
+  on('#addPassage', 'click', () => { s.passages.push({ title: '', text: '' }); saveSets(); renderPassages(); });
   on('#addQuestion', 'click', () => { s.questions.push({ text: '', standard: null }); saveSets(); renderPassages(); });
   on('#addPeer', 'click', () => { s.peerRevision.push({ text: '', standard: null }); saveSets(); renderPassages(); });
 
   on('[data-remove-p]', 'click', e => {
     s.passages.splice(+e.currentTarget.dataset.removeP, 1);
-    if (!s.passages.length) s.passages.push('');
+    if (!s.passages.length) s.passages.push({ title: '', text: '' });
     saveSets(); renderPassages();
   });
   on('[data-remove-q]', 'click', e => {

@@ -226,6 +226,7 @@ body {
 }
 .chip-cross { background: var(--amber-soft); color: var(--amber); font-weight: 700; }
 .chip-concept { background: #ece9fd; color: #4c3fbf; font-weight: 700; }
+.set-passage-titles { color: var(--ink-faint); font-style: italic; margin-top: 2px; }
 
 /* Concept spine */
 .concept-head { padding: 14px 16px; border-bottom: 1px solid var(--line); background: #faf9ff; }
