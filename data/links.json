@@ -5672,6 +5672,1036 @@
       "confidence": "partial",
       "rationale": "Covers the write-about-multiple-sources half of Ohio, but TX frames it as comparing/contrasting rather than integrating; genre-neutral Response strand.",
       "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0568",
+      "subject": "ela",
+      "oh": "RL.6.1",
+      "state": "TX",
+      "code": "6.5F",
+      "confidence": "strong",
+      "rationale": "Both cite/use textual evidence to support analysis including inferences; 6.5F is a genre-neutral Comprehension SE that also anchors RI.6.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0569",
+      "subject": "ela",
+      "oh": "RL.6.1",
+      "state": "TX",
+      "code": "6.6C",
+      "confidence": "moderate",
+      "rationale": "Genre-neutral Response SE 'use text evidence to support an appropriate response' overlaps the evidence-citing skill; also anchors RI.6.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0570",
+      "subject": "ela",
+      "oh": "RL.6.2",
+      "state": "TX",
+      "code": "6.7A",
+      "confidence": "strong",
+      "rationale": "Shared skill: determine/infer theme using text detail (literary-elements SE 6.7A infers themes with text evidence).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0571",
+      "subject": "ela",
+      "oh": "RL.6.2",
+      "state": "TX",
+      "code": "6.6D",
+      "confidence": "moderate",
+      "rationale": "Objective-summary component of RL.6.2b maps to genre-neutral Response SE 6.6D 'paraphrase and summarize'; also relevant to RI.6.2.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0572",
+      "subject": "ela",
+      "oh": "RL.6.3",
+      "state": "TX",
+      "code": "6.7B",
+      "confidence": "strong",
+      "rationale": "Both analyze how characters respond/change to move the plot toward resolution (6.7B: internal/external responses develop plot).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0573",
+      "subject": "ela",
+      "oh": "RL.6.4",
+      "state": "TX",
+      "code": "6.9D",
+      "confidence": "strong",
+      "rationale": "Shared skill: figurative/connotative language and its effect (genre-neutral Author's-craft SE 6.9D); also anchors RI.6.4.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0574",
+      "subject": "ela",
+      "oh": "RL.6.4",
+      "state": "TX",
+      "code": "6.9F",
+      "confidence": "moderate",
+      "rationale": "Impact of specific word choices on meaning and tone maps to genre-neutral 6.9F 'language contributes to mood and voice.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0575",
+      "subject": "ela",
+      "oh": "RL.6.5",
+      "state": "TX",
+      "code": "6.9B",
+      "confidence": "moderate",
+      "rationale": "How a part fits the overall structure and develops meaning maps to genre-neutral 6.9B 'text structure contributes to author's purpose.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0576",
+      "subject": "ela",
+      "oh": "RL.6.6",
+      "state": "TX",
+      "code": "6.9E",
+      "confidence": "strong",
+      "rationale": "Both address how point of view develops narrator/speaker perspective (6.9E: omniscient/limited point of view as literary device).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0577",
+      "subject": "ela",
+      "oh": "RL.6.9",
+      "state": "TX",
+      "code": "6.6B",
+      "confidence": "moderate",
+      "rationale": "Comparing texts across forms/genres on similar themes maps to genre-neutral Response SE 6.6B 'comparing sources within and across genres'; also relevant to RI.6.9.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0578",
+      "subject": "ela",
+      "oh": "RL.6.10",
+      "state": "TX",
+      "code": "6.5E",
+      "confidence": "moderate",
+      "rationale": "RL.6.10's text-to-self/text/world connection clause maps to genre-neutral Comprehension SE 6.5E 'make connections to personal experiences, ideas in other texts, and society.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0579",
+      "subject": "ela",
+      "oh": "RI.6.1",
+      "state": "TX",
+      "code": "6.5F",
+      "confidence": "strong",
+      "rationale": "Cite evidence to support analysis and inferences; genre-neutral Comprehension SE 6.5F also anchors RL.6.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0580",
+      "subject": "ela",
+      "oh": "RI.6.1",
+      "state": "TX",
+      "code": "6.6C",
+      "confidence": "moderate",
+      "rationale": "Genre-neutral Response SE 'use text evidence to support an appropriate response'; also anchors RL.6.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0581",
+      "subject": "ela",
+      "oh": "RI.6.2",
+      "state": "TX",
+      "code": "6.8D",
+      "confidence": "strong",
+      "rationale": "Central idea conveyed through details maps to informational-genre SE 6.8D 'controlling idea or thesis with supporting evidence.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0582",
+      "subject": "ela",
+      "oh": "RI.6.2",
+      "state": "TX",
+      "code": "6.6D",
+      "confidence": "moderate",
+      "rationale": "Objective-summary component maps to genre-neutral Response SE 6.6D 'paraphrase and summarize.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0583",
+      "subject": "ela",
+      "oh": "RI.6.4",
+      "state": "TX",
+      "code": "6.9D",
+      "confidence": "moderate",
+      "rationale": "Determining figurative/connotative/technical word meaning overlaps genre-neutral Author's-craft SE 6.9D on figurative language; also anchors RL.6.4.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0584",
+      "subject": "ela",
+      "oh": "RI.6.5",
+      "state": "TX",
+      "code": "6.8D",
+      "confidence": "strong",
+      "rationale": "How parts fit the overall informational structure and develop ideas maps to 6.8D 'characteristics and structural elements of informational text' incl. organizational patterns.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0585",
+      "subject": "ela",
+      "oh": "RI.6.5",
+      "state": "TX",
+      "code": "6.9B",
+      "confidence": "moderate",
+      "rationale": "Genre-neutral 6.9B 'text structure contributes to author's purpose' also captures the structure-analysis skill.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0586",
+      "subject": "ela",
+      "oh": "RI.6.6",
+      "state": "TX",
+      "code": "6.9A",
+      "confidence": "strong",
+      "rationale": "Both determine author's perspective/purpose and how it is conveyed (Author's-craft SE 6.9A: author's purpose and message).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0587",
+      "subject": "ela",
+      "oh": "RI.6.8",
+      "state": "TX",
+      "code": "6.8E",
+      "confidence": "strong",
+      "rationale": "Trace/evaluate argument and claims, distinguishing supported vs unsupported, maps to argumentative-genre SE 6.8E (claim + how author uses evidence).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0588",
+      "subject": "ela",
+      "oh": "RI.6.8",
+      "state": "TX",
+      "code": "6.9G",
+      "confidence": "moderate",
+      "rationale": "Judging whether claims are supported by evidence overlaps 6.9G 'differences between rhetorical devices and logical fallacies.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0589",
+      "subject": "ela",
+      "oh": "RI.6.9",
+      "state": "TX",
+      "code": "6.6B",
+      "confidence": "moderate",
+      "rationale": "Comparing one author's presentation with another's maps to genre-neutral Response SE 6.6B 'comparing sources within and across genres'; also relevant to RL.6.9.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0590",
+      "subject": "ela",
+      "oh": "RL.7.1",
+      "state": "TX",
+      "code": "7.5F",
+      "confidence": "strong",
+      "rationale": "Cite several pieces of evidence to support analysis/inferences; genre-neutral Comprehension SE 7.5F also anchors RI.7.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0591",
+      "subject": "ela",
+      "oh": "RL.7.1",
+      "state": "TX",
+      "code": "7.6C",
+      "confidence": "moderate",
+      "rationale": "Genre-neutral Response SE 'use text evidence to support an appropriate response'; also anchors RI.7.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0592",
+      "subject": "ela",
+      "oh": "RL.7.2",
+      "state": "TX",
+      "code": "7.7A",
+      "confidence": "strong",
+      "rationale": "Determine theme and analyze its development maps to literary-elements SE 7.7A 'infer multiple themes within and across texts using text evidence.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0593",
+      "subject": "ela",
+      "oh": "RL.7.2",
+      "state": "TX",
+      "code": "7.6D",
+      "confidence": "moderate",
+      "rationale": "Objective-summary component maps to genre-neutral Response SE 7.6D 'paraphrase and summarize.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0594",
+      "subject": "ela",
+      "oh": "RL.7.3",
+      "state": "TX",
+      "code": "7.7D",
+      "confidence": "strong",
+      "rationale": "Analyzing how story elements interact (setting shaping character/plot) maps to literary-elements SE 7.7D 'setting influences character and plot development.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0595",
+      "subject": "ela",
+      "oh": "RL.7.4",
+      "state": "TX",
+      "code": "7.9D",
+      "confidence": "strong",
+      "rationale": "Figurative/connotative meaning and its effect maps to genre-neutral Author's-craft SE 7.9D on figurative language; also anchors RI.7.4.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0596",
+      "subject": "ela",
+      "oh": "RL.7.4",
+      "state": "TX",
+      "code": "7.9F",
+      "confidence": "moderate",
+      "rationale": "Impact of word choices on meaning and tone maps to genre-neutral 7.9F 'language contributes to mood, voice, and tone.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0597",
+      "subject": "ela",
+      "oh": "RL.7.4",
+      "state": "TX",
+      "code": "7.8B",
+      "confidence": "moderate",
+      "rationale": "RL.7.4's sound-device/rhyme-in-poetry clause maps to poetry-genre SE 7.8B 'rhyme scheme, meter, and graphical elements in poems.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0598",
+      "subject": "ela",
+      "oh": "RL.7.5",
+      "state": "TX",
+      "code": "7.8B",
+      "confidence": "moderate",
+      "rationale": "How a poem's form contributes to meaning maps to poetry-genre SE 7.8B on poetic structure/effect.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0599",
+      "subject": "ela",
+      "oh": "RL.7.5",
+      "state": "TX",
+      "code": "7.8C",
+      "confidence": "moderate",
+      "rationale": "How a drama's form contributes to meaning maps to drama-genre SE 7.8C 'playwrights develop characters through dialogue and staging.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0600",
+      "subject": "ela",
+      "oh": "RL.7.6",
+      "state": "TX",
+      "code": "7.9E",
+      "confidence": "strong",
+      "rationale": "Both analyze point of view to develop/contrast perspectives (7.9E: subjective and objective point of view as literary device).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0601",
+      "subject": "ela",
+      "oh": "RL.7.9",
+      "state": "TX",
+      "code": "7.6B",
+      "confidence": "moderate",
+      "rationale": "Comparing fictional and historical accounts of a period maps to genre-neutral Response SE 7.6B 'comparing sources within and across genres'; also relevant to RI.7.9.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0602",
+      "subject": "ela",
+      "oh": "RL.7.10",
+      "state": "TX",
+      "code": "7.5E",
+      "confidence": "moderate",
+      "rationale": "RL.7.10's text-to-self/text/world connection clause maps to genre-neutral Comprehension SE 7.5E 'make connections.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0603",
+      "subject": "ela",
+      "oh": "RI.7.1",
+      "state": "TX",
+      "code": "7.5F",
+      "confidence": "strong",
+      "rationale": "Cite several pieces of evidence to support analysis/inferences; genre-neutral 7.5F also anchors RL.7.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0604",
+      "subject": "ela",
+      "oh": "RI.7.1",
+      "state": "TX",
+      "code": "7.6C",
+      "confidence": "moderate",
+      "rationale": "Genre-neutral Response SE 'use text evidence to support an appropriate response'; also anchors RL.7.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0605",
+      "subject": "ela",
+      "oh": "RI.7.2",
+      "state": "TX",
+      "code": "7.8D",
+      "confidence": "strong",
+      "rationale": "Central-idea determination/development maps to informational-genre SE 7.8D 'controlling idea or thesis with supporting evidence.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0606",
+      "subject": "ela",
+      "oh": "RI.7.2",
+      "state": "TX",
+      "code": "7.6D",
+      "confidence": "moderate",
+      "rationale": "Objective-summary component maps to genre-neutral Response SE 7.6D 'paraphrase and summarize.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0607",
+      "subject": "ela",
+      "oh": "RI.7.4",
+      "state": "TX",
+      "code": "7.9F",
+      "confidence": "strong",
+      "rationale": "Impact of specific word choice on meaning and tone maps to genre-neutral 7.9F 'language contributes to mood, voice, and tone'; also anchors RL.7.4.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0608",
+      "subject": "ela",
+      "oh": "RI.7.4",
+      "state": "TX",
+      "code": "7.9D",
+      "confidence": "moderate",
+      "rationale": "Figurative/connotative/technical meaning overlaps genre-neutral Author's-craft SE 7.9D on figurative language.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0609",
+      "subject": "ela",
+      "oh": "RI.7.5",
+      "state": "TX",
+      "code": "7.8D",
+      "confidence": "strong",
+      "rationale": "Analyzing the structure an author uses and how major sections develop ideas maps to informational-genre SE 7.8D (structural elements/organizational patterns).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0610",
+      "subject": "ela",
+      "oh": "RI.7.5",
+      "state": "TX",
+      "code": "7.9B",
+      "confidence": "moderate",
+      "rationale": "Genre-neutral 7.9B 'text structure contributes to author's purpose' also captures the structure-analysis skill.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0611",
+      "subject": "ela",
+      "oh": "RI.7.6",
+      "state": "TX",
+      "code": "7.9A",
+      "confidence": "strong",
+      "rationale": "Determine author's perspective/purpose maps to Author's-craft SE 7.9A 'author's purpose and message.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0612",
+      "subject": "ela",
+      "oh": "RI.7.6",
+      "state": "TX",
+      "code": "7.8E",
+      "confidence": "moderate",
+      "rationale": "Analyzing how the author distinguishes a position from others overlaps argumentative SE 7.8E (evidence + consideration of alternatives).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0613",
+      "subject": "ela",
+      "oh": "RI.7.8",
+      "state": "TX",
+      "code": "7.8E",
+      "confidence": "strong",
+      "rationale": "Trace/evaluate argument for sound reasoning and sufficient evidence maps to argumentative SE 7.8E (evidence + consideration of alternatives).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0614",
+      "subject": "ela",
+      "oh": "RI.7.8",
+      "state": "TX",
+      "code": "7.9G",
+      "confidence": "moderate",
+      "rationale": "Assessing whether reasoning is sound overlaps 7.9G on rhetorical devices and logical fallacies.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0615",
+      "subject": "ela",
+      "oh": "RI.7.9",
+      "state": "TX",
+      "code": "7.6B",
+      "confidence": "moderate",
+      "rationale": "Analyzing how authors on the same topic emphasize different evidence maps to genre-neutral Response SE 7.6B 'comparing sources within and across genres'; also relevant to RL.7.9.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0616",
+      "subject": "ela",
+      "oh": "RL.8.1",
+      "state": "TX",
+      "code": "8.5F",
+      "confidence": "strong",
+      "rationale": "Cite the strongest evidence to support analysis/inferences; genre-neutral Comprehension SE 8.5F also anchors RI.8.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0617",
+      "subject": "ela",
+      "oh": "RL.8.1",
+      "state": "TX",
+      "code": "8.6C",
+      "confidence": "moderate",
+      "rationale": "Genre-neutral Response SE 'use text evidence to support an appropriate response'; also anchors RI.8.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0618",
+      "subject": "ela",
+      "oh": "RL.8.2",
+      "state": "TX",
+      "code": "8.7A",
+      "confidence": "strong",
+      "rationale": "Theme development in relation to character/setting/plot maps to literary-elements SE 8.7A 'how themes are developed through the interaction of characters and events.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0619",
+      "subject": "ela",
+      "oh": "RL.8.2",
+      "state": "TX",
+      "code": "8.6D",
+      "confidence": "moderate",
+      "rationale": "Objective-summary component maps to genre-neutral Response SE 8.6D 'paraphrase and summarize.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0620",
+      "subject": "ela",
+      "oh": "RL.8.3",
+      "state": "TX",
+      "code": "8.7B",
+      "confidence": "strong",
+      "rationale": "How dialogue/incidents propel action and reveal character maps to literary-elements SE 8.7B 'characters' motivations and behaviors influence events and resolution.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0621",
+      "subject": "ela",
+      "oh": "RL.8.4",
+      "state": "TX",
+      "code": "8.9D",
+      "confidence": "strong",
+      "rationale": "Figurative/connotative meaning and effect maps to genre-neutral Author's-craft SE 8.9D on figurative language; also anchors RI.8.4.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0622",
+      "subject": "ela",
+      "oh": "RL.8.4",
+      "state": "TX",
+      "code": "8.9F",
+      "confidence": "moderate",
+      "rationale": "Impact of word choices on meaning, mood, and tone maps to genre-neutral 8.9F 'language contributes to the mood, voice, and tone.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0623",
+      "subject": "ela",
+      "oh": "RL.8.5",
+      "state": "TX",
+      "code": "8.9B",
+      "confidence": "moderate",
+      "rationale": "Comparing how differing text structure contributes to meaning/style maps to genre-neutral 8.9B 'text structure contributes to author's purpose.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0624",
+      "subject": "ela",
+      "oh": "RL.8.6",
+      "state": "TX",
+      "code": "8.9E",
+      "confidence": "strong",
+      "rationale": "Differences in points of view creating effects like suspense/humor via dramatic irony maps to 8.9E 'multiple points of view and irony.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0625",
+      "subject": "ela",
+      "oh": "RL.8.10",
+      "state": "TX",
+      "code": "8.5E",
+      "confidence": "moderate",
+      "rationale": "RL.8.10's text-to-self/text/world connection clause maps to genre-neutral Comprehension SE 8.5E 'make connections.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0626",
+      "subject": "ela",
+      "oh": "RI.8.1",
+      "state": "TX",
+      "code": "8.5F",
+      "confidence": "strong",
+      "rationale": "Cite the strongest evidence to support analysis/inferences; genre-neutral 8.5F also anchors RL.8.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0627",
+      "subject": "ela",
+      "oh": "RI.8.1",
+      "state": "TX",
+      "code": "8.6C",
+      "confidence": "moderate",
+      "rationale": "Genre-neutral Response SE 'use text evidence to support an appropriate response'; also anchors RL.8.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0628",
+      "subject": "ela",
+      "oh": "RI.8.2",
+      "state": "TX",
+      "code": "8.8D",
+      "confidence": "strong",
+      "rationale": "Central-idea determination/development in relation to supporting ideas maps to informational-genre SE 8.8D 'controlling idea or thesis with supporting evidence.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0629",
+      "subject": "ela",
+      "oh": "RI.8.2",
+      "state": "TX",
+      "code": "8.6D",
+      "confidence": "moderate",
+      "rationale": "Objective-summary component maps to genre-neutral Response SE 8.6D 'paraphrase and summarize.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0630",
+      "subject": "ela",
+      "oh": "RI.8.4",
+      "state": "TX",
+      "code": "8.9F",
+      "confidence": "strong",
+      "rationale": "Impact of word choices on meaning and tone maps to genre-neutral 8.9F 'language contributes to the mood, voice, and tone'; also anchors RL.8.4.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0631",
+      "subject": "ela",
+      "oh": "RI.8.4",
+      "state": "TX",
+      "code": "8.9D",
+      "confidence": "moderate",
+      "rationale": "Figurative/connotative/technical meaning overlaps genre-neutral Author's-craft SE 8.9D on figurative language.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0632",
+      "subject": "ela",
+      "oh": "RI.8.5",
+      "state": "TX",
+      "code": "8.8D",
+      "confidence": "moderate",
+      "rationale": "Analyzing paragraph/sentence roles in developing a key concept overlaps informational-genre SE 8.8D (structural elements, multiple organizational patterns developing the thesis).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0633",
+      "subject": "ela",
+      "oh": "RI.8.5",
+      "state": "TX",
+      "code": "8.9B",
+      "confidence": "moderate",
+      "rationale": "Genre-neutral 8.9B 'text structure contributes to author's purpose' also captures the structure-analysis skill.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0634",
+      "subject": "ela",
+      "oh": "RI.8.6",
+      "state": "TX",
+      "code": "8.9A",
+      "confidence": "strong",
+      "rationale": "Determine author's purpose maps to Author's-craft SE 8.9A 'author's purpose and message.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0635",
+      "subject": "ela",
+      "oh": "RI.8.6",
+      "state": "TX",
+      "code": "8.8E",
+      "confidence": "moderate",
+      "rationale": "How the author acknowledges/responds to conflicting viewpoints maps to argumentative SE 8.8E 'identifying and explaining the counter argument.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0636",
+      "subject": "ela",
+      "oh": "RI.8.8",
+      "state": "TX",
+      "code": "8.8E",
+      "confidence": "strong",
+      "rationale": "Delineate/evaluate the argument, reasoning, and evidence maps to argumentative SE 8.8E (identifying claim, analyzing argument, counterargument).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0637",
+      "subject": "ela",
+      "oh": "RI.8.8",
+      "state": "TX",
+      "code": "8.6J",
+      "confidence": "moderate",
+      "rationale": "Evaluating claims/evidence overlaps Response SE 8.6J 'defend or challenge the authors' claims using relevant text evidence.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0638",
+      "subject": "ela",
+      "oh": "RI.8.9",
+      "state": "TX",
+      "code": "8.6B",
+      "confidence": "moderate",
+      "rationale": "Analyzing two texts with conflicting information on the same topic maps to genre-neutral Response SE 8.6B 'comparing sources within and across genres.'",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0639",
+      "subject": "ela",
+      "oh": "RI.2.4",
+      "state": "GA",
+      "code": "2.L.V3a",
+      "confidence": "strong",
+      "rationale": "Both determine meaning of unknown/topic words using context; GA V3a 'use context to determine or clarify meaning' is the direct match (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0640",
+      "subject": "ela",
+      "oh": "RL.3.4",
+      "state": "GA",
+      "code": "3.L.V3a",
+      "confidence": "strong",
+      "rationale": "Ohio 'meaning as used in a text, literal vs nonliteral' maps to GA V3a context-to-determine-meaning; genre-neutral, same GA element as RI.3.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0641",
+      "subject": "ela",
+      "oh": "RI.3.4",
+      "state": "GA",
+      "code": "3.L.V3a",
+      "confidence": "strong",
+      "rationale": "Determining academic/domain word meaning in context matches GA V3a; genre-neutral, shared with RL.3.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0642",
+      "subject": "ela",
+      "oh": "RL.4.4",
+      "state": "GA",
+      "code": "4.L.V3a",
+      "confidence": "strong",
+      "rationale": "Ohio 'meaning as used in a text' incl. allusions maps to GA V3a context-to-determine-meaning; genre-neutral, shared with RI.4.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0643",
+      "subject": "ela",
+      "oh": "RI.4.4",
+      "state": "GA",
+      "code": "4.L.V3a",
+      "confidence": "strong",
+      "rationale": "Determining academic/domain word meaning in context matches GA V3a; genre-neutral, shared with RL.4.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0644",
+      "subject": "ela",
+      "oh": "RL.5.4",
+      "state": "GA",
+      "code": "5.L.V3a",
+      "confidence": "strong",
+      "rationale": "Ohio 'meaning as used in a text' incl. figurative language maps to GA V3a context-to-determine-meaning; genre-neutral, shared with RI.5.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0645",
+      "subject": "ela",
+      "oh": "RI.5.4",
+      "state": "GA",
+      "code": "5.L.V3a",
+      "confidence": "strong",
+      "rationale": "Determining academic/domain word meaning in context matches GA V3a; genre-neutral, shared with RL.5.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0646",
+      "subject": "ela",
+      "oh": "RL.6.4",
+      "state": "GA",
+      "code": "6.L.V3b",
+      "confidence": "strong",
+      "rationale": "Ohio 'meaning as used in a text' matches GA V3b analyze word relationships/contextual clues to determine meaning (V3a is a dead placeholder); genre-neutral, shared with RI.6.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0647",
+      "subject": "ela",
+      "oh": "RL.6.4",
+      "state": "GA",
+      "code": "6.L.V3c",
+      "confidence": "strong",
+      "rationale": "Ohio's explicit 'connotative meanings' matches GA V3c distinguish connotations of words sharing a denotation; genre-neutral, shared with RI.6.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0648",
+      "subject": "ela",
+      "oh": "RI.6.4",
+      "state": "GA",
+      "code": "6.L.V3b",
+      "confidence": "strong",
+      "rationale": "Determining figurative/technical word meaning in context matches GA V3b contextual-clue analysis; genre-neutral, shared with RL.6.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0649",
+      "subject": "ela",
+      "oh": "RI.6.4",
+      "state": "GA",
+      "code": "6.L.V3c",
+      "confidence": "strong",
+      "rationale": "Ohio's explicit 'connotative meanings' matches GA V3c connotation vs denotation; genre-neutral, shared with RL.6.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0650",
+      "subject": "ela",
+      "oh": "RL.7.4",
+      "state": "GA",
+      "code": "7.L.V3b",
+      "confidence": "strong",
+      "rationale": "Ohio 'meaning as used in a text' matches GA V3b analyze word relationships/contextual clues (V3a is a dead placeholder); genre-neutral, shared with RI.7.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0651",
+      "subject": "ela",
+      "oh": "RL.7.4",
+      "state": "GA",
+      "code": "7.L.V3c",
+      "confidence": "strong",
+      "rationale": "Ohio's explicit 'connotative meanings' matches GA V3c connotation vs denotation; genre-neutral, shared with RI.7.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0652",
+      "subject": "ela",
+      "oh": "RI.7.4",
+      "state": "GA",
+      "code": "7.L.V3b",
+      "confidence": "strong",
+      "rationale": "Determining figurative/technical word meaning in context matches GA V3b contextual-clue analysis; genre-neutral, shared with RL.7.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0653",
+      "subject": "ela",
+      "oh": "RI.7.4",
+      "state": "GA",
+      "code": "7.L.V3c",
+      "confidence": "strong",
+      "rationale": "Ohio's explicit 'connotative meanings' matches GA V3c connotation vs denotation; genre-neutral, shared with RL.7.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0654",
+      "subject": "ela",
+      "oh": "RL.8.4",
+      "state": "GA",
+      "code": "8.L.V3b",
+      "confidence": "strong",
+      "rationale": "Ohio 'meaning as used in a text' incl. analogies matches GA V3b, which analyzes analogies/contextual clues to determine meaning (V3a is a dead placeholder); genre-neutral, shared with RI.8.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0655",
+      "subject": "ela",
+      "oh": "RL.8.4",
+      "state": "GA",
+      "code": "8.L.V3c",
+      "confidence": "strong",
+      "rationale": "Ohio's explicit 'connotative meanings' matches GA V3c connotation vs denotation; genre-neutral, shared with RI.8.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0656",
+      "subject": "ela",
+      "oh": "RI.8.4",
+      "state": "GA",
+      "code": "8.L.V3b",
+      "confidence": "strong",
+      "rationale": "Determining figurative/technical/analogical word meaning in context matches GA V3b; genre-neutral, shared with RL.8.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0657",
+      "subject": "ela",
+      "oh": "RI.8.4",
+      "state": "GA",
+      "code": "8.L.V3c",
+      "confidence": "strong",
+      "rationale": "Ohio's explicit 'connotative meanings' matches GA V3c connotation vs denotation; genre-neutral, shared with RL.8.4 (I).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0658",
+      "subject": "ela",
+      "oh": "RI.2.4",
+      "state": "TX",
+      "code": "2.3B",
+      "confidence": "strong",
+      "rationale": "Both are plain determine-the-meaning-of-words-in-a-text via context; TX 2.3B is the single genre-neutral context element for G2 and legitimately anchors this RI.2.4 (RL.2.4 is instead a sound-device standard, so not paired here).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0659",
+      "subject": "ela",
+      "oh": "RL.3.4",
+      "state": "TX",
+      "code": "3.3B",
+      "confidence": "strong",
+      "rationale": "Shared skill of determining meaning of words as used in a text; TX 3.3B (use context to determine meaning of unfamiliar/multiple-meaning words) is the one G3 context element and anchors both RL.3.4 and RI.3.4, with the literal/nonliteral note a minor figurative edge on the core.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0660",
+      "subject": "ela",
+      "oh": "RI.3.4",
+      "state": "TX",
+      "code": "3.3B",
+      "confidence": "strong",
+      "rationale": "General academic and domain-specific word meaning determined from context is a direct analogue of TX 3.3B; same G3 element also anchors RL.3.4 (expected, not double-counting).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0661",
+      "subject": "ela",
+      "oh": "RL.4.4",
+      "state": "TX",
+      "code": "4.3B",
+      "confidence": "strong",
+      "rationale": "Determining meaning of words as used in a text matches TX 4.3B context skill; the mythological-allusion clause is a minor figurative edge on an otherwise strong core; same G4 element also anchors RI.4.4.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0662",
+      "subject": "ela",
+      "oh": "RI.4.4",
+      "state": "TX",
+      "code": "4.3B",
+      "confidence": "strong",
+      "rationale": "Academic/domain-specific meaning from context is a direct analogue of TX 4.3B; same G4 element also anchors RL.4.4 (expected).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0663",
+      "subject": "ela",
+      "oh": "RL.5.4",
+      "state": "TX",
+      "code": "5.3B",
+      "confidence": "strong",
+      "rationale": "Core determine-meaning-as-used-in-text aligns with TX 5.3B context skill; figurative language (metaphors/similes/idioms) is a modest edge on a strong core; same G5 element also anchors RI.5.4.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0664",
+      "subject": "ela",
+      "oh": "RI.5.4",
+      "state": "TX",
+      "code": "5.3B",
+      "confidence": "strong",
+      "rationale": "Academic/domain-specific meaning from context is a direct analogue of TX 5.3B; same G5 element also anchors RL.5.4 (expected).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0665",
+      "subject": "ela",
+      "oh": "RL.6.4",
+      "state": "TX",
+      "code": "6.2B",
+      "confidence": "moderate",
+      "rationale": "Core determine-meaning matches TX 6.2B (context via definition/analogy/examples), but RL.6.4 leans heavily into figurative/connotative meaning and word-choice impact on tone, which is beyond pure context-to-meaning; same G6 element also anchors RI.6.4.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0666",
+      "subject": "ela",
+      "oh": "RI.6.4",
+      "state": "TX",
+      "code": "6.2B",
+      "confidence": "strong",
+      "rationale": "Figurative/connotative/technical meaning determined in a text aligns strongly with TX 6.2B context clarification; same G6 element also anchors RL.6.4 (expected).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0667",
+      "subject": "ela",
+      "oh": "RL.7.4",
+      "state": "TX",
+      "code": "7.2B",
+      "confidence": "moderate",
+      "rationale": "Core determine-meaning matches TX 7.2B (context via contrast/cause-effect), but RL.7.4 is dominated by figurative/connotative meaning, tone analysis, and sound devices, so only a partial fit to a pure context element; same G7 element also anchors RI.7.4.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0668",
+      "subject": "ela",
+      "oh": "RI.7.4",
+      "state": "TX",
+      "code": "7.2B",
+      "confidence": "strong",
+      "rationale": "Determining figurative/connotative/technical meaning of words in a text aligns strongly with TX 7.2B context skill; same G7 element also anchors RL.7.4 (expected).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0669",
+      "subject": "ela",
+      "oh": "RL.8.4",
+      "state": "TX",
+      "code": "8.2B",
+      "confidence": "moderate",
+      "rationale": "Core determine-meaning matches TX 8.2B (context within/beyond a paragraph), but RL.8.4 emphasizes figurative/connotative meaning, mood/tone, and analogies/allusions, going beyond pure context-to-meaning; same G8 element also anchors RI.8.4.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0670",
+      "subject": "ela",
+      "oh": "RI.8.4",
+      "state": "TX",
+      "code": "8.2B",
+      "confidence": "strong",
+      "rationale": "Determining figurative/connotative/technical meaning of words in a text aligns strongly with TX 8.2B context clarification; same G8 element also anchors RL.8.4 (expected).",
+      "source": "ai_draft"
     }
   ]
 }
