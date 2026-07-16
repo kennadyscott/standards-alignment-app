@@ -431,6 +431,14 @@ body {
 /* ---------- Passage sets ---------- */
 .btn-primary { background: var(--accent); color: #fff; }
 .btn-primary:hover { background: var(--accent-ink); }
+.btn-approve { background: #1e6e42; color: #fff; }
+.btn-approve:hover { background: #175936; }
+.draft-tag {
+  font-size: 10px; font-weight: 800; letter-spacing: .06em;
+  background: var(--amber-soft); color: var(--amber);
+  padding: 1px 6px; border-radius: 5px; vertical-align: middle;
+}
+.std-item.is-draft { border-left: 3px solid var(--amber); }
 
 .sets-panel {
   width: 320px;

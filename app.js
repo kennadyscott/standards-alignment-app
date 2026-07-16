@@ -1240,12 +1240,14 @@ function renderSetList() {
     box.appendChild(el(`<div class="review-empty">No passage sets yet.<br>Create one to get started.</div>`));
     return;
   }
-  state.sets.forEach(s => {
+  // Drafts first — they're the review queue.
+  const sorted = [...state.sets].sort((a, b) => (isDraft(b) ? 1 : 0) - (isDraft(a) ? 1 : 0));
+  sorted.forEach(s => {
     const tags = [...s.questions, ...s.peerRevision].filter(q => q.standard).length;
     const item = el(`
-      <div class="std-item ${state.ui.currentSetId === s.id ? 'active' : ''}">
+      <div class="std-item ${state.ui.currentSetId === s.id ? 'active' : ''} ${isDraft(s) ? 'is-draft' : ''}">
         <div class="std-item-top">
-          <span class="std-code">${esc(s.title || 'Untitled set')}</span>
+          <span class="std-code">${isDraft(s) ? '<span class="draft-tag">DRAFT</span> ' : ''}${esc(s.title || 'Untitled set')}</span>
           <button class="q-remove" data-del-set="${s.id}" title="Delete set">✕</button>
         </div>
         <div class="std-desc">${esc(s.passageId ? 'ID: ' + s.passageId : 'No passage ID')} · ${s.passages.length} passage${s.passages.length !== 1 ? 's' : ''} · ${tags} tagged</div>
@@ -1396,12 +1398,19 @@ function renderSetEditor() {
     </div>
 
     <div class="editor-savebar">
-      <span class="ps-hint">Changes save automatically — Save confirms immediately.</span>
+      ${isDraft(s)
+        ? `<span class="ps-hint">${s.passageId ? '' : 'Add a passage ID, then '}approve this set to move it into the passage library.</span>
+           <button class="btn btn-approve" id="approveSetBtn">✓ Approve set</button>`
+        : `<span class="ps-hint">Changes save automatically — Save confirms immediately.</span>`}
       <button class="btn btn-primary" id="saveSetBtn">Save</button>
     </div>`;
 
   wireSetEditor(panel, s);
 }
+
+// Imported sets land as drafts: they show a DRAFT tag, stay OUT of Passage Input, and need
+// an explicit Approve (after the reviewer adds the passage ID and gives them a once-over).
+function isDraft(s) { return s.status === 'draft'; }
 
 function tagTarget(s, section, i) {
   return section === 'set' ? s : section === 'peer' ? s.peerRevision[i] : s.questions[i];
@@ -1428,6 +1437,13 @@ function wireSetEditor(panel, s) {
   const on = (sel, ev, fn) => panel.querySelectorAll(sel).forEach(n => n.addEventListener(ev, fn));
 
   on('#saveSetBtn', 'click', () => flushState());
+  on('#approveSetBtn', 'click', () => {
+    if (!s.passageId && !confirm('This set has no passage ID yet. Approve it anyway?')) return;
+    delete s.status;                 // no longer a draft — enters the passage library
+    saveSets();
+    toast(`Approved "${s.title || 'set'}" — now in the passage library`);
+    renderPassages();
+  });
 
   on('[data-itemset]', 'click', e => {
     s.itemSetType = e.currentTarget.dataset.itemset;
@@ -1715,6 +1731,7 @@ function setNativeGrade(s) {
 
 // Every (state, grade) this passage set serves, and its category there.
 function setServes(s) {
+  if (isDraft(s)) return [];   // drafts don't populate the passage library until approved
   const std = tagStd(s.standard);
   if (!std) return [];
   const native = setNativeGrade(s);
