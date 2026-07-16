@@ -3612,6 +3612,2066 @@
       "confidence": "strong",
       "rationale": "Asks students to compare the political, economic, religious, and social reasons the English colonies were established, i.e. the motives for settling lands already inhabited by Indigenous peoples.",
       "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0362",
+      "subject": "ela",
+      "oh": "RL.2.1",
+      "state": "GA",
+      "code": "2.T.RA.2a",
+      "confidence": "moderate",
+      "rationale": "Both require the student to answer questions about a text by grounding the answer in what the text actually says, though Ohio names the wh- question types and Georgia names the textual reference.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0363",
+      "subject": "ela",
+      "oh": "RL.2.2",
+      "state": "GA",
+      "code": "2.T.T.1c",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to determine the central message, lesson, or moral of a story; Georgia routes that determination through characters' responses to events, and Georgia has no counterpart to Ohio's retelling clause.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0364",
+      "subject": "ela",
+      "oh": "RL.2.3",
+      "state": "GA",
+      "code": "2.T.T.1c",
+      "confidence": "strong",
+      "rationale": "Both demand that the student describe how characters respond to major events and challenges in a story.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0365",
+      "subject": "ela",
+      "oh": "RL.2.4",
+      "state": "GA",
+      "code": "2.T.T.4a",
+      "confidence": "strong",
+      "rationale": "Both require describing how sound devices — rhyme, alliteration, repeated lines — work in a poetic or literary text, with nearly identical exemplar lists.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0366",
+      "subject": "ela",
+      "oh": "RL.2.5",
+      "state": "GA",
+      "code": "2.T.T.1b",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to describe how a story is organized across its whole arc; Ohio frames it as beginning-introduces/ending-concludes and Georgia as the plot events between problem and solution.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0367",
+      "subject": "ela",
+      "oh": "RL.2.6",
+      "state": "GA",
+      "code": "2.T.C.2a",
+      "confidence": "strong",
+      "rationale": "Both require identifying and distinguishing points of view (first vs. third person, narrator vs. character) using evidence of language in the text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0368",
+      "subject": "ela",
+      "oh": "RL.2.9",
+      "state": "GA",
+      "code": "2.T.T.1d",
+      "confidence": "strong",
+      "rationale": "Near-verbatim: both require comparing and contrasting two or more versions of the same story by different authors or from diverse cultures.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0369",
+      "subject": "ela",
+      "oh": "RL.3.1",
+      "state": "GA",
+      "code": "3.T.RA.2a",
+      "confidence": "strong",
+      "rationale": "Both require answering questions about a text by referring explicitly to specific passages as the basis for the answer.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0370",
+      "subject": "ela",
+      "oh": "RL.3.2",
+      "state": "GA",
+      "code": "3.T.T.1c",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to determine the central message/theme and explain how details in the text convey it; Georgia narrows the supporting details to character traits and motivations, and does not cover Ohio's retelling clause.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0371",
+      "subject": "ela",
+      "oh": "RL.3.2",
+      "state": "GA",
+      "code": "4.T.T.1c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (+1): Georgia introduces the word 'theme' at grade 4, and this element's skill — identify a theme revealed through details about characters — is the closest analogue to Ohio's grade-3 determine-a-theme-through-key-details demand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0372",
+      "subject": "ela",
+      "oh": "RL.3.3",
+      "state": "GA",
+      "code": "3.T.T.1c",
+      "confidence": "strong",
+      "rationale": "Both require describing characters' traits, motivations, and feelings and explaining how those characters function in the story.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0373",
+      "subject": "ela",
+      "oh": "RL.3.3",
+      "state": "GA",
+      "code": "3.T.T.1b",
+      "confidence": "moderate",
+      "rationale": "Covers the second half of the Ohio standard: explaining how characters' actions function in and contribute to the plot's sequence of events.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0374",
+      "subject": "ela",
+      "oh": "RL.3.4",
+      "state": "GA",
+      "code": "2.T.SS.2a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (-1): both require distinguishing literal from nonliteral/figurative language in a text; Georgia places this skill a year earlier than Ohio.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0375",
+      "subject": "ela",
+      "oh": "RL.3.4",
+      "state": "GA",
+      "code": "3.T.SS.2a",
+      "confidence": "moderate",
+      "rationale": "Both require interpreting the meaning of nonliteral language as used in a text; Georgia names specific devices (similes, metaphors, idioms) rather than Ohio's general literal/nonliteral contrast.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0376",
+      "subject": "ela",
+      "oh": "RL.3.5",
+      "state": "GA",
+      "code": "3.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Both require referring to parts of a text using structural terms such as chapter or section and describing how the arrangement of those parts represents meaning; Ohio adds drama/poetry terms (scene, stanza) that Georgia omits here.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0377",
+      "subject": "ela",
+      "oh": "RL.3.6",
+      "state": "GA",
+      "code": "2.T.C.2a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (-1): both require distinguishing first- from third-person narration using language from the text; Georgia places this at grade 2.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0378",
+      "subject": "ela",
+      "oh": "RL.3.6",
+      "state": "GA",
+      "code": "3.T.C.2a",
+      "confidence": "moderate",
+      "rationale": "Both require describing the differing points of view of narrators or speakers in a text, though Georgia's emphasis is on separating the narrator's perspective from the reader's own.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0379",
+      "subject": "ela",
+      "oh": "RL.3.9",
+      "state": "GA",
+      "code": "3.T.T.1d",
+      "confidence": "moderate",
+      "rationale": "Both require comparing and contrasting characters, settings, central messages, and events across stories; Ohio scopes the comparison to one author's series while Georgia scopes it across cultures.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0380",
+      "subject": "ela",
+      "oh": "RI.2.1",
+      "state": "GA",
+      "code": "2.T.RA.2a",
+      "confidence": "moderate",
+      "rationale": "Both require answering questions about a text by grounding the answer in specific parts of that text; Ohio names the wh- question types and Georgia names the textual reference.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0381",
+      "subject": "ela",
+      "oh": "RI.2.2",
+      "state": "GA",
+      "code": "2.T.T.2a",
+      "confidence": "strong",
+      "rationale": "Both require identifying the main idea/topic of an expository text and the focus of its individual paragraphs.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0382",
+      "subject": "ela",
+      "oh": "RI.2.3",
+      "state": "GA",
+      "code": "2.T.T.2b",
+      "confidence": "strong",
+      "rationale": "Verbatim match: describe the connection between a series of historical events, scientific ideas or concepts, or steps in technical procedures in a text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0383",
+      "subject": "ela",
+      "oh": "RI.2.5",
+      "state": "GA",
+      "code": "2.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Both rest on knowing what text features (captions, subheadings, indexes) do in a text, but Ohio's demand is using them to locate information efficiently while Georgia's is explaining how they contribute to meaning and organization.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0384",
+      "subject": "ela",
+      "oh": "RI.2.6",
+      "state": "GA",
+      "code": "2.T.C.1a",
+      "confidence": "strong",
+      "rationale": "Both require determining an author's main purpose for a text — what the author is trying to answer, explain, inform, or describe.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0385",
+      "subject": "ela",
+      "oh": "RI.2.7",
+      "state": "GA",
+      "code": "2.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Both require explaining how a graphic element (Ohio: images/diagrams; Georgia: charts and other text features) contributes to and clarifies the meaning of an informational text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0386",
+      "subject": "ela",
+      "oh": "RI.2.8",
+      "state": "GA",
+      "code": "2.T.T.3a",
+      "confidence": "strong",
+      "rationale": "Both require identifying an author's main points/opinion in a persuasive or informational text and explaining how the supporting reasons and facts connect to them.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0387",
+      "subject": "ela",
+      "oh": "RI.2.9",
+      "state": "GA",
+      "code": "3.T.T.2c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (+1): both require working across two texts on the same topic in relation to their most important points; Georgia asks the student to integrate and explain where Ohio asks to compare and contrast, and Georgia has no grade-2 two-text element.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0388",
+      "subject": "ela",
+      "oh": "RI.3.1",
+      "state": "GA",
+      "code": "3.T.RA.2a",
+      "confidence": "strong",
+      "rationale": "Both require answering questions about a text by referring explicitly to specific passages as the basis for the answer.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0389",
+      "subject": "ela",
+      "oh": "RI.3.2",
+      "state": "GA",
+      "code": "3.T.T.2a",
+      "confidence": "strong",
+      "rationale": "Both require determining the main idea of an expository text and explaining how the facts and key details support it.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0390",
+      "subject": "ela",
+      "oh": "RI.3.3",
+      "state": "GA",
+      "code": "3.T.T.2b",
+      "confidence": "strong",
+      "rationale": "Verbatim match: describe the relationship between a series of historical events, scientific ideas or concepts, or steps in technical procedures in a text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0391",
+      "subject": "ela",
+      "oh": "RI.3.5",
+      "state": "GA",
+      "code": "3.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Both rest on using text features and organizational structures to find and make sense of information, but Ohio's demand is locating relevant information efficiently while Georgia's is describing how the text is arranged.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0392",
+      "subject": "ela",
+      "oh": "RI.3.6",
+      "state": "GA",
+      "code": "3.T.C.2a",
+      "confidence": "strong",
+      "rationale": "Both require the student to distinguish their own perspective from that of the author/narrator of a text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0393",
+      "subject": "ela",
+      "oh": "RI.3.7",
+      "state": "GA",
+      "code": "3.T.SS.1a",
+      "confidence": "partial",
+      "rationale": "Shared object only in part: Georgia names maps and captions as features that represent information, but its demand is describing how the text is arranged, not Ohio's demand of using illustrations plus words together to understand where, when, why, and how events occur.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0394",
+      "subject": "ela",
+      "oh": "RI.3.8",
+      "state": "GA",
+      "code": "3.T.T.3a",
+      "confidence": "strong",
+      "rationale": "Both require describing the relationship between an author's points/opinion statement and the supporting reasons and evidence used throughout the text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0395",
+      "subject": "ela",
+      "oh": "RI.3.9",
+      "state": "GA",
+      "code": "3.T.T.2c",
+      "confidence": "moderate",
+      "rationale": "Both require working across two texts on the same topic in relation to their important points and key details; Georgia asks the student to integrate and explain where Ohio asks to compare and contrast.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0396",
+      "subject": "ela",
+      "oh": "RL.4.1",
+      "state": "GA",
+      "code": "4.T.RA.2a",
+      "confidence": "moderate",
+      "rationale": "Both require the student to point to specific text details/passages to support an explanation or answer; GA does not name inference, and because GA has no RL/RI split this same evidence-citing element also serves RI.4.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0397",
+      "subject": "ela",
+      "oh": "RL.5.1",
+      "state": "GA",
+      "code": "5.T.RA.2a",
+      "confidence": "moderate",
+      "rationale": "Both require quoting/referring to specific passages from a text to support an idea or answer; GA adds page-number recording and omits the inference demand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0398",
+      "subject": "ela",
+      "oh": "RL.4.2",
+      "state": "GA",
+      "code": "4.T.T.1c",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to determine a theme of a literary text from details in the text; GA narrows the details to characters and does not include Ohio's summarizing sub-standard.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0399",
+      "subject": "ela",
+      "oh": "RL.5.2",
+      "state": "GA",
+      "code": "5.T.T.1c",
+      "confidence": "strong",
+      "rationale": "Both ask the student to determine a theme and explain how it is conveyed through how a character responds to challenges/conflict; GA lacks only Ohio's summary sub-standard.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0400",
+      "subject": "ela",
+      "oh": "RL.4.3",
+      "state": "GA",
+      "code": "4.T.T.1b",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to describe a character in depth from text details and how that character functions in the story; GA restricts the analysis to protagonist/antagonist and adds conflict, and omits setting and event.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0401",
+      "subject": "ela",
+      "oh": "RL.4.3",
+      "state": "GA",
+      "code": "3.T.T.1c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (GA 3): GA's 'describe characters' traits, motivations, actions, thoughts, and feelings' is the same skill as Ohio's parenthetical (a character's thoughts, words, or actions), though GA additionally ties it to the central message.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0402",
+      "subject": "ela",
+      "oh": "RL.5.4",
+      "state": "GA",
+      "code": "5.T.SS.2a",
+      "confidence": "moderate",
+      "rationale": "Both require interpreting figurative language (similes, metaphors, idioms) as used in a text; GA asks for the impact of the figurative language rather than Ohio's determination of word meaning.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0403",
+      "subject": "ela",
+      "oh": "RL.4.5",
+      "state": "GA",
+      "code": "4.T.T.4a",
+      "confidence": "partial",
+      "rationale": "Both ask the student to explain the structural elements that define poetry as a form; GA covers only the poetry half of Ohio's poem/drama/prose comparison and says nothing about drama's structural elements.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0404",
+      "subject": "ela",
+      "oh": "RL.4.5",
+      "state": "GA",
+      "code": "4.T.SS.1a",
+      "confidence": "partial",
+      "rationale": "Both ask the student to compare structural/organizational features across texts written in different genres (GA explicitly names rhyme pattern); GA constrains this to texts on the same topic and does not target genre-defining elements like verse, meter, or stage directions.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0405",
+      "subject": "ela",
+      "oh": "RL.5.5",
+      "state": "GA",
+      "code": "5.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to explain how the parts of a text (chapters/sections) work together to create the overall structure; GA frames it as features and structure functioning in conjunction rather than Ohio's series-of-parts-to-whole.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0406",
+      "subject": "ela",
+      "oh": "RL.4.6",
+      "state": "GA",
+      "code": "4.T.C.2a",
+      "confidence": "strong",
+      "rationale": "Both ask the student to explain/compare the differing points of view and perspectives of narrators or speakers within a text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0407",
+      "subject": "ela",
+      "oh": "RL.5.6",
+      "state": "GA",
+      "code": "5.T.C.2a",
+      "confidence": "strong",
+      "rationale": "Both ask the student to describe how a narrator's or speaker's perspective influences the text and how its events are presented.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0408",
+      "subject": "ela",
+      "oh": "RL.5.7",
+      "state": "GA",
+      "code": "5.T.C.1b",
+      "confidence": "partial",
+      "rationale": "Both ask the student to explain how non-prose/multimodal choices contribute to a text's overall effect; GA's demand is classifying texts by mode and its effect on audience/purpose, which is narrower than Ohio's analysis of visual elements' contribution to meaning, tone, and mood.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0409",
+      "subject": "ela",
+      "oh": "RL.4.9",
+      "state": "GA",
+      "code": "4.T.T.1d",
+      "confidence": "strong",
+      "rationale": "Near-verbatim: both ask the student to compare and contrast the treatment of similar themes and topics and patterns of events in stories, myths, and traditional literature from different cultures.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0410",
+      "subject": "ela",
+      "oh": "RL.5.9",
+      "state": "GA",
+      "code": "5.T.T.1d",
+      "confidence": "strong",
+      "rationale": "Near-verbatim: both ask the student to compare and contrast stories in the same genre on their approaches to similar themes and topics.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0411",
+      "subject": "ela",
+      "oh": "RI.4.1",
+      "state": "GA",
+      "code": "4.T.RA.2a",
+      "confidence": "moderate",
+      "rationale": "Both require the student to point to specific text passages to support an explanation or answer; GA does not name inference, and this element is shared with RL.4.1 because GA has no literature/informational strand split.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0412",
+      "subject": "ela",
+      "oh": "RI.5.1",
+      "state": "GA",
+      "code": "5.T.RA.2a",
+      "confidence": "moderate",
+      "rationale": "Both require quoting specific passages from a text to support an idea or answer; GA adds page-number recording and omits the inference demand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0413",
+      "subject": "ela",
+      "oh": "RI.4.2",
+      "state": "GA",
+      "code": "4.T.T.2a",
+      "confidence": "moderate",
+      "rationale": "Both center on the main idea of an expository text and the facts and key details that support it; GA's object is the techniques used to present the main idea rather than Ohio's determining it, and GA has no summarizing demand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0414",
+      "subject": "ela",
+      "oh": "RI.5.2",
+      "state": "GA",
+      "code": "5.T.T.2a",
+      "confidence": "moderate",
+      "rationale": "Both address multiple main ideas of an expository text supported by facts and key details; GA's demand is evaluating the presentation techniques rather than Ohio's determining the main ideas and summarizing.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0415",
+      "subject": "ela",
+      "oh": "RI.4.3",
+      "state": "GA",
+      "code": "4.T.T.2b",
+      "confidence": "strong",
+      "rationale": "Verbatim match: explain events, procedures, ideas, or concepts in a historical, scientific, or technical text, including what happened and why, based on specific information in the text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0416",
+      "subject": "ela",
+      "oh": "RI.5.3",
+      "state": "GA",
+      "code": "5.T.T.2b",
+      "confidence": "strong",
+      "rationale": "Verbatim match: explain the relationships or interactions between two or more individuals, events, ideas, or concepts in a historical, scientific, or technical text based on specific information in the text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0417",
+      "subject": "ela",
+      "oh": "RI.4.5",
+      "state": "GA",
+      "code": "3.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (GA 3): both ask the student to describe how a text is organized to present information using organizational structures such as cause/effect and to refer to parts of the text; GA grade 4 replaces this describe-one-text skill with a compare-across-texts one, so the nearest same-skill element sits one grade below.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0418",
+      "subject": "ela",
+      "oh": "RI.4.5",
+      "state": "GA",
+      "code": "5.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (GA 5): both ask the student to describe the overall organizational structure (GA names problem/solution) by which a text represents ideas and information; GA couples structure with text features.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0419",
+      "subject": "ela",
+      "oh": "RI.5.5",
+      "state": "GA",
+      "code": "4.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (GA 4): both ask the student to compare and contrast the organizational structure of two or more texts; GA constrains the texts to the same topic in different genres.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0420",
+      "subject": "ela",
+      "oh": "RI.4.6",
+      "state": "GA",
+      "code": "5.T.T.2c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (GA 5): both ask the student to compare and contrast firsthand and secondhand accounts of the same event or topic; GA has no grade-4 element for this skill.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0421",
+      "subject": "ela",
+      "oh": "RI.5.6",
+      "state": "GA",
+      "code": "5.T.T.2c",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to compare multiple accounts of the same event or topic and note how they differ; GA fixes the accounts as firsthand/secondhand rather than Ohio's open 'multiple accounts' and does not name perspective.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0422",
+      "subject": "ela",
+      "oh": "RI.5.6",
+      "state": "GA",
+      "code": "6.T.T.2b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (GA 6): both ask the student to compare and contrast two authors' accounts/presentations of the same event or topic; GA restricts to historical events and does not name the perspectives represented.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0423",
+      "subject": "ela",
+      "oh": "RI.4.7",
+      "state": "GA",
+      "code": "3.T.C.1b",
+      "confidence": "partial",
+      "rationale": "Cross-grade (GA 3): both ask the student to identify non-prose features of visual/auditory modes and explain how they contribute to the text's purpose and effect; GA does not reach Ohio's interpretation of quantitative displays (charts, graphs, timelines), and GA has no closer element at grade 4 or 5.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0424",
+      "subject": "ela",
+      "oh": "RI.5.7",
+      "state": "GA",
+      "code": "5.T.RA.1b",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to locate and draw information from multiple print and digital sources; GA frames this as conducting research on a self-selected topic rather than Ohio's efficient answer-finding/problem-solving.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0425",
+      "subject": "ela",
+      "oh": "RI.4.8",
+      "state": "GA",
+      "code": "4.T.T.3a",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to explain how an author uses evidence to support the points/claims made in a text; GA restricts the text type to opinion and argumentative texts, while Ohio allows any informational text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0426",
+      "subject": "ela",
+      "oh": "RI.5.8",
+      "state": "GA",
+      "code": "5.T.T.3a",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to explain how an author's supporting reasons and evidence back the stated claim; GA restricts to opinion/argumentative texts and does not require Ohio's matching of specific evidence to corresponding points.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0427",
+      "subject": "ela",
+      "oh": "RI.4.9",
+      "state": "GA",
+      "code": "4.T.T.2c",
+      "confidence": "strong",
+      "rationale": "Both ask the student to integrate information from multiple texts on the same topic in relation to the important points and key details.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0428",
+      "subject": "ela",
+      "oh": "RI.5.9",
+      "state": "GA",
+      "code": "4.T.T.2c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (GA 4): both ask the student to integrate information from several texts on the same topic; GA's grade-5 slot in this progression is occupied by firsthand/secondhand accounts, so the integrate-multiple-texts element sits one grade below.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0429",
+      "subject": "ela",
+      "oh": "RL.6.1",
+      "state": "GA",
+      "code": "5.T.RA.2a",
+      "confidence": "partial",
+      "rationale": "Both ask the student to refer to specific passages or quotations in a text to support an idea or answer; cross-grade (GA 5 to OH 6) because GA's grade 6-8 evidence elements shift to locating evidence across sources with bibliographic recording, and GA never restates the inference half.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0430",
+      "subject": "ela",
+      "oh": "RI.6.1",
+      "state": "GA",
+      "code": "5.T.RA.2a",
+      "confidence": "partial",
+      "rationale": "Same shared skill of citing specific passages from a text to support an idea or answer; cross-grade (GA 5 to OH 6), and GA frames it inside source curation rather than as a reading-analysis standard, so the inference half is uncovered.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0431",
+      "subject": "ela",
+      "oh": "RL.6.2",
+      "state": "GA",
+      "code": "6.T.T.1c",
+      "confidence": "moderate",
+      "rationale": "Both require determining a theme and explaining how the text's particular details convey it, though GA narrows the mechanism to character relationships and omits Ohio's objective-summary requirement.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0432",
+      "subject": "ela",
+      "oh": "RL.7.2",
+      "state": "GA",
+      "code": "7.T.T.1c",
+      "confidence": "moderate",
+      "rationale": "Both require analyzing how a theme is developed and expressed across a text through characters, events, and plot; GA adds cross-text comparison and has no objective-summary counterpart.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0433",
+      "subject": "ela",
+      "oh": "RL.8.2",
+      "state": "GA",
+      "code": "8.T.T.1c",
+      "confidence": "strong",
+      "rationale": "Both ask the student to analyze how a theme is conveyed and developed through its relationship to characters, events/plot, and structure; only Ohio's summary sub-standard is uncovered.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0434",
+      "subject": "ela",
+      "oh": "RL.6.3",
+      "state": "GA",
+      "code": "6.T.T.1a",
+      "confidence": "moderate",
+      "rationale": "Both ask how narrative technique across the whole text develops plot and characters, matching Ohio's plot-unfolds-in-episodes framing.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0435",
+      "subject": "ela",
+      "oh": "RL.6.3",
+      "state": "GA",
+      "code": "6.T.T.1b",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to analyze how events, conflict, and characterization drive the plot forward toward resolution.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0436",
+      "subject": "ela",
+      "oh": "RL.7.3",
+      "state": "GA",
+      "code": "7.T.T.1a",
+      "confidence": "moderate",
+      "rationale": "Both require analyzing how narrative elements/techniques work across a text to develop plot, characters, and setting.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0437",
+      "subject": "ela",
+      "oh": "RL.7.3",
+      "state": "GA",
+      "code": "6.T.T.1b",
+      "confidence": "moderate",
+      "rationale": "GA's 'analyze how setting, events, conflict, and characterization influence plot' is nearly Ohio's 'how setting shapes the characters or plot' example; cross-grade (GA 6 to OH 7) because GA moves to narrative devices at grade 7.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0438",
+      "subject": "ela",
+      "oh": "RL.8.3",
+      "state": "GA",
+      "code": "8.T.T.1a",
+      "confidence": "moderate",
+      "rationale": "Both ask how specific narrative moves across the text reveal character and develop plot, though GA does not single out dialogue or incidents as the unit of analysis.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0439",
+      "subject": "ela",
+      "oh": "RL.6.4",
+      "state": "GA",
+      "code": "6.T.SS.2a",
+      "confidence": "strong",
+      "rationale": "Both require determining how figurative and connotative language choices contribute to meaning and tone; GA's 'wide variety of texts' scope covers literature, so no strand crossing.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0440",
+      "subject": "ela",
+      "oh": "RL.7.4",
+      "state": "GA",
+      "code": "7.T.SS.2a",
+      "confidence": "strong",
+      "rationale": "Both require explaining how figurative and connotative language choices contribute to meaning, mood, or tone in a text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0441",
+      "subject": "ela",
+      "oh": "RL.7.4",
+      "state": "GA",
+      "code": "7.T.T.4a",
+      "confidence": "moderate",
+      "rationale": "Ohio's clause on rhyme and repetitions of sound within a verse or stanza matches GA's analysis of poetic sound devices and stanza structure.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0442",
+      "subject": "ela",
+      "oh": "RL.8.4",
+      "state": "GA",
+      "code": "8.T.SS.2a",
+      "confidence": "strong",
+      "rationale": "Both require analyzing the impact of figurative, connotative, and literary-device word choices on meaning and tone; GA frames the impact as achieving purpose for an audience.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0443",
+      "subject": "ela",
+      "oh": "RL.6.5",
+      "state": "GA",
+      "code": "6.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Both ask how a text's organizational structure conveys meaning, though Ohio's part-to-whole framing (how one scene or stanza fits the overall structure) is narrower than GA's author-modifies-structure framing.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0444",
+      "subject": "ela",
+      "oh": "RL.7.5",
+      "state": "GA",
+      "code": "7.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Both require analyzing how an author's structural choices contribute to a text's meaning; GA does not name drama or poem forms specifically.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0445",
+      "subject": "ela",
+      "oh": "RL.7.5",
+      "state": "GA",
+      "code": "7.T.T.4a",
+      "confidence": "moderate",
+      "rationale": "Ohio's analysis of how a poem's form contributes to meaning matches GA's analysis of poetic techniques including stanza and rhyme scheme.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0446",
+      "subject": "ela",
+      "oh": "RL.8.5",
+      "state": "GA",
+      "code": "8.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Both require analyzing how differing organizational structures contribute to meaning and style; GA does not require the two-text comparison Ohio does.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0447",
+      "subject": "ela",
+      "oh": "RL.6.6",
+      "state": "GA",
+      "code": "5.T.C.2a",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to explain how a narrator's or speaker's perspective is developed and shapes the text; cross-grade (GA 5 to OH 6) because GA's grade 6 element requires two or more competing perspectives, which Ohio does not introduce until grade 7.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0448",
+      "subject": "ela",
+      "oh": "RL.7.6",
+      "state": "GA",
+      "code": "6.T.C.2a",
+      "confidence": "moderate",
+      "rationale": "Both require analyzing how a single text develops and contrasts two or more perspectives of different narrators or characters; cross-grade (GA 6 to OH 7).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0449",
+      "subject": "ela",
+      "oh": "RL.8.6",
+      "state": "GA",
+      "code": "8.T.T.1b",
+      "confidence": "moderate",
+      "rationale": "Both ask how narrative devices produce a calculated effect such as suspense or humor on the audience; GA does not name the point-of-view gap (dramatic irony) as the mechanism, so only the effect-analysis skill is shared.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0450",
+      "subject": "ela",
+      "oh": "RL.6.9",
+      "state": "GA",
+      "code": "6.T.T.1d",
+      "confidence": "strong",
+      "rationale": "Near-verbatim: both require comparing and contrasting literary texts in different forms or genres in terms of their approaches to similar themes and topics.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0451",
+      "subject": "ela",
+      "oh": "RL.7.9",
+      "state": "GA",
+      "code": "7.T.T.1d",
+      "confidence": "strong",
+      "rationale": "Near-verbatim: both require comparing and contrasting a fictional portrayal of a time, place, or character with a historical account of the same period.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0452",
+      "subject": "ela",
+      "oh": "RL.8.9",
+      "state": "GA",
+      "code": "8.T.T.1d",
+      "confidence": "strong",
+      "rationale": "Near-verbatim: both require analyzing how a modern literary work draws on themes, patterns of events, or character types from earlier material.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0453",
+      "subject": "ela",
+      "oh": "RI.6.2",
+      "state": "GA",
+      "code": "6.T.T.2a",
+      "confidence": "moderate",
+      "rationale": "Both require identifying the main/central idea of an expository text and the facts and key details that convey it; GA frames this as recognizing expository techniques and has no objective-summary counterpart.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0454",
+      "subject": "ela",
+      "oh": "RI.7.2",
+      "state": "GA",
+      "code": "7.T.T.2a",
+      "confidence": "moderate",
+      "rationale": "Both require analyzing multiple main ideas and the details that develop them across an expository text; GA has no objective-summary counterpart.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0455",
+      "subject": "ela",
+      "oh": "RI.8.2",
+      "state": "GA",
+      "code": "8.T.T.2a",
+      "confidence": "moderate",
+      "rationale": "Both require analyzing the development of a central idea over the course of an expository text and its relationship to supporting facts and details; GA has no objective-summary counterpart.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0456",
+      "subject": "ela",
+      "oh": "RI.6.4",
+      "state": "GA",
+      "code": "6.T.SS.2a",
+      "confidence": "partial",
+      "rationale": "Shared attention to figurative and connotative language in texts, but Ohio's grade 6 standard stops at determining word meaning while GA requires determining impact on meaning, mood, or tone; Ohio's technical-meaning clause has no GA counterpart.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0457",
+      "subject": "ela",
+      "oh": "RI.7.4",
+      "state": "GA",
+      "code": "7.T.SS.2a",
+      "confidence": "strong",
+      "rationale": "Both require explaining how a specific figurative or connotative word choice contributes to meaning and tone; GA's 'wide variety of texts' scope covers informational text, so no strand crossing.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0458",
+      "subject": "ela",
+      "oh": "RI.8.4",
+      "state": "GA",
+      "code": "8.T.SS.2a",
+      "confidence": "strong",
+      "rationale": "Both require analyzing the impact of specific word choices, including figurative and connotative language, on meaning and tone; GA's scope is text-type-neutral.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0459",
+      "subject": "ela",
+      "oh": "RI.6.5",
+      "state": "GA",
+      "code": "6.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Both ask how organizational structure and features convey meaning and develop ideas; Ohio's part-to-whole framing is narrower than GA's author-modifies-structure framing.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0460",
+      "subject": "ela",
+      "oh": "RI.7.5",
+      "state": "GA",
+      "code": "7.T.SS.1a",
+      "confidence": "strong",
+      "rationale": "Both require analyzing the structure an author uses to organize a text and how that structure develops the ideas and achieves the author's purpose.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0461",
+      "subject": "ela",
+      "oh": "RI.8.5",
+      "state": "GA",
+      "code": "8.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Both require analyzing how structural choices develop and refine a text's ideas; GA does not narrow the unit of analysis to a single paragraph as Ohio does.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0462",
+      "subject": "ela",
+      "oh": "RI.6.6",
+      "state": "GA",
+      "code": "6.T.C.1a",
+      "confidence": "moderate",
+      "rationale": "Both require determining an author's purpose in a text and explaining how the text develops it; GA additionally requires handling multiple purposes and audience targeting.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0463",
+      "subject": "ela",
+      "oh": "RI.6.6",
+      "state": "GA",
+      "code": "6.T.C.2b",
+      "confidence": "moderate",
+      "rationale": "Both require explaining how an author's perspective is conveyed in the text; GA specifies the author's choice of evidence as the mechanism, which is one of the means Ohio leaves open.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0464",
+      "subject": "ela",
+      "oh": "RI.7.6",
+      "state": "GA",
+      "code": "7.T.C.2a",
+      "confidence": "strong",
+      "rationale": "Near-verbatim: both require determining the author's perspective in a text and analyzing how the author distinguishes that position from others.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0465",
+      "subject": "ela",
+      "oh": "RI.7.6",
+      "state": "GA",
+      "code": "7.T.C.1a",
+      "confidence": "moderate",
+      "rationale": "Covers the 'purpose' half of Ohio's perspective-or-purpose standard: both require analyzing an author's purpose and how the text develops it for an audience.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0466",
+      "subject": "ela",
+      "oh": "RI.8.6",
+      "state": "GA",
+      "code": "8.T.C.1a",
+      "confidence": "moderate",
+      "rationale": "Covers the 'purpose' half of Ohio's standard: both require determining an author's purpose in a text and analyzing how it is developed for specific audiences.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0467",
+      "subject": "ela",
+      "oh": "RI.8.6",
+      "state": "GA",
+      "code": "8.T.T.3a",
+      "confidence": "moderate",
+      "rationale": "Ohio's demand that students analyze how an author acknowledges and responds to conflicting evidence or viewpoints is the same skill as GA's analysis of an identified counterclaim and rebuttal within an argument.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0468",
+      "subject": "ela",
+      "oh": "RI.6.7",
+      "state": "GA",
+      "code": "6.T.C.1b",
+      "confidence": "moderate",
+      "rationale": "Both require using information carried by non-prose modes and text features alongside words to build a coherent understanding of a topic; GA does not frame it as integrating across separate media versions.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0469",
+      "subject": "ela",
+      "oh": "RI.6.8",
+      "state": "GA",
+      "code": "6.T.T.3a",
+      "confidence": "strong",
+      "rationale": "Both require tracing an argument's claim and supporting evidence and judging which claims the evidence actually supports.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0470",
+      "subject": "ela",
+      "oh": "RI.7.8",
+      "state": "GA",
+      "code": "7.T.T.3a",
+      "confidence": "strong",
+      "rationale": "Both require analyzing an argument's claim, counterclaim, and conclusion and assessing whether the evidence is relevant and the reasoning logically follows.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0471",
+      "subject": "ela",
+      "oh": "RI.8.8",
+      "state": "GA",
+      "code": "8.T.T.3a",
+      "confidence": "strong",
+      "rationale": "Both require delineating an argument's claim, evidence, counterclaim, and rebuttal and evaluating whether the evidence is relevant, logical, and sufficient.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0472",
+      "subject": "ela",
+      "oh": "RI.6.9",
+      "state": "GA",
+      "code": "6.T.T.2b",
+      "confidence": "strong",
+      "rationale": "Near-verbatim: both require comparing and contrasting one author's presentation of events with another author's on the same event or topic.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0473",
+      "subject": "ela",
+      "oh": "RI.7.9",
+      "state": "GA",
+      "code": "7.T.T.2b",
+      "confidence": "strong",
+      "rationale": "Verbatim: both require analyzing how two or more authors on the same topic shape their presentations by emphasizing different evidence or advancing different interpretations of facts.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0474",
+      "subject": "ela",
+      "oh": "RI.8.9",
+      "state": "GA",
+      "code": "8.T.T.2b",
+      "confidence": "strong",
+      "rationale": "Both require analyzing and evaluating where two or more texts on the same topic diverge on matters of evidence, fact, or interpretation.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-ga-0475",
+      "subject": "ela",
+      "oh": "RI.8.9",
+      "state": "GA",
+      "code": "8.T.C.2a",
+      "confidence": "moderate",
+      "rationale": "Both require comparing conflicting perspectives on a single topic across multiple texts and analyzing how each text establishes its position.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0476",
+      "subject": "ela",
+      "oh": "RL.2.1",
+      "state": "TX",
+      "code": "2.6B",
+      "confidence": "moderate",
+      "rationale": "Covers the 'ask' half of Ohio's ask-and-answer questioning routine; genre-neutral Comprehension strand, so it also serves RI.2.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0477",
+      "subject": "ela",
+      "oh": "RL.2.1",
+      "state": "TX",
+      "code": "2.7C",
+      "confidence": "moderate",
+      "rationale": "Covers the 'answer from the text' half — using text evidence to support a response about key details; genre-neutral Response strand, shared with RI.2.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0478",
+      "subject": "ela",
+      "oh": "RL.2.2",
+      "state": "TX",
+      "code": "2.8A",
+      "confidence": "strong",
+      "rationale": "Both require determining the lesson/theme of a literary work from text evidence; TX literary-elements SE is the direct RL analogue.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0479",
+      "subject": "ela",
+      "oh": "RL.2.2",
+      "state": "TX",
+      "code": "2.7D",
+      "confidence": "strong",
+      "rationale": "Matches Ohio part b, retelling stories while maintaining meaning and logical order; genre-neutral Response strand applied here to literary retelling.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0480",
+      "subject": "ela",
+      "oh": "RL.2.3",
+      "state": "TX",
+      "code": "2.8B",
+      "confidence": "moderate",
+      "rationale": "Both center on describing the main character, though Ohio frames it as response to events and TX as internal/external traits.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0481",
+      "subject": "ela",
+      "oh": "RL.2.3",
+      "state": "TX",
+      "code": "2.8C",
+      "confidence": "partial",
+      "rationale": "Supplies the 'major events and challenges' side of Ohio's standard via plot's main events, conflict, and resolution, but does not require tying character response to them.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0482",
+      "subject": "ela",
+      "oh": "RL.2.4",
+      "state": "TX",
+      "code": "2.10F",
+      "confidence": "moderate",
+      "rationale": "Directly matches Ohio's 'repeated lines' element — explaining the use of repetition; genre-neutral Author's craft strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0483",
+      "subject": "ela",
+      "oh": "RL.2.4",
+      "state": "TX",
+      "code": "3.9B",
+      "confidence": "moderate",
+      "rationale": "Rhyme scheme and sound devices in poems is the closest match to Ohio's beats/alliteration/rhyme focus; cross-grade +1 (TX grade 3, no grade-2 sound-device SE exists).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0484",
+      "subject": "ela",
+      "oh": "RL.2.5",
+      "state": "TX",
+      "code": "2.8C",
+      "confidence": "moderate",
+      "rationale": "Both require describing overall story structure; TX names main events/conflict/resolution where Ohio names beginning and ending.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0485",
+      "subject": "ela",
+      "oh": "RL.2.6",
+      "state": "TX",
+      "code": "2.10E",
+      "confidence": "strong",
+      "rationale": "Identical skill — identifying first- vs third-person narration; genre-neutral Author's craft strand but applied to narrators, so it serves RL.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0486",
+      "subject": "ela",
+      "oh": "RL.2.7",
+      "state": "TX",
+      "code": "2.10C",
+      "confidence": "partial",
+      "rationale": "Both involve print/graphic features contributing to meaning, but TX frames it as author's purpose rather than using illustrations to understand character/setting/plot; genre-neutral, shared with RI.2.7.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0487",
+      "subject": "ela",
+      "oh": "RL.2.10",
+      "state": "TX",
+      "code": "2.6E",
+      "confidence": "strong",
+      "rationale": "Matches Ohio's explicit text-to-self and text-to-text connection clause; genre-neutral Comprehension strand (TX has no text-complexity-band standard).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0488",
+      "subject": "ela",
+      "oh": "RL.2.10",
+      "state": "TX",
+      "code": "2.7A",
+      "confidence": "moderate",
+      "rationale": "Describing personal connections to sources covers Ohio's text-to-self/prior-experience clause; genre-neutral Response strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0489",
+      "subject": "ela",
+      "oh": "RL.3.1",
+      "state": "TX",
+      "code": "3.7C",
+      "confidence": "strong",
+      "rationale": "Both require grounding answers explicitly in text evidence; genre-neutral Response strand, shared with RI.3.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0490",
+      "subject": "ela",
+      "oh": "RL.3.1",
+      "state": "TX",
+      "code": "3.6B",
+      "confidence": "moderate",
+      "rationale": "Covers the question-generation half of Ohio's ask-and-answer standard; genre-neutral Comprehension strand, shared with RI.3.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0491",
+      "subject": "ela",
+      "oh": "RL.3.2",
+      "state": "TX",
+      "code": "3.8A",
+      "confidence": "strong",
+      "rationale": "Both require inferring/determining a theme of a literary work; TX literary-elements SE is the direct RL analogue.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0492",
+      "subject": "ela",
+      "oh": "RL.3.2",
+      "state": "TX",
+      "code": "3.7D",
+      "confidence": "strong",
+      "rationale": "Matches Ohio part b, retelling stories in ways that maintain meaning and logical order; genre-neutral Response strand applied to literary retelling.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0493",
+      "subject": "ela",
+      "oh": "RL.3.3",
+      "state": "TX",
+      "code": "3.8B",
+      "confidence": "moderate",
+      "rationale": "Both require characterization work at grade 3, though Ohio emphasizes traits/motivations and TX emphasizes major/minor character relationships.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0494",
+      "subject": "ela",
+      "oh": "RL.3.3",
+      "state": "TX",
+      "code": "3.8C",
+      "confidence": "moderate",
+      "rationale": "Covers Ohio's requirement that character actions contribute to the sequence of events, via analyzing plot sequence, conflict, and resolution.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0495",
+      "subject": "ela",
+      "oh": "RL.3.4",
+      "state": "TX",
+      "code": "3.10D",
+      "confidence": "moderate",
+      "rationale": "Shared skill is distinguishing literal from figurative/nonliteral language in a text; TX adds an author's-purpose frame Ohio does not require; genre-neutral Author's craft strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0496",
+      "subject": "ela",
+      "oh": "RL.3.5",
+      "state": "TX",
+      "code": "3.9B",
+      "confidence": "moderate",
+      "rationale": "Matches Ohio's requirement to use structural terms such as stanza when referring to parts of poems.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0497",
+      "subject": "ela",
+      "oh": "RL.3.5",
+      "state": "TX",
+      "code": "3.9C",
+      "confidence": "partial",
+      "rationale": "Covers Ohio's drama terms (acts/scenes) but TX asks students to discuss drama elements rather than describe how successive parts build on earlier sections.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0498",
+      "subject": "ela",
+      "oh": "RL.3.6",
+      "state": "TX",
+      "code": "3.10E",
+      "confidence": "strong",
+      "rationale": "Identical skill — identifying first- vs third-person point of view; genre-neutral Author's craft strand applied to narration.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0499",
+      "subject": "ela",
+      "oh": "RL.3.7",
+      "state": "TX",
+      "code": "3.10C",
+      "confidence": "moderate",
+      "rationale": "Both require explaining how graphic/print features contribute to what a text conveys; genre-neutral Author's craft strand, shared with RI.3.7.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0500",
+      "subject": "ela",
+      "oh": "RL.3.9",
+      "state": "TX",
+      "code": "4.7B",
+      "confidence": "partial",
+      "rationale": "Only TX SE in range demanding compare/contrast across texts, but it is genre-neutral and written-response framed, not the literary theme/setting/plot comparison Ohio names; cross-grade +1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0501",
+      "subject": "ela",
+      "oh": "RL.3.10",
+      "state": "TX",
+      "code": "3.6E",
+      "confidence": "strong",
+      "rationale": "Matches Ohio's explicit text-to-self and text-to-text connection clause; genre-neutral Comprehension strand (TX has no text-complexity-band standard).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0502",
+      "subject": "ela",
+      "oh": "RL.3.10",
+      "state": "TX",
+      "code": "3.7A",
+      "confidence": "moderate",
+      "rationale": "Describing personal connections to sources covers Ohio's prior-knowledge/text-to-self clause; genre-neutral Response strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0503",
+      "subject": "ela",
+      "oh": "RI.2.1",
+      "state": "TX",
+      "code": "2.6B",
+      "confidence": "moderate",
+      "rationale": "Covers the 'ask' half of Ohio's ask-and-answer routine; genre-neutral Comprehension strand, same SE also serves RL.2.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0504",
+      "subject": "ela",
+      "oh": "RI.2.1",
+      "state": "TX",
+      "code": "2.7C",
+      "confidence": "moderate",
+      "rationale": "Covers answering from the text with evidence about key details; genre-neutral Response strand, same SE also serves RL.2.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0505",
+      "subject": "ela",
+      "oh": "RI.2.2",
+      "state": "TX",
+      "code": "2.9D",
+      "confidence": "strong",
+      "rationale": "TX 2.9D(i) requires recognizing the central idea and supporting evidence of informational text, matching Ohio's main topic / paragraph focus.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0506",
+      "subject": "ela",
+      "oh": "RI.2.2",
+      "state": "TX",
+      "code": "2.6G",
+      "confidence": "moderate",
+      "rationale": "Evaluating details to determine key ideas is the same main-idea operation; genre-neutral Comprehension strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0507",
+      "subject": "ela",
+      "oh": "RI.2.3",
+      "state": "TX",
+      "code": "2.9D",
+      "confidence": "moderate",
+      "rationale": "TX 2.9D(iii) covers informational organizational patterns such as chronological order and explicit cause and effect, matching Ohio's connections among events/ideas/steps; same SE also carries RI.2.2 and RI.2.5 (TX collapses ~all RI structure into one SE).",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0508",
+      "subject": "ela",
+      "oh": "RI.2.5",
+      "state": "TX",
+      "code": "2.9D",
+      "confidence": "strong",
+      "rationale": "TX 2.9D(ii) requires using features and graphics to locate and gain information, matching Ohio's use of text features to locate key facts efficiently.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0509",
+      "subject": "ela",
+      "oh": "RI.2.6",
+      "state": "TX",
+      "code": "2.10A",
+      "confidence": "strong",
+      "rationale": "Both require identifying the author's purpose for writing the text; genre-neutral Author's purpose strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0510",
+      "subject": "ela",
+      "oh": "RI.2.7",
+      "state": "TX",
+      "code": "2.10C",
+      "confidence": "partial",
+      "rationale": "Both involve graphic features clarifying a text, but TX frames it as author's purpose rather than explaining how an image contributes to the text; genre-neutral, shared with RL.2.7.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0511",
+      "subject": "ela",
+      "oh": "RI.2.8",
+      "state": "TX",
+      "code": "2.9E",
+      "confidence": "moderate",
+      "rationale": "TX persuasive-text SE (what the author wants the reader to think/do, fact vs. opinion) is the grade-2 argument analogue to Ohio's author's main points and supporting reasons.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0512",
+      "subject": "ela",
+      "oh": "RI.3.1",
+      "state": "TX",
+      "code": "3.7C",
+      "confidence": "strong",
+      "rationale": "Both require grounding answers explicitly in text evidence; genre-neutral Response strand, same SE also serves RL.3.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0513",
+      "subject": "ela",
+      "oh": "RI.3.1",
+      "state": "TX",
+      "code": "3.6B",
+      "confidence": "moderate",
+      "rationale": "Covers the question-generation half of Ohio's ask-and-answer standard; genre-neutral Comprehension strand, same SE also serves RL.3.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0514",
+      "subject": "ela",
+      "oh": "RI.3.2",
+      "state": "TX",
+      "code": "3.9D",
+      "confidence": "strong",
+      "rationale": "TX 3.9D(i) requires recognizing the central idea with supporting evidence in informational text, matching Ohio's main idea plus supporting key details.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0515",
+      "subject": "ela",
+      "oh": "RI.3.2",
+      "state": "TX",
+      "code": "3.6G",
+      "confidence": "moderate",
+      "rationale": "Evaluating details to determine key ideas is the same main-idea-from-details operation; genre-neutral Comprehension strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0516",
+      "subject": "ela",
+      "oh": "RI.3.3",
+      "state": "TX",
+      "code": "3.9D",
+      "confidence": "moderate",
+      "rationale": "TX 3.9D(iii) covers informational organizational patterns such as cause and effect, matching Ohio's time/sequence/cause-effect relationships among events, ideas, or steps; same SE also carries RI.3.2 and RI.3.5.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0517",
+      "subject": "ela",
+      "oh": "RI.3.5",
+      "state": "TX",
+      "code": "3.9D",
+      "confidence": "moderate",
+      "rationale": "TX 3.9D(ii) covers informational features (sections, tables, graphs, timelines, bold font) to support understanding, though Ohio additionally requires search tools such as key words and hyperlinks.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0518",
+      "subject": "ela",
+      "oh": "RI.3.7",
+      "state": "TX",
+      "code": "3.10C",
+      "confidence": "moderate",
+      "rationale": "Both require explaining how graphic/print features contribute to understanding of the text; genre-neutral Author's craft strand, shared with RL.3.7.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0519",
+      "subject": "ela",
+      "oh": "RI.3.8",
+      "state": "TX",
+      "code": "3.9E",
+      "confidence": "moderate",
+      "rationale": "TX argumentative-text SE (identify the claim, distinguish fact from opinion) is the grade-3 analogue to Ohio's author's points, though it stops short of evidence-to-point relationships.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0520",
+      "subject": "ela",
+      "oh": "RI.3.8",
+      "state": "TX",
+      "code": "4.9E",
+      "confidence": "partial",
+      "rationale": "TX 4.9E(ii) 'explaining how the author has used facts for an argument' is the closest match to Ohio's evidence-to-point relationship; cross-grade +1, as grade 3 has no equivalent.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0521",
+      "subject": "ela",
+      "oh": "RI.3.9",
+      "state": "TX",
+      "code": "4.7B",
+      "confidence": "partial",
+      "rationale": "Only TX SE in range demanding compare/contrast of ideas across sources, but it is genre-neutral and written-response framed rather than an informational points/details comparison; cross-grade +1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0522",
+      "subject": "ela",
+      "oh": "RL.4.1",
+      "state": "TX",
+      "code": "4.6F",
+      "confidence": "strong",
+      "rationale": "Both demand drawing inferences and citing text evidence to support understanding; genre-neutral Comprehension strand, so it legitimately also anchors RI.4.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0523",
+      "subject": "ela",
+      "oh": "RL.4.1",
+      "state": "TX",
+      "code": "4.7C",
+      "confidence": "moderate",
+      "rationale": "Ohio's 'refer to details and examples when explaining' is the same act as using text evidence to support a response; genre-neutral Response strand, shared with RI.4.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0524",
+      "subject": "ela",
+      "oh": "RL.5.1",
+      "state": "TX",
+      "code": "5.6F",
+      "confidence": "strong",
+      "rationale": "Both demand inference plus evidence; Ohio's added 'quote accurately' is a precision increase on the same skill; genre-neutral Comprehension strand, shared with RI.5.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0525",
+      "subject": "ela",
+      "oh": "RL.5.1",
+      "state": "TX",
+      "code": "5.7C",
+      "confidence": "moderate",
+      "rationale": "Quoting accurately to explain a text is using text evidence to support an appropriate response; genre-neutral Response strand, shared with RI.5.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0526",
+      "subject": "ela",
+      "oh": "RL.4.2",
+      "state": "TX",
+      "code": "4.8A",
+      "confidence": "strong",
+      "rationale": "Ohio 2a (determine a theme from details) and TX 'infer basic themes supported by text evidence' are the same literary-elements skill at the same grade.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0527",
+      "subject": "ela",
+      "oh": "RL.4.2",
+      "state": "TX",
+      "code": "4.7D",
+      "confidence": "moderate",
+      "rationale": "Covers only Ohio 2b (summarize the text); genre-neutral Response strand SE for summarizing, so it also anchors RI.4.2.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0528",
+      "subject": "ela",
+      "oh": "RL.5.2",
+      "state": "TX",
+      "code": "5.8A",
+      "confidence": "strong",
+      "rationale": "Ohio 2a (determine a theme from details) matches TX 'infer multiple themes within a text using text evidence'; TX's plural themes is a modest scope increase on the identical skill.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0529",
+      "subject": "ela",
+      "oh": "RL.5.2",
+      "state": "TX",
+      "code": "5.7D",
+      "confidence": "moderate",
+      "rationale": "Covers only Ohio 2b (summarize the text); genre-neutral Response strand, shared with RI.5.2.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0530",
+      "subject": "ela",
+      "oh": "RL.4.3",
+      "state": "TX",
+      "code": "4.8B",
+      "confidence": "moderate",
+      "rationale": "Both analyze characters from textual detail (thoughts, words, actions); TX narrows to interactions and change, so it covers the character half of Ohio's character/setting/event triple.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0531",
+      "subject": "ela",
+      "oh": "RL.4.3",
+      "state": "TX",
+      "code": "4.8D",
+      "confidence": "partial",
+      "rationale": "TX is the only setting SE and reaches Ohio's 'describe a setting' only through the narrower demand of explaining the setting's influence on plot.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0532",
+      "subject": "ela",
+      "oh": "RL.5.3",
+      "state": "TX",
+      "code": "5.8B",
+      "confidence": "strong",
+      "rationale": "Ohio explicitly cues 'how characters interact' and TX asks students to analyze relationships and conflicts among characters; same comparative character analysis.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0533",
+      "subject": "ela",
+      "oh": "RL.5.4",
+      "state": "TX",
+      "code": "5.10D",
+      "confidence": "partial",
+      "rationale": "Shared object is figurative language (simile, metaphor), but Ohio asks students to determine its meaning while TX asks how it achieves a purpose; genre-neutral Author's purpose and craft strand, and TX's determine-word-meaning SEs are outside this candidate set.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0534",
+      "subject": "ela",
+      "oh": "RL.4.5",
+      "state": "TX",
+      "code": "4.9C",
+      "confidence": "strong",
+      "rationale": "Covers Ohio's drama half exactly: structural elements of drama including acts, scenes, and stage directions.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0535",
+      "subject": "ela",
+      "oh": "RL.4.5",
+      "state": "TX",
+      "code": "3.9B",
+      "confidence": "moderate",
+      "rationale": "Covers Ohio's poem half (structural elements such as stanzas, rhyme, sound devices); cross-grade -1 because TX moves poetry SEs off structure and onto figurative language at grades 4-5.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0536",
+      "subject": "ela",
+      "oh": "RL.5.5",
+      "state": "TX",
+      "code": "5.10B",
+      "confidence": "partial",
+      "rationale": "Shared skill is analyzing text structure, but Ohio asks how parts fit to form a whole while TX asks how structure serves author's purpose; genre-neutral Author's purpose and craft strand used because TX has no literary part-to-whole SE.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0537",
+      "subject": "ela",
+      "oh": "RL.4.6",
+      "state": "TX",
+      "code": "4.10E",
+      "confidence": "moderate",
+      "rationale": "Both address point of view as a literary device; Ohio adds explaining differences among character perspectives, which TX leaves implicit; genre-neutral Author's purpose and craft strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0538",
+      "subject": "ela",
+      "oh": "RL.5.6",
+      "state": "TX",
+      "code": "5.10E",
+      "confidence": "moderate",
+      "rationale": "Both address narrator point of view (first/third person); Ohio's 'influence how events are described' goes slightly past TX's 'identify and understand'; genre-neutral Author's purpose and craft strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0539",
+      "subject": "ela",
+      "oh": "RL.5.7",
+      "state": "TX",
+      "code": "5.10C",
+      "confidence": "moderate",
+      "rationale": "Both analyze how visual/graphic features contribute to a text's purpose and effect; genre-neutral Author's purpose and craft strand, which is the only TX home for this analysis.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0540",
+      "subject": "ela",
+      "oh": "RL.4.9",
+      "state": "TX",
+      "code": "4.7B",
+      "confidence": "moderate",
+      "rationale": "Shared skill is comparing and contrasting ideas across multiple sources; genre-neutral Response strand, since TX has no across-texts theme-comparison SE at grade 4.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0541",
+      "subject": "ela",
+      "oh": "RL.5.9",
+      "state": "TX",
+      "code": "5.7B",
+      "confidence": "moderate",
+      "rationale": "Shared skill is comparing and contrasting ideas across a variety of sources; genre-neutral Response strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0542",
+      "subject": "ela",
+      "oh": "RL.5.9",
+      "state": "TX",
+      "code": "6.7A",
+      "confidence": "partial",
+      "rationale": "Captures Ohio's theme-across-texts element ('infer multiple themes within and across texts'), but not the same-genre constraint; cross-grade +1, and note TX renumbers literary elements to item 7 at grade 6.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0543",
+      "subject": "ela",
+      "oh": "RL.4.10",
+      "state": "TX",
+      "code": "4.6E",
+      "confidence": "moderate",
+      "rationale": "Matches only Ohio's second sentence (activate prior knowledge, make text-to-self and text-to-text connections); genre-neutral Comprehension strand; the text-complexity-band clause has no TX counterpart in this candidate set.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0544",
+      "subject": "ela",
+      "oh": "RL.5.10",
+      "state": "TX",
+      "code": "5.6E",
+      "confidence": "moderate",
+      "rationale": "Matches only Ohio's second sentence (prior knowledge, text-to-self and text-to-text connections); genre-neutral Comprehension strand; the text-complexity-band clause is unmatched.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0545",
+      "subject": "ela",
+      "oh": "RI.4.1",
+      "state": "TX",
+      "code": "4.6F",
+      "confidence": "strong",
+      "rationale": "Both demand inference plus supporting evidence; genre-neutral Comprehension strand, deliberately shared with RL.4.1 because TX draws no RL/RI distinction here.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0546",
+      "subject": "ela",
+      "oh": "RI.4.1",
+      "state": "TX",
+      "code": "4.7C",
+      "confidence": "moderate",
+      "rationale": "Referring to details and examples when explaining a text is using text evidence to support a response; genre-neutral Response strand, shared with RL.4.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0547",
+      "subject": "ela",
+      "oh": "RI.5.1",
+      "state": "TX",
+      "code": "5.6F",
+      "confidence": "strong",
+      "rationale": "Both demand inference plus evidence; genre-neutral Comprehension strand, shared with RL.5.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0548",
+      "subject": "ela",
+      "oh": "RI.5.1",
+      "state": "TX",
+      "code": "5.7C",
+      "confidence": "moderate",
+      "rationale": "Quoting accurately to explain a text is using text evidence to support an appropriate response; genre-neutral Response strand, shared with RL.5.1.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0549",
+      "subject": "ela",
+      "oh": "RI.4.2",
+      "state": "TX",
+      "code": "4.9D",
+      "confidence": "moderate",
+      "rationale": "TX 9D(i) 'the central idea with supporting evidence' is the informational-genre analogue of Ohio 2a (main idea supported by key details); TX's verb 'recognize' sits below Ohio's 'explain how'.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0550",
+      "subject": "ela",
+      "oh": "RI.4.2",
+      "state": "TX",
+      "code": "4.6G",
+      "confidence": "moderate",
+      "rationale": "Evaluating details to determine key ideas is the reasoning Ohio 2a demands; genre-neutral Comprehension strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0551",
+      "subject": "ela",
+      "oh": "RI.4.2",
+      "state": "TX",
+      "code": "4.7D",
+      "confidence": "moderate",
+      "rationale": "Covers only Ohio 2b (provide a summary); genre-neutral Response strand, shared with RL.4.2.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0552",
+      "subject": "ela",
+      "oh": "RI.5.2",
+      "state": "TX",
+      "code": "5.9D",
+      "confidence": "moderate",
+      "rationale": "TX 9D(i) 'the central idea with supporting evidence' is the informational-genre analogue of Ohio 2a; TX 'recognize' sits below Ohio 'explain how'.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0553",
+      "subject": "ela",
+      "oh": "RI.5.2",
+      "state": "TX",
+      "code": "5.6G",
+      "confidence": "moderate",
+      "rationale": "Evaluating details to determine key ideas matches Ohio 2a's main-ideas-from-key-details reasoning; genre-neutral Comprehension strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0554",
+      "subject": "ela",
+      "oh": "RI.5.2",
+      "state": "TX",
+      "code": "5.7D",
+      "confidence": "moderate",
+      "rationale": "Covers only Ohio 2b (provide a summary); genre-neutral Response strand, shared with RL.5.2.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0555",
+      "subject": "ela",
+      "oh": "RI.4.5",
+      "state": "TX",
+      "code": "4.9D",
+      "confidence": "moderate",
+      "rationale": "TX 9D(iii) organizational patterns in informational text is the informational-genre analogue of Ohio's 'describe the overall structure' of a text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0556",
+      "subject": "ela",
+      "oh": "RI.4.5",
+      "state": "TX",
+      "code": "4.10B",
+      "confidence": "moderate",
+      "rationale": "Shared skill is identifying and explaining a text's structure; TX ties it to author's purpose, which Ohio does not; genre-neutral Author's purpose and craft strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0557",
+      "subject": "ela",
+      "oh": "RI.5.5",
+      "state": "TX",
+      "code": "5.9D",
+      "confidence": "partial",
+      "rationale": "TX 9D(iii) covers recognizing organizational patterns in one informational text, but Ohio's operative demand is comparing structure across two or more texts, which no TX SE asks for.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0558",
+      "subject": "ela",
+      "oh": "RI.4.6",
+      "state": "TX",
+      "code": "4.7B",
+      "confidence": "partial",
+      "rationale": "Shared skill is comparing and contrasting across sources; TX has no firsthand/secondhand account distinction anywhere, so the perspective-difference core of Ohio is uncovered; genre-neutral Response strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0559",
+      "subject": "ela",
+      "oh": "RI.5.6",
+      "state": "TX",
+      "code": "5.7B",
+      "confidence": "partial",
+      "rationale": "Shared skill is comparing and contrasting ideas across a variety of sources; TX does not name analysis of differing perspectives across accounts; genre-neutral Response strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0560",
+      "subject": "ela",
+      "oh": "RI.4.7",
+      "state": "TX",
+      "code": "4.10C",
+      "confidence": "moderate",
+      "rationale": "Both analyze how print and graphic features (charts, diagrams, timelines) contribute to understanding and purpose; genre-neutral Author's purpose and craft strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0561",
+      "subject": "ela",
+      "oh": "RI.4.7",
+      "state": "TX",
+      "code": "4.9D",
+      "confidence": "partial",
+      "rationale": "TX 9D(ii) names informational text features such as diagrams that support understanding, but only asks students to recognize them, not to interpret information they present.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0562",
+      "subject": "ela",
+      "oh": "RI.4.8",
+      "state": "TX",
+      "code": "4.9E",
+      "confidence": "strong",
+      "rationale": "TX 9E(ii) 'explaining how the author has used facts for an argument' is the direct argumentative-genre analogue of Ohio's 'explain how an author uses evidence to support particular points'.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0563",
+      "subject": "ela",
+      "oh": "RI.5.8",
+      "state": "TX",
+      "code": "5.9E",
+      "confidence": "strong",
+      "rationale": "TX 9E(ii) 'explaining how the author has used facts for or against an argument' matches Ohio's explain-how-evidence-supports-points, including the point/counterpoint discrimination Ohio adds at grade 5.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0564",
+      "subject": "ela",
+      "oh": "RI.4.9",
+      "state": "TX",
+      "code": "4.6H",
+      "confidence": "moderate",
+      "rationale": "Ohio's 'integrate information from two texts to write or speak knowledgeably' is TX's 'synthesize information to create new understanding'; genre-neutral Comprehension strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0565",
+      "subject": "ela",
+      "oh": "RI.4.9",
+      "state": "TX",
+      "code": "4.7B",
+      "confidence": "partial",
+      "rationale": "Covers the write-about-multiple-sources half of Ohio, but TX frames it as comparing/contrasting rather than integrating; genre-neutral Response strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0566",
+      "subject": "ela",
+      "oh": "RI.5.9",
+      "state": "TX",
+      "code": "5.6H",
+      "confidence": "moderate",
+      "rationale": "Ohio's 'integrate information from several texts to write or speak knowledgeably' is TX's 'synthesize information to create new understanding'; genre-neutral Comprehension strand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-tx-0567",
+      "subject": "ela",
+      "oh": "RI.5.9",
+      "state": "TX",
+      "code": "5.7B",
+      "confidence": "partial",
+      "rationale": "Covers the write-about-multiple-sources half of Ohio, but TX frames it as comparing/contrasting rather than integrating; genre-neutral Response strand.",
+      "source": "ai_draft"
     }
   ]
 }

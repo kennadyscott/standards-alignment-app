@@ -427,8 +427,28 @@ function indexLinks() {
 }
 
 /* ---------- alignment ----------
-   Only the reviewer's approvals count; every link starts pending. */
-function statusOf(l) { return state.decisions[l.id] || 'pending'; }
+   Only the reviewer's approvals count; every link starts pending.
+
+   Two standing rules cull drafts that aren't worth a look, so the queue is candidates the
+   reviewer would plausibly say yes to rather than a pile to say no to:
+     1. `partial` is the lowest confidence the drafters emit — never show it.
+     2. A cross-grade match has to be `strong`. Same-grade moderates are worth a look;
+        a moderate guess that ALSO jumps a grade is not.
+   These are auto-rejections, not deletions: they surface under the Rejected filter with
+   the reason on the card, and an explicit decision always overrides them. */
+function autoRejectReason(l) {
+  if (state.decisions[l.id]) return null;      // the reviewer's own call always wins
+  if (l.confidence === 'partial') return 'partial confidence';
+  const oh = state.byKey.get(anchorKeyOf(l));
+  const other = state.byKey.get(linkedKeyOf(l));
+  if (isCrossGrade(oh, other) && l.confidence !== 'strong') {
+    return `cross-grade but only ${l.confidence || 'unrated'} confidence`;
+  }
+  return null;
+}
+function statusOf(l) {
+  return state.decisions[l.id] || (autoRejectReason(l) ? 'rejected' : 'pending');
+}
 function linksFor(std) {
   return std.state === ANCHOR
     ? (state.byAnchor.get(keyOf(std)) || [])
@@ -683,11 +703,15 @@ function linkCard(l) {
     .filter(x => x.id !== l.id && statusOf(x) === 'approved')
     .map(x => state.byKey.get(linkedKeyOf(x))).filter(Boolean)
     .filter(x => x.state !== other.state);
+  const auto = autoRejectReason(l);
   const actions = st === 'pending'
     ? `<button class="act-btn approve" data-act="approved" data-id="${l.id}">✓ Approve</button>
        <button class="act-btn reject" data-act="rejected" data-id="${l.id}">✕ Reject</button>`
-    : `<span class="status-chip ${st}">${st}</span>
-       <button class="act-btn reset" data-act="pending" data-id="${l.id}">Undo</button>`;
+    : auto
+      ? `<span class="status-chip rejected">auto-rejected · ${esc(auto)}</span>
+         <button class="act-btn reset" data-act="unauto" data-id="${l.id}" title="Review it anyway">Review anyway</button>`
+      : `<span class="status-chip ${st}">${st}</span>
+         <button class="act-btn reset" data-act="pending" data-id="${l.id}">Undo</button>`;
   return `
     <div class="review-card ${st !== 'pending' ? 'decided-' + st : ''}">
       <div class="review-pair">
@@ -862,6 +886,11 @@ function handleAction(act, id) {
     delete state.crossOk[id];
     pushState();
     toast('Grade assignment removed');
+  } else if (act === 'unauto') {
+    // Override a standing rule for this one link — an explicit 'pending' beats the rule.
+    state.decisions[id] = 'pending';
+    saveDecisions();
+    toast('Back in the queue');
   } else if (act === 'pending') {
     delete state.decisions[id];
     saveDecisions();
