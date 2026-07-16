@@ -2170,6 +2170,88 @@ function renderAll() {
   renderBadge();
   renderPassages();
   renderInput();
+  renderDash();
+}
+
+/* ---------- dashboard ----------
+   Per-grade inventory: how many passage sets each sub-domain holds, split
+   single-passage vs multi-passage — the coverage view for planning what to build next. */
+
+// Finest sub-domain we can name for a set: literary genres use the hierarchy subtopic;
+// content-area sets use their tagged standard's strand (Earth/Life/Physical Science,
+// History, Geography, …), falling back to the subtopic when no standard is tagged.
+function setSubdomain(s) {
+  if (s.genre === 'literary' || s.genre === 'literary_nonfiction') return s.gaSubtopic || 'Untagged';
+  const std = tagStd(s.standard);
+  const strand = std && std.strand;
+  if (strand === 'Earth and Space Science') return 'Earth Science';
+  if (strand) return strand;
+  return s.gaSubtopic || 'Untagged';
+}
+
+const DASH_ORDER = [
+  'Earth Science', 'Life Science', 'Physical Science',
+  'History', 'Geography', 'Government', 'Economics', 'Social Studies',
+  'Poetry', 'Narrative Fiction', 'Traditional Literature', 'Short Literary Forms',
+  'Biographies', 'True Narratives',
+];
+
+function renderDash() {
+  const wrap = document.getElementById('dashWrap');
+  if (!wrap) return;
+  wrap.innerHTML = '';
+  if (!state.sets.length) {
+    wrap.appendChild(el(`<div class="review-empty">No passage sets yet.</div>`));
+    return;
+  }
+
+  GRADES.forEach(g => {
+    const sets = state.sets.filter(s => String(s.gaGrade) === g);
+    if (!sets.length) return;
+
+    // sub-domain -> {single, multi}
+    const tally = new Map();
+    sets.forEach(s => {
+      const dom = setSubdomain(s);
+      const t = tally.get(dom) || { single: 0, multi: 0 };
+      if (s.passages.length > 1) t.multi++; else t.single++;
+      tally.set(dom, t);
+    });
+    const doms = [...tally.keys()].sort((a, b) => {
+      const ia = DASH_ORDER.indexOf(a), ib = DASH_ORDER.indexOf(b);
+      return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib) || a.localeCompare(b);
+    });
+    const totS = sets.filter(s => s.passages.length === 1).length;
+    const totM = sets.length - totS;
+    const drafts = sets.filter(isDraft).length;
+
+    wrap.appendChild(el(`
+      <div class="dash-card">
+        <div class="dash-head">
+          <span class="dash-grade">Grade ${esc(g)}</span>
+          <span class="ps-hint">${sets.length} set${sets.length !== 1 ? 's' : ''}${drafts ? ` · ${drafts} draft${drafts !== 1 ? 's' : ''}` : ''}</span>
+        </div>
+        <table class="dash-table">
+          <thead><tr><th>Sub-domain</th><th>Single</th><th>Multi</th><th>Total</th></tr></thead>
+          <tbody>
+            ${doms.map(d => {
+              const t = tally.get(d);
+              return `<tr>
+                <td>${esc(d)}</td>
+                <td>${t.single || '—'}</td>
+                <td>${t.multi || '—'}</td>
+                <td class="dash-total">${t.single + t.multi}</td>
+              </tr>`;
+            }).join('')}
+          </tbody>
+          <tfoot><tr><td>All sub-domains</td><td>${totS}</td><td>${totM}</td><td class="dash-total">${sets.length}</td></tr></tfoot>
+        </table>
+      </div>`));
+  });
+
+  if (!wrap.children.length) {
+    wrap.appendChild(el(`<div class="review-empty">No sets carry a grade yet.</div>`));
+  }
 }
 
 function init() {
@@ -2182,6 +2264,8 @@ function init() {
     document.getElementById('reviewView').classList.toggle('hidden', state.ui.view !== 'review');
     document.getElementById('passagesView').classList.toggle('hidden', state.ui.view !== 'passages');
     document.getElementById('inputView').classList.toggle('hidden', state.ui.view !== 'input');
+    document.getElementById('dashView').classList.toggle('hidden', state.ui.view !== 'dash');
+    if (state.ui.view === 'dash') renderDash();
   });
 
   document.getElementById('inState').addEventListener('change', e => {

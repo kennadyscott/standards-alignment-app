@@ -23,6 +23,7 @@
     <button class="tab" data-view="review">Review Queue <span class="badge" id="pendingBadge">0</span></button>
     <button class="tab" data-view="passages">Master Passage List</button>
     <button class="tab" data-view="input">State Lists</button>
+    <button class="tab" data-view="dash">Dashboard</button>
   </nav>
   <div class="topbar-actions">
     <button class="btn btn-ghost hidden" id="saveBadge" title="Cloud saving status — click to connect or update the access token"></button>
@@ -135,6 +136,10 @@
     <aside class="input-list-panel" id="inputList"></aside>
     <section class="input-detail-panel" id="inputDetail"></section>
   </div>
+</main>
+
+<main id="dashView" class="view hidden">
+  <div class="dash-wrap" id="dashWrap"></div>
 </main>
 
 <div class="toast" id="toast"></div>
