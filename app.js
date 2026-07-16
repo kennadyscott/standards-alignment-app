@@ -142,7 +142,7 @@ const state = {
     revSubject: 'social_studies', revGrade: '4', revStatus: 'pending', revState: 'ALL',
     inState: 'OH', inGrade: '4', overrideKey: null,
     inStage: 'all', inSelected: null,                  // State Lists: stage filter + selected set
-    dashOpen: {},                                      // Dashboard: which grade sections are expanded
+    dashOpen: {}, dashState: 'OH',                     // Dashboard: expanded grades + which state's lists
     setFilterStatus: 'all', setFilterGrade: 'all',     // Master list filters
     currentSetId: null, openPicker: null,
   },
@@ -2374,9 +2374,19 @@ function renderDash() {
     wrap.appendChild(el(`<div class="review-empty">No passage sets yet.</div>`));
     return;
   }
+  const dst = state.ui.dashState;
+  // Coverage per STATE list: a set counts toward a grade when it serves (or, still a
+  // draft, WILL serve) that state's list at that grade — own tag, universal, or an
+  // approved ±1 alignment. Dismissed-from-that-grade sets don't count.
+  const servingSets = g => state.sets.filter(s =>
+    !state.setDismiss[inputKey(s.id, dst, g)] &&
+    setServes(s, true).some(v => v.state === dst && v.grade === String(g)));
+  const totalServing = GRADES.reduce((a, g) => a + servingSets(g).length, 0);
+  const prog = document.getElementById('dashProgress');
+  if (prog) prog.textContent = `${totalServing} passage placements across ${STATE_NAMES[dst]} grade lists · drafts included · goal ${DASH_GOAL} per sub-domain per type`;
 
   GRADES.forEach(g => {
-    const sets = state.sets.filter(s => String(s.gaGrade) === g);
+    const sets = servingSets(g);
     const expect = DASH_EXPECT[g === '2' ? '2' : '3-8'];
     const open = !!state.ui.dashOpen[g];
 
@@ -2450,6 +2460,7 @@ function init() {
     state.ui.inGrade = e.target.value; state.ui.inSelected = null; state.ui.openPicker = null; renderInput();
   });
   bindSeg('inStageSeg', 'inStage', v => { state.ui.inStage = v; state.ui.openPicker = null; renderInput(); });
+  bindSeg('dashStateSeg', 'dashState', v => { state.ui.dashState = v; renderDash(); });
 
   document.getElementById('newSetBtn').addEventListener('click', newPassageSet);
 
