@@ -31,6 +31,12 @@ const ITEM_SET_TYPES = [
   { key: 'informative', label: 'Informative' },
   { key: 'opinion', label: 'Opinion' },
 ];
+const QUESTION_TYPES = [
+  { key: 'multiple_choice', label: 'Multiple Choice' },
+  { key: 'cloze', label: 'CLOZE (Drop-Down)' },
+  { key: 'multi_select', label: 'Multi-Select' },
+  { key: 'text_entry', label: 'Text Entry' },
+];
 const GA_SUBTOPICS = {
   '2': {
     literary: ['Poetry', 'Narrative Fiction', 'Traditional Literature', 'Short Literary Forms'],
@@ -330,9 +336,13 @@ function saveManual() { pushState(); }
 function saveNoAlign() { pushState(); }
 
 /* ---------- data load ---------- */
+/* `cache: 'no-cache'` forces a revalidation against the server on every load. GitHub Pages
+   serves these with max-age=600, so without it a browser happily shows ten-minute-old
+   concepts and memberships — which reads as "my review queue is empty" when it isn't.
+   Revalidation is cheap: unchanged files come back 304 with no body. */
 async function fetchJson(path) {
   try {
-    const r = await fetch(path);
+    const r = await fetch(path, { cache: 'no-cache' });
     if (!r.ok) return null;
     return await r.json();
   } catch { return null; }
@@ -1148,13 +1158,18 @@ function loadSets() {
 function saveSets() { pushState(); }
 function currentSet() { return state.sets.find(s => s.id === state.ui.currentSetId) || null; }
 
-/* Passages were plain strings before each one carried its own title. Sets saved then are
-   still on the server, so widen them on the way in rather than migrating the state file. */
+/* Sets saved before passages carried titles, or before questions carried a type, are still
+   on the server. Widen them on the way in rather than migrating the state file. */
 function normalizeSets() {
   state.sets.forEach(s => {
-    if (!Array.isArray(s.passages)) return;
-    s.passages = s.passages.map(p =>
-      typeof p === 'string' ? { title: '', text: p } : { title: p.title || '', text: p.text || '' });
+    if (Array.isArray(s.passages)) {
+      s.passages = s.passages.map(p =>
+        typeof p === 'string' ? { title: '', text: p } : { title: p.title || '', text: p.text || '' });
+    }
+    ['questions', 'peerRevision'].forEach(k => {
+      if (!Array.isArray(s[k])) return;
+      s[k] = s[k].map(q => ({ ...q, type: q.type ?? null }));
+    });
   });
 }
 
@@ -1169,11 +1184,11 @@ function newPassageSet() {
     standard: null,                    // set-level primary standard tag
     passages: [{ title: '', text: '' }],
     questions: [
-      { text: '', standard: null },
-      { text: '', standard: null },
-      { text: '', standard: null },
+      { text: '', standard: null, type: null },
+      { text: '', standard: null, type: null },
+      { text: '', standard: null, type: null },
     ],
-    peerRevision: [{ text: '', standard: null }],
+    peerRevision: [{ text: '', standard: null, type: null }],
     writingPrompt: { type: 'informational', text: '' },
   };
   state.sets.unshift(s);
@@ -1294,6 +1309,12 @@ function questionBlockHtml(q, section, i, label, ctx) {
       <div class="q-head">
         <span class="q-label">${esc(label)}</span>
         <button class="q-remove" data-remove-q="${section}:${i}" title="Remove">✕</button>
+      </div>
+      <div class="ps-field" style="margin-bottom:10px"><label>Question type</label>
+        <div class="chips-row">
+          ${QUESTION_TYPES.map(t => `<button class="pill-btn ${q.type === t.key ? 'active' : ''}"
+            data-qtype="${section}:${i}:${t.key}">${t.label}</button>`).join('')}
+        </div>
       </div>
       <textarea class="ps-textarea q-text" data-q="${section}:${i}" rows="5"
         placeholder="Paste the entire question here, including all answer choices.">${esc(q.text)}</textarea>
@@ -1550,8 +1571,14 @@ function wireSetEditor(panel, s) {
   });
 
   on('#addPassage', 'click', () => { s.passages.push({ title: '', text: '' }); saveSets(); renderPassages(); });
-  on('#addQuestion', 'click', () => { s.questions.push({ text: '', standard: null }); saveSets(); renderPassages(); });
-  on('#addPeer', 'click', () => { s.peerRevision.push({ text: '', standard: null }); saveSets(); renderPassages(); });
+  on('#addQuestion', 'click', () => { s.questions.push({ text: '', standard: null, type: null }); saveSets(); renderPassages(); });
+  on('#addPeer', 'click', () => { s.peerRevision.push({ text: '', standard: null, type: null }); saveSets(); renderPassages(); });
+  on('[data-qtype]', 'click', e => {
+    const [section, i, type] = e.currentTarget.dataset.qtype.split(':');
+    const q = tagTarget(s, section, +i);
+    q.type = q.type === type ? null : type;   // click the active one to clear it
+    saveSets(); renderPassages();
+  });
 
   on('[data-remove-p]', 'click', e => {
     s.passages.splice(+e.currentTarget.dataset.removeP, 1);
@@ -1562,7 +1589,7 @@ function wireSetEditor(panel, s) {
     const [section, i] = e.currentTarget.dataset.removeQ.split(':');
     const arr = section === 'peer' ? s.peerRevision : s.questions;
     arr.splice(+i, 1);
-    if (!arr.length) arr.push({ text: '', standard: null });
+    if (!arr.length) arr.push({ text: '', standard: null, type: null });
     saveSets(); renderPassages();
   });
 
