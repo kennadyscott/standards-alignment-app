@@ -22,6 +22,7 @@
     <button class="tab active" data-view="explorer">Explorer</button>
     <button class="tab" data-view="review">Review Queue <span class="badge" id="pendingBadge">0</span></button>
     <button class="tab" data-view="passages">Passage Sets</button>
+    <button class="tab" data-view="input">Passage Input</button>
   </nav>
   <div class="topbar-actions">
     <button class="btn btn-ghost hidden" id="saveBadge" title="Cloud saving status — click to connect or update the access token"></button>
@@ -102,6 +103,19 @@
   </aside>
   <section class="editor-panel" id="setEditor"></section>
   <aside class="align-side" id="setSidePanel"></aside>
+</main>
+
+<main id="inputView" class="view hidden">
+  <div class="review-header">
+    <div class="review-filters">
+      <label class="in-lbl">State</label>
+      <select id="inState" class="ps-input" style="max-width:160px"></select>
+      <label class="in-lbl">Grade</label>
+      <select id="inGrade" class="ps-input" style="max-width:110px"></select>
+    </div>
+    <div class="review-progress" id="inputProgress"></div>
+  </div>
+  <div class="review-list" id="inputList"></div>
 </main>
 
 <div class="toast" id="toast"></div>

@@ -126,12 +126,16 @@ const state = {
   noAlign: {},              // `${state}:${subject}:${code}` -> true (reviewed: nothing aligns)
   cms: {},                  // `${state}:${subject}:${code}` -> true (standard is loaded in the CMS)
   severed: {},              // `${keyA}||${keyB}` -> true (override: not aligned despite a shared anchor)
+  crossOk: {},              // `${keyA}||${keyB}` -> true (cross-grade accepted: passages may cross it)
+  setCms: {},               // `${setId}|${state}:${grade}` -> true (developed in the CMS for that grade)
+  setDismiss: {},           // `${setId}|${state}:${grade}` -> true (this passage doesn't belong in that grade)
   sets: [],                 // passage sets
   ui: {
     view: 'explorer',
     expState: 'OH', expSubject: 'social_studies', expGrade: '4',
     selectedKey: null, search: '',
     revSubject: 'social_studies', revGrade: '4', revStatus: 'pending', revState: 'ALL',
+    inState: 'OH', inGrade: '4',
     currentSetId: null, openPicker: null,
   },
 };
@@ -145,13 +149,23 @@ const LS_MANUAL = 'sa_manual_v1';
 const LS_NOALIGN = 'sa_noalign_v1';
 const LS_CMS = 'sa_cms_v1';
 const LS_SEVERED = 'sa_severed_v1';
+const LS_CROSSOK = 'sa_crossok_v1';
+const LS_SETCMS = 'sa_setcms_v1';
+const LS_SETDISMISS = 'sa_setdismiss_v1';
+
+const readLS = (k, fallback) => {
+  try { return JSON.parse(localStorage.getItem(k)) || fallback; } catch { return fallback; }
+};
 
 function loadLocal() {
-  try { state.decisions = JSON.parse(localStorage.getItem(LS_DECISIONS)) || {}; } catch { state.decisions = {}; }
-  try { state.manual = JSON.parse(localStorage.getItem(LS_MANUAL)) || []; } catch { state.manual = []; }
-  try { state.noAlign = JSON.parse(localStorage.getItem(LS_NOALIGN)) || {}; } catch { state.noAlign = {}; }
-  try { state.cms = JSON.parse(localStorage.getItem(LS_CMS)) || {}; } catch { state.cms = {}; }
-  try { state.severed = JSON.parse(localStorage.getItem(LS_SEVERED)) || {}; } catch { state.severed = {}; }
+  state.decisions = readLS(LS_DECISIONS, {});
+  state.manual = readLS(LS_MANUAL, []);
+  state.noAlign = readLS(LS_NOALIGN, {});
+  state.cms = readLS(LS_CMS, {});
+  state.severed = readLS(LS_SEVERED, {});
+  state.crossOk = readLS(LS_CROSSOK, {});
+  state.setCms = readLS(LS_SETCMS, {});
+  state.setDismiss = readLS(LS_SETDISMISS, {});
 }
 function mirrorLocal() {
   localStorage.setItem(LS_DECISIONS, JSON.stringify(state.decisions));
@@ -159,18 +173,24 @@ function mirrorLocal() {
   localStorage.setItem(LS_NOALIGN, JSON.stringify(state.noAlign));
   localStorage.setItem(LS_CMS, JSON.stringify(state.cms));
   localStorage.setItem(LS_SEVERED, JSON.stringify(state.severed));
+  localStorage.setItem(LS_CROSSOK, JSON.stringify(state.crossOk));
+  localStorage.setItem(LS_SETCMS, JSON.stringify(state.setCms));
+  localStorage.setItem(LS_SETDISMISS, JSON.stringify(state.setDismiss));
   localStorage.setItem(LS_SETS, JSON.stringify(state.sets));
 }
 
 function stateBody() {
   return JSON.stringify({
-    // `decisions` holds membership ids now. The old pairwise ids (ss4-01…) are left in
-    // place untouched: link ids reuse the original pair ids, so these ARE the decisions.
+    // Link ids reuse the original pair ids (ss4-01…), so these ARE the reviewer's
+    // decisions going back to the very first pass. Never prune them.
     decisions: state.decisions,
     manual: state.manual,
     noAlign: state.noAlign,
     cms: state.cms,
     severed: state.severed,
+    crossOk: state.crossOk,
+    setCms: state.setCms,
+    setDismiss: state.setDismiss,
     sets: state.sets,
     savedAt: new Date().toISOString(),
   });
@@ -307,6 +327,9 @@ function mergeServerState(s) {
       noAlign: { ...state.noAlign, ...(s.noAlign || {}) },
       cms: { ...state.cms, ...(s.cms || {}) },
       severed: { ...state.severed, ...(s.severed || {}) },
+      crossOk: { ...state.crossOk, ...(s.crossOk || {}) },
+      setCms: { ...state.setCms, ...(s.setCms || {}) },
+      setDismiss: { ...state.setDismiss, ...(s.setDismiss || {}) },
       sets: dedupeById([...(s.sets || []), ...state.sets]),
     };
     state.decisions = merged.decisions;
@@ -314,6 +337,9 @@ function mergeServerState(s) {
     state.noAlign = merged.noAlign;
     state.cms = merged.cms;
     state.severed = merged.severed;
+    state.crossOk = merged.crossOk;
+    state.setCms = merged.setCms;
+    state.setDismiss = merged.setDismiss;
     state.sets = merged.sets;
     normalizeSets();
     mirrorLocal();
@@ -566,11 +592,37 @@ function pairSide(std, stateCode) {
     </div>`;
 }
 
+function isCrossGrade(a, b) { return a && b && String(a.grade) !== String(b.grade); }
+
 // Amber chip when the two aligned standards sit at different grades — the states sequence
 // the same content differently. Expected, not an error.
 function crossGradeChip(a, b) {
-  if (!a || !b || String(a.grade) === String(b.grade)) return '';
+  if (!isCrossGrade(a, b)) return '';
   return `<span class="chip chip-cross" title="These standards sit at different grade levels — the states sequence this content differently.">⇄ Cross-grade · ${esc(a.state)} G${esc(a.grade)} / ${esc(b.state)} G${esc(b.grade)}</span>`;
+}
+
+/* A cross-grade alignment is true but consequential: a passage built for one grade would
+   flow into another. Assigning accepts that flow (the passage lands in the target grade's
+   Unlisted bucket); dismissing keeps it out. Until decided, passages don't cross. */
+function crossOkKey(a, b) { return severKey(a, b); }
+function isCrossAssigned(a, b) { return !!state.crossOk[crossOkKey(a, b)]; }
+
+function crossGradeControls(sel, other) {
+  if (!isCrossGrade(sel, other)) return '';
+  const k = crossOkKey(keyOf(sel), keyOf(other));
+  if (state.severed[k]) {
+    return `<span class="status-chip rejected">dismissed from G${esc(other.grade)}</span>
+      <button class="act-btn reset" data-act="unsever" data-id="${esc(k)}">Undo</button>`;
+  }
+  if (state.crossOk[k]) {
+    return `<span class="status-chip approved">assigned to G${esc(other.grade)} · Unlisted</span>
+      <button class="act-btn reset" data-act="cross-undo" data-id="${esc(k)}">Undo</button>`;
+  }
+  return `<button class="act-btn approve" data-act="cross-assign" data-id="${esc(k)}"
+      title="Let passages for this standard populate ${STATE_NAMES[other.state]} Grade ${esc(other.grade)}, marked Unlisted">
+      ⇄ Assign to G${esc(other.grade)}</button>
+    <button class="act-btn reject" data-act="sever" data-id="${esc(k)}"
+      title="Keep passages for this standard out of Grade ${esc(other.grade)}">Dismiss</button>`;
 }
 
 /* One aligned standard, shown against the standard currently selected. If the alignment is
@@ -591,8 +643,10 @@ function alignedCard(sel, hit) {
         <span class="conf-chip">confidence: ${esc(link.confidence || '—')}</span>
         ${crossGradeChip(sel, std)}
         ${link.rationale ? `<div class="rationale"><b>Why:</b> ${esc(link.rationale)}</div>` : ''}
-        <button class="act-btn reject" data-act="sever" data-id="${esc(severKey(keyOf(sel), keyOf(std)))}"
-          title="These run through the same Ohio standard but are not actually aligned">✂ Not aligned</button>
+        ${isCrossGrade(sel, std)
+          ? crossGradeControls(sel, std)
+          : `<button class="act-btn reject" data-act="sever" data-id="${esc(severKey(keyOf(sel), keyOf(std)))}"
+              title="These run through the same Ohio standard but are not actually aligned">✂ Not aligned</button>`}
       </div>
     </div>`;
 }
@@ -625,6 +679,8 @@ function linkCard(l) {
       ${siblings.length ? `<div class="member-peers"><b>Approving also aligns it to:</b> ${siblings.map(p =>
         `<span class="chip">${STATE_NAMES[p.state]} ${esc(p.code)} · G${esc(p.grade)}</span>`).join(' ')}
         <span class="chip chip-concept">no extra review — they share this Ohio standard</span></div>` : ''}
+      ${st === 'approved' && isCrossGrade(oh, other)
+        ? `<div class="member-peers"><b>Grade placement:</b> ${crossGradeControls(oh, other)}</div>` : ''}
       <div class="review-foot">
         <span class="conf-chip">confidence: ${esc(l.confidence || '—')}</span>
         ${crossGradeChip(oh, other)}
@@ -778,6 +834,15 @@ function handleAction(act, id) {
     delete state.severed[id];
     pushState();
     toast('Alignment restored');
+  } else if (act === 'cross-assign') {
+    state.crossOk[id] = true;
+    delete state.severed[id];
+    pushState();
+    toast('Assigned — its passages now populate that grade as Unlisted');
+  } else if (act === 'cross-undo') {
+    delete state.crossOk[id];
+    pushState();
+    toast('Grade assignment removed');
   } else if (act === 'pending') {
     delete state.decisions[id];
     saveDecisions();
@@ -1489,6 +1554,139 @@ function renderPassages() {
   renderSetSide();
 }
 
+/* ---------- passage input ----------
+   The point of the whole alignment exercise: a per-grade passage library you don't have to
+   keep building. A set tagged to one state's standard automatically serves every state
+   aligned to it, so Georgia Grade 4 fills up with passages written for Ohio Grade 4.
+
+   LISTED   — the set was built for this grade.
+   UNLISTED — it arrived over a cross-grade alignment you assigned (Ohio G4 → Texas G5).
+              Cross-grade alignments only carry passages once assigned; until then the
+              content stays where it was written. */
+function setNativeGrade(s) {
+  if (s.gaGrade) return String(s.gaGrade);
+  const std = tagStd(s.standard);
+  return std ? String(std.grade) : null;
+}
+
+// Every (state, grade) this passage set serves, and how it got there.
+function setServes(s) {
+  const std = tagStd(s.standard);
+  if (!std || std.state === 'ALL') return [];
+  const native = setNativeGrade(s);
+  const out = [];
+  out.push({ state: std.state, grade: String(std.grade), via: null, unlisted: false, std });
+  alignedTo(std).forEach(h => {
+    const cross = isCrossGrade(std, h.std);
+    // A cross-grade alignment carries passages only once it's been assigned.
+    if (cross && !isCrossAssigned(keyOf(std), keyOf(h.std))) return;
+    out.push({
+      state: h.std.state, grade: String(h.std.grade), via: h.via || std,
+      unlisted: String(h.std.grade) !== String(native),
+      std: h.std,
+    });
+  });
+  return out;
+}
+
+function inputKey(setId, st, grade) { return `${setId}|${st}:${grade}`; }
+
+function setsForGrade(st, grade) {
+  const rows = [];
+  state.sets.forEach(s => {
+    const hit = setServes(s).find(x => x.state === st && x.grade === String(grade));
+    if (!hit) return;
+    if (state.setDismiss[inputKey(s.id, st, grade)]) return;
+    rows.push({ set: s, hit });
+  });
+  return rows;
+}
+
+function inputCard(row, st, grade) {
+  const { set: s, hit } = row;
+  const k = inputKey(s.id, st, grade);
+  const inCms = !!state.setCms[k];
+  const titles = s.passages.filter(p => p.title).map(p => p.title);
+  const tagged = [...s.questions, ...s.peerRevision].filter(q => q.standard).length;
+  return `
+    <div class="review-card ${inCms ? 'decided-approved' : ''}">
+      <div class="concept-head">
+        <div class="concept-title">${esc(s.title || 'Untitled set')}</div>
+        <div class="concept-desc">${titles.length ? esc(titles.join(' · ')) : `${s.passages.length} passage${s.passages.length !== 1 ? 's' : ''}, untitled`}</div>
+        <div class="concept-meta">
+          ${s.passageId ? `<span class="chip">ID ${esc(s.passageId)}</span>` : ''}
+          <span class="chip ${hit.unlisted ? 'chip-cross' : ''}">${hit.unlisted ? '⇄ Unlisted — written for G' + esc(setNativeGrade(s)) : 'Listed'}</span>
+          <span class="chip">${esc(hit.std.code)}</span>
+          ${hit.via ? `<span class="chip chip-concept">arrived via ${STATE_NAMES[hit.via.state]} ${esc(hit.via.code)}</span>` : '<span class="chip">tagged directly</span>'}
+          <span class="chip">${tagged} question${tagged === 1 ? '' : 's'} tagged</span>
+        </div>
+      </div>
+      <div class="review-foot">
+        ${inCms
+          ? `<span class="status-chip approved">✓ Developed in CMS</span>
+             <button class="act-btn reset" data-iact="uncms" data-id="${esc(k)}">Undo</button>`
+          : `<button class="act-btn approve" data-iact="cms" data-id="${esc(k)}">✓ Developed in CMS</button>`}
+        <button class="act-btn reject" data-iact="dismiss" data-id="${esc(k)}"
+          title="This passage doesn't belong in this grade">Dismiss from Grade</button>
+      </div>
+    </div>`;
+}
+
+function renderInput() {
+  const stSel = document.getElementById('inState');
+  const gSel = document.getElementById('inGrade');
+  if (!stSel) return;
+  if (!stSel.options.length) {
+    stSel.innerHTML = STATES.map(s => `<option value="${s}">${STATE_NAMES[s]}</option>`).join('');
+    gSel.innerHTML = GRADES.map(g => `<option value="${g}">Grade ${g}</option>`).join('');
+  }
+  stSel.value = state.ui.inState;
+  gSel.value = state.ui.inGrade;
+
+  const st = state.ui.inState, grade = state.ui.inGrade;
+  const rows = setsForGrade(st, grade);
+  const listed = rows.filter(r => !r.hit.unlisted);
+  const unlisted = rows.filter(r => r.hit.unlisted);
+  const done = rows.filter(r => state.setCms[inputKey(r.set.id, st, grade)]).length;
+  const dismissed = state.sets.filter(s => state.setDismiss[inputKey(s.id, st, grade)]).length;
+
+  document.getElementById('inputProgress').textContent =
+    `${rows.length} passage${rows.length === 1 ? '' : 's'} for ${STATE_NAMES[st]} Grade ${grade} · `
+    + `${listed.length} listed, ${unlisted.length} unlisted · ${done} in CMS`
+    + (dismissed ? ` · ${dismissed} dismissed` : '');
+
+  const box = document.getElementById('inputList');
+  box.innerHTML = '';
+  if (!rows.length) {
+    box.appendChild(el(`<div class="review-empty">
+      No passages serve ${STATE_NAMES[st]} Grade ${grade} yet.<br>
+      <span style="font-size:12.5px; color:var(--ink-faint)">A passage lands here when its primary standard is a ${STATE_NAMES[st]} Grade ${grade} standard,
+      or is aligned to one. Build sets in Passage Sets, and approve alignments in the Review Queue to make them cross over.</span>
+    </div>`));
+    return;
+  }
+  const section = (label, list) => {
+    if (!list.length) return;
+    box.appendChild(el(`<div class="align-section-title">${label} (${list.length})<span class="rule"></span></div>`));
+    list.forEach(r => {
+      const card = el(inputCard(r, st, grade));
+      card.querySelectorAll('[data-iact]').forEach(b =>
+        b.addEventListener('click', () => handleInputAction(b.dataset.iact, b.dataset.id)));
+      box.appendChild(card);
+    });
+  };
+  section('Listed — written for this grade', listed);
+  section('Unlisted — arrived from another grade', unlisted);
+}
+
+function handleInputAction(act, key) {
+  if (act === 'cms') { state.setCms[key] = true; toast('Marked developed in CMS'); }
+  else if (act === 'uncms') { delete state.setCms[key]; toast('CMS mark removed'); }
+  else if (act === 'dismiss') { state.setDismiss[key] = true; toast('Dismissed from this grade'); }
+  pushState();
+  renderInput();
+}
+
 /* ---------- view switching + init ---------- */
 function renderAll() {
   renderStdList();
@@ -1496,6 +1694,7 @@ function renderAll() {
   renderReview();
   renderBadge();
   renderPassages();
+  renderInput();
 }
 
 function init() {
@@ -1507,6 +1706,14 @@ function init() {
     document.getElementById('explorerView').classList.toggle('hidden', state.ui.view !== 'explorer');
     document.getElementById('reviewView').classList.toggle('hidden', state.ui.view !== 'review');
     document.getElementById('passagesView').classList.toggle('hidden', state.ui.view !== 'passages');
+    document.getElementById('inputView').classList.toggle('hidden', state.ui.view !== 'input');
+  });
+
+  document.getElementById('inState').addEventListener('change', e => {
+    state.ui.inState = e.target.value; renderInput();
+  });
+  document.getElementById('inGrade').addEventListener('change', e => {
+    state.ui.inGrade = e.target.value; renderInput();
   });
 
   document.getElementById('newSetBtn').addEventListener('click', newPassageSet);
