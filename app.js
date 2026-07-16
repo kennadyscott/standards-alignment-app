@@ -449,8 +449,29 @@ async function loadData() {
 }
 
 function mergeImportedDrafts() {
-  const have = new Set(state.sets.map(s => s.id));
-  (state.importedDrafts || []).forEach(d => { if (!have.has(d.id)) state.sets.push({ ...d }); });
+  const have = new Map(state.sets.map(s => [s.id, s]));
+  (state.importedDrafts || []).forEach(d => {
+    const e = have.get(d.id);
+    // Deep-copy on first merge: a shallow copy would alias passages/questions/prompt
+    // between the live set and the read-only importedDrafts source.
+    if (!e) { state.sets.push(JSON.parse(JSON.stringify(d))); return; }
+    // A still-draft import's DECK CONTENT (title, passages, question text) is owned by the
+    // data file — refreshing it here lets parser fixes reach copies already absorbed into
+    // appstate by an earlier save. Reviewer-owned fields always survive: passageId, status,
+    // classification (type/genre/grade/subtopic/standard), peer tasks, per-state question tags.
+    if (isDraft(e)) {
+      e.title = d.title;
+      e.passages = d.passages.map(p => ({ ...p }));
+      e.questions = d.questions.map((q, i) => {
+        const prev = e.questions && e.questions[i];
+        return prev && prev.stateStandards ? { ...q, stateStandards: prev.stateStandards } : { ...q };
+      });
+    }
+    // Filling a BLANK prompt is safe at any status — emptiness was a parser bug, not a choice.
+    if (e.writingPrompt && !(e.writingPrompt.text || '').trim() && d.writingPrompt && d.writingPrompt.text) {
+      e.writingPrompt.text = d.writingPrompt.text;
+    }
+  });
   normalizeSets();
 }
 
