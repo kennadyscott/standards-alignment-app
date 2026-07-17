@@ -16,6 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
+const APP_BUILD = '202607171459';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -252,6 +253,11 @@ async function ghLoad() {
     if (!rr.ok) throw new Error(`github raw read ${rr.status}`);
     text = await rr.text();
   }
+  // A transiently empty/truncated body must NEVER be mistaken for an empty state —
+  // treating it as {} once let a merge-before-save write an unmerged overwrite.
+  if (j.size > 0 && (!text || text.length < j.size * 0.5)) {
+    throw new Error('state body incomplete');
+  }
   return JSON.parse(text || '{}');
 }
 /* Multi-user safety: a save must never wipe work made in another browser. Before every
@@ -279,18 +285,25 @@ function mergeForSave(server) {
     const loc = byId.get(sv.id);
     if (!loc) { state.sets.push(sv); return; }   // exists only server-side — keep it
     // Reviewer progress is monotonic in this workflow — adopt it from the server copy.
-    if (loc.status === 'draft' && sv.status !== 'draft') delete loc.status;
-    if (!loc.passageId && sv.passageId) loc.passageId = sv.passageId;
-    if (sv.peerDraft && !loc.peerDraft) loc.peerDraft = sv.peerDraft;
-    const locPeerEmpty = !(loc.peerRevision || []).some(t => (t.text || '').trim() || t.standard);
-    const svPeerHas = (sv.peerRevision || []).some(t => (t.text || '').trim() || t.standard);
-    if (locPeerEmpty && svPeerHas) loc.peerRevision = sv.peerRevision;
-    (sv.questions || []).forEach((q, i) => {
-      const lq = (loc.questions || [])[i];
-      if (lq && q.stateStandards) lq.stateStandards = { ...q.stateStandards, ...(lq.stateStandards || {}) };
-    });
+    graftProgress(loc, sv);
   });
   normalizeSets();
+}
+
+// Copy monotonic reviewer progress from `source` onto `target` (approval, passage ID,
+// peer draft/tasks, per-state question tags). There is no un-approve UI, so adopting
+// progress from either side is always safe — content fields are never touched here.
+function graftProgress(target, source) {
+  if (target.status === 'draft' && source.status !== 'draft') delete target.status;
+  if (!target.passageId && source.passageId) target.passageId = source.passageId;
+  if (source.peerDraft && !target.peerDraft) target.peerDraft = source.peerDraft;
+  const tPeerEmpty = !(target.peerRevision || []).some(t => (t.text || '').trim() || t.standard);
+  const sPeerHas = (source.peerRevision || []).some(t => (t.text || '').trim() || t.standard);
+  if (tPeerEmpty && sPeerHas) target.peerRevision = source.peerRevision;
+  (source.questions || []).forEach((q, i) => {
+    const tq = (target.questions || [])[i];
+    if (tq && q.stateStandards) tq.stateStandards = { ...q.stateStandards, ...(tq.stateStandards || {}) };
+  });
 }
 
 async function ghSave(attempt = 0) {
@@ -312,6 +325,9 @@ async function ghSave(attempt = 0) {
   }
   if (!r.ok) throw new Error(`github write ${r.status}`);
   ghSha = (await r.json()).content.sha;
+  lastSyncAt = new Date();
+  syncTrouble = false;
+  updateSaveBadge();
 }
 
 function updateSaveBadge() {
@@ -319,8 +335,18 @@ function updateSaveBadge() {
   if (!b) return;
   if (!ghMode) { b.classList.add('hidden'); return; }
   b.classList.remove('hidden');
-  b.textContent = ghToken ? '● Cloud saving on' : '○ Connect cloud saving';
-  b.classList.toggle('badge-ok', !!ghToken);
+  // Honest status: green only when a pull has actually SUCCEEDED — a token alone
+  // once showed green while the browser was silently siloed.
+  const t = ghToken
+    ? (syncTrouble
+        ? '⚠ Sync issue — click to retry'
+        : lastSyncAt
+          ? `● Synced ${lastSyncAt.toTimeString().slice(0, 5)}`
+          : '◌ Connecting…')
+    : '○ Connect cloud saving';
+  b.textContent = t;
+  b.title = `Click to sync now · Shift-click to change the access token · build ${typeof APP_BUILD !== 'undefined' ? APP_BUILD : '?'}`;
+  b.classList.toggle('badge-ok', !!ghToken && !syncTrouble && !!lastSyncAt);
 }
 
 // Saves are now multi-megabyte round-trips (pull + merge + push) — serialize them so a
@@ -347,21 +373,33 @@ function userIsTyping() {
   return !!e && (e.tagName === 'TEXTAREA' || e.tagName === 'INPUT' || e.tagName === 'SELECT');
 }
 let syncPulling = false;
+let lastSyncAt = null;   // Date of last successful pull/save
+let syncTrouble = false; // last attempt failed — badge shows it
 async function syncFromServer() {
-  if (!ghMode || !ghToken || !serverAvailable || ghBusy || syncPulling || userIsTyping()) return;
+  // Note: runs even when serverAvailable is false — a failed INITIAL load must not
+  // silo this browser forever; the next tick establishes the connection.
+  if (!ghMode || !ghToken || ghBusy || syncPulling || userIsTyping()) return false;
   syncPulling = true;
+  let ok = false;
   try {
     const r = await fetch(GH_STATE_URL, { headers: ghApiHeaders() });
-    if (r.ok) {
-      const j = await r.json();
-      if (j.sha !== ghSha) {          // someone else saved since we last read/wrote
-        const server = await ghLoad();
-        mergeForSave(server);
-        renderAll();
-      }
+    if (!r.ok && r.status !== 404) throw new Error(`github read ${r.status}`);
+    const j = r.ok ? await r.json() : { sha: null };
+    if (j.sha !== ghSha || !serverAvailable) {   // changed, or connection not yet established
+      const server = await ghLoad();
+      mergeForSave(server);
+      renderAll();
     }
-  } catch { /* transient network — next tick will retry */ }
+    serverAvailable = true;
+    ok = true;
+    lastSyncAt = new Date();
+    syncTrouble = false;
+  } catch {
+    syncTrouble = true;
+  }
   syncPulling = false;
+  updateSaveBadge();
+  return ok;
 }
 setInterval(syncFromServer, 60000);
 window.addEventListener('focus', syncFromServer);
@@ -421,9 +459,13 @@ async function loadPersisted() {
     try {
       s = await ghLoad();
       serverAvailable = true;
+      lastSyncAt = new Date();
+      syncTrouble = false;
     } catch {
-      toast('⚠ Could not reach GitHub — check your saving token');
-      return;
+      syncTrouble = true;
+      updateSaveBadge();
+      toast('⚠ Could not load the team state — retrying automatically');
+      return;   // syncFromServer's interval keeps retrying and will connect
     }
   }
   mergeServerState(s);
@@ -446,7 +488,20 @@ function mergeServerState(s) {
       setStateStd: { ...state.setStateStd, ...(s.setStateStd || {}) },
       setCms: { ...state.setCms, ...(s.setCms || {}) },
       setDismiss: { ...state.setDismiss, ...(s.setDismiss || {}) },
-      sets: dedupeById([...(s.sets || []), ...state.sets]),
+      // Server copies win on CONTENT (freshest deck text), but LOCAL reviewer progress
+      // is grafted on so a clobbered/older server copy can never revert this browser's
+      // own approvals at load time (that's how a stale server state once "infected"
+      // healthy browsers on reload).
+      sets: dedupeById((() => {
+        const localById = new Map(state.sets.map(x => [x.id, x]));
+        const out = (s.sets || []).map(sv => {
+          const loc = localById.get(sv.id);
+          if (loc) { graftProgress(sv, loc); localById.delete(sv.id); }
+          return sv;
+        });
+        localById.forEach(loc => out.push(loc));
+        return out;
+      })()),
     };
     state.decisions = merged.decisions;
     state.manual = merged.manual;
@@ -2719,7 +2774,13 @@ function init() {
     state.ui.setFilterStatus = e.target.value; renderSetList();
   });
 
-  document.getElementById('saveBadge').addEventListener('click', async () => {
+  document.getElementById('saveBadge').addEventListener('click', async (ev) => {
+    if (ghToken && !ev.shiftKey) {
+      toast('↻ Syncing…');
+      const ok = await syncFromServer();
+      toast(ok ? '✓ Up to date' : '⚠ Sync failed — will keep retrying');
+      return;
+    }
     const t = prompt('Paste your GitHub access token to connect to the SHARED team dashboard.\n\nYour work (approvals, IDs, tags) saves to the team’s central GitHub file that everyone shares. Only the token itself stays private in this browser — it’s your key, not your data.', ghToken || '');
     if (t === null) return;
     ghToken = t.trim();
