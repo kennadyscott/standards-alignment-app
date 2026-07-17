@@ -2339,16 +2339,22 @@ function setSubdomain(s) {
   return s.gaSubtopic || 'Untagged';
 }
 
-// The sub-domains a grade is EXPECTED to cover (the hierarchy) — missing ones must show,
-// in red. G2's informational level is coarser (Science / Social Studies as wholes).
-const DASH_EXPECT = {
-  '2': ['Science', 'Social Studies',
-        'Poetry', 'Narrative Fiction', 'Traditional Literature', 'Short Literary Forms',
-        'Biographies', 'True Narratives'],
-  '3-8': ['Earth Science', 'Life Science', 'Physical Science',
-          'History', 'Geography', 'Government', 'Economics',
-          'Poetry', 'Narrative Fiction', 'Traditional Literature', 'Short Literary Forms',
-          'Biographies', 'True Narratives'],
+// The sub-domains a grade is EXPECTED to cover (the hierarchy), grouped by genre —
+// missing ones must show, in red. G2's informational level is coarser.
+const DASH_LITERARY = ['Poetry', 'Narrative Fiction', 'Traditional Literature', 'Short Literary Forms'];
+const DASH_LITNF = ['Biographies', 'True Narratives'];
+const DASH_GROUPS = {
+  '2': [
+    ['Informational', ['Science', 'Social Studies']],
+    ['Literary', DASH_LITERARY],
+    ['Literary Non-Fiction', DASH_LITNF],
+  ],
+  '3-8': [
+    ['Informational', ['Earth Science', 'Life Science', 'Physical Science',
+                       'History', 'Geography', 'Government', 'Economics']],
+    ['Literary', DASH_LITERARY],
+    ['Literary Non-Fiction', DASH_LITNF],
+  ],
 };
 const DASH_GOAL = 4;   // sets per sub-domain per item-set type
 
@@ -2387,8 +2393,8 @@ function renderDash() {
 
   GRADES.forEach(g => {
     const sets = servingSets(g);
-    const expect = DASH_EXPECT[g === '2' ? '2' : '3-8'];
-    const open = !!state.ui.dashOpen[g];
+    const groups = DASH_GROUPS[g === '2' ? '2' : '3-8'];
+    const expect = groups.flatMap(([, doms]) => doms);
 
     // sub-domain -> {informative, opinion}
     const tally = new Map(expect.map(d => [d, { informative: 0, opinion: 0 }]));
@@ -2406,36 +2412,32 @@ function renderDash() {
       [t.informative, t.opinion].forEach(n => { n >= DASH_GOAL ? met++ : n > 0 ? partial++ : missing++; });
     });
 
-    const card = el(`
-      <div class="dash-card ${open ? 'open' : ''}">
-        <button class="dash-head dash-toggle" data-dashgrade="${esc(g)}">
-          <span class="dash-grade">${open ? '▾' : '▸'} Grade ${esc(g)}</span>
+    wrap.appendChild(el(`
+      <div class="dash-card open">
+        <div class="dash-head">
+          <span class="dash-grade">Grade ${esc(g)}</span>
           <span class="dash-summary">
             <span class="dash-dot goal-met">${met}</span>
             <span class="dash-dot goal-partial">${partial}</span>
             <span class="dash-dot goal-missing">${missing}</span>
             <span class="ps-hint">${sets.length} set${sets.length !== 1 ? 's' : ''}</span>
           </span>
-        </button>
-        ${open ? `
+        </div>
         <table class="dash-table">
           <thead><tr><th>Sub-domain</th><th>Informational</th><th>Opinion</th></tr></thead>
           <tbody>
-            ${expect.map(d => {
-              const t = tally.get(d);
-              return `<tr><td>${esc(d)}</td>${dashCell(t.informative)}${dashCell(t.opinion)}</tr>`;
-            }).join('')}
+            ${groups.map(([label, doms]) => `
+              <tr class="dash-group-row"><td colspan="3">${esc(label)}</td></tr>
+              ${doms.map(d => {
+                const t = tally.get(d);
+                return `<tr><td>${esc(d)}</td>${dashCell(t.informative)}${dashCell(t.opinion)}</tr>`;
+              }).join('')}`).join('')}
           </tbody>
-          <tfoot><tr><td>Goal: ${DASH_GOAL} per sub-domain per type</td>
+          <tfoot><tr><td>Goal: ${DASH_GOAL} per type</td>
             <td>${expect.reduce((a, d) => a + tally.get(d).informative, 0)}</td>
             <td>${expect.reduce((a, d) => a + tally.get(d).opinion, 0)}</td></tr></tfoot>
-        </table>` : ''}
-      </div>`);
-    card.querySelector('[data-dashgrade]').addEventListener('click', () => {
-      state.ui.dashOpen[g] = !state.ui.dashOpen[g];
-      renderDash();
-    });
-    wrap.appendChild(card);
+        </table>
+      </div>`));
   });
 }
 

@@ -854,3 +854,32 @@ body {
   .q-pair { grid-template-columns: 1fr !important; }
   .q-pair .pair-mid { display: none; }
 }
+
+/* Dashboard v3: always-open cards in a grid, genre-grouped rows */
+.dash-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 14px;
+  max-width: 1320px;
+  align-items: start;
+}
+.dash-card .dash-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px 12px;
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+}
+.dash-card .dash-table { margin: 8px 16px 16px; width: calc(100% - 32px); }
+.dash-group-row td {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--ink-faint);
+  padding-top: 14px;
+  border-bottom: none;
+}
+.dash-wrap { grid-auto-rows: max-content; }
+.dash-card { overflow: visible; }
