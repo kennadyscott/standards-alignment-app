@@ -241,7 +241,49 @@ async function ghLoad() {
   ghSha = j.sha;
   return JSON.parse(b64decode(j.content) || '{}');
 }
+/* Multi-user safety: a save must never wipe work made in another browser. Before every
+   write, pull the latest server state and fold it in — LOCAL wins on direct conflicts
+   (we are writing this browser's truth), but everything that exists only server-side is
+   carried along, and reviewer progress made elsewhere (approvals, passage IDs, peer
+   tasks, per-state question tags) is grafted onto our copies. Mutations are in-place so
+   open editors keep their object references — no re-render, no lost keystrokes. */
+function mergeForSave(server) {
+  if (!server || typeof server !== 'object') return;
+  const S = k => server[k] || {};
+  state.decisions = { ...S('decisions'), ...state.decisions };
+  state.noAlign = { ...S('noAlign'), ...state.noAlign };
+  state.cms = { ...S('cms'), ...state.cms };
+  state.severed = { ...S('severed'), ...state.severed };
+  state.crossOk = { ...S('crossOk'), ...state.crossOk };
+  state.setPush = { ...S('setPush'), ...state.setPush };
+  state.setStateStd = { ...S('setStateStd'), ...state.setStateStd };
+  state.setCms = { ...S('setCms'), ...state.setCms };
+  state.setDismiss = { ...S('setDismiss'), ...state.setDismiss };
+  state.manual = dedupeById([...state.manual, ...(server.manual || [])]);
+
+  const byId = new Map(state.sets.map(x => [x.id, x]));
+  (server.sets || []).forEach(sv => {
+    const loc = byId.get(sv.id);
+    if (!loc) { state.sets.push(sv); return; }   // exists only server-side — keep it
+    // Reviewer progress is monotonic in this workflow — adopt it from the server copy.
+    if (loc.status === 'draft' && sv.status !== 'draft') delete loc.status;
+    if (!loc.passageId && sv.passageId) loc.passageId = sv.passageId;
+    if (sv.peerDraft && !loc.peerDraft) loc.peerDraft = sv.peerDraft;
+    const locPeerEmpty = !(loc.peerRevision || []).some(t => (t.text || '').trim() || t.standard);
+    const svPeerHas = (sv.peerRevision || []).some(t => (t.text || '').trim() || t.standard);
+    if (locPeerEmpty && svPeerHas) loc.peerRevision = sv.peerRevision;
+    (sv.questions || []).forEach((q, i) => {
+      const lq = (loc.questions || [])[i];
+      if (lq && q.stateStandards) lq.stateStandards = { ...q.stateStandards, ...(lq.stateStandards || {}) };
+    });
+  });
+  normalizeSets();
+}
+
 async function ghSave(attempt = 0) {
+  try {
+    mergeForSave(await ghLoad());   // also refreshes ghSha
+  } catch { /* couldn't read — write with the cached sha; 409 path retries with a fresh pull */ }
   const r = await fetch(GH_STATE_URL, {
     method: 'PUT',
     headers: ghApiHeaders(),
@@ -252,8 +294,7 @@ async function ghSave(attempt = 0) {
     }),
   });
   if ((r.status === 409 || r.status === 422) && attempt < 2) {
-    await ghLoad();               // refresh sha after a concurrent write
-    return ghSave(attempt + 1);
+    return ghSave(attempt + 1);     // recursion re-pulls and re-merges before retrying
   }
   if (!r.ok) throw new Error(`github write ${r.status}`);
   ghSha = (await r.json()).content.sha;
