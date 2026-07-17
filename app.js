@@ -1917,6 +1917,143 @@ function qstateScope(grade) {
     (std.grade === 'All' || String(std.grade) === String(grade));
 }
 
+/* ---------- AI builder: Georgia Peer Revision Task ----------
+   Calls the Anthropic API directly from the browser (same pattern as cloud saving:
+   the user pastes their API key once; it lives only in this browser's localStorage).
+   Claude drafts a flawed student response + 4-5 revision questions, each tagged to a
+   Georgia standard — everything lands in the editor as a draft for human review. */
+const LS_AI_KEY = 'sa_anthropic_key';
+let aiKey = localStorage.getItem(LS_AI_KEY) || '';
+
+function ensureAiKey() {
+  if (aiKey) return true;
+  const t = prompt('Paste your Anthropic API key to enable the AI builder (stored only in this browser):', '');
+  if (t === null) return false;
+  aiKey = t.trim();
+  if (aiKey) localStorage.setItem(LS_AI_KEY, aiKey);
+  return !!aiKey;
+}
+
+// ⚙ TUNE ME: these generation instructions are a Georgia-Milestones-style default.
+// When the user shares an example Peer Revision Task, match its exact structure here.
+const PEER_SYSTEM = `You write peer-revision assessment tasks for Georgia elementary and middle school ELA, in the style of Georgia Milestones constructed-response supports.
+
+Given a passage set, its writing prompt, and the grade level, produce:
+1. A STUDENT DRAFT: a plausible response to the writing prompt, written the way a student at this grade would write it, containing specific findable weaknesses appropriate for peer revision (organization, evidence use, word choice, transitions, sentence structure, conventions). It should be genuinely revisable — flawed but not a caricature.
+2. FOUR TO FIVE revision questions about that draft. Each question must:
+   - target exactly ONE of the provided Georgia standards (prefer Constructing (C) elements of the Texts domain and Language standards — these are writing/revision standards)
+   - use one of these item types: multiple_choice, cloze, multi_select, text_entry
+   - be fully written out: stem, then answer choices each on their own line labeled A. B. C. D. (for cloze, give the drop-down options in [brackets / separated by slashes]), and the correct answer marked at the end as "Answer: X"
+   - be answerable using only the student draft (and the passage where relevant)
+Vary the item types across the set. Write at a grade-appropriate reading level.`;
+
+const PEER_SCHEMA = {
+  type: 'object',
+  properties: {
+    studentDraft: { type: 'string', description: 'The flawed student response to the writing prompt' },
+    questions: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          text: { type: 'string', description: 'Complete question: stem, choices, and "Answer: X" line' },
+          type: { type: 'string', enum: ['multiple_choice', 'cloze', 'multi_select', 'text_entry'] },
+          gaCode: { type: 'string', description: 'The single Georgia standard code this question assesses, exactly as given in the list' },
+          rationale: { type: 'string', description: 'One sentence: why this question fits that standard' },
+        },
+        required: ['text', 'type', 'gaCode', 'rationale'],
+        additionalProperties: false,
+      },
+    },
+  },
+  required: ['studentDraft', 'questions'],
+  additionalProperties: false,
+};
+
+async function buildPeerTask(s, grade) {
+  const pool = state.standards
+    .filter(x => x.state === 'GA' && x.subject === 'ela' && (x.grade === 'All' || String(x.grade) === String(grade)))
+    .map(x => `${x.code} — ${x.description}`);
+  const passages = s.passages.map((p, i) =>
+    `PASSAGE ${i + 1}${p.title ? ` — ${p.title}` : ''}\n${p.text}`).join('\n\n');
+  const existing = s.questions.map((q, i) => `${i + 1}. ${(q.text || '').split('\n')[0]}`).join('\n');
+
+  const r = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      'x-api-key': aiKey,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true',
+    },
+    body: JSON.stringify({
+      model: 'claude-opus-4-8',
+      max_tokens: 16000,
+      thinking: { type: 'adaptive' },
+      system: PEER_SYSTEM,
+      output_config: { format: { type: 'json_schema', schema: PEER_SCHEMA } },
+      messages: [{
+        role: 'user',
+        content: `Grade: ${grade}
+Genre: ${s.genre || ''} · Sub-domain: ${s.gaSubtopic || ''}
+Set title: ${s.title}
+
+${passages}
+
+WRITING PROMPT (the student draft must respond to this):
+${s.writingPrompt.text}
+
+EXISTING READING QUESTIONS (do not duplicate these):
+${existing}
+
+GEORGIA STANDARDS — choose each question's gaCode from this list ONLY:
+${pool.join('\n')}
+
+Create the peer revision task now.`,
+      }],
+    }),
+  });
+  if (!r.ok) {
+    let msg = `HTTP ${r.status}`;
+    try { const e = await r.json(); msg += ' — ' + ((e.error || {}).message || '').slice(0, 140); } catch { /* keep bare status */ }
+    throw new Error(msg);
+  }
+  const data = await r.json();
+  if (data.stop_reason === 'refusal') throw new Error('the model declined this request');
+  const txt = (data.content || []).find(b => b.type === 'text');
+  if (!txt) throw new Error('no output returned');
+  return JSON.parse(txt.text);
+}
+
+async function handleBuildPeer(s, grade) {
+  if (!ensureAiKey()) return;
+  state.ui.peerBuilding = s.id;
+  renderInput();
+  try {
+    const out = await buildPeerTask(s, grade);
+    const valid = new Set(state.standards.filter(x => x.state === 'GA' && x.subject === 'ela').map(x => x.code));
+    s.peerDraft = out.studentDraft || '';
+    s.peerRevision = (out.questions || []).map(q => ({
+      text: q.text || '',
+      type: QUESTION_TYPES.some(t => t.key === q.type) ? q.type : null,
+      standard: valid.has(q.gaCode) ? { state: 'GA', subject: 'ela', code: q.gaCode } : null,
+    }));
+    if (!s.peerRevision.length) s.peerRevision = [{ text: '', standard: null, type: null }];
+    saveSets();
+    toast(`✓ Built ${s.peerRevision.length} peer revision questions — review below`);
+  } catch (e) {
+    if (String(e.message).includes('401')) {
+      aiKey = '';
+      localStorage.removeItem(LS_AI_KEY);
+      toast('⚠ API key rejected — click Build again to re-enter it');
+    } else {
+      toast('⚠ AI build failed: ' + String(e.message).slice(0, 90));
+    }
+  }
+  state.ui.peerBuilding = null;
+  renderInput();
+}
+
 function renderInputDetail(row, st, grade) {
   const box = document.getElementById('inputDetail');
   if (!box) return;
@@ -1980,9 +2117,19 @@ function renderInputDetail(row, st, grade) {
 
   // Peer revision is a Georgia deliverable — authored here on the Georgia list,
   // not on the master list (which stays a clean cross-state source of truth).
+  const building = state.ui.peerBuilding === s.id;
+  const hasPeerContent = s.peerRevision.some(t => (t.text || '').trim());
   const peerHtml = st !== 'GA' ? '' : `
     <div class="ps-section">
-      <div class="ps-section-title">Peer Revision Task <span class="chip ga-chip">Georgia only</span></div>
+      <div class="ps-section-title">Peer Revision Task <span class="chip ga-chip">Georgia only</span>
+        <button class="act-btn approve" data-buildpeer="1" ${building ? 'disabled' : ''}>
+          ${building ? '⏳ Generating…' : hasPeerContent ? '⚡ Rebuild with AI' : '⚡ Build with AI'}</button>
+      </div>
+      ${s.peerDraft ? `
+        <div class="ps-field" style="margin-bottom:12px">
+          <label>Student draft — the flawed response students revise</label>
+          <textarea class="ps-textarea" data-peerdraft="1" rows="8">${esc(s.peerDraft)}</textarea>
+        </div>` : ''}
       <div class="peer-editor">
         ${s.peerRevision.map((q, i) => questionBlockHtml(q, 'peer', i, `Task ${i + 1}`, { restrictState: 'GA', setId: s.id })).join('')}
         ${s.peerRevision.length < MAX_QUESTIONS ? `<button class="act-btn" data-add-peer="1">＋ Add task</button>` : ''}
@@ -2475,7 +2622,7 @@ function init() {
   });
 
   document.getElementById('saveBadge').addEventListener('click', async () => {
-    const t = prompt('Paste your GitHub access token to enable cloud saving (stored only in this browser):', ghToken || '');
+    const t = prompt('Paste your GitHub access token to connect to the SHARED team dashboard.\n\nYour work (approvals, IDs, tags) saves to the team’s central GitHub file that everyone shares. Only the token itself stays private in this browser — it’s your key, not your data.', ghToken || '');
     if (t === null) return;
     ghToken = t.trim();
     localStorage.setItem(LS_GH_TOKEN, ghToken);
