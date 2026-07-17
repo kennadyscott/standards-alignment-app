@@ -333,6 +333,35 @@ function ghSaveSerialized() {
   return ghBusy;
 }
 
+/* Live team sync: pull teammates' work every minute and on tab focus. Cheap check
+   first (1KB metadata request) — the full multi-MB download only happens when the
+   server file actually changed. Uses the local-wins fold-in merge, so it can never
+   revert this browser's own work, and skips entirely while the user is typing or a
+   save is in flight. */
+function userIsTyping() {
+  const e = document.activeElement;
+  return !!e && (e.tagName === 'TEXTAREA' || e.tagName === 'INPUT' || e.tagName === 'SELECT');
+}
+let syncPulling = false;
+async function syncFromServer() {
+  if (!ghMode || !ghToken || !serverAvailable || ghBusy || syncPulling || userIsTyping()) return;
+  syncPulling = true;
+  try {
+    const r = await fetch(GH_STATE_URL, { headers: ghApiHeaders() });
+    if (r.ok) {
+      const j = await r.json();
+      if (j.sha !== ghSha) {          // someone else saved since we last read/wrote
+        const server = await ghLoad();
+        mergeForSave(server);
+        renderAll();
+      }
+    }
+  } catch { /* transient network — next tick will retry */ }
+  syncPulling = false;
+}
+setInterval(syncFromServer, 60000);
+window.addEventListener('focus', syncFromServer);
+
 let syncTimer;
 let serverAvailable = false;
 function postState(onDone) {
