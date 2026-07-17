@@ -239,7 +239,17 @@ async function ghLoad() {
   if (!r.ok) throw new Error(`github read ${r.status}`);
   const j = await r.json();
   ghSha = j.sha;
-  return JSON.parse(b64decode(j.content) || '{}');
+  let text = b64decode(j.content || '');
+  if (!text && j.size > 0) {
+    // GitHub's contents API stops inlining content above 1MB (encoding:"none") —
+    // without this fallback every browser silently loads an EMPTY shared state.
+    const rr = await fetch(GH_STATE_URL, {
+      headers: { ...ghApiHeaders(), Accept: 'application/vnd.github.raw' },
+    });
+    if (!rr.ok) throw new Error(`github raw read ${rr.status}`);
+    text = await rr.text();
+  }
+  return JSON.parse(text || '{}');
 }
 /* Multi-user safety: a save must never wipe work made in another browser. Before every
    write, pull the latest server state and fold it in — LOCAL wins on direct conflicts
@@ -309,12 +319,26 @@ function updateSaveBadge() {
   b.classList.toggle('badge-ok', !!ghToken);
 }
 
+// Saves are now multi-megabyte round-trips (pull + merge + push) — serialize them so a
+// second save can't start while one is in flight. A save requested mid-flight coalesces
+// into one follow-up pass that re-reads the latest state.
+let ghBusy = null, ghAgain = false;
+function ghSaveSerialized() {
+  if (ghBusy) { ghAgain = true; return ghBusy; }
+  ghBusy = (async () => {
+    try {
+      do { ghAgain = false; await ghSave(); } while (ghAgain);
+    } finally { ghBusy = null; }
+  })();
+  return ghBusy;
+}
+
 let syncTimer;
 let serverAvailable = false;
 function postState(onDone) {
   if (ghMode) {
     if (!ghToken) { if (onDone) onDone(false); return; }
-    ghSave()
+    ghSaveSerialized()
       .then(() => { if (onDone) onDone(true); })
       .catch(() => { toast('⚠ GitHub save failed — kept in this browser only'); if (onDone) onDone(false); });
     return;
