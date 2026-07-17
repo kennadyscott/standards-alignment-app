@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202607171459';   // replaced with the deploy stamp
+const APP_BUILD = '202607171505';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -245,13 +245,22 @@ async function ghLoad() {
   ghSha = j.sha;
   let text = b64decode(j.content || '');
   if (!text && j.size > 0) {
-    // GitHub's contents API stops inlining content above 1MB (encoding:"none") —
-    // without this fallback every browser silently loads an EMPTY shared state.
-    const rr = await fetch(GH_STATE_URL, {
-      headers: { ...ghApiHeaders(), Accept: 'application/vnd.github.raw' },
-    });
-    if (!rr.ok) throw new Error(`github raw read ${rr.status}`);
-    text = await rr.text();
+    // GitHub's contents API stops inlining content above 1MB (encoding:"none").
+    // Primary fallback: the git blobs API — plain JSON+base64 from api.github.com,
+    // no redirects, browser-safe. (The raw media type redirects large private files
+    // cross-origin, which fails inside browsers while working fine from curl.)
+    try {
+      const br = await fetch(`https://api.github.com/repos/${GH_DATA_REPO}/git/blobs/${j.sha}`,
+        { headers: ghApiHeaders() });
+      if (!br.ok) throw new Error(`blob ${br.status}`);
+      text = b64decode(((await br.json()).content) || '');
+    } catch {
+      const rr = await fetch(GH_STATE_URL, {
+        headers: { ...ghApiHeaders(), Accept: 'application/vnd.github.raw' },
+      });
+      if (!rr.ok) throw new Error(`github raw read ${rr.status}`);
+      text = await rr.text();
+    }
   }
   // A transiently empty/truncated body must NEVER be mistaken for an empty state —
   // treating it as {} once let a merge-before-save write an unmerged overwrite.
