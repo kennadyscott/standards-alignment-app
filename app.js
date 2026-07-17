@@ -215,7 +215,10 @@ function stateBody() {
 /* GitHub-direct persistence (used on static hosting like GitHub Pages):
    the state file lives in the PRIVATE data repo; every save is a commit. */
 const GH_DATA_REPO = 'kennadyscott/standards-alignment';
-const GH_STATE_URL = `https://api.github.com/repos/${GH_DATA_REPO}/contents/state/appstate.json`;
+// appstate2: the state moved paths on 2026-07-17 so browsers running OLD app code
+// (which clobbered teammates' work) keep writing to the abandoned appstate.json and
+// can never touch the live team state again.
+const GH_STATE_URL = `https://api.github.com/repos/${GH_DATA_REPO}/contents/state/appstate2.json`;
 const LS_GH_TOKEN = 'sa_gh_token';
 let ghMode = false;
 let ghToken = localStorage.getItem(LS_GH_TOKEN) || '';
@@ -291,9 +294,10 @@ function mergeForSave(server) {
 }
 
 async function ghSave(attempt = 0) {
-  try {
-    mergeForSave(await ghLoad());   // also refreshes ghSha
-  } catch { /* couldn't read — write with the cached sha; 409 path retries with a fresh pull */ }
+  // If we can't READ the shared state we must not WRITE it — an unmerged overwrite is
+  // exactly the clobber this path exists to prevent. (A missing file is not an error:
+  // ghLoad returns {} on 404, so the very first write still goes through.)
+  mergeForSave(await ghLoad());   // also refreshes ghSha; throws on read failure → save aborts
   const r = await fetch(GH_STATE_URL, {
     method: 'PUT',
     headers: ghApiHeaders(),
