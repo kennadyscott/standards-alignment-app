@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202607201436';   // replaced with the deploy stamp
+const APP_BUILD = '202607201535';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -344,6 +344,7 @@ async function ghSave(attempt = 0) {
   }
   if (!r.ok) throw new Error(`github write ${r.status}`);
   ghSha = (await r.json()).content.sha;
+  dirtyLocal = false;
   lastSyncAt = new Date();
   syncTrouble = false;
   updateSaveBadge();
@@ -394,6 +395,7 @@ function userIsTyping() {
 let syncPulling = false;
 let lastSyncAt = null;   // Date of last successful pull/save
 let syncTrouble = false; // last attempt failed — badge shows it
+let dirtyLocal = false;  // local work not yet committed to the server — sync retries it
 async function syncFromServer() {
   // Note: runs even when serverAvailable is false — a failed INITIAL load must not
   // silo this browser forever; the next tick establishes the connection.
@@ -417,6 +419,10 @@ async function syncFromServer() {
     syncTrouble = true;
   }
   syncPulling = false;
+  // A save that was skipped (no connection yet) or failed leaves local-only work behind.
+  // Every successful sync tick re-pushes it, so nothing can sit stranded in one browser
+  // behind a green badge.
+  if (ok && dirtyLocal && ghToken && !ghBusy) postState();
   updateSaveBadge();
   return ok;
 }
@@ -442,13 +448,18 @@ function postState(onDone) {
 }
 function pushState() {
   mirrorLocal();
-  if (!serverAvailable) return;
+  dirtyLocal = true;
+  // GitHub saves merge-before-write, so they're safe even before the first pull lands.
+  // Only the raw /api/state path (dev server) must wait for the connection — it would
+  // otherwise overwrite the server with a not-yet-merged local state.
+  if (ghMode ? !ghToken : !serverAvailable) return;
   clearTimeout(syncTimer);
   syncTimer = setTimeout(postState, 1200); // batched; every save is a versioned commit on the live server
 }
 // Explicit save: skip the debounce and confirm.
 function flushState() {
   mirrorLocal();
+  dirtyLocal = true;
   clearTimeout(syncTimer);
   if (!serverAvailable) { toast('Saved in this browser'); return; }
   postState(ok => { if (ok) toast('✓ Saved'); });
