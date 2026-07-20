@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202607202016';   // replaced with the deploy stamp
+const APP_BUILD = '202607202104';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1423,7 +1423,7 @@ function pickerResultsHtml(query, restrictState, scope) {
     <div class="picker-item" data-tag="${esc(s.state)}|${esc(s.subject)}|${esc(s.code)}">
       <span class="align-mini-code">${esc(s.code)}</span>
       <span class="chip">${esc(gradeLabel(s.grade))}</span>
-      <span class="align-mini-desc">${esc(s.description.slice(0, 100))}${s.description.length > 100 ? '…' : ''}</span>
+      <span class="align-mini-desc">${esc(s.description)}</span>
     </div>`;
   });
   return html;
@@ -2299,7 +2299,7 @@ function renderInputDetail(row, st, grade) {
       .sort((a, b) => a.code.localeCompare(b.code));
     actions = `<select class="ps-input" data-override="${esc(k)}" style="max-width:100%">
         <option value="">Choose the ${STATE_NAMES[st]} Grade ${grade} standard…</option>
-        ${opts.map(x => `<option value="${esc(x.code)}" ${assigned.code === x.code ? 'selected' : ''}>${esc(x.code)} — ${esc(x.description.slice(0, 70))}${x.description.length > 70 ? '…' : ''}</option>`).join('')}
+        ${opts.map(x => `<option value="${esc(x.code)}" ${assigned.code === x.code ? 'selected' : ''}>${esc(x.code)} — ${esc(x.description.slice(0, 180))}${x.description.length > 180 ? '…' : ''}</option>`).join('')}
       </select>
       <button class="act-btn reset" data-iact="canceloverride|${esc(k)}">Cancel</button>`;
   } else if (category === 'cms') {

@@ -557,7 +557,7 @@ body {
 }
 .picker-search:focus { border-color: var(--accent); }
 .picker-results {
-  max-height: 260px;
+  max-height: 380px;
   overflow-y: auto;
   display: flex; flex-direction: column; gap: 4px;
 }
