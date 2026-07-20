@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202607202104';   // replaced with the deploy stamp
+const APP_BUILD = '202607202140';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -164,12 +164,15 @@ const LS_SETSTATESTD = 'sa_setstatestd_v1';
 const LS_SETCMS = 'sa_setcms_v1';
 const LS_SETDISMISS = 'sa_setdismiss_v1';
 
+const LS_DECISIONSAT = 'sa_decisionsat_v1';
+
 const readLS = (k, fallback) => {
   try { return JSON.parse(localStorage.getItem(k)) || fallback; } catch { return fallback; }
 };
 
 function loadLocal() {
   state.decisions = readLS(LS_DECISIONS, {});
+  state.decisionsAt = readLS(LS_DECISIONSAT, {});
   state.manual = readLS(LS_MANUAL, []);
   state.noAlign = readLS(LS_NOALIGN, {});
   state.cms = readLS(LS_CMS, {});
@@ -182,6 +185,7 @@ function loadLocal() {
 }
 function mirrorLocal() {
   localStorage.setItem(LS_DECISIONS, JSON.stringify(state.decisions));
+  localStorage.setItem(LS_DECISIONSAT, JSON.stringify(state.decisionsAt || {}));
   localStorage.setItem(LS_MANUAL, JSON.stringify(state.manual));
   localStorage.setItem(LS_NOALIGN, JSON.stringify(state.noAlign));
   localStorage.setItem(LS_CMS, JSON.stringify(state.cms));
@@ -199,6 +203,7 @@ function stateBody() {
     // Link ids reuse the original pair ids (ss4-01…), so these ARE the reviewer's
     // decisions going back to the very first pass. Never prune them.
     decisions: state.decisions,
+    decisionsAt: state.decisionsAt || {},
     manual: state.manual,
     noAlign: state.noAlign,
     cms: state.cms,
@@ -288,7 +293,10 @@ async function ghLoad() {
 function mergeForSave(server) {
   if (!server || typeof server !== 'object') return;
   const S = k => server[k] || {};
-  state.decisions = { ...S('decisions'), ...state.decisions };
+  {
+    const m = mergeDecisions(S('decisions'), S('decisionsAt'), state.decisions, state.decisionsAt || {}, 'local');
+    state.decisions = m.decisions; state.decisionsAt = m.decisionsAt;
+  }
   state.noAlign = { ...S('noAlign'), ...state.noAlign };
   state.cms = { ...S('cms'), ...state.cms };
   state.severed = { ...S('severed'), ...state.severed };
@@ -513,8 +521,9 @@ function mergeServerState(s) {
     // silently clobber decisions made on the other.
     const localHadData = Object.keys(state.decisions).length || state.sets.length ||
       state.manual.length || Object.keys(state.noAlign).length || Object.keys(state.cms).length;
+    const dm = mergeDecisions(s.decisions || {}, s.decisionsAt || {}, state.decisions, state.decisionsAt || {}, 'server');
     const merged = {
-      decisions: { ...state.decisions, ...(s.decisions || {}) },
+      decisions: dm.decisions,
       manual: dedupeById([...(s.manual || []), ...state.manual]),
       noAlign: { ...state.noAlign, ...(s.noAlign || {}) },
       cms: { ...state.cms, ...(s.cms || {}) },
@@ -540,6 +549,7 @@ function mergeServerState(s) {
       })()),
     };
     state.decisions = merged.decisions;
+    state.decisionsAt = dm.decisionsAt;
     state.manual = merged.manual;
     state.noAlign = merged.noAlign;
     state.cms = merged.cms;
@@ -566,9 +576,38 @@ function pruneOrphanDecisions() {
   if (!state.links.length) return 0;
   const ids = new Set(state.links.map(l => l.id));
   const dead = Object.keys(state.decisions).filter(k => !ids.has(k));
-  dead.forEach(k => delete state.decisions[k]);
+  dead.forEach(k => { delete state.decisions[k]; if (state.decisionsAt) delete state.decisionsAt[k]; });
   if (dead.length) { mirrorLocal(); pushState(); }
   return dead.length;
+}
+
+/* Reviewer decisions can be CHANGED (reject → reconsider → approve), and every browser
+   holds its own copy — a plain local-wins merge lets any teammate's stale copy re-assert
+   an old decision forever. Each write is therefore timestamped, and merges pick the
+   NEWEST call per link. Legacy entries (made before timestamps) rank as 0, so any
+   re-decision beats every stale copy still cached in other browsers. */
+function setDecision(id, val) {
+  if (val === undefined) delete state.decisions[id];
+  else state.decisions[id] = val;
+  (state.decisionsAt = state.decisionsAt || {})[id] = Date.now();
+}
+function mergeDecisions(server, serverAt, local, localAt, tieWins) {
+  const out = {}, outAt = {};
+  new Set([...Object.keys(server), ...Object.keys(local),
+           ...Object.keys(serverAt), ...Object.keys(localAt)]).forEach(k => {
+    const ts = serverAt[k] || 0, tl = localAt[k] || 0;
+    let side;
+    if (tl > ts) side = 'local';
+    else if (ts > tl) side = 'server';
+    else side = tieWins === 'local'
+      ? (k in local ? 'local' : 'server')
+      : (k in server ? 'server' : 'local');
+    const src = side === 'local' ? local : server;
+    if (k in src) out[k] = src[k];
+    const t = Math.max(ts, tl);
+    if (t) outAt[k] = t;
+  });
+  return { decisions: out, decisionsAt: outAt };
 }
 
 function saveDecisions() { pushState(); }
@@ -1126,7 +1165,7 @@ function wireManualAdd(content, std) {
       source: 'manual',
     };
     state.links.push(l);
-    state.decisions[l.id] = 'approved';
+    setDecision(l.id, 'approved');
     indexLinks();
     pushState();
     toast(`Aligned ${oh.code} ↔ ${other.code}`);
@@ -1139,7 +1178,7 @@ function handleAction(act, id) {
     state.noAlign[id] = true;
     const std = state.byKey.get(id);
     if (std) linksFor(std).filter(l => statusOf(l) === 'pending')
-      .forEach(l => { state.decisions[l.id] = 'rejected'; });
+      .forEach(l => { setDecision(l.id, 'rejected'); });
     saveNoAlign();
     toast('Marked: No Alignment Possible');
   } else if (act === 'unmark-noalign') {
@@ -1167,15 +1206,15 @@ function handleAction(act, id) {
     toast('Grade assignment removed');
   } else if (act === 'unauto') {
     // Override a standing rule for this one link — an explicit 'pending' beats the rule.
-    state.decisions[id] = 'pending';
+    setDecision(id, 'pending');
     saveDecisions();
     toast('Back in the queue');
   } else if (act === 'pending') {
-    delete state.decisions[id];
+    setDecision(id, undefined);
     saveDecisions();
     toast('Reset to pending');
   } else {
-    state.decisions[id] = act;
+    setDecision(id, act);
     saveDecisions();
     toast(act === 'approved' ? 'Alignment approved ✓' : 'Alignment rejected');
   }
