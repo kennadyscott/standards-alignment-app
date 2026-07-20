@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202607202010';   // replaced with the deploy stamp
+const APP_BUILD = '202607202016';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -339,8 +339,12 @@ async function ghSave(attempt = 0) {
       ...(ghSha ? { sha: ghSha } : {}),
     }),
   });
-  if ((r.status === 409 || r.status === 422) && attempt < 2) {
-    return ghSave(attempt + 1);     // recursion re-pulls and re-merges before retrying
+  if ((r.status === 409 || r.status === 422) && attempt < 5) {
+    // The whole team writes this one file, so commits land mid-flight constantly.
+    // Back off with jitter so colliding browsers interleave instead of re-racing
+    // in lockstep; the recursion re-pulls and re-merges before retrying.
+    await new Promise(res => setTimeout(res, 400 + Math.random() * 1500 * (attempt + 1)));
+    return ghSave(attempt + 1);
   }
   if (!r.ok) throw new Error(`github write ${r.status}`);
   ghSha = (await r.json()).content.sha;
@@ -436,7 +440,7 @@ function postState(onDone) {
     if (!ghToken) { if (onDone) onDone(false); return; }
     ghSaveSerialized()
       .then(() => { if (onDone) onDone(true); })
-      .catch(() => { toast('⚠ GitHub save failed — kept in this browser only'); if (onDone) onDone(false); });
+      .catch(() => { toast('⏳ Cloud is busy (teammates saving) — your work is safe here and retries automatically'); if (onDone) onDone(false); });
     return;
   }
   fetch('/api/state', {
@@ -454,7 +458,9 @@ function pushState() {
   // otherwise overwrite the server with a not-yet-merged local state.
   if (ghMode ? !ghToken : !serverAvailable) return;
   clearTimeout(syncTimer);
-  syncTimer = setTimeout(postState, 1200); // batched; every save is a versioned commit on the live server
+  // Batched (every save is a versioned commit on the live server). The jitter spreads
+  // teammates' save moments apart — five browsers on a fixed delay collide far more.
+  syncTimer = setTimeout(postState, 2000 + Math.random() * 2000);
 }
 // Explicit save: skip the debounce and confirm.
 function flushState() {
