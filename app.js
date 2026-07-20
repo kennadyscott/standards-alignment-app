@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202607201535';   // replaced with the deploy stamp
+const APP_BUILD = '202607202010';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2239,7 +2239,12 @@ async function handleBuildPeer(s, grade) {
     }));
     if (!s.peerRevision.length) s.peerRevision = [{ text: '', standard: null, type: null }];
     saveSets();
-    toast(`✓ Built ${s.peerRevision.length} peer revision questions — review below`);
+    // Building the task graduates the set out of the Needs Peer Task stage, which
+    // would filter it (and the fresh questions) straight off the screen. Follow it:
+    // keep it selected and move the stage filter with it.
+    state.ui.inSelected = s.id;
+    if (state.ui.inStage === 'peer') state.ui.inStage = 'enter';
+    toast(`✓ Built ${s.peerRevision.length} peer revision tasks — set moved to To Be Entered, questions below`);
   } catch (e) {
     if (String(e.message).includes('401')) {
       aiKey = '';
