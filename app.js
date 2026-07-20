@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202607201332';   // replaced with the deploy stamp
+const APP_BUILD = '202607201436';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -239,7 +239,17 @@ function ghApiHeaders() {
 }
 async function ghLoad() {
   const r = await fetch(GH_STATE_URL, { headers: ghApiHeaders() });
-  if (r.status === 404) { ghSha = null; return {}; }
+  if (r.status === 404) {
+    // GitHub 404s private repos the token can't see — disambiguate "no state file yet"
+    // from "this token has no access" (unaccepted invite, fine-grained github_pat_
+    // token, or missing repo scope: the top onboarding traps).
+    const repo = await fetch(`https://api.github.com/repos/${GH_DATA_REPO}`, { headers: ghApiHeaders() });
+    if (!repo.ok) {
+      toast('⚠ This token can\'t open the team repo. It must be a CLASSIC token (starts ghp_, not github_pat_) with the "repo" box checked, on an account that accepted the repo invite. Shift-click the badge to re-enter it.');
+      throw new Error('no repo access');
+    }
+    ghSha = null; return {};
+  }
   if (!r.ok) throw new Error(`github read ${r.status}`);
   const j = await r.json();
   ghSha = j.sha;
