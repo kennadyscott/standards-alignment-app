@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202607171505';   // replaced with the deploy stamp
+const APP_BUILD = '202607201318';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2355,6 +2355,14 @@ function renderInputDetail(row, st, grade) {
     toast(`Assigned to ${e.target.value}`);
   });
 
+  // AI builder: generate the Georgia peer revision task (draft + questions) for review.
+  const buildBtn = box.querySelector('[data-buildpeer]');
+  if (buildBtn) buildBtn.addEventListener('click', () => {
+    const hasContent = s.peerRevision.some(t => (t.text || '').trim());
+    if (hasContent && !confirm('Rebuild will replace the current peer revision tasks (and student draft). Continue?')) return;
+    handleBuildPeer(s, grade);
+  });
+
   // Edit jumps to the Master editor — the set is one source of truth; passage text,
   // questions and prompt edited there update every state's view.
   const editBtn = box.querySelector('#editOnMaster');
@@ -2419,6 +2427,7 @@ function renderInputDetail(row, st, grade) {
    Mirrors the master editor's question handlers, but re-renders the input view. */
 function wirePeerInline(card, s) {
   const on = (sel, ev, fn) => card.querySelectorAll(sel).forEach(n => n.addEventListener(ev, fn));
+  on('[data-peerdraft]', 'input', e => { s.peerDraft = e.target.value; saveSets(); });
   on('[data-q]', 'input', e => {
     s.peerRevision[+e.target.dataset.q.split(':')[1]].text = e.target.value;
     saveSets();
