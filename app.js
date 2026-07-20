@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202607201318';   // replaced with the deploy stamp
+const APP_BUILD = '202607201332';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2096,29 +2096,46 @@ function ensureAiKey() {
   return !!aiKey;
 }
 
-// ⚙ TUNE ME: these generation instructions are a Georgia-Milestones-style default.
-// When the user shares an example Peer Revision Task, match its exact structure here.
-const PEER_SYSTEM = `You write peer-revision assessment tasks for Georgia elementary and middle school ELA, in the style of Georgia Milestones constructed-response supports.
+// Generation instructions tuned to the user's model examples ("4th Grade Georgia.pptx",
+// 2026-07-20): Georgia CMS Peer Revision Tasks for GRADES 2-5. Each task is
+// SELF-CONTAINED (scenario + embedded draft excerpt + question), not one big flawed essay.
+const PEER_SYSTEM = `You write Peer Revision Tasks for Georgia elementary ELA (grades 2–5), matching the state's CMS item style exactly.
 
-Given a passage set, its writing prompt, and the grade level, produce:
-1. A STUDENT DRAFT: a plausible response to the writing prompt, written the way a student at this grade would write it, containing specific findable weaknesses appropriate for peer revision (organization, evidence use, word choice, transitions, sentence structure, conventions). It should be genuinely revisable — flawed but not a caricature.
-2. FOUR TO FIVE revision questions about that draft. Each question must:
-   - target exactly ONE of the provided Georgia standards (prefer Constructing (C) elements of the Texts domain and Language standards — these are writing/revision standards)
-   - use one of these item types: multiple_choice, cloze, multi_select, text_entry
-   - be fully written out: stem, then answer choices each on their own line labeled A. B. C. D. (for cloze, give the drop-down options in [brackets / separated by slashes]), and the correct answer marked at the end as "Answer: X"
-   - be answerable using only the student draft (and the passage where relevant)
-Vary the item types across the set. Write at a grade-appropriate reading level.`;
+A Peer Revision Task is a SELF-CONTAINED item built around a short draft excerpt (one paragraph, an opinion statement, or a concluding paragraph) from an imagined GROUP DRAFT that students wrote in response to the writing prompt provided below. Each task presents that excerpt and asks the student to help revise it.
+
+Every task's text must contain, in this order:
+1. A second-person collaborative scenario (1–2 sentences). Use frames like:
+   - "While revising a paragraph of your group's draft [research/opinion] text, you notice that …"
+   - "Your group wants to … Which … should be added to the draft to BEST …?"
+   - "You are revising the concluding paragraph of your group's draft text. Read the draft of the concluding paragraph."
+   - "Read the opinion statement from your group's draft text. Your group has asked you to help find evidence to support this opinion."
+2. The draft excerpt on its own lines (when the task needs one), written like real grade-level student writing.
+3. The question/instruction, with emphasis capitalized exactly like the examples: "the TWO sentences that BEST connect the ideas".
+4. The response options, each on its own line lettered a. b. c. d. (or drop-down menus written inline as [option1 / option2 / option3]), and finally the correct answer on its own line: "Answer: …".
+
+Task archetypes — vary them across the set:
+A. ADD SENTENCES (multi_select): a draft paragraph with blank lines; "move the TWO sentences that BEST … onto the blank lines"; then a "Sentence Options" list of 4–5 sentences (2 correct, the rest plausible but off-purpose).
+B. ADD A DESCRIPTION (multiple_choice): "Which description should be added to the draft to BEST build on the idea that …?" — options a/b/c are full short paragraphs.
+C. DROP-DOWN CONVENTIONS (cloze): "Complete each drop-down menu by choosing the correct [conjunction / linking word / verb form]." Write the draft sentences with each menu inline as [option1 / option2 / option3].
+D. EVIDENCE FROM SOURCES (multi_select): "Which TWO paragraphs from Source #N contain evidence that should be added to the draft to BEST support the opinion?" — options like "paragraph 2" … "paragraph 8". Source #N means this set's passage(s); the paragraph numbers you key as correct must actually contain that evidence.
+E. STRENGTHEN THE CONCLUSION (multiple_choice): show the draft concluding paragraph, then "Which sentence should be added to the end of the paragraph to make the conclusion stronger?" with sentence options a–d.
+F. GRAMMAR TARGET (cloze): "Complete the sentence by choosing the [collective noun] in the first drop-down menu and the [abstract noun] in the second drop-down menu." on a single topic-related sentence.
+
+Requirements:
+- Produce 4–5 tasks. Vary the archetypes and item types (multiple_choice, multi_select, cloze — do NOT use text_entry).
+- Every draft excerpt is about THIS set's topic, reads like grade-level student writing responding to the writing prompt, and never contradicts the actual passages. Where sources are cited, be consistent with the passages provided.
+- Each task assesses exactly ONE of the provided Georgia standards — prefer Texts Constructing (C) elements for revision tasks and Language standards for conventions/grammar tasks.
+- Grade-appropriate vocabulary and sentence length throughout.`;
 
 const PEER_SCHEMA = {
   type: 'object',
   properties: {
-    studentDraft: { type: 'string', description: 'The flawed student response to the writing prompt' },
     questions: {
       type: 'array',
       items: {
         type: 'object',
         properties: {
-          text: { type: 'string', description: 'Complete question: stem, choices, and "Answer: X" line' },
+          text: { type: 'string', description: 'The complete self-contained task: scenario, draft excerpt, question, options, and final "Answer: ..." line' },
           type: { type: 'string', enum: ['multiple_choice', 'cloze', 'multi_select', 'text_entry'] },
           gaCode: { type: 'string', description: 'The single Georgia standard code this question assesses, exactly as given in the list' },
           rationale: { type: 'string', description: 'One sentence: why this question fits that standard' },
@@ -2128,7 +2145,7 @@ const PEER_SCHEMA = {
       },
     },
   },
-  required: ['studentDraft', 'questions'],
+  required: ['questions'],
   additionalProperties: false,
 };
 
@@ -2194,7 +2211,6 @@ async function handleBuildPeer(s, grade) {
   try {
     const out = await buildPeerTask(s, grade);
     const valid = new Set(state.standards.filter(x => x.state === 'GA' && x.subject === 'ela').map(x => x.code));
-    s.peerDraft = out.studentDraft || '';
     s.peerRevision = (out.questions || []).map(q => ({
       text: q.text || '',
       type: QUESTION_TYPES.some(t => t.key === q.type) ? q.type : null,
