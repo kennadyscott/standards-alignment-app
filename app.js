@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202607202140';   // replaced with the deploy stamp
+const APP_BUILD = '202607222049';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -184,18 +184,27 @@ function loadLocal() {
   state.setDismiss = readLS(LS_SETDISMISS, {});
 }
 function mirrorLocal() {
-  localStorage.setItem(LS_DECISIONS, JSON.stringify(state.decisions));
-  localStorage.setItem(LS_DECISIONSAT, JSON.stringify(state.decisionsAt || {}));
-  localStorage.setItem(LS_MANUAL, JSON.stringify(state.manual));
-  localStorage.setItem(LS_NOALIGN, JSON.stringify(state.noAlign));
-  localStorage.setItem(LS_CMS, JSON.stringify(state.cms));
-  localStorage.setItem(LS_SEVERED, JSON.stringify(state.severed));
-  localStorage.setItem(LS_CROSSOK, JSON.stringify(state.crossOk));
-  localStorage.setItem(LS_SETPUSH, JSON.stringify(state.setPush));
-  localStorage.setItem(LS_SETSTATESTD, JSON.stringify(state.setStateStd));
-  localStorage.setItem(LS_SETCMS, JSON.stringify(state.setCms));
-  localStorage.setItem(LS_SETDISMISS, JSON.stringify(state.setDismiss));
-  localStorage.setItem(LS_SETS, JSON.stringify(state.sets));
+  // localStorage is only a FALLBACK mirror — the cloud file is the source of truth.
+  // The full team state has outgrown Chrome's ~5MB per-origin quota, so a setItem
+  // here can throw QuotaExceededError; that must never break the real save path.
+  // Small maps mirror first; the giant sets blob goes last, and when it no longer
+  // fits it is dropped entirely (a stale sets mirror is worse than none — the app
+  // re-derives sets from imported data + the cloud state on every load).
+  const put = (k, v) => { try { localStorage.setItem(k, v); return true; } catch { return false; } };
+  put(LS_DECISIONS, JSON.stringify(state.decisions));
+  put(LS_DECISIONSAT, JSON.stringify(state.decisionsAt || {}));
+  put(LS_MANUAL, JSON.stringify(state.manual));
+  put(LS_NOALIGN, JSON.stringify(state.noAlign));
+  put(LS_CMS, JSON.stringify(state.cms));
+  put(LS_SEVERED, JSON.stringify(state.severed));
+  put(LS_CROSSOK, JSON.stringify(state.crossOk));
+  put(LS_SETPUSH, JSON.stringify(state.setPush));
+  put(LS_SETSTATESTD, JSON.stringify(state.setStateStd));
+  put(LS_SETCMS, JSON.stringify(state.setCms));
+  put(LS_SETDISMISS, JSON.stringify(state.setDismiss));
+  if (!put(LS_SETS, JSON.stringify(state.sets))) {
+    try { localStorage.removeItem(LS_SETS); } catch { /* nothing left to free */ }
+  }
 }
 
 function stateBody() {
@@ -459,8 +468,8 @@ function postState(onDone) {
     .catch(() => { toast('⚠ Server save failed — kept in this browser only'); if (onDone) onDone(false); });
 }
 function pushState() {
+  dirtyLocal = true;   // before the mirror: even a mirror failure must not skip the cloud save
   mirrorLocal();
-  dirtyLocal = true;
   // GitHub saves merge-before-write, so they're safe even before the first pull lands.
   // Only the raw /api/state path (dev server) must wait for the connection — it would
   // otherwise overwrite the server with a not-yet-merged local state.
@@ -472,8 +481,8 @@ function pushState() {
 }
 // Explicit save: skip the debounce and confirm.
 function flushState() {
-  mirrorLocal();
   dirtyLocal = true;
+  mirrorLocal();
   clearTimeout(syncTimer);
   if (!serverAvailable) { toast('Saved in this browser'); return; }
   postState(ok => { if (ok) toast('✓ Saved'); });
