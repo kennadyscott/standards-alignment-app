@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202607222049';   // replaced with the deploy stamp
+const APP_BUILD = '202607222055';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2174,7 +2174,7 @@ function ensureAiKey() {
 // Generation instructions tuned to the user's model examples ("4th Grade Georgia.pptx",
 // 2026-07-20): Georgia CMS Peer Revision Tasks for GRADES 2-5. Each task is
 // SELF-CONTAINED (scenario + embedded draft excerpt + question), not one big flawed essay.
-const PEER_SYSTEM = `You write Peer Revision Tasks for Georgia elementary ELA (grades 2–5), matching the state's CMS item style exactly.
+const PEER_SYSTEM = `You write Peer Revision Tasks for Georgia ELA (grades 2–8), matching the state's CMS item style exactly.
 
 A Peer Revision Task is a SELF-CONTAINED item built around a short draft excerpt (one paragraph, an opinion statement, or a concluding paragraph) from an imagined GROUP DRAFT that students wrote in response to the writing prompt provided below. Each task presents that excerpt and asks the student to help revise it.
 
@@ -2200,7 +2200,13 @@ Requirements:
 - Produce 4–5 tasks. Vary the archetypes and item types (multiple_choice, multi_select, cloze — do NOT use text_entry).
 - Every draft excerpt is about THIS set's topic, reads like grade-level student writing responding to the writing prompt, and never contradicts the actual passages. Where sources are cited, be consistent with the passages provided.
 - Each task assesses exactly ONE of the provided Georgia standards — prefer Texts Constructing (C) elements for revision tasks and Language standards for conventions/grammar tasks.
-- Grade-appropriate vocabulary and sentence length throughout.`;
+- Grade-appropriate vocabulary and sentence length throughout. Scale rigor to the grade:
+  grades 2–3 use short sentences and everyday words; grades 4–5 moderate complexity;
+  grades 6–8 use longer, multi-sentence draft excerpts, more sophisticated vocabulary and
+  transitions, and revision targets middle-schoolers actually face (varied sentence
+  structure, precise word choice, integrating evidence smoothly, active/passive voice).
+  The draft excerpts must read like authentic writing FROM A STUDENT AT THAT GRADE —
+  an 8th grader's draft is competent but improvable, not babyish.`;
 
 const PEER_SCHEMA = {
   type: 'object',
