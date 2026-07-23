@@ -1,0 +1,276 @@
+{
+  "links": [
+    {
+      "oh": "RL.2.1",
+      "state": "GA",
+      "code": "2.T.RA.2a",
+      "confidence": "moderate",
+      "rationale": "Both require the student to answer questions about a text by grounding the answer in what the text actually says, though Ohio names the wh- question types and Georgia names the textual reference."
+    },
+    {
+      "oh": "RL.2.2",
+      "state": "GA",
+      "code": "2.T.T.1c",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to determine the central message, lesson, or moral of a story; Georgia routes that determination through characters' responses to events, and Georgia has no counterpart to Ohio's retelling clause."
+    },
+    {
+      "oh": "RL.2.3",
+      "state": "GA",
+      "code": "2.T.T.1c",
+      "confidence": "strong",
+      "rationale": "Both demand that the student describe how characters respond to major events and challenges in a story."
+    },
+    {
+      "oh": "RL.2.4",
+      "state": "GA",
+      "code": "2.T.T.4a",
+      "confidence": "strong",
+      "rationale": "Both require describing how sound devices — rhyme, alliteration, repeated lines — work in a poetic or literary text, with nearly identical exemplar lists."
+    },
+    {
+      "oh": "RL.2.5",
+      "state": "GA",
+      "code": "2.T.T.1b",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to describe how a story is organized across its whole arc; Ohio frames it as beginning-introduces/ending-concludes and Georgia as the plot events between problem and solution."
+    },
+    {
+      "oh": "RL.2.6",
+      "state": "GA",
+      "code": "2.T.C.2a",
+      "confidence": "strong",
+      "rationale": "Both require identifying and distinguishing points of view (first vs. third person, narrator vs. character) using evidence of language in the text."
+    },
+    {
+      "oh": "RL.2.9",
+      "state": "GA",
+      "code": "2.T.T.1d",
+      "confidence": "strong",
+      "rationale": "Near-verbatim: both require comparing and contrasting two or more versions of the same story by different authors or from diverse cultures."
+    },
+    {
+      "oh": "RL.3.1",
+      "state": "GA",
+      "code": "3.T.RA.2a",
+      "confidence": "strong",
+      "rationale": "Both require answering questions about a text by referring explicitly to specific passages as the basis for the answer."
+    },
+    {
+      "oh": "RL.3.2",
+      "state": "GA",
+      "code": "3.T.T.1c",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to determine the central message/theme and explain how details in the text convey it; Georgia narrows the supporting details to character traits and motivations, and does not cover Ohio's retelling clause."
+    },
+    {
+      "oh": "RL.3.2",
+      "state": "GA",
+      "code": "4.T.T.1c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (+1): Georgia introduces the word 'theme' at grade 4, and this element's skill — identify a theme revealed through details about characters — is the closest analogue to Ohio's grade-3 determine-a-theme-through-key-details demand."
+    },
+    {
+      "oh": "RL.3.3",
+      "state": "GA",
+      "code": "3.T.T.1c",
+      "confidence": "strong",
+      "rationale": "Both require describing characters' traits, motivations, and feelings and explaining how those characters function in the story."
+    },
+    {
+      "oh": "RL.3.3",
+      "state": "GA",
+      "code": "3.T.T.1b",
+      "confidence": "moderate",
+      "rationale": "Covers the second half of the Ohio standard: explaining how characters' actions function in and contribute to the plot's sequence of events."
+    },
+    {
+      "oh": "RL.3.4",
+      "state": "GA",
+      "code": "2.T.SS.2a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (-1): both require distinguishing literal from nonliteral/figurative language in a text; Georgia places this skill a year earlier than Ohio."
+    },
+    {
+      "oh": "RL.3.4",
+      "state": "GA",
+      "code": "3.T.SS.2a",
+      "confidence": "moderate",
+      "rationale": "Both require interpreting the meaning of nonliteral language as used in a text; Georgia names specific devices (similes, metaphors, idioms) rather than Ohio's general literal/nonliteral contrast."
+    },
+    {
+      "oh": "RL.3.5",
+      "state": "GA",
+      "code": "3.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Both require referring to parts of a text using structural terms such as chapter or section and describing how the arrangement of those parts represents meaning; Ohio adds drama/poetry terms (scene, stanza) that Georgia omits here."
+    },
+    {
+      "oh": "RL.3.6",
+      "state": "GA",
+      "code": "2.T.C.2a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (-1): both require distinguishing first- from third-person narration using language from the text; Georgia places this at grade 2."
+    },
+    {
+      "oh": "RL.3.6",
+      "state": "GA",
+      "code": "3.T.C.2a",
+      "confidence": "moderate",
+      "rationale": "Both require describing the differing points of view of narrators or speakers in a text, though Georgia's emphasis is on separating the narrator's perspective from the reader's own."
+    },
+    {
+      "oh": "RL.3.9",
+      "state": "GA",
+      "code": "3.T.T.1d",
+      "confidence": "moderate",
+      "rationale": "Both require comparing and contrasting characters, settings, central messages, and events across stories; Ohio scopes the comparison to one author's series while Georgia scopes it across cultures."
+    },
+    {
+      "oh": "RI.2.1",
+      "state": "GA",
+      "code": "2.T.RA.2a",
+      "confidence": "moderate",
+      "rationale": "Both require answering questions about a text by grounding the answer in specific parts of that text; Ohio names the wh- question types and Georgia names the textual reference."
+    },
+    {
+      "oh": "RI.2.2",
+      "state": "GA",
+      "code": "2.T.T.2a",
+      "confidence": "strong",
+      "rationale": "Both require identifying the main idea/topic of an expository text and the focus of its individual paragraphs."
+    },
+    {
+      "oh": "RI.2.3",
+      "state": "GA",
+      "code": "2.T.T.2b",
+      "confidence": "strong",
+      "rationale": "Verbatim match: describe the connection between a series of historical events, scientific ideas or concepts, or steps in technical procedures in a text."
+    },
+    {
+      "oh": "RI.2.5",
+      "state": "GA",
+      "code": "2.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Both rest on knowing what text features (captions, subheadings, indexes) do in a text, but Ohio's demand is using them to locate information efficiently while Georgia's is explaining how they contribute to meaning and organization."
+    },
+    {
+      "oh": "RI.2.6",
+      "state": "GA",
+      "code": "2.T.C.1a",
+      "confidence": "strong",
+      "rationale": "Both require determining an author's main purpose for a text — what the author is trying to answer, explain, inform, or describe."
+    },
+    {
+      "oh": "RI.2.7",
+      "state": "GA",
+      "code": "2.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Both require explaining how a graphic element (Ohio: images/diagrams; Georgia: charts and other text features) contributes to and clarifies the meaning of an informational text."
+    },
+    {
+      "oh": "RI.2.8",
+      "state": "GA",
+      "code": "2.T.T.3a",
+      "confidence": "strong",
+      "rationale": "Both require identifying an author's main points/opinion in a persuasive or informational text and explaining how the supporting reasons and facts connect to them."
+    },
+    {
+      "oh": "RI.2.9",
+      "state": "GA",
+      "code": "3.T.T.2c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (+1): both require working across two texts on the same topic in relation to their most important points; Georgia asks the student to integrate and explain where Ohio asks to compare and contrast, and Georgia has no grade-2 two-text element."
+    },
+    {
+      "oh": "RI.3.1",
+      "state": "GA",
+      "code": "3.T.RA.2a",
+      "confidence": "strong",
+      "rationale": "Both require answering questions about a text by referring explicitly to specific passages as the basis for the answer."
+    },
+    {
+      "oh": "RI.3.2",
+      "state": "GA",
+      "code": "3.T.T.2a",
+      "confidence": "strong",
+      "rationale": "Both require determining the main idea of an expository text and explaining how the facts and key details support it."
+    },
+    {
+      "oh": "RI.3.3",
+      "state": "GA",
+      "code": "3.T.T.2b",
+      "confidence": "strong",
+      "rationale": "Verbatim match: describe the relationship between a series of historical events, scientific ideas or concepts, or steps in technical procedures in a text."
+    },
+    {
+      "oh": "RI.3.5",
+      "state": "GA",
+      "code": "3.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Both rest on using text features and organizational structures to find and make sense of information, but Ohio's demand is locating relevant information efficiently while Georgia's is describing how the text is arranged."
+    },
+    {
+      "oh": "RI.3.6",
+      "state": "GA",
+      "code": "3.T.C.2a",
+      "confidence": "strong",
+      "rationale": "Both require the student to distinguish their own perspective from that of the author/narrator of a text."
+    },
+    {
+      "oh": "RI.3.7",
+      "state": "GA",
+      "code": "3.T.SS.1a",
+      "confidence": "partial",
+      "rationale": "Shared object only in part: Georgia names maps and captions as features that represent information, but its demand is describing how the text is arranged, not Ohio's demand of using illustrations plus words together to understand where, when, why, and how events occur."
+    },
+    {
+      "oh": "RI.3.8",
+      "state": "GA",
+      "code": "3.T.T.3a",
+      "confidence": "strong",
+      "rationale": "Both require describing the relationship between an author's points/opinion statement and the supporting reasons and evidence used throughout the text."
+    },
+    {
+      "oh": "RI.3.9",
+      "state": "GA",
+      "code": "3.T.T.2c",
+      "confidence": "moderate",
+      "rationale": "Both require working across two texts on the same topic in relation to their important points and key details; Georgia asks the student to integrate and explain where Ohio asks to compare and contrast."
+    }
+  ],
+  "unmatched": [
+    {
+      "oh": "RL.2.7",
+      "why": "Georgia has no Interpreting element about using illustrations together with words to understand a story's characters, setting, or plot; its grade-2 illustration language sits in a Constructing element (2.T.SS.1b) and its text-feature element is expository in orientation."
+    },
+    {
+      "oh": "RL.2.10",
+      "why": "Georgia's 2023 standards contain no text-complexity-band or year-end proficient-reading standard, and no element covering text-to-self/text-to-text connection-making from prior knowledge."
+    },
+    {
+      "oh": "RL.3.7",
+      "why": "Same gap as RL.2.7: no Georgia Interpreting element asks how a story's illustrations contribute to what the words convey. The nearest candidates (3.T.C.1b, 3.T.SS.1a) are about modes and informational text arrangement, not literary illustration."
+    },
+    {
+      "oh": "RL.3.10",
+      "why": "Georgia has no text-complexity-band or year-end independent-proficiency standard, and no connection-making element."
+    },
+    {
+      "oh": "RI.2.4",
+      "why": "Determining the meaning of domain-specific words in context is not in Georgia's Texts domain; Georgia handles vocabulary in a separate domain that is not among the candidates. 2.T.SS.2a covers only literal vs. nonliteral language, which is a different skill."
+    },
+    {
+      "oh": "RI.2.10",
+      "why": "Georgia has no text-complexity-band or year-end proficient-reading standard for informational text."
+    },
+    {
+      "oh": "RI.3.4",
+      "why": "General academic and domain-specific vocabulary in context is not covered in Georgia's Texts domain; 3.T.SS.2a addresses figurative language only, which is a different skill."
+    },
+    {
+      "oh": "RI.3.10",
+      "why": "Georgia has no text-complexity-band or year-end independent-proficiency standard for informational text."
+    }
+  ]
+}

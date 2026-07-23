@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202607222055';   // replaced with the deploy stamp
+const APP_BUILD = '202607231430';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2116,8 +2116,18 @@ function detailQuestionHtml(q, i, s, st, grade) {
         </div>
         <button class="act-btn reject" data-qsuntag="${i}">✕ Remove ${STATE_NAMES[st]} tag</button>`;
     } else if (open) {
+      // The picker can pull ANY grade's standards — sets sometimes align across a
+      // grade boundary, so the tagger must be able to reach the neighboring grade.
+      const pg = String(state.ui.openPicker.grade || grade);
       inner = `<div class="review-pair q-pair">${nativeSide}</div>
-        ${pickerHtml('qstate', i, st, qstateScope(grade), `Showing ${STATE_NAMES[st]} ELAR standards for Grade ${grade}.`)}`;
+        <div class="ps-hint" style="margin:2px 0 6px;display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          Showing ${STATE_NAMES[st]} ELAR standards for
+          <select data-qsgrade style="padding:4px 10px;border:1px solid var(--line,#ccd6df);border-radius:8px;font:inherit;font-weight:700">
+            ${GRADES.map(g => `<option value="${g}" ${String(g) === pg ? 'selected' : ''}>Grade ${g}</option>`).join('')}
+          </select>
+          ${pg !== String(grade) ? `<span class="chip" style="background:#fdf1d2;color:#8a6400">⇄ cross-grade — this set is Grade ${grade}</span>` : ''}
+        </div>
+        ${pickerHtml('qstate', i, st, qstateScope(pg), '')}`;
     } else {
       // Recommend from the alignment work already done: the question's native standard's
       // approved alignments into this state at this grade. Accept in one click, or pick another.
@@ -2498,12 +2508,21 @@ function renderInputDetail(row, st, grade) {
     if (q.stateStandards) delete q.stateStandards[st];
     saveSets(); renderInput();
   }));
+  // grade selector inside the open picker — re-scope the list to any grade
+  const qg = box.querySelector('[data-qsgrade]');
+  if (qg) qg.addEventListener('change', e => {
+    state.ui.openPicker.grade = e.target.value;
+    renderInput();
+    const inp = document.querySelector('#inputDetail .tag-picker[data-picker^="qstate:"] .picker-search');
+    if (inp) inp.focus();
+  });
   const qp = box.querySelector('.tag-picker[data-picker^="qstate:"]');
   if (qp) {
     const iStr = qp.dataset.picker.split(':')[1];
     const results = qp.querySelector('.picker-results');
+    const pickGrade = () => String((state.ui.openPicker && state.ui.openPicker.grade) || grade);
     qp.querySelector('.picker-search').addEventListener('input', e => {
-      results.innerHTML = pickerResultsHtml(e.target.value, st, qstateScope(grade));
+      results.innerHTML = pickerResultsHtml(e.target.value, st, qstateScope(pickGrade()));
     });
     qp.querySelector('.picker-cancel').addEventListener('click', () => {
       state.ui.openPicker = null; renderInput();

@@ -1,0 +1,80 @@
+[
+ {
+  "state": "TX",
+  "subject": "ela",
+  "grade": "2",
+  "code": "2.3",
+  "strand": "Vocabulary (context)",
+  "description": "Use context to determine the meaning of unfamiliar or ambiguous words.",
+  "elements": [
+   "B. use context within and beyond a sentence to determine the meaning of unfamiliar words;",
+   "D. identify, use, and explain the meaning of antonyms, synonyms, idioms, and homographs in context."
+  ]
+ },
+ {
+  "state": "TX",
+  "subject": "ela",
+  "grade": "3",
+  "code": "3.3",
+  "strand": "Vocabulary (context)",
+  "description": "Use context to determine the meaning of unfamiliar or ambiguous words.",
+  "elements": [
+   "B. use context within and beyond a sentence to determine the meaning of unfamiliar words and multiple-meaning words;"
+  ]
+ },
+ {
+  "state": "TX",
+  "subject": "ela",
+  "grade": "4",
+  "code": "4.3",
+  "strand": "Vocabulary (context)",
+  "description": "Use context to determine the meaning of unfamiliar or ambiguous words.",
+  "elements": [
+   "B. use context within and beyond a sentence to determine the relevant meaning of unfamiliar words or multiple-meaning words;"
+  ]
+ },
+ {
+  "state": "TX",
+  "subject": "ela",
+  "grade": "5",
+  "code": "5.3",
+  "strand": "Vocabulary (context)",
+  "description": "Use context to determine the meaning of unfamiliar or ambiguous words.",
+  "elements": [
+   "B. use context within and beyond a sentence to determine the relevant meaning of unfamiliar words or multiple-meaning words;"
+  ]
+ },
+ {
+  "state": "TX",
+  "subject": "ela",
+  "grade": "6",
+  "code": "6.2",
+  "strand": "Vocabulary (context)",
+  "description": "Use context to determine the meaning of unfamiliar or ambiguous words.",
+  "elements": [
+   "B. use context such as definition, analogy, and examples to clarify the meaning of words; and"
+  ]
+ },
+ {
+  "state": "TX",
+  "subject": "ela",
+  "grade": "7",
+  "code": "7.2",
+  "strand": "Vocabulary (context)",
+  "description": "Use context to determine the meaning of unfamiliar or ambiguous words.",
+  "elements": [
+   "B. use context such as contrast or cause and effect to clarify the meaning of words; and"
+  ]
+ },
+ {
+  "state": "TX",
+  "subject": "ela",
+  "grade": "8",
+  "code": "8.2",
+  "strand": "Vocabulary (context)",
+  "description": "Use context to determine the meaning of unfamiliar or ambiguous words.",
+  "elements": [
+   "B. use context within or beyond a paragraph to clarify the meaning of unfamiliar or ambiguous words; and"
+  ]
+ }
+]

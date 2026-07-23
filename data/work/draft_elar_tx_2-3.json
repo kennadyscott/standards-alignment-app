@@ -1,0 +1,356 @@
+{
+  "links": [
+    {
+      "oh": "RL.2.1",
+      "state": "TX",
+      "code": "2.6B",
+      "confidence": "moderate",
+      "rationale": "Covers the 'ask' half of Ohio's ask-and-answer questioning routine; genre-neutral Comprehension strand, so it also serves RI.2.1."
+    },
+    {
+      "oh": "RL.2.1",
+      "state": "TX",
+      "code": "2.7C",
+      "confidence": "moderate",
+      "rationale": "Covers the 'answer from the text' half — using text evidence to support a response about key details; genre-neutral Response strand, shared with RI.2.1."
+    },
+    {
+      "oh": "RL.2.2",
+      "state": "TX",
+      "code": "2.8A",
+      "confidence": "strong",
+      "rationale": "Both require determining the lesson/theme of a literary work from text evidence; TX literary-elements SE is the direct RL analogue."
+    },
+    {
+      "oh": "RL.2.2",
+      "state": "TX",
+      "code": "2.7D",
+      "confidence": "strong",
+      "rationale": "Matches Ohio part b, retelling stories while maintaining meaning and logical order; genre-neutral Response strand applied here to literary retelling."
+    },
+    {
+      "oh": "RL.2.3",
+      "state": "TX",
+      "code": "2.8B",
+      "confidence": "moderate",
+      "rationale": "Both center on describing the main character, though Ohio frames it as response to events and TX as internal/external traits."
+    },
+    {
+      "oh": "RL.2.3",
+      "state": "TX",
+      "code": "2.8C",
+      "confidence": "partial",
+      "rationale": "Supplies the 'major events and challenges' side of Ohio's standard via plot's main events, conflict, and resolution, but does not require tying character response to them."
+    },
+    {
+      "oh": "RL.2.4",
+      "state": "TX",
+      "code": "2.10F",
+      "confidence": "moderate",
+      "rationale": "Directly matches Ohio's 'repeated lines' element — explaining the use of repetition; genre-neutral Author's craft strand."
+    },
+    {
+      "oh": "RL.2.4",
+      "state": "TX",
+      "code": "3.9B",
+      "confidence": "moderate",
+      "rationale": "Rhyme scheme and sound devices in poems is the closest match to Ohio's beats/alliteration/rhyme focus; cross-grade +1 (TX grade 3, no grade-2 sound-device SE exists)."
+    },
+    {
+      "oh": "RL.2.5",
+      "state": "TX",
+      "code": "2.8C",
+      "confidence": "moderate",
+      "rationale": "Both require describing overall story structure; TX names main events/conflict/resolution where Ohio names beginning and ending."
+    },
+    {
+      "oh": "RL.2.6",
+      "state": "TX",
+      "code": "2.10E",
+      "confidence": "strong",
+      "rationale": "Identical skill — identifying first- vs third-person narration; genre-neutral Author's craft strand but applied to narrators, so it serves RL."
+    },
+    {
+      "oh": "RL.2.7",
+      "state": "TX",
+      "code": "2.10C",
+      "confidence": "partial",
+      "rationale": "Both involve print/graphic features contributing to meaning, but TX frames it as author's purpose rather than using illustrations to understand character/setting/plot; genre-neutral, shared with RI.2.7."
+    },
+    {
+      "oh": "RL.2.10",
+      "state": "TX",
+      "code": "2.6E",
+      "confidence": "strong",
+      "rationale": "Matches Ohio's explicit text-to-self and text-to-text connection clause; genre-neutral Comprehension strand (TX has no text-complexity-band standard)."
+    },
+    {
+      "oh": "RL.2.10",
+      "state": "TX",
+      "code": "2.7A",
+      "confidence": "moderate",
+      "rationale": "Describing personal connections to sources covers Ohio's text-to-self/prior-experience clause; genre-neutral Response strand."
+    },
+    {
+      "oh": "RL.3.1",
+      "state": "TX",
+      "code": "3.7C",
+      "confidence": "strong",
+      "rationale": "Both require grounding answers explicitly in text evidence; genre-neutral Response strand, shared with RI.3.1."
+    },
+    {
+      "oh": "RL.3.1",
+      "state": "TX",
+      "code": "3.6B",
+      "confidence": "moderate",
+      "rationale": "Covers the question-generation half of Ohio's ask-and-answer standard; genre-neutral Comprehension strand, shared with RI.3.1."
+    },
+    {
+      "oh": "RL.3.2",
+      "state": "TX",
+      "code": "3.8A",
+      "confidence": "strong",
+      "rationale": "Both require inferring/determining a theme of a literary work; TX literary-elements SE is the direct RL analogue."
+    },
+    {
+      "oh": "RL.3.2",
+      "state": "TX",
+      "code": "3.7D",
+      "confidence": "strong",
+      "rationale": "Matches Ohio part b, retelling stories in ways that maintain meaning and logical order; genre-neutral Response strand applied to literary retelling."
+    },
+    {
+      "oh": "RL.3.3",
+      "state": "TX",
+      "code": "3.8B",
+      "confidence": "moderate",
+      "rationale": "Both require characterization work at grade 3, though Ohio emphasizes traits/motivations and TX emphasizes major/minor character relationships."
+    },
+    {
+      "oh": "RL.3.3",
+      "state": "TX",
+      "code": "3.8C",
+      "confidence": "moderate",
+      "rationale": "Covers Ohio's requirement that character actions contribute to the sequence of events, via analyzing plot sequence, conflict, and resolution."
+    },
+    {
+      "oh": "RL.3.4",
+      "state": "TX",
+      "code": "3.10D",
+      "confidence": "moderate",
+      "rationale": "Shared skill is distinguishing literal from figurative/nonliteral language in a text; TX adds an author's-purpose frame Ohio does not require; genre-neutral Author's craft strand."
+    },
+    {
+      "oh": "RL.3.5",
+      "state": "TX",
+      "code": "3.9B",
+      "confidence": "moderate",
+      "rationale": "Matches Ohio's requirement to use structural terms such as stanza when referring to parts of poems."
+    },
+    {
+      "oh": "RL.3.5",
+      "state": "TX",
+      "code": "3.9C",
+      "confidence": "partial",
+      "rationale": "Covers Ohio's drama terms (acts/scenes) but TX asks students to discuss drama elements rather than describe how successive parts build on earlier sections."
+    },
+    {
+      "oh": "RL.3.6",
+      "state": "TX",
+      "code": "3.10E",
+      "confidence": "strong",
+      "rationale": "Identical skill — identifying first- vs third-person point of view; genre-neutral Author's craft strand applied to narration."
+    },
+    {
+      "oh": "RL.3.7",
+      "state": "TX",
+      "code": "3.10C",
+      "confidence": "moderate",
+      "rationale": "Both require explaining how graphic/print features contribute to what a text conveys; genre-neutral Author's craft strand, shared with RI.3.7."
+    },
+    {
+      "oh": "RL.3.9",
+      "state": "TX",
+      "code": "4.7B",
+      "confidence": "partial",
+      "rationale": "Only TX SE in range demanding compare/contrast across texts, but it is genre-neutral and written-response framed, not the literary theme/setting/plot comparison Ohio names; cross-grade +1."
+    },
+    {
+      "oh": "RL.3.10",
+      "state": "TX",
+      "code": "3.6E",
+      "confidence": "strong",
+      "rationale": "Matches Ohio's explicit text-to-self and text-to-text connection clause; genre-neutral Comprehension strand (TX has no text-complexity-band standard)."
+    },
+    {
+      "oh": "RL.3.10",
+      "state": "TX",
+      "code": "3.7A",
+      "confidence": "moderate",
+      "rationale": "Describing personal connections to sources covers Ohio's prior-knowledge/text-to-self clause; genre-neutral Response strand."
+    },
+    {
+      "oh": "RI.2.1",
+      "state": "TX",
+      "code": "2.6B",
+      "confidence": "moderate",
+      "rationale": "Covers the 'ask' half of Ohio's ask-and-answer routine; genre-neutral Comprehension strand, same SE also serves RL.2.1."
+    },
+    {
+      "oh": "RI.2.1",
+      "state": "TX",
+      "code": "2.7C",
+      "confidence": "moderate",
+      "rationale": "Covers answering from the text with evidence about key details; genre-neutral Response strand, same SE also serves RL.2.1."
+    },
+    {
+      "oh": "RI.2.2",
+      "state": "TX",
+      "code": "2.9D",
+      "confidence": "strong",
+      "rationale": "TX 2.9D(i) requires recognizing the central idea and supporting evidence of informational text, matching Ohio's main topic / paragraph focus."
+    },
+    {
+      "oh": "RI.2.2",
+      "state": "TX",
+      "code": "2.6G",
+      "confidence": "moderate",
+      "rationale": "Evaluating details to determine key ideas is the same main-idea operation; genre-neutral Comprehension strand."
+    },
+    {
+      "oh": "RI.2.3",
+      "state": "TX",
+      "code": "2.9D",
+      "confidence": "moderate",
+      "rationale": "TX 2.9D(iii) covers informational organizational patterns such as chronological order and explicit cause and effect, matching Ohio's connections among events/ideas/steps; same SE also carries RI.2.2 and RI.2.5 (TX collapses ~all RI structure into one SE)."
+    },
+    {
+      "oh": "RI.2.5",
+      "state": "TX",
+      "code": "2.9D",
+      "confidence": "strong",
+      "rationale": "TX 2.9D(ii) requires using features and graphics to locate and gain information, matching Ohio's use of text features to locate key facts efficiently."
+    },
+    {
+      "oh": "RI.2.6",
+      "state": "TX",
+      "code": "2.10A",
+      "confidence": "strong",
+      "rationale": "Both require identifying the author's purpose for writing the text; genre-neutral Author's purpose strand."
+    },
+    {
+      "oh": "RI.2.7",
+      "state": "TX",
+      "code": "2.10C",
+      "confidence": "partial",
+      "rationale": "Both involve graphic features clarifying a text, but TX frames it as author's purpose rather than explaining how an image contributes to the text; genre-neutral, shared with RL.2.7."
+    },
+    {
+      "oh": "RI.2.8",
+      "state": "TX",
+      "code": "2.9E",
+      "confidence": "moderate",
+      "rationale": "TX persuasive-text SE (what the author wants the reader to think/do, fact vs. opinion) is the grade-2 argument analogue to Ohio's author's main points and supporting reasons."
+    },
+    {
+      "oh": "RI.3.1",
+      "state": "TX",
+      "code": "3.7C",
+      "confidence": "strong",
+      "rationale": "Both require grounding answers explicitly in text evidence; genre-neutral Response strand, same SE also serves RL.3.1."
+    },
+    {
+      "oh": "RI.3.1",
+      "state": "TX",
+      "code": "3.6B",
+      "confidence": "moderate",
+      "rationale": "Covers the question-generation half of Ohio's ask-and-answer standard; genre-neutral Comprehension strand, same SE also serves RL.3.1."
+    },
+    {
+      "oh": "RI.3.2",
+      "state": "TX",
+      "code": "3.9D",
+      "confidence": "strong",
+      "rationale": "TX 3.9D(i) requires recognizing the central idea with supporting evidence in informational text, matching Ohio's main idea plus supporting key details."
+    },
+    {
+      "oh": "RI.3.2",
+      "state": "TX",
+      "code": "3.6G",
+      "confidence": "moderate",
+      "rationale": "Evaluating details to determine key ideas is the same main-idea-from-details operation; genre-neutral Comprehension strand."
+    },
+    {
+      "oh": "RI.3.3",
+      "state": "TX",
+      "code": "3.9D",
+      "confidence": "moderate",
+      "rationale": "TX 3.9D(iii) covers informational organizational patterns such as cause and effect, matching Ohio's time/sequence/cause-effect relationships among events, ideas, or steps; same SE also carries RI.3.2 and RI.3.5."
+    },
+    {
+      "oh": "RI.3.5",
+      "state": "TX",
+      "code": "3.9D",
+      "confidence": "moderate",
+      "rationale": "TX 3.9D(ii) covers informational features (sections, tables, graphs, timelines, bold font) to support understanding, though Ohio additionally requires search tools such as key words and hyperlinks."
+    },
+    {
+      "oh": "RI.3.7",
+      "state": "TX",
+      "code": "3.10C",
+      "confidence": "moderate",
+      "rationale": "Both require explaining how graphic/print features contribute to understanding of the text; genre-neutral Author's craft strand, shared with RL.3.7."
+    },
+    {
+      "oh": "RI.3.8",
+      "state": "TX",
+      "code": "3.9E",
+      "confidence": "moderate",
+      "rationale": "TX argumentative-text SE (identify the claim, distinguish fact from opinion) is the grade-3 analogue to Ohio's author's points, though it stops short of evidence-to-point relationships."
+    },
+    {
+      "oh": "RI.3.8",
+      "state": "TX",
+      "code": "4.9E",
+      "confidence": "partial",
+      "rationale": "TX 4.9E(ii) 'explaining how the author has used facts for an argument' is the closest match to Ohio's evidence-to-point relationship; cross-grade +1, as grade 3 has no equivalent."
+    },
+    {
+      "oh": "RI.3.9",
+      "state": "TX",
+      "code": "4.7B",
+      "confidence": "partial",
+      "rationale": "Only TX SE in range demanding compare/contrast of ideas across sources, but it is genre-neutral and written-response framed rather than an informational points/details comparison; cross-grade +1."
+    }
+  ],
+  "unmatched": [
+    {
+      "oh": "RL.2.9",
+      "why": "TEKS grades 2-3 have no cross-text comparison SE; the only candidate (4.7B, compare/contrast ideas across sources) is two grades away from grade 2, outside the ±1 window."
+    },
+    {
+      "oh": "RI.2.4",
+      "why": "Determining meaning of grade-level topic/subject words lives in the TEKS Vocabulary strand (2.3A-D), which is not among the candidate reading strands; no Comprehension/Response/genre SE demands word-meaning determination."
+    },
+    {
+      "oh": "RI.2.9",
+      "why": "TEKS grades 2-3 have no SE requiring comparison of points across two texts on the same topic; 4.7B is two grades from grade 2, outside the ±1 window."
+    },
+    {
+      "oh": "RI.2.10",
+      "why": "TEKS has no text-complexity-band proficiency standard, and unlike RL.2.10 this standard carries no connections clause to hook onto the genre-neutral Comprehension strand."
+    },
+    {
+      "oh": "RI.3.4",
+      "why": "Academic and domain-specific vocabulary determination lives in the TEKS Vocabulary strand (3.3A-D), which is outside the candidate reading strands."
+    },
+    {
+      "oh": "RI.3.6",
+      "why": "TEKS has no SE requiring students to distinguish their own perspective from the author's; 3.10A only asks students to explain the author's purpose and message, which is half the task and omits the distinguishing operation."
+    },
+    {
+      "oh": "RI.3.10",
+      "why": "TEKS has no text-complexity-band proficiency standard, and unlike RL.3.10 this standard carries no connections clause to hook onto the genre-neutral Comprehension strand."
+    }
+  ]
+}

@@ -1,0 +1,473 @@
+[
+  {
+    "seedId": "seed-040",
+    "subject": "social_studies",
+    "grades": [
+      "7"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:7.SS.20",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "7",
+        "code": "7.SS.20",
+        "strand": "Economics",
+        "description": "The variability in the distribution of productive resources in the various regions of the world contributed to specialization, trade and interdependence.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS7E2a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "7",
+        "code": "SS7E2a",
+        "strand": "Economic Understandings",
+        "description": "Explain how specialization encourages trade between countries.",
+        "stem": "Explain how voluntary trade benefits buyers and sellers in Africa."
+      }
+    ],
+    "sourceRationale": "Same-grade match. Ohio: uneven distribution of productive resources contributed to specialization, trade, and interdependence. Georgia SS7E2a explains how specialization encourages trade between countries.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss7-09"
+  },
+  {
+    "seedId": "seed-041",
+    "subject": "social_studies",
+    "grades": [
+      "3",
+      "7"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:7.SS.21",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "7",
+        "code": "7.SS.21",
+        "strand": "Economics",
+        "description": "The growth of cities and empires fostered the growth of markets. Market exchanges encouraged specialization and the transition from barter to monetary economies.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS3E3b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "SS3E3b",
+        "strand": "Economic Understandings",
+        "description": "Describe how goods and services are allocated by price in the marketplace.",
+        "stem": "Give examples of interdependence and trade and explain the benefits of voluntary exchange."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 3). Ohio: the growth of cities and empires fostered the growth of markets and market exchanges. Georgia SS3E3b describes how goods and services are allocated by price in the marketplace, the market-exchange concept at an earlier grade.",
+    "sourceConfidence": "partial",
+    "sourcePairId": "ss7-11"
+  },
+  {
+    "seedId": "seed-042",
+    "subject": "social_studies",
+    "grades": [
+      "7"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:7.SS.21",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "7",
+        "code": "7.SS.21",
+        "strand": "Economics",
+        "description": "The growth of cities and empires fostered the growth of markets. Market exchanges encouraged specialization and the transition from barter to monetary economies.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS7E2c",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "7",
+        "code": "SS7E2c",
+        "strand": "Economic Understandings",
+        "description": "Explain why international trade requires a system for exchanging currencies between nations.",
+        "stem": "Explain how voluntary trade benefits buyers and sellers in Africa."
+      }
+    ],
+    "sourceRationale": "Same-grade match. Ohio: market exchanges encouraged the transition from barter to monetary economies. Georgia SS7E2c explains why international trade requires a system for exchanging currencies between nations, touching the monetary-exchange concept.",
+    "sourceConfidence": "partial",
+    "sourcePairId": "ss7-12"
+  },
+  {
+    "seedId": "seed-044",
+    "subject": "social_studies",
+    "grades": [
+      "8"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.5",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.5",
+        "strand": "History",
+        "description": "The ideas of the Enlightenment and dissatisfaction with colonial rule led English colonists to write the Declaration of Independence and launch the American Revolution.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS8H3b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "SS8H3b",
+        "strand": "Historical Understandings",
+        "description": "Interpret the three parts of the Declaration of Independence (preamble, grievances, and declaration) and identify the three Georgia signers of the document.",
+        "stem": "Analyze the role of Georgia in the American Revolutionary Era."
+      }
+    ],
+    "sourceRationale": "Cross-content (GA grade 8). Ohio: colonists wrote the Declaration of Independence. Georgia SS8H3b: interpret the three parts of the Declaration of Independence and identify the three Georgia signers.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss8-07"
+  },
+  {
+    "seedId": "seed-045",
+    "subject": "social_studies",
+    "grades": [
+      "4",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.5",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.5",
+        "strand": "History",
+        "description": "The ideas of the Enlightenment and dissatisfaction with colonial rule led English colonists to write the Declaration of Independence and launch the American Revolution.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4H1d",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4H1d",
+        "strand": "Historical Understandings",
+        "description": "Explain the writing of the Declaration of Independence; include who wrote it, how it was written, why it was necessary, and how it was a response to tyranny and the abuse of power.",
+        "stem": "Explain the causes, events, and results of the American Revolution."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 4). Ohio: Enlightenment ideas and dissatisfaction with colonial rule led to the Declaration of Independence. Georgia SS4H1d: explain the writing of the Declaration of Independence as a response to tyranny and the abuse of power.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss8-08"
+  },
+  {
+    "seedId": "seed-046",
+    "subject": "social_studies",
+    "grades": [
+      "8"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.8",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.8",
+        "strand": "History",
+        "description": "Problems arising under the Articles of Confederation led to debate over the adoption of the U.S. Constitution.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS8H3d",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "SS8H3d",
+        "strand": "Historical Understandings",
+        "description": "Analyze the weaknesses of the Articles of Confederation and explain how those weaknesses led to the writing of a new federal Constitution.",
+        "stem": "Analyze the role of Georgia in the American Revolutionary Era."
+      }
+    ],
+    "sourceRationale": "Cross-content (GA grade 8). Ohio: problems under the Articles of Confederation led to debate over adopting the U.S. Constitution. Georgia SS8H3d: analyze the weaknesses of the Articles of Confederation and explain how they led to writing a new federal Constitution.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss8-12"
+  },
+  {
+    "seedId": "seed-047",
+    "subject": "social_studies",
+    "grades": [
+      "8"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.12",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.12",
+        "strand": "History",
+        "description": "Disputes over the nature of federalism, complicated by economic developments in the United States, resulted in sectional issues, including slavery, which led to the American Civil War.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS8H5a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "SS8H5a",
+        "strand": "Historical Understandings",
+        "description": "Explain the importance of key issues and events that led to the Civil War; include slavery, states’ rights, nullification, Compromise of 1850 and the Georgia Platform, the Dred Scott case, Abraham Lincoln’s election in 1860, and the debate over secession in Georgia.",
+        "stem": "Analyze the impact of the Civil War on Georgia."
+      }
+    ],
+    "sourceRationale": "Cross-content (GA grade 8). Ohio: disputes over federalism and sectional issues including slavery led to the Civil War. Georgia SS8H5a: explain key issues and events that led to the Civil War, including slavery, states' rights, nullification, the Compromise of 1850, Dred Scott, and secession.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss8-20"
+  },
+  {
+    "seedId": "seed-048",
+    "subject": "social_studies",
+    "grades": [
+      "4",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.12",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.12",
+        "strand": "History",
+        "description": "Disputes over the nature of federalism, complicated by economic developments in the United States, resulted in sectional issues, including slavery, which led to the American Civil War.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4H5b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4H5b",
+        "strand": "Historical Understandings",
+        "description": "Discuss how the issues of states’ rights and slavery increased tensions between the North and South.",
+        "stem": "Explain the causes, major events, and consequences of the Civil War."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 4). Ohio: sectional issues including slavery led to the Civil War. Georgia SS4H5b: discuss how the issues of states' rights and slavery increased tensions between the North and South.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss8-21"
+  },
+  {
+    "seedId": "seed-049",
+    "subject": "social_studies",
+    "grades": [
+      "5",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.20",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.20",
+        "strand": "Government",
+        "description": "Active participation in social and civic groups can lead to the attainment of individual and public goals.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS5CG1a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "SS5CG1a",
+        "strand": "Government/Civic Understandings",
+        "description": "Explain the responsibilities of a citizen.",
+        "stem": "Explain how a citizen’s rights are protected under the U.S. Constitution."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 5). Ohio: active participation in social and civic groups can lead to individual and public goals. Georgia SS5CG1a: explain the responsibilities of a citizen.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss8-37"
+  },
+  {
+    "seedId": "seed-050",
+    "subject": "social_studies",
+    "grades": [
+      "4",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.22",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.22",
+        "strand": "Government",
+        "description": "The U.S. Constitution established a federal republic, providing a framework for a national government with elected representatives, separation of powers, and checks and balances.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4CG3a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4CG3a",
+        "strand": "Government/Civic Understandings",
+        "description": "Describe how the three branches of government interact with each other (checks and balances and separation of powers), and how they relate to local, state, and federal government.",
+        "stem": "Describe the structure of government and the Bill of Rights."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 4). Ohio: the Constitution established separation of powers and checks and balances. Georgia SS4CG3a: describe how the three branches of government interact through checks and balances and separation of powers.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss8-38"
+  },
+  {
+    "seedId": "seed-051",
+    "subject": "social_studies",
+    "grades": [
+      "4",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.22",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.22",
+        "strand": "Government",
+        "description": "The U.S. Constitution established a federal republic, providing a framework for a national government with elected representatives, separation of powers, and checks and balances.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4CG1c",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4CG1c",
+        "strand": "Government/Civic Understandings",
+        "description": "The federal system of government in the U.S. (federal powers, state powers, and shared powers)",
+        "stem": "Describe the meaning of:"
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 4). Ohio: the Constitution framed a national government within a federal system. Georgia SS4CG1c: the federal system of government in the U.S. (federal powers, state powers, and shared powers).",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss8-40"
+  },
+  {
+    "seedId": "seed-052",
+    "subject": "social_studies",
+    "grades": [
+      "4",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.23",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.23",
+        "strand": "Government",
+        "description": "The U.S. Constitution protects citizens’ rights by limiting the powers of government.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4CG3b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4CG3b",
+        "strand": "Government/Civic Understandings",
+        "description": "Identify and explain the rights in the Bill of Rights, describe how the Bill of Rights places limits on the powers of government, and explain the reasons for its inclusion in the Constitution in 1791.",
+        "stem": "Describe the structure of government and the Bill of Rights."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 4). Ohio: the Constitution protects citizens' rights by limiting the powers of government. Georgia SS4CG3b: identify the rights in the Bill of Rights and describe how it places limits on the powers of government.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss8-41"
+  },
+  {
+    "seedId": "seed-053",
+    "subject": "social_studies",
+    "grades": [
+      "4",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.23",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.23",
+        "strand": "Government",
+        "description": "The U.S. Constitution protects citizens’ rights by limiting the powers of government.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4CG2",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4CG2",
+        "strand": "Government/Civic Understandings",
+        "description": "Explain the importance of freedoms guaranteed by the First Amendment to the U.S. Constitution.",
+        "stem": null
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 4). Ohio: the Constitution protects citizens' rights. Georgia SS4CG2: explain the importance of freedoms guaranteed by the First Amendment.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss8-42"
+  },
+  {
+    "seedId": "seed-054",
+    "subject": "social_studies",
+    "grades": [
+      "5",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.26",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.26",
+        "strand": "Economics",
+        "description": "Governments can impact markets by means of spending, regulations, taxes and trade barriers.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS5E2d",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "SS5E2d",
+        "strand": "Economic Understandings",
+        "description": "Describe the government function in taxation and providing certain public goods and public services.",
+        "stem": "Describe the functions of four major sectors in the U. S. economy."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 5). Ohio: governments impact markets through spending and taxes. Georgia SS5E2d: describe the government function in taxation and providing public goods and services.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss8-49"
+  }
+]

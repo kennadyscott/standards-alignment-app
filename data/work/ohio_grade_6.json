@@ -1,0 +1,279 @@
+[
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "6",
+  "code": "6.ESS.1",
+  "strand": "Earth and Space Science",
+  "topic": "Rocks, Minerals and Soil",
+  "description": "Minerals have specific, quantifiable properties. Minerals are naturally occurring, inorganic solids that have a defined chemical composition. Minerals have properties that can be observed and measured. Minerals form in specific environments. Note: The emphasis is on learning how to identify the mineral by conducting tests (not through memorization)."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "6",
+  "code": "6.ESS.2",
+  "strand": "Earth and Space Science",
+  "topic": "Rocks, Minerals and Soil",
+  "description": "Igneous, metamorphic and sedimentary rocks have unique characteristics that can be used for identification and/or classification. Most rocks are composed of one or more minerals, but there are a few types of sedimentary rocks that contain organic material, such as coal. The composition of the rock, types of mineral present, and/or mineral shape and size can be used to identify the rock and to interpret its history of formation, breakdown (weathering) and transport (erosion)."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "6",
+  "code": "6.ESS.3",
+  "strand": "Earth and Space Science",
+  "topic": "Rocks, Minerals and Soil",
+  "description": "Igneous, metamorphic and sedimentary rocks form in different ways. Magma or lava cools and crystallizes to form igneous rocks. Heat and pressure applied to existing rock forms metamorphic rocks. Sedimentary rock forms as existing rock weathers chemically and/or physically and the weathered material is compressed and then lithifies. Each rock type can provide information about the environment in which it was formed."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "6",
+  "code": "6.ESS.4",
+  "strand": "Earth and Space Science",
+  "topic": "Rocks, Minerals and Soil",
+  "description": "Soil is unconsolidated material that contains organic matter and weathered rock. Soil formation occurs at different rates and is based on environmental conditions, types of existing bedrock and rates of weathering. Soil forms in layers known as horizons. Soil horizons can be distinguished from one another based on properties that can be measured. The terms dirt and soil are not synonymous, use the term \u201csoil\u201d. Note: The emphasis should be on properties of soil rather than memorization."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "6",
+  "code": "6.ESS.5",
+  "strand": "Earth and Space Science",
+  "topic": "Rocks, Minerals and Soil",
+  "description": "Rocks, minerals and soils have common and practical uses. Nearly all manufactured material requires some kind of geologic resource. Most geologic resources are considered nonrenewable. Rocks, minerals and soil are examples of geologic resources that are nonrenewable."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "6",
+  "code": "6.PS.1",
+  "strand": "Physical Science",
+  "topic": "Matter and Motion",
+  "description": "Matter is made up of small particles called atoms. Matter has mass, volume and density and is made up of particles called atoms. Elements are a class of substances composed of a single kind of atom. Molecules are the combination of two or more atoms that are joined together chemically."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "6",
+  "code": "6.PS.2",
+  "strand": "Physical Science",
+  "topic": "Matter and Motion",
+  "description": "Changes of state are explained by a model of matter composed of particles that are in motion. Temperature is a measure of the average motion of the particles in a substance. Heat is a process of energy transfer rather than a type of energy. Energy transfer can result in a change in temperature or a phase change. When substances undergo changes of state, atoms change their motion and position. Note: It is not the intent of this standard to encourage vocabulary identification (matching definitions with heat, temperature, and thermal energy). Instead, these are provided as conceptual tools for understanding the role of energy in physical, biotic, atmospheric, oceanic, and geologic systems covered in grade 6 and subsequent grades and courses."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "6",
+  "code": "6.PS.3",
+  "strand": "Physical Science",
+  "topic": "Matter and Motion",
+  "description": "There are two categories of energy: kinetic and potential. Objects and substances in motion have kinetic energy. Objects and substances can have energy as a result of their position (potential energy). Note: Chemical and elastic potential energy should not be included at this grade; this is found in PS grade 7."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "6",
+  "code": "6.PS.4",
+  "strand": "Physical Science",
+  "topic": "Matter and Motion",
+  "description": "An object\u2019s motion can be described by its speed and the direction in which it is moving. An object\u2019s position and speed can be measured and graphed as a function of time. Note: Velocity and acceleration rates should not be included at this grade level; these terms are introduced in high school."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "6",
+  "code": "6.LS.1",
+  "strand": "Life Science",
+  "topic": "Cellular to Multicellular",
+  "description": "Cells are the fundamental unit of life. All living things are composed of cells. Different body tissues and organs are made of different kinds of cells. The ways cells function are similar in all living organisms. Note: Emphasis should be placed on the function and coordination of cell organelles as well as their roles in overall cell function. Specific information about the organelles that need to be addressed at this grade level will be found in the model curriculum."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "6",
+  "code": "6.LS.2",
+  "strand": "Life Science",
+  "topic": "Cellular to Multicellular",
+  "description": "All cells come from pre-existing cells. Cells repeatedly divide resulting in more cells and growth and repair in multicellular organisms. Note: This is not a detailed discussion of the phases of mitosis or meiosis. The focus should be on reproduction as a means of transmitting genetic information from one generation to the next, cellular growth and repair."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "6",
+  "code": "6.LS.3",
+  "strand": "Life Science",
+  "topic": "Cellular to Multicellular",
+  "description": "Cells carry on specific functions that sustain life. Many basic functions of organisms occur in cells. Cells take in nutrients and energy to perform work, like making various molecules required by that cell or an organism. Every cell is covered by a membrane that controls what can enter and leave the cell. Within the cell are specialized parts for the transport of materials, energy capture and release, protein building, waste disposal, information feedback and movement. Note: Emphasis should be placed on the function and coordination of cell components, as well as on their roles in overall cell function."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "6",
+  "code": "6.LS.4",
+  "strand": "Life Science",
+  "topic": "Cellular to Multicellular",
+  "description": "Living systems at all levels of organization demonstrate the complementary nature of structure and function. The level of organization within organisms includes cells, tissues, organs, organ systems and whole organisms. Whether the organism is single-celled or multicellular, all of its parts function as a whole to perform the tasks necessary for the survival of the organism. Organisms have diverse body plans, symmetry and internal structures that contribute to their being able to survive in their environments."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.SS.1",
+  "strand": "History",
+  "topic": "Historical Thinking and Skills",
+  "theme": "Regions and People of the Eastern Hemisphere",
+  "description": "Multiple tier timelines can be used to show relationships among events and places."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.SS.2",
+  "strand": "History",
+  "topic": "Early Civilizations",
+  "theme": "Regions and People of the Eastern Hemisphere",
+  "description": "Early civilizations (India, Egypt, China and Mesopotamia) had unique governments, economic systems, social structures, religions, technologies and agricultural practices and products. The cultural practices and products of these early civilizations can be used to help understand the Eastern Hemisphere today."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.SS.3",
+  "strand": "Geography",
+  "topic": "Spatial Thinking and Skills",
+  "theme": "Regions and People of the Eastern Hemisphere",
+  "description": "Geographic tools can be used to gather, process and report information about people, places and environments. Cartographers decide which information to include and how it is displayed."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.SS.4",
+  "strand": "Geography",
+  "topic": "Spatial Thinking and Skills",
+  "theme": "Regions and People of the Eastern Hemisphere",
+  "description": "Latitude and longitude can be used to identify absolute location."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.SS.5",
+  "strand": "Geography",
+  "topic": "Places and Regions",
+  "theme": "Regions and People of the Eastern Hemisphere",
+  "description": "Regions can be determined, classified and compared using data related to various criteria including landform, climate, population, and cultural and economic characteristics"
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.SS.6",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "Regions and People of the Eastern Hemisphere",
+  "description": "The variety of physical environments within the Eastern Hemisphere influences human activities. Likewise, human activities modify the physical environment."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.SS.7",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "Regions and People of the Eastern Hemisphere",
+  "description": "Political, environmental, social and economic factors cause people, products and ideas to move from place to place in the Eastern Hemisphere in the past and today."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.SS.8",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "Regions and People of the Eastern Hemisphere",
+  "description": "Diffusion of agricultural practices and products, technology, cultural practices and major world religions (Buddhism, Christianity, Hinduism, Islam and Judaism) impacted the Eastern Hemisphere."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.SS.9",
+  "strand": "Government",
+  "topic": "Civic Participation and Skills",
+  "theme": "Regions and People of the Eastern Hemisphere",
+  "description": "Different perspectives on a topic can be obtained from a variety of historic and contemporary sources and used to effectively communicate and defend a claim based on evidence. Sources should be examined for accuracy and credibility."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.SS.10",
+  "strand": "Government",
+  "topic": "Roles and Systems of Government",
+  "theme": "Regions and People of the Eastern Hemisphere",
+  "description": "Governments can be categorized as monarchies, theocracies, dictatorships or democracies, but categories may overlap and labels may not accurately represent how governments function. The extent of citizens\u2019 liberties and responsibilities varies according to limits on governmental authority."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.SS.11",
+  "strand": "Economics",
+  "topic": "Economic Decision Making and Skills",
+  "theme": "Regions and People of the Eastern Hemisphere",
+  "description": "Economists compare data sets to draw conclusions about relationships among them."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.SS.12",
+  "strand": "Economics",
+  "topic": "Economic Decision Making and Skills",
+  "theme": "Regions and People of the Eastern Hemisphere",
+  "description": "The choices made by individuals and governments have both present and future consequences. The evaluation of choices is relative and may differ across individuals and societies."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.SS.13",
+  "strand": "Economics",
+  "topic": "Scarcity",
+  "theme": "Regions and People of the Eastern Hemisphere",
+  "description": "The fundamental questions of economics include what to produce, how to produce and for whom to produce."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.SS.14",
+  "strand": "Economics",
+  "topic": "Scarcity",
+  "theme": "Regions and People of the Eastern Hemisphere",
+  "description": "When regions and/or countries specialize, global trade occurs."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.SS.15",
+  "strand": "Economics",
+  "topic": "Markets",
+  "theme": "Regions and People of the Eastern Hemisphere",
+  "description": "The interaction of supply and demand, influenced by competition, helps to determine price in a market. This interaction also determines the quantities of outputs produced and the quantities of productive resources (entrepreneurship, human resources, natural resources and capital) used."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.SS.16",
+  "strand": "Economics",
+  "topic": "Financial Literacy",
+  "theme": "Regions and People of the Eastern Hemisphere",
+  "description": "When selecting items to buy, individuals can weigh costs and benefits and compare the price and quality of available goods and services."
+ }
+]

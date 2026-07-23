@@ -1,0 +1,110 @@
+[
+  {
+    "seedId": "seed-040",
+    "title": "Specialization as a Driver of Trade",
+    "description": "A standard belongs here if it asks students to explain how specializing in what a person, region, or country produces best leads to trade and mutual interdependence.",
+    "gradeBand": "6-8",
+    "slug": "specialization-leads-to-trade-3",
+    "note": "Duplicate of existing concept c-specialization-leads-to-trade (and its already-flagged twin c-specialization-leads-to-trade-2). Title and description copied verbatim so the merge is greppable. This seed's shared ground — uneven distribution of productive resources leading to specialization and trade between countries — is exactly what that concept states; the existing pair already carries the same causal claim at grades 5 and 6. Third member of the merge set."
+  },
+  {
+    "seedId": "seed-041",
+    "title": "Markets Where Buyers and Sellers Exchange",
+    "description": "A standard belongs here if it asks students to explain what a market is or how goods and services move between buyers and sellers within one, including the role of price.",
+    "gradeBand": "3-8",
+    "slug": "markets-exchange-goods-and-services-2",
+    "note": "Duplicate of existing concept c-markets-exchange-goods-and-services; title and description copied verbatim so the merge is greppable. Also asymmetric grain: the grade-7 member is a broad historical claim (the growth of cities and empires fostered markets, and market exchange drove specialization and the shift from barter to monetary economies), of which only 'markets exist and exchange happens in them' is shared with a grade-3 standard about price allocation. That member attaches on a fraction of what it says; its barter-to-money half lives in seed-042."
+  },
+  {
+    "seedId": "seed-042",
+    "title": "Currency as the Basis for Exchange in Trade",
+    "description": "A standard belongs here if it asks students to explain how money or an agreed currency system, rather than direct barter, is what makes exchange work — including why parties trading across borders need a means of converting one currency into another.",
+    "gradeBand": "6-8",
+    "slug": "currency-enables-exchange-in-trade",
+    "note": "Thin, half-shared pair; reviewer confidence 'partial' and I agree. The Ohio member's actual claim is that market exchange in growing cities and empires drove a transition from barter to monetary economies; the Georgia member's is that international trade requires a currency-exchange system. They meet only at 'exchange runs on money rather than barter,' and neither states the other's substance. That shared proposition is also already stated by existing concept c-money-as-medium-of-exchange ('why money works better than direct barter') at K-2 — this may be that concept at a higher grade rather than a new one. Curation should decide between merging into c-money-as-medium-of-exchange and rejecting the pair."
+  },
+  {
+    "seedId": "seed-044",
+    "title": "The 1776 Declaration of Independence and Its Ideals",
+    "description": "A standard belongs here if it asks students to explain the writing, structure, purpose, or founding ideals of the 1776 Declaration of Independence by which the thirteen American colonies broke from British rule — including how it answered tyranny and the abuse of power — and not a declaration of independence issued by some other people in some other era.",
+    "gradeBand": "6-8",
+    "slug": "declaration-of-independence-1776",
+    "note": "Near-duplicate of existing concept c-declaration-of-independence-ideals — recommend merging, but NOT by copying that concept's wording. I deliberately did not reuse its description verbatim: it says 'a declaration of independence' in the abstract, which is the under-specification already flagged in this library, and a state standard about its own 1836-style declaration would pass that test and be wrongly aligned to the 1776 document. The description above names the event. Recommend the existing concept be retitled and rewritten to this wording as part of the merge."
+  },
+  {
+    "seedId": "seed-045",
+    "title": "The 1776 Declaration of Independence and Its Ideals",
+    "description": "A standard belongs here if it asks students to explain the writing, structure, purpose, or founding ideals of the 1776 Declaration of Independence by which the thirteen American colonies broke from British rule — including how it answered tyranny and the abuse of power — and not a declaration of independence issued by some other people in some other era.",
+    "gradeBand": "3-8",
+    "slug": "declaration-of-independence-1776-2",
+    "note": "Duplicate of seed-044 (identical title and description, verbatim, so the merge is greppable), and a near-duplicate of existing concept c-declaration-of-independence-ideals. Both seeds share the same Ohio member and pair it with a Georgia standard about the same document; seed-044's counterpart interprets the document's three parts at grade 8, seed-045's explains its writing and purpose at grade 4. Grade and emphasis differ; the concept does not. Merge all three into one."
+  },
+  {
+    "seedId": "seed-046",
+    "title": "From the Articles of Confederation to the Constitution",
+    "description": "A standard belongs here if it asks students to identify the weaknesses of the Articles of Confederation — the first national government of the United States after independence — and explain how those failures produced the debate over, and the writing and adoption of, the U.S. Constitution in 1787.",
+    "gradeBand": "6-8",
+    "slug": "articles-of-confederation-weaknesses"
+  },
+  {
+    "seedId": "seed-047",
+    "title": "Causes of the American Civil War",
+    "description": "A standard belongs here if it asks students to explain the issues and events that drove the United States to the Civil War of 1861-1865 — slavery, states' rights and disputes over the nature of federalism, sectional economic differences, the compromises and court decisions of the 1850s, and the secession crisis following the 1860 election.",
+    "gradeBand": "6-8",
+    "slug": "causes-of-the-american-civil-war"
+  },
+  {
+    "seedId": "seed-048",
+    "title": "Causes of the American Civil War",
+    "description": "A standard belongs here if it asks students to explain the issues and events that drove the United States to the Civil War of 1861-1865 — slavery, states' rights and disputes over the nature of federalism, sectional economic differences, the compromises and court decisions of the 1850s, and the secession crisis following the 1860 election.",
+    "gradeBand": "3-8",
+    "slug": "causes-of-the-american-civil-war-2",
+    "note": "Duplicate of seed-047 (identical title and description, verbatim, so the merge is greppable). Both seeds share the same Ohio member; seed-047 pairs it with a grade-8 enumeration of the war's causes and seed-048 with a grade-4 standard naming states' rights and slavery as the sources of North-South tension. Only grade and grain differ. Note also that existing concept c-regional-differences-and-sectionalism was flagged as a genuine mismatch partly because a Civil-War-causes standard attaches to it; if this concept is adopted, that one loses its history half and should be re-examined or rejected."
+  },
+  {
+    "seedId": "seed-049",
+    "title": "Civic Participation and the Responsibilities of Citizens",
+    "description": "A standard belongs here if it asks students to explain what citizens are responsible for doing as members of a community or nation, or how taking active part in civic and social groups advances shared and personal goals.",
+    "gradeBand": "3-8",
+    "slug": "civic-participation-and-responsibility",
+    "note": "Thin shared ground and an unresolved overlap. The Ohio member is about the payoff of participation (joining civic groups attains individual and public goals); the Georgia member is a bare list of a citizen's responsibilities. They meet only at the general proposition that citizens are expected to act, and the title above is a bridge holding two halves together rather than one idea. Separately, the Georgia member also passes the membership test of existing concept c-citizens-rights-and-responsibilities ('the duties they owe in return'), so this concept and that one will compete for it; the Ohio member passes neither cleanly. Curation should decide whether the participation half is a distinct concept or this pair should be rejected."
+  },
+  {
+    "seedId": "seed-050",
+    "title": "Separation of Powers and Checks and Balances",
+    "description": "A standard belongs here if it asks students to explain how a constitution divides a government into separate branches with distinct powers and lets each branch check the others, whether at the national, state, or local level.",
+    "gradeBand": "3-8",
+    "slug": "separation-of-powers-and-checks"
+  },
+  {
+    "seedId": "seed-051",
+    "title": "Federalism: Powers Divided Between National and State Governments",
+    "description": "A standard belongs here if it asks students to explain how a federal system distributes authority between a national government and the states or provinces within it, including which powers are delegated, reserved, or shared.",
+    "gradeBand": "3-8",
+    "slug": "federalism-national-and-state-powers"
+  },
+  {
+    "seedId": "seed-052",
+    "title": "The U.S. Bill of Rights Limits Government Power",
+    "description": "A standard belongs here if it asks students to explain how the Bill of Rights — the first ten amendments added to the U.S. Constitution in 1791 — protects individual rights by constraining what the national government may do, and why those limits were written into the document.",
+    "gradeBand": "3-8",
+    "slug": "us-bill-of-rights-limits-government",
+    "note": "Near-duplicate of existing concept c-bill-of-rights-limits-government — recommend merging, but I did not copy its wording verbatim. That description says 'an enumerated bill of rights' and 'a constitution' in the abstract, which is the same under-specification already flagged for the declaration concepts: most states' own constitutions contain a bill of rights, so a state standard about its own document would pass that test literally and be wrongly aligned to standards about the federal one. The description above names the 1791 federal amendments. Recommend the existing concept be rewritten to this wording as part of the merge."
+  },
+  {
+    "seedId": "seed-053",
+    "title": "Fundamental Freedoms Protected by the First Amendment",
+    "description": "A standard belongs here if it asks students to identify or explain the importance of the freedoms guaranteed by the First Amendment.",
+    "gradeBand": "3-8",
+    "slug": "first-amendment-freedoms-2",
+    "note": "Duplicate of existing concept c-first-amendment-freedoms; title and description copied verbatim so the merge is greppable (no rewrite needed here — 'the First Amendment' names its document unambiguously and does not carry the under-specification problem). But the pair itself is weak and probably adds nothing: the Ohio member says only that the Constitution protects citizens' rights by limiting the powers of government and never mentions the First Amendment, so it attaches on a fraction of what it says and passes seed-052's Bill-of-Rights test just as well. Same Ohio standard as seed-052, paired with a narrower Georgia element. Consider rejecting this pair and letting seed-052 carry that member."
+  },
+  {
+    "seedId": "seed-054",
+    "title": "Government Taxation and Provision of Public Goods",
+    "description": "A standard belongs here if it asks students to explain how a government raises revenue through taxes and uses public spending to provide goods and services that markets do not supply on their own.",
+    "gradeBand": "3-8",
+    "slug": "taxation-and-public-goods",
+    "note": "Adjacent to existing concept c-government-trade-barriers, which shares this seed's exact Ohio member (governments impact markets via spending, regulations, taxes, and trade barriers) and whose broad description — 'governments act on markets or trade through tools such as tariffs, quotas, embargoes, taxes, or regulation' — would admit this seed's taxation-and-public-goods member too. That concept's existing note already predicted it would have to split into 'government intervention in markets' and 'trade barriers'; this concept is effectively the fiscal half of that split. Curation should reconcile the three at once rather than treating this as independent."
+  }
+]

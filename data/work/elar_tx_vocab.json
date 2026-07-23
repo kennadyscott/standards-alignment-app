@@ -1,0 +1,168 @@
+{
+ "ohio": [
+  {
+   "key": "OH:ela:RL.2.4",
+   "grade": "2",
+   "code": "RL.2.4",
+   "strand": "Reading Literature",
+   "description": "Describe how words and phrases (e.g., regular beats, alliteration, rhymes, repeated lines) supply rhythm and meaning in a story, poem, or song."
+  },
+  {
+   "key": "OH:ela:RL.3.4",
+   "grade": "3",
+   "code": "RL.3.4",
+   "strand": "Reading Literature",
+   "description": "Determine the meaning of words and phrases as they are used in a text, distinguishing literal from nonliteral language."
+  },
+  {
+   "key": "OH:ela:RL.4.4",
+   "grade": "4",
+   "code": "RL.4.4",
+   "strand": "Reading Literature",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including those that allude to significant characters found in mythology (e.g., Herculean)."
+  },
+  {
+   "key": "OH:ela:RL.5.4",
+   "grade": "5",
+   "code": "RL.5.4",
+   "strand": "Reading Literature",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative language such as metaphors, similes, and idioms."
+  },
+  {
+   "key": "OH:ela:RL.6.4",
+   "grade": "6",
+   "code": "RL.6.4",
+   "strand": "Reading Literature",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative and connotative meanings; analyze the impact of specific word choices, including sensory language, on meaning and tone."
+  },
+  {
+   "key": "OH:ela:RL.7.4",
+   "grade": "7",
+   "code": "RL.7.4",
+   "strand": "Reading Literature",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative and connotative meanings; analyze the impact of specific language choices, such as sensory words or phrases, on meaning and tone, including rhymes and other repetitions of sounds (e.g., alliteration) on a specific verse or stanza of a poem or section of a story or drama."
+  },
+  {
+   "key": "OH:ela:RL.8.4",
+   "grade": "8",
+   "code": "RL.8.4",
+   "strand": "Reading Literature",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative and connotative meanings; analyze the impact of specific word choices on meaning, mood, and tone, including analogies or allusions to other texts."
+  },
+  {
+   "key": "OH:ela:RI.2.4",
+   "grade": "2",
+   "code": "RI.2.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of words and phrases in a text relevant to a grade 2 topic or subject area."
+  },
+  {
+   "key": "OH:ela:RI.3.4",
+   "grade": "3",
+   "code": "RI.3.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of general academic and domain-specific words and phrases in a text relevant to a grade 3 topic or subject area."
+  },
+  {
+   "key": "OH:ela:RI.4.4",
+   "grade": "4",
+   "code": "RI.4.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of general academic and domain-specific words or phrases in a text relevant to a grade 4 topic or subject area."
+  },
+  {
+   "key": "OH:ela:RI.5.4",
+   "grade": "5",
+   "code": "RI.5.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of general academic and domain-specific words and phrases in a text relevant to a grade 5 topic or subject area."
+  },
+  {
+   "key": "OH:ela:RI.6.4",
+   "grade": "6",
+   "code": "RI.6.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings."
+  },
+  {
+   "key": "OH:ela:RI.7.4",
+   "grade": "7",
+   "code": "RI.7.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings; analyze the impact of a specific word choice on meaning and tone."
+  },
+  {
+   "key": "OH:ela:RI.8.4",
+   "grade": "8",
+   "code": "RI.8.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings; analyze the impact of specific word choices on meaning and tone, including analogies or allusions to other texts."
+  }
+ ],
+ "candidates": [
+  {
+   "key": "TX:ela:2.3B",
+   "grade": "2",
+   "code": "2.3B",
+   "strand": "Vocabulary (context)",
+   "stem": "Use context to determine the meaning of unfamiliar or ambiguous words.",
+   "description": "use context within and beyond a sentence to determine the meaning of unfamiliar words;"
+  },
+  {
+   "key": "TX:ela:2.3D",
+   "grade": "2",
+   "code": "2.3D",
+   "strand": "Vocabulary (context)",
+   "stem": "Use context to determine the meaning of unfamiliar or ambiguous words.",
+   "description": "identify, use, and explain the meaning of antonyms, synonyms, idioms, and homographs in context."
+  },
+  {
+   "key": "TX:ela:3.3B",
+   "grade": "3",
+   "code": "3.3B",
+   "strand": "Vocabulary (context)",
+   "stem": "Use context to determine the meaning of unfamiliar or ambiguous words.",
+   "description": "use context within and beyond a sentence to determine the meaning of unfamiliar words and multiple-meaning words;"
+  },
+  {
+   "key": "TX:ela:4.3B",
+   "grade": "4",
+   "code": "4.3B",
+   "strand": "Vocabulary (context)",
+   "stem": "Use context to determine the meaning of unfamiliar or ambiguous words.",
+   "description": "use context within and beyond a sentence to determine the relevant meaning of unfamiliar words or multiple-meaning words;"
+  },
+  {
+   "key": "TX:ela:5.3B",
+   "grade": "5",
+   "code": "5.3B",
+   "strand": "Vocabulary (context)",
+   "stem": "Use context to determine the meaning of unfamiliar or ambiguous words.",
+   "description": "use context within and beyond a sentence to determine the relevant meaning of unfamiliar words or multiple-meaning words;"
+  },
+  {
+   "key": "TX:ela:6.2B",
+   "grade": "6",
+   "code": "6.2B",
+   "strand": "Vocabulary (context)",
+   "stem": "Use context to determine the meaning of unfamiliar or ambiguous words.",
+   "description": "use context such as definition, analogy, and examples to clarify the meaning of words; and"
+  },
+  {
+   "key": "TX:ela:7.2B",
+   "grade": "7",
+   "code": "7.2B",
+   "strand": "Vocabulary (context)",
+   "stem": "Use context to determine the meaning of unfamiliar or ambiguous words.",
+   "description": "use context such as contrast or cause and effect to clarify the meaning of words; and"
+  },
+  {
+   "key": "TX:ela:8.2B",
+   "grade": "8",
+   "code": "8.2B",
+   "strand": "Vocabulary (context)",
+   "stem": "Use context to determine the meaning of unfamiliar or ambiguous words.",
+   "description": "use context within or beyond a paragraph to clarify the meaning of unfamiliar or ambiguous words; and"
+  }
+ ]
+}

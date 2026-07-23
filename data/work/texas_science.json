@@ -1,0 +1,1569 @@
+[
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.1",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student asks questions, identifies problems, and plans and safely conducts classroom, laboratory, and field investigations to answer questions, explain phenomena, or design solutions using appropriate tools and models. The student is expected to:",
+    "elements": [
+      "A. ask questions and define problems based on observations or information from text, phenomena, models, or investigations;",
+      "B. use scientific practices to plan and conduct simple descriptive investigations and use engineering practices to design solutions to problems;",
+      "C. identify, describe, and demonstrate safe practices during classroom and field investigations as outlined in Texas Education Agency-approved safety standards;",
+      "D. use tools, including hand lenses, goggles, trays, cups, bowls, sieves or sifters, notebooks, terrariums, aquariums, samples (rocks, sand, soil, loam, gravel, clay, seeds, and plants), windsock, demonstration thermometer, rain gauge, straws, ribbons, non-standard measuring items, blocks or cubes, tuning fork, various flashlights, small paper cups, items that roll, noise makers, hot plate, opaque objects, transparent objects, foil pie pans, foil muffin cups, wax paper, Sun-Moon-Earth model, and plant life cycle model to observe, measure, test, and compare;",
+      "E. collect observations and measurements as evidence;",
+      "F. record and organize data using pictures, numbers, words, symbols, and simple graphs; and",
+      "G. develop and use models to represent phenomena, objects, and processes or design a prototype for a solution to a problem."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.2",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student analyzes and interprets data to derive meaning, identify features and patterns, and discover relationships or correlations to develop evidence-based arguments or evaluate designs. The student is expected to:",
+    "elements": [
+      "A. identify basic advantages and limitations of models such as their size, properties, and materials;",
+      "B. analyze data by identifying significant features and patterns;",
+      "C. use mathematical concepts to compare two objects with common attributes; and",
+      "D. evaluate a design or object using criteria to determine if it works as intended."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.3",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student develops evidence-based explanations and communicates findings, conclusions, and proposed solutions. The student is expected to:",
+    "elements": [
+      "A. develop explanations and propose solutions supported by data and models;",
+      "B. communicate explanations and solutions individually and collaboratively in a variety of settings and formats; and",
+      "C. listen actively to others' explanations to identify important evidence and engage respectfully in scientific discussion."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.4",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student knows the contributions of scientists and recognizes the importance of scientific research and innovation on society. The student is expected to:",
+    "elements": [
+      "A. explain how science or an innovation can help others; and",
+      "B. identify scientists and engineers such as Isaac Newton, Mae Jemison, and Ynes Mexia and explore what different scientists and engineers do."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.5",
+    "strand": "Recurring themes and concepts",
+    "description": "Recurring themes and concepts. The student uses recurring themes and concepts to make connections across disciplines. The student is expected to:",
+    "elements": [
+      "A. identify and use patterns to describe phenomena or design solutions;",
+      "B. investigate and predict cause-and-effect relationships in science;",
+      "C. describe the properties of objects in terms of relative size (scale) and relative quantity;",
+      "D. examine the parts of a whole to define or model a system;",
+      "E. identify forms of energy and properties of matter;",
+      "F. describe the relationship between the structure and function of objects, organisms, and systems; and",
+      "G. describe how factors or conditions can cause objects, organisms, and systems to either change or stay the same."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.6",
+    "strand": "Matter and its properties",
+    "description": "Matter and its properties. The student knows that objects have physical properties that determine how they are described and classified. The student is expected to identify and record observable physical properties of objects, including shape, color, texture, and material, and generate ways to classify objects."
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.7",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student knows that forces cause changes in motion and position in everyday life. The student is expected to describe and predict how a magnet interacts with various materials and how magnets can be used to push or pull."
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.8",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student knows that energy is everywhere and can be observed in everyday life. The student is expected to:",
+    "elements": [
+      "A. communicate the idea that objects can only be seen when a light source is present and compare the effects of different amounts of light on the appearance of objects; and",
+      "B. demonstrate and explain that light travels through some objects and is blocked by other objects, creating shadows."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.9",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student knows that there are recognizable patterns in the natural world and among objects in the sky. The student is expected to:",
+    "elements": [
+      "A. identify, describe, and predict the patterns of day and night and their observable characteristics; and",
+      "B. observe, describe, and illustrate the Sun, Moon, stars, and objects in the sky such as clouds."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.10",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student knows that the natural world includes earth materials and systems that can be observed. The student is expected to:",
+    "elements": [
+      "A. describe and classify rocks by the observable properties of size, shape, color, and texture;",
+      "B. observe and describe weather changes from day to day and over seasons; and",
+      "C. identify evidence that supports the idea that air is all around us and demonstrate that wind is moving air using items such as a windsock, pinwheel, or ribbon."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.11",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student knows that earth materials are important to everyday life. The student is expected to observe and generate examples of practical uses for rocks, soil, and water."
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.12",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student knows that plants and animals depend on the environment to meet their basic needs for survival. The student is expected to:",
+    "elements": [
+      "A. observe and identify the dependence of plants on air, sunlight, water, nutrients in the soil, and space to grow; and",
+      "B. observe and identify the dependence of animals on air, water, food, space, and shelter."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "K",
+    "code": "K.13",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student knows that organisms resemble their parents and have structures and undergo processes that help them interact and survive within their environments. The student is expected to:",
+    "elements": [
+      "A. identify the structures of plants, including roots, stems, leaves, flowers, and fruits;",
+      "B. identify the different structures that animals have that allow them to interact with their environment such as seeing, hearing, moving, and grasping objects;",
+      "C. identify and record the changes from seed, seedling, plant, flower, and fruit in a simple plant life cycle; and",
+      "D. identify ways that young plants resemble the parent plant."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.1",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student asks questions, identifies problems, and plans and safely conducts classroom, laboratory, and field investigations to answer questions, explain phenomena, or design solutions using appropriate tools and models. The student is expected to:",
+    "elements": [
+      "A. ask questions and define problems based on observations or information from text, phenomena, models, or investigations;",
+      "B. use scientific practices to plan and conduct simple descriptive investigations and use engineering practices to design solutions to problems;",
+      "C. identify, describe, and demonstrate safe practices during classroom and field investigations as outlined in Texas Education Agency-approved safety standards;",
+      "D. use tools, including hand lenses, goggles, heat-resistant gloves, trays, cups, bowls, beakers, sieves/sifters, tweezers, primary balance, notebooks, terrariums, aquariums, stream tables, soil samples (loam, sand, gravel, rocks, and clay), seeds, plants, windsock, pinwheel, student thermometer, demonstration thermometer, rain gauge, straws, ribbons, non-standard measuring items, flashlights, sandpaper, wax paper, items that are magnetic, non-magnetic items, a variety of magnets, hot plate, aluminum foil, Sun-Moon-Earth model, and plant and animal life cycle models to observe, measure, test, and compare;",
+      "E. collect observations and measurements as evidence;",
+      "F. record and organize data using pictures, numbers, words, symbols, and simple graphs; and",
+      "G. develop and use models to represent phenomena, objects, and processes or design a prototype for a solution to a problem."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.2",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student analyzes and interprets data to derive meaning, identify features and patterns, and discover relationships or correlations to develop evidence-based arguments or evaluate designs. The student is expected to:",
+    "elements": [
+      "A. identify basic advantages and limitations of models such as their size, properties, and materials;",
+      "B. analyze data by identifying significant features and patterns;",
+      "C. use mathematical concepts to compare two objects with common attributes; and",
+      "D. evaluate a design or object using criteria to determine if it works as intended."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.3",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student develops evidence-based explanations and communicates findings, conclusions, and proposed solutions. The student is expected to:",
+    "elements": [
+      "A. develop explanations and propose solutions supported by data and models;",
+      "B. communicate explanations and solutions individually and collaboratively in a variety of settings and formats; and",
+      "C. listen actively to others' explanations to identify important evidence and engage respectfully in scientific discussion."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.4",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student knows the contributions of scientists and recognizes the importance of scientific research and innovation for society. The student is expected to:",
+    "elements": [
+      "A. explain how science or an innovation can help others; and",
+      "B. identify scientists and engineers such as Katherine Johnson, Sally Ride, and Ernest Just and explore what different scientists and engineers do."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.5",
+    "strand": "Recurring themes and concepts",
+    "description": "Recurring themes and concepts. The student uses recurring themes and concepts to make connections across disciplines. The student is expected to:",
+    "elements": [
+      "A. identify and use patterns to describe phenomena or design solutions;",
+      "B. investigate and predict cause-and-effect relationships in science;",
+      "C. describe the properties of objects in terms of relative size (scale) and relative quantity;",
+      "D. examine the parts of a whole to define or model a system;",
+      "E. identify forms of energy and properties of matter;",
+      "F. describe the relationship between structure and function of objects, organisms, and systems; and",
+      "G. describe how factors or conditions can cause objects, organisms, and systems to either change or stay the same."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.6",
+    "strand": "Matter and its properties",
+    "description": "Matter and its properties. The student knows that objects have physical properties that determine how they are described and classified. The student is expected to:",
+    "elements": [
+      "A. classify objects by observable physical properties, including, shape, color, and texture, and attributes such as larger and smaller and heavier and lighter;",
+      "B. explain and predict changes in materials caused by heating and cooling; and",
+      "C. demonstrate and explain that a whole object is a system made of organized parts such as a toy that can be taken apart and put back together."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.7",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student knows that forces cause changes in motion and position in everyday life. The student is expected to:",
+    "elements": [
+      "A. explain how pushes and pulls can start, stop, or change the speed or direction of an object's motion; and",
+      "B. plan and conduct a descriptive investigation that predicts how pushes and pulls can start, stop, or change the speed or direction of an object's motion."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.8",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student knows that energy is everywhere and can be observed in everyday life. The student is expected to:",
+    "elements": [
+      "A. investigate and describe applications of heat in everyday life such as cooking food or using a clothes dryer; and",
+      "B. describe how some changes caused by heat may be reversed such as melting butter and other changes cannot be reversed such as cooking an egg or baking a cake."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.9",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student knows that the natural world has recognizable patterns. The student is expected to describe and predict the patterns of seasons of the year such as order of occurrence and changes in nature."
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.10",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student knows that the natural world includes earth materials that can be observed in systems and processes. The student is expected to:",
+    "elements": [
+      "A. investigate and document the properties of particle size, shape, texture, and color and the components of different types of soils such as topsoil, clay, and sand;",
+      "B. investigate and describe how water can move rock and soil particles from one place to another;",
+      "C. compare the properties of puddles, ponds, streams, rivers, lakes, and oceans, including color, clarity, size, shape, and whether it is freshwater or saltwater; and",
+      "D. describe and record observable characteristics of weather, including hot or cold, clear or cloudy, calm or windy, and rainy or icy, and explain the impact of weather on daily choices."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.11",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student knows that earth materials and products made from these materials are important to everyday life. The student is expected to:",
+    "elements": [
+      "A. identify and describe how plants, animals, and humans use rocks, soil, and water;",
+      "B. explain why water conservation is important; and",
+      "C. describe ways to conserve water such as turning off the faucet when brushing teeth and protect natural sources of water such as keeping trash out of bodies of water."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.12",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student knows that the environment is composed of relationships between living organisms and nonliving components. The student is expected to:",
+    "elements": [
+      "A. classify living and nonliving things based upon whether they have basic needs and produce young;",
+      "B. describe and record examples of interactions and dependence between living and nonliving components in terrariums or aquariums; and",
+      "C. identify and illustrate how living organisms depend on each other through food chains."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "1",
+    "code": "1.13",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student knows that organisms resemble their parents and have structures and undergo processes that help them interact and survive within their environments. The student is expected to:",
+    "elements": [
+      "A. identify the external structures of different animals and compare how those structures help different animals live, move, and meet basic needs for survival;",
+      "B. record observations of and describe basic life cycles of animals, including a bird, a mammal, and a fish; and",
+      "C. compare ways that young animals resemble their parents."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.1",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student asks questions, identifies problems, and plans and safely conducts classroom, laboratory, and field investigations to answer questions, explain phenomena, or design solutions using appropriate tools and models. The student is expected to:",
+    "elements": [
+      "A. ask questions and define problems based on observations or information from text, phenomena, models, or investigations;",
+      "B. use scientific practices to plan and conduct simple descriptive investigations and use engineering practices to design solutions to problems;",
+      "C. identify, describe, and demonstrate safe practices during classroom and field investigations as outlined in Texas Education Agency-approved safety standards;",
+      "D. use tools, including hand lenses, goggles, heat-resistant gloves, trays, cups, bowls, beakers, notebooks, stream tables, soil, sand, gravel, flowering plants, student thermometer, demonstration thermometer, rain gauge, flashlights, ramps, balls, spinning tops, drums, tuning forks, sandpaper, wax paper, items that are flexible, non-flexible items, magnets, hot plate, aluminum foil, Sun-Moon-Earth model, and frog and butterfly life cycle models to observe, measure, test, and compare;",
+      "E. collect observations and measurements as evidence;",
+      "F. record and organize data using pictures, numbers, words, symbols, and simple graphs; and",
+      "G. develop and use models to represent phenomena, objects, and processes or design a prototype for a solution to a problem."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.2",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student analyzes and interprets data to derive meaning, identify features and patterns, and discover relationships or correlations to develop evidence-based arguments or evaluate designs. The student is expected to:",
+    "elements": [
+      "A. identify basic advantages and limitations of models such as their size, properties, and materials;",
+      "B. analyze data by identifying significant features and patterns;",
+      "C. use mathematical concepts to compare two objects with common attributes; and",
+      "D. evaluate a design or object using criteria to determine if it works as intended."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.3",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student develops evidence-based explanations and communicates findings, conclusions, and proposed solutions. The student is expected to:",
+    "elements": [
+      "A. develop explanations and propose solutions supported by data and models;",
+      "B. communicate explanations and solutions individually and collaboratively in a variety of settings and formats; and",
+      "C. listen actively to others' explanations to identify important evidence and engage respectfully in scientific discussion."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.4",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student knows the contributions of scientists and recognizes the importance of scientific research and innovation for society. The student is expected to:",
+    "elements": [
+      "A. explain how science or an innovation can help others; and",
+      "B. identify scientists and engineers such as Alexander Graham Bell, Marie Daly, Mario Molina, and Jane Goodall and explore what different scientists and engineers do."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.5",
+    "strand": "Recurring themes and concepts",
+    "description": "Recurring themes and concepts. The student uses recurring themes and concepts to make connections across disciplines. The student is expected to:",
+    "elements": [
+      "A. identify and use patterns to describe phenomena or design solutions;",
+      "B. investigate and predict cause-and-effect relationships in science;",
+      "C. measure and describe the properties of objects in terms of size and quantity;",
+      "D. examine the parts of a whole to define or model a system;",
+      "E. identify forms of energy and properties of matter;",
+      "F. describe the relationship between structure and function of objects, organisms, and systems; and",
+      "G. describe how factors or conditions can cause objects, organisms, and systems to either change or stay the same."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.6",
+    "strand": "Matter and its properties",
+    "description": "Matter and its properties. The student knows that matter has physical properties that determine how it is described, classified, and used. The student is expected to:",
+    "elements": [
+      "A. classify matter by observable physical properties, including texture, flexibility, and relative temperature, and identify whether a material is a solid or liquid;",
+      "B. conduct a descriptive investigation to explain how physical properties can be changed through processes such as cutting, folding, sanding, melting, or freezing; and",
+      "C. demonstrate that small units such as building blocks can be combined or reassembled to form new objects for different purposes and explain the materials chosen based on their physical properties."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.7",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student knows that forces cause changes in motion and position in everyday life. The student is expected to:",
+    "elements": [
+      "A. explain how objects push on each other and may change shape when they touch or collide; and",
+      "B. plan and conduct a descriptive investigation to demonstrate how the strength of a push and pull changes an object's motion."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.8",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student knows that energy is everywhere and can be observed in everyday life. The student is expected to:",
+    "elements": [
+      "A. demonstrate and explain that sound is made by vibrating matter and that vibrations can be caused by a variety of means, including sound;",
+      "B. explain how different levels of sound are used in everyday life such as a whisper in a classroom or a fire alarm; and",
+      "C. design and build a device using tools and materials that uses sound to solve the problem of communicating over a distance."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.9",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student knows that there are recognizable patterns in the natural world and among objects in the sky. The student is expected to:",
+    "elements": [
+      "A. describe the Sun as a star that provides light and heat and explain that the Moon reflects the Sun's light; and",
+      "B. observe objects in the sky using tools such as a telescope and compare how objects in the sky are more visible and can appear different with a tool than with an unaided eye."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.10",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student knows that the natural world includes earth materials that can be observed in systems and processes. The student is expected to:",
+    "elements": [
+      "A. investigate and describe how wind and water move soil and rock particles across the Earth's surface such as wind blowing sand into dunes on a beach or a river carrying rocks as it flows;",
+      "B. measure, record, and graph weather information, including temperature and precipitation; and",
+      "C. investigate different types of severe weather events such as a hurricane, tornado, or flood and explain that some events are more likely than others in a given region."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.11",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student knows that earth materials and products made from these materials are important to everyday life. The student is expected to:",
+    "elements": [
+      "A. distinguish between natural and manmade resources; and",
+      "B. describe how human impact can be limited by making choices to conserve and properly dispose of materials such as reducing use of, reusing, or recycling paper, plastic, and metal."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.12",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student knows that living organisms have basic needs that must be met through interactions within their environment. The student is expected to:",
+    "elements": [
+      "A. describe how the physical characteristics of environments, including the amount of rainfall, support plants and animals within an ecosystem;",
+      "B. create and describe food chains identifying producers and consumers to demonstrate how animals depend on other living things; and",
+      "C. explain and demonstrate how some plants depend on other living things, wind, or water for pollination and to move their seeds around."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "2",
+    "code": "2.13",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student knows that organisms have structures and undergo processes that help them interact and survive within their environments. The student is expected to:",
+    "elements": [
+      "A. identify the roots, stems, leaves, flowers, fruits, and seeds of plants and compare how those structures help different plants meet their basic needs for survival;",
+      "B. record and compare how the structures and behaviors of animals help them find and take in food, water, and air;",
+      "C. record and compare how being part of a group helps animals obtain food, defend themselves, and cope with changes; and",
+      "D. investigate and describe some of the unique life cycles of animals where young animals do not resemble their parents, including butterflies and frogs."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.1",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student asks questions, identifies problems, and plans and safely conducts classroom, laboratory, and field investigations to answer questions, explain phenomena, or design solutions using appropriate tools and models. The student is expected to:",
+    "elements": [
+      "A. ask questions and define problems based on observations or information from text, phenomena, models, or investigations;",
+      "B. use scientific practices to plan and conduct descriptive investigations and use engineering practices to design solutions to problems;",
+      "C. demonstrate safe practices and the use of safety equipment during classroom and field investigations as outlined in Texas Education Agency-approved safety standards;",
+      "D. use tools, including hand lenses; metric rulers; Celsius thermometers; wind vanes; rain gauges; graduated cylinders; beakers; digital scales; hot plates; meter sticks; magnets; notebooks; Sun, Earth, Moon system models; timing devices; materials to support observation of habitats of organisms such as terrariums, aquariums, and collecting nets; and materials to support digital data collection such as computers, tablets, and cameras, to observe, measure, test, and analyze information;",
+      "E. collect observations and measurements as evidence;",
+      "F. construct appropriate graphic organizers to collect data, including tables, bar graphs, line graphs, tree maps, concept maps, Venn diagrams, flow charts or sequence maps, and input-output tables that show cause and effect; and",
+      "G. develop and use models to represent phenomena, objects, and processes or design a prototype for a solution to a problem."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.2",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student analyzes and interprets data to derive meaning, identify features and patterns, and discover relationships or correlations to develop evidence-based arguments or evaluate designs. The student is expected to:",
+    "elements": [
+      "A. identify advantages and limitations of models such as their size, scale, properties, and materials;",
+      "B. analyze data by identifying any significant features, patterns, or sources of error;",
+      "C. use mathematical calculations to compare patterns and relationships; and",
+      "D. evaluate a design or object using criteria."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.3",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student develops evidence-based explanations and communicates findings, conclusions, and proposed solutions. The student is expected to:",
+    "elements": [
+      "A. develop explanations and propose solutions supported by data and models;",
+      "B. communicate explanations and solutions individually and collaboratively in a variety of settings and formats; and",
+      "C. listen actively to others' explanations to identify relevant evidence and engage respectfully in scientific discussion."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.4",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student knows the contributions of scientists and recognizes the importance of scientific research and innovation for society. The student is expected to:",
+    "elements": [
+      "A. explain how scientific discoveries and innovative solutions to problems impact science and society; and",
+      "B. research and explore resources such as museums, libraries, professional organizations, private companies, online platforms, and mentors employed in a science, technology, engineering, and mathematics (STEM) field to investigate STEM careers."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.5",
+    "strand": "Recurring themes and concepts",
+    "description": "Recurring themes and concepts. The student understands that recurring themes and concepts provide a framework for making connections across disciplines. The student is expected to:",
+    "elements": [
+      "A. identify and use patterns to explain scientific phenomena or to design solutions;",
+      "B. identify and investigate cause-and-effect relationships to explain scientific phenomena or analyze problems;",
+      "C. use scale, proportion, and quantity to describe, compare, or model different systems;",
+      "D. examine and model the parts of a system and their interdependence in the function of the system;",
+      "E. investigate the flow of energy and cycling of matter through systems;",
+      "F. explain the relationship between the structure and function of objects, organisms, and systems; and",
+      "G. explain how factors or conditions impact stability and change in objects, organisms, and systems."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.6",
+    "strand": "Matter and energy",
+    "description": "Matter and energy. The student knows that matter has measurable physical properties that determine how matter is identified, classified, changed, and used. The student is expected to:",
+    "elements": [
+      "A. measure, test, and record physical properties of matter, including temperature, mass, magnetism, and the ability to sink or float in water;",
+      "B. describe and classify samples of matter as solids, liquids, and gases and demonstrate that solids have a definite shape and that liquids and gases take the shape of their container;",
+      "C. predict, observe, and record changes in the state of matter caused by heating or cooling in a variety of substances such as ice becoming liquid water, condensation forming on the outside of a glass, or liquid water being heated to the point of becoming water vapor (gas); and",
+      "D. demonstrate that materials can be combined based on their physical properties to create or modify objects such as building a tower or adding clay to sand to make a stronger brick and justify the selection of materials based on their physical properties."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.7",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student knows the nature of forces and the patterns of their interactions. The student is expected to:",
+    "elements": [
+      "A. demonstrate and describe forces acting on an object in contact or at a distance, including magnetism, gravity, and pushes and pulls; and",
+      "B. plan and conduct a descriptive investigation to demonstrate and explain how position and motion can be changed by pushing and pulling objects such as swings, balls, and wagons."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.8",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student knows that energy is everywhere and can be observed in cycles, patterns, and systems. The student is expected to:",
+    "elements": [
+      "A. identify everyday examples of energy, including light, sound, thermal, and mechanical; and",
+      "B. plan and conduct investigations that demonstrate how the speed of an object is related to its mechanical energy."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.9",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student knows there are recognizable objects and patterns in Earth's solar system. The student is expected to:",
+    "elements": [
+      "A. construct models and explain the orbits of the Sun, Earth, and Moon in relation to each other; and",
+      "B. identify the order of the planets in Earth's solar system in relation to the Sun."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.10",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student knows that there are recognizable processes that change Earth over time. The student is expected to:",
+    "elements": [
+      "A. compare and describe day-to-day weather in different locations at the same time, including air temperature, wind direction, and precipitation;",
+      "B. investigate and explain how soils such as sand and clay are formed by weathering of rock and by decomposition of plant and animal remains; and",
+      "C. model and describe rapid changes in Earth's surface such as volcanic eruptions, earthquakes, and landslides."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.11",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student understands how natural resources are important and can be managed. The student is expected to:",
+    "elements": [
+      "A. explore and explain how humans use natural resources such as in construction, in agriculture, in transportation, and to make products;",
+      "B. explain why the conservation of natural resources is important; and",
+      "C. identify ways to conserve natural resources through reducing, reusing, or recycling."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.12",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student describes patterns, cycles, systems, and relationships within environments. The student is expected to:",
+    "elements": [
+      "A. explain how temperature and precipitation affect animal growth and behavior through migration and hibernation and plant responses through dormancy;",
+      "B. identify and describe the flow of energy in a food chain and predict how changes in a food chain such as removal of frogs from a pond or bees from a field affect the ecosystem;",
+      "C. describe how natural changes to the environment such as floods and droughts cause some organisms to thrive and others to perish or move to new locations; and",
+      "D. identify fossils as evidence of past living organisms and environments, including common Texas fossils."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "3",
+    "code": "3.13",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student knows that organisms undergo similar life processes and have structures that function to help them survive within their environments. The student is expected to:",
+    "elements": [
+      "A. explore and explain how external structures and functions of animals such as the neck of a giraffe or webbed feet on a duck enable them to survive in their environment; and",
+      "B. explore, illustrate, and compare life cycles in organisms such as beetles, crickets, radishes, or lima beans."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.1",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student asks questions, identifies problems, and plans and safely conducts classroom, laboratory, and field investigations to answer questions, explain phenomena, or design solutions using appropriate tools and models. The student is expected to:",
+    "elements": [
+      "A. ask questions and define problems based on observations or information from text, phenomena, models, or investigations;",
+      "B. use scientific practices to plan and conduct descriptive investigations and use engineering practices to design solutions to problems;",
+      "C. demonstrate safe practices and the use of safety equipment during classroom and field investigations as outlined in Texas Education Agency-approved safety standards;",
+      "D. use tools, including hand lenses; metric rulers; Celsius thermometers; calculators; laser pointers; mirrors; digital scales; balances; graduated cylinders; beakers; hot plates; meter sticks; magnets; notebooks; timing devices; sieves; materials for building circuits; materials to support observation of habitats of organisms such as terrariums, aquariums, and collecting nets; and materials to support digital data collection such as computers, tablets, and cameras, to observe, measure, test, and analyze information;",
+      "E. collect observations and measurements as evidence;",
+      "F. construct appropriate graphic organizers used to collect data, including tables, bar graphs, line graphs, tree maps, concept maps, Venn diagrams, flow charts or sequence maps, and input-output tables that show cause and effect; and",
+      "G. develop and use models to represent phenomena, objects, and processes or design a prototype for a solution to a problem."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.2",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student analyzes and interprets data to derive meaning, identify features and patterns, and discover relationships or correlations to develop evidence-based arguments or evaluate designs. The student is expected to:",
+    "elements": [
+      "A. identify advantages and limitations of models such as their size, scale, properties, and materials;",
+      "B. analyze data by identifying any significant features, patterns, or sources of error;",
+      "C. use mathematical calculations to compare patterns and relationships; and",
+      "D. evaluate a design or object using criteria."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.3",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student develops evidence-based explanations and communicates findings, conclusions, and proposed solutions. The student is expected to:",
+    "elements": [
+      "A. develop explanations and propose solutions supported by data and models;",
+      "B. communicate explanations and solutions individually and collaboratively in a variety of settings and formats; and",
+      "C. listen actively to others' explanations to identify relevant evidence and engage respectfully in scientific discussion."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.4",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student knows the contributions of scientists and recognizes the importance of scientific research and innovation for society. The student is expected to:",
+    "elements": [
+      "A. explain how scientific discoveries and innovative solutions to problems impact science and society; and",
+      "B. research and explore resources such as museums, libraries, professional organizations, private companies, online platforms, and mentors employed in a science, technology, engineering, and mathematics (STEM) field to investigate STEM careers."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.5",
+    "strand": "Recurring themes and concepts",
+    "description": "Recurring themes and concepts. The student understands that recurring themes and concepts provide a framework for making connections across disciplines. The student is expected to:",
+    "elements": [
+      "A. identify and use patterns to explain scientific phenomena or to design solutions;",
+      "B. identify and investigate cause-and-effect relationships to explain scientific phenomena or analyze problems;",
+      "C. use scale, proportion, and quantity to describe, compare, or model different systems;",
+      "D. examine and model the parts of a system and their interdependence in the function of the system;",
+      "E. investigate how energy flows and matter cycles through systems and how matter is conserved;",
+      "F. explain the relationship between the structure and function of objects, organisms, and systems; and",
+      "G. explain how factors or conditions impact stability and change in objects, organisms, and systems."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.6",
+    "strand": "Matter and energy",
+    "description": "Matter and energy. The student knows that matter has measurable physical properties that determine how matter is identified, classified, changed, and used. The student is expected to:",
+    "elements": [
+      "A. classify and describe matter using observable physical properties, including temperature, mass, magnetism, relative density (the ability to sink or float in water), and physical state (solid, liquid, gas);",
+      "B. investigate and compare a variety of mixtures, including solutions that are composed of liquids in liquids and solids in liquids; and",
+      "C. demonstrate that matter is conserved when mixtures such as soil and water or oil and water are formed."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.7",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student knows the nature of forces and the patterns of their interactions. The student is expected to plan and conduct descriptive investigations to explore the patterns of forces such as gravity, friction, or magnetism in contact or at a distance on an object."
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.8",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student knows that energy is everywhere and can be observed in cycles, patterns, and systems. The student is expected to:",
+    "elements": [
+      "A. investigate and identify the transfer of energy by objects in motion, waves in water, and sound;",
+      "B. identify conductors and insulators of thermal and electrical energy; and",
+      "C. demonstrate and describe how electrical energy travels in a closed path that can produce light and thermal energy."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.9",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student recognizes patterns among the Sun, Earth, and Moon system and their effects. The student is expected to:",
+    "elements": [
+      "A. collect and analyze data to identify sequences and predict patterns of change in seasons such as change in temperature and length of daylight; and",
+      "B. collect and analyze data to identify sequences and predict patterns of change in the observable appearance of the Moon from Earth."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.10",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student knows that there are processes on Earth that create patterns of change. The student is expected to:",
+    "elements": [
+      "A. describe and illustrate the continuous movement of water above and on the surface of Earth through the water cycle and explain the role of the Sun as a major source of energy in this process;",
+      "B. model and describe slow changes to Earth's surface caused by weathering, erosion, and deposition from water, wind, and ice; and",
+      "C. differentiate between weather and climate."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.11",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student understands how natural resources are important and can be managed. The student is expected to:",
+    "elements": [
+      "A. identify and explain advantages and disadvantages of using Earth's renewable and nonrenewable natural resources such as wind, water, sunlight, plants, animals, coal, oil, and natural gas;",
+      "B. explain the critical role of energy resources to modern life and how conservation, disposal, and recycling of natural resources impact the environment; and",
+      "C. determine the physical properties of rocks that allow Earth's natural resources to be stored there."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.12",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student describes patterns, cycles, systems, and relationships within environments. The student is expected to:",
+    "elements": [
+      "A. investigate and explain how most producers can make their own food using sunlight, water, and carbon dioxide through the cycling of matter;",
+      "B. describe the cycling of matter and flow of energy through food webs, including the roles of the Sun, producers, consumers, and decomposers; and",
+      "C. identify and describe past environments based on fossil evidence, including common Texas fossils."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "4",
+    "code": "4.13",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student knows that organisms undergo similar life processes and have structures that function to help them survive within their environments. The student is expected to:",
+    "elements": [
+      "A. explore and explain how structures and functions of plants such as waxy leaves and deep roots enable them to survive in their environment; and",
+      "B. differentiate between inherited and acquired physical traits of organisms."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.1",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student asks questions, identifies problems, and plans and safely conducts classroom, laboratory, and field investigations to answer questions, explain phenomena, or design solutions using appropriate tools and models. The student is expected to:",
+    "elements": [
+      "A. ask questions and define problems based on observations or information from text, phenomena, models, or investigations;",
+      "B. use scientific practices to plan and conduct descriptive and simple experimental investigations and use engineering practices to design solutions to problems;",
+      "C. demonstrate safe practices and the use of safety equipment during classroom and field investigations as outlined in Texas Education Agency-approved safety standards;",
+      "D. use tools, including calculators, microscopes, hand lenses, metric rulers, Celsius thermometers, prisms, concave and convex lenses, laser pointers, mirrors, digital scales, balances, spring scales, graduated cylinders, beakers, hot plates, meter sticks, magnets, collecting nets, notebooks, timing devices, materials for building circuits, materials to support observations of habitats or organisms such as terrariums and aquariums, and materials to support digital data collection such as computers, tablets, and cameras to observe, measure, test, and analyze information;",
+      "E. collect observations and measurements as evidence;",
+      "F. construct appropriate graphic organizers used to collect data, including tables, bar graphs, line graphs, tree maps, concept maps, Venn diagrams, flow charts or sequence maps, and input-output tables that show cause and effect; and",
+      "G. develop and use models to represent phenomena, objects, and processes or design a prototype for a solution to a problem."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.2",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student analyzes and interprets data to derive meaning, identify features and patterns, and discover relationships or correlations to develop evidence-based arguments or evaluate designs. The student is expected to:",
+    "elements": [
+      "A. identify advantages and limitations of models such as their size, scale, properties, and materials;",
+      "B. analyze data by identifying any significant features, patterns, or sources of error;",
+      "C. use mathematical calculations to compare patterns and relationships; and",
+      "D. evaluate experimental and engineering designs."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.3",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student develops evidence-based explanations and communicates findings, conclusions, and proposed solutions. The student is expected to:",
+    "elements": [
+      "A. develop explanations and propose solutions supported by data and models;",
+      "B. communicate explanations and solutions individually and collaboratively in a variety of settings and formats; and",
+      "C. listen actively to others' explanations to identify relevant evidence and engage respectfully in scientific discussion."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.4",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student knows the contributions of scientists and recognizes the importance of scientific research and innovation for society. The student is expected to:",
+    "elements": [
+      "A. explain how scientific discoveries and innovative solutions to problems impact science and society; and",
+      "B. research and explore resources such as museums, libraries, professional organizations, private companies, online platforms, and mentors employed in a science, technology, engineering, and mathematics (STEM) field to investigate STEM careers."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.5",
+    "strand": "Recurring themes and concepts",
+    "description": "Recurring themes and concepts. The student understands that recurring themes and concepts provide a framework for making connections across disciplines. The student is expected to:",
+    "elements": [
+      "A. identify and use patterns to explain scientific phenomena or to design solutions;",
+      "B. identify and investigate cause-and-effect relationships to explain scientific phenomena or analyze problems;",
+      "C. use scale, proportion, and quantity to describe, compare, or model different systems;",
+      "D. examine and model the parts of a system and their interdependence in the function of the system;",
+      "E. investigate how energy flows and matter cycles through systems and how matter is conserved;",
+      "F. explain the relationship between the structure and function of objects, organisms, and systems; and",
+      "G. explain how factors or conditions impact stability and change in objects, organisms, and systems."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.6",
+    "strand": "Matter and energy",
+    "description": "Matter and energy. The student knows that matter has measurable physical properties that determine how matter is identified, classified, changed, and used. The student is expected to:",
+    "elements": [
+      "A. compare and contrast matter based on measurable, testable, or observable physical properties, including mass, magnetism, relative density (sinking and floating using water as a reference point), physical state (solid, liquid, gas), volume, solubility in water, and the ability to conduct or insulate thermal energy and electric energy;",
+      "B. demonstrate and explain that some mixtures maintain physical properties of their substances such as iron filings and sand or sand and water;",
+      "C. compare the properties of substances before and after they are combined into a solution and demonstrate that matter is conserved in solutions; and",
+      "D. illustrate how matter is made up of particles that are too small to be seen such as air in a balloon."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.7",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student knows the nature of forces and the patterns of their interactions. The student is expected to:",
+    "elements": [
+      "A. investigate and explain how equal and unequal forces acting on an object cause patterns of motion and transfer of energy; and",
+      "B. design a simple experimental investigation that tests the effect of force on an object in a system such as a car on a ramp or a balloon rocket on a string."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.8",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student knows that energy is everywhere and can be observed in cycles, patterns, and systems. The student is expected to:",
+    "elements": [
+      "A. investigate and describe the transformation of energy in systems such as energy in a flashlight battery that changes from chemical energy to electrical energy to light energy;",
+      "B. demonstrate that electrical energy in complete circuits can be transformed into motion, light, sound, or thermal energy and identify the requirements for a functioning electrical circuit; and",
+      "C. demonstrate and explain how light travels in a straight line and can be reflected, refracted, or absorbed."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.9",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student recognizes patterns among the Sun, Earth, and Moon system and their effects. The student is expected to demonstrate that Earth rotates on its axis once approximately every 24 hours and explain how that causes the day/night cycle and the appearance of the Sun moving across the sky, resulting in changes in shadow positions and shapes."
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.10",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student knows that there are recognizable patterns and processes on Earth. The student is expected to:",
+    "elements": [
+      "A. explain how the Sun and the ocean interact in the water cycle and affect weather;",
+      "B. model and describe the processes that led to the formation of sedimentary rocks and fossil fuels; and",
+      "C. model and identify how changes to Earth's surface by wind, water, or ice result in the formation of landforms, including deltas, canyons, and sand dunes."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.11",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student understands how natural resources are important and can be managed. The student is expected to design and explain solutions such as conservation, recycling, or proper disposal to minimize environmental impact of the use of natural resources."
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.12",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student describes patterns, cycles, systems, and relationships within environments. The student is expected to:",
+    "elements": [
+      "A. observe and describe how a variety of organisms survive by interacting with biotic and abiotic factors in a healthy ecosystem;",
+      "B. predict how changes in the ecosystem affect the cycling of matter and flow of energy in a food web; and",
+      "C. describe a healthy ecosystem and how human activities can be beneficial or harmful to an ecosystem."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "5",
+    "code": "5.13",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student knows that organisms undergo similar life processes and have structures and behaviors that help them survive within their environments. The student is expected to:",
+    "elements": [
+      "A. analyze the structures and functions of different species to identify how organisms survive in the same environment; and",
+      "B. explain how instinctual behavioral traits such as turtle hatchlings returning to the sea and learned behavioral traits such as orcas hunting in packs increase chances of survival."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.1",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student, for at least 40% of instructional time, asks questions, identifies problems, and plans and safely conducts classroom, laboratory, and field investigations to answer questions, explain phenomena, or design solutions using appropriate tools and models. The student is expected to:",
+    "elements": [
+      "A. ask questions and define problems based on observations or information from text, phenomena, models, or investigations;",
+      "B. use scientific practices to plan and conduct descriptive, comparative, and experimental investigations and use engineering practices to design solutions to problems;",
+      "C. use appropriate safety equipment and practices during laboratory, classroom, and field investigations as outlined in Texas Education Agency-approved safety standards;",
+      "D. use appropriate tools such as graduated cylinders, metric rulers, periodic tables, balances, scales, thermometers, temperature probes, laboratory ware, timing devices, pH indicators, hot plates, models, microscopes, slides, life science models, petri dishes, dissecting kits, magnets, spring scales or force sensors, tools that model wave behavior, satellite images, hand lenses, and lab notebooks or journals;",
+      "E. collect quantitative data using the International System of Units (SI) and qualitative data as evidence;",
+      "F. construct appropriate tables, graphs, maps, and charts using repeated trials and means to organize data;",
+      "G. develop and use models to represent phenomena, systems, processes, or solutions to engineering problems; and",
+      "H. distinguish between scientific hypotheses, theories, and laws."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.2",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student analyzes and interprets data to derive meaning, identify features and patterns, and discover relationships or correlations to develop evidence-based arguments or evaluate designs. The student is expected to:",
+    "elements": [
+      "A. identify advantages and limitations of models such as their size, scale, properties, and materials;",
+      "B. analyze data by identifying any significant descriptive statistical features, patterns, sources of error, or limitations;",
+      "C. use mathematical calculations to assess quantitative relationships in data; and",
+      "D. evaluate experimental and engineering designs."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.3",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student develops evidence-based explanations and communicates findings, conclusions, and proposed solutions. The student is expected to:",
+    "elements": [
+      "A. develop explanations and propose solutions supported by data and models and consistent with scientific ideas, principles, and theories;",
+      "B. communicate explanations and solutions individually and collaboratively in a variety of settings and formats; and",
+      "C. engage respectfully in scientific argumentation using applied scientific explanations and empirical evidence."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.4",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student knows the contributions of scientists and recognizes the importance of scientific research and innovation on society. The student is expected to:",
+    "elements": [
+      "A. relate the impact of past and current research on scientific thought and society, including the process of science, cost-benefit analysis, and contributions of diverse scientists as related to the content;",
+      "B. make informed decisions by evaluating evidence from multiple appropriate sources to assess the credibility, accuracy, cost-effectiveness, and methods used; and",
+      "C. research and explore resources such as museums, libraries, professional organizations, private companies, online platforms, and mentors employed in a science, technology, engineering, and mathematics (STEM) field to investigate STEM careers."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.5",
+    "strand": "Recurring themes and concepts",
+    "description": "Recurring themes and concepts. The student understands that recurring themes and concepts provide a framework for making connections across disciplines. The student is expected to:",
+    "elements": [
+      "A. identify and apply patterns to understand and connect scientific phenomena or to design solutions;",
+      "B. identify and investigate cause-and-effect relationships to explain scientific phenomena or analyze problems;",
+      "C. analyze how differences in scale, proportion, or quantity affect a system's structure or performance;",
+      "D. examine and model the parts of a system and their interdependence in the function of the system;",
+      "E. analyze and explain how energy flows and matter cycles through systems and how energy and matter are conserved through a variety of systems;",
+      "F. analyze and explain the complementary relationship between the structure and function of objects, organisms, and systems; and",
+      "G. analyze and explain how factors or conditions impact stability and change in objects, organisms, and systems."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.6",
+    "strand": "Matter and energy",
+    "description": "Matter and energy. The student knows that matter is made of atoms, can be classified according to its properties, and can undergo changes. The student is expected to:",
+    "elements": [
+      "A. compare solids, liquids, and gases in terms of their structure, shape, volume, and kinetic energy of atoms and molecules;",
+      "B. investigate the physical properties of matter to distinguish between pure substances, homogeneous mixtures (solutions), and heterogeneous mixtures;",
+      "C. identify elements on the periodic table as metals, nonmetals, metalloids, and rare Earth elements based on their physical properties and importance to modern life;",
+      "D. compare the density of substances relative to various fluids; and",
+      "E. identify the formation of a new substance by using the evidence of a possible chemical change, including production of a gas, change in thermal energy, production of a precipitate, and color change."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.7",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student knows the nature of forces and their role in systems that experience stability or change. The student is expected to:",
+    "elements": [
+      "A. identify and explain how forces act on objects, including gravity, friction, magnetism, applied forces, and normal forces, using real-world applications;",
+      "B. calculate the net force on an object in a horizontal or vertical direction using diagrams and determine if the forces are balanced or unbalanced; and",
+      "C. identify simultaneous force pairs that are equal in magnitude and opposite in direction that result from the interactions between objects using Newton's Third Law of Motion."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.8",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student knows that the total energy in systems is conserved through energy transfers and transformations. The student is expected to:",
+    "elements": [
+      "A. compare and contrast gravitational, elastic, and chemical potential energies with kinetic energy;",
+      "B. describe how energy is conserved through transfers and transformations in systems such as electrical circuits, food webs, amusement park rides, or photosynthesis; and",
+      "C. explain how energy is transferred through transverse and longitudinal waves."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.9",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student models the cyclical movements of the Sun, Earth, and Moon and describes their effects. The student is expected to:",
+    "elements": [
+      "A. model and illustrate how the tilted Earth revolves around the Sun, causing changes in seasons; and",
+      "B. describe and predict how the positions of the Earth, Sun, and Moon cause daily, spring, and neap cycles of ocean tides due to gravitational forces."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.10",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student understands the rock cycle and the structure of Earth. The student is expected to:",
+    "elements": [
+      "A. differentiate between the biosphere, hydrosphere, atmosphere, and geosphere and identify components of each system;",
+      "B. model and describe the layers of Earth, including the inner core, outer core, mantle, and crust; and",
+      "C. describe how metamorphic, igneous, and sedimentary rocks form and change through geologic processes in the rock cycle."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.11",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student understands how resources are managed. The student is expected to:",
+    "elements": [
+      "A. research and describe why resource management is important in reducing global energy poverty, malnutrition, and air and water pollution; and",
+      "B. explain how conservation, increased efficiency, and technology can help manage air, water, soil, and energy resources."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.12",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student knows that interdependence occurs between living systems and the environment. The student is expected to:",
+    "elements": [
+      "A. investigate how organisms and populations in an ecosystem depend on and may compete for biotic factors such as food and abiotic factors such as availability of light and water, range of temperatures, or soil composition;",
+      "B. describe and give examples of predatory, competitive, and symbiotic relationships between organisms, including mutualism, parasitism, and commensalism; and",
+      "C. describe the hierarchical organization of organism, population, and community within an ecosystem."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "6",
+    "code": "6.13",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student knows that organisms have an organizational structure and variations can influence survival of populations. The student is expected to:",
+    "elements": [
+      "A. describe the historical development of cell theory and explain how organisms are composed of one or more cells, which come from pre-existing cells and are the basic unit of structure and function;",
+      "B. identify and compare the basic characteristics of organisms, including prokaryotic and eukaryotic, unicellular and multicellular, and autotrophic and heterotrophic; and",
+      "C. describe how variations within a population can be an advantage or disadvantage to the survival of a population as environments change."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.1",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student, for at least 40% of instructional time, asks questions, identifies problems, and plans and safely conducts classroom, laboratory, and field investigations to answer questions, explain phenomena, or design solutions using appropriate tools and models. The student is expected to:",
+    "elements": [
+      "A. ask questions and define problems based on observations or information from text, phenomena, models, or investigations;",
+      "B. use scientific practices to plan and conduct descriptive, comparative, and experimental investigations and use engineering practices to design solutions to problems;",
+      "C. use appropriate safety equipment and practices during laboratory, classroom, and field investigations as outlined in Texas Education Agency-approved safety standards;",
+      "D. use appropriate tools such as graduated cylinders, metric rulers, periodic tables, balances, scales, thermometers, temperature probes, laboratory ware, timing devices, pH indicators, hot plates, models, microscopes, slides, life science models, petri dishes, dissecting kits, magnets, spring scales or force sensors, tools that model wave behavior, satellite images, hand lenses, and lab notebooks or journals;",
+      "E. collect quantitative data using the International System of Units (SI) and qualitative data as evidence;",
+      "F. construct appropriate tables, graphs, maps, and charts using repeated trials and means to organize data;",
+      "G. develop and use models to represent phenomena, systems, processes, or solutions to engineering problems; and",
+      "H. distinguish between scientific hypotheses, theories, and laws."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.2",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student analyzes and interprets data to derive meaning, identify features and patterns, and discover relationships or correlations to develop evidence-based arguments or evaluate designs. The student is expected to:",
+    "elements": [
+      "A. identify advantages and limitations of models such as their size, scale, properties, and materials;",
+      "B. analyze data by identifying any significant descriptive statistical features, patterns, sources of error, or limitations;",
+      "C. use mathematical calculations to assess quantitative relationships in data; and",
+      "D. evaluate experimental and engineering designs."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.3",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student develops evidence-based explanations and communicates findings, conclusions, and proposed solutions. The student is expected to:",
+    "elements": [
+      "A. develop explanations and propose solutions supported by data and models and consistent with scientific ideas, principles, and theories;",
+      "B. communicate explanations and solutions individually and collaboratively in a variety of settings and formats; and",
+      "C. engage respectfully in scientific argumentation using applied scientific explanations and empirical evidence."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.4",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student knows the contributions of scientists and recognizes the importance of scientific research and innovation on society. The student is expected to:",
+    "elements": [
+      "A. relate the impact of past and current research on scientific thought and society, including the process of science, cost-benefit analysis, and contributions of diverse scientists as related to the content;",
+      "B. make informed decisions by evaluating evidence from multiple appropriate sources to assess the credibility, accuracy, cost-effectiveness, and methods used; and",
+      "C. research and explore resources such as museums, libraries, professional organizations, private companies, online platforms, and mentors employed in a science, technology, engineering, and mathematics (STEM) field to investigate STEM careers."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.5",
+    "strand": "Recurring themes and concepts",
+    "description": "Recurring themes and concepts. The student understands that recurring themes and concepts provide a framework for making connections across disciplines. The student is expected to:",
+    "elements": [
+      "A. identify and apply patterns to understand and connect scientific phenomena or to design solutions;",
+      "B. identify and investigate cause-and-effect relationships to explain scientific phenomena or analyze problems;",
+      "C. analyze how differences in scale, proportion, or quantity affect a system's structure or performance;",
+      "D. examine and model the parts of a system and their interdependence in the function of the system;",
+      "E. analyze and explain how energy flows and matter cycles through systems and how energy and matter are conserved through a variety of systems;",
+      "F. analyze and explain the complementary relationship between structure and function of objects, organisms, and systems; and",
+      "G. analyze and explain how factors or conditions impact stability and change in objects, organisms, and systems."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.6",
+    "strand": "Matter and energy",
+    "description": "Matter and energy. The student distinguishes between elements and compounds, classifies changes in matter, and understands the properties of solutions. The student is expected to:",
+    "elements": [
+      "A. compare and contrast elements and compounds in terms of atoms and molecules, chemical symbols, and chemical formulas;",
+      "B. use the periodic table to identify the atoms and the number of each kind within a chemical formula;",
+      "C. distinguish between physical and chemical changes in matter;",
+      "D. describe aqueous solutions in terms of solute and solvent, concentration, and dilution; and",
+      "E. investigate and model how temperature, surface area, and agitation affect the rate of dissolution of solid solutes in aqueous solutions."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.7",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student describes the cause-and-effect relationship between force and motion. The student is expected to:",
+    "elements": [
+      "A. calculate average speed using distance and time measurements from investigations;",
+      "B. distinguish between speed and velocity in linear motion in terms of distance, displacement, and direction;",
+      "C. measure, record, and interpret an object's motion using distance-time graphs; and",
+      "D. analyze the effect of balanced and unbalanced forces on the state of motion of an object using Newton's First Law of Motion."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.8",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student understands the behavior of thermal energy as it flows into and out of systems. The student is expected to:",
+    "elements": [
+      "A. investigate methods of thermal energy transfer into and out of systems, including conduction, convection, and radiation;",
+      "B. investigate how thermal energy moves in a predictable pattern from warmer to cooler until all substances within the system reach thermal equilibrium; and",
+      "C. explain the relationship between temperature and the kinetic energy of the particles within a substance."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.9",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student understands the patterns of movement, organization, and characteristics of components of our solar system. The student is expected to:",
+    "elements": [
+      "A. describe the physical properties, locations, and movements of the Sun, planets, moons, meteors, asteroids, comets, Kuiper belt, and Oort cloud;",
+      "B. describe how gravity governs motion within Earth's solar system; and",
+      "C. analyze the characteristics of Earth that allow life to exist such as the proximity of the Sun, presence of water, and composition of the atmosphere."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.10",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student understands the causes and effects of plate tectonics. The student is expected to:",
+    "elements": [
+      "A. describe the evidence that supports that Earth has changed over time, including fossil evidence, plate tectonics, and superposition; and",
+      "B. describe how plate tectonics causes ocean basin formation, earthquakes, mountain building, and volcanic eruptions, including supervolcanoes and hot spots."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.11",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student understands how human activity can impact the hydrosphere. The student is expected to:",
+    "elements": [
+      "A. analyze the beneficial and harmful influences of human activity on groundwater and surface water in a watershed; and",
+      "B. describe human dependence and influence on ocean systems and explain how human activities impact these systems."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.12",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student understands that ecosystems are dependent upon the cycling of matter and the flow of energy. The student is expected to:",
+    "elements": [
+      "A. diagram the flow of energy within trophic levels and describe how the available energy decreases in successive trophic levels in energy pyramids; and",
+      "B. describe how ecosystems are sustained by the continuous flow of energy and the recycling of matter and nutrients within the biosphere."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.13",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student knows how systems are organized and function to support the health of an organism and how traits are inherited. The student is expected to:",
+    "elements": [
+      "A. identify and model the main functions of the systems of the human organism, including the circulatory, respiratory, skeletal, muscular, digestive, urinary, reproductive, integumentary, nervous, immune, and endocrine systems;",
+      "B. describe the hierarchical organization of cells, tissues, organs, and organ systems within plants and animals;",
+      "C. compare the results of asexual and sexual reproduction of plants and animals in relation to the diversity of offspring and the changes in the population over time; and",
+      "D. describe and give examples of how natural and artificial selection change the occurrence of traits in a population over generations."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "7",
+    "code": "7.14",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student knows how the taxonomic system is used to describe relationships between organisms. The student is expected to:",
+    "elements": [
+      "A. describe the taxonomic system that categorizes organisms based on similarities and differences shared among groups; and",
+      "B. describe the characteristics of the recognized kingdoms and their importance in ecosystems such as bacteria aiding digestion or fungi decomposing organic matter."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.1",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student, for at least 40% of instructional time, asks questions, identifies problems, and plans and safely conducts classroom, laboratory, and field investigations to answer questions, explain phenomena, or design solutions using appropriate tools and models. The student is expected to:",
+    "elements": [
+      "A. ask questions and define problems based on observations or information from text, phenomena, models, or investigations;",
+      "B. use scientific practices to plan and conduct descriptive, comparative, and experimental investigations and use engineering practices to design solutions to problems;",
+      "C. use appropriate safety equipment and practices during laboratory, classroom, and field investigations as outlined in Texas Education Agency-approved safety standards;",
+      "D. use appropriate tools such as graduated cylinders, metric rulers, periodic tables, balances, scales, thermometers, temperature probes, laboratory ware, timing devices, pH indicators, hot plates, models, microscopes, slides, life science models, petri dishes, dissecting kits, magnets, spring scales or force sensors, tools that model wave behavior, satellite images, weather maps, hand lenses, and lab notebooks or journals;",
+      "E. collect quantitative data using the International System of Units (SI) and qualitative data as evidence;",
+      "F. construct appropriate tables, graphs, maps, and charts using repeated trials and means to organize data;",
+      "G. develop and use models to represent phenomena, systems, processes, or solutions to engineering problems; and",
+      "H. distinguish between scientific hypotheses, theories, and laws."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.2",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student analyzes and interprets data to derive meaning, identify features and patterns, and discover relationships or correlations to develop evidence-based arguments or evaluate designs. The student is expected to:",
+    "elements": [
+      "A. identify advantages and limitations of models such as their size, scale, properties, and materials;",
+      "B. analyze data by identifying any significant descriptive statistical features, patterns, sources of error, or limitations;",
+      "C. use mathematical calculations to assess quantitative relationships in data; and",
+      "D. evaluate experimental and engineering designs."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.3",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student develops evidence-based explanations and communicates findings, conclusions, and proposed solutions. The student is expected to:",
+    "elements": [
+      "A. develop explanations and propose solutions supported by data and models and consistent with scientific ideas, principles, and theories;",
+      "B. communicate explanations and solutions individually and collaboratively in a variety of settings and formats; and",
+      "C. engage respectfully in scientific argumentation using applied scientific explanations and empirical evidence."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.4",
+    "strand": "Scientific and engineering practices",
+    "description": "Scientific and engineering practices. The student knows the contributions of scientists and recognizes the importance of scientific research and innovation on society. The student is expected to:",
+    "elements": [
+      "A. relate the impact of past and current research on scientific thought and society, including the process of science, cost-benefit analysis, and contributions of diverse scientists as related to the content;",
+      "B. make informed decisions by evaluating evidence from multiple appropriate sources to assess the credibility, accuracy, cost-effectiveness, and methods used; and",
+      "C. research and explore resources such as museums, libraries, professional organizations, private companies, online platforms, and mentors employed in a science, technology, engineering, and mathematics (STEM) field to investigate STEM careers."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.5",
+    "strand": "Recurring themes and concepts",
+    "description": "Recurring themes and concepts. The student understands that recurring themes and concepts provide a framework for making connections across disciplines. The student is expected to:",
+    "elements": [
+      "A. identify and apply patterns to understand and connect scientific phenomena or to design solutions;",
+      "B. identify and investigate cause-and-effect relationships to explain scientific phenomena or analyze problems;",
+      "C. analyze how differences in scale, proportion, or quantity affect a system's structure or performance;",
+      "D. examine and model the parts of a system and their interdependence in the function of the system;",
+      "E. analyze and explain how energy flows and matter cycles through systems and how energy and matter are conserved through a variety of systems;",
+      "F. analyze and explain the complementary relationship between the structure and function of objects, organisms, and systems; and",
+      "G. analyze and explain how factors or conditions impact stability and change in objects, organisms, and systems."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.6",
+    "strand": "Matter and energy",
+    "description": "Matter and energy. The student understands that matter can be classified according to its properties and matter is conserved in chemical changes that occur within closed systems. The student is expected to:",
+    "elements": [
+      "A. explain by modeling how matter is classified as elements, compounds, homogeneous mixtures, or heterogeneous mixtures;",
+      "B. use the periodic table to identify the atoms involved in chemical reactions;",
+      "C. describe the properties of cohesion, adhesion, and surface tension in water and relate to observable phenomena such as the formation of droplets, transport in plants, and insects walking on water;",
+      "D. compare and contrast the properties of acids and bases, including pH relative to water; and",
+      "E. investigate how mass is conserved in chemical reactions and relate conservation of mass to the rearrangement of atoms using chemical equations, including photosynthesis."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.7",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student understands the relationship between force and motion within systems. The student is expected to:",
+    "elements": [
+      "A. calculate and analyze how the acceleration of an object is dependent upon the net force acting on the object and the mass of the object using Newton's Second Law of Motion; and",
+      "B. investigate and describe how Newton's three laws of motion act simultaneously within systems such as in vehicle restraints, sports activities, amusement park rides, Earth's tectonic activities, and rocket launches."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.8",
+    "strand": "Force, motion, and energy",
+    "description": "Force, motion, and energy. The student knows how energy is transferred through waves. The student is expected to:",
+    "elements": [
+      "A. compare the characteristics of amplitude, frequency, and wavelength in transverse waves, including the electromagnetic spectrum; and",
+      "B. explain the use of electromagnetic waves in applications such as radiation therapy, wireless technologies, fiber optics, microwaves, ultraviolet sterilization, astronomical observations, and X-rays."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.9",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student describes the characteristics of the universe and the relative scale of its components. The student is expected to:",
+    "elements": [
+      "A. describe the life cycle of stars and compare and classify stars using the Hertzsprung-Russell diagram;",
+      "B. categorize galaxies as spiral, elliptical, and irregular and locate Earth's solar system within the Milky Way galaxy; and",
+      "C. research and analyze scientific data used as evidence to develop scientific theories that describe the origin of the universe."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.10",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student knows that interactions between Earth, ocean, and weather systems impact climate. The student is expected to:",
+    "elements": [
+      "A. describe how energy from the Sun, hydrosphere, and atmosphere interact and influence weather and climate;",
+      "B. identify global patterns of atmospheric movement and how they influence local weather; and",
+      "C. describe the interactions between ocean currents and air masses that produce tropical cyclones, including typhoons and hurricanes."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.11",
+    "strand": "Earth and space",
+    "description": "Earth and space. The student knows that natural events and human activity can impact global climate. The student is expected to:",
+    "elements": [
+      "A. use scientific evidence to describe how natural events, including volcanic eruptions, meteor impacts, abrupt changes in ocean currents, and the release and absorption of greenhouse gases influence climate;",
+      "B. use scientific evidence to describe how human activities, including the release of greenhouse gases, deforestation, and urbanization, can influence climate; and",
+      "C. describe the carbon cycle."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.12",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student understands stability and change in populations and ecosystems. The student is expected to:",
+    "elements": [
+      "A. explain how disruptions such as population changes, natural disasters, and human intervention impact the transfer of energy in food webs in ecosystems;",
+      "B. describe how primary and secondary ecological succession affect populations and species diversity after ecosystems are disrupted by natural events or human activity; and",
+      "C. describe how biodiversity contributes to the stability and sustainability of an ecosystem and the health of the organisms within the ecosystem."
+    ]
+  },
+  {
+    "state": "TX",
+    "subject": "science",
+    "grade": "8",
+    "code": "8.13",
+    "strand": "Organisms and environments",
+    "description": "Organisms and environments. The student knows how cell functions support the health of an organism and how adaptation and variation relate to survival. The student is expected to:",
+    "elements": [
+      "A. identify the function of the cell membrane, cell wall, nucleus, ribosomes, cytoplasm, mitochondria, chloroplasts, and vacuoles in plant or animal cells;",
+      "B. describe the function of genes within chromosomes in determining inherited traits of offspring; and",
+      "C. describe how variations of traits within a population lead to structural, behavioral, and physiological adaptations that influence the likelihood of survival and reproductive success of a species over generations."
+    ]
+  }
+]

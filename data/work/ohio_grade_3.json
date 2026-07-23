@@ -1,0 +1,283 @@
+[
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "3",
+  "code": "3.ESS.1",
+  "strand": "Earth and Space Science",
+  "topic": "Earth\u2019s Resources",
+  "description": "Earth\u2019s nonliving resources have specific properties. Soil is composed of pieces of rock, organic material, water and air and has characteristics that can be measured and observed. Use the term \u201csoil\u201d, not \u201cdirt\u201d. Dirt and soils are not synonymous. Rocks have specific characteristics that allow them to be sorted and compared. Rocks form in different ways. Air and water are also nonliving resources. Note: Rock classification is not the focus for this grade level; this is found in grade 6. At this grade, the observable characteristics of rocks can be used to sort or compare, rather than formal classification."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "3",
+  "code": "3.ESS.2",
+  "strand": "Earth and Space Science",
+  "topic": "Earth\u2019s Resources",
+  "description": "Earth\u2019s resources can be used for energy. Renewable energy resources, such as wind, water or solar energy, can be replenished within a short amount of time by natural processes. Nonrenewable energy is a finite resource, such as natural gas, coal or oil, which cannot be replenished in a short amount of time."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "3",
+  "code": "3.ESS.3",
+  "strand": "Earth and Space Science",
+  "topic": "Earth\u2019s Resources",
+  "description": "Some of Earth\u2019s resources are limited. Some of Earth\u2019s resources become limited due to overuse and/or contamination. Reducing resource use, decreasing waste and/or pollution, recycling and reusing can help conserve these resources."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "3",
+  "code": "3.PS.1",
+  "strand": "Physical Science",
+  "topic": "Matter and Forms of Energy",
+  "description": "All objects and substances in the natural world are composed of matter. Matter takes up space and has mass. Differentiating between mass and weight is not necessary at this grade level."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "3",
+  "code": "3.PS.2",
+  "strand": "Physical Science",
+  "topic": "Matter and Forms of Energy",
+  "description": "Matter exists in different states, each of which has different properties. The most recognizable states of matter are solids, liquids and gases. Shape and compressibility are properties that can distinguish between the states of matter. One way to change matter from one state to another is by heating or cooling."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "3",
+  "code": "3.PS.3",
+  "strand": "Physical Science",
+  "topic": "Matter and Forms of Energy",
+  "description": "Heat, electrical energy, light, sound and magnetic energy are forms of energy. There are many different forms of energy. Energy is the ability to cause motion or create change. The different forms of energy that are outlined at this grade level should be limited to familiar forms that a student is able to observe."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "3",
+  "code": "3.LS.1",
+  "strand": "Life Science",
+  "topic": "Behavior, Growth and Changes",
+  "description": "Offspring resemble their parents and each other. Individual organisms inherit many traits from their parents indicating a reliable way to transfer information from one generation to the next. Some behavioral traits are learned through interactions with the environment and are not inherited."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "3",
+  "code": "3.LS.2",
+  "strand": "Life Science",
+  "topic": "Behavior, Growth and Changes",
+  "description": "Individuals of the same kind of organism differ in their inherited traits. These differences give some individuals an advantage in surviving and/or reproducing. Plants and animals have physical features that are associated with the environments where they live. Plants and animals have certain physical or behavioral characteristics that influence their chances of surviving in particular environments. Note: The focus is on the individual, not the population. Adaptation is not the focus at this grade level."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "3",
+  "code": "3.LS.3",
+  "strand": "Life Science",
+  "topic": "Behavior, Growth and Changes",
+  "description": "Plants and animals have life cycles that are part of their adaptations for survival in their natural environments. Worldwide, organisms are growing, reproducing, dying and decaying. The details of the life cycle are different for different organisms, which affects their ability to survive and reproduce in their natural environments. Note: The names of the stages within the life cycles are not the focus."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.1",
+  "strand": "History",
+  "topic": "Historical Thinking and Skills",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "Events in local history can be shown on timelines organized by years, decades and centuries."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.2",
+  "strand": "History",
+  "topic": "Historical Thinking and Skills",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "Primary and secondary sources can be used to show change over time."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.3",
+  "strand": "History",
+  "topic": "Heritage",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "Local communities change over time."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.4",
+  "strand": "Geography",
+  "topic": "Spatial Thinking and Skills",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "Physical and political maps have distinctive characteristics and purposes. Places can be located on a map by using the title, key, alphanumeric grid and cardinal directions."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.5",
+  "strand": "Geography",
+  "topic": "Places and Regions",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "Daily life is influenced by the agriculture, industry and natural resources in different communities."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.6",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "Evidence of positive and negative human modification of the environment can be observed in the local community."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.7",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "Systems of transportation and communication move people, products and ideas from place to place."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.8",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "Communities may include diverse cultural groups."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.9",
+  "strand": "Government",
+  "topic": "Civic Participation and Skills",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "Members of local communities have rights and responsibilities."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.10",
+  "strand": "Government",
+  "topic": "Civic Participation and Skills",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "Individuals make the community a better place by taking action to solve problems in a way that promotes the common good."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.11",
+  "strand": "Government",
+  "topic": "Rules and Laws",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "Laws are rules which apply to all people in a community and describe ways people are expected to behave. Laws promote order and security, provide public services and protect the rights of individuals in the local community."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.12",
+  "strand": "Government",
+  "topic": "Roles and Systems of Government",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "Governments have authority to make and enforce laws."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.13",
+  "strand": "Government",
+  "topic": "Roles and Systems of Government",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "The structure of local governments may differ from one community to another."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.14",
+  "strand": "Economics",
+  "topic": "Economic Decision Making and Skills",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "Line graphs are used to show changes in data over time."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.15",
+  "strand": "Economics",
+  "topic": "Scarcity",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "Both positive and negative incentives affect individuals\u2019 choices and behaviors."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.16",
+  "strand": "Economics",
+  "topic": "Scarcity",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "Individuals must make decisions because of the scarcity of resources. Making a decision involves a trade-off."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.17",
+  "strand": "Economics",
+  "topic": "Production and Consumption",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "A consumer is a person whose wants are satisfied by using goods and services. A producer makes goods and/or provides services."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.18",
+  "strand": "Economics",
+  "topic": "Markets",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "A market is where buyers and sellers exchange goods and services."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.19",
+  "strand": "Economics",
+  "topic": "Financial Literacy",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "Making decisions involves weighing costs and benefits."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.SS.20",
+  "strand": "Economics",
+  "topic": "Financial Literacy",
+  "theme": "Communities: Past and Present, Near and Far",
+  "description": "A budget is a plan to help people make personal economic decisions for the present and future and to become more financially responsible."
+ }
+]

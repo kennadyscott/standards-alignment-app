@@ -1,0 +1,1847 @@
+[
+  {
+    "seedId": "seed-001",
+    "subject": "social_studies",
+    "grades": [
+      "2",
+      "4"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:2.SS.3",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "2",
+        "code": "2.SS.3",
+        "strand": "History",
+        "description": "Science and technology have changed daily life.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4E1f",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4E1f",
+        "strand": "Economic Understandings",
+        "description": "Give examples of technological advancements and their impact on business productivity during the development of the United States (e.g., cotton gin, steamboat, steam locomotive, and telegraph).",
+        "stem": "Use the basic economic concepts of trade, opportunity cost, specialization, voluntary exchange, productivity, and price incentives to illustrate historical events."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 4). Ohio: science and technology have changed daily life. Georgia SS4E1f gives examples of technological advancements (cotton gin, steamboat, locomotive) and their impact, a partial overlap centered on business productivity rather than daily life.",
+    "sourceConfidence": "partial",
+    "sourcePairId": "ss2-02"
+  },
+  {
+    "seedId": "seed-002",
+    "subject": "social_studies",
+    "grades": [
+      "1",
+      "2"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:2.SS.4",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "2",
+        "code": "2.SS.4",
+        "strand": "History",
+        "description": "Biographies can show how peoples’ actions have shaped the world in which we live.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS1H1a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "1",
+        "code": "SS1H1a",
+        "strand": "Historical Understandings",
+        "description": "Identify the contributions made by these figures: Benjamin Franklin (inventor/author/ statesman), Thomas Jefferson (Declaration of Independence), Meriwether Lewis and William Clark with Sacagawea (exploration), Theodore Roosevelt (National Parks and the environment), George Washington Carver (science), and Ruby Bridges (civil rights).",
+        "stem": "Read about and describe the life of historical figures in American history."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 1). Ohio: biographies show how people's actions have shaped the world. Georgia SS1H1a identifies the contributions made by historical figures such as Franklin and Jefferson.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss2-03"
+  },
+  {
+    "seedId": "seed-003",
+    "subject": "social_studies",
+    "grades": [
+      "2",
+      "3"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:2.SS.10",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "2",
+        "code": "2.SS.10",
+        "strand": "Government",
+        "description": "Respect for the rights of self and others includes making responsible choices and being accountable for personal actions.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS3CG2a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "SS3CG2a",
+        "strand": "Government/Civic Understandings",
+        "description": "Explain the necessity of respecting the rights of others and promoting the common good.",
+        "stem": "Explain the importance of Americans sharing certain central democratic beliefs and principles, both personal and civic."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 3). Ohio: respect for the rights of self and others includes responsible choices and accountability. Georgia SS3CG2a explains the necessity of respecting the rights of others and promoting the common good.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss2-11"
+  },
+  {
+    "seedId": "seed-004",
+    "subject": "social_studies",
+    "grades": [
+      "2"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:2.SS.12",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "2",
+        "code": "2.SS.12",
+        "strand": "Government",
+        "description": "There are different rules and laws that govern behavior in different settings.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS2CG1",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "2",
+        "code": "SS2CG1",
+        "strand": "Government/Civic Understandings",
+        "description": "Define the concept of government and the need for rules and laws.",
+        "stem": null
+      }
+    ],
+    "sourceRationale": "Same-grade match. Ohio: different rules and laws govern behavior in different settings. Georgia SS2CG1 defines the concept of government and the need for rules and laws.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss2-13"
+  },
+  {
+    "seedId": "seed-005",
+    "subject": "social_studies",
+    "grades": [
+      "K",
+      "2"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:2.SS.12",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "2",
+        "code": "2.SS.12",
+        "strand": "Government",
+        "description": "There are different rules and laws that govern behavior in different settings.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SSKCG1a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "K",
+        "code": "SSKCG1a",
+        "strand": "Government/Civic Understandings",
+        "description": "Explain how rules are made and why.",
+        "stem": "Demonstrate an understanding of good citizenship."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade K). Ohio: there are different rules and laws that govern behavior. Georgia SSKCG1a explains how rules are made and why, a partial overlap on the nature and purpose of rules.",
+    "sourceConfidence": "partial",
+    "sourcePairId": "ss2-14"
+  },
+  {
+    "seedId": "seed-006",
+    "subject": "social_studies",
+    "grades": [
+      "1",
+      "2"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:2.SS.15",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "2",
+        "code": "2.SS.15",
+        "strand": "Economics",
+        "description": "Most people around the world work in jobs in which they produce specific goods and services.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS1E1",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "1",
+        "code": "SS1E1",
+        "strand": "Economic Understandings",
+        "description": "Identify goods that people make and services that people provide for each other.",
+        "stem": null
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 1). Ohio: most people work in jobs producing specific goods and services. Georgia SS1E1 identifies goods that people make and services that people provide for each other.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss2-15"
+  },
+  {
+    "seedId": "seed-007",
+    "subject": "social_studies",
+    "grades": [
+      "2"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:2.SS.16",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "2",
+        "code": "2.SS.16",
+        "strand": "Economics",
+        "description": "People use money to buy and sell goods and services.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS2E3",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "2",
+        "code": "SS2E3",
+        "strand": "Economic Understandings",
+        "description": "Explain that people usually use money to obtain the goods and services they want and explain how money makes trade easier than barter.",
+        "stem": null
+      }
+    ],
+    "sourceRationale": "Same-grade match. Ohio: people use money to buy and sell goods and services. Georgia SS2E3 explains that people usually use money to obtain the goods and services they want and how money makes trade easier than barter.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss2-17"
+  },
+  {
+    "seedId": "seed-008",
+    "subject": "social_studies",
+    "grades": [
+      "K",
+      "2"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:2.SS.17",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "2",
+        "code": "2.SS.17",
+        "strand": "Economics",
+        "description": "People earn income by working.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SSKE2",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "K",
+        "code": "SSKE2",
+        "strand": "Economic Understandings",
+        "description": "Explain that people earn income by working.",
+        "stem": null
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade K). Ohio: people earn income by working. Georgia SSKE2 explains that people earn income by working, a near-identical statement.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss2-19"
+  },
+  {
+    "seedId": "seed-009",
+    "subject": "social_studies",
+    "grades": [
+      "1",
+      "2"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:2.SS.17",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "2",
+        "code": "2.SS.17",
+        "strand": "Economics",
+        "description": "People earn income by working.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS1E4",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "1",
+        "code": "SS1E4",
+        "strand": "Economic Understandings",
+        "description": "Explain that people earn income by working and that they must make choices about how much to save and spend.",
+        "stem": null
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 1). Ohio: people earn income by working. Georgia SS1E4 explains that people earn income by working and must make choices about saving and spending, extending the same core idea.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss2-20"
+  },
+  {
+    "seedId": "seed-010",
+    "subject": "social_studies",
+    "grades": [
+      "3"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:3.SS.5",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "3.SS.5",
+        "strand": "Geography",
+        "description": "Daily life is influenced by the agriculture, industry and natural resources in different communities.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS3G3c",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "SS3G3c",
+        "strand": "Geographic Understandings",
+        "description": "Explain how the physical geography of the New England, Mid-Atlantic, and Southern colonies helped determine economic activities.",
+        "stem": "Describe how physical systems affect human systems."
+      }
+    ],
+    "sourceRationale": "Same-grade match. Ohio: daily life is influenced by the agriculture, industry and natural resources in different communities. Georgia SS3G3c: explain how the physical geography of the New England, Mid-Atlantic, and Southern colonies helped determine economic activities.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss3-01"
+  },
+  {
+    "seedId": "seed-011",
+    "subject": "social_studies",
+    "grades": [
+      "K",
+      "3"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:3.SS.8",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "3.SS.8",
+        "strand": "Geography",
+        "description": "Communities may include diverse cultural groups.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SSKG1",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "K",
+        "code": "SSKG1",
+        "strand": "Geographic Understandings",
+        "description": "Describe the diversity of American culture by explaining the customs and celebrations of various families and communities.",
+        "stem": null
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade K). Ohio: communities may include diverse cultural groups. Georgia SSKG1: describe the diversity of American culture by explaining the customs and celebrations of various families and communities.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss3-03"
+  },
+  {
+    "seedId": "seed-012",
+    "subject": "social_studies",
+    "grades": [
+      "3",
+      "5"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:3.SS.9",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "3.SS.9",
+        "strand": "Government",
+        "description": "Members of local communities have rights and responsibilities.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS5CG1a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "SS5CG1a",
+        "strand": "Government/Civic Understandings",
+        "description": "Explain the responsibilities of a citizen.",
+        "stem": "Explain how a citizen’s rights are protected under the U.S. Constitution."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 5). Ohio: members of local communities have rights and responsibilities. Georgia SS5CG1a: explain the responsibilities of a citizen.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss3-05"
+  },
+  {
+    "seedId": "seed-013",
+    "subject": "social_studies",
+    "grades": [
+      "2",
+      "3"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:3.SS.11",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "3.SS.11",
+        "strand": "Government",
+        "description": "Laws are rules which apply to all people in a community and describe ways people are expected to behave. Laws promote order and security, provide public services and protect the rights of individuals in the local community.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS2CG1",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "2",
+        "code": "SS2CG1",
+        "strand": "Government/Civic Understandings",
+        "description": "Define the concept of government and the need for rules and laws.",
+        "stem": null
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 2). Ohio: laws are rules that apply to all people, promote order and security, and protect rights. Georgia SS2CG1: define the concept of government and the need for rules and laws.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss3-07"
+  },
+  {
+    "seedId": "seed-014",
+    "subject": "social_studies",
+    "grades": [
+      "3",
+      "4"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:3.SS.15",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "3.SS.15",
+        "strand": "Economics",
+        "description": "Both positive and negative incentives affect individuals’ choices and behaviors.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4E1b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4E1b",
+        "strand": "Economic Understandings",
+        "description": "Explain how price incentives affect people’s behavior and choices: decisions about what crops (e.g., cotton, and tobacco) to grow and products (e.g., textiles) to produce.",
+        "stem": "Use the basic economic concepts of trade, opportunity cost, specialization, voluntary exchange, productivity, and price incentives to illustrate historical events."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 4). Ohio: both positive and negative incentives affect individuals' choices and behaviors. Georgia SS4E1b: explain how price incentives affect people's behavior and choices; GA limits this to price incentives, so the overlap is clear but narrower.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss3-10"
+  },
+  {
+    "seedId": "seed-015",
+    "subject": "social_studies",
+    "grades": [
+      "2",
+      "3"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:3.SS.16",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "3.SS.16",
+        "strand": "Economics",
+        "description": "Individuals must make decisions because of the scarcity of resources. Making a decision involves a trade-off.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS2E1",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "2",
+        "code": "SS2E1",
+        "strand": "Economic Understandings",
+        "description": "Explain that because of scarcity, people must make choices that result in opportunity costs.",
+        "stem": null
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 2). Ohio: individuals must make decisions because of scarcity of resources, and making a decision involves a trade-off. Georgia SS2E1: explain that because of scarcity, people must make choices that result in opportunity costs.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss3-11"
+  },
+  {
+    "seedId": "seed-016",
+    "subject": "social_studies",
+    "grades": [
+      "3"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:3.SS.16",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "3.SS.16",
+        "strand": "Economics",
+        "description": "Individuals must make decisions because of the scarcity of resources. Making a decision involves a trade-off.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS3E4",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "SS3E4",
+        "strand": "Economic Understandings",
+        "description": "Explain the concept of opportunity cost as it relates to making a saving or spending choice.",
+        "stem": null
+      }
+    ],
+    "sourceRationale": "Same-grade match. Ohio: making a decision involves a trade-off due to scarcity. Georgia SS3E4: explain the concept of opportunity cost as it relates to making a saving or spending choice.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss3-12"
+  },
+  {
+    "seedId": "seed-017",
+    "subject": "social_studies",
+    "grades": [
+      "3"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:3.SS.17",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "3.SS.17",
+        "strand": "Economics",
+        "description": "A consumer is a person whose wants are satisfied by using goods and services. A producer makes goods and/or provides services.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS3E3a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "SS3E3a",
+        "strand": "Economic Understandings",
+        "description": "Describe the interdependence of consumers and producers.",
+        "stem": "Give examples of interdependence and trade and explain the benefits of voluntary exchange."
+      }
+    ],
+    "sourceRationale": "Same-grade match. Ohio: a consumer's wants are satisfied by using goods and services while a producer makes goods and provides services. Georgia SS3E3a: describe the interdependence of consumers and producers.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss3-13"
+  },
+  {
+    "seedId": "seed-018",
+    "subject": "social_studies",
+    "grades": [
+      "1",
+      "3"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:3.SS.17",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "3.SS.17",
+        "strand": "Economics",
+        "description": "A consumer is a person whose wants are satisfied by using goods and services. A producer makes goods and/or provides services.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS1E3",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "1",
+        "code": "SS1E3",
+        "strand": "Economic Understandings",
+        "description": "Describe how people are both producers and consumers.",
+        "stem": null
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 1). Ohio distinguishes consumers from producers. Georgia SS1E3: describe how people are both producers and consumers.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss3-14"
+  },
+  {
+    "seedId": "seed-019",
+    "subject": "social_studies",
+    "grades": [
+      "3"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:3.SS.18",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "3.SS.18",
+        "strand": "Economics",
+        "description": "A market is where buyers and sellers exchange goods and services.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS3E3b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "SS3E3b",
+        "strand": "Economic Understandings",
+        "description": "Describe how goods and services are allocated by price in the marketplace.",
+        "stem": "Give examples of interdependence and trade and explain the benefits of voluntary exchange."
+      }
+    ],
+    "sourceRationale": "Same-grade match. Ohio: a market is where buyers and sellers exchange goods and services. Georgia SS3E3b: describe how goods and services are allocated by price in the marketplace.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss3-15"
+  },
+  {
+    "seedId": "seed-020",
+    "subject": "social_studies",
+    "grades": [
+      "2",
+      "3"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:3.SS.19",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "3.SS.19",
+        "strand": "Economics",
+        "description": "Making decisions involves weighing costs and benefits.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS2E4",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "2",
+        "code": "SS2E4",
+        "strand": "Economic Understandings",
+        "description": "Describe the costs and benefits of personal saving and spending choices.",
+        "stem": null
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 2). Ohio: making decisions involves weighing costs and benefits. Georgia SS2E4: describe the costs and benefits of personal saving and spending choices.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss3-16"
+  },
+  {
+    "seedId": "seed-021",
+    "subject": "social_studies",
+    "grades": [
+      "4"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:4.SS.4",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "4.SS.4",
+        "strand": "History",
+        "description": "The 13 colonies came together around a common cause of liberty and justice, uniting to fight for independence during the American Revolution and to form a new nation.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4H1a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4H1a",
+        "strand": "Historical Understandings",
+        "description": "Trace the events that shaped the revolutionary movement in America: French and Indian War, 1765 Stamp Act, the slogan “no taxation without representation,” the activities of the Sons of Liberty, the activities of the Daughters of Liberty, Boston Massacre, and the Boston Tea Party.",
+        "stem": "Explain the causes, events, and results of the American Revolution."
+      }
+    ],
+    "sourceRationale": "Ohio: the 13 colonies uniting around a common cause of liberty and justice. Georgia SS4H1a traces the events that shaped that revolutionary movement (Stamp Act, 'no taxation without representation,' Sons/Daughters of Liberty, Boston Massacre, Boston Tea Party).",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss4-01"
+  },
+  {
+    "seedId": "seed-022",
+    "subject": "social_studies",
+    "grades": [
+      "4"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:4.SS.4",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "4.SS.4",
+        "strand": "History",
+        "description": "The 13 colonies came together around a common cause of liberty and justice, uniting to fight for independence during the American Revolution and to form a new nation.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4H1c",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4H1c",
+        "strand": "Historical Understandings",
+        "description": "Describe the major events of the American Revolution and explain the factors leading to American victory and British defeat; include the Battles of Lexington and Concord, Saratoga, and Yorktown.",
+        "stem": "Explain the causes, events, and results of the American Revolution."
+      }
+    ],
+    "sourceRationale": "Ohio: colonies uniting to fight for independence during the American Revolution. Georgia SS4H1c covers the major events of that fight and the factors leading to American victory (Lexington and Concord, Saratoga, Yorktown).",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss4-02"
+  },
+  {
+    "seedId": "seed-023",
+    "subject": "social_studies",
+    "grades": [
+      "4"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:4.SS.4",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "4.SS.4",
+        "strand": "History",
+        "description": "The 13 colonies came together around a common cause of liberty and justice, uniting to fight for independence during the American Revolution and to form a new nation.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4H1d",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4H1d",
+        "strand": "Historical Understandings",
+        "description": "Explain the writing of the Declaration of Independence; include who wrote it, how it was written, why it was necessary, and how it was a response to tyranny and the abuse of power.",
+        "stem": "Explain the causes, events, and results of the American Revolution."
+      }
+    ],
+    "sourceRationale": "Ohio's 'common cause of liberty and justice... to form a new nation' is expressed in Georgia SS4H1d through the Declaration of Independence — why it was necessary and how it responded to tyranny. Matches the ideals half of Ohio's statement.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss4-03"
+  },
+  {
+    "seedId": "seed-024",
+    "subject": "social_studies",
+    "grades": [
+      "4"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:4.SS.18",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "4.SS.18",
+        "strand": "Government",
+        "description": "The U.S. Constitution establishes a system of limited government and protects citizens’ rights; five of these rights are addressed in the First Amendment.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4CG2",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4CG2",
+        "strand": "Government/Civic Understandings",
+        "description": "Explain the importance of freedoms guaranteed by the First Amendment to the U.S. Constitution.",
+        "stem": null
+      }
+    ],
+    "sourceRationale": "Both explicitly target the First Amendment. Ohio: the Constitution protects citizens' rights, five addressed in the First Amendment. Georgia SS4CG2: the importance of freedoms guaranteed by the First Amendment.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss4-04"
+  },
+  {
+    "seedId": "seed-025",
+    "subject": "social_studies",
+    "grades": [
+      "4"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:4.SS.18",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "4.SS.18",
+        "strand": "Government",
+        "description": "The U.S. Constitution establishes a system of limited government and protects citizens’ rights; five of these rights are addressed in the First Amendment.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4CG3b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4CG3b",
+        "strand": "Government/Civic Understandings",
+        "description": "Identify and explain the rights in the Bill of Rights, describe how the Bill of Rights places limits on the powers of government, and explain the reasons for its inclusion in the Constitution in 1791.",
+        "stem": "Describe the structure of government and the Bill of Rights."
+      }
+    ],
+    "sourceRationale": "Ohio's 'system of limited government and protects citizens' rights' maps to SS4CG3b: the rights in the Bill of Rights and how it places limits on the powers of government. GA works through the full Bill of Rights rather than the First Amendment.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss4-05"
+  },
+  {
+    "seedId": "seed-026",
+    "subject": "social_studies",
+    "grades": [
+      "4"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:4.SS.11",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "4.SS.11",
+        "strand": "Geography",
+        "description": "The regions of the United States known as the North, South and West developed in the early 1800s largely based on their physical environments and economies.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4H5b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4H5b",
+        "strand": "Historical Understandings",
+        "description": "Discuss how the issues of states’ rights and slavery increased tensions between the North and South.",
+        "stem": "Explain the causes, major events, and consequences of the Civil War."
+      }
+    ],
+    "sourceRationale": "Ohio: North, South and West regions developing from physical environments and economies. Georgia SS4H5b: states' rights and slavery increasing tensions between North and South. Both build sectional understanding; OH is geographic-economic, GA is a Civil War cause.",
+    "sourceConfidence": "partial",
+    "sourcePairId": "ss4-12"
+  },
+  {
+    "seedId": "seed-027",
+    "subject": "social_studies",
+    "grades": [
+      "4"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:4.SS.22",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "4.SS.22",
+        "strand": "Economics",
+        "description": "Saving a portion of income contributes to an individuals’ financial well-being. Individuals can reduce spending to save more of their income.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4E2",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4E2",
+        "strand": "Economic Understandings",
+        "description": "Identify the elements of a personal budget (income, expenditures, and saving) and explain why personal spending and saving decisions are important.",
+        "stem": null
+      }
+    ],
+    "sourceRationale": "Direct financial-literacy match. Ohio: saving a portion of income contributes to financial well-being; reducing spending to save more. Georgia SS4E2: elements of a personal budget (income, expenditures, saving) and why spending/saving decisions matter.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss4-20"
+  },
+  {
+    "seedId": "seed-028",
+    "subject": "social_studies",
+    "grades": [
+      "3",
+      "5"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:5.SS.8",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "5.SS.8",
+        "strand": "Geography",
+        "description": "American Indians developed unique cultures with many different ways of life. American Indian tribes and nations can be classified into cultural groups based on geographic and cultural similarities.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS3H1b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "SS3H1b",
+        "strand": "Historical Understandings",
+        "description": "Compare and contrast how American Indians in each region used their environment to obtain food, clothing, and shelter.",
+        "stem": "Describe early American Indian cultures and their development in North America."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 3). Ohio: American Indians developed unique cultures with different ways of life. GA SS3H1b: compare and contrast how American Indians in each region used their environment to obtain food, clothing, and shelter.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss5-10"
+  },
+  {
+    "seedId": "seed-029",
+    "subject": "social_studies",
+    "grades": [
+      "5",
+      "6"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:5.SS.9",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "5.SS.9",
+        "strand": "Geography",
+        "description": "Political, environmental, social and economic factors cause people, products and ideas to move from place to place in the Western Hemisphere and results in diversity.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS6H1d",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "6",
+        "code": "SS6H1d",
+        "strand": "Historical Understandings",
+        "description": "Explain the impact of poverty, the war on drugs, and migration to the United States on Latin America.",
+        "stem": "Explain conflict and change in Latin America."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 6). Ohio: political, environmental, social and economic factors cause people to move in the Western Hemisphere. GA SS6H1d: explain the impact of poverty, the war on drugs, and migration to the United States on Latin America.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss5-11"
+  },
+  {
+    "seedId": "seed-030",
+    "subject": "social_studies",
+    "grades": [
+      "5"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:5.SS.9",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "5.SS.9",
+        "strand": "Geography",
+        "description": "Political, environmental, social and economic factors cause people, products and ideas to move from place to place in the Western Hemisphere and results in diversity.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS5H1d",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "SS5H1d",
+        "strand": "Historical Understandings",
+        "description": "Describe the reasons people immigrated to the United States, from where they emigrated, and where they settled.",
+        "stem": "Describe how life changed in America at the turn of the century."
+      }
+    ],
+    "sourceRationale": "Same-grade match. Ohio: factors cause people to move from place to place in the Western Hemisphere. GA SS5H1d: describe the reasons people immigrated to the United States, from where they emigrated, and where they settled.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss5-12"
+  },
+  {
+    "seedId": "seed-031",
+    "subject": "social_studies",
+    "grades": [
+      "5"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:5.SS.14",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "5.SS.14",
+        "strand": "Economics",
+        "description": "The choices made by individuals and governments have both present and future consequences.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS5E1a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "SS5E1a",
+        "strand": "Economic Understandings",
+        "description": "Describe opportunity costs and their relationship to decision-making across time (e.g., decisions by individuals in response to rationing during WWII).",
+        "stem": "Use the basic economic concepts of trade, opportunity cost, specialization, productivity, and price incentives to illustrate historical events."
+      }
+    ],
+    "sourceRationale": "Same-grade match. Ohio: the choices made by individuals and governments have present and future consequences. GA SS5E1a: describe opportunity costs and their relationship to decision-making across time.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss5-17"
+  },
+  {
+    "seedId": "seed-032",
+    "subject": "social_studies",
+    "grades": [
+      "3",
+      "5"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:5.SS.15",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "5.SS.15",
+        "strand": "Economics",
+        "description": "The availability of productive resources (i.e., entrepreneurship, human resources, capital goods and natural resources) promotes specialization that could lead to trade.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS3E1d",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "SS3E1d",
+        "strand": "Economic Understandings",
+        "description": "Entrepreneurship (risk-taking and combining natural, human, and capital resources in an attempt to make a profit)",
+        "stem": "Define and give examples of the four types of productive resources."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 3). Ohio: availability of productive resources (entrepreneurship, human, capital, natural) promotes specialization. GA SS3E1d: entrepreneurship as combining natural, human, and capital resources to make a profit; names the same productive resources.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss5-19"
+  },
+  {
+    "seedId": "seed-033",
+    "subject": "social_studies",
+    "grades": [
+      "5"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:5.SS.16",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "5.SS.16",
+        "strand": "Economics",
+        "description": "The availability of productive resources and the division of labor can have a positive or negative impact on productive capacity.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS5E1c",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "SS5E1c",
+        "strand": "Economic Understandings",
+        "description": "Describe how specialization can improve standards of living and productivity (e.g., how Henry Ford’s use of the assembly line reduced the price of automobiles).",
+        "stem": "Use the basic economic concepts of trade, opportunity cost, specialization, productivity, and price incentives to illustrate historical events."
+      }
+    ],
+    "sourceRationale": "Same-grade match. Ohio: productive resources and the division of labor impact productive capacity. GA SS5E1c: describe how specialization can improve standards of living and productivity, using Henry Ford's assembly line.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss5-21"
+  },
+  {
+    "seedId": "seed-034",
+    "subject": "social_studies",
+    "grades": [
+      "5",
+      "6"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:5.SS.17",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "5.SS.17",
+        "strand": "Economics",
+        "description": "Regions and countries become interdependent when they specialize in what they produce best and then trade with other regions to increase the amount and variety of goods and services available.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS6E2a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "6",
+        "code": "SS6E2a",
+        "strand": "Economic Understandings",
+        "description": "Explain how specialization encourages trade between countries.",
+        "stem": "Give examples of how voluntary trade benefits buyers and sellers in Latin America."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 6). Ohio: regions become interdependent when they specialize in what they produce best and trade. GA SS6E2a: explain how specialization encourages trade between countries.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss5-23"
+  },
+  {
+    "seedId": "seed-035",
+    "subject": "social_studies",
+    "grades": [
+      "4",
+      "5"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:5.SS.17",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "5.SS.17",
+        "strand": "Economics",
+        "description": "Regions and countries become interdependent when they specialize in what they produce best and then trade with other regions to increase the amount and variety of goods and services available.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4E1e",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4E1e",
+        "strand": "Economic Understandings",
+        "description": "Describe how trade promotes economic activity (e.g., trade between the U.S. and Europe).",
+        "stem": "Use the basic economic concepts of trade, opportunity cost, specialization, voluntary exchange, productivity, and price incentives to illustrate historical events."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 4). Ohio: specialization and trade increase the goods and services available. GA SS4E1e: describe how trade promotes economic activity.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss5-24"
+  },
+  {
+    "seedId": "seed-036",
+    "subject": "social_studies",
+    "grades": [
+      "5"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:5.SS.18",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "5.SS.18",
+        "strand": "Economics",
+        "description": "Workers can improve their ability to earn income by gaining new knowledge, skills and experiences.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS5E3b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "SS5E3b",
+        "strand": "Economic Understandings",
+        "description": "Describe how people earn income by selling their labor to businesses.",
+        "stem": "Describe how consumers and producers interact in the U. S. economy."
+      }
+    ],
+    "sourceRationale": "Same-grade match. Ohio: workers earn income and can improve their earning ability. GA SS5E3b: describe how people earn income by selling their labor to businesses; overlaps on labor and income though not on skill-building.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss5-26"
+  },
+  {
+    "seedId": "seed-037",
+    "subject": "social_studies",
+    "grades": [
+      "6",
+      "7"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:6.SS.8",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "6",
+        "code": "6.SS.8",
+        "strand": "Geography",
+        "description": "Diffusion of agricultural practices and products, technology, cultural practices and major world religions (Buddhism, Christianity, Hinduism, Islam and Judaism) impacted the Eastern Hemisphere.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS7G12b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "7",
+        "code": "SS7G12b",
+        "strand": "Geographic Understandings",
+        "description": "Compare and contrast the belief systems originating in Southern and Eastern Asia: Buddhism, Hinduism, Shintoism, and Confucianism.",
+        "stem": "Analyze the diverse cultural characteristics of the people who live in Southern and Eastern Asia."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 7). Ohio: major world religions including Buddhism and Hinduism, plus cultural diffusion, impacted the Eastern Hemisphere. Georgia SS7G12b: compare and contrast the belief systems originating in Southern and Eastern Asia (Buddhism, Hinduism, Shintoism and Confucianism).",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss6-05"
+  },
+  {
+    "seedId": "seed-038",
+    "subject": "social_studies",
+    "grades": [
+      "6"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:6.SS.13",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "6",
+        "code": "6.SS.13",
+        "strand": "Economics",
+        "description": "The fundamental questions of economics include what to produce, how to produce and for whom to produce.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS6E1a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "6",
+        "code": "SS6E1a",
+        "strand": "Economic Understandings",
+        "description": "Compare how traditional, command, and market economies answer the economic questions of 1-what to produce, 2-how to produce, and 3-for whom to produce.",
+        "stem": "Analyze different economic systems."
+      }
+    ],
+    "sourceRationale": "Same-grade match. Ohio: the fundamental questions of economics are what to produce, how to produce and for whom to produce. Georgia SS6E1a: compare how traditional, command and market economies answer what, how and for whom to produce.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss6-08"
+  },
+  {
+    "seedId": "seed-039",
+    "subject": "social_studies",
+    "grades": [
+      "6"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:6.SS.14",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "6",
+        "code": "6.SS.14",
+        "strand": "Economics",
+        "description": "When regions and/or countries specialize, global trade occurs.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS6E2a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "6",
+        "code": "SS6E2a",
+        "strand": "Economic Understandings",
+        "description": "Explain how specialization encourages trade between countries.",
+        "stem": "Give examples of how voluntary trade benefits buyers and sellers in Latin America."
+      }
+    ],
+    "sourceRationale": "Same-grade match. Ohio: when regions/countries specialize, global trade occurs. Georgia SS6E2a: explain how specialization encourages trade between countries.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss6-09"
+  },
+  {
+    "seedId": "seed-040",
+    "subject": "social_studies",
+    "grades": [
+      "7"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:7.SS.20",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "7",
+        "code": "7.SS.20",
+        "strand": "Economics",
+        "description": "The variability in the distribution of productive resources in the various regions of the world contributed to specialization, trade and interdependence.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS7E2a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "7",
+        "code": "SS7E2a",
+        "strand": "Economic Understandings",
+        "description": "Explain how specialization encourages trade between countries.",
+        "stem": "Explain how voluntary trade benefits buyers and sellers in Africa."
+      }
+    ],
+    "sourceRationale": "Same-grade match. Ohio: uneven distribution of productive resources contributed to specialization, trade, and interdependence. Georgia SS7E2a explains how specialization encourages trade between countries.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss7-09"
+  },
+  {
+    "seedId": "seed-041",
+    "subject": "social_studies",
+    "grades": [
+      "3",
+      "7"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:7.SS.21",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "7",
+        "code": "7.SS.21",
+        "strand": "Economics",
+        "description": "The growth of cities and empires fostered the growth of markets. Market exchanges encouraged specialization and the transition from barter to monetary economies.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS3E3b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "3",
+        "code": "SS3E3b",
+        "strand": "Economic Understandings",
+        "description": "Describe how goods and services are allocated by price in the marketplace.",
+        "stem": "Give examples of interdependence and trade and explain the benefits of voluntary exchange."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 3). Ohio: the growth of cities and empires fostered the growth of markets and market exchanges. Georgia SS3E3b describes how goods and services are allocated by price in the marketplace, the market-exchange concept at an earlier grade.",
+    "sourceConfidence": "partial",
+    "sourcePairId": "ss7-11"
+  },
+  {
+    "seedId": "seed-042",
+    "subject": "social_studies",
+    "grades": [
+      "7"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:7.SS.21",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "7",
+        "code": "7.SS.21",
+        "strand": "Economics",
+        "description": "The growth of cities and empires fostered the growth of markets. Market exchanges encouraged specialization and the transition from barter to monetary economies.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS7E2c",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "7",
+        "code": "SS7E2c",
+        "strand": "Economic Understandings",
+        "description": "Explain why international trade requires a system for exchanging currencies between nations.",
+        "stem": "Explain how voluntary trade benefits buyers and sellers in Africa."
+      }
+    ],
+    "sourceRationale": "Same-grade match. Ohio: market exchanges encouraged the transition from barter to monetary economies. Georgia SS7E2c explains why international trade requires a system for exchanging currencies between nations, touching the monetary-exchange concept.",
+    "sourceConfidence": "partial",
+    "sourcePairId": "ss7-12"
+  },
+  {
+    "seedId": "seed-043",
+    "subject": "social_studies",
+    "grades": [
+      "8"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.2",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.2",
+        "strand": "History",
+        "description": "North America, originally inhabited by American Indians, was explored and colonized by Europeans for economic and religious reasons.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS8H1b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "SS8H1b",
+        "strand": "Historical Understandings",
+        "description": "Explain reasons for European exploration and settlement of North America, with emphasis on the interests of the Spanish and British in the Southeastern area.",
+        "stem": "Evaluate the impact of European exploration and settlement on American Indians in Georgia."
+      }
+    ],
+    "sourceRationale": "Cross-content (GA grade 8, Georgia angle). Ohio: North America, inhabited by American Indians, was explored and colonized by Europeans for economic and religious reasons. Georgia SS8H1b: explain reasons for European exploration and settlement of North America, emphasizing Spanish and British interests in the Southeast.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss8-01"
+  },
+  {
+    "seedId": "seed-044",
+    "subject": "social_studies",
+    "grades": [
+      "8"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.5",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.5",
+        "strand": "History",
+        "description": "The ideas of the Enlightenment and dissatisfaction with colonial rule led English colonists to write the Declaration of Independence and launch the American Revolution.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS8H3b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "SS8H3b",
+        "strand": "Historical Understandings",
+        "description": "Interpret the three parts of the Declaration of Independence (preamble, grievances, and declaration) and identify the three Georgia signers of the document.",
+        "stem": "Analyze the role of Georgia in the American Revolutionary Era."
+      }
+    ],
+    "sourceRationale": "Cross-content (GA grade 8). Ohio: colonists wrote the Declaration of Independence. Georgia SS8H3b: interpret the three parts of the Declaration of Independence and identify the three Georgia signers.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss8-07"
+  },
+  {
+    "seedId": "seed-045",
+    "subject": "social_studies",
+    "grades": [
+      "4",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.5",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.5",
+        "strand": "History",
+        "description": "The ideas of the Enlightenment and dissatisfaction with colonial rule led English colonists to write the Declaration of Independence and launch the American Revolution.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4H1d",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4H1d",
+        "strand": "Historical Understandings",
+        "description": "Explain the writing of the Declaration of Independence; include who wrote it, how it was written, why it was necessary, and how it was a response to tyranny and the abuse of power.",
+        "stem": "Explain the causes, events, and results of the American Revolution."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 4). Ohio: Enlightenment ideas and dissatisfaction with colonial rule led to the Declaration of Independence. Georgia SS4H1d: explain the writing of the Declaration of Independence as a response to tyranny and the abuse of power.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss8-08"
+  },
+  {
+    "seedId": "seed-046",
+    "subject": "social_studies",
+    "grades": [
+      "8"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.8",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.8",
+        "strand": "History",
+        "description": "Problems arising under the Articles of Confederation led to debate over the adoption of the U.S. Constitution.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS8H3d",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "SS8H3d",
+        "strand": "Historical Understandings",
+        "description": "Analyze the weaknesses of the Articles of Confederation and explain how those weaknesses led to the writing of a new federal Constitution.",
+        "stem": "Analyze the role of Georgia in the American Revolutionary Era."
+      }
+    ],
+    "sourceRationale": "Cross-content (GA grade 8). Ohio: problems under the Articles of Confederation led to debate over adopting the U.S. Constitution. Georgia SS8H3d: analyze the weaknesses of the Articles of Confederation and explain how they led to writing a new federal Constitution.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss8-12"
+  },
+  {
+    "seedId": "seed-047",
+    "subject": "social_studies",
+    "grades": [
+      "8"
+    ],
+    "crossGrade": false,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.12",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.12",
+        "strand": "History",
+        "description": "Disputes over the nature of federalism, complicated by economic developments in the United States, resulted in sectional issues, including slavery, which led to the American Civil War.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS8H5a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "SS8H5a",
+        "strand": "Historical Understandings",
+        "description": "Explain the importance of key issues and events that led to the Civil War; include slavery, states’ rights, nullification, Compromise of 1850 and the Georgia Platform, the Dred Scott case, Abraham Lincoln’s election in 1860, and the debate over secession in Georgia.",
+        "stem": "Analyze the impact of the Civil War on Georgia."
+      }
+    ],
+    "sourceRationale": "Cross-content (GA grade 8). Ohio: disputes over federalism and sectional issues including slavery led to the Civil War. Georgia SS8H5a: explain key issues and events that led to the Civil War, including slavery, states' rights, nullification, the Compromise of 1850, Dred Scott, and secession.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss8-20"
+  },
+  {
+    "seedId": "seed-048",
+    "subject": "social_studies",
+    "grades": [
+      "4",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.12",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.12",
+        "strand": "History",
+        "description": "Disputes over the nature of federalism, complicated by economic developments in the United States, resulted in sectional issues, including slavery, which led to the American Civil War.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4H5b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4H5b",
+        "strand": "Historical Understandings",
+        "description": "Discuss how the issues of states’ rights and slavery increased tensions between the North and South.",
+        "stem": "Explain the causes, major events, and consequences of the Civil War."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 4). Ohio: sectional issues including slavery led to the Civil War. Georgia SS4H5b: discuss how the issues of states' rights and slavery increased tensions between the North and South.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss8-21"
+  },
+  {
+    "seedId": "seed-049",
+    "subject": "social_studies",
+    "grades": [
+      "5",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.20",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.20",
+        "strand": "Government",
+        "description": "Active participation in social and civic groups can lead to the attainment of individual and public goals.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS5CG1a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "SS5CG1a",
+        "strand": "Government/Civic Understandings",
+        "description": "Explain the responsibilities of a citizen.",
+        "stem": "Explain how a citizen’s rights are protected under the U.S. Constitution."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 5). Ohio: active participation in social and civic groups can lead to individual and public goals. Georgia SS5CG1a: explain the responsibilities of a citizen.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss8-37"
+  },
+  {
+    "seedId": "seed-050",
+    "subject": "social_studies",
+    "grades": [
+      "4",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.22",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.22",
+        "strand": "Government",
+        "description": "The U.S. Constitution established a federal republic, providing a framework for a national government with elected representatives, separation of powers, and checks and balances.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4CG3a",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4CG3a",
+        "strand": "Government/Civic Understandings",
+        "description": "Describe how the three branches of government interact with each other (checks and balances and separation of powers), and how they relate to local, state, and federal government.",
+        "stem": "Describe the structure of government and the Bill of Rights."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 4). Ohio: the Constitution established separation of powers and checks and balances. Georgia SS4CG3a: describe how the three branches of government interact through checks and balances and separation of powers.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss8-38"
+  },
+  {
+    "seedId": "seed-051",
+    "subject": "social_studies",
+    "grades": [
+      "4",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.22",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.22",
+        "strand": "Government",
+        "description": "The U.S. Constitution established a federal republic, providing a framework for a national government with elected representatives, separation of powers, and checks and balances.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4CG1c",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4CG1c",
+        "strand": "Government/Civic Understandings",
+        "description": "The federal system of government in the U.S. (federal powers, state powers, and shared powers)",
+        "stem": "Describe the meaning of:"
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 4). Ohio: the Constitution framed a national government within a federal system. Georgia SS4CG1c: the federal system of government in the U.S. (federal powers, state powers, and shared powers).",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss8-40"
+  },
+  {
+    "seedId": "seed-052",
+    "subject": "social_studies",
+    "grades": [
+      "4",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.23",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.23",
+        "strand": "Government",
+        "description": "The U.S. Constitution protects citizens’ rights by limiting the powers of government.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4CG3b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4CG3b",
+        "strand": "Government/Civic Understandings",
+        "description": "Identify and explain the rights in the Bill of Rights, describe how the Bill of Rights places limits on the powers of government, and explain the reasons for its inclusion in the Constitution in 1791.",
+        "stem": "Describe the structure of government and the Bill of Rights."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 4). Ohio: the Constitution protects citizens' rights by limiting the powers of government. Georgia SS4CG3b: identify the rights in the Bill of Rights and describe how it places limits on the powers of government.",
+    "sourceConfidence": "strong",
+    "sourcePairId": "ss8-41"
+  },
+  {
+    "seedId": "seed-053",
+    "subject": "social_studies",
+    "grades": [
+      "4",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.23",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.23",
+        "strand": "Government",
+        "description": "The U.S. Constitution protects citizens’ rights by limiting the powers of government.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS4CG2",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "4",
+        "code": "SS4CG2",
+        "strand": "Government/Civic Understandings",
+        "description": "Explain the importance of freedoms guaranteed by the First Amendment to the U.S. Constitution.",
+        "stem": null
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 4). Ohio: the Constitution protects citizens' rights. Georgia SS4CG2: explain the importance of freedoms guaranteed by the First Amendment.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss8-42"
+  },
+  {
+    "seedId": "seed-054",
+    "subject": "social_studies",
+    "grades": [
+      "5",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.26",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.26",
+        "strand": "Economics",
+        "description": "Governments can impact markets by means of spending, regulations, taxes and trade barriers.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS5E2d",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "5",
+        "code": "SS5E2d",
+        "strand": "Economic Understandings",
+        "description": "Describe the government function in taxation and providing certain public goods and public services.",
+        "stem": "Describe the functions of four major sectors in the U. S. economy."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 5). Ohio: governments impact markets through spending and taxes. Georgia SS5E2d: describe the government function in taxation and providing public goods and services.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss8-49"
+  },
+  {
+    "seedId": "seed-055",
+    "subject": "social_studies",
+    "grades": [
+      "6",
+      "8"
+    ],
+    "crossGrade": true,
+    "members": [
+      {
+        "key": "OH:social_studies:8.SS.26",
+        "state": "OH",
+        "subject": "social_studies",
+        "grade": "8",
+        "code": "8.SS.26",
+        "strand": "Economics",
+        "description": "Governments can impact markets by means of spending, regulations, taxes and trade barriers.",
+        "stem": null
+      },
+      {
+        "key": "GA:social_studies:SS6E2b",
+        "state": "GA",
+        "subject": "social_studies",
+        "grade": "6",
+        "code": "SS6E2b",
+        "strand": "Economic Understandings",
+        "description": "Compare and contrast different types of trade barriers, such as tariffs, quotas, and embargos.",
+        "stem": "Give examples of how voluntary trade benefits buyers and sellers in Latin America."
+      }
+    ],
+    "sourceRationale": "Cross-grade (GA grade 6). Ohio: governments impact markets through trade barriers. Georgia SS6E2b: compare and contrast different types of trade barriers, such as tariffs, quotas, and embargos.",
+    "sourceConfidence": "moderate",
+    "sourcePairId": "ss8-50"
+  }
+]

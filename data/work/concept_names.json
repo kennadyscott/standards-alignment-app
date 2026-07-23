@@ -1,0 +1,304 @@
+[
+  {
+    "seedId": "seed-001",
+    "title": "Technological Change and Its Effects on Work",
+    "description": "A standard belongs here if it asks students to give examples of inventions or technological advances and explain how they changed how people work or live.",
+    "gradeBand": "K-5",
+    "slug": "technology-changes-work-and-life",
+    "note": "Thin shared ground. One member is a primary-grade generalization that technology changed daily life; the other is a list of industrial-era inventions and their effect on business productivity. They meet only at 'technology changes things,' an abstraction broad enough that many unrelated standards would pass this membership test. The reviewer marked the pair partial and said so. Weakest pair in the set after seed-026."
+  },
+  {
+    "seedId": "seed-002",
+    "title": "Individual Contributions That Shape History",
+    "description": "A standard belongs here if it asks students to study the lives or contributions of specific historical figures in order to see how individual actions shaped the world people live in now.",
+    "gradeBand": "K-2",
+    "slug": "individual-actions-shape-history"
+  },
+  {
+    "seedId": "seed-003",
+    "title": "Respect for the Rights of Others",
+    "description": "A standard belongs here if it asks students to explain why people must respect others' rights and act responsibly toward the well-being of the group.",
+    "gradeBand": "K-5",
+    "slug": "respecting-rights-of-others"
+  },
+  {
+    "seedId": "seed-004",
+    "title": "The Need for Rules and Laws",
+    "description": "A standard belongs here if it asks students to explain why groups and communities need rules and laws at all, and that such rules direct how people behave.",
+    "gradeBand": "K-2",
+    "slug": "the-need-for-rules-and-laws"
+  },
+  {
+    "seedId": "seed-005",
+    "title": "How Rules Are Made and Why",
+    "description": "A standard belongs here if it asks students to explain the process by which rules come to exist and the reasons behind them, rather than the content of any particular rule.",
+    "gradeBand": "K-2",
+    "slug": "how-rules-are-made-and-why",
+    "note": "Partial pair. One member is about rules varying across settings; the other is about how rules are made and why. Neither states the other's idea — they meet only at the general proposition that rules exist for reasons. The title above follows the second member because that is the more discriminating half; a reviewer may prefer to reject the pair or re-anchor it to seed-004."
+  },
+  {
+    "seedId": "seed-006",
+    "title": "Goods and Services Produced by People's Work",
+    "description": "A standard belongs here if it asks students to identify or explain that people work at jobs to make goods or provide services that others use.",
+    "gradeBand": "K-2",
+    "slug": "goods-and-services-people-produce"
+  },
+  {
+    "seedId": "seed-007",
+    "title": "Money as a Medium of Exchange",
+    "description": "A standard belongs here if it asks students to explain that people use money to buy and sell goods and services, or why money works better than direct barter.",
+    "gradeBand": "K-2",
+    "slug": "money-as-medium-of-exchange"
+  },
+  {
+    "seedId": "seed-008",
+    "title": "Income Earned Through Work",
+    "description": "A standard belongs here if it asks students to explain that people earn income by working.",
+    "gradeBand": "K-2",
+    "slug": "people-earn-income-by-working",
+    "note": "Duplicate concept: seed-008 and seed-009 state the same idea and carry identical title and description. Both pair the same coarse standard about earning income by working with a counterpart standard; seed-009's counterpart extends into saving and spending choices, but that extension is not shared ground, so it does not change the concept. Merge candidates for the curation pass."
+  },
+  {
+    "seedId": "seed-009",
+    "title": "Income Earned Through Work",
+    "description": "A standard belongs here if it asks students to explain that people earn income by working.",
+    "gradeBand": "K-2",
+    "slug": "people-earn-income-by-working-2",
+    "note": "Duplicate concept: seed-008 and seed-009 state the same idea and carry identical title and description. Both pair the same coarse standard about earning income by working with a counterpart standard; seed-009's counterpart extends into saving and spending choices, but that extension is not shared ground, so it does not change the concept. Merge candidates for the curation pass."
+  },
+  {
+    "seedId": "seed-010",
+    "title": "Physical Geography's Influence on Economic Activity",
+    "description": "A standard belongs here if it asks students to explain how landforms, climate, or natural resources in a place shape the work people do and how they live there.",
+    "gradeBand": "3-5",
+    "slug": "geography-shapes-economic-activity"
+  },
+  {
+    "seedId": "seed-011",
+    "title": "Cultural Diversity Within Communities",
+    "description": "A standard belongs here if it asks students to recognize that communities contain diverse cultural groups, including the customs and celebrations that distinguish them.",
+    "gradeBand": "K-5",
+    "slug": "cultural-diversity-in-communities"
+  },
+  {
+    "seedId": "seed-012",
+    "title": "Rights and Responsibilities of Citizens",
+    "description": "A standard belongs here if it asks students to name or explain the rights citizens hold and the duties they owe in return as members of a community or nation.",
+    "gradeBand": "3-5",
+    "slug": "citizens-rights-and-responsibilities"
+  },
+  {
+    "seedId": "seed-013",
+    "title": "The Purposes Laws Serve in a Community",
+    "description": "A standard belongs here if it asks students to explain what laws accomplish for a community — order, security, public services, or the protection of individual rights — rather than merely that laws exist.",
+    "gradeBand": "K-5",
+    "slug": "purposes-laws-serve-in-a-community"
+  },
+  {
+    "seedId": "seed-014",
+    "title": "Incentives That Influence Choices and Behavior",
+    "description": "A standard belongs here if it asks students to explain how rewards or penalties — including prices — change what people decide to do.",
+    "gradeBand": "3-5",
+    "slug": "incentives-influence-choices"
+  },
+  {
+    "seedId": "seed-015",
+    "title": "Scarcity, Choice, and Opportunity Cost",
+    "description": "A standard belongs here if it asks students to explain that limited resources force people to choose, and that every choice gives up an alternative.",
+    "gradeBand": "K-5",
+    "slug": "scarcity-choice-and-opportunity-cost",
+    "note": "Duplicate concept: seed-015 and seed-016 state the same idea and carry identical title and description. Both pair the same coarse scarcity-and-trade-off standard with an opportunity-cost counterpart; seed-016's counterpart applies it to a saving-or-spending choice, which is a context, not a different concept. Merge candidates for the curation pass. Also adjacent to seed-020 and seed-031, which I judged genuinely distinct (cost-benefit weighing, and consequences over time) rather than duplicates — worth a human look."
+  },
+  {
+    "seedId": "seed-016",
+    "title": "Scarcity, Choice, and Opportunity Cost",
+    "description": "A standard belongs here if it asks students to explain that limited resources force people to choose, and that every choice gives up an alternative.",
+    "gradeBand": "3-5",
+    "slug": "scarcity-choice-and-opportunity-cost-2",
+    "note": "Duplicate concept: seed-015 and seed-016 state the same idea and carry identical title and description. Both pair the same coarse scarcity-and-trade-off standard with an opportunity-cost counterpart; seed-016's counterpart applies it to a saving-or-spending choice, which is a context, not a different concept. Merge candidates for the curation pass."
+  },
+  {
+    "seedId": "seed-017",
+    "title": "Interdependence of Producers and Consumers",
+    "description": "A standard belongs here if it asks students to explain how producers and consumers depend on each other.",
+    "gradeBand": "3-5",
+    "slug": "producers-and-consumers-interdepend"
+  },
+  {
+    "seedId": "seed-018",
+    "title": "The Roles of Producer and Consumer",
+    "description": "A standard belongs here if it asks students to distinguish the role of a producer from that of a consumer, including that one person can occupy both roles.",
+    "gradeBand": "K-5",
+    "slug": "roles-of-producer-and-consumer"
+  },
+  {
+    "seedId": "seed-019",
+    "title": "Markets Where Buyers and Sellers Exchange",
+    "description": "A standard belongs here if it asks students to explain what a market is or how goods and services move between buyers and sellers within one, including the role of price.",
+    "gradeBand": "3-5",
+    "slug": "markets-exchange-goods-and-services"
+  },
+  {
+    "seedId": "seed-020",
+    "title": "Weighing Costs and Benefits of Decisions",
+    "description": "A standard belongs here if it asks students to compare the costs of a course of action against its benefits before deciding.",
+    "gradeBand": "K-5",
+    "slug": "weighing-costs-and-benefits"
+  },
+  {
+    "seedId": "seed-021",
+    "title": "Grievances and Events That Sparked Revolution",
+    "description": "A standard belongs here if it asks students to trace the taxes, protests, or incidents that turned colonial grievances into a united movement against imperial rule.",
+    "gradeBand": "3-5",
+    "slug": "grievances-that-sparked-revolution"
+  },
+  {
+    "seedId": "seed-022",
+    "title": "Course and Outcome of a War for Independence",
+    "description": "A standard belongs here if it asks students to describe the major battles or campaigns of a colonial war for independence and explain why one side prevailed.",
+    "gradeBand": "3-5",
+    "slug": "course-and-outcome-of-independence-war"
+  },
+  {
+    "seedId": "seed-023",
+    "title": "A Declaration of Independence and Its Ideals",
+    "description": "A standard belongs here if it asks students to explain the writing, purpose, or founding ideals of a declaration of independence, including how it answered tyranny and abuse of power.",
+    "gradeBand": "3-5",
+    "slug": "declaration-of-independence-ideals"
+  },
+  {
+    "seedId": "seed-024",
+    "title": "Fundamental Freedoms Protected by the First Amendment",
+    "description": "A standard belongs here if it asks students to identify or explain the importance of the freedoms guaranteed by the First Amendment.",
+    "gradeBand": "3-5",
+    "slug": "first-amendment-freedoms"
+  },
+  {
+    "seedId": "seed-025",
+    "title": "A Bill of Rights Limits Government Power",
+    "description": "A standard belongs here if it asks students to explain how an enumerated bill of rights constrains what government may do and why such limits were written into a constitution.",
+    "gradeBand": "3-5",
+    "slug": "bill-of-rights-limits-government"
+  },
+  {
+    "seedId": "seed-026",
+    "title": "Regional Differences and Rising Sectional Tension",
+    "description": "A standard belongs here if it asks students to explain how differing regional economies, environments, or institutions produced conflicting interests between sections of a nation.",
+    "gradeBand": "3-5",
+    "slug": "regional-differences-and-sectionalism",
+    "note": "Genuine mismatch — recommend rejecting the pair. One member is a geography standard about how regions developed from their physical environments and economies; the other is a history standard naming states' rights and slavery as causes of the Civil War. They share a vocabulary (North, South) but not an idea, and the reviewer's own rationale concedes the split. The title above is a bridge invented to hold them together, and it is broad enough that a pure regional-geography standard and a pure Civil-War-causes standard would both attach — exactly the discrimination failure the concept spine is meant to prevent. Reviewer confidence on this pair is 'partial'."
+  },
+  {
+    "seedId": "seed-027",
+    "title": "Personal Budgeting of Income, Spending, and Saving",
+    "description": "A standard belongs here if it asks students to identify the parts of a personal budget or explain why choosing to save rather than spend affects a person's financial well-being.",
+    "gradeBand": "3-5",
+    "slug": "personal-budgeting-and-saving"
+  },
+  {
+    "seedId": "seed-028",
+    "title": "Indigenous Cultures Shaped by Regional Environments",
+    "description": "A standard belongs here if it asks students to describe or compare how Indigenous peoples in different regions developed distinct ways of life from the environments they lived in.",
+    "gradeBand": "3-5",
+    "slug": "indigenous-cultures-and-environment"
+  },
+  {
+    "seedId": "seed-029",
+    "title": "Migration and Its Impact on Regions",
+    "description": "A standard belongs here if it asks students to explain how the movement of people into or out of a region changes conditions in that region.",
+    "gradeBand": "3-8",
+    "slug": "migration-and-its-impact-on-regions",
+    "note": "Thin shared ground. One member is a broad geography standard about political, environmental, social, and economic factors moving people, products, and ideas across a hemisphere; the other bundles poverty, drug policy, and migration as forces acting on one region. Only the migration strand of each touches the other, and the second member's other two elements have no home here. Attachment is weak and partial; seed-030 is the clean migration pair against the same coarse standard."
+  },
+  {
+    "seedId": "seed-030",
+    "title": "Reasons People Migrate and Where They Settle",
+    "description": "A standard belongs here if it asks students to explain why people leave one place for another and where they come from or settle.",
+    "gradeBand": "3-5",
+    "slug": "reasons-people-migrate-and-settle"
+  },
+  {
+    "seedId": "seed-031",
+    "title": "Present and Future Consequences of Choices",
+    "description": "A standard belongs here if it asks students to explain that a decision made now carries consequences reaching into the future, including what was given up at the time.",
+    "gradeBand": "3-5",
+    "slug": "choices-have-future-consequences"
+  },
+  {
+    "seedId": "seed-032",
+    "title": "Productive Resources That Make Goods and Services",
+    "description": "A standard belongs here if it asks students to name or describe the categories of resources used to produce goods and services — natural, human, capital, and entrepreneurship.",
+    "gradeBand": "3-5",
+    "slug": "productive-resources-of-an-economy",
+    "note": "Asymmetric grain. One member defines a single productive resource (entrepreneurship) within a four-resource taxonomy; the other is about resource availability driving specialization and trade. The shared ground is only the taxonomy — the specialization-and-trade half of the second member is seed-034's concept, not this one. The title follows the taxonomy, so the second member attaches on a fraction of what it says."
+  },
+  {
+    "seedId": "seed-033",
+    "title": "Division of Labor and Productive Capacity",
+    "description": "A standard belongs here if it asks students to explain how dividing work into specialized tasks changes how much can be produced or the standard of living.",
+    "gradeBand": "3-5",
+    "slug": "division-of-labor-and-productivity"
+  },
+  {
+    "seedId": "seed-034",
+    "title": "Specialization as a Driver of Trade",
+    "description": "A standard belongs here if it asks students to explain how specializing in what a person, region, or country produces best leads to trade and mutual interdependence.",
+    "gradeBand": "3-8",
+    "slug": "specialization-leads-to-trade",
+    "note": "Duplicate concept: seed-034 and seed-039 state the same idea and carry identical title and description. They share one member outright and their other members both say specialization produces trade between regions or countries; only the grade differs. Merge candidates for the curation pass."
+  },
+  {
+    "seedId": "seed-035",
+    "title": "Trade Between Regions Promotes Economic Activity",
+    "description": "A standard belongs here if it asks students to explain how trade between regions or countries increases economic activity or the goods and services available.",
+    "gradeBand": "3-5",
+    "slug": "trade-promotes-economic-activity",
+    "note": "Half-shared pair. One member's claim is causal (specialization produces interdependence and trade); the other says only that trade promotes economic activity, with no mention of specialization. They meet on the benefit of trade, which is what the title states, so the concept holds — but the driver the first member is actually about lives in seed-034. Worth checking whether this pair adds anything seed-034 does not."
+  },
+  {
+    "seedId": "seed-036",
+    "title": "Earning Income by Selling One's Labor",
+    "description": "A standard belongs here if it asks students to explain that people earn income by selling their labor to employers, or that skills and experience change what that labor earns.",
+    "gradeBand": "3-5",
+    "slug": "earning-income-through-labor",
+    "note": "Partial pair. One member is about human capital — knowledge and skills raising earning power; the other is about selling labor to businesses for income. Shared ground is only 'labor produces income,' which is also seed-008's idea at a lower grade. Neither member states the other's substance, and the reviewer noted the skill-building half is unmatched."
+  },
+  {
+    "seedId": "seed-037",
+    "title": "Major World Religions and Belief Systems",
+    "description": "A standard belongs here if it asks students to identify, compare, or trace the spread of major religions and belief systems and their influence on the cultures that hold them.",
+    "gradeBand": "6-8",
+    "slug": "world-religions-and-belief-systems",
+    "note": "Thin shared ground. One member is about diffusion — how agricultural practices, technology, cultural practices, and religions spread and reshaped a hemisphere; the other is a comparative study of the tenets of belief systems originating in one region. They overlap only on the roster of religions each happens to name. A state standard about cultural diffusion with no religious content, and one comparing religious tenets with no diffusion, would both attach. Candidate for rejection, or for narrowing to comparative belief systems if diffusion is a concept elsewhere in the spine."
+  },
+  {
+    "seedId": "seed-038",
+    "title": "Economic Systems and the Basic Economic Questions",
+    "description": "A standard belongs here if it asks students to address what to produce, how to produce, and for whom to produce, or to compare how different economic systems answer those questions.",
+    "gradeBand": "6-8",
+    "slug": "economic-systems-and-basic-questions"
+  },
+  {
+    "seedId": "seed-039",
+    "title": "Specialization as a Driver of Trade",
+    "description": "A standard belongs here if it asks students to explain how specializing in what a person, region, or country produces best leads to trade and mutual interdependence.",
+    "gradeBand": "6-8",
+    "slug": "specialization-leads-to-trade-2",
+    "note": "Duplicate concept: seed-034 and seed-039 state the same idea and carry identical title and description. They share one member outright and their other members both say specialization produces trade between regions or countries; only the grade differs. Merge candidates for the curation pass."
+  },
+  {
+    "seedId": "seed-040",
+    "title": "Motives for European Exploration and Colonization",
+    "description": "A standard belongs here if it asks students to explain the economic, religious, or political reasons Europeans explored and settled lands already inhabited by Indigenous peoples.",
+    "gradeBand": "6-8",
+    "slug": "motives-for-european-colonization"
+  },
+  {
+    "seedId": "seed-041",
+    "title": "Government Trade Barriers and Market Intervention",
+    "description": "A standard belongs here if it asks students to explain how governments act on markets or trade through tools such as tariffs, quotas, embargoes, taxes, or regulation.",
+    "gradeBand": "6-8",
+    "slug": "government-trade-barriers",
+    "note": "Asymmetric grain — no single title fits both members well. One is broad (government affects markets via spending, regulation, taxes, and trade barriers); the other is narrow (comparing types of trade barriers). Written broadly, as above, the concept will swallow general fiscal and regulatory standards from future states; written narrowly, it drops three-quarters of the first member. This pair probably needs to become two concepts — government intervention in markets, and trade barriers — once more states arrive."
+  }
+]

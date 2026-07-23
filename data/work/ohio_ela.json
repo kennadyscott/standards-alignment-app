@@ -1,0 +1,1370 @@
+[
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RL.K.1",
+    "strand": "Reading Literature",
+    "description": "With prompting and support, ask and answer questions about key details in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RL.1.1",
+    "strand": "Reading Literature",
+    "description": "Ask and answer questions about key details in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RL.2.1",
+    "strand": "Reading Literature",
+    "description": "Ask and answer such questions as who, what, where, when, why, and how to demonstrate understanding of key details in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RL.K.2",
+    "strand": "Reading Literature",
+    "description": "With prompting and support, retell familiar stories, including key details."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RL.1.2",
+    "strand": "Reading Literature",
+    "description": "Analyze literary text development. a. Demonstrate understanding of the lesson. b. Retell stories, including key details."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RL.2.2",
+    "strand": "Reading Literature",
+    "description": "Analyze literary text development. a. Determine the lesson or moral. b. Retell stories, including fables and folktales from diverse cultures."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RL.K.3",
+    "strand": "Reading Literature",
+    "description": "With prompting and support, identify characters, settings, and major events in a story."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RL.1.3",
+    "strand": "Reading Literature",
+    "description": "Describe characters, settings, and major events in a story, using key details."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RL.2.3",
+    "strand": "Reading Literature",
+    "description": "Describe how characters in a story respond to major events and challenges."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RL.K.4",
+    "strand": "Reading Literature",
+    "description": "Ask and answer questions about unknown words in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RL.1.4",
+    "strand": "Reading Literature",
+    "description": "Identify words and phrases in stories or poems that suggest feelings or appeal to the senses."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RL.2.4",
+    "strand": "Reading Literature",
+    "description": "Describe how words and phrases (e.g., regular beats, alliteration, rhymes, repeated lines) supply rhythm and meaning in a story, poem, or song."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RL.K.5",
+    "strand": "Reading Literature",
+    "description": "Recognize common types of texts (e.g., storybooks, poems)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RL.1.5",
+    "strand": "Reading Literature",
+    "description": "Explain major differences between books that tell stories and books that give information, drawing on a wide reading of a range of text types."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RL.2.5",
+    "strand": "Reading Literature",
+    "description": "Describe the overall structure of a story, including describing how the beginning introduces the story and the ending concludes the action."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RL.K.6",
+    "strand": "Reading Literature",
+    "description": "With prompting and support, name the author and illustrator of a story and define the role of each in telling the story."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RL.1.6",
+    "strand": "Reading Literature",
+    "description": "Identify who is telling the story at various points in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RL.2.6",
+    "strand": "Reading Literature",
+    "description": "Distinguish between points of view when referring to narrators and characters, recognizing when the narrator is a character in the story."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RL.K.7",
+    "strand": "Reading Literature",
+    "description": "With prompting and support, describe the relationship between illustrations and the story in which they appear (e.g., what moment in a story an illustration depicts)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RL.1.7",
+    "strand": "Reading Literature",
+    "description": "Use illustrations and details in a story to describe its characters, setting, or events."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RL.2.7",
+    "strand": "Reading Literature",
+    "description": "Use information gained from the illustrations and words in a print or digital text to demonstrate understanding of its characters, setting, or plot."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RL.K.9",
+    "strand": "Reading Literature",
+    "description": "With prompting and support, compare and contrast the adventures and experiences of characters in familiar stories."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RL.1.9",
+    "strand": "Reading Literature",
+    "description": "Compare and contrast the adventures and experiences of characters in stories."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RL.2.9",
+    "strand": "Reading Literature",
+    "description": "Compare and contrast two or more versions of the same story (e.g., Cinderella stories) by different authors or from different cultures."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RL.K.10",
+    "strand": "Reading Literature",
+    "description": "Actively engage in group reading activities with purpose and understanding. Activate prior knowledge and draw on previous experiences in order to make text-to-self or text-to-text connections and comparisons."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RL.1.10",
+    "strand": "Reading Literature",
+    "description": "With prompting and support, read prose and poetry of appropriate complexity for grade 1. Activate prior knowledge and draw on previous experiences in order to make text-to-self or text-to-text connections and comparisons."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RL.2.10",
+    "strand": "Reading Literature",
+    "description": "By the end of the year, read and comprehend literature, including stories and poetry, in the grades 2–3 text complexity band proficiently, with scaffolding as needed at the high end of the range. Activate prior knowledge and draw on previous experiences in order to make text-to-self or text-to-text connections and comparisons."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RL.3.1",
+    "strand": "Reading Literature",
+    "description": "Ask and answer questions to demonstrate understanding of a text, referring explicitly to the text as the basis for the answers."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RL.4.1",
+    "strand": "Reading Literature",
+    "description": "Refer to details and examples in a text when explaining what the text says explicitly and when drawing inferences from the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RL.5.1",
+    "strand": "Reading Literature",
+    "description": "Quote accurately from a text when explaining what the text says explicitly and when drawing inferences from the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RL.3.2",
+    "strand": "Reading Literature",
+    "description": "Analyze literary text development. a. Determine a theme and explain how it is conveyed through key details in the text. b. Retell stories, including fables, folktales, and myths from diverse cultures."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RL.4.2",
+    "strand": "Reading Literature",
+    "description": "Analyze literary text development. a. Determine a theme of a story, drama, or poem from details in the text. b. Summarize the text, incorporating a theme determined from details in the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RL.5.2",
+    "strand": "Reading Literature",
+    "description": "Analyze literary text development. a. Determine a theme of a story, drama, or poem from details in the text, including how characters in a story or drama respond to challenges or how the speaker in a poem reflects upon a topic. b. Summarize the text, incorporating a theme determined from details in the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RL.3.3",
+    "strand": "Reading Literature",
+    "description": "Describe characters in a story (e.g., their traits, motivations, or feelings) and explain how their actions contribute to the sequence of events."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RL.4.3",
+    "strand": "Reading Literature",
+    "description": "Describe in depth a character, setting, or event in a story or drama, drawing on specific details in the text (e.g., a character’s thoughts, words, or actions)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RL.5.3",
+    "strand": "Reading Literature",
+    "description": "Compare and contrast two or more characters, settings, or events in a story or drama, drawing on specific details in the text (e.g., how characters interact)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RL.3.4",
+    "strand": "Reading Literature",
+    "description": "Determine the meaning of words and phrases as they are used in a text, distinguishing literal from nonliteral language."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RL.4.4",
+    "strand": "Reading Literature",
+    "description": "Determine the meaning of words and phrases as they are used in a text, including those that allude to significant characters found in mythology (e.g., Herculean)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RL.5.4",
+    "strand": "Reading Literature",
+    "description": "Determine the meaning of words and phrases as they are used in a text, including figurative language such as metaphors, similes, and idioms."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RL.3.5",
+    "strand": "Reading Literature",
+    "description": "Refer to parts of stories, dramas, and poems when writing or speaking about a text, using terms such as chapter, scene, and stanza; describe how each successive part builds on earlier sections."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RL.4.5",
+    "strand": "Reading Literature",
+    "description": "Explain major differences between poems, drama, and prose, and refer to the structural elements of poems (e.g., verse, rhythm, meter) and drama (e.g., casts of characters, settings, descriptions, dialogue, stage directions) when writing or speaking about a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RL.5.5",
+    "strand": "Reading Literature",
+    "description": "Explain how a series of chapters, scenes, or stanzas fits together to provide the overall structure of a particular story, drama, or poem."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RL.3.6",
+    "strand": "Reading Literature",
+    "description": "Describe the difference between points of view in texts, particularly first- and third-person narration."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RL.4.6",
+    "strand": "Reading Literature",
+    "description": "Explain the differences in the point(s) of view in a text and different perspectives of the characters."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RL.5.6",
+    "strand": "Reading Literature",
+    "description": "Describe how a narrator’s or speaker’s point of view and perspective influence how events are described."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RL.3.7",
+    "strand": "Reading Literature",
+    "description": "Explain how specific aspects of a text’s illustrations contribute to what is conveyed by the words in a story (e.g., emphasize aspects of a character or setting)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RL.4.7",
+    "strand": "Reading Literature",
+    "description": "Make connections between the text of a story or drama and a visual or oral presentation of the text, identifying where each version reflects specific descriptions and directions in the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RL.5.7",
+    "strand": "Reading Literature",
+    "description": "Analyze how visual and multimedia elements contribute to the meaning, tone, mood, or appeal of a text (e.g., graphic novel, multimedia presentation of fiction, folktale, myth, poem)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RL.3.9",
+    "strand": "Reading Literature",
+    "description": "Compare and contrast the themes, settings, and plots of stories written by the same author about the same or similar characters (e.g., in books from a series)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RL.4.9",
+    "strand": "Reading Literature",
+    "description": "Compare and contrast the treatment of similar themes and topics (e.g., opposition of good and evil) and patterns of events (e.g., the quest) in stories, myths, and traditional literature from different cultures."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RL.5.9",
+    "strand": "Reading Literature",
+    "description": "Compare and contrast stories in the same genre (e.g., mysteries and adventure stories) on their approaches to similar themes and topics."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RL.3.10",
+    "strand": "Reading Literature",
+    "description": "By the end of the year, read and comprehend literature, including stories, dramas, and poetry, at the high end of the grades 2–3 text complexity band independently and proficiently. Activate prior knowledge and draw on previous experiences in order to make text-to-self or text-to-text connections and comparisons."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RL.4.10",
+    "strand": "Reading Literature",
+    "description": "By the end of the year, read and comprehend literature, including stories, dramas, and poetry, in the grades 4–5 text complexity band proficiently, with scaffolding as needed at the high end of the range. Activate prior knowledge and draw on previous experiences in order to make text-to-self or text-to-text connections and comparisons."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RL.5.10",
+    "strand": "Reading Literature",
+    "description": "By the end of the year, read and comprehend literature, including stories, dramas, and poetry, at the high end of the grades 4–5 text complexity band independently and proficiently. Activate prior knowledge and draw on previous experiences in order to make text-to-self or text-to-text connections and comparisons."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RL.6.1",
+    "strand": "Reading Literature",
+    "description": "Cite textual evidence to support analysis of what the text says explicitly as well as inferences drawn from the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RL.7.1",
+    "strand": "Reading Literature",
+    "description": "Cite several pieces of textual evidence to support analysis of what the text says explicitly as well as inferences drawn from the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RL.8.1",
+    "strand": "Reading Literature",
+    "description": "Cite the textual evidence that most strongly supports an analysis of what the text says explicitly as well as inferences drawn from the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RL.6.2",
+    "strand": "Reading Literature",
+    "description": "Analyze literary text development. a. Determine a theme of a text and how it is conveyed through particular details. b. Incorporate a theme and story details into an objective summary of the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RL.7.2",
+    "strand": "Reading Literature",
+    "description": "Analyze literary text development. a. Determine a theme of a text and analyze its development over the course of the text. b. Incorporate the development of a theme and other story details into an objective summary of the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RL.8.2",
+    "strand": "Reading Literature",
+    "description": "Analyze literary text development. a. Determine a theme of a text and analyze its development over the course of the text, including its relationship to the characters, setting, and plot. b. Incorporate a theme and its relationship to other story elements into an objective summary of the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RL.6.3",
+    "strand": "Reading Literature",
+    "description": "Describe how a particular story’s or drama’s plot unfolds in a series of episodes as well as how the characters respond or change as the plot moves toward a resolution."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RL.7.3",
+    "strand": "Reading Literature",
+    "description": "Analyze how particular elements of a story or drama interact (e.g., how setting shapes the characters or plot)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RL.8.3",
+    "strand": "Reading Literature",
+    "description": "Analyze how particular lines of dialogue or incidents in a story or drama propel the action, reveal aspects of a character, or provoke a decision."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RL.6.4",
+    "strand": "Reading Literature",
+    "description": "Determine the meaning of words and phrases as they are used in a text, including figurative and connotative meanings; analyze the impact of specific word choices, including sensory language, on meaning and tone."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RL.7.4",
+    "strand": "Reading Literature",
+    "description": "Determine the meaning of words and phrases as they are used in a text, including figurative and connotative meanings; analyze the impact of specific language choices, such as sensory words or phrases, on meaning and tone, including rhymes and other repetitions of sounds (e.g., alliteration) on a specific verse or stanza of a poem or section of a story or drama."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RL.8.4",
+    "strand": "Reading Literature",
+    "description": "Determine the meaning of words and phrases as they are used in a text, including figurative and connotative meanings; analyze the impact of specific word choices on meaning, mood, and tone, including analogies or allusions to other texts."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RL.6.5",
+    "strand": "Reading Literature",
+    "description": "Analyze how a particular sentence, chapter, scene, or stanza fits into the overall structure of a text and contributes to the development of the theme, setting, or plot."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RL.7.5",
+    "strand": "Reading Literature",
+    "description": "Analyze how a drama’s or poem’s form or structure (e.g., soliloquy, sonnet) contributes to its meaning."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RL.8.5",
+    "strand": "Reading Literature",
+    "description": "Compare and contrast the structure of two or more texts and analyze how the differing structure of each text contributes to its meaning and style."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RL.6.6",
+    "strand": "Reading Literature",
+    "description": "Explain how an author uses the point of view to develop the perspective of the narrator or speaker in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RL.7.6",
+    "strand": "Reading Literature",
+    "description": "Analyze how an author uses the point of view to develop and contrast the perspectives of different characters or narrators in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RL.8.6",
+    "strand": "Reading Literature",
+    "description": "Analyze how differences in the points of view and perspectives of the characters and the audience or reader (e.g., created through the use of dramatic irony) create effects such as suspense or humor."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RL.6.7",
+    "strand": "Reading Literature",
+    "description": "Compare and contrast the experience of reading a story, drama, or poem to listening to or viewing an audio, video, or live version of the text, including contrasting what they “see” and “hear” when reading the text to what they perceive when they listen or watch."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RL.7.7",
+    "strand": "Reading Literature",
+    "description": "Compare and contrast a written story, drama, or poem to its audio, filmed, staged, or multimedia version, analyzing the effects of techniques unique to each medium (e.g., lighting, sound, color, or camera focus and angles in a film)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RL.8.7",
+    "strand": "Reading Literature",
+    "description": "Analyze the extent to which a filmed or live production of a story or drama stays faithful to or departs from the text or script, evaluating the choices made by the director or actors."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RL.6.9",
+    "strand": "Reading Literature",
+    "description": "Compare and contrast texts in different forms or genres (e.g., stories and poems; historical novels and fantasy stories) in terms of their approaches to similar themes and topics."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RL.7.9",
+    "strand": "Reading Literature",
+    "description": "Compare and contrast a fictional portrayal of a time, place, or character and a historical account of the same period as a means of understanding how authors of fiction use or alter history."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RL.8.9",
+    "strand": "Reading Literature",
+    "description": "Analyze how a modern work of fiction alludes to themes, patterns of events, or character types from myths, traditional stories, and religious literary texts, such as (but not limited to) the Bible and The Epic of Gilgamesh, including describing how the material is rendered new."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RL.6.10",
+    "strand": "Reading Literature",
+    "description": "By the end of the year, read and comprehend literature, including stories, dramas, and poems, in the grades 6–8 text complexity band proficiently, with scaffolding as needed at the high end of the range. Build background knowledge and activate prior knowledge in order to make text-to-self, text-to-text, and text-to-world connections that deepen understanding of the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RL.7.10",
+    "strand": "Reading Literature",
+    "description": "By the end of the year, read and comprehend literature, including stories, dramas, and poems, in the grades 6–8 text complexity band proficiently, with scaffolding as needed at the high end of the range. Build background knowledge and activate prior knowledge in order to make text-to-self, text-to-text, and text-to-world connections that deepen understanding of the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RL.8.10",
+    "strand": "Reading Literature",
+    "description": "By the end of the year, read and comprehend literature, including stories, dramas, and poems, at the high end of grades 6–8 text complexity band independently and proficiently. Build background knowledge and activate prior knowledge in order to make text-to-self, text-to-text, and text-to-world connections that deepen understanding of the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RI.K.1",
+    "strand": "Reading Informational Text",
+    "description": "With prompting and support, ask and answer questions about key details in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RI.1.1",
+    "strand": "Reading Informational Text",
+    "description": "Ask and answer questions about key details in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RI.2.1",
+    "strand": "Reading Informational Text",
+    "description": "Ask and answer such questions as who, what, where, when, why, and how to demonstrate understanding of key details in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RI.K.2",
+    "strand": "Reading Informational Text",
+    "description": "With prompting and support, identify the main topic and retell key details of a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RI.1.2",
+    "strand": "Reading Informational Text",
+    "description": "Analyze informational text development. a. Identify the main topic. b. Retell key details of a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RI.2.2",
+    "strand": "Reading Informational Text",
+    "description": "Analyze informational text development. a. Identify the main topic of a multi-paragraph text. b. Identify the focus of specific paragraphs within the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RI.K.3",
+    "strand": "Reading Informational Text",
+    "description": "With prompting and support, describe the connection between two individuals, events, ideas, or pieces of information in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RI.1.3",
+    "strand": "Reading Informational Text",
+    "description": "Describe the connection between two individuals, events, ideas, or pieces of information in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RI.2.3",
+    "strand": "Reading Informational Text",
+    "description": "Describe the connection between a series of historical events, scientific ideas or concepts, or steps in technical procedures in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RI.K.4",
+    "strand": "Reading Informational Text",
+    "description": "With prompting and support, ask and answer questions about unknown words in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RI.1.4",
+    "strand": "Reading Informational Text",
+    "description": "Ask and answer questions to help determine or clarify the meaning of words and phrases in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RI.2.4",
+    "strand": "Reading Informational Text",
+    "description": "Determine the meaning of words and phrases in a text relevant to a grade 2 topic or subject area."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RI.K.5",
+    "strand": "Reading Informational Text",
+    "description": "Identify the front cover, back cover, and title page of a book."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RI.1.5",
+    "strand": "Reading Informational Text",
+    "description": "Know and use various text features (e.g., headings, tables of contents, glossaries, electronic menus, icons) to locate key facts or information in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RI.2.5",
+    "strand": "Reading Informational Text",
+    "description": "Know and use various text features (e.g., captions, bold print, subheadings, glossaries, indexes, electronic menus, icons) to locate key facts or information in a text efficiently."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RI.K.6",
+    "strand": "Reading Informational Text",
+    "description": "Name the author and illustrator of a text and define the role of each in presenting the ideas or information in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RI.1.6",
+    "strand": "Reading Informational Text",
+    "description": "Distinguish between information provided by pictures or other illustrations and information provided by the words in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RI.2.6",
+    "strand": "Reading Informational Text",
+    "description": "Identify the main purpose of a text, including what the author wants to answer, explain, or describe."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RI.K.7",
+    "strand": "Reading Informational Text",
+    "description": "With prompting and support, describe the relationship between illustrations and the text in which they appear (e.g., what person, place, thing, or idea in the text an illustration depicts)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RI.1.7",
+    "strand": "Reading Informational Text",
+    "description": "Use the illustrations and details in a text to describe its key ideas."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RI.2.7",
+    "strand": "Reading Informational Text",
+    "description": "Explain how specific images (e.g., a diagram showing how a machine works) contribute to and clarify a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RI.K.8",
+    "strand": "Reading Informational Text",
+    "description": "With prompting and support, identify the reasons an author gives to support points in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RI.1.8",
+    "strand": "Reading Informational Text",
+    "description": "Identify the reasons an author gives to support points in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RI.2.8",
+    "strand": "Reading Informational Text",
+    "description": "Identify the main points an author uses in a text and, with support, explain how reasons connect to the main points."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RI.K.9",
+    "strand": "Reading Informational Text",
+    "description": "With prompting and support, identify basic similarities in and differences between two texts on the same topic (e.g., in illustrations, descriptions, or procedures)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RI.1.9",
+    "strand": "Reading Informational Text",
+    "description": "Identify basic similarities in and differences between two texts on the same topic (e.g., in illustrations, descriptions, or procedures)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RI.2.9",
+    "strand": "Reading Informational Text",
+    "description": "Compare and contrast the most important points presented by two texts on the same topic."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "K",
+    "code": "RI.K.10",
+    "strand": "Reading Informational Text",
+    "description": "Actively engage in group reading activities with purpose and understanding."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "1",
+    "code": "RI.1.10",
+    "strand": "Reading Informational Text",
+    "description": "With prompting and support, read informational texts appropriately complex for grade 1."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "2",
+    "code": "RI.2.10",
+    "strand": "Reading Informational Text",
+    "description": "By the end of year, read and comprehend informational texts, including history/social studies, science, and technical texts, in the grades 2–3 text complexity band proficiently, with scaffolding as needed at the high end of the range."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RI.3.1",
+    "strand": "Reading Informational Text",
+    "description": "Ask and answer questions to demonstrate understanding of a text, referring explicitly to the text as the basis for the answers."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RI.4.1",
+    "strand": "Reading Informational Text",
+    "description": "Refer to details and examples in a text when explaining what the text says explicitly and when drawing inferences from the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RI.5.1",
+    "strand": "Reading Informational Text",
+    "description": "Quote accurately from a text when explaining what the text says explicitly and when drawing inferences from the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RI.3.2",
+    "strand": "Reading Informational Text",
+    "description": "Analyze informational text development. a. Determine the main idea of a text. b. Retell the key details and explain how they support the main idea."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RI.4.2",
+    "strand": "Reading Informational Text",
+    "description": "Analyze informational text development. a. Determine the main idea of a text and explain how it is supported by key details. b. Provide a summary of the text that includes the main idea and key details, as well as other important information."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RI.5.2",
+    "strand": "Reading Informational Text",
+    "description": "Analyze informational text development. a. Determine the main ideas of a text and explain how they are supported by key details. b. Provide a summary of the text that includes the main ideas and key details, as well as other important information."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RI.3.3",
+    "strand": "Reading Informational Text",
+    "description": "Describe the relationship between a series of historical events, scientific ideas or concepts, or steps in technical procedures in a text, using language that pertains to time, sequence, and cause/effect."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RI.4.3",
+    "strand": "Reading Informational Text",
+    "description": "Explain events, procedures, ideas, or concepts in a historical, scientific, or technical text, including what happened and why, based on specific information in the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RI.5.3",
+    "strand": "Reading Informational Text",
+    "description": "Explain the relationships or interactions between two or more individuals, events, ideas, or concepts in a historical, scientific, or technical text based on specific information in the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RI.3.4",
+    "strand": "Reading Informational Text",
+    "description": "Determine the meaning of general academic and domain-specific words and phrases in a text relevant to a grade 3 topic or subject area."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RI.4.4",
+    "strand": "Reading Informational Text",
+    "description": "Determine the meaning of general academic and domain-specific words or phrases in a text relevant to a grade 4 topic or subject area."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RI.5.4",
+    "strand": "Reading Informational Text",
+    "description": "Determine the meaning of general academic and domain-specific words and phrases in a text relevant to a grade 5 topic or subject area."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RI.3.5",
+    "strand": "Reading Informational Text",
+    "description": "Use text features and search tools (e.g., key words, sidebars, hyperlinks) to locate information relevant to a given topic efficiently."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RI.4.5",
+    "strand": "Reading Informational Text",
+    "description": "Describe the overall structure (e.g., chronology, comparison, cause/effect, problem/solution) of events, ideas, concepts, or information in a text or part of a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RI.5.5",
+    "strand": "Reading Informational Text",
+    "description": "Compare and contrast the overall structure (e.g., chronology, comparison, cause/effect, problem/solution) of events, ideas, concepts, or information in two or more texts."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RI.3.6",
+    "strand": "Reading Informational Text",
+    "description": "Distinguish their own perspective from that of the author of a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RI.4.6",
+    "strand": "Reading Informational Text",
+    "description": "Compare and contrast a firsthand and secondhand account of the same event or topic; describe the differences in perspective and the information provided."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RI.5.6",
+    "strand": "Reading Informational Text",
+    "description": "Analyze multiple accounts of the same event or topic, noting important similarities and differences in the perspectives they represent."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RI.3.7",
+    "strand": "Reading Informational Text",
+    "description": "Use information gained from illustrations (e.g., maps, photographs) and the words in a text to demonstrate understanding of the text (e.g., where, when, why, and how key events occur)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RI.4.7",
+    "strand": "Reading Informational Text",
+    "description": "Interpret information presented visually, orally, or quantitatively (e.g., in charts, graphs, diagrams, time lines, animations, or interactive elements on Web pages) and explain how the information contributes to an understanding of the text in which it appears."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RI.5.7",
+    "strand": "Reading Informational Text",
+    "description": "Draw on information from multiple print or digital sources, demonstrating the ability to locate an answer to a question quickly or to solve a problem efficiently."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RI.3.8",
+    "strand": "Reading Informational Text",
+    "description": "Describe the relationships between the evidence and points an author uses throughout a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RI.4.8",
+    "strand": "Reading Informational Text",
+    "description": "Explain how an author uses evidence to support particular points in a text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RI.5.8",
+    "strand": "Reading Informational Text",
+    "description": "Explain how an author uses evidence to support particular points in a text, identifying which evidence supports corresponding point(s)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RI.3.9",
+    "strand": "Reading Informational Text",
+    "description": "Compare and contrast the most important points and key details presented in two texts on the same topic."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RI.4.9",
+    "strand": "Reading Informational Text",
+    "description": "Integrate information from two texts on the same topic in order to write or speak about the subject knowledgeably."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RI.5.9",
+    "strand": "Reading Informational Text",
+    "description": "Integrate information from several texts on the same topic in order to write or speak about the subject knowledgeably."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "3",
+    "code": "RI.3.10",
+    "strand": "Reading Informational Text",
+    "description": "By the end of the year, read and comprehend informational texts, including history/social studies, science, and technical texts, at the high end of the grades 2–3 text complexity band independently and proficiently."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "4",
+    "code": "RI.4.10",
+    "strand": "Reading Informational Text",
+    "description": "By the end of year, read and comprehend informational texts, including history/social studies, science, and technical texts, in the grades 4–5 text complexity band proficiently, with scaffolding as needed at the high end of the range."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "5",
+    "code": "RI.5.10",
+    "strand": "Reading Informational Text",
+    "description": "By the end of the year, read and comprehend informational texts, including history/social studies, science, and technical texts, at the high end of the grades 4–5 text complexity band independently and proficiently."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RI.6.1",
+    "strand": "Reading Informational Text",
+    "description": "Cite textual evidence to support analysis of what the text says explicitly as well as inferences drawn from the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RI.7.1",
+    "strand": "Reading Informational Text",
+    "description": "Cite several pieces of textual evidence to support analysis of what the text says explicitly as well as inferences drawn from the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RI.8.1",
+    "strand": "Reading Informational Text",
+    "description": "Cite the textual evidence that most strongly supports an analysis of what the text says explicitly as well as inferences drawn from the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RI.6.2",
+    "strand": "Reading Informational Text",
+    "description": "Analyze informational text development. a. Determine a central idea of a text and how it is conveyed through particular details. b. Provide an objective summary of the text that includes the central idea and relevant details."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RI.7.2",
+    "strand": "Reading Informational Text",
+    "description": "Analyze informational text development. a. Determine two or more central ideas in a text and analyze their development over the course of the text. b. Provide an objective summary of the text that includes the central ideas and their development."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RI.8.2",
+    "strand": "Reading Informational Text",
+    "description": "Analyze informational text development. a. Determine a central idea of a text and analyze its development over the course of the text, including its relationship to supporting ideas. b. Incorporate central ideas and their relationships into an objective summary of the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RI.6.3",
+    "strand": "Reading Informational Text",
+    "description": "Analyze in detail how a key individual, event, or idea is introduced, illustrated, and elaborated in a text (e.g., through examples or anecdotes)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RI.7.3",
+    "strand": "Reading Informational Text",
+    "description": "Analyze the interactions between individuals, events, and ideas in a text (e.g., how ideas influence individuals or events, or how individuals influence ideas or events)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RI.8.3",
+    "strand": "Reading Informational Text",
+    "description": "Analyze how a text makes connections among and distinctions between individuals, ideas, or events (e.g., through comparisons, analogies, or categories)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RI.6.4",
+    "strand": "Reading Informational Text",
+    "description": "Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RI.7.4",
+    "strand": "Reading Informational Text",
+    "description": "Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings; analyze the impact of a specific word choice on meaning and tone."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RI.8.4",
+    "strand": "Reading Informational Text",
+    "description": "Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings; analyze the impact of specific word choices on meaning and tone, including analogies or allusions to other texts."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RI.6.5",
+    "strand": "Reading Informational Text",
+    "description": "Analyze how a particular sentence, paragraph, chapter, or section fits into the overall structure of a text and contributes to the development of the ideas."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RI.7.5",
+    "strand": "Reading Informational Text",
+    "description": "Analyze the structure an author uses to organize a text, including how the major sections contribute to the whole and to the development of the ideas."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RI.8.5",
+    "strand": "Reading Informational Text",
+    "description": "Analyze in detail the structure of a specific paragraph in a text, including the role of particular sentences in developing and refining a key concept."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RI.6.6",
+    "strand": "Reading Informational Text",
+    "description": "Determine an author’s perspective or purpose in a text and explain how it is conveyed in the text."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RI.7.6",
+    "strand": "Reading Informational Text",
+    "description": "Determine an author’s perspective or purpose in a text and analyze how the author distinguishes his or her position from that of others."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RI.8.6",
+    "strand": "Reading Informational Text",
+    "description": "Determine an author’s perspective or purpose in a text and analyze how the author acknowledges and responds to conflicting evidence or viewpoints."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RI.6.7",
+    "strand": "Reading Informational Text",
+    "description": "Integrate information presented in different media or formats (e.g., visually, quantitatively) as well as in words to develop a coherent understanding of a topic or issue."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RI.7.7",
+    "strand": "Reading Informational Text",
+    "description": "Compare and contrast a text to an audio, video, or multimedia version of the text, analyzing each medium’s portrayal of the subject (e.g., how the delivery of a speech affects the impact of the words)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RI.8.7",
+    "strand": "Reading Informational Text",
+    "description": "Evaluate the advantages and disadvantages of using different mediums (e.g., print or digital text, video, multimedia) to present a particular topic or idea."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RI.6.8",
+    "strand": "Reading Informational Text",
+    "description": "Trace and evaluate the argument and specific claims in a text, distinguishing claims that are supported by evidence from claims that are not."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RI.7.8",
+    "strand": "Reading Informational Text",
+    "description": "Trace and evaluate the argument and specific claims in a text, assessing whether the reasoning is sound and the evidence is relevant and sufficient to support the claims."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RI.8.8",
+    "strand": "Reading Informational Text",
+    "description": "Delineate and evaluate the argument and specific claims in a text, assessing whether the reasoning is sound and the evidence is relevant and sufficient; recognize when irrelevant evidence is introduced."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RI.6.9",
+    "strand": "Reading Informational Text",
+    "description": "Compare and contrast one author’s presentation of events with that of another (e.g., a memoir written by and a biography on the same person)."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RI.7.9",
+    "strand": "Reading Informational Text",
+    "description": "Analyze how two or more authors writing about the same topic shape their presentations of key information by emphasizing different evidence or advancing different interpretations of facts."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RI.8.9",
+    "strand": "Reading Informational Text",
+    "description": "Analyze a case in which two or more texts provide conflicting information on the same topic and identify where the texts disagree on matters of fact or interpretation."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "6",
+    "code": "RI.6.10",
+    "strand": "Reading Informational Text",
+    "description": "By the end of the year, read and comprehend literary nonfiction in the grades 6–8 text complexity band proficiently, with scaffolding as needed at the high end of the range."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "7",
+    "code": "RI.7.10",
+    "strand": "Reading Informational Text",
+    "description": "By the end of the year, read and comprehend literary nonfiction in the grades 6–8 text complexity band proficiently, with scaffolding as needed at the high end of the range."
+  },
+  {
+    "state": "OH",
+    "subject": "ela",
+    "grade": "8",
+    "code": "RI.8.10",
+    "strand": "Reading Informational Text",
+    "description": "By the end of the year, read and comprehend literary nonfiction at the high end of the grades 6–8 text complexity band independently and proficiently."
+  }
+]

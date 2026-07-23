@@ -1,0 +1,33 @@
+{
+  "links": [
+    {"oh": "RI.2.4", "state": "TX", "code": "2.3B", "confidence": "strong",
+     "rationale": "Both are plain determine-the-meaning-of-words-in-a-text via context; TX 2.3B is the single genre-neutral context element for G2 and legitimately anchors this RI.2.4 (RL.2.4 is instead a sound-device standard, so not paired here)."},
+    {"oh": "RL.3.4", "state": "TX", "code": "3.3B", "confidence": "strong",
+     "rationale": "Shared skill of determining meaning of words as used in a text; TX 3.3B (use context to determine meaning of unfamiliar/multiple-meaning words) is the one G3 context element and anchors both RL.3.4 and RI.3.4, with the literal/nonliteral note a minor figurative edge on the core."},
+    {"oh": "RI.3.4", "state": "TX", "code": "3.3B", "confidence": "strong",
+     "rationale": "General academic and domain-specific word meaning determined from context is a direct analogue of TX 3.3B; same G3 element also anchors RL.3.4 (expected, not double-counting)."},
+    {"oh": "RL.4.4", "state": "TX", "code": "4.3B", "confidence": "strong",
+     "rationale": "Determining meaning of words as used in a text matches TX 4.3B context skill; the mythological-allusion clause is a minor figurative edge on an otherwise strong core; same G4 element also anchors RI.4.4."},
+    {"oh": "RI.4.4", "state": "TX", "code": "4.3B", "confidence": "strong",
+     "rationale": "Academic/domain-specific meaning from context is a direct analogue of TX 4.3B; same G4 element also anchors RL.4.4 (expected)."},
+    {"oh": "RL.5.4", "state": "TX", "code": "5.3B", "confidence": "strong",
+     "rationale": "Core determine-meaning-as-used-in-text aligns with TX 5.3B context skill; figurative language (metaphors/similes/idioms) is a modest edge on a strong core; same G5 element also anchors RI.5.4."},
+    {"oh": "RI.5.4", "state": "TX", "code": "5.3B", "confidence": "strong",
+     "rationale": "Academic/domain-specific meaning from context is a direct analogue of TX 5.3B; same G5 element also anchors RL.5.4 (expected)."},
+    {"oh": "RL.6.4", "state": "TX", "code": "6.2B", "confidence": "moderate",
+     "rationale": "Core determine-meaning matches TX 6.2B (context via definition/analogy/examples), but RL.6.4 leans heavily into figurative/connotative meaning and word-choice impact on tone, which is beyond pure context-to-meaning; same G6 element also anchors RI.6.4."},
+    {"oh": "RI.6.4", "state": "TX", "code": "6.2B", "confidence": "strong",
+     "rationale": "Figurative/connotative/technical meaning determined in a text aligns strongly with TX 6.2B context clarification; same G6 element also anchors RL.6.4 (expected)."},
+    {"oh": "RL.7.4", "state": "TX", "code": "7.2B", "confidence": "moderate",
+     "rationale": "Core determine-meaning matches TX 7.2B (context via contrast/cause-effect), but RL.7.4 is dominated by figurative/connotative meaning, tone analysis, and sound devices, so only a partial fit to a pure context element; same G7 element also anchors RI.7.4."},
+    {"oh": "RI.7.4", "state": "TX", "code": "7.2B", "confidence": "strong",
+     "rationale": "Determining figurative/connotative/technical meaning of words in a text aligns strongly with TX 7.2B context skill; same G7 element also anchors RL.7.4 (expected)."},
+    {"oh": "RL.8.4", "state": "TX", "code": "8.2B", "confidence": "moderate",
+     "rationale": "Core determine-meaning matches TX 8.2B (context within/beyond a paragraph), but RL.8.4 emphasizes figurative/connotative meaning, mood/tone, and analogies/allusions, going beyond pure context-to-meaning; same G8 element also anchors RI.8.4."},
+    {"oh": "RI.8.4", "state": "TX", "code": "8.2B", "confidence": "strong",
+     "rationale": "Determining figurative/connotative/technical meaning of words in a text aligns strongly with TX 8.2B context clarification; same G8 element also anchors RL.8.4 (expected)."}
+  ],
+  "unmatched": [
+    {"oh": "RL.2.4", "why": "Not a context-vocabulary standard: it is about how sound devices (beats, alliteration, rhyme, repeated lines) supply rhythm and meaning in a poem/song, with no determine-meaning-from-context skill to match TX 2.3B."}
+  ]
+}

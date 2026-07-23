@@ -1,0 +1,326 @@
+[
+ {
+  "id": "sci7-01",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.ESS.1",
+  "ga": "S6E3b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 6). Ohio: the hydrologic cycle moves water through Earth's spheres with thermal-energy transfer and is central to weather. Georgia S6E3b investigates the sun's energy driving atmospheric conditions that cycle water (evaporation, condensation, precipitation, infiltration, groundwater, runoff)."
+ },
+ {
+  "id": "sci7-02",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.ESS.1",
+  "ga": "S4E3a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: thermal energy is transferred as water changes state throughout the water cycle. Georgia S4E3a observes the flow of energy in water as it changes states between solid, liquid, and gas, matching the energy/state-change portion at a lower grade."
+ },
+ {
+  "id": "sci7-03",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.ESS.2",
+  "ga": "S6E4c",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 6). Ohio: solar thermal-energy transfers plus Earth's rotation drive atmospheric currents (jet stream) and global climate. Georgia S6E4c models how unequal heating and Earth's rotation cause local and global wind systems."
+ },
+ {
+  "id": "sci7-04",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.ESS.2",
+  "ga": "S6E3d",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 6). Ohio: thermal-energy transfers in the ocean form currents (Gulf Stream) shaped by density and salinity. Georgia S6E3d analyzes the causes and effects of waves, currents, and tides in Earth's systems."
+ },
+ {
+  "id": "sci7-05",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.ESS.3",
+  "ga": "S6E4a",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 6). Ohio: the atmosphere has defined layers with distinct properties and a mixture of gases including CO2 and other trace gases. Georgia S6E4a compares and contrasts the composition of Earth's atmospheric layers and greenhouse gases."
+ },
+ {
+  "id": "sci7-06",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.ESS.4",
+  "ga": "S6E2a",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 6). Ohio: the moon's changing position relative to Earth and sun produces the phases of the moon. Georgia S6E2a models the phases of the moon by showing the relative positions of the sun, Earth, and moon."
+ },
+ {
+  "id": "sci7-07",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.ESS.4",
+  "ga": "S6E2b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 6). Ohio: relative positions of Earth, moon, and sun cause solar and lunar eclipses. Georgia S6E2b constructs an explanation of the cause of solar and lunar eclipses."
+ },
+ {
+  "id": "sci7-08",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.ESS.4",
+  "ga": "S6E3d",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 6). Ohio: gravitational force between Earth and moon causes daily tides, including spring and neap tides. Georgia S6E3d analyzes the causes and effects of tides (with waves and currents) in Earth's systems."
+ },
+ {
+  "id": "sci7-09",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.ESS.5",
+  "ga": "S6E2c",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 6). Ohio: Earth's 23.5-degree axial tilt and revolution control the direct sunlight received, causing seasons. Georgia S6E2c relates the tilt of the Earth to the distribution of sunlight throughout the year and its effect on seasons."
+ },
+ {
+  "id": "sci7-10",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.ESS.5",
+  "ga": "S4E2c",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: the tilt of Earth's axis plus its revolution around the sun cause seasons. Georgia S4E2c explains how Earth's orbit with its consistent tilt affects seasonal changes, at an earlier grade."
+ },
+ {
+  "id": "sci7-11",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.PS.1",
+  "ga": "S8P1e",
+  "confidence": "partial",
+  "rationale": "Cross-grade (GA grade 8). Ohio: the conceptual introduction to the Periodic Table, organizing elements by observable properties and as metals/non-metals/metalloids. Georgia S8P1e analyzes patterns within the periodic table but emphasizes atomic structure, a deeper treatment than Ohio's observable-property focus."
+ },
+ {
+  "id": "sci7-12",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.PS.1",
+  "ga": "S8P1c",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 8). Ohio: elements are classified by similar properties such as density, melting point, and boiling point. Georgia S8P1c compares and contrasts physical properties of matter including density, melting point, and boiling point."
+ },
+ {
+  "id": "sci7-13",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.PS.2",
+  "ga": "S8P1f",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 8). Ohio: matter can change but the number and types of atoms and total mass remain constant in a closed system. Georgia S8P1f explains conservation of matter in a chemical reaction, including differences between products and reactants."
+ },
+ {
+  "id": "sci7-14",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.PS.2",
+  "ga": "S8P1a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 8). Ohio: physically combining substances forms a mixture that can be separated through physical processes. Georgia S8P1a compares and contrasts pure substances and mixtures, including heterogeneous and homogeneous mixtures."
+ },
+ {
+  "id": "sci7-15",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.PS.3",
+  "ga": "S8P2c",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 8). Ohio: energy can be transformed from one form to another while the total amount remains the same. Georgia S8P2c constructs an argument about the type of energy transformations within a system; overlap in transformation with less explicit conservation framing."
+ },
+ {
+  "id": "sci7-16",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.PS.3",
+  "ga": "S8P2b",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 8). Ohio: energy is transformed or transferred but never lost. Georgia S8P2b investigates the transformation between kinetic and potential energy within a system, a concrete case of energy conservation."
+ },
+ {
+  "id": "sci7-17",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.PS.4",
+  "ga": "S8P2d",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 8). Ohio: thermal energy can be transferred through radiation, convection, and conduction. Georgia S8P2d investigates the effects of heat transfer via conduction, radiation, and convection."
+ },
+ {
+  "id": "sci7-18",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.PS.4",
+  "ga": "S8P4a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 8). Ohio: mechanical and electromagnetic waves transfer energy when they interact with matter. Georgia S8P4a develops explanations about the similarities and differences between electromagnetic and mechanical waves."
+ },
+ {
+  "id": "sci7-19",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.PS.4",
+  "ga": "S5P2b",
+  "confidence": "partial",
+  "rationale": "Cross-grade (GA grade 5). Ohio: an electrical circuit transfers energy from a source to a device. Georgia S5P2b designs a complete simple electric circuit and explains its necessary components, covering the circuit portion at an earlier grade."
+ },
+ {
+  "id": "sci7-20",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.LS.1",
+  "ga": "S7L4b",
+  "confidence": "strong",
+  "rationale": "Same-grade match. Ohio: energy flows and matter is transferred continuously among organisms and their environment, with total matter and energy remaining constant. Georgia S7L4b models the cycling of matter and the flow of energy among biotic and abiotic components of an ecosystem."
+ },
+ {
+  "id": "sci7-21",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.LS.1",
+  "ga": "S4L1b",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: plants make sugars from light and are consumed by organisms that release the energy and materials they need. Georgia S4L1b models the flow of energy through a food web beginning with sunlight and including producers, consumers, and decomposers."
+ },
+ {
+  "id": "sci7-22",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.LS.2",
+  "ga": "S7L4d",
+  "confidence": "strong",
+  "rationale": "Same-grade match. Ohio: biomes are regional ecosystems characterized by distinct organisms developed under specific soil and climatic conditions. Georgia S7L4d differentiates Earth's major terrestrial biomes and aquatic ecosystems and the factors (climate, food, water, location) that influence patterns across biomes."
+ },
+ {
+  "id": "sci7-23",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.LS.2",
+  "ga": "S7L4c",
+  "confidence": "strong",
+  "rationale": "Same-grade match. Ohio: number and types of species fluctuate over time and disruptions to abiotic or biotic components impact ecosystem composition. Georgia S7L4c interprets data on how resource availability, disease, climate, and human activity affect organisms, populations, communities, and ecosystems."
+ },
+ {
+  "id": "sci7-24",
+  "subject": "science",
+  "grade": "7",
+  "oh": "7.LS.2",
+  "ga": "S7L4a",
+  "confidence": "strong",
+  "rationale": "Same-grade match. Ohio: the number, growth, and survival of organisms in a biome depend on biotic and abiotic factors. Georgia S7L4a explains patterns of interactions in ecosystems in terms of relationships among organisms and abiotic components (predator-prey, competition, mutualism, etc.)."
+ },
+ {
+  "id": "ss7-01",
+  "subject": "social_studies",
+  "grade": "7",
+  "oh": "7.SS.10",
+  "ga": "SS6H1b",
+  "confidence": "partial",
+  "rationale": "Cross-grade (GA grade 6). Ohio: European economic and cultural influence increased through explorations, conquests, and colonization. Georgia SS6H1b describes the influence of the Spanish and Portuguese on the language and religions of Latin America, a specific colonial-legacy case of that broader process."
+ },
+ {
+  "id": "ss7-02",
+  "subject": "social_studies",
+  "grade": "7",
+  "oh": "7.SS.13",
+  "ga": "SS7G3a",
+  "confidence": "moderate",
+  "rationale": "Same-grade match. Ohio: geographic factors promote or impede the movement of people, products, and ideas. Georgia SS7G3a explains how the characteristics of the Sahara, Sahel, savanna, and rainforest impact trade and affect where people live."
+ },
+ {
+  "id": "ss7-03",
+  "subject": "social_studies",
+  "grade": "7",
+  "oh": "7.SS.13",
+  "ga": "SS7G7a",
+  "confidence": "moderate",
+  "rationale": "Same-grade match. Ohio: geographic factors promote or impede the movement of people and products. Georgia SS7G7a describes how the deserts and rivers of Southwest Asia impact trade and affect where people live."
+ },
+ {
+  "id": "ss7-04",
+  "subject": "social_studies",
+  "grade": "7",
+  "oh": "7.SS.13",
+  "ga": "SS7G11a",
+  "confidence": "moderate",
+  "rationale": "Same-grade match. Ohio: geographic factors promote or impede the movement of people, products, and ideas. Georgia SS7G11a describes how the mountain, desert, and water features of Southern and Eastern Asia impact trade and affect where people live."
+ },
+ {
+  "id": "ss7-05",
+  "subject": "social_studies",
+  "grade": "7",
+  "oh": "7.SS.14",
+  "ga": "SS7G8c",
+  "confidence": "partial",
+  "rationale": "Same-grade match. Ohio: trade routes helped spread major world religions (including Judaism, Christianity, Islam) across the Eastern Hemisphere. Georgia SS7G8c compares and contrasts the prominent religions in Southwest Asia (Judaism, Islam, Christianity); overlaps on the religions but not on the trade-route diffusion."
+ },
+ {
+  "id": "ss7-06",
+  "subject": "social_studies",
+  "grade": "7",
+  "oh": "7.SS.14",
+  "ga": "SS7G12b",
+  "confidence": "partial",
+  "rationale": "Same-grade match. Ohio: trade routes fostered the spread of major world religions including Buddhism and Hinduism. Georgia SS7G12b compares and contrasts the belief systems originating in Southern and Eastern Asia (Buddhism, Hinduism, Shintoism, Confucianism); shared religions content, different framing."
+ },
+ {
+  "id": "ss7-07",
+  "subject": "social_studies",
+  "grade": "7",
+  "oh": "7.SS.17",
+  "ga": "SS7CG1b",
+  "confidence": "partial",
+  "rationale": "Same-grade match. Ohio: Greek democracy and the Roman Republic influenced the structure and function of modern democratic governments. Georgia SS7CG1b describes the two predominant forms of democratic government (parliamentary and presidential); overlaps on modern democratic structures but not the classical origins."
+ },
+ {
+  "id": "ss7-08",
+  "subject": "social_studies",
+  "grade": "7",
+  "oh": "7.SS.19",
+  "ga": "SS4E1a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: individuals, governments, and businesses weigh costs against benefits when making economic decisions. Georgia SS4E1a describes opportunity cost and its relationship to decision-making across time, the same economic-decision reasoning at an earlier grade."
+ },
+ {
+  "id": "ss7-09",
+  "subject": "social_studies",
+  "grade": "7",
+  "oh": "7.SS.20",
+  "ga": "SS7E2a",
+  "confidence": "moderate",
+  "rationale": "Same-grade match. Ohio: uneven distribution of productive resources contributed to specialization, trade, and interdependence. Georgia SS7E2a explains how specialization encourages trade between countries."
+ },
+ {
+  "id": "ss7-10",
+  "subject": "social_studies",
+  "grade": "7",
+  "oh": "7.SS.20",
+  "ga": "SS7E3d",
+  "confidence": "moderate",
+  "rationale": "Same-grade match. Ohio: variability in the distribution of productive resources across regions drove specialization and trade. Georgia SS7E3d explains how the distribution of natural resources affects the economic development of Africa."
+ },
+ {
+  "id": "ss7-11",
+  "subject": "social_studies",
+  "grade": "7",
+  "oh": "7.SS.21",
+  "ga": "SS3E3b",
+  "confidence": "partial",
+  "rationale": "Cross-grade (GA grade 3). Ohio: the growth of cities and empires fostered the growth of markets and market exchanges. Georgia SS3E3b describes how goods and services are allocated by price in the marketplace, the market-exchange concept at an earlier grade."
+ },
+ {
+  "id": "ss7-12",
+  "subject": "social_studies",
+  "grade": "7",
+  "oh": "7.SS.21",
+  "ga": "SS7E2c",
+  "confidence": "partial",
+  "rationale": "Same-grade match. Ohio: market exchanges encouraged the transition from barter to monetary economies. Georgia SS7E2c explains why international trade requires a system for exchanging currencies between nations, touching the monetary-exchange concept."
+ }
+]

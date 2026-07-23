@@ -1,0 +1,226 @@
+[
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "2",
+  "code": "2.ESS.1",
+  "strand": "Earth and Space Science",
+  "topic": "The Atmosphere",
+  "description": "The atmosphere is primarily made up of air. Air has properties that can be observed and measured. The transfer of energy in the atmosphere causes air movement, which is felt as wind. Wind speed and direction can be measured."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "2",
+  "code": "2.ESS.2",
+  "strand": "Earth and Space Science",
+  "topic": "The Atmosphere",
+  "description": "Water is present in the atmosphere. Water is present in the atmosphere as water vapor. When water vapor in the atmosphere cools, it forms clouds, fog, rain, ice, snow, sleet or hail. Note: The emphasis at this grade level is investigating condensation and evaporation, not memorizing the water cycle itself. Note: The emphasis is not in naming cloud types, but in relating the characteristics of the clouds with weather."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "2",
+  "code": "2.ESS.3",
+  "strand": "Earth and Space Science",
+  "topic": "The Atmosphere",
+  "description": "Long- and short-term weather changes occur due to changes in energy. Changes in energy affect all aspects of weather, including temperature, precipitation, and wind."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "2",
+  "code": "2.PS.1",
+  "strand": "Physical Science",
+  "topic": "Changes in Motion",
+  "description": "Forces change the motion of an object. Motion can increase, change direction or stop depending on the force applied. The change in motion of an object is related to the size of the force. Some forces act without touching, such as using a magnet to move an object or objects falling to the ground."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "2",
+  "code": "2.LS.1",
+  "strand": "Life Science",
+  "topic": "Interactions within Habitats",
+  "description": "Living things cause changes on Earth. Living things function and interact with their physical environments. Living things cause changes in the environments where they live; the changes can be very noticeable or slightly noticeable, fast or slow. Note: At this grade level, discussion is limited to changes that can be easily observed."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "2",
+  "code": "2.LS.2",
+  "strand": "Life Science",
+  "topic": "Interactions within Habitats",
+  "description": "All organisms alive today result from their ancestors, some of which may be extinct. Not all kinds of organisms that lived in the past are represented by living organisms today. Some kinds of organisms become extinct when their basic needs are no longer met or the environment changes."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.1",
+  "strand": "History",
+  "topic": "Historical Thinking and Skills",
+  "theme": "People Working Together",
+  "description": "Time can be shown graphically on calendars and timelines."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.2",
+  "strand": "History",
+  "topic": "Historical Thinking and Skills",
+  "theme": "People Working Together",
+  "description": "Change over time can be shown with artifacts, maps, and photographs."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.3",
+  "strand": "History",
+  "topic": "Heritage",
+  "theme": "People Working Together",
+  "description": "Science and technology have changed daily life."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.4",
+  "strand": "History",
+  "topic": "Heritage",
+  "theme": "People Working Together",
+  "description": "Biographies can show how peoples\u2019 actions have shaped the world in which we live."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.5",
+  "strand": "Geography",
+  "topic": "Spatial Thinking and Skills",
+  "theme": "People Working Together",
+  "description": "Maps and their symbols, including cardinal directions, can be interpreted to answer questions about location of places."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.6",
+  "strand": "Geography",
+  "topic": "Places and Regions",
+  "theme": "People Working Together",
+  "description": "The work that people do is impacted by the distinctive human and physical characteristics in the place where they live."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.7",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "People Working Together",
+  "description": "Human activities alter the physical environment, both positively and negatively."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.8",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "People Working Together",
+  "description": "Cultures develop in unique ways, in part through the influence of the physical environment."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.9",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "People Working Together",
+  "description": "Interactions among cultures lead to sharing ways of life."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.10",
+  "strand": "Government",
+  "topic": "Civic Participation and Skills",
+  "theme": "People Working Together",
+  "description": "Respect for the rights of self and others includes making responsible choices and being accountable for personal actions."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.11",
+  "strand": "Government",
+  "topic": "Civic Participation and Skills",
+  "theme": "People Working Together",
+  "description": "Groups are accountable for choices they make and actions they take."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.12",
+  "strand": "Government",
+  "topic": "Rules and Laws",
+  "theme": "People Working Together",
+  "description": "There are different rules and laws that govern behavior in different settings."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.13",
+  "strand": "Economics",
+  "topic": "Economic Decision Making and Skills",
+  "theme": "People Working Together",
+  "description": "Information displayed on bar graphs can be used to compare quantities."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.14",
+  "strand": "Economics",
+  "topic": "Scarcity",
+  "theme": "People Working Together",
+  "description": "Resources can be used in various ways."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.15",
+  "strand": "Economics",
+  "topic": "Production and Consumption",
+  "theme": "People Working Together",
+  "description": "Most people around the world work in jobs in which they produce specific goods and services."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.16",
+  "strand": "Economics",
+  "topic": "Markets",
+  "theme": "People Working Together",
+  "description": "People use money to buy and sell goods and services."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.SS.17",
+  "strand": "Economics",
+  "topic": "Financial Literacy",
+  "theme": "People Working Together",
+  "description": "People earn income by working."
+ }
+]

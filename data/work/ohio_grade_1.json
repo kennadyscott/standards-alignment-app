@@ -1,0 +1,196 @@
+[
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "1",
+  "code": "1.ESS.1",
+  "strand": "Earth and Space Science",
+  "topic": "Sun, Energy, and Weather",
+  "description": "The sun is the principal source of energy Sunlight warms Earth\u2019s land, air and water. The amount of exposure to sunlight affects the amount of warming or cooling of air, water and land."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "1",
+  "code": "1.ESS.2",
+  "strand": "Earth and Space Science",
+  "topic": "Sun, Energy, and Weather",
+  "description": "Water on Earth is present in many forms. The physical properties of water can change. These changes occur due to changing energy. Water can change from a liquid to a solid and from a solid to a liquid. Note: Water as a vapor is not introduced until grade 2; the water cycle is reserved for later grades."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "1",
+  "code": "1.PS.1",
+  "strand": "Physical Science",
+  "topic": "Motion and Materials",
+  "description": "Properties of objects and materials can change. Objects and materials change when exposed to various conditions, such as heating or cooling. Changes in temperature are a result of changes in energy. Not all materials change in the same way."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "1",
+  "code": "1.PS.2",
+  "strand": "Physical Science",
+  "topic": "Motion and Materials",
+  "description": "Objects can be moved in a variety of ways, such as straight, zigzag, circular and back and forth. The position of an object can be described by locating it relative to another object or to the object\u2019s surroundings. An object is in motion when its position is changing. The motion of an object can be affected by pushing or pulling. A push or pull is a force that can make an object move faster, slower or go in a different direction. Changes in motion are a result of changes in energy."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "1",
+  "code": "1.LS.1",
+  "strand": "Life Science",
+  "topic": "Basic Needs of Living Things",
+  "description": "Living things have basic needs, which are met by obtaining materials from the physical environment. Living things require energy, water, and a particular range of temperatures in their environments. Plants get energy from sunlight. Animals get energy from plants and other animals. Living things acquire resources from the living and nonliving components of the environment."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "1",
+  "code": "1.LS.2",
+  "strand": "Life Science",
+  "topic": "Basic Needs of Living Things",
+  "description": "Living things survive only in environments that meet their needs. Resources are necessary to meet the needs of an individual and populations of individuals. Living things interact with their physical environments as they meet those needs. Effects of seasonal changes within the local environment directly impact the availability of resources."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "1",
+  "code": "1.SS.1",
+  "strand": "History",
+  "topic": "Historical Thinking and Skills",
+  "theme": "Families Now and Long Ago, Near and Far",
+  "description": "Time can be divided into categories (e.g., months of the year, past, present and future)."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "1",
+  "code": "1.SS.2",
+  "strand": "History",
+  "topic": "Historical Thinking and Skills",
+  "theme": "Families Now and Long Ago, Near and Far",
+  "description": "Photographs, letters, artifacts and books can be used to learn about the past."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "1",
+  "code": "1.SS.3",
+  "strand": "History",
+  "topic": "Heritage",
+  "theme": "Families Now and Long Ago, Near and Far",
+  "description": "The ways basic human needs are met have changed over time."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "1",
+  "code": "1.SS.4",
+  "strand": "Geography",
+  "topic": "Spatial Thinking and Skills",
+  "theme": "Families Now and Long Ago, Near and Far",
+  "description": "Maps can be used to locate and identify places."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "1",
+  "code": "1.SS.5",
+  "strand": "Geography",
+  "topic": "Places and Regions",
+  "theme": "Families Now and Long Ago, Near and Far",
+  "description": "Places are distinctive because of their physical characteristics (land forms and bodies of water) and human characteristics (structures built by people)."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "1",
+  "code": "1.SS.6",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "Families Now and Long Ago, Near and Far",
+  "description": "Families interact with the physical environment differently in different times and places."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "1",
+  "code": "1.SS.7",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "Families Now and Long Ago, Near and Far",
+  "description": "Diverse cultural practices address basic human needs in various ways and may change over time"
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "1",
+  "code": "1.SS.8",
+  "strand": "Government",
+  "topic": "Civic Participation and Skills",
+  "theme": "Families Now and Long Ago, Near and Far",
+  "description": "Individuals have responsibility to take action toward the achievement of common goals in homes, schools and communities and are accountable for those actions."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "1",
+  "code": "1.SS.9",
+  "strand": "Government",
+  "topic": "Civic Participation and Skills",
+  "theme": "Families Now and Long Ago, Near and Far",
+  "description": "Collaboration requires group members to respect the rights and opinions of others."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "1",
+  "code": "1.SS.10",
+  "strand": "Government",
+  "topic": "Rules and Laws",
+  "theme": "Families Now and Long Ago, Near and Far",
+  "description": "Rules exist in different settings. The principles of fairness should guide rules and the consequences for breaking rules."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "1",
+  "code": "1.SS.11",
+  "strand": "Economics",
+  "topic": "Scarcity",
+  "theme": "Families Now and Long Ago, Near and Far",
+  "description": "Wants are unlimited and resources are limited. Individuals make choices because they cannot have everything they want."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "1",
+  "code": "1.SS.12",
+  "strand": "Economics",
+  "topic": "Production and Consumption",
+  "theme": "Families Now and Long Ago, Near and Far",
+  "description": "People produce and consume goods and services in the community."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "1",
+  "code": "1.SS.13",
+  "strand": "Economics",
+  "topic": "Markets",
+  "theme": "Families Now and Long Ago, Near and Far",
+  "description": "People trade to obtain goods and services they want."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "1",
+  "code": "1.SS.14",
+  "strand": "Economics",
+  "topic": "Financial Literacy",
+  "theme": "Families Now and Long Ago, Near and Far",
+  "description": "Currency is used as a means of economic exchange."
+ }
+]

@@ -1,0 +1,680 @@
+{
+ "ohio": [
+  {
+   "key": "OH:ela:RL.2.4",
+   "grade": "2",
+   "code": "RL.2.4",
+   "strand": "Reading Literature",
+   "description": "Describe how words and phrases (e.g., regular beats, alliteration, rhymes, repeated lines) supply rhythm and meaning in a story, poem, or song."
+  },
+  {
+   "key": "OH:ela:RL.3.4",
+   "grade": "3",
+   "code": "RL.3.4",
+   "strand": "Reading Literature",
+   "description": "Determine the meaning of words and phrases as they are used in a text, distinguishing literal from nonliteral language."
+  },
+  {
+   "key": "OH:ela:RL.4.4",
+   "grade": "4",
+   "code": "RL.4.4",
+   "strand": "Reading Literature",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including those that allude to significant characters found in mythology (e.g., Herculean)."
+  },
+  {
+   "key": "OH:ela:RL.5.4",
+   "grade": "5",
+   "code": "RL.5.4",
+   "strand": "Reading Literature",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative language such as metaphors, similes, and idioms."
+  },
+  {
+   "key": "OH:ela:RL.6.4",
+   "grade": "6",
+   "code": "RL.6.4",
+   "strand": "Reading Literature",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative and connotative meanings; analyze the impact of specific word choices, including sensory language, on meaning and tone."
+  },
+  {
+   "key": "OH:ela:RL.7.4",
+   "grade": "7",
+   "code": "RL.7.4",
+   "strand": "Reading Literature",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative and connotative meanings; analyze the impact of specific language choices, such as sensory words or phrases, on meaning and tone, including rhymes and other repetitions of sounds (e.g., alliteration) on a specific verse or stanza of a poem or section of a story or drama."
+  },
+  {
+   "key": "OH:ela:RL.8.4",
+   "grade": "8",
+   "code": "RL.8.4",
+   "strand": "Reading Literature",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative and connotative meanings; analyze the impact of specific word choices on meaning, mood, and tone, including analogies or allusions to other texts."
+  },
+  {
+   "key": "OH:ela:RI.2.4",
+   "grade": "2",
+   "code": "RI.2.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of words and phrases in a text relevant to a grade 2 topic or subject area."
+  },
+  {
+   "key": "OH:ela:RI.3.4",
+   "grade": "3",
+   "code": "RI.3.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of general academic and domain-specific words and phrases in a text relevant to a grade 3 topic or subject area."
+  },
+  {
+   "key": "OH:ela:RI.4.4",
+   "grade": "4",
+   "code": "RI.4.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of general academic and domain-specific words or phrases in a text relevant to a grade 4 topic or subject area."
+  },
+  {
+   "key": "OH:ela:RI.5.4",
+   "grade": "5",
+   "code": "RI.5.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of general academic and domain-specific words and phrases in a text relevant to a grade 5 topic or subject area."
+  },
+  {
+   "key": "OH:ela:RI.6.4",
+   "grade": "6",
+   "code": "RI.6.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings."
+  },
+  {
+   "key": "OH:ela:RI.7.4",
+   "grade": "7",
+   "code": "RI.7.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings; analyze the impact of a specific word choice on meaning and tone."
+  },
+  {
+   "key": "OH:ela:RI.8.4",
+   "grade": "8",
+   "code": "RI.8.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings; analyze the impact of specific word choices on meaning and tone, including analogies or allusions to other texts."
+  }
+ ],
+ "candidates": [
+  {
+   "key": "GA:ela:2.L.V1a",
+   "grade": "2",
+   "code": "2.L.V1a",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and use general, academic, and specialized vocabulary words and phrases in a variety of settings.",
+   "description": "Acquire general, academic, and specialized vocabulary words and phrases through grade-level texts and content. (I)"
+  },
+  {
+   "key": "GA:ela:2.L.V1b",
+   "grade": "2",
+   "code": "2.L.V1b",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and use general, academic, and specialized vocabulary words and phrases in a variety of settings.",
+   "description": "Use grade-level general, academic, and specialized vocabulary words and phrases to communicate in a variety of settings. (C)"
+  },
+  {
+   "key": "GA:ela:2.L.V2a",
+   "grade": "2",
+   "code": "2.L.V2a",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and apply word analysis skills to deconstruct and construct words to make meaning.",
+   "description": "Identify and use frequently occurring root words and affixes (e.g., prefixes, suffixes) to deconstruct words to determine or clarify meaning. (I)"
+  },
+  {
+   "key": "GA:ela:2.L.V2c",
+   "grade": "2",
+   "code": "2.L.V2c",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and apply word analysis skills to deconstruct and construct words to make meaning.",
+   "description": "Construct words using frequently occurring root words and affixes. (C)"
+  },
+  {
+   "key": "GA:ela:2.L.V3a",
+   "grade": "2",
+   "code": "2.L.V3a",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Use context within and beyond a sentence to determine or clarify the meaning of unknown and multiple-meaning words and phrases. (I)"
+  },
+  {
+   "key": "GA:ela:2.L.V3b",
+   "grade": "2",
+   "code": "2.L.V3b",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Determine the relationship between words and their synonyms and antonyms. (I)"
+  },
+  {
+   "key": "GA:ela:2.L.V3c",
+   "grade": "2",
+   "code": "2.L.V3c",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Distinguish shades of meaning among verbs that differ in manner (e.g., look, peek, glance, stare, glare, scowl) and adjectives that differ in intensity (e.g., large, gigantic). (I)"
+  },
+  {
+   "key": "GA:ela:2.L.V3d",
+   "grade": "2",
+   "code": "2.L.V3d",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Use glossaries and beginning dictionaries, both print and digital, to determine or clarify the meaning of words and phrases. (I)"
+  },
+  {
+   "key": "GA:ela:2.L.V3e",
+   "grade": "2",
+   "code": "2.L.V3e",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Use knowledge of word relationships and learned vocabulary words and phrases when making word choices in speaking and writing. (C)"
+  },
+  {
+   "key": "GA:ela:3.L.V1a",
+   "grade": "3",
+   "code": "3.L.V1a",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and use general, academic, and specialized vocabulary words and phrases with precision in a variety of settings.",
+   "description": "Acquire a range of general, academic, and specialized vocabulary words and phrases through grade-level texts and content. (I)"
+  },
+  {
+   "key": "GA:ela:3.L.V1b",
+   "grade": "3",
+   "code": "3.L.V1b",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and use general, academic, and specialized vocabulary words and phrases with precision in a variety of settings.",
+   "description": "Use grade-level general, academic, and specialized vocabulary words and phrases to enhance communication in a variety of settings. (C)"
+  },
+  {
+   "key": "GA:ela:3.L.V2a",
+   "grade": "3",
+   "code": "3.L.V2a",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and apply word analysis skills to determine the meanings of words and to communicate with precision in a variety of settings.",
+   "description": "Deconstruct words using common roots, root words, and affixes to determine meaning. (I)"
+  },
+  {
+   "key": "GA:ela:3.L.V2b",
+   "grade": "3",
+   "code": "3.L.V2b",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and apply word analysis skills to determine the meanings of words and to communicate with precision in a variety of settings.",
+   "description": "Identify affixes associated with specific parts of speech (e.g., *ly* is commonly used with adverbs) to aid comprehension. (I)"
+  },
+  {
+   "key": "GA:ela:3.L.V2c",
+   "grade": "3",
+   "code": "3.L.V2c",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and apply word analysis skills to determine the meanings of words and to communicate with precision in a variety of settings.",
+   "description": "Construct words using common roots, root words, and affixes. (C)"
+  },
+  {
+   "key": "GA:ela:3.L.V3a",
+   "grade": "3",
+   "code": "3.L.V3a",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Use context (e.g., images and graphs) within and beyond a sentence to determine or clarify the meaning of unknown words and multiple-meaning words and phrases. (I)"
+  },
+  {
+   "key": "GA:ela:3.L.V3b",
+   "grade": "3",
+   "code": "3.L.V3b",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Identify homophones and homographs and use the relationship between synonyms and antonyms to clarify word meanings. (I)"
+  },
+  {
+   "key": "GA:ela:3.L.V3c",
+   "grade": "3",
+   "code": "3.L.V3c",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Distinguish shades of meaning among closely related verbs (e.g., toss, throw, hurl) and closely related adjectives (e.g., thin, slender, skinny, scrawny). (I)"
+  },
+  {
+   "key": "GA:ela:3.L.V3d",
+   "grade": "3",
+   "code": "3.L.V3d",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Use glossaries or beginning dictionaries, both print and digital, to check spelling and to determine or clarify the precise meaning of words and phrases. (I)"
+  },
+  {
+   "key": "GA:ela:3.L.V3e",
+   "grade": "3",
+   "code": "3.L.V3e",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Use knowledge of word relationships and learned vocabulary words and phrases to make precise word choices when speaking and writing. (C)"
+  },
+  {
+   "key": "GA:ela:4.L.V1a",
+   "grade": "4",
+   "code": "4.L.V1a",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and use general, academic, and specialized vocabulary words and phrases with precision in a variety of settings.",
+   "description": "Acquire a range of general, academic, and specialized vocabulary words and phrases through grade-level texts and content. (I)"
+  },
+  {
+   "key": "GA:ela:4.L.V1b",
+   "grade": "4",
+   "code": "4.L.V1b",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and use general, academic, and specialized vocabulary words and phrases with precision in a variety of settings.",
+   "description": "Use grade-level general, academic, and specialized vocabulary words and phrases to enhance communication in a variety of settings. (C)"
+  },
+  {
+   "key": "GA:ela:4.L.V2a",
+   "grade": "4",
+   "code": "4.L.V2a",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and apply word analysis skills to determine the meanings of words and to communicate with precision in a variety of settings.",
+   "description": "Deconstruct words using knowledge of Greek and Latin roots, root words, and affixes to determine meaning. (I)"
+  },
+  {
+   "key": "GA:ela:4.L.V2b",
+   "grade": "4",
+   "code": "4.L.V2b",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and apply word analysis skills to determine the meanings of words and to communicate with precision in a variety of settings.",
+   "description": "Explain how the part of speech and the meaning of a root or root word changes based on the use of different affixes (e.g., *beautiful* as an adjective vs. *beautifully* as an adverb). (I)"
+  },
+  {
+   "key": "GA:ela:4.L.V2c",
+   "grade": "4",
+   "code": "4.L.V2c",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and apply word analysis skills to determine the meanings of words and to communicate with precision in a variety of settings.",
+   "description": "Construct words using knowledge of Greek and Latin roots, root words, and affixes. (C)"
+  },
+  {
+   "key": "GA:ela:4.L.V3a",
+   "grade": "4",
+   "code": "4.L.V3a",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Use context (e.g., definitions, examples, or restatements in text) to determine or clarify the meaning of unknown and multiple- meaning words and phrases. (I)"
+  },
+  {
+   "key": "GA:ela:4.L.V3b",
+   "grade": "4",
+   "code": "4.L.V3b",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Demonstrate understanding of words by relating them to their synonyms, antonyms, homophones, and homographs. (I)"
+  },
+  {
+   "key": "GA:ela:4.L.V3c",
+   "grade": "4",
+   "code": "4.L.V3c",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Distinguish shades of meaning among closely related adverbs (e.g., quickly, swiftly, rapidly). (I)"
+  },
+  {
+   "key": "GA:ela:4.L.V3d",
+   "grade": "4",
+   "code": "4.L.V3d",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Use print and digital reference materials (e.g., dictionaries, glossaries, thesauruses) to check spelling and determine or clarify the precise meaning of words and phrases. (I)"
+  },
+  {
+   "key": "GA:ela:4.L.V3e",
+   "grade": "4",
+   "code": "4.L.V3e",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Use knowledge of word relationships and learned vocabulary words and phrases to make precise word choices when speaking and writing. (C)"
+  },
+  {
+   "key": "GA:ela:5.L.V1a",
+   "grade": "5",
+   "code": "5.L.V1a",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and use general, academic, and specialized vocabulary words and phrases with precision in a variety of settings.",
+   "description": "Acquire a range of general, academic, and specialized vocabulary words and phrases through grade-level texts and content. (I)"
+  },
+  {
+   "key": "GA:ela:5.L.V1b",
+   "grade": "5",
+   "code": "5.L.V1b",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and use general, academic, and specialized vocabulary words and phrases with precision in a variety of settings.",
+   "description": "Use grade-level general, academic, and specialized vocabulary words and phrases to enhance communication in a variety of settings. (C)"
+  },
+  {
+   "key": "GA:ela:5.L.V2a",
+   "grade": "5",
+   "code": "5.L.V2a",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and apply word analysis skills to determine the meanings of words and to communicate with precision in a variety of settings.",
+   "description": "Deconstruct words using knowledge of Greek and Latin roots, root words, and affixes to determine meaning. (I)"
+  },
+  {
+   "key": "GA:ela:5.L.V2b",
+   "grade": "5",
+   "code": "5.L.V2b",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and apply word analysis skills to determine the meanings of words and to communicate with precision in a variety of settings.",
+   "description": "Explain the connection between roots, root words, affixes, and parts of speech to determine the meaning of words (e.g., *discuss* as a verb vs. *discussion* as a noun). (I)"
+  },
+  {
+   "key": "GA:ela:5.L.V2c",
+   "grade": "5",
+   "code": "5.L.V2c",
+   "strand": "Language: Vocabulary",
+   "stem": "Acquire and apply word analysis skills to determine the meanings of words and to communicate with precision in a variety of settings.",
+   "description": "Construct words using knowledge of Greek and Latin roots, root words, and affixes. (C)"
+  },
+  {
+   "key": "GA:ela:5.L.V3a",
+   "grade": "5",
+   "code": "5.L.V3a",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Use context (e.g., cause/effect relationships and comparisons in text) to determine or clarify the meaning of unknown and multiple-meaning words and phrases. (I)"
+  },
+  {
+   "key": "GA:ela:5.L.V3b",
+   "grade": "5",
+   "code": "5.L.V3b",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Identify analogies and use synonyms, antonyms, homophones, and homographs to clarify intended meaning. (I)"
+  },
+  {
+   "key": "GA:ela:5.L.V3c",
+   "grade": "5",
+   "code": "5.L.V3c",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Distinguish shades of meaning among related words, including verbs, adjectives, and/or adverbs, to clarify intended meaning. (I)"
+  },
+  {
+   "key": "GA:ela:5.L.V3d",
+   "grade": "5",
+   "code": "5.L.V3d",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Use print and digital reference materials (e.g., dictionaries, glossaries, thesauruses) to check spelling and determine or clarify the precise meaning of words and phrases. (I)"
+  },
+  {
+   "key": "GA:ela:5.L.V3e",
+   "grade": "5",
+   "code": "5.L.V3e",
+   "strand": "Language: Vocabulary",
+   "stem": "Make connections between words and phrases and use reference materials to determine or clarify word meanings in a variety of settings and for a variety of purposes.",
+   "description": "Use knowledge of word relationships and learned vocabulary words and phrases to make precise word choices when speaking and writing. (C)"
+  },
+  {
+   "key": "GA:ela:6.L.V1a",
+   "grade": "6",
+   "code": "6.L.V1a",
+   "strand": "Language: Vocabulary",
+   "stem": "Use a variety of approaches to continuously build vocabulary across a range of real-life, academic, and disciplinary contexts and apply those understandings to analyze texts and to communicate effectively.",
+   "description": "Acquire a range of general, academic, and disciplinary vocabulary through grade-level print, digital, and/or multimodal texts or content. (I)"
+  },
+  {
+   "key": "GA:ela:6.L.V1b",
+   "grade": "6",
+   "code": "6.L.V1b",
+   "strand": "Language: Vocabulary",
+   "stem": "Use a variety of approaches to continuously build vocabulary across a range of real-life, academic, and disciplinary contexts and apply those understandings to analyze texts and to communicate effectively.",
+   "description": "Use grade-level general, academic, and disciplinary vocabulary to communicate clearly and precisely in a variety of settings. (C)"
+  },
+  {
+   "key": "GA:ela:6.L.V2a",
+   "grade": "6",
+   "code": "6.L.V2a",
+   "strand": "Language: Vocabulary",
+   "stem": "Use word knowledge and word analysis skills to determine the meaning of unfamiliar words and phrases and to communicate effectively for a variety of purposes.",
+   "description": "Deconstruct words using etymology knowledge, Greek and Latin roots, root words, and/or affixes to determine or clarify meaning in grade-level texts. (I)"
+  },
+  {
+   "key": "GA:ela:6.L.V2b",
+   "grade": "6",
+   "code": "6.L.V2b",
+   "strand": "Language: Vocabulary",
+   "stem": "Use word knowledge and word analysis skills to determine the meaning of unfamiliar words and phrases and to communicate effectively for a variety of purposes.",
+   "description": "Apply knowledge of parts of speech to determine the meanings of words and phrases in grade-level texts. (I)"
+  },
+  {
+   "key": "GA:ela:6.L.V2c",
+   "grade": "6",
+   "code": "6.L.V2c",
+   "strand": "Language: Vocabulary",
+   "stem": "Use word knowledge and word analysis skills to determine the meaning of unfamiliar words and phrases and to communicate effectively for a variety of purposes.",
+   "description": "Construct words based on knowledge of Greek and Latin roots, root words, and/or affixes and use those words appropriately in context. (C)"
+  },
+  {
+   "key": "GA:ela:6.L.V2d",
+   "grade": "6",
+   "code": "6.L.V2d",
+   "strand": "Language: Vocabulary",
+   "stem": "Use word knowledge and word analysis skills to determine the meaning of unfamiliar words and phrases and to communicate effectively for a variety of purposes.",
+   "description": "Use knowledge of parts of speech to determine precise words and phrases when constructing texts. (C)"
+  },
+  {
+   "key": "GA:ela:6.L.V3a",
+   "grade": "6",
+   "code": "6.L.V3a",
+   "strand": "Language: Vocabulary",
+   "stem": "Analyze the denotative and connotative meanings of words and phrases and strategically apply those understandings when interpreting and constructing texts.",
+   "description": "This progression transitions to 6-8.L.V.3.b."
+  },
+  {
+   "key": "GA:ela:6.L.V3b",
+   "grade": "6",
+   "code": "6.L.V3b",
+   "strand": "Language: Vocabulary",
+   "stem": "Analyze the denotative and connotative meanings of words and phrases and strategically apply those understandings when interpreting and constructing texts.",
+   "description": "Analyze relationships between words, phrases, and/or clauses (e.g., synonyms, antonyms, analogies, contextual clues) to determine, distinguish, or clarify the meaning of unknown or multiple-meaning words and phrases. (I)"
+  },
+  {
+   "key": "GA:ela:6.L.V3c",
+   "grade": "6",
+   "code": "6.L.V3c",
+   "strand": "Language: Vocabulary",
+   "stem": "Analyze the denotative and connotative meanings of words and phrases and strategically apply those understandings when interpreting and constructing texts.",
+   "description": "Distinguish between the connotations of words that share a similar denotation (e.g., confident, assertive, egotistic, pompous, smug). (I)"
+  },
+  {
+   "key": "GA:ela:6.L.V3d",
+   "grade": "6",
+   "code": "6.L.V3d",
+   "strand": "Language: Vocabulary",
+   "stem": "Analyze the denotative and connotative meanings of words and phrases and strategically apply those understandings when interpreting and constructing texts.",
+   "description": "Use available print and/or digital resources, including reference materials and digital tools (e.g., online search, embedded word processing features), to determine, clarify, or verify the meaning of unknown or multiple-meaning words and phrases. (I)"
+  },
+  {
+   "key": "GA:ela:6.L.V3e",
+   "grade": "6",
+   "code": "6.L.V3e",
+   "strand": "Language: Vocabulary",
+   "stem": "Analyze the denotative and connotative meanings of words and phrases and strategically apply those understandings when interpreting and constructing texts.",
+   "description": "Determine or clarify the nuanced meanings of closely related words or phrases using available print and/or digital resources to make strategic decisions when speaking and writing. (C)"
+  },
+  {
+   "key": "GA:ela:7.L.V1a",
+   "grade": "7",
+   "code": "7.L.V1a",
+   "strand": "Language: Vocabulary",
+   "stem": "Use a variety of approaches to continuously build vocabulary across a range of real-life, academic, and disciplinary contexts and apply those understandings to analyze texts and to communicate effectively.",
+   "description": "Acquire a range of general, academic, and disciplinary vocabulary through grade-level print, digital, and/or multimodal texts or content. (I)"
+  },
+  {
+   "key": "GA:ela:7.L.V1b",
+   "grade": "7",
+   "code": "7.L.V1b",
+   "strand": "Language: Vocabulary",
+   "stem": "Use a variety of approaches to continuously build vocabulary across a range of real-life, academic, and disciplinary contexts and apply those understandings to analyze texts and to communicate effectively.",
+   "description": "Use grade-level general, academic, and disciplinary vocabulary to communicate clearly and precisely in a variety of settings. (C)"
+  },
+  {
+   "key": "GA:ela:7.L.V2a",
+   "grade": "7",
+   "code": "7.L.V2a",
+   "strand": "Language: Vocabulary",
+   "stem": "Use word knowledge and word analysis skills to determine the meaning of unfamiliar words and phrases and to communicate effectively for a variety of purposes.",
+   "description": "Deconstruct words using etymology knowledge, Greek and Latin roots, root words, and/or affixes to determine or clarify meaning in grade-level texts. (I)"
+  },
+  {
+   "key": "GA:ela:7.L.V2b",
+   "grade": "7",
+   "code": "7.L.V2b",
+   "strand": "Language: Vocabulary",
+   "stem": "Use word knowledge and word analysis skills to determine the meaning of unfamiliar words and phrases and to communicate effectively for a variety of purposes.",
+   "description": "Apply knowledge of parts of speech to determine the meanings of words and phrases in grade-level texts. (I)"
+  },
+  {
+   "key": "GA:ela:7.L.V2c",
+   "grade": "7",
+   "code": "7.L.V2c",
+   "strand": "Language: Vocabulary",
+   "stem": "Use word knowledge and word analysis skills to determine the meaning of unfamiliar words and phrases and to communicate effectively for a variety of purposes.",
+   "description": "Construct words based on knowledge of Greek and Latin roots, root words, and/or affixes and use those words appropriately in context. (C)"
+  },
+  {
+   "key": "GA:ela:7.L.V2d",
+   "grade": "7",
+   "code": "7.L.V2d",
+   "strand": "Language: Vocabulary",
+   "stem": "Use word knowledge and word analysis skills to determine the meaning of unfamiliar words and phrases and to communicate effectively for a variety of purposes.",
+   "description": "Use knowledge of parts of speech to determine precise words and phrases when constructing texts. (C)"
+  },
+  {
+   "key": "GA:ela:7.L.V3a",
+   "grade": "7",
+   "code": "7.L.V3a",
+   "strand": "Language: Vocabulary",
+   "stem": "Analyze the denotative and connotative meanings of words and phrases and strategically apply those understandings when interpreting and constructing texts.",
+   "description": "This progression transitions to 6-8.L.V.3.b."
+  },
+  {
+   "key": "GA:ela:7.L.V3b",
+   "grade": "7",
+   "code": "7.L.V3b",
+   "strand": "Language: Vocabulary",
+   "stem": "Analyze the denotative and connotative meanings of words and phrases and strategically apply those understandings when interpreting and constructing texts.",
+   "description": "Analyze relationships between words, phrases, and/or clauses (e.g., synonyms, antonyms, analogies, contextual clues) to determine, distinguish, or clarify the meaning of unknown or multiple-meaning words and phrases. (I)"
+  },
+  {
+   "key": "GA:ela:7.L.V3c",
+   "grade": "7",
+   "code": "7.L.V3c",
+   "strand": "Language: Vocabulary",
+   "stem": "Analyze the denotative and connotative meanings of words and phrases and strategically apply those understandings when interpreting and constructing texts.",
+   "description": "Distinguish between the connotations of words that share a similar denotation (e.g., confident, assertive, egotistic, pompous, smug). (I)"
+  },
+  {
+   "key": "GA:ela:7.L.V3d",
+   "grade": "7",
+   "code": "7.L.V3d",
+   "strand": "Language: Vocabulary",
+   "stem": "Analyze the denotative and connotative meanings of words and phrases and strategically apply those understandings when interpreting and constructing texts.",
+   "description": "Use available print and/or digital resources, including reference materials and digital tools (e.g., online search, embedded word processing features), to determine, clarify, or verify the meaning of unknown or multiple-meaning words and phrases. (I)"
+  },
+  {
+   "key": "GA:ela:7.L.V3e",
+   "grade": "7",
+   "code": "7.L.V3e",
+   "strand": "Language: Vocabulary",
+   "stem": "Analyze the denotative and connotative meanings of words and phrases and strategically apply those understandings when interpreting and constructing texts.",
+   "description": "Determine or clarify the nuanced meanings of closely related words or phrases using available print and/or digital resources to make strategic decisions when speaking and writing. (C)"
+  },
+  {
+   "key": "GA:ela:8.L.V1a",
+   "grade": "8",
+   "code": "8.L.V1a",
+   "strand": "Language: Vocabulary",
+   "stem": "Use a variety of approaches to continuously build vocabulary across a range of real-life, academic, and disciplinary contexts and apply those understandings to analyze texts and to communicate effectively.",
+   "description": "Acquire a range of general, academic, and disciplinary vocabulary through grade-level print, digital, and/or multimodal texts or content. (I)"
+  },
+  {
+   "key": "GA:ela:8.L.V1b",
+   "grade": "8",
+   "code": "8.L.V1b",
+   "strand": "Language: Vocabulary",
+   "stem": "Use a variety of approaches to continuously build vocabulary across a range of real-life, academic, and disciplinary contexts and apply those understandings to analyze texts and to communicate effectively.",
+   "description": "Use grade-level general, academic, and disciplinary vocabulary to communicate clearly and precisely in a variety of settings. (C)"
+  },
+  {
+   "key": "GA:ela:8.L.V2a",
+   "grade": "8",
+   "code": "8.L.V2a",
+   "strand": "Language: Vocabulary",
+   "stem": "Use word knowledge and word analysis skills to determine the meaning of unfamiliar words and phrases and to communicate effectively for a variety of purposes.",
+   "description": "Deconstruct words using etymology knowledge, Greek and Latin roots, root words, and/or affixes to determine or clarify meaning in grade-level texts. (I)"
+  },
+  {
+   "key": "GA:ela:8.L.V2b",
+   "grade": "8",
+   "code": "8.L.V2b",
+   "strand": "Language: Vocabulary",
+   "stem": "Use word knowledge and word analysis skills to determine the meaning of unfamiliar words and phrases and to communicate effectively for a variety of purposes.",
+   "description": "Apply knowledge of parts of speech to determine the meanings of words and phrases in grade-level texts. (I)"
+  },
+  {
+   "key": "GA:ela:8.L.V2c",
+   "grade": "8",
+   "code": "8.L.V2c",
+   "strand": "Language: Vocabulary",
+   "stem": "Use word knowledge and word analysis skills to determine the meaning of unfamiliar words and phrases and to communicate effectively for a variety of purposes.",
+   "description": "Construct words based on knowledge of Greek and Latin roots, root words, and/or affixes and use those words appropriately in context. (C)"
+  },
+  {
+   "key": "GA:ela:8.L.V2d",
+   "grade": "8",
+   "code": "8.L.V2d",
+   "strand": "Language: Vocabulary",
+   "stem": "Use word knowledge and word analysis skills to determine the meaning of unfamiliar words and phrases and to communicate effectively for a variety of purposes.",
+   "description": "Use knowledge of parts of speech to determine precise words and phrases when constructing texts. (C)"
+  },
+  {
+   "key": "GA:ela:8.L.V3a",
+   "grade": "8",
+   "code": "8.L.V3a",
+   "strand": "Language: Vocabulary",
+   "stem": "Analyze the denotative and connotative meanings of words and phrases and strategically apply those understandings when interpreting and constructing texts.",
+   "description": "This progression transitions to 6-8.L.V.3.b."
+  },
+  {
+   "key": "GA:ela:8.L.V3b",
+   "grade": "8",
+   "code": "8.L.V3b",
+   "strand": "Language: Vocabulary",
+   "stem": "Analyze the denotative and connotative meanings of words and phrases and strategically apply those understandings when interpreting and constructing texts.",
+   "description": "Analyze relationships between words, phrases, and/or clauses (e.g., synonyms, antonyms, analogies, contextual clues) to determine, distinguish, or clarify the meaning of unknown or multiple-meaning words and phrases. (I)"
+  },
+  {
+   "key": "GA:ela:8.L.V3c",
+   "grade": "8",
+   "code": "8.L.V3c",
+   "strand": "Language: Vocabulary",
+   "stem": "Analyze the denotative and connotative meanings of words and phrases and strategically apply those understandings when interpreting and constructing texts.",
+   "description": "Distinguish between the connotations of words that share a similar denotation (e.g., confident, assertive, egotistic, pompous, smug). (I)"
+  },
+  {
+   "key": "GA:ela:8.L.V3d",
+   "grade": "8",
+   "code": "8.L.V3d",
+   "strand": "Language: Vocabulary",
+   "stem": "Analyze the denotative and connotative meanings of words and phrases and strategically apply those understandings when interpreting and constructing texts.",
+   "description": "Use available print and/or digital resources, including reference materials and digital tools (e.g., online search, embedded word processing features), to determine, clarify, or verify the meaning of unknown or multiple-meaning words and phrases. (I)"
+  },
+  {
+   "key": "GA:ela:8.L.V3e",
+   "grade": "8",
+   "code": "8.L.V3e",
+   "strand": "Language: Vocabulary",
+   "stem": "Analyze the denotative and connotative meanings of words and phrases and strategically apply those understandings when interpreting and constructing texts.",
+   "description": "Determine or clarify the nuanced meanings of closely related words or phrases using available print and/or digital resources to make strategic decisions when speaking and writing. (C)"
+  }
+ ]
+}

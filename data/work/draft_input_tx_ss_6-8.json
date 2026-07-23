@@ -1,0 +1,1682 @@
+[
+ {
+  "key": "TX:social_studies:6.1A",
+  "grade": "6",
+  "strand": "History",
+  "stem": "History. The student understands that historical events influence contemporary events. The student is expected to:",
+  "description": "trace characteristics of various contemporary societies in regions that resulted from historical events or factors such as colonization, immigration, and trade; and"
+ },
+ {
+  "key": "TX:social_studies:6.1B",
+  "grade": "6",
+  "strand": "History",
+  "stem": "History. The student understands that historical events influence contemporary events. The student is expected to:",
+  "description": "analyze the historical background of various contemporary societies to evaluate relationships between past conflicts and current conditions."
+ },
+ {
+  "key": "TX:social_studies:6.2A",
+  "grade": "6",
+  "strand": "History",
+  "stem": "History. The student understands the influences of individuals and groups from various cultures on various historical and contemporary societies. The student is expected to:",
+  "description": "identify and describe the historical influence of individuals or groups on various contemporary societies; and"
+ },
+ {
+  "key": "TX:social_studies:6.2B",
+  "grade": "6",
+  "strand": "History",
+  "stem": "History. The student understands the influences of individuals and groups from various cultures on various historical and contemporary societies. The student is expected to:",
+  "description": "describe the social, political, economic, and cultural contributions of individuals and groups from various societies, past and present."
+ },
+ {
+  "key": "TX:social_studies:6.3A",
+  "grade": "6",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the factors that influence the locations and characteristics of locations of various contemporary societies on maps and/or globes. The student is expected to:",
+  "description": "identify and explain the geographic factors responsible for patterns of population in places and regions;"
+ },
+ {
+  "key": "TX:social_studies:6.3B",
+  "grade": "6",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the factors that influence the locations and characteristics of locations of various contemporary societies on maps and/or globes. The student is expected to:",
+  "description": "explain ways in which human migration influences the character of places and regions;"
+ },
+ {
+  "key": "TX:social_studies:6.3C",
+  "grade": "6",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the factors that influence the locations and characteristics of locations of various contemporary societies on maps and/or globes. The student is expected to:",
+  "description": "identify and locate major physical and human geographic features such as landforms, water bodies, and urban centers of various places and regions; and"
+ },
+ {
+  "key": "TX:social_studies:6.3D",
+  "grade": "6",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the factors that influence the locations and characteristics of locations of various contemporary societies on maps and/or globes. The student is expected to:",
+  "description": "identify the location of major world countries for each of the world regions."
+ },
+ {
+  "key": "TX:social_studies:6.4A",
+  "grade": "6",
+  "strand": "Geography",
+  "stem": "Geography. The student understands how geographic factors influence the economic development and political relationships of societies. The student is expected to:",
+  "description": "explain the geographic factors responsible for the location of economic activities in places and regions; and"
+ },
+ {
+  "key": "TX:social_studies:6.4B",
+  "grade": "6",
+  "strand": "Geography",
+  "stem": "Geography. The student understands how geographic factors influence the economic development and political relationships of societies. The student is expected to:",
+  "description": "identify geographic factors such as location, physical features, transportation corridors and barriers, and distribution of natural resources that influence a society's political relationships."
+ },
+ {
+  "key": "TX:social_studies:6.5A",
+  "grade": "6",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the impact of interactions between people and the physical environment on the development and conditions of places and regions. The student is expected to:",
+  "description": "describe ways people have been impacted by physical processes such as earthquakes and climate;"
+ },
+ {
+  "key": "TX:social_studies:6.5B",
+  "grade": "6",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the impact of interactions between people and the physical environment on the development and conditions of places and regions. The student is expected to:",
+  "description": "identify and analyze ways people have adapted to the physical environment in various places and regions; and"
+ },
+ {
+  "key": "TX:social_studies:6.5C",
+  "grade": "6",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the impact of interactions between people and the physical environment on the development and conditions of places and regions. The student is expected to:",
+  "description": "identify and analyze ways people have modified the physical environment such as mining, irrigation, and transportation infrastructure."
+ },
+ {
+  "key": "TX:social_studies:6.6A",
+  "grade": "6",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the factors of production in a society's economy. The student is expected to:",
+  "description": "describe ways in which the factors of production (natural resources, labor, capital, and entrepreneurs) influence the economies of various contemporary societies;"
+ },
+ {
+  "key": "TX:social_studies:6.6B",
+  "grade": "6",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the factors of production in a society's economy. The student is expected to:",
+  "description": "identify problems that may arise when one or more of the factors of production is in relatively short supply; and"
+ },
+ {
+  "key": "TX:social_studies:6.6C",
+  "grade": "6",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the factors of production in a society's economy. The student is expected to:",
+  "description": "explain the impact of the distribution of resources on international trade and economic interdependence among and within societies."
+ },
+ {
+  "key": "TX:social_studies:6.7A",
+  "grade": "6",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the various ways in which people organize economic systems. The student is expected to:",
+  "description": "compare ways in which various societies organize the production and distribution of goods and services;"
+ },
+ {
+  "key": "TX:social_studies:6.7B",
+  "grade": "6",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the various ways in which people organize economic systems. The student is expected to:",
+  "description": "compare and contrast free enterprise, socialist, and communist economies in various contemporary societies, including the benefits of the U.S. free enterprise system; and"
+ },
+ {
+  "key": "TX:social_studies:6.7C",
+  "grade": "6",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the various ways in which people organize economic systems. The student is expected to:",
+  "description": "understand the importance of ethics in maintaining a functional free enterprise system."
+ },
+ {
+  "key": "TX:social_studies:6.8A",
+  "grade": "6",
+  "strand": "Economics",
+  "stem": "Economics. The student understands categories of economic activities and the data used to measure a society's economic level. The student is expected to:",
+  "description": "define and give examples of agricultural, retail, manufacturing (goods), and service industries; and"
+ },
+ {
+  "key": "TX:social_studies:6.8B",
+  "grade": "6",
+  "strand": "Economics",
+  "stem": "Economics. The student understands categories of economic activities and the data used to measure a society's economic level. The student is expected to:",
+  "description": "describe levels of economic development of various societies using indicators such as life expectancy, gross domestic product (GDP), GDP per capita, and literacy."
+ },
+ {
+  "key": "TX:social_studies:6.9A",
+  "grade": "6",
+  "strand": "Government",
+  "stem": "Government. The student understands the concepts of limited and unlimited governments. The student is expected to:",
+  "description": "describe and compare examples of limited and unlimited governments such as constitutional (limited) and totalitarian (unlimited);"
+ },
+ {
+  "key": "TX:social_studies:6.9B",
+  "grade": "6",
+  "strand": "Government",
+  "stem": "Government. The student understands the concepts of limited and unlimited governments. The student is expected to:",
+  "description": "identify reasons for limiting the power of government; and"
+ },
+ {
+  "key": "TX:social_studies:6.9C",
+  "grade": "6",
+  "strand": "Government",
+  "stem": "Government. The student understands the concepts of limited and unlimited governments. The student is expected to:",
+  "description": "identify and describe examples of human rights abuses by limited or unlimited governments such as the oppression of religious, ethnic, and political groups."
+ },
+ {
+  "key": "TX:social_studies:6.10A",
+  "grade": "6",
+  "strand": "Government",
+  "stem": "Government. The student understands various ways in which people organize governments. The student is expected to:",
+  "description": "identify and give examples of governments with rule by one, few, or many;"
+ },
+ {
+  "key": "TX:social_studies:6.10B",
+  "grade": "6",
+  "strand": "Government",
+  "stem": "Government. The student understands various ways in which people organize governments. The student is expected to:",
+  "description": "compare ways in which various societies such as China, Germany, India, and Russia organize government and how they function; and"
+ },
+ {
+  "key": "TX:social_studies:6.10C",
+  "grade": "6",
+  "strand": "Government",
+  "stem": "Government. The student understands various ways in which people organize governments. The student is expected to:",
+  "description": "identify historical origins of democratic forms of government such as Ancient Greece."
+ },
+ {
+  "key": "TX:social_studies:6.11A",
+  "grade": "6",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands that the nature of citizenship varies among societies. The student is expected to:",
+  "description": "describe and compare roles and responsibilities of citizens in various contemporary societies, including the United States; and"
+ },
+ {
+  "key": "TX:social_studies:6.11B",
+  "grade": "6",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands that the nature of citizenship varies among societies. The student is expected to:",
+  "description": "explain how opportunities for citizens to participate in and influence the political process vary among various contemporary societies."
+ },
+ {
+  "key": "TX:social_studies:6.12A",
+  "grade": "6",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the relationship among individual rights, responsibilities, duties, and freedoms in societies with representative governments. The student is expected to:",
+  "description": "identify and explain the duty of civic participation in societies with representative governments; and"
+ },
+ {
+  "key": "TX:social_studies:6.12B",
+  "grade": "6",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the relationship among individual rights, responsibilities, duties, and freedoms in societies with representative governments. The student is expected to:",
+  "description": "explain relationships among rights, responsibilities, and duties in societies with representative governments."
+ },
+ {
+  "key": "TX:social_studies:6.13A",
+  "grade": "6",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the similarities and differences within and among cultures in various world societies. The student is expected to:",
+  "description": "identify and describe common traits that define cultures and culture regions;"
+ },
+ {
+  "key": "TX:social_studies:6.13B",
+  "grade": "6",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the similarities and differences within and among cultures in various world societies. The student is expected to:",
+  "description": "define a multicultural society;"
+ },
+ {
+  "key": "TX:social_studies:6.13C",
+  "grade": "6",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the similarities and differences within and among cultures in various world societies. The student is expected to:",
+  "description": "analyze the experiences and contributions of diverse groups to multicultural societies; and"
+ },
+ {
+  "key": "TX:social_studies:6.13D",
+  "grade": "6",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the similarities and differences within and among cultures in various world societies. The student is expected to:",
+  "description": "identify and explain examples of conflict and cooperation between and among cultures."
+ },
+ {
+  "key": "TX:social_studies:6.14A",
+  "grade": "6",
+  "strand": "Culture",
+  "stem": "Culture. The student understands that all societies have basic institutions in common even though the characteristics of these institutions may differ. The student is expected to:",
+  "description": "identify institutions basic to all societies, including government, economic, educational, and religious institutions;"
+ },
+ {
+  "key": "TX:social_studies:6.14B",
+  "grade": "6",
+  "strand": "Culture",
+  "stem": "Culture. The student understands that all societies have basic institutions in common even though the characteristics of these institutions may differ. The student is expected to:",
+  "description": "compare characteristics of institutions in various contemporary societies; and"
+ },
+ {
+  "key": "TX:social_studies:6.14C",
+  "grade": "6",
+  "strand": "Culture",
+  "stem": "Culture. The student understands that all societies have basic institutions in common even though the characteristics of these institutions may differ. The student is expected to:",
+  "description": "analyze the efforts and activities institutions use to sustain themselves over time."
+ },
+ {
+  "key": "TX:social_studies:6.15A",
+  "grade": "6",
+  "strand": "Culture",
+  "stem": "Culture. The student understands relationships that exist among world cultures. The student is expected to:",
+  "description": "identify and describe means of cultural diffusion such as trade, travel, and war;"
+ },
+ {
+  "key": "TX:social_studies:6.15B",
+  "grade": "6",
+  "strand": "Culture",
+  "stem": "Culture. The student understands relationships that exist among world cultures. The student is expected to:",
+  "description": "identify and describe factors that influence cultural change such as improvements in communication, transportation, and economic development;"
+ },
+ {
+  "key": "TX:social_studies:6.15C",
+  "grade": "6",
+  "strand": "Culture",
+  "stem": "Culture. The student understands relationships that exist among world cultures. The student is expected to:",
+  "description": "analyze the impact of improved communication technology among cultures; and"
+ },
+ {
+  "key": "TX:social_studies:6.15D",
+  "grade": "6",
+  "strand": "Culture",
+  "stem": "Culture. The student understands relationships that exist among world cultures. The student is expected to:",
+  "description": "identify the impact of cultural diffusion on individuals and world societies."
+ },
+ {
+  "key": "TX:social_studies:6.16A",
+  "grade": "6",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the relationship that exists between the arts and the societies in which they are produced. The student is expected to:",
+  "description": "explain the relationships that exist between societies and their architecture, art, music, and literature;"
+ },
+ {
+  "key": "TX:social_studies:6.16B",
+  "grade": "6",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the relationship that exists between the arts and the societies in which they are produced. The student is expected to:",
+  "description": "describe ways in which contemporary issues influence creative expressions; and"
+ },
+ {
+  "key": "TX:social_studies:6.16C",
+  "grade": "6",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the relationship that exists between the arts and the societies in which they are produced. The student is expected to:",
+  "description": "identify examples of art, music, and literature that convey universal themes such as religion, justice, and the passage of time."
+ },
+ {
+  "key": "TX:social_studies:6.17A",
+  "grade": "6",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the relationships among religion, philosophy, and culture. The student is expected to:",
+  "description": "explain the relationship among religious ideas, philosophical ideas, and cultures; and"
+ },
+ {
+  "key": "TX:social_studies:6.17B",
+  "grade": "6",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the relationships among religion, philosophy, and culture. The student is expected to:",
+  "description": "explain the significance of religious holidays and observances such as Christmas, Easter, Ramadan, the annual hajj, Yom Kippur, Rosh Hashanah, Diwali, and Vaisakhi in various contemporary societies."
+ },
+ {
+  "key": "TX:social_studies:6.18A",
+  "grade": "6",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands the influences of science and technology on contemporary societies. The student is expected to:",
+  "description": "identify examples of scientific discoveries, technological innovations, and scientists and inventors that have shaped the world;"
+ },
+ {
+  "key": "TX:social_studies:6.18B",
+  "grade": "6",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands the influences of science and technology on contemporary societies. The student is expected to:",
+  "description": "explain how resources, economic factors, and political decisions affect the use of technology; and"
+ },
+ {
+  "key": "TX:social_studies:6.18C",
+  "grade": "6",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands the influences of science and technology on contemporary societies. The student is expected to:",
+  "description": "make predictions about future social, political, economic, cultural, and environmental impacts that may result from future scientific discoveries and technological innovations."
+ },
+ {
+  "key": "TX:social_studies:6.19A",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "differentiate between, locate, and use valid primary and secondary sources such as oral, print, and visual material and artifacts to acquire information about various world cultures;"
+ },
+ {
+  "key": "TX:social_studies:6.19B",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "analyze information by sequencing, categorizing, identifying cause-and-effect relationships, comparing, contrasting, finding the main idea, summarizing, making generalizations and predictions, and drawing inferences and conclusions;"
+ },
+ {
+  "key": "TX:social_studies:6.19C",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "organize and interpret information from outlines, reports, databases, and visuals, including graphs, charts, timelines, and maps;"
+ },
+ {
+  "key": "TX:social_studies:6.19D",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "identify different points of view about an issue or current topic;"
+ },
+ {
+  "key": "TX:social_studies:6.19E",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "formulate and communicate visually, orally, or in writing a claim supported by evidence and reasoning related to a social studies topic; and"
+ },
+ {
+  "key": "TX:social_studies:6.19F",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "evaluate a variety of historical and contemporary sources for validity, credibility, bias, and accuracy."
+ },
+ {
+  "key": "TX:social_studies:6.20A",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses geographic tools to collect, analyze, and interpret data. The student is expected to:",
+  "description": "answer geographic questions, including: Where is it located? Why is it there? What is significant about its location? How is its location related to the location of other people, places, and environments? Using latitude and longitude, where is it located?;"
+ },
+ {
+  "key": "TX:social_studies:6.20B",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses geographic tools to collect, analyze, and interpret data. The student is expected to:",
+  "description": "pose and answer questions about geographic distributions and patterns for various world regions and countries shown on maps, graphs, and charts;"
+ },
+ {
+  "key": "TX:social_studies:6.20C",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses geographic tools to collect, analyze, and interpret data. The student is expected to:",
+  "description": "compare various world regions and countries using data from maps, graphs, and charts; and"
+ },
+ {
+  "key": "TX:social_studies:6.20D",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses geographic tools to collect, analyze, and interpret data. The student is expected to:",
+  "description": "create and interpret regional sketch maps, thematic maps, graphs, and charts depicting aspects such as population, disease, and economic activities of various world regions and countries."
+ },
+ {
+  "key": "TX:social_studies:6.21A",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "use social studies terminology correctly;"
+ },
+ {
+  "key": "TX:social_studies:6.21B",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "incorporate main and supporting ideas in verbal and written communication based on research;"
+ },
+ {
+  "key": "TX:social_studies:6.21C",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "express ideas orally based on research and experiences;"
+ },
+ {
+  "key": "TX:social_studies:6.21D",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "create written and visual material such as journal entries, reports, graphic organizers, outlines, and bibliographies based on research;"
+ },
+ {
+  "key": "TX:social_studies:6.21E",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "use effective written communication skills, including proper citations to avoid plagiarism; and"
+ },
+ {
+  "key": "TX:social_studies:6.21F",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "apply foundational language skills to engage in civil discourse about social studies topics, including those with multiple perspectives."
+ },
+ {
+  "key": "TX:social_studies:6.22A",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses problem-solving and decision-making skills, working independently and with others. The student is expected to:",
+  "description": "describe governmental and democratic processes such as voting, due process, and caucuses using simulations and models; and"
+ },
+ {
+  "key": "TX:social_studies:6.22B",
+  "grade": "6",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses problem-solving and decision-making skills, working independently and with others. The student is expected to:",
+  "description": "use problem-solving and decision-making processes to identify a problem, gather information, list and consider options, consider advantages and disadvantages, choose and implement a solution, and evaluate the effectiveness of the solution."
+ },
+ {
+  "key": "TX:social_studies:7.1A",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands traditional historical points of reference in Texas history. The student is expected to:",
+  "description": "identify the major eras in Texas history, describe their defining characteristics, and explain the purpose of dividing the past into eras, including Natural Texas and its People; Age of Contact; Spanish Colonial; Mexican National; Revolution and Republic; Early Statehood; Texas in the Civil War and Reconstruction; Cotton, Cattle, and Railroads; Age of Oil; Texas in the Great Depression and World War II; Civil Rights; and Contemporary Texas; and"
+ },
+ {
+  "key": "TX:social_studies:7.1B",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands traditional historical points of reference in Texas history. The student is expected to:",
+  "description": "explain the significance of the following dates: 1519, mapping of the Texas coast and first mainland Spanish settlement; 1718, founding of San Antonio; 1821, independence from Spain; 1836, Texas independence; 1845, annexation; 1861, Civil War begins; 1876, adoption of current state constitution; and 1901, discovery of oil at Spindletop."
+ },
+ {
+  "key": "TX:social_studies:7.2A",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues through the Mexican National Era shaped the history of Texas. The student is expected to:",
+  "description": "compare the cultures of American Indians in Texas prior to European colonization such as Gulf, Plains, Puebloan, and Southeastern;"
+ },
+ {
+  "key": "TX:social_studies:7.2B",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues through the Mexican National Era shaped the history of Texas. The student is expected to:",
+  "description": "identify important individuals, events, and issues related to European exploration of Texas such as Alonso Álvarez de Pineda, Álvar Núñez Cabeza de Vaca, the search for gold, and the conflicting territorial claims between France and Spain;"
+ },
+ {
+  "key": "TX:social_studies:7.2C",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues through the Mexican National Era shaped the history of Texas. The student is expected to:",
+  "description": "identify important individuals, events, and issues related to European colonization of Texas, including the establishment of Catholic missions, towns, and ranches, and the contributions of individuals such as Fray Damián Massanet, Antonio Margil de Jesús, and Francisco Hidalgo;"
+ },
+ {
+  "key": "TX:social_studies:7.2D",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues through the Mexican National Era shaped the history of Texas. The student is expected to:",
+  "description": "identify the individuals, issues, and events related to Mexico becoming an independent nation and its impact on Texas, including Father Miguel Hidalgo, Texas involvement in the fight for independence, José Gutiérrez de Lara, the Battle of Medina, the Mexican federal Constitution of 1824, the merger of Texas and Coahuila as a state, the State Colonization Law of 1825, and slavery;"
+ },
+ {
+  "key": "TX:social_studies:7.2E",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues through the Mexican National Era shaped the history of Texas. The student is expected to:",
+  "description": "identify the contributions of significant individuals, including Moses Austin, Stephen F. Austin, Erasmo Seguín, Martín De León, and Green DeWitt, during the Mexican settlement of Texas; and"
+ },
+ {
+  "key": "TX:social_studies:7.2F",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues through the Mexican National Era shaped the history of Texas. The student is expected to:",
+  "description": "contrast Spanish, Mexican, and Anglo purposes for and methods of settlement in Texas."
+ },
+ {
+  "key": "TX:social_studies:7.3A",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues related to the Texas Revolution shaped the history of Texas. The student is expected to:",
+  "description": "describe the chain of events that led to the Texas Revolution, including the Fredonian Rebellion, the Mier y Terán Report, the Law of April 6, 1830, the Turtle Bayou Resolutions, and the arrest of Stephen F. Austin;"
+ },
+ {
+  "key": "TX:social_studies:7.3B",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues related to the Texas Revolution shaped the history of Texas. The student is expected to:",
+  "description": "explain the roles played by significant individuals during the Texas Revolution, including George Childress, Lorenzo de Zavala, James Fannin, Sam Houston, Antonio López de Santa Anna, Juan N. Seguín, and William B. Travis; and"
+ },
+ {
+  "key": "TX:social_studies:7.3C",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues related to the Texas Revolution shaped the history of Texas. The student is expected to:",
+  "description": "explain the issues surrounding significant events of the Texas Revolution, including the Battle of Gonzales; the siege of the Alamo, William B. Travis's letter \"To the People of Texas and All Americans in the World,\" and the heroism of the diverse defenders who gave their lives there; the Constitutional Convention of 1836; Fannin's surrender at Goliad; and the Battle of San Jacinto."
+ },
+ {
+  "key": "TX:social_studies:7.4A",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues shaped the history of the Republic of Texas and early Texas statehood. The student is expected to:",
+  "description": "identify individuals, events, and issues during the administrations of Republic of Texas Presidents Houston, Lamar, and Jones such as the Texas Navy, the Texas Rangers, Jack Coffee Hays, Chief Bowles, William Goyens, Mary Maverick, José Antonio Navarro, the Córdova Rebellion, the Council House Fight, the Santa Fe Expedition, slavery, and the roles of racial and ethnic groups;"
+ },
+ {
+  "key": "TX:social_studies:7.4B",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues shaped the history of the Republic of Texas and early Texas statehood. The student is expected to:",
+  "description": "analyze the causes of and events leading to Texas annexation such as security and public debt; and"
+ },
+ {
+  "key": "TX:social_studies:7.4C",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues shaped the history of the Republic of Texas and early Texas statehood. The student is expected to:",
+  "description": "identify individuals, events, and issues during early Texas statehood, including the U.S.-Mexican War, the Treaty of Guadalupe-Hidalgo, slavery, and the Compromise of 1850."
+ },
+ {
+  "key": "TX:social_studies:7.5A",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how events and issues shaped the history of Texas during the Civil War and Reconstruction. The student is expected to:",
+  "description": "explain the central role the expansion of slavery played in the involvement of Texas in the Civil War;"
+ },
+ {
+  "key": "TX:social_studies:7.5B",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how events and issues shaped the history of Texas during the Civil War and Reconstruction. The student is expected to:",
+  "description": "identify significant events concerning Texas and the Civil War such as the Battle of Galveston, the Battle of Sabine Pass, and the Battle of Palmito Ranch; and"
+ },
+ {
+  "key": "TX:social_studies:7.5C",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how events and issues shaped the history of Texas during the Civil War and Reconstruction. The student is expected to:",
+  "description": "explain the political, economic, and social effects of the Civil War and Reconstruction in Texas."
+ },
+ {
+  "key": "TX:social_studies:7.6A",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues shaped the history of Texas from Reconstruction through the beginning of the 20th century. The student is expected to:",
+  "description": "identify significant individuals, events, and issues, including the factors leading to the expansion of the Texas frontier, the effects of westward expansion on American Indians, the buffalo soldiers, and Quanah Parker;"
+ },
+ {
+  "key": "TX:social_studies:7.6B",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues shaped the history of Texas from Reconstruction through the beginning of the 20th century. The student is expected to:",
+  "description": "identify significant individuals, events, and issues, including the development of the cattle industry from its Spanish beginnings and the cowboy way of life;"
+ },
+ {
+  "key": "TX:social_studies:7.6C",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues shaped the history of Texas from Reconstruction through the beginning of the 20th century. The student is expected to:",
+  "description": "identify significant individuals, events, and issues, including the effects of the growth of railroads and the contributions of James Hogg; and"
+ },
+ {
+  "key": "TX:social_studies:7.6D",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues shaped the history of Texas from Reconstruction through the beginning of the 20th century. The student is expected to:",
+  "description": "explain the political, economic, and social impact of the agricultural industry and the development of West Texas resulting from the close of the frontier."
+ },
+ {
+  "key": "TX:social_studies:7.7A",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues shaped the history of Texas during the late 19th, 20th, and early 21st centuries. The student is expected to:",
+  "description": "explain how the oil industry led to the industrialization of Texas;"
+ },
+ {
+  "key": "TX:social_studies:7.7B",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues shaped the history of Texas during the late 19th, 20th, and early 21st centuries. The student is expected to:",
+  "description": "define and trace the impact of \"boom-and-bust\" cycles of leading Texas industries throughout the 20th and early 21st centuries such as farming, oil and gas production, cotton, ranching, real estate, banking, and computer technology;"
+ },
+ {
+  "key": "TX:social_studies:7.7C",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues shaped the history of Texas during the late 19th, 20th, and early 21st centuries. The student is expected to:",
+  "description": "describe and compare the impact of reform movements in Texas in the 19th and 20th centuries such as progressivism, populism, women's suffrage, agrarianism, labor reform, and the conservative movement of the late 20th century;"
+ },
+ {
+  "key": "TX:social_studies:7.7D",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues shaped the history of Texas during the late 19th, 20th, and early 21st centuries. The student is expected to:",
+  "description": "describe and compare the civil rights and equal rights movements of various groups in Texas in the 20th century and identify key leaders in these movements such as James L. Farmer Jr., Hector P. Garcia, Oveta Culp Hobby, Lyndon B. Johnson, the League of United Latin American Citizens (LULAC), Jane McCallum, and Lulu Belle Madison White; and"
+ },
+ {
+  "key": "TX:social_studies:7.7E",
+  "grade": "7",
+  "strand": "History",
+  "stem": "History. The student understands how individuals, events, and issues shaped the history of Texas during the late 19th, 20th, and early 21st centuries. The student is expected to:",
+  "description": "analyze the political, economic, and social impact of World War I, the Great Depression, World War II, and significant issues in the latter half of the 20th and early 21st centuries such as political and economic controversies, immigration, and migration on the history of Texas."
+ },
+ {
+  "key": "TX:social_studies:7.8A",
+  "grade": "7",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the location and characteristics of places and regions of Texas. The student is expected to:",
+  "description": "locate and compare the Mountains and Basins, Great Plains, North Central Plains, and Coastal Plains regions;"
+ },
+ {
+  "key": "TX:social_studies:7.8B",
+  "grade": "7",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the location and characteristics of places and regions of Texas. The student is expected to:",
+  "description": "locate and compare places of importance in Texas in terms of physical and human characteristics such as major cities, waterways, natural and historic landmarks, political and cultural regions, and local points of interest; and"
+ },
+ {
+  "key": "TX:social_studies:7.8C",
+  "grade": "7",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the location and characteristics of places and regions of Texas. The student is expected to:",
+  "description": "analyze the effects of physical and human factors such as climate, weather, landforms, irrigation, transportation, and communication on major events in Texas."
+ },
+ {
+  "key": "TX:social_studies:7.9A",
+  "grade": "7",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the effects of the interaction between humans and the environment in Texas. The student is expected to:",
+  "description": "identify ways in which Texans have adapted to and modified the environment and explain the positive and negative consequences of the modifications; and"
+ },
+ {
+  "key": "TX:social_studies:7.9B",
+  "grade": "7",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the effects of the interaction between humans and the environment in Texas. The student is expected to:",
+  "description": "explain ways in which geographic factors such as the Galveston Hurricane of 1900, the Dust Bowl, limited water resources, and alternative energy sources have affected the political, economic, and social development of Texas."
+ },
+ {
+  "key": "TX:social_studies:7.10A",
+  "grade": "7",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the characteristics, distribution, and migration of population in Texas in the 19th, 20th, and 21st centuries. The student is expected to:",
+  "description": "identify why immigrant groups came to Texas and where they settled;"
+ },
+ {
+  "key": "TX:social_studies:7.10B",
+  "grade": "7",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the characteristics, distribution, and migration of population in Texas in the 19th, 20th, and 21st centuries. The student is expected to:",
+  "description": "describe how immigration and migration to Texas have influenced Texas;"
+ },
+ {
+  "key": "TX:social_studies:7.10C",
+  "grade": "7",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the characteristics, distribution, and migration of population in Texas in the 19th, 20th, and 21st centuries. The student is expected to:",
+  "description": "describe the structure of the population of Texas using demographic concepts such as growth rate and age distribution; and"
+ },
+ {
+  "key": "TX:social_studies:7.10D",
+  "grade": "7",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the characteristics, distribution, and migration of population in Texas in the 19th, 20th, and 21st centuries. The student is expected to:",
+  "description": "analyze the effects of the changing population distribution and growth in Texas and the additional need for education, health care, and transportation."
+ },
+ {
+  "key": "TX:social_studies:7.11A",
+  "grade": "7",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the factors that caused Texas to change from an agrarian to an urban society. The student is expected to:",
+  "description": "explain economic factors and the development of major industries that led to the urbanization of Texas such as transportation, oil and gas, and manufacturing; and"
+ },
+ {
+  "key": "TX:social_studies:7.11B",
+  "grade": "7",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the factors that caused Texas to change from an agrarian to an urban society. The student is expected to:",
+  "description": "explain the changes in the types of jobs and occupations that have resulted from the urbanization of Texas."
+ },
+ {
+  "key": "TX:social_studies:7.12A",
+  "grade": "7",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the interdependence of the Texas economy with the United States and the world. The student is expected to:",
+  "description": "explain the impact of national and international markets on the production of goods and services in Texas, including agriculture and oil and gas;"
+ },
+ {
+  "key": "TX:social_studies:7.12B",
+  "grade": "7",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the interdependence of the Texas economy with the United States and the world. The student is expected to:",
+  "description": "explain the impact of economic concepts within the free enterprise system such as supply and demand, profit, and world competition on the economy of Texas; and"
+ },
+ {
+  "key": "TX:social_studies:7.12C",
+  "grade": "7",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the interdependence of the Texas economy with the United States and the world. The student is expected to:",
+  "description": "analyze the impact of significant industries in Texas such as aerospace, medical, and computer technologies on local, national, and international markets."
+ },
+ {
+  "key": "TX:social_studies:7.13A",
+  "grade": "7",
+  "strand": "Government",
+  "stem": "Government. The student understands the basic principles reflected in the Texas Constitution. The student is expected to:",
+  "description": "identify how the Texas Constitution reflects the principles of limited government, republicanism, checks and balances, federalism, separation of powers, popular sovereignty, and individual rights; and"
+ },
+ {
+  "key": "TX:social_studies:7.13B",
+  "grade": "7",
+  "strand": "Government",
+  "stem": "Government. The student understands the basic principles reflected in the Texas Constitution. The student is expected to:",
+  "description": "compare the principles and concepts of the Texas Constitution to the U.S. Constitution, including the Texas and U.S. Bill of Rights."
+ },
+ {
+  "key": "TX:social_studies:7.14A",
+  "grade": "7",
+  "strand": "Government",
+  "stem": "Government. The student understands the structure and functions of government created by the Texas Constitution. The student is expected to:",
+  "description": "describe the structure and functions of government at municipal, county, and state levels; and"
+ },
+ {
+  "key": "TX:social_studies:7.14B",
+  "grade": "7",
+  "strand": "Government",
+  "stem": "Government. The student understands the structure and functions of government created by the Texas Constitution. The student is expected to:",
+  "description": "identify major sources of revenue for state and local governments such as property taxes, sales taxes, bonds, and fees."
+ },
+ {
+  "key": "TX:social_studies:7.15A",
+  "grade": "7",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the rights and responsibilities of Texas citizens in a democratic society. The student is expected to:",
+  "description": "explain rights of Texas citizens; and"
+ },
+ {
+  "key": "TX:social_studies:7.15B",
+  "grade": "7",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the rights and responsibilities of Texas citizens in a democratic society. The student is expected to:",
+  "description": "explain civic responsibilities of Texas citizens and the importance of civic participation."
+ },
+ {
+  "key": "TX:social_studies:7.16A",
+  "grade": "7",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the importance of the expression of different points of view in a democratic society. The student is expected to:",
+  "description": "identify different points of view of political parties and interest groups on important Texas issues, past and present; and"
+ },
+ {
+  "key": "TX:social_studies:7.16B",
+  "grade": "7",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the importance of the expression of different points of view in a democratic society. The student is expected to:",
+  "description": "describe the importance of free speech and press in a democratic society."
+ },
+ {
+  "key": "TX:social_studies:7.17A",
+  "grade": "7",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the importance of effective leadership in a democratic society. The student is expected to:",
+  "description": "identify the leadership qualities of elected and appointed leaders of Texas, past and present, including Texans who have been president of the United States; and"
+ },
+ {
+  "key": "TX:social_studies:7.17B",
+  "grade": "7",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the importance of effective leadership in a democratic society. The student is expected to:",
+  "description": "identify the contributions of Texas leaders such as Lawrence Sullivan \"Sul\" Ross, John Nance Garner (\"Cactus Jack\"), James A. Baker III, Henry B. González, Kay Bailey Hutchison, Barbara Jordan, Raymond L. Telles, Sam Rayburn, and Raul A. Gonzalez Jr."
+ },
+ {
+  "key": "TX:social_studies:7.18A",
+  "grade": "7",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the concept of diversity within unity in Texas. The student is expected to:",
+  "description": "explain how the diversity of Texas is reflected in a variety of cultural activities and celebrations;"
+ },
+ {
+  "key": "TX:social_studies:7.18B",
+  "grade": "7",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the concept of diversity within unity in Texas. The student is expected to:",
+  "description": "describe how people from various racial, ethnic, and religious groups attempt to maintain their cultural heritage while adapting to the larger Texas culture;"
+ },
+ {
+  "key": "TX:social_studies:7.18C",
+  "grade": "7",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the concept of diversity within unity in Texas. The student is expected to:",
+  "description": "identify examples of Spanish influence and the influence of other cultures on Texas such as place names, vocabulary, religion, architecture, food, and the arts; and"
+ },
+ {
+  "key": "TX:social_studies:7.18D",
+  "grade": "7",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the concept of diversity within unity in Texas. The student is expected to:",
+  "description": "identify contributions to the arts by Texans such as Roy Bedichek, Diane Gonzales Bertrand, J. Frank Dobie, Scott Joplin, Elisabet Ney, Amado Peña Jr., Walter Prescott Webb, and Horton Foote."
+ },
+ {
+  "key": "TX:social_studies:7.19A",
+  "grade": "7",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands the impact of scientific discoveries and technological innovations on the political, economic, and social development of Texas. The student is expected to:",
+  "description": "compare types and uses of technology, past and present;"
+ },
+ {
+  "key": "TX:social_studies:7.19B",
+  "grade": "7",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands the impact of scientific discoveries and technological innovations on the political, economic, and social development of Texas. The student is expected to:",
+  "description": "identify Texas leaders in science and technology such as Walter Cunningham, Michael DeBakey, Denton Cooley, Benjy Brooks, Michael Dell, and Howard Hughes Sr.;"
+ },
+ {
+  "key": "TX:social_studies:7.19C",
+  "grade": "7",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands the impact of scientific discoveries and technological innovations on the political, economic, and social development of Texas. The student is expected to:",
+  "description": "analyze the effects of various scientific discoveries and technological innovations on the development of Texas such as advancements in the agricultural, energy, medical, computer, and aerospace industries;"
+ },
+ {
+  "key": "TX:social_studies:7.19D",
+  "grade": "7",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands the impact of scientific discoveries and technological innovations on the political, economic, and social development of Texas. The student is expected to:",
+  "description": "evaluate the effects of scientific discoveries and technological innovations on the use of resources such as fossil fuels, water, and land; and"
+ },
+ {
+  "key": "TX:social_studies:7.19E",
+  "grade": "7",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands the impact of scientific discoveries and technological innovations on the political, economic, and social development of Texas. The student is expected to:",
+  "description": "analyze how scientific discoveries and technological innovations have resulted in an interdependence among Texas, the United States, and the world."
+ },
+ {
+  "key": "TX:social_studies:7.20A",
+  "grade": "7",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "differentiate between, locate, and use valid primary and secondary sources such as media and news services, biographies, interviews, and artifacts to acquire information about Texas;"
+ },
+ {
+  "key": "TX:social_studies:7.20B",
+  "grade": "7",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "analyze information by applying absolute and relative chronology through sequencing, categorizing, identifying cause-and-effect relationships, comparing, contrasting, finding the main idea, summarizing, making generalizations and predictions, and drawing inferences and conclusions;"
+ },
+ {
+  "key": "TX:social_studies:7.20C",
+  "grade": "7",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "organize and interpret information from outlines, reports, databases, and visuals, including graphs, charts, timelines, and maps;"
+ },
+ {
+  "key": "TX:social_studies:7.20D",
+  "grade": "7",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "identify bias and points of view from the historical context surrounding an event that influenced the participants;"
+ },
+ {
+  "key": "TX:social_studies:7.20E",
+  "grade": "7",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "formulate and communicate visually, orally, or in writing a claim supported by evidence and reasoning related to a social studies topic; and"
+ },
+ {
+  "key": "TX:social_studies:7.20F",
+  "grade": "7",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "evaluate a variety of historical and contemporary sources for validity, credibility, bias, and accuracy."
+ },
+ {
+  "key": "TX:social_studies:7.21A",
+  "grade": "7",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses geographic tools to collect, analyze, and interpret data. The student is expected to:",
+  "description": "create and interpret thematic maps, graphs, and charts representing various aspects of Texas during the 19th, 20th, and 21st centuries; and"
+ },
+ {
+  "key": "TX:social_studies:7.21B",
+  "grade": "7",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses geographic tools to collect, analyze, and interpret data. The student is expected to:",
+  "description": "analyze and interpret geographic distributions and patterns in Texas during the 19th, 20th, and 21st centuries."
+ },
+ {
+  "key": "TX:social_studies:7.22A",
+  "grade": "7",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "use social studies terminology correctly;"
+ },
+ {
+  "key": "TX:social_studies:7.22B",
+  "grade": "7",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "use effective written communication skills, including proper citations and avoiding plagiarism;"
+ },
+ {
+  "key": "TX:social_studies:7.22C",
+  "grade": "7",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "create written, oral, and visual presentations of social studies information; and"
+ },
+ {
+  "key": "TX:social_studies:7.22D",
+  "grade": "7",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "apply foundational language skills to engage in civil discourse about social studies topics, including those with multiple perspectives."
+ },
+ {
+  "key": "TX:social_studies:7.23A",
+  "grade": "7",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses problem-solving and decision-making skills, working independently and with others. The student is expected to:",
+  "description": "describe governmental and democratic processes such as voting, due process, and caucuses using simulations and models; and"
+ },
+ {
+  "key": "TX:social_studies:7.23B",
+  "grade": "7",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses problem-solving and decision-making skills, working independently and with others. The student is expected to:",
+  "description": "use problem-solving and decision-making processes to identify a problem, gather information, list and consider options, consider advantages and disadvantages, choose and implement a solution, and evaluate the effectiveness of the solution."
+ },
+ {
+  "key": "TX:social_studies:8.1A",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands traditional historical points of reference in U.S. history through 1877. The student is expected to:",
+  "description": "identify the major eras in U.S. history through 1877, including colonization, revolution, creation and ratification of the Constitution, early republic, the Age of Jackson, westward expansion, reform movements, sectionalism, Civil War, and Reconstruction, and describe their causes and effects; and"
+ },
+ {
+  "key": "TX:social_studies:8.1B",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands traditional historical points of reference in U.S. history through 1877. The student is expected to:",
+  "description": "explain the significance of the following dates: 1607, founding of Jamestown; 1620, arrival of the Pilgrims and signing of the Mayflower Compact; 1776, adoption of the Declaration of Independence; 1787, writing of the U.S. Constitution; 1803, Louisiana Purchase; and 1861-1865, Civil War."
+ },
+ {
+  "key": "TX:social_studies:8.2A",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands the causes of exploration and colonization eras. The student is expected to:",
+  "description": "identify reasons for English, Spanish, and French exploration and colonization of North America; and"
+ },
+ {
+  "key": "TX:social_studies:8.2B",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands the causes of exploration and colonization eras. The student is expected to:",
+  "description": "compare political, economic, religious, and social reasons for the establishment of the 13 English colonies."
+ },
+ {
+  "key": "TX:social_studies:8.3A",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands the foundations of representative government in the United States. The student is expected to:",
+  "description": "explain the reasons for the growth of representative government and institutions during the colonial period;"
+ },
+ {
+  "key": "TX:social_studies:8.3B",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands the foundations of representative government in the United States. The student is expected to:",
+  "description": "analyze the importance of the Mayflower Compact, the Fundamental Orders of Connecticut, and the Virginia House of Burgesses to the growth of representative government; and"
+ },
+ {
+  "key": "TX:social_studies:8.3C",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands the foundations of representative government in the United States. The student is expected to:",
+  "description": "describe how religion and virtue contributed to the growth of representative government in the American colonies."
+ },
+ {
+  "key": "TX:social_studies:8.4A",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands significant political and economic issues of the revolutionary and Constitutional eras. The student is expected to:",
+  "description": "analyze causes of the American Revolution, including the Proclamation of 1763, the Intolerable Acts, the Stamp Act, mercantilism, lack of representation in Parliament, and British economic policies following the French and Indian War;"
+ },
+ {
+  "key": "TX:social_studies:8.4B",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands significant political and economic issues of the revolutionary and Constitutional eras. The student is expected to:",
+  "description": "explain the roles played by significant individuals during the American Revolution, including Abigail Adams, John Adams, Wentworth Cheswell, Samuel Adams, Mercy Otis Warren, James Armistead, Benjamin Franklin, Crispus Attucks, King George III, Patrick Henry, Thomas Jefferson, the Marquis de Lafayette, Thomas Paine, and George Washington;"
+ },
+ {
+  "key": "TX:social_studies:8.4C",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands significant political and economic issues of the revolutionary and Constitutional eras. The student is expected to:",
+  "description": "explain the issues surrounding important events of the American Revolution, including declaring independence; fighting the battles of Lexington and Concord, Saratoga, and Yorktown; enduring the winter at Valley Forge; and signing the Treaty of Paris of 1783; and"
+ },
+ {
+  "key": "TX:social_studies:8.4D",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands significant political and economic issues of the revolutionary and Constitutional eras. The student is expected to:",
+  "description": "analyze the issues of the Constitutional Convention of 1787, including the Great Compromise and the Three-Fifths Compromise."
+ },
+ {
+  "key": "TX:social_studies:8.5A",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands the challenges confronted by the government and its leaders in the early years of the republic and the Age of Jackson. The student is expected to:",
+  "description": "describe major domestic problems faced by the leaders of the new republic, including maintaining national security, creating a stable economic system, and setting up the court system;"
+ },
+ {
+  "key": "TX:social_studies:8.5B",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands the challenges confronted by the government and its leaders in the early years of the republic and the Age of Jackson. The student is expected to:",
+  "description": "explain the effects of the Fugitive Slave Act of 1793;"
+ },
+ {
+  "key": "TX:social_studies:8.5C",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands the challenges confronted by the government and its leaders in the early years of the republic and the Age of Jackson. The student is expected to:",
+  "description": "summarize arguments regarding protective tariffs, taxation, and the banking system;"
+ },
+ {
+  "key": "TX:social_studies:8.5D",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands the challenges confronted by the government and its leaders in the early years of the republic and the Age of Jackson. The student is expected to:",
+  "description": "explain the origin and development of American political parties;"
+ },
+ {
+  "key": "TX:social_studies:8.5E",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands the challenges confronted by the government and its leaders in the early years of the republic and the Age of Jackson. The student is expected to:",
+  "description": "explain the causes, important events, and effects of the War of 1812;"
+ },
+ {
+  "key": "TX:social_studies:8.5F",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands the challenges confronted by the government and its leaders in the early years of the republic and the Age of Jackson. The student is expected to:",
+  "description": "identify the foreign policies of presidents Washington through Monroe and explain the impact of Washington's Farewell Address and the Monroe Doctrine;"
+ },
+ {
+  "key": "TX:social_studies:8.5G",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands the challenges confronted by the government and its leaders in the early years of the republic and the Age of Jackson. The student is expected to:",
+  "description": "explain the impact of the election of Andrew Jackson, including expanded suffrage; and"
+ },
+ {
+  "key": "TX:social_studies:8.5H",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands the challenges confronted by the government and its leaders in the early years of the republic and the Age of Jackson. The student is expected to:",
+  "description": "analyze the reasons for the removal and resettlement of Cherokee Indians during the Jacksonian era, including the Indian Removal Act, Worcester v. Georgia, and the Trail of Tears."
+ },
+ {
+  "key": "TX:social_studies:8.6A",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands westward expansion and its effects on the political, economic, and social development of the nation. The student is expected to:",
+  "description": "explain how the Northwest Ordinance established principles and procedures for orderly expansion of the United States;"
+ },
+ {
+  "key": "TX:social_studies:8.6B",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands westward expansion and its effects on the political, economic, and social development of the nation. The student is expected to:",
+  "description": "analyze the westward growth of the nation, including the Louisiana Purchase and Manifest Destiny; and"
+ },
+ {
+  "key": "TX:social_studies:8.6C",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands westward expansion and its effects on the political, economic, and social development of the nation. The student is expected to:",
+  "description": "explain the causes and effects of the U.S.-Mexican War and their impact on the United States."
+ },
+ {
+  "key": "TX:social_studies:8.7A",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands how political, economic, and social factors led to the growth of sectionalism and the Civil War. The student is expected to:",
+  "description": "analyze the impact of tariff policies on sections of the United States before the Civil War;"
+ },
+ {
+  "key": "TX:social_studies:8.7B",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands how political, economic, and social factors led to the growth of sectionalism and the Civil War. The student is expected to:",
+  "description": "compare the effects of political, economic, and social factors on slaves and free Blacks;"
+ },
+ {
+  "key": "TX:social_studies:8.7C",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands how political, economic, and social factors led to the growth of sectionalism and the Civil War. The student is expected to:",
+  "description": "analyze the impact of the Fugitive Slave Act of 1850 on slavery, free Blacks, and abolitionists;"
+ },
+ {
+  "key": "TX:social_studies:8.7D",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands how political, economic, and social factors led to the growth of sectionalism and the Civil War. The student is expected to:",
+  "description": "analyze the impact of slavery on different sections of the United States; and"
+ },
+ {
+  "key": "TX:social_studies:8.7E",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands how political, economic, and social factors led to the growth of sectionalism and the Civil War. The student is expected to:",
+  "description": "identify the provisions and compare the effects of congressional conflicts and compromises prior to the Civil War, including the role of John Quincy Adams."
+ },
+ {
+  "key": "TX:social_studies:8.8A",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands individuals, issues, and events of the Civil War. The student is expected to:",
+  "description": "explain the roles played by significant individuals during the Civil War, including Jefferson Davis, Ulysses S. Grant, Robert E. Lee, and Abraham Lincoln, and heroes such as congressional Medal of Honor recipients William Carney and Philip Bazaar;"
+ },
+ {
+  "key": "TX:social_studies:8.8B",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands individuals, issues, and events of the Civil War. The student is expected to:",
+  "description": "explain the central role of the expansion of slavery in causing sectionalism, disagreement over states' rights, and the Civil War;"
+ },
+ {
+  "key": "TX:social_studies:8.8C",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands individuals, issues, and events of the Civil War. The student is expected to:",
+  "description": "explain significant events of the Civil War, including the firing on Fort Sumter; the battles of Antietam, Gettysburg, and Vicksburg; the Emancipation Proclamation; Lee's surrender at Appomattox Court House; and the assassination of Abraham Lincoln; and"
+ },
+ {
+  "key": "TX:social_studies:8.8D",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands individuals, issues, and events of the Civil War. The student is expected to:",
+  "description": "analyze Abraham Lincoln's ideas about liberty, equality, union, and government as contained in his first and second inaugural addresses and the Gettysburg Address and contrast them with the ideas contained in Jefferson Davis's inaugural address."
+ },
+ {
+  "key": "TX:social_studies:8.9A",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands the effects of Reconstruction on the political, economic, and social life of the nation. The student is expected to:",
+  "description": "evaluate legislative reform programs of the Radical Reconstruction Congress and reconstructed state governments;"
+ },
+ {
+  "key": "TX:social_studies:8.9B",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands the effects of Reconstruction on the political, economic, and social life of the nation. The student is expected to:",
+  "description": "explain the impact of the election of African Americans from the South such as Hiram Rhodes Revels; and"
+ },
+ {
+  "key": "TX:social_studies:8.9C",
+  "grade": "8",
+  "strand": "History",
+  "stem": "History. The student understands the effects of Reconstruction on the political, economic, and social life of the nation. The student is expected to:",
+  "description": "explain the economic, political, and social problems during Reconstruction and evaluate their impact on different groups."
+ },
+ {
+  "key": "TX:social_studies:8.10A",
+  "grade": "8",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the location and characteristics of places and regions of the United States, past and present. The student is expected to:",
+  "description": "locate places and regions directly related to major eras and turning points in the United States during the 17th, 18th, and 19th centuries;"
+ },
+ {
+  "key": "TX:social_studies:8.10B",
+  "grade": "8",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the location and characteristics of places and regions of the United States, past and present. The student is expected to:",
+  "description": "compare places and regions of the United States in terms of physical and human characteristics; and"
+ },
+ {
+  "key": "TX:social_studies:8.10C",
+  "grade": "8",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the location and characteristics of places and regions of the United States, past and present. The student is expected to:",
+  "description": "analyze the effects of physical and human geographic factors such as weather, landforms, waterways, transportation, and communication on major historical events in the United States."
+ },
+ {
+  "key": "TX:social_studies:8.11A",
+  "grade": "8",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the physical characteristics of North America and how humans adapted to and modified the environment through the mid-19th century. The student is expected to:",
+  "description": "analyze how physical characteristics of the environment influenced population distribution, settlement patterns, and economic activities in the United States; and"
+ },
+ {
+  "key": "TX:social_studies:8.11B",
+  "grade": "8",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the physical characteristics of North America and how humans adapted to and modified the environment through the mid-19th century. The student is expected to:",
+  "description": "describe the positive and negative consequences of human modification of the physical environment of the United States."
+ },
+ {
+  "key": "TX:social_studies:8.12A",
+  "grade": "8",
+  "strand": "Economics",
+  "stem": "Economics. The student understands why various sections of the United States developed different patterns of economic activity through 1877. The student is expected to:",
+  "description": "identify economic differences among different regions of the United States;"
+ },
+ {
+  "key": "TX:social_studies:8.12B",
+  "grade": "8",
+  "strand": "Economics",
+  "stem": "Economics. The student understands why various sections of the United States developed different patterns of economic activity through 1877. The student is expected to:",
+  "description": "explain reasons for the development of the plantation system, the transatlantic slave trade, and the spread of slavery; and"
+ },
+ {
+  "key": "TX:social_studies:8.12C",
+  "grade": "8",
+  "strand": "Economics",
+  "stem": "Economics. The student understands why various sections of the United States developed different patterns of economic activity through 1877. The student is expected to:",
+  "description": "analyze the causes and effects of economic differences among different regions of the United States at selected times."
+ },
+ {
+  "key": "TX:social_studies:8.13A",
+  "grade": "8",
+  "strand": "Economics",
+  "stem": "Economics. The student understands how various economic forces resulted in the Industrial Revolution in the 19th century. The student is expected to:",
+  "description": "analyze the economic effects of the War of 1812; and"
+ },
+ {
+  "key": "TX:social_studies:8.13B",
+  "grade": "8",
+  "strand": "Economics",
+  "stem": "Economics. The student understands how various economic forces resulted in the Industrial Revolution in the 19th century. The student is expected to:",
+  "description": "identify the economic factors that brought about rapid industrialization and urbanization."
+ },
+ {
+  "key": "TX:social_studies:8.14A",
+  "grade": "8",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the origins and development of the free enterprise system in the United States. The student is expected to:",
+  "description": "explain why a free enterprise system of economics developed in the new nation, including minimal government regulation, taxation, and property rights; and"
+ },
+ {
+  "key": "TX:social_studies:8.14B",
+  "grade": "8",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the origins and development of the free enterprise system in the United States. The student is expected to:",
+  "description": "describe the characteristics and the benefits of the U.S. free enterprise system through 1877."
+ },
+ {
+  "key": "TX:social_studies:8.15A",
+  "grade": "8",
+  "strand": "Government",
+  "stem": "Government. The student understands the American beliefs and principles reflected in the Declaration of Independence, the U.S. Constitution, and other important historic documents. The student is expected to:",
+  "description": "identify the influence of ideas from historic documents, including the Magna Carta, the English Bill of Rights, the Mayflower Compact, and the Federalist Papers, on the U.S. system of government;"
+ },
+ {
+  "key": "TX:social_studies:8.15B",
+  "grade": "8",
+  "strand": "Government",
+  "stem": "Government. The student understands the American beliefs and principles reflected in the Declaration of Independence, the U.S. Constitution, and other important historic documents. The student is expected to:",
+  "description": "summarize the strengths and weaknesses of the Articles of Confederation;"
+ },
+ {
+  "key": "TX:social_studies:8.15C",
+  "grade": "8",
+  "strand": "Government",
+  "stem": "Government. The student understands the American beliefs and principles reflected in the Declaration of Independence, the U.S. Constitution, and other important historic documents. The student is expected to:",
+  "description": "identify colonial grievances listed in the Declaration of Independence and explain how those grievances were addressed in the U.S. Constitution and the Bill of Rights;"
+ },
+ {
+  "key": "TX:social_studies:8.15D",
+  "grade": "8",
+  "strand": "Government",
+  "stem": "Government. The student understands the American beliefs and principles reflected in the Declaration of Independence, the U.S. Constitution, and other important historic documents. The student is expected to:",
+  "description": "analyze how the U.S. Constitution reflects the principles of limited government, republicanism, checks and balances, federalism, separation of powers, popular sovereignty, and individual rights; and"
+ },
+ {
+  "key": "TX:social_studies:8.15E",
+  "grade": "8",
+  "strand": "Government",
+  "stem": "Government. The student understands the American beliefs and principles reflected in the Declaration of Independence, the U.S. Constitution, and other important historic documents. The student is expected to:",
+  "description": "explain the role of significant individuals such as Thomas Hooker, Charles de Montesquieu, and John Locke in the development of self-government in colonial America."
+ },
+ {
+  "key": "TX:social_studies:8.16A",
+  "grade": "8",
+  "strand": "Government",
+  "stem": "Government. The student understands the purpose of changing the U.S. Constitution and the impact of amendments on American society. The student is expected to:",
+  "description": "summarize the purposes for amending the U.S. Constitution; and"
+ },
+ {
+  "key": "TX:social_studies:8.16B",
+  "grade": "8",
+  "strand": "Government",
+  "stem": "Government. The student understands the purpose of changing the U.S. Constitution and the impact of amendments on American society. The student is expected to:",
+  "description": "describe the impact of the 13th, 14th, and 15th amendments."
+ },
+ {
+  "key": "TX:social_studies:8.17A",
+  "grade": "8",
+  "strand": "Government",
+  "stem": "Government. The student understands the dynamic nature of the powers of the national government and state governments in a federal system. The student is expected to:",
+  "description": "analyze the arguments of the Federalists and Anti-Federalists, including those of Alexander Hamilton, Patrick Henry, James Madison, and George Mason, and explain how their debates exemplify civil discourse; and"
+ },
+ {
+  "key": "TX:social_studies:8.17B",
+  "grade": "8",
+  "strand": "Government",
+  "stem": "Government. The student understands the dynamic nature of the powers of the national government and state governments in a federal system. The student is expected to:",
+  "description": "explain constitutional issues arising over the issue of states' rights, including the Nullification Crisis and the Civil War."
+ },
+ {
+  "key": "TX:social_studies:8.18A",
+  "grade": "8",
+  "strand": "Government",
+  "stem": "Government. The student understands the impact of landmark Supreme Court cases. The student is expected to:",
+  "description": "identify the origin of judicial review;"
+ },
+ {
+  "key": "TX:social_studies:8.18B",
+  "grade": "8",
+  "strand": "Government",
+  "stem": "Government. The student understands the impact of landmark Supreme Court cases. The student is expected to:",
+  "description": "summarize the issues, decisions, and significance of landmark Supreme Court cases, including Marbury v. Madison, McCulloch v. Maryland, and Gibbons v. Ogden; and"
+ },
+ {
+  "key": "TX:social_studies:8.18C",
+  "grade": "8",
+  "strand": "Government",
+  "stem": "Government. The student understands the impact of landmark Supreme Court cases. The student is expected to:",
+  "description": "evaluate the impact of the landmark Supreme Court decision Dred Scott v. Sandford on life in the United States."
+ },
+ {
+  "key": "TX:social_studies:8.19A",
+  "grade": "8",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the rights and responsibilities of citizens of the United States. The student is expected to:",
+  "description": "define and give examples of unalienable rights;"
+ },
+ {
+  "key": "TX:social_studies:8.19B",
+  "grade": "8",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the rights and responsibilities of citizens of the United States. The student is expected to:",
+  "description": "summarize rights guaranteed in the Bill of Rights; and"
+ },
+ {
+  "key": "TX:social_studies:8.19C",
+  "grade": "8",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the rights and responsibilities of citizens of the United States. The student is expected to:",
+  "description": "identify examples of responsible citizenship, including obeying rules and laws, staying informed on public issues, voting, and serving on juries."
+ },
+ {
+  "key": "TX:social_studies:8.20A",
+  "grade": "8",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the importance of voluntary individual participation in the democratic process. The student is expected to:",
+  "description": "evaluate the contributions of the Founding Fathers as models of civic virtue; and"
+ },
+ {
+  "key": "TX:social_studies:8.20B",
+  "grade": "8",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the importance of voluntary individual participation in the democratic process. The student is expected to:",
+  "description": "analyze reasons for and the impact of selected examples of civil disobedience in U.S. history such as the Boston Tea Party and Henry David Thoreau's refusal to pay a tax."
+ },
+ {
+  "key": "TX:social_studies:8.21A",
+  "grade": "8",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the importance of the expression of different points of view in a constitutional republic. The student is expected to:",
+  "description": "identify different points of view of political parties and interest groups on important historical issues;"
+ },
+ {
+  "key": "TX:social_studies:8.21B",
+  "grade": "8",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the importance of the expression of different points of view in a constitutional republic. The student is expected to:",
+  "description": "describe the importance of free speech and press in a constitutional republic; and"
+ },
+ {
+  "key": "TX:social_studies:8.21C",
+  "grade": "8",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the importance of the expression of different points of view in a constitutional republic. The student is expected to:",
+  "description": "summarize historical events in which compromise resulted in a resolution such as the Missouri Compromise, Compromise of 1850, and Kansas-Nebraska Act."
+ },
+ {
+  "key": "TX:social_studies:8.22A",
+  "grade": "8",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the importance of effective leadership in a constitutional republic. The student is expected to:",
+  "description": "analyze the leadership qualities of elected and appointed leaders of the United States such as George Washington, John Marshall, and Abraham Lincoln; and"
+ },
+ {
+  "key": "TX:social_studies:8.22B",
+  "grade": "8",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands the importance of effective leadership in a constitutional republic. The student is expected to:",
+  "description": "describe the contributions of significant political, social, and military leaders of the United States such as Frederick Douglass, John Paul Jones, Susan B. Anthony, and Elizabeth Cady Stanton."
+ },
+ {
+  "key": "TX:social_studies:8.23A",
+  "grade": "8",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the relationships between and among people from various groups, including racial, ethnic, and religious groups, during the 17th, 18th, and 19th centuries. The student is expected to:",
+  "description": "identify racial, ethnic, and religious groups that settled in the United States and explain their reasons for immigration;"
+ },
+ {
+  "key": "TX:social_studies:8.23B",
+  "grade": "8",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the relationships between and among people from various groups, including racial, ethnic, and religious groups, during the 17th, 18th, and 19th centuries. The student is expected to:",
+  "description": "explain how urbanization contributed to conflicts resulting from differences in religion, social class, and political beliefs;"
+ },
+ {
+  "key": "TX:social_studies:8.23C",
+  "grade": "8",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the relationships between and among people from various groups, including racial, ethnic, and religious groups, during the 17th, 18th, and 19th centuries. The student is expected to:",
+  "description": "identify ways conflicts between people from various racial, ethnic, and religious groups were addressed;"
+ },
+ {
+  "key": "TX:social_studies:8.23D",
+  "grade": "8",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the relationships between and among people from various groups, including racial, ethnic, and religious groups, during the 17th, 18th, and 19th centuries. The student is expected to:",
+  "description": "analyze the contributions of people of various racial, ethnic, and religious groups to our national identity; and"
+ },
+ {
+  "key": "TX:social_studies:8.23E",
+  "grade": "8",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the relationships between and among people from various groups, including racial, ethnic, and religious groups, during the 17th, 18th, and 19th centuries. The student is expected to:",
+  "description": "identify the political, social, and economic contributions of women to American society."
+ },
+ {
+  "key": "TX:social_studies:8.24A",
+  "grade": "8",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the major reform movements of the 19th century. The student is expected to:",
+  "description": "describe and evaluate the historical development of the abolition movement, including activities that focused attention on the moral ills of slavery; and"
+ },
+ {
+  "key": "TX:social_studies:8.24B",
+  "grade": "8",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the major reform movements of the 19th century. The student is expected to:",
+  "description": "evaluate the impact of reform movements, including educational reform, temperance, the women's rights movement, prison reform, the labor reform movement, and care of the disabled."
+ },
+ {
+  "key": "TX:social_studies:8.25A",
+  "grade": "8",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the impact of religion on the American way of life. The student is expected to:",
+  "description": "trace the development of religious freedom in the United States;"
+ },
+ {
+  "key": "TX:social_studies:8.25B",
+  "grade": "8",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the impact of religion on the American way of life. The student is expected to:",
+  "description": "describe religious influences on social movements, including the impact of the first and second Great Awakenings; and"
+ },
+ {
+  "key": "TX:social_studies:8.25C",
+  "grade": "8",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the impact of religion on the American way of life. The student is expected to:",
+  "description": "analyze the impact of the First Amendment guarantees of religious freedom on the American way of life."
+ },
+ {
+  "key": "TX:social_studies:8.26A",
+  "grade": "8",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the relationship between the arts and the times during which they were created. The student is expected to:",
+  "description": "identify examples of American art, music, and literature that reflect society in different eras such as the Hudson River School artists, the \"Battle Hymn of the Republic,\" and transcendental literature; and"
+ },
+ {
+  "key": "TX:social_studies:8.26B",
+  "grade": "8",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the relationship between the arts and the times during which they were created. The student is expected to:",
+  "description": "analyze the relationship between the arts and continuity and change in the American way of life."
+ },
+ {
+  "key": "TX:social_studies:8.27A",
+  "grade": "8",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands the impact of science and technology on the economic development of the United States. The student is expected to:",
+  "description": "explain the effects of technological and scientific innovations such as the steamboat, the cotton gin, the telegraph, and interchangeable parts;"
+ },
+ {
+  "key": "TX:social_studies:8.27B",
+  "grade": "8",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands the impact of science and technology on the economic development of the United States. The student is expected to:",
+  "description": "analyze how technological innovations changed the way goods were manufactured and distributed, nationally and internationally; and"
+ },
+ {
+  "key": "TX:social_studies:8.27C",
+  "grade": "8",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands the impact of science and technology on the economic development of the United States. The student is expected to:",
+  "description": "analyze how technological innovations brought about economic growth such as the development of the factory system and the construction of the Transcontinental Railroad."
+ },
+ {
+  "key": "TX:social_studies:8.28A",
+  "grade": "8",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands the impact of scientific discoveries and technological innovations on daily life in the United States. The student is expected to:",
+  "description": "compare the effects of scientific discoveries and technological innovations that have influenced daily life in different periods in U.S. history; and"
+ },
+ {
+  "key": "TX:social_studies:8.28B",
+  "grade": "8",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands the impact of scientific discoveries and technological innovations on daily life in the United States. The student is expected to:",
+  "description": "identify examples of how industrialization changed life in the United States."
+ },
+ {
+  "key": "TX:social_studies:8.29A",
+  "grade": "8",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "differentiate between, locate, and use valid primary and secondary sources such as media and news services, biographies, interviews, and artifacts to acquire information about the United States;"
+ },
+ {
+  "key": "TX:social_studies:8.29B",
+  "grade": "8",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "analyze information by applying absolute and relative chronology through sequencing, categorizing, identifying cause-and-effect relationships, comparing, contrasting, finding the main idea, summarizing, making generalizations and predictions, and drawing inferences and conclusions;"
+ },
+ {
+  "key": "TX:social_studies:8.29C",
+  "grade": "8",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "organize and interpret information from outlines, reports, databases, and visuals, including graphs, charts, timelines, and maps;"
+ },
+ {
+  "key": "TX:social_studies:8.29D",
+  "grade": "8",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "identify bias and points of view created by the historical context surrounding an event;"
+ },
+ {
+  "key": "TX:social_studies:8.29E",
+  "grade": "8",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "formulate and communicate visually, orally, or in writing a claim supported by evidence and reasoning related to a social studies topic;"
+ },
+ {
+  "key": "TX:social_studies:8.29F",
+  "grade": "8",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "evaluate a variety of historical and contemporary sources for validity, credibility, bias, and accuracy;"
+ },
+ {
+  "key": "TX:social_studies:8.29G",
+  "grade": "8",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "create a visual representation of historical information such as thematic maps, graphs, and charts representing various aspects of the United States; and"
+ },
+ {
+  "key": "TX:social_studies:8.29H",
+  "grade": "8",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired through established research methodologies from a variety of valid sources, including technology. The student is expected to:",
+  "description": "pose and answer questions about geographic distributions and patterns shown on maps, graphs, and charts."
+ },
+ {
+  "key": "TX:social_studies:8.30A",
+  "grade": "8",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "use social studies terminology correctly;"
+ },
+ {
+  "key": "TX:social_studies:8.30B",
+  "grade": "8",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "use effective written communication skills, including proper citations and avoiding plagiarism;"
+ },
+ {
+  "key": "TX:social_studies:8.30C",
+  "grade": "8",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "create written, oral, and visual presentations of social studies information; and"
+ },
+ {
+  "key": "TX:social_studies:8.30D",
+  "grade": "8",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "apply foundational language skills to engage in civil discourse about social studies topics, including those with multiple perspectives."
+ },
+ {
+  "key": "TX:social_studies:8.31A",
+  "grade": "8",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses problem-solving and decision-making skills, working independently and with others. The student is expected to:",
+  "description": "describe governmental and democratic processes such as voting, due process, and caucuses using simulations and models; and"
+ },
+ {
+  "key": "TX:social_studies:8.31B",
+  "grade": "8",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses problem-solving and decision-making skills, working independently and with others. The student is expected to:",
+  "description": "use problem-solving and decision-making processes to identify a problem, gather information, list and consider options, consider advantages and disadvantages, choose and implement a solution, and evaluate the effectiveness of the solution."
+ }
+]

@@ -1,0 +1,51 @@
+{
+  "links": [
+    {"oh": "RI.2.4", "state": "GA", "code": "2.L.V3a", "confidence": "strong",
+     "rationale": "Both determine meaning of unknown/topic words using context; GA V3a 'use context to determine or clarify meaning' is the direct match (I)."},
+
+    {"oh": "RL.3.4", "state": "GA", "code": "3.L.V3a", "confidence": "strong",
+     "rationale": "Ohio 'meaning as used in a text, literal vs nonliteral' maps to GA V3a context-to-determine-meaning; genre-neutral, same GA element as RI.3.4 (I)."},
+    {"oh": "RI.3.4", "state": "GA", "code": "3.L.V3a", "confidence": "strong",
+     "rationale": "Determining academic/domain word meaning in context matches GA V3a; genre-neutral, shared with RL.3.4 (I)."},
+
+    {"oh": "RL.4.4", "state": "GA", "code": "4.L.V3a", "confidence": "strong",
+     "rationale": "Ohio 'meaning as used in a text' incl. allusions maps to GA V3a context-to-determine-meaning; genre-neutral, shared with RI.4.4 (I)."},
+    {"oh": "RI.4.4", "state": "GA", "code": "4.L.V3a", "confidence": "strong",
+     "rationale": "Determining academic/domain word meaning in context matches GA V3a; genre-neutral, shared with RL.4.4 (I)."},
+
+    {"oh": "RL.5.4", "state": "GA", "code": "5.L.V3a", "confidence": "strong",
+     "rationale": "Ohio 'meaning as used in a text' incl. figurative language maps to GA V3a context-to-determine-meaning; genre-neutral, shared with RI.5.4 (I)."},
+    {"oh": "RI.5.4", "state": "GA", "code": "5.L.V3a", "confidence": "strong",
+     "rationale": "Determining academic/domain word meaning in context matches GA V3a; genre-neutral, shared with RL.5.4 (I)."},
+
+    {"oh": "RL.6.4", "state": "GA", "code": "6.L.V3b", "confidence": "strong",
+     "rationale": "Ohio 'meaning as used in a text' matches GA V3b analyze word relationships/contextual clues to determine meaning (V3a is a dead placeholder); genre-neutral, shared with RI.6.4 (I)."},
+    {"oh": "RL.6.4", "state": "GA", "code": "6.L.V3c", "confidence": "strong",
+     "rationale": "Ohio's explicit 'connotative meanings' matches GA V3c distinguish connotations of words sharing a denotation; genre-neutral, shared with RI.6.4 (I)."},
+    {"oh": "RI.6.4", "state": "GA", "code": "6.L.V3b", "confidence": "strong",
+     "rationale": "Determining figurative/technical word meaning in context matches GA V3b contextual-clue analysis; genre-neutral, shared with RL.6.4 (I)."},
+    {"oh": "RI.6.4", "state": "GA", "code": "6.L.V3c", "confidence": "strong",
+     "rationale": "Ohio's explicit 'connotative meanings' matches GA V3c connotation vs denotation; genre-neutral, shared with RL.6.4 (I)."},
+
+    {"oh": "RL.7.4", "state": "GA", "code": "7.L.V3b", "confidence": "strong",
+     "rationale": "Ohio 'meaning as used in a text' matches GA V3b analyze word relationships/contextual clues (V3a is a dead placeholder); genre-neutral, shared with RI.7.4 (I)."},
+    {"oh": "RL.7.4", "state": "GA", "code": "7.L.V3c", "confidence": "strong",
+     "rationale": "Ohio's explicit 'connotative meanings' matches GA V3c connotation vs denotation; genre-neutral, shared with RI.7.4 (I)."},
+    {"oh": "RI.7.4", "state": "GA", "code": "7.L.V3b", "confidence": "strong",
+     "rationale": "Determining figurative/technical word meaning in context matches GA V3b contextual-clue analysis; genre-neutral, shared with RL.7.4 (I)."},
+    {"oh": "RI.7.4", "state": "GA", "code": "7.L.V3c", "confidence": "strong",
+     "rationale": "Ohio's explicit 'connotative meanings' matches GA V3c connotation vs denotation; genre-neutral, shared with RL.7.4 (I)."},
+
+    {"oh": "RL.8.4", "state": "GA", "code": "8.L.V3b", "confidence": "strong",
+     "rationale": "Ohio 'meaning as used in a text' incl. analogies matches GA V3b, which analyzes analogies/contextual clues to determine meaning (V3a is a dead placeholder); genre-neutral, shared with RI.8.4 (I)."},
+    {"oh": "RL.8.4", "state": "GA", "code": "8.L.V3c", "confidence": "strong",
+     "rationale": "Ohio's explicit 'connotative meanings' matches GA V3c connotation vs denotation; genre-neutral, shared with RI.8.4 (I)."},
+    {"oh": "RI.8.4", "state": "GA", "code": "8.L.V3b", "confidence": "strong",
+     "rationale": "Determining figurative/technical/analogical word meaning in context matches GA V3b; genre-neutral, shared with RL.8.4 (I)."},
+    {"oh": "RI.8.4", "state": "GA", "code": "8.L.V3c", "confidence": "strong",
+     "rationale": "Ohio's explicit 'connotative meanings' matches GA V3c connotation vs denotation; genre-neutral, shared with RL.8.4 (I)."}
+  ],
+  "unmatched": [
+    {"oh": "RL.2.4", "why": "Ohio's grade-2 RL.4 is about sound devices (beats, alliteration, rhyme, repeated lines) supplying rhythm/meaning in poems/songs, not determining word meaning in context; Georgia's Vocabulary domain has no analog for poetic sound structure."}
+  ]
+}

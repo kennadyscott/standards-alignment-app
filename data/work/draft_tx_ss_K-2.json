@@ -1,0 +1,770 @@
+{
+  "memberships": [
+    {
+      "key": "TX:social_studies:K.2",
+      "conceptId": "c-individual-actions-shape-history",
+      "confidence": "strong",
+      "rationale": "Asks students to identify the contributions of named historical figures who helped shape the state and nation, which is exactly the concept's test of studying individuals' contributions to see how their actions shaped the present world."
+    },
+    {
+      "key": "TX:social_studies:K.4B",
+      "conceptId": "c-geography-shapes-economic-activity",
+      "confidence": "moderate",
+      "rationale": "Asks students to identify how geographic location influences shelter, clothing, food, and activities, satisfying the 'how they live there' half of the test; cross-grade (concept is 3-5, standard is K) and it does not reach the 'work people do' half."
+    },
+    {
+      "key": "TX:social_studies:K.7A",
+      "conceptId": "c-the-need-for-rules-and-laws",
+      "confidence": "strong",
+      "rationale": "Asks students to identify purposes for having rules, which is the concept's test of explaining why groups need rules at all rather than the content of any rule."
+    },
+    {
+      "key": "TX:social_studies:K.7B",
+      "conceptId": "c-the-need-for-rules-and-laws",
+      "confidence": "moderate",
+      "rationale": "Identifies rules that provide order, security, and safety, which states what rules accomplish and thus why they are needed, though it stays at the home/school level rather than the community level."
+    },
+    {
+      "key": "TX:social_studies:K.12C",
+      "conceptId": "c-technology-changes-work-and-life",
+      "confidence": "moderate",
+      "rationale": "Asks students to describe how their life might be different without modern technology, which is the concept's test of explaining how technological advances changed how people live, approached counterfactually."
+    },
+    {
+      "key": "TX:social_studies:1.2A",
+      "conceptId": "c-individual-actions-shape-history",
+      "confidence": "strong",
+      "rationale": "Asks students to identify contributions of named historical figures who influenced the state and nation, directly satisfying the concept's membership test."
+    },
+    {
+      "key": "TX:social_studies:1.2B",
+      "conceptId": "c-individual-actions-shape-history",
+      "confidence": "moderate",
+      "rationale": "Asks students to compare the lives of historical figures who influenced the state and nation, which is the 'study the lives of specific historical figures' half of the test; the comparison framing is an added demand the concept does not name."
+    },
+    {
+      "key": "TX:social_studies:1.5B",
+      "conceptId": "c-geography-shapes-economic-activity",
+      "confidence": "moderate",
+      "rationale": "Asks students to identify and describe how geographic location influences shelter, clothing, food, and activities, satisfying the 'how they live there' half of the test; cross-grade (concept is 3-5, standard is grade 1)."
+    },
+    {
+      "key": "TX:social_studies:1.7C",
+      "conceptId": "c-markets-exchange-goods-and-services",
+      "confidence": "moderate",
+      "rationale": "Asks students to identify the role of markets in the exchange of goods and services, which is the concept's test of explaining how goods and services move between buyers and sellers; cross-grade (concept is 3-5, standard is grade 1) and it does not reach the role of price."
+    },
+    {
+      "key": "TX:social_studies:1.8B",
+      "conceptId": "c-scarcity-choice-and-opportunity-cost",
+      "confidence": "moderate",
+      "rationale": "Asks students to explain why wanting more than they can have requires that people make choices, which is the 'limited resources force people to choose' half of the test; it does not reach the opportunity-cost half."
+    },
+    {
+      "key": "TX:social_studies:1.9B",
+      "conceptId": "c-goods-and-services-people-produce",
+      "confidence": "strong",
+      "rationale": "Asks students to describe how various jobs contribute to the production of goods and services, which is the concept's test that people work at jobs to make goods or provide services."
+    },
+    {
+      "key": "TX:social_studies:1.10A",
+      "conceptId": "c-the-need-for-rules-and-laws",
+      "confidence": "strong",
+      "rationale": "Asks students to explain the purpose for rules and laws in the home, school, and community, which is the concept's test of explaining why groups and communities need rules and laws at all."
+    },
+    {
+      "key": "TX:social_studies:1.10B",
+      "conceptId": "c-purposes-laws-serve-in-a-community",
+      "confidence": "moderate",
+      "rationale": "Identifies rules and laws that establish order, provide security, and manage conflict, naming what laws accomplish rather than merely that they exist — the concept's stated test."
+    },
+    {
+      "key": "TX:social_studies:1.15A",
+      "conceptId": "c-technology-changes-work-and-life",
+      "confidence": "strong",
+      "rationale": "Asks students to describe how technology has affected the ways families live, which is the concept's test of explaining how technological advances changed how people live."
+    },
+    {
+      "key": "TX:social_studies:1.15B",
+      "conceptId": "c-technology-changes-work-and-life",
+      "confidence": "strong",
+      "rationale": "Asks students to describe how technology has affected communication, transportation, and recreation — technological advances and their effect on how people live."
+    },
+    {
+      "key": "TX:social_studies:1.15C",
+      "conceptId": "c-individual-actions-shape-history",
+      "confidence": "moderate",
+      "rationale": "Asks students to identify the contributions of named scientists and inventors, which satisfies the concept's test of studying specific individuals' contributions to the world people live in now; the standard does not itself state the 'shaped the world' inference."
+    },
+    {
+      "key": "TX:social_studies:2.2A",
+      "conceptId": "c-individual-actions-shape-history",
+      "confidence": "strong",
+      "rationale": "Asks students to identify contributions of named historical figures who influenced the state and nation, directly satisfying the concept's membership test."
+    },
+    {
+      "key": "TX:social_studies:2.2B",
+      "conceptId": "c-individual-actions-shape-history",
+      "confidence": "moderate",
+      "rationale": "Asks students to describe how people have influenced local community history, which is the concept's test at community scale; the standard also covers events, which the concept does not."
+    },
+    {
+      "key": "TX:social_studies:2.6A",
+      "conceptId": "c-people-earn-income-by-working",
+      "confidence": "strong",
+      "rationale": "Asks students to explain how work provides income, which is precisely the concept's test that people earn income by working. Note the concept has an unresolved duplicate (c-people-earn-income-by-working-2); attached to the primary only."
+    },
+    {
+      "key": "TX:social_studies:2.6B",
+      "conceptId": "c-personal-budgeting-and-saving",
+      "confidence": "partial",
+      "rationale": "Asks students to explain the choices people can make about earning, spending, and saving money, which touches the concept's saving-versus-spending test but does not ask why saving affects financial well-being or name the parts of a budget; cross-grade (concept is 3-5, standard is grade 2)."
+    },
+    {
+      "key": "TX:social_studies:2.7A",
+      "conceptId": "c-roles-of-producer-and-consumer",
+      "confidence": "strong",
+      "rationale": "Asks students to distinguish between producing and consuming, which is the concept's test of distinguishing the producer role from the consumer role."
+    },
+    {
+      "key": "TX:social_studies:2.7B",
+      "conceptId": "c-roles-of-producer-and-consumer",
+      "confidence": "strong",
+      "rationale": "Asks students to identify ways in which people are both producers and consumers, which is the concept's explicit 'one person can occupy both roles' clause."
+    },
+    {
+      "key": "TX:social_studies:2.8A",
+      "conceptId": "c-purposes-laws-serve-in-a-community",
+      "confidence": "moderate",
+      "rationale": "Asks students to identify functions of government such as establishing order, providing security, and managing conflict — the order-and-security purposes the concept enumerates, though the standard frames them as functions of government rather than of laws."
+    },
+    {
+      "key": "TX:social_studies:2.8B",
+      "conceptId": "c-purposes-laws-serve-in-a-community",
+      "confidence": "moderate",
+      "rationale": "Asks students to identify governmental services in the community and explain their value, which is the 'public services' purpose the concept enumerates; framed as government services rather than as what laws accomplish."
+    },
+    {
+      "key": "TX:social_studies:2.12A",
+      "conceptId": "c-cultural-diversity-in-communities",
+      "confidence": "moderate",
+      "rationale": "Asks students to identify the significance of various ethnic and cultural celebrations, which is the concept's test that communities contain distinct cultural groups known by their customs and celebrations."
+    },
+    {
+      "key": "TX:social_studies:2.12B",
+      "conceptId": "c-cultural-diversity-in-communities",
+      "confidence": "moderate",
+      "rationale": "Asks students to compare ethnic and cultural celebrations, which requires recognizing multiple distinct cultural groups and the celebrations that distinguish them."
+    },
+    {
+      "key": "TX:social_studies:2.13A",
+      "conceptId": "c-technology-changes-work-and-life",
+      "confidence": "strong",
+      "rationale": "Asks students to describe how science and technology have affected communication, transportation, and recreation — technological advances and their effect on how people live."
+    },
+    {
+      "key": "TX:social_studies:2.13B",
+      "conceptId": "c-technology-changes-work-and-life",
+      "confidence": "moderate",
+      "rationale": "Asks students to explain how science and technology have affected the ways people meet basic needs, which is a change in how people live brought about by technology."
+    },
+    {
+      "key": "TX:social_studies:2.14",
+      "conceptId": "c-individual-actions-shape-history",
+      "confidence": "partial",
+      "rationale": "Asks students to identify named individuals for their inventiveness, which overlaps the concept's test of studying specific individuals' contributions, but the standard's demand is a character framing (individualism and inventiveness) rather than how their actions shaped the present world."
+    }
+  ],
+  "proposedConcepts": [
+    {
+      "slug": "describing-relative-location",
+      "title": "Describing Relative Location Using Spatial and Directional Terms",
+      "description": "A standard belongs here if it asks students to describe where a person, object, or place is in relation to another using spatial or directional language such as near, far, left, right, or the cardinal directions.",
+      "gradeBand": "K-2",
+      "subject": "social_studies",
+      "why": "No existing concept addresses spatial language or relative location; c-geography-shapes-economic-activity is about geography's influence on how people live and work, not about locating things. Relative location is a universal primary-grade geography standard and would attract standards from essentially every state.",
+      "members": [
+        {
+          "key": "TX:social_studies:K.3A",
+          "confidence": "strong",
+          "rationale": "Asks students to use spatial terms including over, under, near, far, left, and right to describe relative location."
+        },
+        {
+          "key": "TX:social_studies:K.3B",
+          "confidence": "strong",
+          "rationale": "Asks students to locate places on the school campus and describe their relative locations."
+        },
+        {
+          "key": "TX:social_studies:1.3A",
+          "confidence": "strong",
+          "rationale": "Asks students to describe the location of self and objects relative to other locations using spatial terms."
+        },
+        {
+          "key": "TX:social_studies:1.3B",
+          "confidence": "moderate",
+          "rationale": "Asks students to locate places using the four cardinal directions, which is directional language used to fix location relative to a reference."
+        }
+      ]
+    },
+    {
+      "slug": "using-maps-and-globes-to-locate-places",
+      "title": "Using Maps and Globes to Locate and Represent Places",
+      "description": "A standard belongs here if it asks students to use, read, or create maps and globes — including their basic elements — in order to locate or represent places.",
+      "gradeBand": "K-2",
+      "subject": "social_studies",
+      "why": "The library has no concept about geographic tools at all; the nearest geography concepts are about environment shaping economic activity and about migration. Map and globe skills are a core, recurring K-5 standard in every state's geography strand.",
+      "members": [
+        {
+          "key": "TX:social_studies:K.3C",
+          "confidence": "strong",
+          "rationale": "Asks students to identify and use geographic tools that aid in determining location, including maps and globes."
+        },
+        {
+          "key": "TX:social_studies:1.4A",
+          "confidence": "strong",
+          "rationale": "Asks students to create and use simple maps of the home, classroom, school, and community."
+        },
+        {
+          "key": "TX:social_studies:1.4B",
+          "confidence": "strong",
+          "rationale": "Asks students to locate the community, state, and nation on maps and globes."
+        },
+        {
+          "key": "TX:social_studies:2.3A",
+          "confidence": "strong",
+          "rationale": "Asks students to identify and use information on maps and globes using basic map elements such as title, cardinal directions, and legend."
+        },
+        {
+          "key": "TX:social_studies:2.3B",
+          "confidence": "strong",
+          "rationale": "Asks students to create maps showing places and routes within the home, school, and community."
+        },
+        {
+          "key": "TX:social_studies:2.4A",
+          "confidence": "moderate",
+          "rationale": "Asks students to identify major landforms, bodies of water, continents, and oceans on maps and globes — using the tool to locate places."
+        },
+        {
+          "key": "TX:social_studies:2.4B",
+          "confidence": "strong",
+          "rationale": "Asks students to locate the local community, state, nation, capitals, and bordering countries on maps and globes."
+        }
+      ]
+    },
+    {
+      "slug": "physical-characteristics-of-places",
+      "title": "Identifying the Physical Characteristics of a Place",
+      "description": "A standard belongs here if it asks students to identify or describe the physical features of a place, such as landforms, bodies of water, natural resources, or weather.",
+      "gradeBand": "K-2",
+      "subject": "social_studies",
+      "why": "c-geography-shapes-economic-activity requires explaining geography's influence on how people work and live; these standards stop at naming the physical features themselves, which is a distinct and earlier demand taught in every state's primary geography strand.",
+      "members": [
+        {
+          "key": "TX:social_studies:K.4A",
+          "confidence": "strong",
+          "rationale": "Asks students to identify the physical characteristics of place such as landforms, bodies of water, Earth's resources, and weather."
+        },
+        {
+          "key": "TX:social_studies:1.5A",
+          "confidence": "strong",
+          "rationale": "Asks students to identify and describe the physical characteristics of place such as landforms, bodies of water, Earth's resources, and weather."
+        }
+      ]
+    },
+    {
+      "slug": "identifying-basic-human-needs-and-wants",
+      "title": "Basic Human Needs and the Difference Between Needs and Wants",
+      "description": "A standard belongs here if it asks students to identify basic human needs such as food, clothing, and shelter, or to distinguish a need from a want.",
+      "gradeBand": "K-2",
+      "subject": "social_studies",
+      "why": "The library's economics concepts start at scarcity, goods and services, and income; none names basic needs or the needs/wants distinction, which is the entry-level economics standard in nearly every state's K-1 curriculum.",
+      "members": [
+        {
+          "key": "TX:social_studies:K.5A",
+          "confidence": "strong",
+          "rationale": "Asks students to identify basic human needs of food, clothing, and shelter."
+        },
+        {
+          "key": "TX:social_studies:K.5B",
+          "confidence": "strong",
+          "rationale": "Asks students to explain the difference between needs and wants."
+        }
+      ]
+    },
+    {
+      "slug": "how-people-meet-basic-needs",
+      "title": "Ways People and Families Meet Their Basic Needs",
+      "description": "A standard belongs here if it asks students to describe the ways people or families meet their basic human needs, including how those ways differ from one family to another.",
+      "gradeBand": "K-2",
+      "subject": "social_studies",
+      "why": "Distinct from identifying what the needs are and from the library's production and income concepts: this is about the household-level ways needs get met. It is a recurring K-1 standard across states and no existing concept states it.",
+      "members": [
+        {
+          "key": "TX:social_studies:K.5C",
+          "confidence": "strong",
+          "rationale": "Asks students to explain how basic human needs and wants can be met."
+        },
+        {
+          "key": "TX:social_studies:1.6A",
+          "confidence": "strong",
+          "rationale": "Asks students to describe ways that families meet basic human needs."
+        },
+        {
+          "key": "TX:social_studies:1.6B",
+          "confidence": "moderate",
+          "rationale": "Asks students to describe similarities and differences in ways families meet basic human needs — the same test with an added comparison demand."
+        }
+      ]
+    },
+    {
+      "slug": "authority-figures-and-their-roles",
+      "title": "Authority Figures and Public Officials and Their Roles",
+      "description": "A standard belongs here if it asks students to identify authority figures or public officials and describe the responsibilities or roles they carry out.",
+      "gradeBand": "K-2",
+      "subject": "social_studies",
+      "why": "The library's government concepts cover why rules exist and what laws accomplish, but nothing covers the people who hold authority. Identifying leaders and their roles is a standard K-2 civics topic in every state.",
+      "members": [
+        {
+          "key": "TX:social_studies:K.8A",
+          "confidence": "strong",
+          "rationale": "Asks students to identify authority figures in the home, school, and community."
+        },
+        {
+          "key": "TX:social_studies:K.8B",
+          "confidence": "moderate",
+          "rationale": "Asks students to explain how authority figures enforce rules — enforcement is the role such figures carry out."
+        },
+        {
+          "key": "TX:social_studies:1.11A",
+          "confidence": "strong",
+          "rationale": "Asks students to identify the responsibilities of authority figures in the home, school, and community."
+        },
+        {
+          "key": "TX:social_studies:1.11B",
+          "confidence": "strong",
+          "rationale": "Asks students to identify and describe the roles of public officials in the community, state, and nation."
+        },
+        {
+          "key": "TX:social_studies:2.9A",
+          "confidence": "moderate",
+          "rationale": "Asks students to name current public officials including mayor, governor, and president — the identification half of the test."
+        },
+        {
+          "key": "TX:social_studies:2.9B",
+          "confidence": "strong",
+          "rationale": "Asks students to compare the roles of public officials including mayor, governor, and president."
+        }
+      ]
+    },
+    {
+      "slug": "voting-as-a-way-groups-make-decisions",
+      "title": "Voting and Democratic Procedures for Making Group Decisions",
+      "description": "A standard belongs here if it asks students to explain or practice voting or other democratic procedures as the means by which a group makes a decision or selects a leader.",
+      "gradeBand": "K-2",
+      "subject": "social_studies",
+      "why": "No existing concept covers voting or collective decision procedures; c-citizens-rights-and-responsibilities is about the rights and duties citizens hold, not about the mechanism of deciding. Voting as group decision making is a core K-2 civics standard nationally.",
+      "members": [
+        {
+          "key": "TX:social_studies:K.9C",
+          "confidence": "strong",
+          "rationale": "Asks students to use voting as a method for group decision making."
+        },
+        {
+          "key": "TX:social_studies:K.15A",
+          "confidence": "strong",
+          "rationale": "Asks students to use democratic procedures to collaborate with others when making decisions on classroom, school, or community issues."
+        },
+        {
+          "key": "TX:social_studies:1.13D",
+          "confidence": "strong",
+          "rationale": "Asks students to explain and practice voting as a way of making choices and decisions."
+        },
+        {
+          "key": "TX:social_studies:1.18A",
+          "confidence": "strong",
+          "rationale": "Asks students to use democratic procedures to collaborate with others when making decisions on classroom, school, or community issues."
+        },
+        {
+          "key": "TX:social_studies:2.9C",
+          "confidence": "partial",
+          "rationale": "Asks students to identify ways public officials are selected, including election — voting used to select a leader — but it also covers appointment, which the concept does not address."
+        },
+        {
+          "key": "TX:social_studies:2.11C",
+          "confidence": "strong",
+          "rationale": "Asks students to use voting as a method for group decision making."
+        },
+        {
+          "key": "TX:social_studies:2.17A",
+          "confidence": "strong",
+          "rationale": "Asks students to use democratic procedures to collaborate with others when making decisions on classroom, school, or community issues."
+        }
+      ]
+    },
+    {
+      "slug": "family-and-community-traditions",
+      "title": "Family and Community Traditions and Why They Matter",
+      "description": "A standard belongs here if it asks students to describe family or community traditions, beliefs, or language and explain why they are important to the people who hold them.",
+      "gradeBand": "K-2",
+      "subject": "social_studies",
+      "why": "c-cultural-diversity-in-communities tests for recognizing that a community contains multiple distinct cultural groups; these standards are about the significance of a family's or community's own traditions, which is a different demand and a staple of K-1 culture strands across states.",
+      "members": [
+        {
+          "key": "TX:social_studies:K.11A",
+          "confidence": "strong",
+          "rationale": "Asks students to describe and explain the importance of family traditions."
+        },
+        {
+          "key": "TX:social_studies:K.11B",
+          "confidence": "moderate",
+          "rationale": "Asks students to compare traditions among families, which requires describing family traditions; the comparison demand extends past the concept's wording."
+        },
+        {
+          "key": "TX:social_studies:1.14A",
+          "confidence": "strong",
+          "rationale": "Asks students to describe and explain the importance of beliefs, language, and traditions of families and communities."
+        }
+      ]
+    },
+    {
+      "slug": "characteristics-of-good-citizenship",
+      "title": "Characteristics and Actions of a Good Citizen",
+      "description": "A standard belongs here if it asks students to identify the traits or actions that make someone a good citizen — such as honesty, respect for others, responsibility, community service, or participation in governance — including recognizing individuals who exemplify them.",
+      "gradeBand": "K-2",
+      "subject": "social_studies",
+      "why": "c-citizens-rights-and-responsibilities tests for naming the rights citizens hold and the duties owed in return; these standards never mention rights and instead enumerate civic dispositions and actions. c-respecting-rights-of-others requires explaining why rights must be respected, which these do not ask. Good-citizenship traits are a distinct, widely taught K-2 civics topic.",
+      "members": [
+        {
+          "key": "TX:social_studies:1.12A",
+          "confidence": "strong",
+          "rationale": "Asks students to identify characteristics of good citizenship including truthfulness, justice, equality, respect, responsibility, and participation in government."
+        },
+        {
+          "key": "TX:social_studies:1.12B",
+          "confidence": "partial",
+          "rationale": "Asks students to identify individuals who have exemplified good citizenship, which is the exemplar clause of the test rather than the traits themselves."
+        },
+        {
+          "key": "TX:social_studies:2.9D",
+          "confidence": "moderate",
+          "rationale": "Asks students to identify how citizens participate in their own governance by staying informed, providing input, and volunteering — the civic-participation actions the concept names."
+        },
+        {
+          "key": "TX:social_studies:2.10A",
+          "confidence": "strong",
+          "rationale": "Asks students to identify characteristics of good citizenship including truthfulness, justice, equality, respect, responsibility, and participation in government."
+        },
+        {
+          "key": "TX:social_studies:2.10B",
+          "confidence": "partial",
+          "rationale": "Asks students to identify individuals who have exemplified good citizenship, which is the exemplar clause of the test rather than the traits themselves."
+        },
+        {
+          "key": "TX:social_studies:2.10C",
+          "confidence": "strong",
+          "rationale": "Asks students to identify ways to actively practice good citizenship, including involvement in community service."
+        }
+      ]
+    },
+    {
+      "slug": "sources-and-artifacts-of-the-past",
+      "title": "Using Historical Sources and Artifacts to Study the Past",
+      "description": "A standard belongs here if it asks students to identify kinds of historical sources or artifacts and explain how they can be used to learn about the past.",
+      "gradeBand": "K-2",
+      "subject": "social_studies",
+      "why": "The library contains no historical-inquiry concept of any kind — every concept is content, not method. Learning that photographs, letters, and artifacts are evidence about the past is a recurring primary-grade history standard across states, distinct from generic research or communication skills.",
+      "members": [
+        {
+          "key": "TX:social_studies:K.13B",
+          "confidence": "strong",
+          "rationale": "Asks students to identify different kinds of historical sources and artifacts and explain how they can be used to study the past."
+        },
+        {
+          "key": "TX:social_studies:1.16B",
+          "confidence": "strong",
+          "rationale": "Asks students to identify different kinds of historical sources and artifacts and explain how they can be used to study the past."
+        },
+        {
+          "key": "TX:social_studies:2.15B",
+          "confidence": "strong",
+          "rationale": "Asks students to identify different kinds of historical sources and artifacts and explain how they can be used to study the past."
+        }
+      ]
+    },
+    {
+      "slug": "sequencing-events-and-measuring-time",
+      "title": "Sequencing Events and Describing Time in the Past and Present",
+      "description": "A standard belongs here if it asks students to place events in order in time, or to use chronological vocabulary and tools such as timelines and calendars to describe when something happened.",
+      "gradeBand": "K-2",
+      "subject": "social_studies",
+      "why": "No concept in the library addresses chronology. Sequencing events and using past/present/future vocabulary and timelines is an explicit, near-universal K-2 history standard (Georgia and Ohio both state it directly), so it would attract members from many states.",
+      "members": [
+        {
+          "key": "TX:social_studies:K.14A",
+          "confidence": "strong",
+          "rationale": "Asks students to place events in chronological order."
+        },
+        {
+          "key": "TX:social_studies:K.14B",
+          "confidence": "strong",
+          "rationale": "Asks students to use time and chronology terminology including before, after, next, first, last, yesterday, today, and tomorrow."
+        },
+        {
+          "key": "TX:social_studies:1.17A",
+          "confidence": "strong",
+          "rationale": "Asks students to use a simple timeline to distinguish among past, present, and future."
+        },
+        {
+          "key": "TX:social_studies:1.17B",
+          "confidence": "moderate",
+          "rationale": "Asks students to use a calendar to describe and measure time in days, weeks, months, and years — a tool for describing when things happen."
+        },
+        {
+          "key": "TX:social_studies:2.16A",
+          "confidence": "strong",
+          "rationale": "Asks students to describe the order of events using designations of time periods such as historical and present times."
+        },
+        {
+          "key": "TX:social_studies:2.16B",
+          "confidence": "strong",
+          "rationale": "Asks students to apply vocabulary related to chronology including past, present, and future."
+        },
+        {
+          "key": "TX:social_studies:2.16C",
+          "confidence": "strong",
+          "rationale": "Asks students to create and interpret timelines for events in the past and present."
+        }
+      ]
+    },
+    {
+      "slug": "humans-modify-physical-environment",
+      "title": "How People Modify the Physical Environment and the Results",
+      "description": "A standard belongs here if it asks students to identify ways people change the physical environment to suit their purposes, or the consequences that follow from those changes.",
+      "gradeBand": "K-2",
+      "subject": "social_studies",
+      "why": "c-geography-shapes-economic-activity runs the other direction — environment shaping people. Human-environment interaction in the people-act-on-environment direction has no concept in the library and is a standard element of every state's geography strand.",
+      "members": [
+        {
+          "key": "TX:social_studies:2.5A",
+          "confidence": "strong",
+          "rationale": "Asks students to identify ways in which people have modified the physical environment such as clearing land, building roads, farming, and drilling for oil."
+        },
+        {
+          "key": "TX:social_studies:2.5B",
+          "confidence": "strong",
+          "rationale": "Asks students to identify consequences of human modification of the physical environment."
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "key": "TX:social_studies:K.1A",
+      "why": "Identifying national patriotic holidays; no concept covers patriotic holidays, and the content is US/TX civic-observance specific rather than a generalizable idea."
+    },
+    {
+      "key": "TX:social_studies:K.1B",
+      "why": "Customs of national patriotic holidays (parades, fireworks); the cultural-diversity concept tests for distinct cultural groups within a community, which this does not address."
+    },
+    {
+      "key": "TX:social_studies:K.6A",
+      "why": "Identifying jobs in home/school/community; c-goods-and-services-people-produce requires the link from work to goods or services, which this element never states."
+    },
+    {
+      "key": "TX:social_studies:K.6B",
+      "why": "'Explain why people have jobs' names no income, goods, or services, so it fails the income and goods/services membership tests; too coarse to anchor a concept."
+    },
+    {
+      "key": "TX:social_studies:K.9A",
+      "why": "Identifying the US and Texas flags; state-symbol content with no cross-state equivalent and no concept."
+    },
+    {
+      "key": "TX:social_studies:K.9B",
+      "why": "Reciting the Pledge of Allegiance and the Texas pledge; a recitation performance, partly Texas-specific."
+    },
+    {
+      "key": "TX:social_studies:K.10",
+      "why": "Similarities and differences among individuals; c-cultural-diversity-in-communities tests for communities containing distinct cultural groups, not for individual-level likeness and difference."
+    },
+    {
+      "key": "TX:social_studies:K.12A",
+      "why": "Identifying examples of technology in home and school; c-technology-changes-work-and-life requires explaining how technology changed how people work or live, which this does not ask."
+    },
+    {
+      "key": "TX:social_studies:K.12B",
+      "why": "Technology helping accomplish tasks and meet needs describes function, not change over time; the technology concept's own note warns it is already broad enough to over-attract, so this is held out."
+    },
+    {
+      "key": "TX:social_studies:K.13A",
+      "why": "Stating facts based on evidence — a generic critical-thinking skill with no content concept and too thin to propose."
+    },
+    {
+      "key": "TX:social_studies:K.13C",
+      "why": "Gathering information from oral and visual sources — a generic research procedure, distinct from the proposed historical-sources concept, which is about sources as evidence of the past."
+    },
+    {
+      "key": "TX:social_studies:K.13D",
+      "why": "Sequencing and categorizing information generically (not events in time); a processing skill with no concept."
+    },
+    {
+      "key": "TX:social_studies:K.14C",
+      "why": "Communicating information visually, orally, or in writing — a generic communication skill."
+    },
+    {
+      "key": "TX:social_studies:K.14D",
+      "why": "Creating and interpreting visuals including pictures and maps; the demand is visual communication generally, not using maps to locate places."
+    },
+    {
+      "key": "TX:social_studies:K.14E",
+      "why": "Practicing classroom rules for listening respectfully; c-respecting-rights-of-others requires explaining why rights must be respected, which this procedural expectation does not ask."
+    },
+    {
+      "key": "TX:social_studies:K.15B",
+      "why": "A generic problem-solving process; its 'consider advantages and disadvantages' clause touches c-weighing-costs-and-benefits, but that concept is anchored to economic decision standards and attaching a process-skills standard would create misleading alignments."
+    },
+    {
+      "key": "TX:social_studies:1.1A",
+      "why": "Origins of patriotic customs and holidays such as Constitution Day and Veterans Day; no concept, and the content is US/TX civic-observance specific."
+    },
+    {
+      "key": "TX:social_studies:1.1B",
+      "why": "Comparing observance of holidays and celebrations; under a patriotic-holiday stem, so it fails the cultural-diversity concept's test about distinct cultural groups."
+    },
+    {
+      "key": "TX:social_studies:1.7A",
+      "why": "Identifying examples of goods and services; c-goods-and-services-people-produce requires the assertion that people work at jobs to produce them, which this element does not make."
+    },
+    {
+      "key": "TX:social_studies:1.7B",
+      "why": "'Identify ways people exchange goods and services' never names money or markets, so it fails both the medium-of-exchange and markets membership tests."
+    },
+    {
+      "key": "TX:social_studies:1.8A",
+      "why": "Identifying examples of people wanting more than they can have states scarcity but not that limited resources force a choice, which is what the scarcity concept tests."
+    },
+    {
+      "key": "TX:social_studies:1.8C",
+      "why": "Identifying examples of family buying choices; it names choices but not the limit that forces them, so it fails the scarcity concept's test."
+    },
+    {
+      "key": "TX:social_studies:1.9A",
+      "why": "Tools of jobs and characteristics of a job well performed; a work-habits topic with no matching concept and not clearly a shared cross-state idea."
+    },
+    {
+      "key": "TX:social_studies:1.13A",
+      "why": "Explaining patriotic symbols including the Liberty Bell, Statue of Liberty, and the Alamo; national and Texas symbol content with no concept."
+    },
+    {
+      "key": "TX:social_studies:1.13B",
+      "why": "Reciting the US and Texas pledges; a recitation performance, partly Texas-specific."
+    },
+    {
+      "key": "TX:social_studies:1.13C",
+      "why": "Anthems and mottoes of Texas and the United States; state and national symbol content with no cross-state equivalent."
+    },
+    {
+      "key": "TX:social_studies:1.13E",
+      "why": "How patriotic customs reflect American individualism and freedom; a US civic-values framing particular to TEKS, with no concept and no clear cross-state counterpart."
+    },
+    {
+      "key": "TX:social_studies:1.14B",
+      "why": "How folktales and legends reflect community beliefs; adjacent to the proposed traditions concept but its demand is literary interpretation, so attaching it would blur that concept's test."
+    },
+    {
+      "key": "TX:social_studies:1.16A",
+      "why": "Stating facts based on evidence — a generic critical-thinking skill."
+    },
+    {
+      "key": "TX:social_studies:1.16C",
+      "why": "Gathering information from oral and visual sources — a generic research procedure, not the use of sources as evidence about the past."
+    },
+    {
+      "key": "TX:social_studies:1.16D",
+      "why": "Sequencing and categorizing information generically; not chronology of events."
+    },
+    {
+      "key": "TX:social_studies:1.17C",
+      "why": "Communicating information visually, orally, or in writing — a generic communication skill."
+    },
+    {
+      "key": "TX:social_studies:1.17D",
+      "why": "Creating and interpreting visual and written material — a generic communication skill."
+    },
+    {
+      "key": "TX:social_studies:1.17E",
+      "why": "Using social studies terminology correctly — a generic vocabulary skill."
+    },
+    {
+      "key": "TX:social_studies:1.17F",
+      "why": "Practicing classroom rules for listening respectfully; c-respecting-rights-of-others requires explaining why rights must be respected, which this does not ask."
+    },
+    {
+      "key": "TX:social_studies:1.18B",
+      "why": "A generic problem-solving process; same reasoning as K.15B — attaching it to c-weighing-costs-and-benefits would import an economics alignment the standard does not support."
+    },
+    {
+      "key": "TX:social_studies:2.1A",
+      "why": "Significance of community, state, and national celebrations such as Veterans Day and Thanksgiving; patriotic-holiday content with no concept."
+    },
+    {
+      "key": "TX:social_studies:2.1B",
+      "why": "Significance of landmarks such as monuments and government buildings; no concept covers landmarks, and the exemplars are state and national specific."
+    },
+    {
+      "key": "TX:social_studies:2.5C",
+      "why": "Conserving and replenishing Earth's resources; a genuine cross-state idea but distinct from the modification-and-consequences concept proposed here, and a single TX element is too thin to anchor its own concept. Flagging as a real library gap."
+    },
+    {
+      "key": "TX:social_studies:2.7C",
+      "why": "Tracing a product from natural resource to finished product; c-productive-resources-of-an-economy tests for the natural/human/capital/entrepreneurship taxonomy, which this does not address."
+    },
+    {
+      "key": "TX:social_studies:2.11A",
+      "why": "Reciting the US and Texas pledges; a recitation performance, partly Texas-specific."
+    },
+    {
+      "key": "TX:social_studies:2.11B",
+      "why": "Identifying patriotic songs; national symbol content with no concept."
+    },
+    {
+      "key": "TX:social_studies:2.11D",
+      "why": "Identifying symbols such as state and national birds and flowers and Uncle Sam; state-symbol content with no cross-state equivalent."
+    },
+    {
+      "key": "TX:social_studies:2.11E",
+      "why": "How symbols and celebrations reflect an American love of individualism, inventiveness, and freedom; a US civic-values framing particular to TEKS."
+    },
+    {
+      "key": "TX:social_studies:2.15A",
+      "why": "Stating facts based on evidence — a generic critical-thinking skill."
+    },
+    {
+      "key": "TX:social_studies:2.15C",
+      "why": "Gathering information from oral and visual sources — a generic research procedure."
+    },
+    {
+      "key": "TX:social_studies:2.15D",
+      "why": "Interpreting material by sequencing, categorizing, finding main idea, predicting, and comparing — a generic reading-comprehension skill, not chronology of events."
+    },
+    {
+      "key": "TX:social_studies:2.16D",
+      "why": "Using social studies terminology correctly — a generic vocabulary skill."
+    },
+    {
+      "key": "TX:social_studies:2.16E",
+      "why": "Communicating information visually, orally, or in writing — a generic communication skill."
+    },
+    {
+      "key": "TX:social_studies:2.16F",
+      "why": "Creating written and visual material to express ideas — a generic communication skill."
+    },
+    {
+      "key": "TX:social_studies:2.16G",
+      "why": "Practicing classroom rules for listening respectfully; c-respecting-rights-of-others requires explaining why rights must be respected."
+    },
+    {
+      "key": "TX:social_studies:2.17B",
+      "why": "A generic problem-solving process; same reasoning as K.15B and 1.18B."
+    }
+  ]
+}

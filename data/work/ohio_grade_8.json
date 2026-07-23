@@ -1,0 +1,343 @@
+[
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "8",
+  "code": "8.ESS.1",
+  "strand": "Earth and Space Science",
+  "topic": "Physical Earth",
+  "description": "The composition and properties of Earth\u2019s interior are identified by the behavior of seismic waves. The refraction and reflection of seismic waves as they move through one type of material to another is used to differentiate the layers of Earth\u2019s interior. Earth has a core, a mantle, and a crust. Impacts during planetary formation generated heat. These impacts converted gravitational potential energy to heat. Earth\u2019s core is also able to generate its own thermal energy because of decaying atoms. This continuously releases thermal energy. Thermal energy generated from Earth\u2019s core drives convection currents in the asthenosphere. Note 1: Radioactive decay is not the focus; this will be discussed in Physical Science and Chemistry. Note 2: At this grade level, analyzing seismograms (e.g., amplitude and lag time) and reading a travel time curve are not the focus. At this grade the properties of seismic waves should be addressed."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "8",
+  "code": "8.ESS.2",
+  "strand": "Earth and Space Science",
+  "topic": "Physical Earth",
+  "description": "Earth\u2019s lithosphere consists of major and minor tectonic plates that move relative to each other. Historical data and observations such as fossil distribution, paleomagnetism, continental drift and seafloor spreading contributed to the theory of plate tectonics. The rigid tectonic plates move with the molten rock and magma beneath them in the upper mantle. Convection currents in the asthenosphere cause movements of the lithospheric plates. The energy that forms convection currents comes from deep within the Earth. There are three main types of plate boundaries: divergent, convergent and transform. Each type of boundary results in specific motion and causes events (such as earthquakes or volcanic activity) or features (such as mountains or trenches) that are indicative of the type of boundary."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "8",
+  "code": "8.ESS.3",
+  "strand": "Earth and Space Science",
+  "topic": "Physical Earth",
+  "description": "A combination of constructive and destructive geologic processes formed Earth\u2019s surface. Earth\u2019s surface is formed from a variety of different geologic processes, including but not limited to plate tectonics."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "8",
+  "code": "8.ESS.4",
+  "strand": "Earth and Space Science",
+  "topic": "Physical Earth",
+  "description": "Evidence of the dynamic changes of Earth\u2019s surface through time is found in the geologic record. Earth is approximately 4.6 billion years old. Earth history is based on observations of the geologic record and the understanding that processes observed at present day are similar to those that occurred in the past (uniformitarianism). There are different methods to determine relative and absolute age of some rock layers in the geologic record. Within a sequence of undisturbed sedimentary rocks, the oldest rocks are at the bottom (superposition). The geologic record can help identify past environmental and climate conditions."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "8",
+  "code": "8.PS.1",
+  "strand": "Physical Science",
+  "topic": "Forces and Motion",
+  "description": "Objects can experience a force due to an external field such as magnetic, electrostatic, or gravitational fields. Magnetic, electrical and gravitational forces can act at a distance."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "8",
+  "code": "8.PS.2",
+  "strand": "Physical Science",
+  "topic": "Forces and Motion",
+  "description": "Forces can act to change the motion of objects. The motion of an object is always measured with respect to a reference point. Forces can be added. The net force on an object is the sum of all of the forces acting on the object. If there is a nonzero net force acting on an object, its speed and/or direction will change. Kinetic friction and drag are forces that act in a direction opposite the relative motion of objects."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "8",
+  "code": "8.LS.1",
+  "strand": "Life Science",
+  "topic": "Species and Reproduction",
+  "description": "Diversity of species, a result of variation of traits, occurs through the process of evolution and extinction over many generations. The fossil records provide evidence that changes have occurred in number and types of species. Fossils provide important evidence of how life and environmental conditions have changed. Changes in environmental conditions can affect how beneficial a trait will be for the survival and reproductive success of an organism or an entire species. Throughout Earth\u2019s history, extinction of a species has occurred when the environment changes and the individual organisms of that species do not have the traits necessary to survive and reproduce in the changed environment. Most species (approximately 99 percent) that have lived on Earth are now extinct. Note: Population genetics and the ability to use statistic mathematics to predict changes in a gene pool are reserved for high school Biology."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "8",
+  "code": "8.LS.2",
+  "strand": "Life Science",
+  "topic": "Species and Reproduction",
+  "description": "Every organism alive today comes from a long line of ancestors who reproduced successfully every generation. Reproduction is the transfer of genetic information from one generation to the next. It can occur with mixing of genes from two individuals (sexual reproduction). It can occur with the transfer of genes from one individual to the next generation (asexual reproduction). The ability to reproduce defines living things."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "8",
+  "code": "8.LS.3",
+  "strand": "Life Science",
+  "topic": "Species and Reproduction",
+  "description": "The characteristics of an organism are a result of inherited traits received from parent(s). Expression of all traits is determined by genes and environmental factors to varying degrees. Many genes influence more than one trait, and many traits are influenced by more than one gene. During reproduction, genetic information (DNA) is transmitted between parent and offspring. In asexual reproduction, the lone parent contributes DNA to the offspring. In sexual reproduction, both parents contribute DNA to the offspring. Note 1: The focus should be the link between DNA and traits without being explicit about the mechanisms involved. Note 2: The ways in which bacteria reproduce is beyond the scope of this content statement. Note 3: The molecular structure of DNA is not appropriate at this grade level."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.1",
+  "strand": "History",
+  "topic": "Historical Thinking and Skills",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "Primary and secondary sources are used to examine events from multiple perspectives and to present and defend a position."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.2",
+  "strand": "History",
+  "topic": "Colonization to Independence",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "North America, originally inhabited by American Indians, was explored and colonized by Europeans for economic and religious reasons."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.3",
+  "strand": "History",
+  "topic": "Colonization to Independence",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "Competition for control of territory and resources in North America led to conflicts among colonizing powers."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.4",
+  "strand": "History",
+  "topic": "Colonization to Independence",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "The practice of race-based slavery led to the forced migration of Africans to the American colonies and contributed to colonial economic development. Their knowledge, skills and traditions were essential to the development of the colonies."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.5",
+  "strand": "History",
+  "topic": "Colonization to Independence",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "The ideas of the Enlightenment and dissatisfaction with colonial rule led English colonists to write the Declaration of Independence and launch the American Revolution."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.6",
+  "strand": "History",
+  "topic": "Colonization to Independence",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "Key events and significant figures in American history influenced the course and outcome of the American Revolution."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.7",
+  "strand": "History",
+  "topic": "A New Nation",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "The outcome of the American Revolution was national independence and new political, social and economic relationships for the American people."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.8",
+  "strand": "History",
+  "topic": "A New Nation",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "Problems arising under the Articles of Confederation led to debate over the adoption of the U.S. Constitution."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.9",
+  "strand": "History",
+  "topic": "A New Nation",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "Actions of early presidential administrations established a strong federal government, provided peaceful transitions of power and repelled a foreign invasion."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.10",
+  "strand": "History",
+  "topic": "Expansion",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "The United States added to its territory through treaties and purchases."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.11",
+  "strand": "History",
+  "topic": "Expansion",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "Westward expansion contributed to economic and industrial development, debates over sectional issues, war with Mexico and the displacement of American Indians."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.12",
+  "strand": "History",
+  "topic": "Civil War and Reconstruction",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "Disputes over the nature of federalism, complicated by economic developments in the United States, resulted in sectional issues, including slavery, which led to the American Civil War."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.13",
+  "strand": "History",
+  "topic": "Civil War and Reconstruction",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "Key events and significant figures in American history influenced the course and outcome of the Civil War."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.14",
+  "strand": "History",
+  "topic": "Civil War and Reconstruction",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "The Reconstruction period resulted in changes to the U.S. Constitution, an affirmation of federal authority and lingering social and political differences."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.15",
+  "strand": "Geography",
+  "topic": "Spatial Thinking and Skills",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "Modern and historical maps and other geographic tools are used to analyze how historic events are shaped by geography."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.16",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "The availability of natural resources contributed to the geographic and economic expansion of the United States, sometimes resulting in unintended environmental consequences."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.17",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "The movement of people, products and ideas resulted in new patterns of settlement and land use that influenced the political and economic development of the United States."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.18",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "Cultural biases, stereotypes and prejudices had social, political and economic consequences for minority groups and the population as a whole."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.19",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "Americans began to develop a unique national identity among diverse regional and cultural populations based on democratic ideals."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.20",
+  "strand": "Government",
+  "topic": "Civic Participation and Skills",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "Active participation in social and civic groups can lead to the attainment of individual and public goals."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.21",
+  "strand": "Government",
+  "topic": "Civic Participation and Skills",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "Informed citizens understand how media and communication technology influence public opinion."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.22",
+  "strand": "Government",
+  "topic": "Roles and Systems of Government",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "The U.S. Constitution established a federal republic, providing a framework for a national government with elected representatives, separation of powers, and checks and balances."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.23",
+  "strand": "Government",
+  "topic": "Roles and Systems of Government",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "The U.S. Constitution protects citizens\u2019 rights by limiting the powers of government."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.24",
+  "strand": "Economics",
+  "topic": "Economic Decision Making and Skills",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "Choices made by individuals, businesses and governments have both present and future consequences."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.25",
+  "strand": "Economics",
+  "topic": "Production and Consumption",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "The Industrial Revolution fundamentally changed the means of production as a result of improvements in technology, use of new power resources, the advent of interchangeable parts and the shift from craftwork to factory work."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.SS.26",
+  "strand": "Economics",
+  "topic": "Markets",
+  "theme": "U.S. Studies from 1492 to 1877: Exploration Through Reconstruction",
+  "description": "Governments can impact markets by means of spending, regulations, taxes and trade barriers."
+ }
+]

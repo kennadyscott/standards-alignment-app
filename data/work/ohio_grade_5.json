@@ -1,0 +1,245 @@
+[
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "5",
+  "code": "5.ESS.1",
+  "strand": "Earth and Space Science",
+  "topic": "Cycles and Patterns in the Solar System",
+  "description": "The solar system includes the sun and all celestial bodies that orbit the sun. Each planet in the solar system has unique characteristics. The distance from the sun, size, composition and movement of each planet are unique. Planets revolve around the sun in elliptical orbits. Some of the planets have moons and/or debris that orbit them. Comets, asteroids and meteoroids orbit the sun."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "5",
+  "code": "5.ESS.2",
+  "strand": "Earth and Space Science",
+  "topic": "Cycles and Patterns in the Solar System",
+  "description": "The sun is one of many stars that exist in the universe. The sun appears to be the largest star in the sky because it is the closest star to Earth. Some stars are larger than the sun and some stars are smaller than the sun."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "5",
+  "code": "5.ESS.3",
+  "strand": "Earth and Space Science",
+  "topic": "Cycles and Patterns in the Solar System",
+  "description": "Most of the cycles and patterns of motion between the Earth and sun are predictable. Earth\u2019s revolution around the sun takes approximately 365 days. Earth completes one rotation on its axis in a 24-hour period, producing day and night. This rotation makes the sun, stars and moon appear to change position in the sky. Note: Moon phases should not be the focus."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "5",
+  "code": "5.PS.1",
+  "strand": "Physical Science",
+  "topic": "Light, Sound and Motion",
+  "description": "The amount of change in movement of an object is based on the mass of the object and the amount of force exerted. Movement can be measured by speed. The speed of an object is calculated by determining the distance (d) traveled in a period of time (t). Any change in speed or direction of an object requires a force and is affected by the mass of the object and the amount of force applied. Note: Differentiating between mass and weight is not necessary at this grade level."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "5",
+  "code": "5.PS.2",
+  "strand": "Physical Science",
+  "topic": "Light, Sound and Motion",
+  "description": "Light and sound are forms of energy that behave in predictable ways. Light travels and maintains its direction until it interacts with an object or moves from one medium to another and then it can be reflected, refracted or absorbed. Sound is produced by vibrating objects and requires a medium through which to travel. The rate of vibration is related to the pitch of the sound. Note: At this grade level, the discussion of light and sound should be based on observable behavior. Waves are introduced at the middle school level."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "5",
+  "code": "5.LS.1",
+  "strand": "Life Science",
+  "topic": "Interconnections within Ecosystems",
+  "description": "Organisms perform a variety of roles in an ecosystem. Populations of organisms can be categorized by how they acquire energy. Food webs can be used to identify the relationships among producers, consumers and decomposers in an ecosystem."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "5",
+  "code": "5.LS.2",
+  "strand": "Life Science",
+  "topic": "Interconnections within Ecosystems",
+  "description": "All of the processes that take place within organisms require energy. For ecosystems, the major source of energy is sunlight. Energy entering ecosystems as sunlight is transferred and transformed by producers into energy that organisms use through the process of photosynthesis. That energy is used or stored by the producer and can be passed from organism to organism as illustrated in food webs."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.1",
+  "strand": "History",
+  "topic": "Historical Thinking and Skills",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "Events can be arranged in order of occurrence using the conventions of B.C. and A.D. or B.C.E. and C.E."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.2",
+  "strand": "History",
+  "topic": "Early Civilizations",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "Early Indian civilizations (Maya, Inca, Aztec, Mississippian) existed in the Western Hemisphere prior to the arrival of Europeans. These civilizations had developed unique governments, social structures, religions, technologies, and agricultural practices."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.3",
+  "strand": "History",
+  "topic": "Heritage",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "European exploration and colonization during the 1400s-1600s had lasting effects which can be used to understand the Western Hemisphere today."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.4",
+  "strand": "Geography",
+  "topic": "Spatial Thinking and Skills",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "Geographic tools can be used to gather, process and report information about people, places and environments. Cartographers decide which information to include in maps."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.5",
+  "strand": "Geography",
+  "topic": "Spatial Thinking and Skills",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "Latitude and longitude can be used to make observations about location and generalizations about climate"
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.6",
+  "strand": "Geography",
+  "topic": "Places and Regions",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "Regions can be determined using data related to various criteria including landform, climate, population, and cultural and economic characteristics."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.7",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "The variety of physical environments within the Western Hemisphere influences human activities. Likewise, human activities modify the physical environments."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.8",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "American Indians developed unique cultures with many different ways of life. American Indian tribes and nations can be classified into cultural groups based on geographic and cultural similarities."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.9",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "Political, environmental, social and economic factors cause people, products and ideas to move from place to place in the Western Hemisphere and results in diversity."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.10",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "The Western Hemisphere is culturally diverse (eg., language, food, religion, art, music) due to the influences and interactions of a variety of world cultures."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.11",
+  "strand": "Government",
+  "topic": "Civic Participation and Skills",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "Individuals can better understand public issues by gathering, interpreting and checking information for accuracy from multiple sources. Data can be displayed graphically to effectively and efficiently communicate information."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.12",
+  "strand": "Government",
+  "topic": "Roles and Systems of Government",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "Democracies, dictatorships and monarchies are categories for understanding the relationship between those in power or authority and citizens."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.13",
+  "strand": "Economics",
+  "topic": "Economic Decision Making and Skills",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "Information displayed in circle graphs can be used to show relative proportions of segments of data to an entire body of data."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.14",
+  "strand": "Economics",
+  "topic": "Economic Decision Making and Skills",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "The choices made by individuals and governments have both present and future consequences."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.15",
+  "strand": "Economics",
+  "topic": "Scarcity",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "The availability of productive resources (i.e., entrepreneurship, human resources, capital goods and natural resources) promotes specialization that could lead to trade."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.16",
+  "strand": "Economics",
+  "topic": "Production and Consumption",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "The availability of productive resources and the division of labor can have a positive or negative impact on productive capacity."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.17",
+  "strand": "Economics",
+  "topic": "Markets",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "Regions and countries become interdependent when they specialize in what they produce best and then trade with other regions to increase the amount and variety of goods and services available."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.SS.18",
+  "strand": "Economics",
+  "topic": "Financial Literacy",
+  "theme": "Regions and People of the Western Hemisphere",
+  "description": "Workers can improve their ability to earn income by gaining new knowledge, skills and experiences."
+ }
+]

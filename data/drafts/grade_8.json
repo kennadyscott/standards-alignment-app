@@ -1,0 +1,605 @@
+[
+ {
+  "id": "sci8-01",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.ESS.1",
+  "ga": "S6E5a",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 6). Ohio: Earth has a core, mantle, and crust with distinct composition and properties. Georgia S6E5a: compare and contrast Earth's crust, mantle, inner and outer core in temperature, density, thickness, and composition."
+ },
+ {
+  "id": "sci8-02",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.ESS.2",
+  "ga": "S6E5f",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 6). Ohio: lithospheric plates move relative to each other at divergent, convergent, and transform boundaries, driven by mantle convection. Georgia S6E5f: movement of lithospheric plates (plate tectonics) causes earthquakes and volcanic eruptions, including convergent, divergent, and transform boundaries."
+ },
+ {
+  "id": "sci8-03",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.ESS.2",
+  "ga": "S6E5g",
+  "confidence": "partial",
+  "rationale": "Cross-grade (GA grade 6). Ohio cites fossil distribution and continental drift as evidence for plate tectonics. Georgia S6E5g: use fossils as evidence of the changing surface of the Earth; overlaps only on the fossil-evidence portion."
+ },
+ {
+  "id": "sci8-04",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.ESS.3",
+  "ga": "S5E1a",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 5). Ohio: a combination of constructive and destructive geologic processes formed Earth's surface. Georgia S5E1a: identify surface features as caused by constructive and/or destructive processes (deposition, weathering, erosion)."
+ },
+ {
+  "id": "sci8-05",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.ESS.3",
+  "ga": "S6E5e",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 6). Ohio: constructive and destructive geologic processes shape Earth's surface. Georgia S6E5e: model how natural processes (weathering, erosion, deposition) and human activity change rocks and Earth's surface."
+ },
+ {
+  "id": "sci8-06",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.ESS.4",
+  "ga": "S6E5g",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 6). Ohio: the geologic record documents dynamic change over time and past environmental and climate conditions. Georgia S6E5g: argue from fossils how they show evidence of the changing surface and climate of the Earth; overlaps on evidence of change but not on relative/absolute dating or superposition."
+ },
+ {
+  "id": "sci8-07",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.ESS.4",
+  "ga": "S3E2a",
+  "confidence": "partial",
+  "rationale": "Cross-grade (GA grade 3). Ohio: the geologic record reveals past environments and how life and conditions changed. Georgia S3E2a: argue from fossils how they serve as evidence of past organisms and the environments in which they lived."
+ },
+ {
+  "id": "sci8-08",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.PS.1",
+  "ga": "S8P5a",
+  "confidence": "strong",
+  "rationale": "Same-grade match. Ohio: objects experience force due to external magnetic, electrostatic, or gravitational fields that act at a distance. Georgia S8P5a: fields (magnetic, gravitational, and electric) exist between objects exerting forces on each other even when not in contact."
+ },
+ {
+  "id": "sci8-09",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.PS.2",
+  "ga": "S8P3b",
+  "confidence": "strong",
+  "rationale": "Same-grade match. Ohio: a nonzero net force changes an object's speed and/or direction. Georgia S8P3b: use Newton's Laws of Motion to describe the effects of balanced and unbalanced forces on the motion of an object."
+ },
+ {
+  "id": "sci8-10",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.PS.2",
+  "ga": "S8P3c",
+  "confidence": "moderate",
+  "rationale": "Same-grade match. Ohio: forces can be added and the net force changes motion. Georgia S8P3c: the amount of force needed to accelerate an object is proportional to its mass (inertia); overlaps on force-and-motion but narrows to the force-mass relationship."
+ },
+ {
+  "id": "sci8-11",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.LS.1",
+  "ga": "S7L5c",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 7). Ohio: the fossil record provides evidence that the number and types of species have changed, including extinction. Georgia S7L5c: analyze the fossil record for patterns documenting the existence, diversity, and extinction of organisms."
+ },
+ {
+  "id": "sci8-12",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.LS.1",
+  "ga": "S7L5b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 7). Ohio: environmental change affects how beneficial a trait is for survival and reproductive success. Georgia S7L5b: describe how genetic variation and environmental factors influence the probability of survival and reproduction of a species."
+ },
+ {
+  "id": "sci8-13",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.LS.1",
+  "ga": "S7L5a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 7). Ohio: diversity of species results from variation of traits through evolution over generations. Georgia S7L5a: evaluate how natural selection leads to changes in specific traits of populations over successive generations."
+ },
+ {
+  "id": "sci8-14",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.LS.2",
+  "ga": "S7L3b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 7). Ohio: reproduction transfers genetic information, occurring by mixing genes from two individuals (sexual) or from one individual (asexual). Georgia S7L3b: model how asexual reproduction yields identical genetic information while sexual reproduction yields genetic variation."
+ },
+ {
+  "id": "sci8-15",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.LS.2",
+  "ga": "S7L3a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 7). Ohio: reproduction is the transfer of genetic information from one generation to the next. Georgia S7L3a: explain the role of genes and chromosomes in the process of inheriting a specific trait."
+ },
+ {
+  "id": "sci8-16",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.LS.3",
+  "ga": "S7L3a",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 7). Ohio: an organism's characteristics result from inherited traits, with genetic information (DNA) transmitted between parent and offspring. Georgia S7L3a: explain the role of genes and chromosomes in inheriting a specific trait."
+ },
+ {
+  "id": "sci8-17",
+  "subject": "science",
+  "grade": "8",
+  "oh": "8.LS.3",
+  "ga": "S7L3b",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 7). Ohio: in asexual reproduction one parent contributes DNA while in sexual reproduction both parents contribute DNA. Georgia S7L3b: model how asexual reproduction results in identical genetic information while sexual reproduction results in genetic variation."
+ },
+ {
+  "id": "ss8-01",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.2",
+  "ga": "SS8H1b",
+  "confidence": "strong",
+  "rationale": "Cross-content (GA grade 8, Georgia angle). Ohio: North America, inhabited by American Indians, was explored and colonized by Europeans for economic and religious reasons. Georgia SS8H1b: explain reasons for European exploration and settlement of North America, emphasizing Spanish and British interests in the Southeast."
+ },
+ {
+  "id": "ss8-02",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.2",
+  "ga": "SS8H1a",
+  "confidence": "moderate",
+  "rationale": "Cross-content (GA grade 8). Ohio notes North America was originally inhabited by American Indians. Georgia SS8H1a: describe the characteristics (culture, food, tools, shelter) of American Indians living in Georgia at the time of European contact."
+ },
+ {
+  "id": "ss8-03",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.2",
+  "ga": "SS8H2a",
+  "confidence": "moderate",
+  "rationale": "Cross-content (GA grade 8). Ohio: Europeans colonized for economic and religious reasons. Georgia SS8H2a: explain the reasons for the settlement of Georgia (philanthropy, economics, and defense) in the Charter of 1732."
+ },
+ {
+  "id": "ss8-04",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.3",
+  "ga": "SS8H3a",
+  "confidence": "partial",
+  "rationale": "Cross-content (GA grade 8). Ohio: competition for control of territory and resources led to conflicts among colonizing powers. Georgia SS8H3a: causes of the American Revolution as they impacted Georgia, including the French and Indian War; overlaps only on the imperial-competition conflict."
+ },
+ {
+  "id": "ss8-05",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.4",
+  "ga": "SS8H2d",
+  "confidence": "moderate",
+  "rationale": "Cross-content (GA grade 8). Ohio: race-based slavery brought forced migration of Africans and shaped colonial economic development. Georgia SS8H2d: explain Georgia's transition into a royal colony with regard to land ownership and slavery."
+ },
+ {
+  "id": "ss8-06",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.5",
+  "ga": "SS8H3a",
+  "confidence": "strong",
+  "rationale": "Cross-content (GA grade 8). Ohio: dissatisfaction with colonial rule led colonists to launch the American Revolution. Georgia SS8H3a: explain the causes of the American Revolution, including the Proclamation of 1763 and the Stamp Act."
+ },
+ {
+  "id": "ss8-07",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.5",
+  "ga": "SS8H3b",
+  "confidence": "strong",
+  "rationale": "Cross-content (GA grade 8). Ohio: colonists wrote the Declaration of Independence. Georgia SS8H3b: interpret the three parts of the Declaration of Independence and identify the three Georgia signers."
+ },
+ {
+  "id": "ss8-08",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.5",
+  "ga": "SS4H1d",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: Enlightenment ideas and dissatisfaction with colonial rule led to the Declaration of Independence. Georgia SS4H1d: explain the writing of the Declaration of Independence as a response to tyranny and the abuse of power."
+ },
+ {
+  "id": "ss8-09",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.6",
+  "ga": "SS8H3c",
+  "confidence": "strong",
+  "rationale": "Cross-content (GA grade 8). Ohio: key events and figures influenced the course and outcome of the American Revolution. Georgia SS8H3c: analyze the significance of Loyalists and Patriots and Georgia's role, including the Battle of Kettle Creek and Siege of Savannah."
+ },
+ {
+  "id": "ss8-10",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.6",
+  "ga": "SS4H1c",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: key events shaped the outcome of the American Revolution. Georgia SS4H1c: describe the major events and explain the factors leading to American victory and British defeat, including Lexington and Concord, Saratoga, and Yorktown."
+ },
+ {
+  "id": "ss8-11",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.6",
+  "ga": "SS4H1b",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: significant figures influenced the American Revolution. Georgia SS4H1b: describe the influence of key individuals and groups during the American Revolution."
+ },
+ {
+  "id": "ss8-12",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.8",
+  "ga": "SS8H3d",
+  "confidence": "strong",
+  "rationale": "Cross-content (GA grade 8). Ohio: problems under the Articles of Confederation led to debate over adopting the U.S. Constitution. Georgia SS8H3d: analyze the weaknesses of the Articles of Confederation and explain how they led to writing a new federal Constitution."
+ },
+ {
+  "id": "ss8-13",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.8",
+  "ga": "SS4H2b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: debate over adopting the U.S. Constitution. Georgia SS4H2b: evaluate major issues debated at the Constitutional Convention, including weaknesses of the Articles of Confederation and the Great Compromise."
+ },
+ {
+  "id": "ss8-14",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.8",
+  "ga": "SS4H2a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: debate over the U.S. Constitution. Georgia SS4H2a: identify the major leaders of the Constitutional Convention (Madison, Washington, Franklin)."
+ },
+ {
+  "id": "ss8-15",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.9",
+  "ga": "SS4H3a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: early administrations repelled a foreign invasion. Georgia SS4H3a: describe the causes and events of the War of 1812, including the burning of the Capitol and White House; overlaps on repelling the British invasion but not on the broader federal-government establishment."
+ },
+ {
+  "id": "ss8-16",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.10",
+  "ga": "SS4H3c",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: the United States added territory through treaties and purchases. Georgia SS4H3c: describe territorial expansion with emphasis on the Louisiana Purchase and the acquisitions of Texas, Oregon, and California."
+ },
+ {
+  "id": "ss8-17",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.11",
+  "ga": "SS4H3b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: westward expansion caused the displacement of American Indians. Georgia SS4H3b: describe the impact of westward expansion on American Indians, including the Trail of Tears and forced relocation to reservations."
+ },
+ {
+  "id": "ss8-18",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.11",
+  "ga": "SS8H4e",
+  "confidence": "moderate",
+  "rationale": "Cross-content (GA grade 8). Ohio: westward expansion displaced American Indians. Georgia SS8H4e: analyze how key people and events led to the removal of the Cherokees from Georgia known as the Trail of Tears."
+ },
+ {
+  "id": "ss8-19",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.11",
+  "ga": "SS4H3c",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: westward expansion led to war with Mexico and economic development. Georgia SS4H3c: describe territorial expansion including the acquisition of Texas (the Alamo and independence) and California (Gold Rush)."
+ },
+ {
+  "id": "ss8-20",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.12",
+  "ga": "SS8H5a",
+  "confidence": "strong",
+  "rationale": "Cross-content (GA grade 8). Ohio: disputes over federalism and sectional issues including slavery led to the Civil War. Georgia SS8H5a: explain key issues and events that led to the Civil War, including slavery, states' rights, nullification, the Compromise of 1850, Dred Scott, and secession."
+ },
+ {
+  "id": "ss8-21",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.12",
+  "ga": "SS4H5b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: sectional issues including slavery led to the Civil War. Georgia SS4H5b: discuss how the issues of states' rights and slavery increased tensions between the North and South."
+ },
+ {
+  "id": "ss8-22",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.12",
+  "ga": "SS4H5a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: sectional tensions led to the Civil War. Georgia SS4H5a: identify Uncle Tom's Cabin and John Brown's raid and explain how each was related to the Civil War."
+ },
+ {
+  "id": "ss8-23",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.13",
+  "ga": "SS8H5b",
+  "confidence": "strong",
+  "rationale": "Cross-content (GA grade 8). Ohio: key events and figures influenced the course and outcome of the Civil War. Georgia SS8H5b: explain Georgia's role in the Civil War, including the Union blockade, Emancipation Proclamation, Chickamauga, and Sherman's Atlanta Campaign and March to the Sea."
+ },
+ {
+  "id": "ss8-24",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.13",
+  "ga": "SS4H5c",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: key events influenced the outcome of the Civil War. Georgia SS4H5c: identify major battles, campaigns, and events including Fort Sumter, Gettysburg, Sherman's March to the Sea, and Appomattox Court House."
+ },
+ {
+  "id": "ss8-25",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.13",
+  "ga": "SS4H5d",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: significant figures influenced the Civil War. Georgia SS4H5d: describe the roles of Lincoln, Lee, Grant, Davis, Jackson, and Sherman."
+ },
+ {
+  "id": "ss8-26",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.14",
+  "ga": "SS8H6a",
+  "confidence": "strong",
+  "rationale": "Cross-content (GA grade 8). Ohio: Reconstruction resulted in changes to the U.S. Constitution. Georgia SS8H6a: explain the roles of the 13th, 14th, and 15th Amendments in Reconstruction."
+ },
+ {
+  "id": "ss8-27",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.14",
+  "ga": "SS4H6a",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: Reconstruction changed the Constitution. Georgia SS4H6a: describe the purpose of the 13th, 14th, and 15th Amendments."
+ },
+ {
+  "id": "ss8-28",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.14",
+  "ga": "SS8H6b",
+  "confidence": "moderate",
+  "rationale": "Cross-content (GA grade 8). Ohio: Reconstruction affirmed federal authority. Georgia SS8H6b: explain the key features of the Lincoln, Johnson, and Congressional Reconstruction plans."
+ },
+ {
+  "id": "ss8-29",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.15",
+  "ga": "SS4G2a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: geographic tools analyze how historic events are shaped by geography. Georgia SS4G2a: explain how American and British forces attempted to use the physical geography of battle sites to their benefit."
+ },
+ {
+  "id": "ss8-30",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.15",
+  "ga": "SS4G2b",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: historic events are shaped by geography. Georgia SS4G2b: describe physical barriers that hindered and physical gateways that benefited territorial expansion."
+ },
+ {
+  "id": "ss8-31",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.16",
+  "ga": "SS8G1d",
+  "confidence": "moderate",
+  "rationale": "Cross-content (GA grade 8). Ohio: availability of natural resources contributed to geographic and economic expansion. Georgia SS8G1d: analyze the importance of water in Georgia's historical development and economic growth."
+ },
+ {
+  "id": "ss8-32",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.16",
+  "ga": "SS5G2a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 5). Ohio: natural resources drove geographic and economic expansion. Georgia SS5G2a: locate agricultural and industrial locations and explain how factors such as resources influenced these areas."
+ },
+ {
+  "id": "ss8-33",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.17",
+  "ga": "SS5H1d",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 5). Ohio: the movement of people created new patterns of settlement. Georgia SS5H1d: describe the reasons people immigrated to the United States, from where they emigrated, and where they settled."
+ },
+ {
+  "id": "ss8-34",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.17",
+  "ga": "SS5G2a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 5). Ohio: movement of people and products created new patterns of settlement and land use influencing economic development. Georgia SS5G2a: locate agricultural and industrial locations and explain how population, transportation, and resources influenced these areas."
+ },
+ {
+  "id": "ss8-35",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.18",
+  "ga": "SS4H6d",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: cultural biases and prejudices had consequences for minority groups. Georgia SS4H6d: describe the effects of Jim Crow laws and practices."
+ },
+ {
+  "id": "ss8-36",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.18",
+  "ga": "SS8H6c",
+  "confidence": "partial",
+  "rationale": "Cross-content (GA grade 8). Ohio: prejudice had social and political consequences for minority groups. Georgia SS8H6c: compare and contrast the goals and outcomes of the Freedmen's Bureau and the Ku Klux Klan; overlaps on racial hostility toward freed people."
+ },
+ {
+  "id": "ss8-37",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.20",
+  "ga": "SS5CG1a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 5). Ohio: active participation in social and civic groups can lead to individual and public goals. Georgia SS5CG1a: explain the responsibilities of a citizen."
+ },
+ {
+  "id": "ss8-38",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.22",
+  "ga": "SS4CG3a",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: the Constitution established separation of powers and checks and balances. Georgia SS4CG3a: describe how the three branches of government interact through checks and balances and separation of powers."
+ },
+ {
+  "id": "ss8-39",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.22",
+  "ga": "SS4CG1d",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: the Constitution established a federal republic with elected representatives. Georgia SS4CG1d: representative democracy/republic."
+ },
+ {
+  "id": "ss8-40",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.22",
+  "ga": "SS4CG1c",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: the Constitution framed a national government within a federal system. Georgia SS4CG1c: the federal system of government in the U.S. (federal powers, state powers, and shared powers)."
+ },
+ {
+  "id": "ss8-41",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.23",
+  "ga": "SS4CG3b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: the Constitution protects citizens' rights by limiting the powers of government. Georgia SS4CG3b: identify the rights in the Bill of Rights and describe how it places limits on the powers of government."
+ },
+ {
+  "id": "ss8-42",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.23",
+  "ga": "SS4CG2",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: the Constitution protects citizens' rights. Georgia SS4CG2: explain the importance of freedoms guaranteed by the First Amendment."
+ },
+ {
+  "id": "ss8-43",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.23",
+  "ga": "SS5CG1b",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 5). Ohio: the Constitution protects citizens' rights by limiting government. Georgia SS5CG1b: explain due process of law and how the Constitution protects a citizen's rights by due process."
+ },
+ {
+  "id": "ss8-44",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.24",
+  "ga": "SS4E1a",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: choices by individuals, businesses, and governments have present and future consequences. Georgia SS4E1a: describe opportunity cost and its relationship to decision-making across time."
+ },
+ {
+  "id": "ss8-45",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.24",
+  "ga": "SS5E1a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 5). Ohio: economic choices have present and future consequences. Georgia SS5E1a: describe opportunity costs and their relationship to decision-making across time."
+ },
+ {
+  "id": "ss8-46",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.25",
+  "ga": "SS4E1f",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: the Industrial Revolution changed production through improvements in technology. Georgia SS4E1f: give examples of technological advancements and their impact on business productivity (cotton gin, steamboat, steam locomotive, telegraph)."
+ },
+ {
+  "id": "ss8-47",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.25",
+  "ga": "SS8H4c",
+  "confidence": "moderate",
+  "rationale": "Cross-content (GA grade 8). Ohio: new technology transformed the means of production. Georgia SS8H4c: explain how technological developments, including the cotton gin and railroads, impacted Georgia's growth."
+ },
+ {
+  "id": "ss8-48",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.25",
+  "ga": "SS5E1c",
+  "confidence": "partial",
+  "rationale": "Cross-grade (GA grade 5). Ohio: the shift from craftwork to factory work with interchangeable parts. Georgia SS5E1c: describe how specialization improves productivity, e.g., how Henry Ford's assembly line reduced the price of automobiles; overlaps on factory-production efficiency."
+ },
+ {
+  "id": "ss8-49",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.26",
+  "ga": "SS5E2d",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 5). Ohio: governments impact markets through spending and taxes. Georgia SS5E2d: describe the government function in taxation and providing public goods and services."
+ },
+ {
+  "id": "ss8-50",
+  "subject": "social_studies",
+  "grade": "8",
+  "oh": "8.SS.26",
+  "ga": "SS6E2b",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 6). Ohio: governments impact markets through trade barriers. Georgia SS6E2b: compare and contrast different types of trade barriers, such as tariffs, quotas, and embargos."
+ }
+]

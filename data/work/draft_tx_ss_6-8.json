@@ -1,0 +1,1272 @@
+{
+  "memberships": [
+    {
+      "key": "TX:social_studies:6.2A",
+      "conceptId": "c-individual-actions-shape-history",
+      "confidence": "moderate",
+      "rationale": "Asks for the historical influence of individuals on contemporary societies, which is the concept's test that individual actions shaped the world people live in now; cross-grade (concept band K-2)."
+    },
+    {
+      "key": "TX:social_studies:6.2B",
+      "conceptId": "c-individual-actions-shape-history",
+      "confidence": "moderate",
+      "rationale": "Asks students to describe the contributions of individuals from past and present societies, the same ask as the concept's existing 'contributions made by these figures' member; cross-grade (concept band K-2)."
+    },
+    {
+      "key": "TX:social_studies:6.3B",
+      "conceptId": "c-migration-and-its-impact-on-regions",
+      "confidence": "strong",
+      "rationale": "States exactly the membership test: human migration into a place changes the character of that place and region."
+    },
+    {
+      "key": "TX:social_studies:6.4A",
+      "conceptId": "c-geography-shapes-economic-activity",
+      "confidence": "strong",
+      "rationale": "Asks students to explain the geographic factors responsible for where economic activities are located, i.e. how physical geography shapes the work people do; cross-grade (concept band 3-5)."
+    },
+    {
+      "key": "TX:social_studies:6.6A",
+      "conceptId": "c-productive-resources-of-an-economy",
+      "confidence": "strong",
+      "rationale": "Names the four-resource taxonomy verbatim (natural resources, labor, capital, entrepreneurs) and asks how they shape an economy's production; cross-grade (concept band 3-5)."
+    },
+    {
+      "key": "TX:social_studies:6.6C",
+      "conceptId": "c-specialization-leads-to-trade",
+      "confidence": "moderate",
+      "rationale": "Asks students to explain how the distribution of resources produces international trade and economic interdependence; the causal chain matches the concept but the standard implies rather than states specialization; cross-grade (concept band 3-8)."
+    },
+    {
+      "key": "TX:social_studies:6.6C",
+      "conceptId": "c-specialization-leads-to-trade-2",
+      "confidence": "moderate",
+      "rationale": "Same verdict as c-specialization-leads-to-trade, which carries an identical membership test; the two are flagged merge candidates, so an identical description must yield an identical membership."
+    },
+    {
+      "key": "TX:social_studies:6.7A",
+      "conceptId": "c-economic-systems-and-basic-questions",
+      "confidence": "strong",
+      "rationale": "Asks students to compare how various societies organize the production and distribution of goods and services, i.e. how different systems answer what/how/for whom."
+    },
+    {
+      "key": "TX:social_studies:6.7B",
+      "conceptId": "c-economic-systems-and-basic-questions",
+      "confidence": "strong",
+      "rationale": "Asks students to compare and contrast free enterprise, socialist, and communist economies, which is the concept's 'compare how different economic systems answer those questions' clause."
+    },
+    {
+      "key": "TX:social_studies:6.11A",
+      "conceptId": "c-citizens-rights-and-responsibilities",
+      "confidence": "moderate",
+      "rationale": "Asks students to describe the roles and responsibilities of citizens across societies; satisfies the duties half of the test but not the rights half; cross-grade (concept band 3-5)."
+    },
+    {
+      "key": "TX:social_studies:6.12A",
+      "conceptId": "c-citizens-rights-and-responsibilities",
+      "confidence": "moderate",
+      "rationale": "Asks students to explain the duty of civic participation, which is a duty citizens owe as members of a nation; the rights half of the test is absent; cross-grade (concept band 3-5)."
+    },
+    {
+      "key": "TX:social_studies:6.12B",
+      "conceptId": "c-citizens-rights-and-responsibilities",
+      "confidence": "strong",
+      "rationale": "Asks students to explain the relationships among rights, responsibilities, and duties, which is precisely the rights-and-duties-in-return test; cross-grade (concept band 3-5)."
+    },
+    {
+      "key": "TX:social_studies:6.13B",
+      "conceptId": "c-cultural-diversity-in-communities",
+      "confidence": "moderate",
+      "rationale": "Asks students to define a multicultural society, i.e. to recognize that a society contains diverse cultural groups; the customs-and-celebrations clause is absent; cross-grade (concept band K-5)."
+    },
+    {
+      "key": "TX:social_studies:6.17A",
+      "conceptId": "c-world-religions-and-belief-systems",
+      "confidence": "moderate",
+      "rationale": "Asks students to explain the relationship among religious ideas, philosophical ideas, and cultures, i.e. belief systems and their influence on the cultures that hold them."
+    },
+    {
+      "key": "TX:social_studies:6.17B",
+      "conceptId": "c-world-religions-and-belief-systems",
+      "confidence": "moderate",
+      "rationale": "Names the major world religions through their observances and asks for their significance in the contemporary societies that hold them, satisfying the identify-and-influence test."
+    },
+    {
+      "key": "TX:social_studies:6.18A",
+      "conceptId": "c-technology-changes-work-and-life",
+      "confidence": "moderate",
+      "rationale": "Asks for examples of inventions, discoveries, and inventors that shaped the world; matches the concept's example-listing test, though it stops short of explaining the change to work or life; cross-grade (concept band K-5). Concept is flagged needsReview as over-broad."
+    },
+    {
+      "key": "TX:social_studies:7.2A",
+      "conceptId": "c-indigenous-cultures-and-environment",
+      "confidence": "moderate",
+      "rationale": "Asks students to compare Indigenous cultures grouped by region (Gulf, Plains, Puebloan, Southeastern), which is the concept's compare-Indigenous-ways-of-life-across-regions test; the environment-as-cause clause is implied, not stated. Cross-grade (concept band 3-5) and a rare case where Texas-history content generalizes."
+    },
+    {
+      "key": "TX:social_studies:7.10A",
+      "conceptId": "c-reasons-people-migrate-and-settle",
+      "confidence": "strong",
+      "rationale": "States the membership test almost verbatim: why immigrant groups came and where they settled. Cross-grade (concept band 3-5); the state setting is incidental to the idea."
+    },
+    {
+      "key": "TX:social_studies:7.10B",
+      "conceptId": "c-migration-and-its-impact-on-regions",
+      "confidence": "strong",
+      "rationale": "Asks students to explain how immigration and migration into a region changed that region, which is the membership test."
+    },
+    {
+      "key": "TX:social_studies:7.10D",
+      "conceptId": "c-migration-and-its-impact-on-regions",
+      "confidence": "partial",
+      "rationale": "Changing population distribution producing new needs for services is movement of people changing conditions in a region, but the standard is framed around growth and demography rather than migration."
+    },
+    {
+      "key": "TX:social_studies:7.15A",
+      "conceptId": "c-citizens-rights-and-responsibilities",
+      "confidence": "moderate",
+      "rationale": "Asks students to explain the rights citizens hold; satisfies the rights half of the test, and matches the shape of a state-constitution civics standard. The duties half is carried by 7.15B."
+    },
+    {
+      "key": "TX:social_studies:7.15B",
+      "conceptId": "c-citizens-rights-and-responsibilities",
+      "confidence": "moderate",
+      "rationale": "Asks students to explain citizens' civic responsibilities and the importance of civic participation, i.e. the duties owed; the rights half is carried by 7.15A."
+    },
+    {
+      "key": "TX:social_studies:7.16B",
+      "conceptId": "c-first-amendment-freedoms",
+      "confidence": "strong",
+      "rationale": "Asks students to explain the importance of free speech and press, which are First Amendment freedoms, in a democratic society; cross-grade (concept band 3-5)."
+    },
+    {
+      "key": "TX:social_studies:7.18A",
+      "conceptId": "c-cultural-diversity-in-communities",
+      "confidence": "strong",
+      "rationale": "Asks students to explain how a society's diversity shows up in its cultural activities and celebrations, which is the concept's test including its customs-and-celebrations clause; cross-grade (concept band K-5)."
+    },
+    {
+      "key": "TX:social_studies:8.2A",
+      "conceptId": "c-motives-for-european-colonization",
+      "confidence": "strong",
+      "rationale": "Asks students to identify the reasons English, Spanish, and French explored and colonized North America, which is the membership test verbatim; cross-grade (concept band 6-8, matches)."
+    },
+    {
+      "key": "TX:social_studies:8.2B",
+      "conceptId": "c-motives-for-european-colonization",
+      "confidence": "strong",
+      "rationale": "Asks students to compare the political, economic, religious, and social reasons the English colonies were established, i.e. the motives for settling lands already inhabited by Indigenous peoples."
+    },
+    {
+      "key": "TX:social_studies:8.4A",
+      "conceptId": "c-grievances-that-sparked-revolution",
+      "confidence": "strong",
+      "rationale": "Traces the taxes, acts, and incidents (Stamp Act, Intolerable Acts, lack of representation, post-French-and-Indian-War policy) that turned colonial grievances into revolt; cross-grade (concept band 3-5)."
+    },
+    {
+      "key": "TX:social_studies:8.4B",
+      "conceptId": "c-individual-actions-shape-history",
+      "confidence": "partial",
+      "rationale": "Asks for the roles significant individuals played in a historical event, which touches the concept's contributions-of-figures test but is anchored to the Revolution rather than to shaping the present; cross-grade (concept band K-2)."
+    },
+    {
+      "key": "TX:social_studies:8.4C",
+      "conceptId": "c-course-and-outcome-of-independence-war",
+      "confidence": "strong",
+      "rationale": "Names the major battles of a colonial war for independence and its concluding treaty, matching the concept's battles-and-outcome test; cross-grade (concept band 3-5)."
+    },
+    {
+      "key": "TX:social_studies:8.11A",
+      "conceptId": "c-geography-shapes-economic-activity",
+      "confidence": "strong",
+      "rationale": "Asks students to analyze how physical characteristics of the environment influenced economic activities and settlement, which is the membership test; cross-grade (concept band 3-5)."
+    },
+    {
+      "key": "TX:social_studies:8.15C",
+      "conceptId": "c-bill-of-rights-limits-government",
+      "confidence": "moderate",
+      "rationale": "Asks students to explain how colonial grievances were addressed in the Constitution and the Bill of Rights, i.e. why such limits were written into a constitution; cross-grade (concept band 3-5)."
+    },
+    {
+      "key": "TX:social_studies:8.19B",
+      "conceptId": "c-bill-of-rights-limits-government",
+      "confidence": "moderate",
+      "rationale": "Asks students to summarize the rights enumerated in a bill of rights; satisfies the enumeration half of the test, less so the explicit constrains-government half; cross-grade (concept band 3-5)."
+    },
+    {
+      "key": "TX:social_studies:8.19C",
+      "conceptId": "c-citizens-rights-and-responsibilities",
+      "confidence": "strong",
+      "rationale": "Asks students to identify examples of responsible citizenship (obeying laws, staying informed, voting, jury service), which is the duties-owed half of the test stated directly; cross-grade (concept band 3-5)."
+    },
+    {
+      "key": "TX:social_studies:8.21B",
+      "conceptId": "c-first-amendment-freedoms",
+      "confidence": "strong",
+      "rationale": "Asks students to describe the importance of free speech and press, First Amendment freedoms, in a constitutional republic; cross-grade (concept band 3-5)."
+    },
+    {
+      "key": "TX:social_studies:8.22B",
+      "conceptId": "c-individual-actions-shape-history",
+      "confidence": "moderate",
+      "rationale": "Asks students to describe the contributions of significant historical figures, the same ask as the concept's existing contributions-of-figures member; cross-grade (concept band K-2)."
+    },
+    {
+      "key": "TX:social_studies:8.23A",
+      "conceptId": "c-reasons-people-migrate-and-settle",
+      "confidence": "strong",
+      "rationale": "States the membership test almost verbatim: which groups settled and why they immigrated; cross-grade (concept band 3-5)."
+    },
+    {
+      "key": "TX:social_studies:8.25C",
+      "conceptId": "c-first-amendment-freedoms",
+      "confidence": "strong",
+      "rationale": "Asks students to analyze the impact of the First Amendment's religious-freedom guarantee on American life, i.e. the importance of a First Amendment freedom; cross-grade (concept band 3-5)."
+    },
+    {
+      "key": "TX:social_studies:8.27A",
+      "conceptId": "c-technology-changes-work-and-life",
+      "confidence": "strong",
+      "rationale": "Asks for the effects of specific inventions (steamboat, cotton gin, telegraph, interchangeable parts) — the same inventions and the same ask as the concept's industrial-era-inventions member; cross-grade (concept band K-5)."
+    },
+    {
+      "key": "TX:social_studies:8.27B",
+      "conceptId": "c-technology-changes-work-and-life",
+      "confidence": "moderate",
+      "rationale": "Asks how technological innovations changed the way goods were manufactured and distributed, i.e. how invention changed how people work; cross-grade (concept band K-5)."
+    },
+    {
+      "key": "TX:social_studies:8.27C",
+      "conceptId": "c-technology-changes-work-and-life",
+      "confidence": "moderate",
+      "rationale": "Asks how technological innovations (factory system, railroad) produced economic growth, matching the concept member framed on inventions' effect on business productivity; cross-grade (concept band K-5)."
+    },
+    {
+      "key": "TX:social_studies:8.28A",
+      "conceptId": "c-technology-changes-work-and-life",
+      "confidence": "strong",
+      "rationale": "Asks students to compare how scientific discoveries and technological innovations influenced daily life, which is the membership test stated directly; cross-grade (concept band K-5)."
+    },
+    {
+      "key": "TX:social_studies:8.28B",
+      "conceptId": "c-technology-changes-work-and-life",
+      "confidence": "moderate",
+      "rationale": "Asks for examples of how industrialization changed life; satisfies the changed-how-people-live test, though its subject is industrialization rather than named inventions; cross-grade (concept band K-5)."
+    }
+  ],
+  "proposedConcepts": [
+    {
+      "slug": "adapting-to-and-modifying-environment",
+      "title": "Adapting to and Modifying the Physical Environment",
+      "description": "A standard belongs here if it asks students to describe how people adapt to or deliberately modify the physical environment, including the positive and negative consequences of those modifications.",
+      "gradeBand": "6-8",
+      "subject": "social_studies",
+      "why": "The library has c-geography-shapes-economic-activity for environment-shapes-people, but nothing for the reverse direction — people acting on the environment. This is a distinct, universally taught human-systems idea; Ohio states it in five separate standards across grades 3, 4, 5, 6, and 8 (e.g. 'People have modified the environment throughout history resulting in both positive and negative consequences', 'human activities modify the physical environment'), none of which currently has a home.",
+      "members": [
+        {
+          "key": "TX:social_studies:6.5B",
+          "confidence": "strong",
+          "rationale": "Asks students to identify and analyze the ways people have adapted to the physical environment across places and regions, which is the adaptation half of the test."
+        },
+        {
+          "key": "TX:social_studies:6.5C",
+          "confidence": "strong",
+          "rationale": "Asks students to identify and analyze how people have modified the physical environment (mining, irrigation, transportation infrastructure), which is the modification half of the test."
+        },
+        {
+          "key": "TX:social_studies:7.9A",
+          "confidence": "strong",
+          "rationale": "Asks for both adaptation and modification of the environment plus the positive and negative consequences of the modifications, satisfying every clause of the test; the state setting is incidental to the idea."
+        },
+        {
+          "key": "TX:social_studies:8.11B",
+          "confidence": "strong",
+          "rationale": "Asks students to describe the positive and negative consequences of human modification of the physical environment, which is the test verbatim."
+        }
+      ]
+    },
+    {
+      "slug": "cultural-diffusion-among-societies",
+      "title": "Cultural Diffusion Among Societies",
+      "description": "A standard belongs here if it asks students to explain how cultural practices, technologies, or ideas spread from one society to another, what facilitates that spread, or what results from it.",
+      "gradeBand": "6-8",
+      "subject": "social_studies",
+      "why": "Cultural diffusion currently has no concept, so Ohio's three diffusion standards (6.SS.8 diffusion of practices/technology/religions; 7.SS.14 trade routes spreading ideas and technology; 7.SS.15 improvements in transportation and communication facilitating cultural diffusion) are unhoused — 6.SS.8 is in fact parked in c-world-religions-and-belief-systems, which the curator note flags as exactly this mis-fit ('one member is about diffusion... candidate for rejection, or for narrowing'). This concept is the clean home for the diffusion strand and is not a duplicate of the religions concept, which tests comparative belief systems.",
+      "members": [
+        {
+          "key": "TX:social_studies:6.15A",
+          "confidence": "strong",
+          "rationale": "Asks students to identify and describe the means of cultural diffusion (trade, travel, war), which is the mechanism half of the test."
+        },
+        {
+          "key": "TX:social_studies:6.15B",
+          "confidence": "moderate",
+          "rationale": "Asks for the factors that drive cultural change — improvements in communication, transportation, economic development — which is what facilitates diffusion, though the standard names the effect as 'cultural change' rather than diffusion."
+        },
+        {
+          "key": "TX:social_studies:6.15C",
+          "confidence": "moderate",
+          "rationale": "Asks students to analyze the impact of improved communication technology among cultures, which is the technology-facilitates-diffusion clause."
+        },
+        {
+          "key": "TX:social_studies:6.15D",
+          "confidence": "strong",
+          "rationale": "Asks students to identify the impact of cultural diffusion on individuals and world societies, which is the results half of the test."
+        }
+      ]
+    },
+    {
+      "slug": "comparing-forms-of-government",
+      "title": "Comparing Forms of Government and Citizen Participation",
+      "description": "A standard belongs here if it asks students to compare or classify forms of government by how power is held, how far that power is limited, or what role citizens play in choosing leaders.",
+      "gradeBand": "6-8",
+      "subject": "social_studies",
+      "why": "The library has no concept for comparative government at all, despite this being one of the densest cross-state clusters in the corpus: Ohio 6.SS.10 categorizes governments as monarchies/theocracies/dictatorships/democracies and ties citizens' liberties to limits on governmental authority, and Georgia repeats 'Compare and contrast various forms of government' across five separate standards in grades 6 and 7. The nearest existing concept, c-bill-of-rights-limits-government, tests an enumerated bill of rights and does not reach government typology.",
+      "members": [
+        {
+          "key": "TX:social_studies:6.9A",
+          "confidence": "strong",
+          "rationale": "Asks students to describe and compare limited and unlimited governments (constitutional vs. totalitarian), which is the classify-by-how-far-power-is-limited test."
+        },
+        {
+          "key": "TX:social_studies:6.9B",
+          "confidence": "moderate",
+          "rationale": "Asks for the reasons to limit governmental power, which is the rationale behind the limited/unlimited axis the concept classifies on."
+        },
+        {
+          "key": "TX:social_studies:6.10A",
+          "confidence": "strong",
+          "rationale": "Asks students to identify governments with rule by one, few, or many, which is the classify-by-how-power-is-held test."
+        },
+        {
+          "key": "TX:social_studies:6.10B",
+          "confidence": "strong",
+          "rationale": "Asks students to compare how various societies organize government and how those governments function, which is the comparison test."
+        },
+        {
+          "key": "TX:social_studies:6.11B",
+          "confidence": "strong",
+          "rationale": "Asks students to explain how opportunities for citizens to participate in and influence the political process vary among societies, which is the citizen-participation-across-forms clause."
+        }
+      ]
+    },
+    {
+      "slug": "using-primary-and-secondary-sources",
+      "title": "Using Primary and Secondary Sources",
+      "description": "A standard belongs here if it asks students to distinguish between, locate, or use primary and secondary sources to acquire information about a topic or event.",
+      "gradeBand": "6-8",
+      "subject": "social_studies",
+      "why": "The library contains no inquiry-skills concepts, so Ohio's three primary/secondary source standards (3.SS.2, 4.SS.2, 8.SS.1) have no home. Texas repeats the same standard verbatim in each of grades 6, 7, and 8. This is core and recurring in every state's social studies framework.",
+      "members": [
+        {
+          "key": "TX:social_studies:6.19A",
+          "confidence": "strong",
+          "rationale": "Asks students to differentiate between, locate, and use valid primary and secondary sources to acquire information, which is the test verbatim."
+        },
+        {
+          "key": "TX:social_studies:7.20A",
+          "confidence": "strong",
+          "rationale": "Asks students to differentiate between, locate, and use valid primary and secondary sources to acquire information, which is the test verbatim."
+        },
+        {
+          "key": "TX:social_studies:8.29A",
+          "confidence": "strong",
+          "rationale": "Asks students to differentiate between, locate, and use valid primary and secondary sources to acquire information, which is the test verbatim."
+        }
+      ]
+    },
+    {
+      "slug": "evaluating-source-credibility-and-bias",
+      "title": "Evaluating Sources for Credibility and Bias",
+      "description": "A standard belongs here if it asks students to judge a source's validity, credibility, accuracy, or bias rather than simply to use it.",
+      "gradeBand": "6-8",
+      "subject": "social_studies",
+      "why": "Distinct from merely using sources: this is the evaluative move. Ohio 6.SS.9 states it directly ('Sources should be examined for accuracy and credibility') and it currently has no home. Texas repeats it verbatim in grades 6, 7, and 8. Kept separate from using-primary-and-secondary-sources because the tests discriminate different asks.",
+      "members": [
+        {
+          "key": "TX:social_studies:6.19F",
+          "confidence": "strong",
+          "rationale": "Asks students to evaluate a variety of historical and contemporary sources for validity, credibility, bias, and accuracy, which is the test verbatim."
+        },
+        {
+          "key": "TX:social_studies:7.20F",
+          "confidence": "strong",
+          "rationale": "Asks students to evaluate a variety of historical and contemporary sources for validity, credibility, bias, and accuracy, which is the test verbatim."
+        },
+        {
+          "key": "TX:social_studies:8.29F",
+          "confidence": "strong",
+          "rationale": "Asks students to evaluate a variety of historical and contemporary sources for validity, credibility, bias, and accuracy, which is the test verbatim."
+        }
+      ]
+    },
+    {
+      "slug": "claims-supported-by-evidence",
+      "title": "Claims Supported by Evidence and Reasoning",
+      "description": "A standard belongs here if it asks students to formulate, communicate, or defend a claim or position about a social studies topic using evidence and reasoning.",
+      "gradeBand": "6-8",
+      "subject": "social_studies",
+      "why": "Evidence-based argument in social studies has no concept, leaving Ohio 6.SS.9 ('used to effectively communicate and defend a claim based on evidence') and Ohio 8.SS.1 ('to present and defend a position') unhoused. Texas repeats the standard verbatim across grades 6, 7, and 8. Core and recurring wherever inquiry frameworks are adopted.",
+      "members": [
+        {
+          "key": "TX:social_studies:6.19E",
+          "confidence": "strong",
+          "rationale": "Asks students to formulate and communicate a claim supported by evidence and reasoning about a social studies topic, which is the test verbatim."
+        },
+        {
+          "key": "TX:social_studies:7.20E",
+          "confidence": "strong",
+          "rationale": "Asks students to formulate and communicate a claim supported by evidence and reasoning about a social studies topic, which is the test verbatim."
+        },
+        {
+          "key": "TX:social_studies:8.29E",
+          "confidence": "strong",
+          "rationale": "Asks students to formulate and communicate a claim supported by evidence and reasoning about a social studies topic, which is the test verbatim."
+        }
+      ]
+    },
+    {
+      "slug": "constitutional-principles-of-government",
+      "title": "Constitutional Principles That Structure Government",
+      "description": "A standard belongs here if it asks students to explain how a constitution structures a government through principles such as separation of powers, checks and balances, federalism, republicanism, or popular sovereignty.",
+      "gradeBand": "6-8",
+      "subject": "social_studies",
+      "why": "c-bill-of-rights-limits-government covers only the rights-limiting half of constitutional government; nothing covers the structural principles. Ohio 8.SS.22 ('established a federal republic... separation of powers, and checks and balances') and Georgia SS4CG1 (popular sovereignty, federal system, representative republic), SS4CG3a (checks and balances, separation of powers), and SS8CG1a/b (a state constitution's structure and its relationship to the national one, separation of powers among a state's three branches) all state it and none has a home.",
+      "members": [
+        {
+          "key": "TX:social_studies:8.15D",
+          "confidence": "strong",
+          "rationale": "Asks students to analyze how a constitution reflects limited government, republicanism, checks and balances, federalism, separation of powers, popular sovereignty, and individual rights — the test verbatim."
+        },
+        {
+          "key": "TX:social_studies:7.13A",
+          "confidence": "moderate",
+          "rationale": "Asks how a state constitution reflects the same list of structural principles; matches the shape of a state-constitution civics standard, and the principles rather than the state are the content."
+        },
+        {
+          "key": "TX:social_studies:7.13B",
+          "confidence": "moderate",
+          "rationale": "Asks students to compare the principles of a state constitution to the national constitution, which tests the same structural principles across two charters."
+        }
+      ]
+    },
+    {
+      "slug": "creating-and-ratifying-a-constitution",
+      "title": "Creating and Ratifying a National Constitution",
+      "description": "A standard belongs here if it asks students to explain the weaknesses of an earlier governing charter, the issues debated at a constitutional convention, or the debate over ratifying the resulting constitution.",
+      "gradeBand": "6-8",
+      "subject": "social_studies",
+      "why": "Nothing in the library covers the founding-charter transition. Ohio 8.SS.8 states it as a single content statement ('Problems arising under the Articles of Confederation led to debate over the adoption of the U.S. Constitution'), and Georgia states it twice (SS4H2b: weaknesses of the Articles, the Great Compromise, the Three-Fifths Compromise; SS8H3d: how the weaknesses of the Articles led to writing a new federal Constitution). Distinct from c-declaration-of-independence-ideals and from constitutional-principles, which test the finished document rather than its making.",
+      "members": [
+        {
+          "key": "TX:social_studies:8.4D",
+          "confidence": "strong",
+          "rationale": "Asks students to analyze the issues of the constitutional convention including the Great Compromise and the Three-Fifths Compromise, which is the convention-debates clause verbatim."
+        },
+        {
+          "key": "TX:social_studies:8.15B",
+          "confidence": "strong",
+          "rationale": "Asks students to summarize the strengths and weaknesses of the earlier governing charter, which is the first clause of the test."
+        },
+        {
+          "key": "TX:social_studies:8.17A",
+          "confidence": "strong",
+          "rationale": "Asks students to analyze the Federalist and Anti-Federalist arguments, which is the ratification-debate clause."
+        }
+      ]
+    },
+    {
+      "slug": "reconstruction-after-civil-war",
+      "title": "Reconstruction and Its Effects After Civil War",
+      "description": "A standard belongs here if it asks students to explain the political, economic, or social changes, reform programs, or lingering problems of the postwar Reconstruction period, including the constitutional amendments it produced.",
+      "gradeBand": "6-8",
+      "subject": "social_studies",
+      "why": "Reconstruction has no concept, though all three states teach it: Ohio 8.SS.14 ('The Reconstruction period resulted in changes to the U.S. Constitution, an affirmation of federal authority and lingering social and political differences'), Georgia SS4H6 (13th/14th/15th Amendments, Freedmen's Bureau, sharecropping, Jim Crow) and Georgia SS8H6 (Reconstruction's impact on a state, including the amendments and the removal of Black legislators).",
+      "members": [
+        {
+          "key": "TX:social_studies:8.9A",
+          "confidence": "strong",
+          "rationale": "Asks students to evaluate the legislative reform programs of the Reconstruction Congress and reconstructed state governments, which is the reform-programs clause."
+        },
+        {
+          "key": "TX:social_studies:8.9B",
+          "confidence": "moderate",
+          "rationale": "Asks for the impact of electing African Americans from the South during Reconstruction, a political change of the period; the concept's counterpart standard covers the same ground from the opposite direction (the removal of Black legislators)."
+        },
+        {
+          "key": "TX:social_studies:8.9C",
+          "confidence": "strong",
+          "rationale": "Asks students to explain the economic, political, and social problems of Reconstruction and their impact on different groups, which is the test verbatim."
+        },
+        {
+          "key": "TX:social_studies:8.16B",
+          "confidence": "strong",
+          "rationale": "Asks students to describe the impact of the 13th, 14th, and 15th Amendments, which is the amendments clause and is stated identically in two counterpart standards."
+        },
+        {
+          "key": "TX:social_studies:7.5C",
+          "confidence": "strong",
+          "rationale": "Asks students to explain the political, economic, and social effects of the Civil War and Reconstruction on one state — the same ask, at the same grain, as a state-history Reconstruction standard."
+        }
+      ]
+    },
+    {
+      "slug": "sectional-disputes-cause-civil-war",
+      "title": "Sectional Disputes That Led to Civil War",
+      "description": "A standard belongs here if it asks students to explain how disputes over slavery, states' rights, or sectional economic interests drove a nation into civil war.",
+      "gradeBand": "6-8",
+      "subject": "social_studies",
+      "why": "The nearest existing concept, c-regional-differences-and-sectionalism, is a bridge the curator's own note calls a 'genuine mismatch' and recommends rejecting: it forces a regional-geography standard and a Civil-War-causes standard together and explicitly warns that 'a pure Civil-War-causes standard' attaching to it is the discrimination failure the spine is meant to prevent. This is the clean causal half, not a duplicate: Ohio 8.SS.12 ('Disputes over the nature of federalism, complicated by economic developments... resulted in sectional issues, including slavery, which led to the American Civil War') and Georgia SS8H5a (slavery, states' rights, nullification, Compromise of 1850) and SS4H5b (states' rights and slavery increased tensions between North and South) all state it. If the reviewer rejects the bridge concept, its Civil-War-causes member belongs here.",
+      "members": [
+        {
+          "key": "TX:social_studies:8.8B",
+          "confidence": "strong",
+          "rationale": "Asks students to explain the central role of the expansion of slavery in causing sectionalism, disagreement over states' rights, and the Civil War — the test verbatim."
+        },
+        {
+          "key": "TX:social_studies:8.7D",
+          "confidence": "moderate",
+          "rationale": "Asks students to analyze the impact of slavery on different sections of the nation, which is the slavery-as-sectional-divider clause, though the standard stops short of naming the war as the outcome."
+        },
+        {
+          "key": "TX:social_studies:8.7E",
+          "confidence": "moderate",
+          "rationale": "Asks students to compare the congressional conflicts and compromises before the Civil War, the sectional-dispute machinery named in a counterpart standard (Compromise of 1850, nullification)."
+        },
+        {
+          "key": "TX:social_studies:8.7A",
+          "confidence": "moderate",
+          "rationale": "Asks students to analyze the impact of tariff policies on sections of the nation before the Civil War, which is the sectional-economic-interests clause."
+        },
+        {
+          "key": "TX:social_studies:8.17B",
+          "confidence": "strong",
+          "rationale": "Asks students to explain the constitutional issues over states' rights, including the Nullification Crisis and the Civil War, which is the states'-rights clause with the war as its stated outcome."
+        },
+        {
+          "key": "TX:social_studies:7.5A",
+          "confidence": "moderate",
+          "rationale": "Asks students to explain the central role the expansion of slavery played in one state's entry into the Civil War — the same ask, at the same grain, as a state-history standard on the issues that led to the war."
+        }
+      ]
+    },
+    {
+      "slug": "forced-removal-of-indigenous-peoples",
+      "title": "Forced Removal of Indigenous Peoples From Their Lands",
+      "description": "A standard belongs here if it asks students to explain the reasons for, and the consequences of, a government forcibly removing Indigenous peoples from their lands.",
+      "gradeBand": "6-8",
+      "subject": "social_studies",
+      "why": "No concept covers removal, though it is taught in every state that teaches national expansion. Georgia states it twice (SS8H4d/e: the removal of the Muscogee and the Cherokee, John Ross, Andrew Jackson, Worcester v. Georgia, the Trail of Tears; SS4H3b: the impact of westward expansion on American Indians including the Trail of Tears) and Ohio names it in 8.SS.11 ('the displacement of American Indians'). c-indigenous-cultures-and-environment tests precontact ways of life and does not reach removal.",
+      "members": [
+        {
+          "key": "TX:social_studies:8.5H",
+          "confidence": "strong",
+          "rationale": "Asks students to analyze the reasons for the removal and resettlement of the Cherokee, naming the Indian Removal Act, Worcester v. Georgia, and the Trail of Tears — the same events a counterpart state standard names."
+        }
+      ]
+    },
+    {
+      "slug": "geography-shapes-historical-events",
+      "title": "Geographic Factors Shape the Course of Historical Events",
+      "description": "A standard belongs here if it asks students to explain how physical geography — landforms, waterways, climate, weather — shaped the course or outcome of historical events in a place.",
+      "gradeBand": "6-8",
+      "subject": "social_studies",
+      "why": "Distinct from c-geography-shapes-economic-activity, which tests geography's effect on the work people do, not on historical events. Ohio 8.SS.15 ('how historic events are shaped by geography'), Georgia SS4G2a (how each force used the physical geography of each battle site) and Georgia SS8G1d ('the importance of water in [a state's] historical development') all state it and none has a home.",
+      "members": [
+        {
+          "key": "TX:social_studies:8.10C",
+          "confidence": "strong",
+          "rationale": "Asks students to analyze the effects of physical geographic factors — weather, landforms, waterways — on major historical events, which is the test verbatim."
+        },
+        {
+          "key": "TX:social_studies:7.8C",
+          "confidence": "strong",
+          "rationale": "Asks students to analyze the effects of climate, weather, landforms, and irrigation on major events in a state's history, which is the test verbatim at state grain."
+        },
+        {
+          "key": "TX:social_studies:7.9B",
+          "confidence": "moderate",
+          "rationale": "Asks how geographic factors (a hurricane, the Dust Bowl, limited water) affected a state's political, economic, and social development; matches the test, though 'development' is broader than 'events'."
+        }
+      ]
+    },
+    {
+      "slug": "state-and-local-government-structure",
+      "title": "Structure and Funding of State and Local Government",
+      "description": "A standard belongs here if it asks students to describe the structure and functions of government below the national level, or how state and local governments raise and spend revenue.",
+      "gradeBand": "6-8",
+      "subject": "social_studies",
+      "why": "The library's civics concepts stop at rights, laws, and the national constitution; subnational government has no concept. Georgia devotes six standards to it (SS8CG1-CG6: the state constitution, the legislative, executive, and judicial branches, local governments, and — matching directly — 'Describe how state government is funded and how spending decisions are made' and 'Describe how local government is funded'). Every state teaches its own state and local government somewhere.",
+      "members": [
+        {
+          "key": "TX:social_studies:7.14A",
+          "confidence": "strong",
+          "rationale": "Asks students to describe the structure and functions of government at municipal, county, and state levels, which is the first clause of the test."
+        },
+        {
+          "key": "TX:social_studies:7.14B",
+          "confidence": "strong",
+          "rationale": "Asks students to identify the major revenue sources for state and local governments (property taxes, sales taxes, bonds, fees), which is the funding clause."
+        }
+      ]
+    },
+    {
+      "slug": "slave-trade-and-plantation-economy",
+      "title": "The Slave Trade and the Plantation Economy",
+      "description": "A standard belongs here if it asks students to explain how the slave trade and the forced labor of enslaved Africans developed and shaped a region's economy.",
+      "gradeBand": "6-8",
+      "subject": "social_studies",
+      "why": "No concept covers slavery as an economic system, only as a cause of sectional conflict. Ohio 8.SS.4 states it directly ('The practice of race-based slavery led to the forced migration of Africans to the American colonies and contributed to colonial economic development') and it has no home. The transatlantic slave trade and plantation economy are taught in every state's early-national history.",
+      "members": [
+        {
+          "key": "TX:social_studies:8.12B",
+          "confidence": "strong",
+          "rationale": "Asks students to explain the reasons for the development of the plantation system, the transatlantic slave trade, and the spread of slavery, which is the test verbatim."
+        }
+      ]
+    },
+    {
+      "slug": "course-and-outcome-of-a-civil-war",
+      "title": "Course and Outcome of a Civil War",
+      "description": "A standard belongs here if it asks students to describe the major battles, turning-point events, or significant figures of a civil war and how they shaped its course and outcome.",
+      "gradeBand": "6-8",
+      "subject": "social_studies",
+      "why": "The library has c-course-and-outcome-of-independence-war for a war of independence but no counterpart for a civil war, though all three states teach it: Ohio 8.SS.13 ('Key events and significant figures in American history influenced the course and outcome of the Civil War'), Georgia SS4H5c (Fort Sumter, Gettysburg, Appomattox) and SS4H5d (Lincoln, Lee, Grant, Davis), and Georgia SS8H5b (a state's role in the war). Not a duplicate — the independence-war concept tests a colonial war against imperial rule.",
+      "members": [
+        {
+          "key": "TX:social_studies:8.8C",
+          "confidence": "strong",
+          "rationale": "Asks students to explain the significant events of the Civil War — Fort Sumter, Antietam, Gettysburg, Vicksburg, the Emancipation Proclamation, Appomattox — which is the battles-and-turning-points clause, naming events a counterpart standard names."
+        },
+        {
+          "key": "TX:social_studies:8.8A",
+          "confidence": "strong",
+          "rationale": "Asks students to explain the roles played by significant individuals during the Civil War (Davis, Grant, Lee, Lincoln), which is the significant-figures clause, naming the same figures a counterpart standard names."
+        }
+      ]
+    },
+    {
+      "slug": "using-geographic-tools-to-analyze-data",
+      "title": "Using Geographic Tools to Analyze Data",
+      "description": "A standard belongs here if it asks students to create or interpret maps, graphs, or charts in order to gather, analyze, and report information about people, places, and environments.",
+      "gradeBand": "6-8",
+      "subject": "social_studies",
+      "why": "No concept covers geographic tools, leaving Ohio 6.SS.3 ('Geographic tools can be used to gather, process and report information about people, places and environments'), Ohio 7.SS.12 (maps used to trace human settlement over time), and Ohio 6.SS.4 (latitude and longitude for absolute location) unhoused. Texas restates it in every grade of the band. Distinct from geography-shapes-historical-events, which tests a causal claim rather than a tool skill.",
+      "members": [
+        {
+          "key": "TX:social_studies:6.20B",
+          "confidence": "strong",
+          "rationale": "Asks students to pose and answer questions about geographic distributions and patterns shown on maps, graphs, and charts, which is the interpret-to-analyze test."
+        },
+        {
+          "key": "TX:social_studies:6.20C",
+          "confidence": "strong",
+          "rationale": "Asks students to compare regions and countries using data from maps, graphs, and charts, which is the test verbatim."
+        },
+        {
+          "key": "TX:social_studies:6.20D",
+          "confidence": "strong",
+          "rationale": "Asks students to create and interpret sketch maps, thematic maps, graphs, and charts depicting population and economic activity, which is the create-and-report clause."
+        },
+        {
+          "key": "TX:social_studies:6.20A",
+          "confidence": "partial",
+          "rationale": "Asks students to answer geographic questions about location, including via latitude and longitude; matches the tool-use test but is framed as a questioning routine rather than as creating or interpreting a representation."
+        },
+        {
+          "key": "TX:social_studies:7.21A",
+          "confidence": "strong",
+          "rationale": "Asks students to create and interpret thematic maps, graphs, and charts representing a region, which is the test verbatim."
+        },
+        {
+          "key": "TX:social_studies:7.21B",
+          "confidence": "strong",
+          "rationale": "Asks students to analyze and interpret geographic distributions and patterns, which is the analyze clause."
+        },
+        {
+          "key": "TX:social_studies:8.29G",
+          "confidence": "strong",
+          "rationale": "Asks students to create a visual representation of historical information such as thematic maps, graphs, and charts, which is the create-and-report clause."
+        },
+        {
+          "key": "TX:social_studies:8.29H",
+          "confidence": "strong",
+          "rationale": "Asks students to pose and answer questions about geographic distributions and patterns shown on maps, graphs, and charts, which is the interpret-to-analyze test."
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "key": "TX:social_studies:6.1A",
+      "why": "Historical causation of contemporary societies' traits; no concept tests how past events produced present-day societal characteristics."
+    },
+    {
+      "key": "TX:social_studies:6.1B",
+      "why": "Evaluating past conflicts against current conditions; no concept covers historical causation of contemporary conditions."
+    },
+    {
+      "key": "TX:social_studies:6.3A",
+      "why": "Geographic factors behind population patterns; the library's geography concepts test economic activity and migration, not population distribution as such."
+    },
+    {
+      "key": "TX:social_studies:6.3C",
+      "why": "Locating physical and human features; pure map-content identification with no concept and no idea worth a concept."
+    },
+    {
+      "key": "TX:social_studies:6.3D",
+      "why": "Locating world countries; pure map-content identification."
+    },
+    {
+      "key": "TX:social_studies:6.4B",
+      "why": "Geography's influence on political relationships; the geography concept tests economic activity only, and no political-geography concept exists."
+    },
+    {
+      "key": "TX:social_studies:6.5A",
+      "why": "People impacted by physical processes (earthquakes, climate); the environment-to-people direction as hazard exposure is not tested by any concept, and the adaptation concept tests deliberate human response instead."
+    },
+    {
+      "key": "TX:social_studies:6.6B",
+      "why": "Problems arising from a shortage of a factor of production; the productive-resources concept tests naming the taxonomy and the scarcity concept tests choice and opportunity cost — this states neither."
+    },
+    {
+      "key": "TX:social_studies:6.7C",
+      "why": "Ethics in a free enterprise system; no concept and too idiosyncratic to warrant one."
+    },
+    {
+      "key": "TX:social_studies:6.8A",
+      "why": "Taxonomy of industry sectors (agricultural, retail, manufacturing, service); c-goods-and-services-people-produce tests that people work at jobs producing goods and services, which is a different ask."
+    },
+    {
+      "key": "TX:social_studies:6.8B",
+      "why": "Measuring development with GDP, life expectancy, literacy; no development-indicators concept exists."
+    },
+    {
+      "key": "TX:social_studies:6.9C",
+      "why": "Human rights abuses by governments; c-respecting-rights-of-others is an interpersonal primary-grades concept and does not reach state abuses."
+    },
+    {
+      "key": "TX:social_studies:6.10C",
+      "why": "Ancient origins of democratic government; Ohio 7.SS.17 (Greek democracy and the Roman Republic influencing modern democratic governments) is a clean future counterpart, but a two-member concept off a single clause is thinner than the library's existing weak spots — flagging rather than proposing."
+    },
+    {
+      "key": "TX:social_studies:6.13A",
+      "why": "Traits that define cultures and culture regions; the diversity concept tests that a community contains diverse groups, not what defines a culture."
+    },
+    {
+      "key": "TX:social_studies:6.13C",
+      "why": "Contributions of diverse groups to a multicultural society; shares vocabulary with c-cultural-diversity-in-communities but that concept's ask is recognizing diversity exists, not analyzing contributions."
+    },
+    {
+      "key": "TX:social_studies:6.13D",
+      "why": "Conflict and cooperation between cultures; no concept."
+    },
+    {
+      "key": "TX:social_studies:6.14A",
+      "why": "Institutions common to all societies; no concept."
+    },
+    {
+      "key": "TX:social_studies:6.14B",
+      "why": "Comparing institutions across societies; no concept."
+    },
+    {
+      "key": "TX:social_studies:6.14C",
+      "why": "How institutions sustain themselves; no concept."
+    },
+    {
+      "key": "TX:social_studies:6.16A",
+      "why": "Relationship between a society and its architecture, art, music, literature; no arts-and-society concept, and neither counterpart state states the idea generally enough to anchor one."
+    },
+    {
+      "key": "TX:social_studies:6.16B",
+      "why": "Contemporary issues influencing creative expression; no concept."
+    },
+    {
+      "key": "TX:social_studies:6.16C",
+      "why": "Art conveying universal themes; no concept."
+    },
+    {
+      "key": "TX:social_studies:6.18B",
+      "why": "How resources, economics, and politics affect the use of technology; the reverse of the technology concept's causal direction."
+    },
+    {
+      "key": "TX:social_studies:6.18C",
+      "why": "Predicting future impacts of discoveries; no concept."
+    },
+    {
+      "key": "TX:social_studies:6.19B",
+      "why": "Generic analytical moves (sequencing, categorizing, comparing, inferring); too generic to discriminate — a concept on this would swallow nearly any skills standard from any state."
+    },
+    {
+      "key": "TX:social_studies:6.19C",
+      "why": "Organizing information from outlines, reports, databases, visuals; generic study skill, no concept."
+    },
+    {
+      "key": "TX:social_studies:6.19D",
+      "why": "Identifying different points of view on an issue; adjacent to source evaluation but its ask is perspective-taking, not judging a source — omitted rather than stretch the proposed evaluation concept."
+    },
+    {
+      "key": "TX:social_studies:6.21A",
+      "why": "Using social studies terminology; no concept."
+    },
+    {
+      "key": "TX:social_studies:6.21B",
+      "why": "Incorporating main and supporting ideas in communication; a literacy skill, no concept."
+    },
+    {
+      "key": "TX:social_studies:6.21C",
+      "why": "Expressing ideas orally; a literacy skill, no concept."
+    },
+    {
+      "key": "TX:social_studies:6.21D",
+      "why": "Creating written and visual material; a literacy skill, no concept."
+    },
+    {
+      "key": "TX:social_studies:6.21E",
+      "why": "Citation and avoiding plagiarism; a literacy skill, no concept."
+    },
+    {
+      "key": "TX:social_studies:6.21F",
+      "why": "Civil discourse about social studies topics; no concept."
+    },
+    {
+      "key": "TX:social_studies:6.22A",
+      "why": "Simulating governmental and democratic processes; no concept."
+    },
+    {
+      "key": "TX:social_studies:6.22B",
+      "why": "A generic problem-solving and decision-making procedure. Its 'consider advantages and disadvantages' clause literally passes c-weighing-costs-and-benefits, but that concept's members are economics standards about cost-benefit analysis; attaching a procedural skills standard would be vocabulary overlap, not membership. Deliberate omission."
+    },
+    {
+      "key": "TX:social_studies:7.1A",
+      "why": "Texas-specific periodization of state history; no cross-state equivalent."
+    },
+    {
+      "key": "TX:social_studies:7.1B",
+      "why": "Texas-specific dates; no cross-state equivalent."
+    },
+    {
+      "key": "TX:social_studies:7.2B",
+      "why": "European exploration of Texas (Pineda, Cabeza de Vaca, French/Spanish claims); the ask is identifying individuals and events, not the motives c-motives-for-european-colonization tests."
+    },
+    {
+      "key": "TX:social_studies:7.2C",
+      "why": "European colonization of Texas (missions, named friars); Texas-specific individuals and events."
+    },
+    {
+      "key": "TX:social_studies:7.2D",
+      "why": "Mexican independence and its impact on Texas; no cross-state equivalent."
+    },
+    {
+      "key": "TX:social_studies:7.2E",
+      "why": "Individuals of the Mexican settlement of Texas; Texas-specific figures."
+    },
+    {
+      "key": "TX:social_studies:7.2F",
+      "why": "Contrasting Spanish, Mexican, and Anglo purposes for settling Texas; brushes the colonization-motives concept but its actors are not the Europeans-settling-Indigenous-lands the test names, and its content is Texas-specific."
+    },
+    {
+      "key": "TX:social_studies:7.3A",
+      "why": "Texas Revolution causation; explicitly Texas-specific with no cross-state equivalent."
+    },
+    {
+      "key": "TX:social_studies:7.3B",
+      "why": "Texas Revolution figures; Texas-specific."
+    },
+    {
+      "key": "TX:social_studies:7.3C",
+      "why": "Texas Revolution events (the Alamo, San Jacinto); Texas-specific."
+    },
+    {
+      "key": "TX:social_studies:7.4A",
+      "why": "Republic of Texas administrations; Texas-specific."
+    },
+    {
+      "key": "TX:social_studies:7.4B",
+      "why": "Texas annexation; Texas-specific."
+    },
+    {
+      "key": "TX:social_studies:7.4C",
+      "why": "Early Texas statehood, Treaty of Guadalupe-Hidalgo; Texas-specific."
+    },
+    {
+      "key": "TX:social_studies:7.5B",
+      "why": "Texas Civil War battles (Galveston, Sabine Pass, Palmito Ranch); the proposed civil-war course concept tests the war's decisive battles and figures, and these state-local engagements sit below that grain."
+    },
+    {
+      "key": "TX:social_studies:7.6A",
+      "why": "Texas frontier expansion and its effects on American Indians; the removal concept tests government-forced removal from lands, which this does not state."
+    },
+    {
+      "key": "TX:social_studies:7.6B",
+      "why": "Texas cattle industry; Texas-specific."
+    },
+    {
+      "key": "TX:social_studies:7.6C",
+      "why": "Texas railroads and James Hogg; Texas-specific."
+    },
+    {
+      "key": "TX:social_studies:7.6D",
+      "why": "West Texas agriculture after the frontier closed; Texas-specific."
+    },
+    {
+      "key": "TX:social_studies:7.7A",
+      "why": "Texas oil industry and industrialization; Texas-specific."
+    },
+    {
+      "key": "TX:social_studies:7.7B",
+      "why": "Boom-and-bust cycles of Texas industries; Texas-specific."
+    },
+    {
+      "key": "TX:social_studies:7.7C",
+      "why": "Reform movements in Texas; no reform-movements concept exists in the library."
+    },
+    {
+      "key": "TX:social_studies:7.7D",
+      "why": "Civil rights movements in Texas; no civil-rights concept exists in the library."
+    },
+    {
+      "key": "TX:social_studies:7.7E",
+      "why": "Impact of the world wars and the Depression on Texas; no 20th-century concept exists (both counterpart states place this content in grades outside the seeded pairs)."
+    },
+    {
+      "key": "TX:social_studies:7.8A",
+      "why": "Locating Texas physical regions; state-specific map content."
+    },
+    {
+      "key": "TX:social_studies:7.8B",
+      "why": "Locating places of importance in Texas; state-specific map content."
+    },
+    {
+      "key": "TX:social_studies:7.10C",
+      "why": "Demographic structure (growth rate, age distribution); no demography concept exists."
+    },
+    {
+      "key": "TX:social_studies:7.11A",
+      "why": "Economic factors driving Texas urbanization; the geography concept tests physical geography as the cause, which this does not state."
+    },
+    {
+      "key": "TX:social_studies:7.11B",
+      "why": "Changing jobs resulting from urbanization; no concept covers occupational change from urbanization."
+    },
+    {
+      "key": "TX:social_studies:7.12A",
+      "why": "National and international markets' impact on Texas production; c-markets-exchange-goods-and-services tests what a market is and the role of price, which this does not state."
+    },
+    {
+      "key": "TX:social_studies:7.12B",
+      "why": "Supply, demand, profit, and competition in a state economy; brushes the markets concept but omits its discriminating clause about price determining exchange between buyers and sellers."
+    },
+    {
+      "key": "TX:social_studies:7.12C",
+      "why": "Impact of Texas industries on markets; Texas-specific."
+    },
+    {
+      "key": "TX:social_studies:7.16A",
+      "why": "Points of view of political parties and interest groups on Texas issues; no concept covers partisan perspective-taking."
+    },
+    {
+      "key": "TX:social_studies:7.17A",
+      "why": "Leadership qualities of Texas leaders; Texas-specific figures, and c-individual-actions-shape-history tests contributions, not leadership qualities."
+    },
+    {
+      "key": "TX:social_studies:7.17B",
+      "why": "Contributions of named Texas leaders; Texas-specific figures — deliberately not forced into c-individual-actions-shape-history."
+    },
+    {
+      "key": "TX:social_studies:7.18B",
+      "why": "Maintaining cultural heritage while adapting to a larger state culture; acculturation is not what the diversity concept tests."
+    },
+    {
+      "key": "TX:social_studies:7.18C",
+      "why": "Spanish and other cultural influence on Texas place names, food, architecture; Texas-specific, and the diffusion concept's test is the spread between societies, not a catalog of one state's inheritances."
+    },
+    {
+      "key": "TX:social_studies:7.18D",
+      "why": "Contributions to the arts by named Texans; Texas-specific figures."
+    },
+    {
+      "key": "TX:social_studies:7.19A",
+      "why": "Comparing types and uses of technology past and present; no causal claim, so the technology concept's changed-how-people-work-or-live test is unmet."
+    },
+    {
+      "key": "TX:social_studies:7.19B",
+      "why": "Texas leaders in science and technology; Texas-specific figures."
+    },
+    {
+      "key": "TX:social_studies:7.19C",
+      "why": "Effects of technology on the development of Texas; the technology concept is already flagged as over-broad, and a state-development standard would widen it further — deliberate omission."
+    },
+    {
+      "key": "TX:social_studies:7.19D",
+      "why": "Effects of technology on resource use; no concept."
+    },
+    {
+      "key": "TX:social_studies:7.19E",
+      "why": "Technology producing interdependence among a state, nation, and world; the specialization concept's test is specialization driving trade, which this does not state."
+    },
+    {
+      "key": "TX:social_studies:7.20B",
+      "why": "Generic analytical moves plus absolute and relative chronology; too generic to discriminate."
+    },
+    {
+      "key": "TX:social_studies:7.20C",
+      "why": "Organizing information from outlines and visuals; generic study skill."
+    },
+    {
+      "key": "TX:social_studies:7.20D",
+      "why": "Identifying bias from the historical context surrounding an event; perspective-taking about participants rather than judging a source — omitted rather than stretch the proposed evaluation concept."
+    },
+    {
+      "key": "TX:social_studies:7.22A",
+      "why": "Using social studies terminology; no concept."
+    },
+    {
+      "key": "TX:social_studies:7.22B",
+      "why": "Citation and avoiding plagiarism; a literacy skill."
+    },
+    {
+      "key": "TX:social_studies:7.22C",
+      "why": "Creating presentations; a literacy skill."
+    },
+    {
+      "key": "TX:social_studies:7.22D",
+      "why": "Civil discourse; no concept."
+    },
+    {
+      "key": "TX:social_studies:7.23A",
+      "why": "Simulating governmental processes; no concept."
+    },
+    {
+      "key": "TX:social_studies:7.23B",
+      "why": "Generic problem-solving procedure; same deliberate omission as 6.22B."
+    },
+    {
+      "key": "TX:social_studies:8.1A",
+      "why": "Periodization of national history; no concept covers dividing the past into eras."
+    },
+    {
+      "key": "TX:social_studies:8.1B",
+      "why": "Significance of specific dates; no concept."
+    },
+    {
+      "key": "TX:social_studies:8.3A",
+      "why": "Growth of representative government in the colonial period; a real cross-state idea, but neither counterpart state states it as a standard, so there is nothing for a concept to attract."
+    },
+    {
+      "key": "TX:social_studies:8.3B",
+      "why": "Mayflower Compact, Fundamental Orders, House of Burgesses; same as 8.3A — no counterpart standard exists to anchor a concept."
+    },
+    {
+      "key": "TX:social_studies:8.3C",
+      "why": "Religion and virtue in the growth of representative government; no concept and no counterpart standard."
+    },
+    {
+      "key": "TX:social_studies:8.5A",
+      "why": "Domestic problems of the new republic; no concept."
+    },
+    {
+      "key": "TX:social_studies:8.5B",
+      "why": "Effects of the Fugitive Slave Act of 1793; no concept at this grain."
+    },
+    {
+      "key": "TX:social_studies:8.5C",
+      "why": "Arguments over protective tariffs, taxation, and banking. Literally passes c-government-trade-barriers ('tariffs... taxes'), but that concept's own note warns it will 'swallow general fiscal and regulatory standards from future states'; this is a historical-debate standard, not a claim about how governments act on markets. Deliberate omission."
+    },
+    {
+      "key": "TX:social_studies:8.5D",
+      "why": "Origin of political parties; no concept."
+    },
+    {
+      "key": "TX:social_studies:8.5E",
+      "why": "War of 1812; no concept."
+    },
+    {
+      "key": "TX:social_studies:8.5F",
+      "why": "Early foreign policy, the Monroe Doctrine; no concept."
+    },
+    {
+      "key": "TX:social_studies:8.5G",
+      "why": "Jackson's election and expanded suffrage; no concept."
+    },
+    {
+      "key": "TX:social_studies:8.6A",
+      "why": "The Northwest Ordinance and orderly expansion; no concept, and too narrow to anchor one."
+    },
+    {
+      "key": "TX:social_studies:8.6B",
+      "why": "Westward growth, the Louisiana Purchase, Manifest Destiny; both counterpart states teach territorial expansion, but the strongest shared strand within it — forced removal — is proposed separately, and a residual 'territorial acquisition' concept would be thin."
+    },
+    {
+      "key": "TX:social_studies:8.6C",
+      "why": "Causes and effects of the U.S.-Mexican War; no concept."
+    },
+    {
+      "key": "TX:social_studies:8.7B",
+      "why": "Effects of political, economic, and social factors on enslaved and free Blacks; no concept at this grain."
+    },
+    {
+      "key": "TX:social_studies:8.7C",
+      "why": "Impact of the Fugitive Slave Act of 1850; no concept at this grain."
+    },
+    {
+      "key": "TX:social_studies:8.8D",
+      "why": "Contrasting Lincoln's and Davis's ideas of liberty, equality, and union; no concept covers comparative political rhetoric."
+    },
+    {
+      "key": "TX:social_studies:8.10A",
+      "why": "Locating places tied to eras and turning points; map-content identification."
+    },
+    {
+      "key": "TX:social_studies:8.10B",
+      "why": "Comparing regions by physical and human characteristics; the geography concept tests geography's effect on economic activity, which this does not state."
+    },
+    {
+      "key": "TX:social_studies:8.12A",
+      "why": "Economic differences among regions. Its natural counterpart (a standard on regions developing from their physical environments and economies) currently lives only in c-regional-differences-and-sectionalism, which the curator flags as a mismatch recommended for rejection; attaching here would also create a false alignment to that concept's Civil-War-causes member. Deliberate omission pending that concept's resolution."
+    },
+    {
+      "key": "TX:social_studies:8.12C",
+      "why": "Causes and effects of regional economic differences; same reasoning as 8.12A. It does not name geography as the cause, so c-geography-shapes-economic-activity's test is unmet."
+    },
+    {
+      "key": "TX:social_studies:8.13A",
+      "why": "Economic effects of the War of 1812; no concept."
+    },
+    {
+      "key": "TX:social_studies:8.13B",
+      "why": "Economic factors behind industrialization and urbanization; the reverse of the technology concept's direction (this asks what caused industrialization, not what industrialization changed)."
+    },
+    {
+      "key": "TX:social_studies:8.14A",
+      "why": "Why a free enterprise system developed; c-economic-systems-and-basic-questions tests the three basic questions or a comparison across systems, and this states neither."
+    },
+    {
+      "key": "TX:social_studies:8.14B",
+      "why": "Characteristics and benefits of one economic system; describing a single system is not comparing systems, which is the concept's discriminating clause."
+    },
+    {
+      "key": "TX:social_studies:8.15A",
+      "why": "Influence of the Magna Carta, English Bill of Rights, and Federalist Papers on a system of government; no concept covers documentary antecedents."
+    },
+    {
+      "key": "TX:social_studies:8.15E",
+      "why": "Role of Hooker, Montesquieu, and Locke in colonial self-government; no counterpart standard exists (see 8.3A), and c-individual-actions-shape-history tests contributions of figures to the present rather than intellectual influence on a system."
+    },
+    {
+      "key": "TX:social_studies:8.16A",
+      "why": "Purposes for amending a constitution; a counterpart state teaches the amendment process, but the library has no amendment concept and one member per side off a single clause is thin."
+    },
+    {
+      "key": "TX:social_studies:8.18A",
+      "why": "Origin of judicial review; no concept."
+    },
+    {
+      "key": "TX:social_studies:8.18B",
+      "why": "Landmark Supreme Court cases (Marbury, McCulloch, Gibbons); no concept covers judicial landmarks."
+    },
+    {
+      "key": "TX:social_studies:8.18C",
+      "why": "Impact of Dred Scott v. Sandford. A counterpart standard names the case among the issues leading to the Civil War, but this standard's ask is the decision's impact on life in the nation, not its role in sectional causation — sharing a proper noun is not membership."
+    },
+    {
+      "key": "TX:social_studies:8.19A",
+      "why": "Defining unalienable rights; c-citizens-rights-and-responsibilities tests rights citizens hold with duties owed in return, and natural rights held by all people is a different claim."
+    },
+    {
+      "key": "TX:social_studies:8.20A",
+      "why": "Founding Fathers as models of civic virtue; the framing is civic virtue rather than the contributions c-individual-actions-shape-history tests."
+    },
+    {
+      "key": "TX:social_studies:8.20B",
+      "why": "Civil disobedience (Boston Tea Party, Thoreau); shares an event with c-grievances-that-sparked-revolution but its ask is civil disobedience as a civic act, not the grievance chain that produced a revolution."
+    },
+    {
+      "key": "TX:social_studies:8.21A",
+      "why": "Points of view of political parties and interest groups; no concept."
+    },
+    {
+      "key": "TX:social_studies:8.21C",
+      "why": "Compromise resolving historical conflicts (Missouri, 1850, Kansas-Nebraska); its ask is compromise as a civic mechanism, not the sectional causation the proposed civil-war concept tests. Deliberate omission."
+    },
+    {
+      "key": "TX:social_studies:8.22A",
+      "why": "Leadership qualities of national leaders; leadership qualities are not the contributions c-individual-actions-shape-history tests."
+    },
+    {
+      "key": "TX:social_studies:8.23B",
+      "why": "Urbanization producing conflicts over religion, class, and politics; no concept."
+    },
+    {
+      "key": "TX:social_studies:8.23C",
+      "why": "How intergroup conflicts were addressed; no concept."
+    },
+    {
+      "key": "TX:social_studies:8.23D",
+      "why": "Contributions of racial, ethnic, and religious groups to national identity. A counterpart standard states this idea nearly exactly, but the only adjacent concept tests recognizing that diverse groups exist, and a national-identity concept off a single counterpart is too thin to propose."
+    },
+    {
+      "key": "TX:social_studies:8.23E",
+      "why": "Contributions of women to society; no concept covers the contributions of a demographic group as such."
+    },
+    {
+      "key": "TX:social_studies:8.24A",
+      "why": "The abolition movement; no reform-movements concept exists."
+    },
+    {
+      "key": "TX:social_studies:8.24B",
+      "why": "Impact of 19th-century reform movements; no reform-movements concept exists in the library, and the counterpart standards that touch it sit at a much coarser grain."
+    },
+    {
+      "key": "TX:social_studies:8.25A",
+      "why": "Development of religious freedom over time; c-first-amendment-freedoms tests the importance of the enumerated freedoms, not the historical development of one."
+    },
+    {
+      "key": "TX:social_studies:8.25B",
+      "why": "Religious influence on social movements and the Great Awakenings; c-world-religions-and-belief-systems tests identifying and comparing major religions and their influence on the cultures that hold them, which this national-religious-history standard does not state."
+    },
+    {
+      "key": "TX:social_studies:8.26A",
+      "why": "Examples of art and literature reflecting an era; no arts-and-society concept."
+    },
+    {
+      "key": "TX:social_studies:8.26B",
+      "why": "Arts and continuity and change in a way of life; no arts-and-society concept."
+    },
+    {
+      "key": "TX:social_studies:8.29B",
+      "why": "Generic analytical moves plus chronology; too generic to discriminate."
+    },
+    {
+      "key": "TX:social_studies:8.29C",
+      "why": "Organizing information from outlines and visuals; generic study skill."
+    },
+    {
+      "key": "TX:social_studies:8.29D",
+      "why": "Identifying bias from historical context; same reasoning as 7.20D."
+    },
+    {
+      "key": "TX:social_studies:8.30A",
+      "why": "Using social studies terminology; no concept."
+    },
+    {
+      "key": "TX:social_studies:8.30B",
+      "why": "Citation and avoiding plagiarism; a literacy skill."
+    },
+    {
+      "key": "TX:social_studies:8.30C",
+      "why": "Creating presentations; a literacy skill."
+    },
+    {
+      "key": "TX:social_studies:8.30D",
+      "why": "Civil discourse; no concept."
+    },
+    {
+      "key": "TX:social_studies:8.31A",
+      "why": "Simulating governmental processes; no concept."
+    },
+    {
+      "key": "TX:social_studies:8.31B",
+      "why": "Generic problem-solving procedure; same deliberate omission as 6.22B."
+    }
+  ]
+}

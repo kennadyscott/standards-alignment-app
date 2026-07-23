@@ -1,0 +1,176 @@
+[
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "K",
+  "code": "K.ESS.1",
+  "strand": "Earth and Space Science",
+  "topic": "Daily and Seasonal Changes",
+  "description": "Weather changes are long-term and short-term. Weather changes occur throughout the day and from day to day. Air is a nonliving substance that surrounds Earth and wind is air that is moving. Wind, temperature and precipitation can be used to document short-term weather changes that are observable. Yearly weather changes (seasons) are observable patterns in the daily weather changes. Note: The focus is on observing the weather patterns of seasons. The reason for changing seasons is not appropriate for this grade level; this is found in grade 7."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "K",
+  "code": "K.ESS.2",
+  "strand": "Earth and Space Science",
+  "topic": "Daily and Seasonal Changes",
+  "description": "The moon, sun and stars can be observed at different times of the day or night. The moon, sun and stars appear in different positions at different times of the day or night. Sometimes the moon is visible during the night, sometimes the moon is visible during the day and at other times the moon is not visible at all. The observable shape of the moon changes in size very slowly throughout the month. The sun is visible only during the day. The sun\u2019s position in the sky appears to change in a single day and from season to season. Stars are visible at night, some are visible in the evening or morning and some are brighter than others."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "K",
+  "code": "K.PS.1",
+  "strand": "Physical Science",
+  "topic": "Properties of Everyday Objects and Materials",
+  "description": "Objects and materials can be sorted and described by their properties. Objects can be sorted and described by the properties of the materials from which they are made. Some of the properties can include color, size and texture."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "K",
+  "code": "K.PS.2",
+  "strand": "Physical Science",
+  "topic": "Properties of Everyday Objects and Materials",
+  "description": "Some objects and materials can be made to vibrate to produce sound. Sound is produced by touching, blowing or tapping objects. The sounds that are produced vary depending on the properties of objects. Sound is produced when objects vibrate."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "K",
+  "code": "K.LS.1",
+  "strand": "Life Science",
+  "topic": "Physical and Behavioral Traits of Living Things",
+  "description": "Living things have specific characteristics and traits. Living things grow and reproduce. Living things are found worldwide."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "K",
+  "code": "K.LS.2",
+  "strand": "Life Science",
+  "topic": "Physical and Behavioral Traits of Living Things",
+  "description": "Living things have physical traits and behaviors, which influence their survival. Living things are made up of a variety of structures. Some traits can be observable structures. Some of these structures and behaviors influence their survival."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "K",
+  "code": "K.SS.1",
+  "strand": "History",
+  "topic": "Historical Thinking and Skills",
+  "theme": "A Child\u2019s Place in Time and Space",
+  "description": "Time can be measured."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "K",
+  "code": "K.SS.2",
+  "strand": "History",
+  "topic": "Historical Thinking and Skills",
+  "theme": "A Child\u2019s Place in Time and Space",
+  "description": "Personal history can be shared through stories and pictures."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "K",
+  "code": "K.SS.3",
+  "strand": "History",
+  "topic": "Heritage",
+  "theme": "A Child\u2019s Place in Time and Space",
+  "description": "Heritage is reflected through diverse cultures and is shown through the arts, customs, traditions, family celebrations and language."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "K",
+  "code": "K.SS.4",
+  "strand": "History",
+  "topic": "Heritage",
+  "theme": "A Child\u2019s Place in Time and Space",
+  "description": "Symbols and practices of the United States include the flag, Pledge of Allegiance and the National Anthem. Other nations are represented by symbols and practices too."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "K",
+  "code": "K.SS.5",
+  "strand": "Geography",
+  "topic": "Spatial Thinking and Skills",
+  "theme": "A Child\u2019s Place in Time and Space",
+  "description": "Terms related to direction and distance, as well as symbols and landmarks, can be used to talk about the relative location of familiar places."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "K",
+  "code": "K.SS.6",
+  "strand": "Geography",
+  "topic": "Spatial Thinking and Skills",
+  "theme": "A Child\u2019s Place in Time and Space",
+  "description": "Models and maps represent real places."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "K",
+  "code": "K.SS.7",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "A Child\u2019s Place in Time and Space",
+  "description": "Humans depend on and impact the physical environment in order to supply food, clothing and shelter."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "K",
+  "code": "K.SS.8",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "A Child\u2019s Place in Time and Space",
+  "description": "Individuals are unique but share common characteristics of multiple groups."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "K",
+  "code": "K.SS.9",
+  "strand": "Government",
+  "topic": "Civic Participation and Skills",
+  "theme": "A Child\u2019s Place in Time and Space",
+  "description": "Individuals share responsibilities and take action toward the achievement of common goals in homes, schools and communities."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "K",
+  "code": "K.SS.10",
+  "strand": "Government",
+  "topic": "Rules and Laws",
+  "theme": "A Child\u2019s Place in Time and Space",
+  "description": "The purpose of rules and authority figures is to provide order, security and safety in the home, school and community."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "K",
+  "code": "K.SS.11",
+  "strand": "Economics",
+  "topic": "Scarcity",
+  "theme": "A Child\u2019s Place in Time and Space",
+  "description": "Individuals have many wants and make decisions to satisfy those wants. These decisions impact others."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "K",
+  "code": "K.SS.12",
+  "strand": "Economics",
+  "topic": "Production and Consumption",
+  "theme": "A Child\u2019s Place in Time and Space",
+  "description": "Goods are objects that can satisfy an individual\u2019s wants. Services are actions that can satisfy individual\u2019s wants."
+ }
+]

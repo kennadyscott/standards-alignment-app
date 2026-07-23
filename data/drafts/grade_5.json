@@ -1,0 +1,389 @@
+[
+ {
+  "id": "sci5-01",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.ESS.1",
+  "ga": "S4E1d",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: solar system includes sun and planets with unique distance, size, composition and movement. GA S4E1d: evaluate models of the solar system describing relative size, order, appearance, and composition of the planets and sun."
+ },
+ {
+  "id": "sci5-02",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.ESS.1",
+  "ga": "S6E1c",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 6). Ohio: each planet has unique characteristics of distance from the sun, size, and composition. GA S6E1c: compare and contrast the planets in size relative to Earth, surface and atmospheric features, and relative distance from the sun."
+ },
+ {
+  "id": "sci5-03",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.ESS.1",
+  "ga": "S6E1e",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 6). Ohio: comets, asteroids and meteoroids orbit the sun. GA S6E1e: compare and contrast the characteristics, composition, and location of comets, asteroids, and meteoroids."
+ },
+ {
+  "id": "sci5-04",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.ESS.2",
+  "ga": "S4E1b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: the sun appears largest because it is the closest star, and some stars are larger or smaller than the sun. GA S4E1b: construct an argument on why some stars, including the sun, appear larger or brighter than others, limited to distance and size."
+ },
+ {
+  "id": "sci5-05",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.ESS.2",
+  "ga": "S2E1b",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 2). Ohio: the sun appears to be the largest star because it is closest to Earth. GA S2E1b: support the claim that although the sun appears brightest and largest, it is actually medium in size; overlaps but at earlier grade and less depth."
+ },
+ {
+  "id": "sci5-06",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.ESS.3",
+  "ga": "S4E2a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: predictable cycles of Earth-sun motion, including revolution and rotation producing day and night. GA S4E2a: model why the length of day and night change throughout the year; overlaps on Earth-sun motion but frames it around day length."
+ },
+ {
+  "id": "sci5-07",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.ESS.3",
+  "ga": "S6E2c",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 6). Ohio: cycles and patterns of motion between Earth and sun are predictable. GA S6E2c: relate the tilt of the Earth to the distribution of sunlight throughout the year; related Earth-sun motion but focused on seasons."
+ },
+ {
+  "id": "sci5-08",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.PS.1",
+  "ga": "S4P3a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: any change in speed or direction of an object requires a force. GA S4P3a: investigate the effects of balanced and unbalanced forces on an object; same force-and-motion idea at slightly lower depth."
+ },
+ {
+  "id": "sci5-09",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.PS.1",
+  "ga": "S8P3a",
+  "confidence": "partial",
+  "rationale": "Cross-grade (GA grade 8). Ohio: speed is calculated from distance traveled in a period of time. GA S8P3a: identify patterns in the relationships between speed and distance; overlaps on speed/distance but is a middle-school analysis skill."
+ },
+ {
+  "id": "sci5-10",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.PS.1",
+  "ga": "S8P3c",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 8). Ohio: change in movement is based on the mass of the object and the amount of force. GA S8P3c: support the claim that the force needed to accelerate an object is proportional to its mass (inertia)."
+ },
+ {
+  "id": "sci5-11",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.PS.2",
+  "ga": "S4P1b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: light travels in a direction until it is reflected. GA S4P1b: describe the path light travels from a source to a mirror and how it is reflected."
+ },
+ {
+  "id": "sci5-12",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.PS.2",
+  "ga": "S4P1c",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: light can be refracted when it moves from one medium to another. GA S4P1c: explore examples of when light is refracted using everyday materials such as prisms and a glass of water."
+ },
+ {
+  "id": "sci5-13",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.PS.2",
+  "ga": "S4P2a",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: sound is produced by vibrating objects and the rate of vibration is related to pitch. GA S4P2a: produce sound and predict the effects of changing the strength or speed of vibrations."
+ },
+ {
+  "id": "sci5-14",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.LS.1",
+  "ga": "S4L1a",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: organisms perform roles in an ecosystem and can be categorized as producers, consumers and decomposers. GA S4L1a: model the roles of producers, consumers, and decomposers in a community."
+ },
+ {
+  "id": "sci5-15",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.LS.1",
+  "ga": "S4L1b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: food webs identify relationships among producers, consumers and decomposers. GA S4L1b: illustrate the flow of energy through a food web/food chain including producers, consumers, and decomposers."
+ },
+ {
+  "id": "sci5-16",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.LS.2",
+  "ga": "S4L1b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 4). Ohio: energy entering as sunlight is transferred by producers and passed from organism to organism in food webs. GA S4L1b: illustrate the flow of energy through a food web beginning with sunlight and including producers, consumers, and decomposers."
+ },
+ {
+  "id": "sci5-17",
+  "subject": "science",
+  "grade": "5",
+  "oh": "5.LS.2",
+  "ga": "S7L4b",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 7). Ohio: energy from sunlight is transformed by producers and passed among organisms. GA S7L4b: model the cycling of matter and the flow of energy among biotic and abiotic components of an ecosystem; same energy-flow concept at greater middle-school depth."
+ },
+ {
+  "id": "ss5-01",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.3",
+  "ga": "SS3H2a",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 3). Ohio: European exploration during the 1400s-1600s had lasting effects. GA SS3H2a: describe the reasons for and obstacles to the exploration of North America."
+ },
+ {
+  "id": "ss5-02",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.3",
+  "ga": "SS3H2b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 3). Ohio: European exploration and colonization shaped the Western Hemisphere. GA SS3H2b: describe the accomplishments of explorers Cabot, Balboa, de Soto, Columbus, Hudson, and Cartier."
+ },
+ {
+  "id": "ss5-03",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.3",
+  "ga": "SS6H1b",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 6). Ohio: European colonization had lasting effects on the Western Hemisphere today. GA SS6H1b: describe the influence of the Spanish and Portuguese on the language and religions of Latin America; captures the lasting colonial effect."
+ },
+ {
+  "id": "ss5-04",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.5",
+  "ga": "SS3G2",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 3). Ohio: latitude and longitude can be used to make observations about location. GA SS3G2: locate and describe the equator, prime meridian, and lines of latitude and longitude on a globe; GA does not extend to the climate generalizations Ohio adds."
+ },
+ {
+  "id": "ss5-05",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.6",
+  "ga": "SS8G1b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 8). Ohio: regions can be determined using criteria including landform, climate, population, and economic characteristics. GA SS8G1b: distinguish among the five geographic regions of Georgia in terms of location, climate, agriculture, and economic contribution."
+ },
+ {
+  "id": "ss5-06",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.6",
+  "ga": "SS2G1a",
+  "confidence": "partial",
+  "rationale": "Cross-grade (GA grade 2). Ohio: regions are determined using criteria such as landform and climate. GA SS2G1a: locate and compare the geographic regions of Georgia; introduces the region concept but without the multi-criteria analysis."
+ },
+ {
+  "id": "ss5-07",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.7",
+  "ga": "SS6G3a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 6). Ohio: the variety of physical environments influences human activities. GA SS6G3a: explain how location, climate, and distribution of natural resources impact trade and affect where people live in Mexico, Brazil, and Cuba."
+ },
+ {
+  "id": "ss5-08",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.7",
+  "ga": "SS6G2b",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 6). Ohio: human activities modify the physical environment. GA SS6G2b: explain the environmental issue of destruction of the rain forest in Brazil; a clear case of humans modifying the environment."
+ },
+ {
+  "id": "ss5-09",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.8",
+  "ga": "SS3H1a",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 3). Ohio: American Indian tribes can be classified into cultural groups based on geographic similarities. GA SS3H1a: locate the regions where American Indians settled in North America (Arctic, Northwest, Southwest, Plains, Northeast, Southeast)."
+ },
+ {
+  "id": "ss5-10",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.8",
+  "ga": "SS3H1b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 3). Ohio: American Indians developed unique cultures with different ways of life. GA SS3H1b: compare and contrast how American Indians in each region used their environment to obtain food, clothing, and shelter."
+ },
+ {
+  "id": "ss5-11",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.9",
+  "ga": "SS6H1d",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 6). Ohio: political, environmental, social and economic factors cause people to move in the Western Hemisphere. GA SS6H1d: explain the impact of poverty, the war on drugs, and migration to the United States on Latin America."
+ },
+ {
+  "id": "ss5-12",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.9",
+  "ga": "SS5H1d",
+  "confidence": "moderate",
+  "rationale": "Same-grade match. Ohio: factors cause people to move from place to place in the Western Hemisphere. GA SS5H1d: describe the reasons people immigrated to the United States, from where they emigrated, and where they settled."
+ },
+ {
+  "id": "ss5-13",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.10",
+  "ga": "SS6H1b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 6). Ohio: the Western Hemisphere is culturally diverse in language and religion due to interactions of world cultures. GA SS6H1b: describe the influence of the Spanish and Portuguese on the language and religions of Latin America."
+ },
+ {
+  "id": "ss5-14",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.10",
+  "ga": "SS6H1a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 6). Ohio: cultural diversity results from the interaction of a variety of world cultures. GA SS6H1a: describe the influence of African slavery on the development of the Americas; a major cultural influence on the hemisphere."
+ },
+ {
+  "id": "ss5-15",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.12",
+  "ga": "SS6CG1a",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 6). Ohio: democracies, dictatorships and monarchies frame the relationship between those in power and citizens. GA SS6CG1a: explain citizen participation in autocratic and democratic governments (Mexico, Cuba, Brazil)."
+ },
+ {
+  "id": "ss5-16",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.12",
+  "ga": "SS7CG3a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 7). Ohio: monarchies are a category for understanding power and citizens. GA SS7CG3a: explain citizen participation in autocratic and democratic governments, including Saudi Arabia as an autocratic monarchy."
+ },
+ {
+  "id": "ss5-17",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.14",
+  "ga": "SS5E1a",
+  "confidence": "strong",
+  "rationale": "Same-grade match. Ohio: the choices made by individuals and governments have present and future consequences. GA SS5E1a: describe opportunity costs and their relationship to decision-making across time."
+ },
+ {
+  "id": "ss5-18",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.14",
+  "ga": "SS4E1a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: choices have present and future consequences. GA SS4E1a: describe opportunity cost and its relationship to decision-making across time; same opportunity-cost concept."
+ },
+ {
+  "id": "ss5-19",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.15",
+  "ga": "SS3E1d",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 3). Ohio: availability of productive resources (entrepreneurship, human, capital, natural) promotes specialization. GA SS3E1d: entrepreneurship as combining natural, human, and capital resources to make a profit; names the same productive resources."
+ },
+ {
+  "id": "ss5-20",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.15",
+  "ga": "SS6E2a",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 6). Ohio: productive resources promote specialization that could lead to trade. GA SS6E2a: explain how specialization encourages trade between countries."
+ },
+ {
+  "id": "ss5-21",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.16",
+  "ga": "SS5E1c",
+  "confidence": "strong",
+  "rationale": "Same-grade match. Ohio: productive resources and the division of labor impact productive capacity. GA SS5E1c: describe how specialization can improve standards of living and productivity, using Henry Ford's assembly line."
+ },
+ {
+  "id": "ss5-22",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.16",
+  "ga": "SS4E1c",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: division of labor can affect productive capacity. GA SS4E1c: describe how specialization improves standards of living."
+ },
+ {
+  "id": "ss5-23",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.17",
+  "ga": "SS6E2a",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 6). Ohio: regions become interdependent when they specialize in what they produce best and trade. GA SS6E2a: explain how specialization encourages trade between countries."
+ },
+ {
+  "id": "ss5-24",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.17",
+  "ga": "SS4E1e",
+  "confidence": "moderate",
+  "rationale": "Cross-grade (GA grade 4). Ohio: specialization and trade increase the goods and services available. GA SS4E1e: describe how trade promotes economic activity."
+ },
+ {
+  "id": "ss5-25",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.18",
+  "ga": "SS6E3b",
+  "confidence": "strong",
+  "rationale": "Cross-grade (GA grade 6). Ohio: workers improve their ability to earn income by gaining new knowledge and skills. GA SS6E3b: explain the relationship between investment in human capital (education and training) and GDP per capita."
+ },
+ {
+  "id": "ss5-26",
+  "subject": "social_studies",
+  "grade": "5",
+  "oh": "5.SS.18",
+  "ga": "SS5E3b",
+  "confidence": "moderate",
+  "rationale": "Same-grade match. Ohio: workers earn income and can improve their earning ability. GA SS5E3b: describe how people earn income by selling their labor to businesses; overlaps on labor and income though not on skill-building."
+ }
+]

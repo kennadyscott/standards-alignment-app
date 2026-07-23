@@ -1,0 +1,930 @@
+[
+ {
+  "key": "TX:social_studies:K.1A",
+  "grade": "K",
+  "strand": "History",
+  "stem": "History. The student understands that holidays are celebrations of special events. The student is expected to:",
+  "description": "identify national patriotic holidays such as Constitution Day, Presidents' Day, Veterans Day, and Independence Day; and"
+ },
+ {
+  "key": "TX:social_studies:K.1B",
+  "grade": "K",
+  "strand": "History",
+  "stem": "History. The student understands that holidays are celebrations of special events. The student is expected to:",
+  "description": "identify customs associated with national patriotic holidays such as parades and fireworks on Independence Day."
+ },
+ {
+  "key": "TX:social_studies:K.2",
+  "grade": "K",
+  "strand": "History",
+  "description": "History. The student understands how historical figures helped shape the state and nation. The student is expected to identify contributions of historical figures, including Stephen F. Austin, George Washington, Christopher Columbus, and José Antonio Navarro, who helped to shape the state and nation."
+ },
+ {
+  "key": "TX:social_studies:K.3A",
+  "grade": "K",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the concept of location. The student is expected to:",
+  "description": "use spatial terms, including over, under, near, far, left, and right, to describe relative location;"
+ },
+ {
+  "key": "TX:social_studies:K.3B",
+  "grade": "K",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the concept of location. The student is expected to:",
+  "description": "locate places on the school campus and describe their relative locations; and"
+ },
+ {
+  "key": "TX:social_studies:K.3C",
+  "grade": "K",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the concept of location. The student is expected to:",
+  "description": "identify and use geographic tools that aid in determining location, including maps and globes."
+ },
+ {
+  "key": "TX:social_studies:K.4A",
+  "grade": "K",
+  "strand": "Geography",
+  "stem": "Geography. The student understands physical and human characteristics of place to better understand self, home, family, classroom, and the world around them. The student is expected to:",
+  "description": "identify the physical characteristics of place such as landforms, bodies of water, Earth's resources, and weather; and"
+ },
+ {
+  "key": "TX:social_studies:K.4B",
+  "grade": "K",
+  "strand": "Geography",
+  "stem": "Geography. The student understands physical and human characteristics of place to better understand self, home, family, classroom, and the world around them. The student is expected to:",
+  "description": "identify how geographic location influences human characteristics of place such as shelter, clothing, food, and activities."
+ },
+ {
+  "key": "TX:social_studies:K.5A",
+  "grade": "K",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the difference between human needs and wants and how they are met. The student is expected to:",
+  "description": "identify basic human needs of food, clothing, and shelter;"
+ },
+ {
+  "key": "TX:social_studies:K.5B",
+  "grade": "K",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the difference between human needs and wants and how they are met. The student is expected to:",
+  "description": "explain the difference between needs and wants; and"
+ },
+ {
+  "key": "TX:social_studies:K.5C",
+  "grade": "K",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the difference between human needs and wants and how they are met. The student is expected to:",
+  "description": "explain how basic human needs and wants can be met."
+ },
+ {
+  "key": "TX:social_studies:K.6A",
+  "grade": "K",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the value of jobs. The student is expected to:",
+  "description": "identify jobs in the home, school, and community; and"
+ },
+ {
+  "key": "TX:social_studies:K.6B",
+  "grade": "K",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the value of jobs. The student is expected to:",
+  "description": "explain why people have jobs."
+ },
+ {
+  "key": "TX:social_studies:K.7A",
+  "grade": "K",
+  "strand": "Government",
+  "stem": "Government. The student understands the purpose of rules. The student is expected to:",
+  "description": "identify purposes for having rules; and"
+ },
+ {
+  "key": "TX:social_studies:K.7B",
+  "grade": "K",
+  "strand": "Government",
+  "stem": "Government. The student understands the purpose of rules. The student is expected to:",
+  "description": "identify rules that provide order, security, and safety in the home and school."
+ },
+ {
+  "key": "TX:social_studies:K.8A",
+  "grade": "K",
+  "strand": "Government",
+  "stem": "Government. The student understands the role of authority figures. The student is expected to:",
+  "description": "identify authority figures in the home, school, and community; and"
+ },
+ {
+  "key": "TX:social_studies:K.8B",
+  "grade": "K",
+  "strand": "Government",
+  "stem": "Government. The student understands the role of authority figures. The student is expected to:",
+  "description": "explain how authority figures enforce rules."
+ },
+ {
+  "key": "TX:social_studies:K.9A",
+  "grade": "K",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands important symbols, customs, and responsibilities that represent American beliefs and principles and contribute to our national identity. The student is expected to:",
+  "description": "identify the United States flag and the Texas state flag;"
+ },
+ {
+  "key": "TX:social_studies:K.9B",
+  "grade": "K",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands important symbols, customs, and responsibilities that represent American beliefs and principles and contribute to our national identity. The student is expected to:",
+  "description": "recite the Pledge of Allegiance to the United States Flag and the Pledge to the Texas Flag; and"
+ },
+ {
+  "key": "TX:social_studies:K.9C",
+  "grade": "K",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands important symbols, customs, and responsibilities that represent American beliefs and principles and contribute to our national identity. The student is expected to:",
+  "description": "use voting as a method for group decision making."
+ },
+ {
+  "key": "TX:social_studies:K.10",
+  "grade": "K",
+  "strand": "Culture",
+  "description": "Culture. The student understands similarities and differences among individuals. The student is expected to identify similarities and differences among individuals such as kinship and religion."
+ },
+ {
+  "key": "TX:social_studies:K.11A",
+  "grade": "K",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the importance of family traditions. The student is expected to:",
+  "description": "describe and explain the importance of family traditions; and"
+ },
+ {
+  "key": "TX:social_studies:K.11B",
+  "grade": "K",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the importance of family traditions. The student is expected to:",
+  "description": "compare traditions among families."
+ },
+ {
+  "key": "TX:social_studies:K.12A",
+  "grade": "K",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands ways technology is used in the home and school and how technology affects people's lives. The student is expected to:",
+  "description": "identify examples of technology used in the home and school;"
+ },
+ {
+  "key": "TX:social_studies:K.12B",
+  "grade": "K",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands ways technology is used in the home and school and how technology affects people's lives. The student is expected to:",
+  "description": "describe how technology helps accomplish specific tasks and meet people's needs; and"
+ },
+ {
+  "key": "TX:social_studies:K.12C",
+  "grade": "K",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands ways technology is used in the home and school and how technology affects people's lives. The student is expected to:",
+  "description": "describe how his or her life might be different without modern technology."
+ },
+ {
+  "key": "TX:social_studies:K.13A",
+  "grade": "K",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired from a variety of valid sources, including technology. The student is expected to:",
+  "description": "identify and state facts based on relevant evidence;"
+ },
+ {
+  "key": "TX:social_studies:K.13B",
+  "grade": "K",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired from a variety of valid sources, including technology. The student is expected to:",
+  "description": "identify different kinds of historical sources and artifacts and explain how they can be used to study the past;"
+ },
+ {
+  "key": "TX:social_studies:K.13C",
+  "grade": "K",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired from a variety of valid sources, including technology. The student is expected to:",
+  "description": "gather information about a topic using a variety of valid oral and visual sources such as interviews, music, pictures, symbols, and artifacts with adult assistance; and"
+ },
+ {
+  "key": "TX:social_studies:K.13D",
+  "grade": "K",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired from a variety of valid sources, including technology. The student is expected to:",
+  "description": "sequence and categorize information."
+ },
+ {
+  "key": "TX:social_studies:K.14A",
+  "grade": "K",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in oral and visual forms. The student is expected to:",
+  "description": "place events in chronological order;"
+ },
+ {
+  "key": "TX:social_studies:K.14B",
+  "grade": "K",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in oral and visual forms. The student is expected to:",
+  "description": "use social studies terminology related to time and chronology correctly, including before, after, next, first, last, yesterday, today, and tomorrow;"
+ },
+ {
+  "key": "TX:social_studies:K.14C",
+  "grade": "K",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in oral and visual forms. The student is expected to:",
+  "description": "communicate information visually, orally, or in writing based on knowledge and experiences in social studies;"
+ },
+ {
+  "key": "TX:social_studies:K.14D",
+  "grade": "K",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in oral and visual forms. The student is expected to:",
+  "description": "create and interpret visuals, including pictures and maps; and"
+ },
+ {
+  "key": "TX:social_studies:K.14E",
+  "grade": "K",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in oral and visual forms. The student is expected to:",
+  "description": "apply and practice classroom rules and procedures for listening and responding respectfully."
+ },
+ {
+  "key": "TX:social_studies:K.15A",
+  "grade": "K",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses problem-solving and decision-making skills, working independently and with others. The student is expected to:",
+  "description": "use democratic procedures to collaborate with others when making decisions on issues in the classroom, school, or community; and"
+ },
+ {
+  "key": "TX:social_studies:K.15B",
+  "grade": "K",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses problem-solving and decision-making skills, working independently and with others. The student is expected to:",
+  "description": "use problem-solving and decision-making processes to identify a problem, gather information, list and consider options, consider advantages and disadvantages, choose and implement a solution, and evaluate the effectiveness of the solution."
+ },
+ {
+  "key": "TX:social_studies:1.1A",
+  "grade": "1",
+  "strand": "History",
+  "stem": "History. The student understands the origins of customs, holidays, and celebrations. The student is expected to:",
+  "description": "describe the origins of customs, holidays, and celebrations of the community, state, and nation such as Constitution Day, Independence Day, and Veterans Day; and"
+ },
+ {
+  "key": "TX:social_studies:1.1B",
+  "grade": "1",
+  "strand": "History",
+  "stem": "History. The student understands the origins of customs, holidays, and celebrations. The student is expected to:",
+  "description": "compare the observance of holidays and celebrations."
+ },
+ {
+  "key": "TX:social_studies:1.2A",
+  "grade": "1",
+  "strand": "History",
+  "stem": "History. The student understands how historical figures helped shape the state and nation. The student is expected to:",
+  "description": "identify contributions of historical figures, including Sam Houston, George Washington, Abraham Lincoln, and Martin Luther King Jr., who have influenced the state and nation; and"
+ },
+ {
+  "key": "TX:social_studies:1.2B",
+  "grade": "1",
+  "strand": "History",
+  "stem": "History. The student understands how historical figures helped shape the state and nation. The student is expected to:",
+  "description": "compare the lives of historical figures who have influenced the state and nation."
+ },
+ {
+  "key": "TX:social_studies:1.3A",
+  "grade": "1",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the relative location of places. The student is expected to:",
+  "description": "describe the location of self and objects relative to other locations in the classroom and school using spatial terms; and"
+ },
+ {
+  "key": "TX:social_studies:1.3B",
+  "grade": "1",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the relative location of places. The student is expected to:",
+  "description": "locate places using the four cardinal directions."
+ },
+ {
+  "key": "TX:social_studies:1.4A",
+  "grade": "1",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the purpose of geographic tools, including maps and globes. The student is expected to:",
+  "description": "create and use simple maps such as maps of the home, classroom, school, and community; and"
+ },
+ {
+  "key": "TX:social_studies:1.4B",
+  "grade": "1",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the purpose of geographic tools, including maps and globes. The student is expected to:",
+  "description": "locate and explore the community, Texas, and the United States on maps and globes."
+ },
+ {
+  "key": "TX:social_studies:1.5A",
+  "grade": "1",
+  "strand": "Geography",
+  "stem": "Geography. The student understands physical and human characteristics of place to better understand their community and the world around them. The student is expected to:",
+  "description": "identify and describe the physical characteristics of place such as landforms, bodies of water, Earth's resources, and weather; and"
+ },
+ {
+  "key": "TX:social_studies:1.5B",
+  "grade": "1",
+  "strand": "Geography",
+  "stem": "Geography. The student understands physical and human characteristics of place to better understand their community and the world around them. The student is expected to:",
+  "description": "identify and describe how geographic location influences the human characteristics of place such as shelter, clothing, food, and activities."
+ },
+ {
+  "key": "TX:social_studies:1.6A",
+  "grade": "1",
+  "strand": "Economics",
+  "stem": "Economics. The student understands how families meet basic human needs. The student is expected to:",
+  "description": "describe ways that families meet basic human needs; and"
+ },
+ {
+  "key": "TX:social_studies:1.6B",
+  "grade": "1",
+  "strand": "Economics",
+  "stem": "Economics. The student understands how families meet basic human needs. The student is expected to:",
+  "description": "describe similarities and differences in ways families meet basic human needs."
+ },
+ {
+  "key": "TX:social_studies:1.7A",
+  "grade": "1",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the concepts of goods and services. The student is expected to:",
+  "description": "identify examples of goods and services in the home, school, and community;"
+ },
+ {
+  "key": "TX:social_studies:1.7B",
+  "grade": "1",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the concepts of goods and services. The student is expected to:",
+  "description": "identify ways people exchange goods and services; and"
+ },
+ {
+  "key": "TX:social_studies:1.7C",
+  "grade": "1",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the concepts of goods and services. The student is expected to:",
+  "description": "identify the role of markets in the exchange of goods and services."
+ },
+ {
+  "key": "TX:social_studies:1.8A",
+  "grade": "1",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the condition of not being able to have all the goods and services one wants. The student is expected to:",
+  "description": "identify examples of people wanting more than they can have;"
+ },
+ {
+  "key": "TX:social_studies:1.8B",
+  "grade": "1",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the condition of not being able to have all the goods and services one wants. The student is expected to:",
+  "description": "explain why wanting more than they can have requires that people make choices; and"
+ },
+ {
+  "key": "TX:social_studies:1.8C",
+  "grade": "1",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the condition of not being able to have all the goods and services one wants. The student is expected to:",
+  "description": "identify examples of choices families make when buying goods and services."
+ },
+ {
+  "key": "TX:social_studies:1.9A",
+  "grade": "1",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the value of work. The student is expected to:",
+  "description": "describe the tools of various jobs and the characteristics of a job well performed; and"
+ },
+ {
+  "key": "TX:social_studies:1.9B",
+  "grade": "1",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the value of work. The student is expected to:",
+  "description": "describe how various jobs contribute to the production of goods and services."
+ },
+ {
+  "key": "TX:social_studies:1.10A",
+  "grade": "1",
+  "strand": "Government",
+  "stem": "Government. The student understands the purpose of rules and laws. The student is expected to:",
+  "description": "explain the purpose for rules and laws in the home, school, and community; and"
+ },
+ {
+  "key": "TX:social_studies:1.10B",
+  "grade": "1",
+  "strand": "Government",
+  "stem": "Government. The student understands the purpose of rules and laws. The student is expected to:",
+  "description": "identify rules and laws that establish order, provide security, and manage conflict."
+ },
+ {
+  "key": "TX:social_studies:1.11A",
+  "grade": "1",
+  "strand": "Government",
+  "stem": "Government. The student understands the role of authority figures and public officials. The student is expected to:",
+  "description": "identify the responsibilities of authority figures in the home, school, and community; and"
+ },
+ {
+  "key": "TX:social_studies:1.11B",
+  "grade": "1",
+  "strand": "Government",
+  "stem": "Government. The student understands the role of authority figures and public officials. The student is expected to:",
+  "description": "identify and describe the roles of public officials in the community, state, and nation."
+ },
+ {
+  "key": "TX:social_studies:1.12A",
+  "grade": "1",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands characteristics of good citizenship as exemplified by historical figures and other individuals. The student is expected to:",
+  "description": "identify characteristics of good citizenship, including truthfulness, justice, equality, respect for oneself and others, responsibility in daily life, and participation in government by educating oneself about the issues, respectfully holding public officials to their word, and voting; and"
+ },
+ {
+  "key": "TX:social_studies:1.12B",
+  "grade": "1",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands characteristics of good citizenship as exemplified by historical figures and other individuals. The student is expected to:",
+  "description": "identify historical figures and other individuals who have exemplified good citizenship such as Benjamin Franklin and Eleanor Roosevelt."
+ },
+ {
+  "key": "TX:social_studies:1.13A",
+  "grade": "1",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands important symbols, customs, and celebrations that represent American beliefs and principles that contribute to our national identity. The student is expected to:",
+  "description": "explain state and national patriotic symbols, including the United States and Texas flags, the Liberty Bell, the Statue of Liberty, and the Alamo;"
+ },
+ {
+  "key": "TX:social_studies:1.13B",
+  "grade": "1",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands important symbols, customs, and celebrations that represent American beliefs and principles that contribute to our national identity. The student is expected to:",
+  "description": "recite the Pledge of Allegiance to the United States Flag and the Pledge to the Texas Flag;"
+ },
+ {
+  "key": "TX:social_studies:1.13C",
+  "grade": "1",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands important symbols, customs, and celebrations that represent American beliefs and principles that contribute to our national identity. The student is expected to:",
+  "description": "identify anthems and mottoes of Texas and the United States;"
+ },
+ {
+  "key": "TX:social_studies:1.13D",
+  "grade": "1",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands important symbols, customs, and celebrations that represent American beliefs and principles that contribute to our national identity. The student is expected to:",
+  "description": "explain and practice voting as a way of making choices and decisions; and"
+ },
+ {
+  "key": "TX:social_studies:1.13E",
+  "grade": "1",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands important symbols, customs, and celebrations that represent American beliefs and principles that contribute to our national identity. The student is expected to:",
+  "description": "explain how patriotic customs and celebrations reflect American individualism and freedom."
+ },
+ {
+  "key": "TX:social_studies:1.14A",
+  "grade": "1",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the importance of family and community beliefs, language, and traditions. The student is expected to:",
+  "description": "describe and explain the importance of beliefs, language, and traditions of families and communities; and"
+ },
+ {
+  "key": "TX:social_studies:1.14B",
+  "grade": "1",
+  "strand": "Culture",
+  "stem": "Culture. The student understands the importance of family and community beliefs, language, and traditions. The student is expected to:",
+  "description": "explain the way folktales and legends reflect beliefs, language, and traditions of communities."
+ },
+ {
+  "key": "TX:social_studies:1.15A",
+  "grade": "1",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student identifies individuals who created or invented new technology and understands how technology affects daily life, past and present. The student is expected to:",
+  "description": "describe how technology has affected the ways families live;"
+ },
+ {
+  "key": "TX:social_studies:1.15B",
+  "grade": "1",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student identifies individuals who created or invented new technology and understands how technology affects daily life, past and present. The student is expected to:",
+  "description": "describe how technology has affected communication, transportation, and recreation; and"
+ },
+ {
+  "key": "TX:social_studies:1.15C",
+  "grade": "1",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student identifies individuals who created or invented new technology and understands how technology affects daily life, past and present. The student is expected to:",
+  "description": "identify the contributions of scientists and inventors such as Alexander Graham Bell, Thomas Edison, and Garrett Morgan."
+ },
+ {
+  "key": "TX:social_studies:1.16A",
+  "grade": "1",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired from a variety of valid sources, including technology. The student is expected to:",
+  "description": "identify and state facts based on relevant evidence;"
+ },
+ {
+  "key": "TX:social_studies:1.16B",
+  "grade": "1",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired from a variety of valid sources, including technology. The student is expected to:",
+  "description": "identify different kinds of historical sources and artifacts and explain how they can be used to study the past;"
+ },
+ {
+  "key": "TX:social_studies:1.16C",
+  "grade": "1",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired from a variety of valid sources, including technology. The student is expected to:",
+  "description": "gather information about a topic using a variety of valid oral and visual sources such as interviews, music, pictures, symbols, and artifacts with adult assistance; and"
+ },
+ {
+  "key": "TX:social_studies:1.16D",
+  "grade": "1",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired from a variety of valid sources, including technology. The student is expected to:",
+  "description": "sequence and categorize information."
+ },
+ {
+  "key": "TX:social_studies:1.17A",
+  "grade": "1",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in oral, visual, and written forms. The student is expected to:",
+  "description": "use a simple timeline to distinguish among past, present, and future;"
+ },
+ {
+  "key": "TX:social_studies:1.17B",
+  "grade": "1",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in oral, visual, and written forms. The student is expected to:",
+  "description": "use a calendar to describe and measure time in days, weeks, months, and years;"
+ },
+ {
+  "key": "TX:social_studies:1.17C",
+  "grade": "1",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in oral, visual, and written forms. The student is expected to:",
+  "description": "communicate information visually, orally, or in writing based on knowledge and experiences in social studies;"
+ },
+ {
+  "key": "TX:social_studies:1.17D",
+  "grade": "1",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in oral, visual, and written forms. The student is expected to:",
+  "description": "create and interpret visual and written material;"
+ },
+ {
+  "key": "TX:social_studies:1.17E",
+  "grade": "1",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in oral, visual, and written forms. The student is expected to:",
+  "description": "use social studies terminology correctly; and"
+ },
+ {
+  "key": "TX:social_studies:1.17F",
+  "grade": "1",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in oral, visual, and written forms. The student is expected to:",
+  "description": "apply and practice classroom rules and procedures for listening and responding respectfully."
+ },
+ {
+  "key": "TX:social_studies:1.18A",
+  "grade": "1",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses problem-solving and decision-making skills, working independently and with others. The student is expected to:",
+  "description": "use democratic procedures to collaborate with others when making decisions on issues in the classroom, school, or community; and"
+ },
+ {
+  "key": "TX:social_studies:1.18B",
+  "grade": "1",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses problem-solving and decision-making skills, working independently and with others. The student is expected to:",
+  "description": "use problem-solving and decision-making processes to identify a problem, gather information, list and consider options, consider advantages and disadvantages, choose and implement a solution, and evaluate the effectiveness of the solution."
+ },
+ {
+  "key": "TX:social_studies:2.1A",
+  "grade": "2",
+  "strand": "History",
+  "stem": "History. The student understands the historical significance of landmarks and celebrations in the community, state, and nation. The student is expected to:",
+  "description": "explain the significance of various community, state, and national celebrations such as Veterans Day, Memorial Day, Independence Day, and Thanksgiving; and"
+ },
+ {
+  "key": "TX:social_studies:2.1B",
+  "grade": "2",
+  "strand": "History",
+  "stem": "History. The student understands the historical significance of landmarks and celebrations in the community, state, and nation. The student is expected to:",
+  "description": "identify and explain the significance of various community, state, and national landmarks such as monuments and government buildings."
+ },
+ {
+  "key": "TX:social_studies:2.2A",
+  "grade": "2",
+  "strand": "History",
+  "stem": "History. The student understands how historical figures helped shape the community, state, and nation. The student is expected to:",
+  "description": "identify contributions of historical figures, including Thurgood Marshall, Irma Rangel, and Theodore Roosevelt, who have influenced the state and nation; and"
+ },
+ {
+  "key": "TX:social_studies:2.2B",
+  "grade": "2",
+  "strand": "History",
+  "stem": "History. The student understands how historical figures helped shape the community, state, and nation. The student is expected to:",
+  "description": "describe how people and events have influenced local community history."
+ },
+ {
+  "key": "TX:social_studies:2.3A",
+  "grade": "2",
+  "strand": "Geography",
+  "stem": "Geography. The student uses simple geographic tools, including maps and globes. The student is expected to:",
+  "description": "identify and use information on maps and globes using basic map elements such as title, cardinal directions, and legend; and"
+ },
+ {
+  "key": "TX:social_studies:2.3B",
+  "grade": "2",
+  "strand": "Geography",
+  "stem": "Geography. The student uses simple geographic tools, including maps and globes. The student is expected to:",
+  "description": "create maps to show places and routes within the home, school, and community."
+ },
+ {
+  "key": "TX:social_studies:2.4A",
+  "grade": "2",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the location of places in their community, state, country, and the world. The student is expected to:",
+  "description": "identify major landforms and bodies of water, including each of the seven continents and each of the oceans, on maps and globes; and"
+ },
+ {
+  "key": "TX:social_studies:2.4B",
+  "grade": "2",
+  "strand": "Geography",
+  "stem": "Geography. The student understands the location of places in their community, state, country, and the world. The student is expected to:",
+  "description": "locate places, including the local community, Texas, the United States, the state capital, the U.S. capital, and the bordering countries of Canada and Mexico on maps and globes."
+ },
+ {
+  "key": "TX:social_studies:2.5A",
+  "grade": "2",
+  "strand": "Geography",
+  "stem": "Geography. The student understands how humans use and modify the physical environment. The student is expected to:",
+  "description": "identify ways in which people have modified the physical environment such as clearing land, building roads, using land for agriculture, and drilling for oil;"
+ },
+ {
+  "key": "TX:social_studies:2.5B",
+  "grade": "2",
+  "strand": "Geography",
+  "stem": "Geography. The student understands how humans use and modify the physical environment. The student is expected to:",
+  "description": "identify consequences of human modification of the physical environment; and"
+ },
+ {
+  "key": "TX:social_studies:2.5C",
+  "grade": "2",
+  "strand": "Geography",
+  "stem": "Geography. The student understands how humans use and modify the physical environment. The student is expected to:",
+  "description": "identify ways people can conserve and replenish Earth's resources."
+ },
+ {
+  "key": "TX:social_studies:2.6A",
+  "grade": "2",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the value of work. The student is expected to:",
+  "description": "explain how work provides income to purchase goods and services; and"
+ },
+ {
+  "key": "TX:social_studies:2.6B",
+  "grade": "2",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the value of work. The student is expected to:",
+  "description": "explain the choices people can make about earning, spending, and saving money."
+ },
+ {
+  "key": "TX:social_studies:2.7A",
+  "grade": "2",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the roles of producers and consumers in the production of goods and services. The student is expected to:",
+  "description": "distinguish between producing and consuming;"
+ },
+ {
+  "key": "TX:social_studies:2.7B",
+  "grade": "2",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the roles of producers and consumers in the production of goods and services. The student is expected to:",
+  "description": "identify ways in which people are both producers and consumers; and"
+ },
+ {
+  "key": "TX:social_studies:2.7C",
+  "grade": "2",
+  "strand": "Economics",
+  "stem": "Economics. The student understands the roles of producers and consumers in the production of goods and services. The student is expected to:",
+  "description": "trace the development of a product from a natural resource to a finished product."
+ },
+ {
+  "key": "TX:social_studies:2.8A",
+  "grade": "2",
+  "strand": "Government",
+  "stem": "Government. The student understands the purpose of governments. The student is expected to:",
+  "description": "identify functions of governments such as establishing order, providing security, and managing conflict; and"
+ },
+ {
+  "key": "TX:social_studies:2.8B",
+  "grade": "2",
+  "strand": "Government",
+  "stem": "Government. The student understands the purpose of governments. The student is expected to:",
+  "description": "identify governmental services in the community such as police and fire protection, libraries, schools, and parks and explain their value to the community."
+ },
+ {
+  "key": "TX:social_studies:2.9A",
+  "grade": "2",
+  "strand": "Government",
+  "stem": "Government. The student understands the role of public officials. The student is expected to:",
+  "description": "name current public officials, including mayor, governor, and president;"
+ },
+ {
+  "key": "TX:social_studies:2.9B",
+  "grade": "2",
+  "strand": "Government",
+  "stem": "Government. The student understands the role of public officials. The student is expected to:",
+  "description": "compare the roles of public officials, including mayor, governor, and president;"
+ },
+ {
+  "key": "TX:social_studies:2.9C",
+  "grade": "2",
+  "strand": "Government",
+  "stem": "Government. The student understands the role of public officials. The student is expected to:",
+  "description": "identify ways that public officials are selected, including election and appointment to office; and"
+ },
+ {
+  "key": "TX:social_studies:2.9D",
+  "grade": "2",
+  "strand": "Government",
+  "stem": "Government. The student understands the role of public officials. The student is expected to:",
+  "description": "identify how citizens participate in their own governance through staying informed of what public officials are doing, providing input to them, and volunteering to participate in government functions."
+ },
+ {
+  "key": "TX:social_studies:2.10A",
+  "grade": "2",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands characteristics of good citizenship as exemplified by historical figures and other individuals. The student is expected to:",
+  "description": "identify characteristics of good citizenship, including truthfulness, justice, equality, respect for oneself and others, responsibility in daily life, and participation in government by educating oneself about the issues, respectfully holding public officials to their word, and voting;"
+ },
+ {
+  "key": "TX:social_studies:2.10B",
+  "grade": "2",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands characteristics of good citizenship as exemplified by historical figures and other individuals. The student is expected to:",
+  "description": "identify historical figures and other individuals who have exemplified good citizenship such as Paul Revere, Abigail Adams, World War II Women Airforce Service Pilots (WASPs), Navajo Code Talkers, and Sojourner Truth; and"
+ },
+ {
+  "key": "TX:social_studies:2.10C",
+  "grade": "2",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands characteristics of good citizenship as exemplified by historical figures and other individuals. The student is expected to:",
+  "description": "identify ways to actively practice good citizenship, including involvement in community service."
+ },
+ {
+  "key": "TX:social_studies:2.11A",
+  "grade": "2",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands important symbols, customs, and celebrations that represent American beliefs and principles that contribute to our national identity. The student is expected to:",
+  "description": "recite the Pledge of Allegiance to the United States Flag and the Pledge to the Texas Flag;"
+ },
+ {
+  "key": "TX:social_studies:2.11B",
+  "grade": "2",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands important symbols, customs, and celebrations that represent American beliefs and principles that contribute to our national identity. The student is expected to:",
+  "description": "sing, recite, or identify selected patriotic songs, including \"The Star-Spangled Banner\" and \"America the Beautiful\";"
+ },
+ {
+  "key": "TX:social_studies:2.11C",
+  "grade": "2",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands important symbols, customs, and celebrations that represent American beliefs and principles that contribute to our national identity. The student is expected to:",
+  "description": "use voting as a method for group decision making;"
+ },
+ {
+  "key": "TX:social_studies:2.11D",
+  "grade": "2",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands important symbols, customs, and celebrations that represent American beliefs and principles that contribute to our national identity. The student is expected to:",
+  "description": "identify symbols such as state and national birds and flowers and Uncle Sam; and"
+ },
+ {
+  "key": "TX:social_studies:2.11E",
+  "grade": "2",
+  "strand": "Citizenship",
+  "stem": "Citizenship. The student understands important symbols, customs, and celebrations that represent American beliefs and principles that contribute to our national identity. The student is expected to:",
+  "description": "identify how selected symbols, customs, and celebrations reflect an American love of individualism, inventiveness, and freedom."
+ },
+ {
+  "key": "TX:social_studies:2.12A",
+  "grade": "2",
+  "strand": "Culture",
+  "stem": "Culture. The student understands ethnic and/or cultural celebrations. The student is expected to:",
+  "description": "identify the significance of various ethnic and/or cultural celebrations; and"
+ },
+ {
+  "key": "TX:social_studies:2.12B",
+  "grade": "2",
+  "strand": "Culture",
+  "stem": "Culture. The student understands ethnic and/or cultural celebrations. The student is expected to:",
+  "description": "compare ethnic and/or cultural celebrations."
+ },
+ {
+  "key": "TX:social_studies:2.13A",
+  "grade": "2",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands how science and technology have affected life, past and present. The student is expected to:",
+  "description": "describe how science and technology have affected communication, transportation, and recreation; and"
+ },
+ {
+  "key": "TX:social_studies:2.13B",
+  "grade": "2",
+  "strand": "Science, technology, and society",
+  "stem": "Science, technology, and society. The student understands how science and technology have affected life, past and present. The student is expected to:",
+  "description": "explain how science and technology have affected the ways in which people meet basic needs."
+ },
+ {
+  "key": "TX:social_studies:2.14",
+  "grade": "2",
+  "strand": "Science, technology, and society",
+  "description": "Science, technology, and society. The student identifies individuals who exhibited individualism and inventiveness. The student is expected to identify individuals who have exhibited individualism and inventiveness such as Amelia Earhart and George Washington Carver."
+ },
+ {
+  "key": "TX:social_studies:2.15A",
+  "grade": "2",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired from a variety of valid sources, including technology. The student is expected to:",
+  "description": "identify and state facts based on relevant evidence;"
+ },
+ {
+  "key": "TX:social_studies:2.15B",
+  "grade": "2",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired from a variety of valid sources, including technology. The student is expected to:",
+  "description": "identify different kinds of historical sources and artifacts and explain how they can be used to study the past;"
+ },
+ {
+  "key": "TX:social_studies:2.15C",
+  "grade": "2",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired from a variety of valid sources, including technology. The student is expected to:",
+  "description": "gather information about a topic using a variety of valid oral and visual sources such as interviews, music, pictures, maps, and artifacts; and"
+ },
+ {
+  "key": "TX:social_studies:2.15D",
+  "grade": "2",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student applies critical-thinking skills to organize and use information acquired from a variety of valid sources, including technology. The student is expected to:",
+  "description": "interpret oral, visual, and print material by sequencing, categorizing, identifying the main idea, predicting, comparing, and contrasting."
+ },
+ {
+  "key": "TX:social_studies:2.16A",
+  "grade": "2",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "describe the order of events by using designations of time periods such as historical and present times;"
+ },
+ {
+  "key": "TX:social_studies:2.16B",
+  "grade": "2",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "apply vocabulary related to chronology, including past, present, and future;"
+ },
+ {
+  "key": "TX:social_studies:2.16C",
+  "grade": "2",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "create and interpret timelines for events in the past and present;"
+ },
+ {
+  "key": "TX:social_studies:2.16D",
+  "grade": "2",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "use social studies terminology correctly;"
+ },
+ {
+  "key": "TX:social_studies:2.16E",
+  "grade": "2",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "communicate information visually, orally, or in writing based on knowledge and experiences in social studies;"
+ },
+ {
+  "key": "TX:social_studies:2.16F",
+  "grade": "2",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "create written and visual material such as stories, maps, and graphic organizers to express ideas; and"
+ },
+ {
+  "key": "TX:social_studies:2.16G",
+  "grade": "2",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student communicates in written, oral, and visual forms. The student is expected to:",
+  "description": "apply and practice classroom rules and procedures for listening and responding respectfully."
+ },
+ {
+  "key": "TX:social_studies:2.17A",
+  "grade": "2",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses problem-solving and decision-making skills, working independently and with others. The student is expected to:",
+  "description": "use democratic procedures to collaborate with others when making decisions on issues in the classroom, school, or community; and"
+ },
+ {
+  "key": "TX:social_studies:2.17B",
+  "grade": "2",
+  "strand": "Social studies skills",
+  "stem": "Social studies skills. The student uses problem-solving and decision-making skills, working independently and with others. The student is expected to:",
+  "description": "use problem-solving and decision-making processes to identify a problem, gather information, list and consider options, consider advantages and disadvantages, choose and implement a solution, and evaluate the effectiveness of the solution."
+ }
+]

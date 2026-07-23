@@ -1,0 +1,1517 @@
+{
+ "ohio": [
+  {
+   "key": "OH:ela:RL.6.1",
+   "grade": "6",
+   "code": "RL.6.1",
+   "strand": "Reading Literature",
+   "description": "Cite textual evidence to support analysis of what the text says explicitly as well as inferences drawn from the text."
+  },
+  {
+   "key": "OH:ela:RL.7.1",
+   "grade": "7",
+   "code": "RL.7.1",
+   "strand": "Reading Literature",
+   "description": "Cite several pieces of textual evidence to support analysis of what the text says explicitly as well as inferences drawn from the text."
+  },
+  {
+   "key": "OH:ela:RL.8.1",
+   "grade": "8",
+   "code": "RL.8.1",
+   "strand": "Reading Literature",
+   "description": "Cite the textual evidence that most strongly supports an analysis of what the text says explicitly as well as inferences drawn from the text."
+  },
+  {
+   "key": "OH:ela:RL.6.2",
+   "grade": "6",
+   "code": "RL.6.2",
+   "strand": "Reading Literature",
+   "description": "Analyze literary text development. a. Determine a theme of a text and how it is conveyed through particular details. b. Incorporate a theme and story details into an objective summary of the text."
+  },
+  {
+   "key": "OH:ela:RL.7.2",
+   "grade": "7",
+   "code": "RL.7.2",
+   "strand": "Reading Literature",
+   "description": "Analyze literary text development. a. Determine a theme of a text and analyze its development over the course of the text. b. Incorporate the development of a theme and other story details into an objective summary of the text."
+  },
+  {
+   "key": "OH:ela:RL.8.2",
+   "grade": "8",
+   "code": "RL.8.2",
+   "strand": "Reading Literature",
+   "description": "Analyze literary text development. a. Determine a theme of a text and analyze its development over the course of the text, including its relationship to the characters, setting, and plot. b. Incorporate a theme and its relationship to other story elements into an objective summary of the text."
+  },
+  {
+   "key": "OH:ela:RL.6.3",
+   "grade": "6",
+   "code": "RL.6.3",
+   "strand": "Reading Literature",
+   "description": "Describe how a particular story’s or drama’s plot unfolds in a series of episodes as well as how the characters respond or change as the plot moves toward a resolution."
+  },
+  {
+   "key": "OH:ela:RL.7.3",
+   "grade": "7",
+   "code": "RL.7.3",
+   "strand": "Reading Literature",
+   "description": "Analyze how particular elements of a story or drama interact (e.g., how setting shapes the characters or plot)."
+  },
+  {
+   "key": "OH:ela:RL.8.3",
+   "grade": "8",
+   "code": "RL.8.3",
+   "strand": "Reading Literature",
+   "description": "Analyze how particular lines of dialogue or incidents in a story or drama propel the action, reveal aspects of a character, or provoke a decision."
+  },
+  {
+   "key": "OH:ela:RL.6.4",
+   "grade": "6",
+   "code": "RL.6.4",
+   "strand": "Reading Literature",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative and connotative meanings; analyze the impact of specific word choices, including sensory language, on meaning and tone."
+  },
+  {
+   "key": "OH:ela:RL.7.4",
+   "grade": "7",
+   "code": "RL.7.4",
+   "strand": "Reading Literature",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative and connotative meanings; analyze the impact of specific language choices, such as sensory words or phrases, on meaning and tone, including rhymes and other repetitions of sounds (e.g., alliteration) on a specific verse or stanza of a poem or section of a story or drama."
+  },
+  {
+   "key": "OH:ela:RL.8.4",
+   "grade": "8",
+   "code": "RL.8.4",
+   "strand": "Reading Literature",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative and connotative meanings; analyze the impact of specific word choices on meaning, mood, and tone, including analogies or allusions to other texts."
+  },
+  {
+   "key": "OH:ela:RL.6.5",
+   "grade": "6",
+   "code": "RL.6.5",
+   "strand": "Reading Literature",
+   "description": "Analyze how a particular sentence, chapter, scene, or stanza fits into the overall structure of a text and contributes to the development of the theme, setting, or plot."
+  },
+  {
+   "key": "OH:ela:RL.7.5",
+   "grade": "7",
+   "code": "RL.7.5",
+   "strand": "Reading Literature",
+   "description": "Analyze how a drama’s or poem’s form or structure (e.g., soliloquy, sonnet) contributes to its meaning."
+  },
+  {
+   "key": "OH:ela:RL.8.5",
+   "grade": "8",
+   "code": "RL.8.5",
+   "strand": "Reading Literature",
+   "description": "Compare and contrast the structure of two or more texts and analyze how the differing structure of each text contributes to its meaning and style."
+  },
+  {
+   "key": "OH:ela:RL.6.6",
+   "grade": "6",
+   "code": "RL.6.6",
+   "strand": "Reading Literature",
+   "description": "Explain how an author uses the point of view to develop the perspective of the narrator or speaker in a text."
+  },
+  {
+   "key": "OH:ela:RL.7.6",
+   "grade": "7",
+   "code": "RL.7.6",
+   "strand": "Reading Literature",
+   "description": "Analyze how an author uses the point of view to develop and contrast the perspectives of different characters or narrators in a text."
+  },
+  {
+   "key": "OH:ela:RL.8.6",
+   "grade": "8",
+   "code": "RL.8.6",
+   "strand": "Reading Literature",
+   "description": "Analyze how differences in the points of view and perspectives of the characters and the audience or reader (e.g., created through the use of dramatic irony) create effects such as suspense or humor."
+  },
+  {
+   "key": "OH:ela:RL.6.7",
+   "grade": "6",
+   "code": "RL.6.7",
+   "strand": "Reading Literature",
+   "description": "Compare and contrast the experience of reading a story, drama, or poem to listening to or viewing an audio, video, or live version of the text, including contrasting what they “see” and “hear” when reading the text to what they perceive when they listen or watch."
+  },
+  {
+   "key": "OH:ela:RL.7.7",
+   "grade": "7",
+   "code": "RL.7.7",
+   "strand": "Reading Literature",
+   "description": "Compare and contrast a written story, drama, or poem to its audio, filmed, staged, or multimedia version, analyzing the effects of techniques unique to each medium (e.g., lighting, sound, color, or camera focus and angles in a film)."
+  },
+  {
+   "key": "OH:ela:RL.8.7",
+   "grade": "8",
+   "code": "RL.8.7",
+   "strand": "Reading Literature",
+   "description": "Analyze the extent to which a filmed or live production of a story or drama stays faithful to or departs from the text or script, evaluating the choices made by the director or actors."
+  },
+  {
+   "key": "OH:ela:RL.6.9",
+   "grade": "6",
+   "code": "RL.6.9",
+   "strand": "Reading Literature",
+   "description": "Compare and contrast texts in different forms or genres (e.g., stories and poems; historical novels and fantasy stories) in terms of their approaches to similar themes and topics."
+  },
+  {
+   "key": "OH:ela:RL.7.9",
+   "grade": "7",
+   "code": "RL.7.9",
+   "strand": "Reading Literature",
+   "description": "Compare and contrast a fictional portrayal of a time, place, or character and a historical account of the same period as a means of understanding how authors of fiction use or alter history."
+  },
+  {
+   "key": "OH:ela:RL.8.9",
+   "grade": "8",
+   "code": "RL.8.9",
+   "strand": "Reading Literature",
+   "description": "Analyze how a modern work of fiction alludes to themes, patterns of events, or character types from myths, traditional stories, and religious literary texts, such as (but not limited to) the Bible and The Epic of Gilgamesh, including describing how the material is rendered new."
+  },
+  {
+   "key": "OH:ela:RL.6.10",
+   "grade": "6",
+   "code": "RL.6.10",
+   "strand": "Reading Literature",
+   "description": "By the end of the year, read and comprehend literature, including stories, dramas, and poems, in the grades 6–8 text complexity band proficiently, with scaffolding as needed at the high end of the range. Build background knowledge and activate prior knowledge in order to make text-to-self, text-to-text, and text-to-world connections that deepen understanding of the text."
+  },
+  {
+   "key": "OH:ela:RL.7.10",
+   "grade": "7",
+   "code": "RL.7.10",
+   "strand": "Reading Literature",
+   "description": "By the end of the year, read and comprehend literature, including stories, dramas, and poems, in the grades 6–8 text complexity band proficiently, with scaffolding as needed at the high end of the range. Build background knowledge and activate prior knowledge in order to make text-to-self, text-to-text, and text-to-world connections that deepen understanding of the text."
+  },
+  {
+   "key": "OH:ela:RL.8.10",
+   "grade": "8",
+   "code": "RL.8.10",
+   "strand": "Reading Literature",
+   "description": "By the end of the year, read and comprehend literature, including stories, dramas, and poems, at the high end of grades 6–8 text complexity band independently and proficiently. Build background knowledge and activate prior knowledge in order to make text-to-self, text-to-text, and text-to-world connections that deepen understanding of the text."
+  },
+  {
+   "key": "OH:ela:RI.6.1",
+   "grade": "6",
+   "code": "RI.6.1",
+   "strand": "Reading Informational Text",
+   "description": "Cite textual evidence to support analysis of what the text says explicitly as well as inferences drawn from the text."
+  },
+  {
+   "key": "OH:ela:RI.7.1",
+   "grade": "7",
+   "code": "RI.7.1",
+   "strand": "Reading Informational Text",
+   "description": "Cite several pieces of textual evidence to support analysis of what the text says explicitly as well as inferences drawn from the text."
+  },
+  {
+   "key": "OH:ela:RI.8.1",
+   "grade": "8",
+   "code": "RI.8.1",
+   "strand": "Reading Informational Text",
+   "description": "Cite the textual evidence that most strongly supports an analysis of what the text says explicitly as well as inferences drawn from the text."
+  },
+  {
+   "key": "OH:ela:RI.6.2",
+   "grade": "6",
+   "code": "RI.6.2",
+   "strand": "Reading Informational Text",
+   "description": "Analyze informational text development. a. Determine a central idea of a text and how it is conveyed through particular details. b. Provide an objective summary of the text that includes the central idea and relevant details."
+  },
+  {
+   "key": "OH:ela:RI.7.2",
+   "grade": "7",
+   "code": "RI.7.2",
+   "strand": "Reading Informational Text",
+   "description": "Analyze informational text development. a. Determine two or more central ideas in a text and analyze their development over the course of the text. b. Provide an objective summary of the text that includes the central ideas and their development."
+  },
+  {
+   "key": "OH:ela:RI.8.2",
+   "grade": "8",
+   "code": "RI.8.2",
+   "strand": "Reading Informational Text",
+   "description": "Analyze informational text development. a. Determine a central idea of a text and analyze its development over the course of the text, including its relationship to supporting ideas. b. Incorporate central ideas and their relationships into an objective summary of the text."
+  },
+  {
+   "key": "OH:ela:RI.6.3",
+   "grade": "6",
+   "code": "RI.6.3",
+   "strand": "Reading Informational Text",
+   "description": "Analyze in detail how a key individual, event, or idea is introduced, illustrated, and elaborated in a text (e.g., through examples or anecdotes)."
+  },
+  {
+   "key": "OH:ela:RI.7.3",
+   "grade": "7",
+   "code": "RI.7.3",
+   "strand": "Reading Informational Text",
+   "description": "Analyze the interactions between individuals, events, and ideas in a text (e.g., how ideas influence individuals or events, or how individuals influence ideas or events)."
+  },
+  {
+   "key": "OH:ela:RI.8.3",
+   "grade": "8",
+   "code": "RI.8.3",
+   "strand": "Reading Informational Text",
+   "description": "Analyze how a text makes connections among and distinctions between individuals, ideas, or events (e.g., through comparisons, analogies, or categories)."
+  },
+  {
+   "key": "OH:ela:RI.6.4",
+   "grade": "6",
+   "code": "RI.6.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings."
+  },
+  {
+   "key": "OH:ela:RI.7.4",
+   "grade": "7",
+   "code": "RI.7.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings; analyze the impact of a specific word choice on meaning and tone."
+  },
+  {
+   "key": "OH:ela:RI.8.4",
+   "grade": "8",
+   "code": "RI.8.4",
+   "strand": "Reading Informational Text",
+   "description": "Determine the meaning of words and phrases as they are used in a text, including figurative, connotative, and technical meanings; analyze the impact of specific word choices on meaning and tone, including analogies or allusions to other texts."
+  },
+  {
+   "key": "OH:ela:RI.6.5",
+   "grade": "6",
+   "code": "RI.6.5",
+   "strand": "Reading Informational Text",
+   "description": "Analyze how a particular sentence, paragraph, chapter, or section fits into the overall structure of a text and contributes to the development of the ideas."
+  },
+  {
+   "key": "OH:ela:RI.7.5",
+   "grade": "7",
+   "code": "RI.7.5",
+   "strand": "Reading Informational Text",
+   "description": "Analyze the structure an author uses to organize a text, including how the major sections contribute to the whole and to the development of the ideas."
+  },
+  {
+   "key": "OH:ela:RI.8.5",
+   "grade": "8",
+   "code": "RI.8.5",
+   "strand": "Reading Informational Text",
+   "description": "Analyze in detail the structure of a specific paragraph in a text, including the role of particular sentences in developing and refining a key concept."
+  },
+  {
+   "key": "OH:ela:RI.6.6",
+   "grade": "6",
+   "code": "RI.6.6",
+   "strand": "Reading Informational Text",
+   "description": "Determine an author’s perspective or purpose in a text and explain how it is conveyed in the text."
+  },
+  {
+   "key": "OH:ela:RI.7.6",
+   "grade": "7",
+   "code": "RI.7.6",
+   "strand": "Reading Informational Text",
+   "description": "Determine an author’s perspective or purpose in a text and analyze how the author distinguishes his or her position from that of others."
+  },
+  {
+   "key": "OH:ela:RI.8.6",
+   "grade": "8",
+   "code": "RI.8.6",
+   "strand": "Reading Informational Text",
+   "description": "Determine an author’s perspective or purpose in a text and analyze how the author acknowledges and responds to conflicting evidence or viewpoints."
+  },
+  {
+   "key": "OH:ela:RI.6.7",
+   "grade": "6",
+   "code": "RI.6.7",
+   "strand": "Reading Informational Text",
+   "description": "Integrate information presented in different media or formats (e.g., visually, quantitatively) as well as in words to develop a coherent understanding of a topic or issue."
+  },
+  {
+   "key": "OH:ela:RI.7.7",
+   "grade": "7",
+   "code": "RI.7.7",
+   "strand": "Reading Informational Text",
+   "description": "Compare and contrast a text to an audio, video, or multimedia version of the text, analyzing each medium’s portrayal of the subject (e.g., how the delivery of a speech affects the impact of the words)."
+  },
+  {
+   "key": "OH:ela:RI.8.7",
+   "grade": "8",
+   "code": "RI.8.7",
+   "strand": "Reading Informational Text",
+   "description": "Evaluate the advantages and disadvantages of using different mediums (e.g., print or digital text, video, multimedia) to present a particular topic or idea."
+  },
+  {
+   "key": "OH:ela:RI.6.8",
+   "grade": "6",
+   "code": "RI.6.8",
+   "strand": "Reading Informational Text",
+   "description": "Trace and evaluate the argument and specific claims in a text, distinguishing claims that are supported by evidence from claims that are not."
+  },
+  {
+   "key": "OH:ela:RI.7.8",
+   "grade": "7",
+   "code": "RI.7.8",
+   "strand": "Reading Informational Text",
+   "description": "Trace and evaluate the argument and specific claims in a text, assessing whether the reasoning is sound and the evidence is relevant and sufficient to support the claims."
+  },
+  {
+   "key": "OH:ela:RI.8.8",
+   "grade": "8",
+   "code": "RI.8.8",
+   "strand": "Reading Informational Text",
+   "description": "Delineate and evaluate the argument and specific claims in a text, assessing whether the reasoning is sound and the evidence is relevant and sufficient; recognize when irrelevant evidence is introduced."
+  },
+  {
+   "key": "OH:ela:RI.6.9",
+   "grade": "6",
+   "code": "RI.6.9",
+   "strand": "Reading Informational Text",
+   "description": "Compare and contrast one author’s presentation of events with that of another (e.g., a memoir written by and a biography on the same person)."
+  },
+  {
+   "key": "OH:ela:RI.7.9",
+   "grade": "7",
+   "code": "RI.7.9",
+   "strand": "Reading Informational Text",
+   "description": "Analyze how two or more authors writing about the same topic shape their presentations of key information by emphasizing different evidence or advancing different interpretations of facts."
+  },
+  {
+   "key": "OH:ela:RI.8.9",
+   "grade": "8",
+   "code": "RI.8.9",
+   "strand": "Reading Informational Text",
+   "description": "Analyze a case in which two or more texts provide conflicting information on the same topic and identify where the texts disagree on matters of fact or interpretation."
+  },
+  {
+   "key": "OH:ela:RI.6.10",
+   "grade": "6",
+   "code": "RI.6.10",
+   "strand": "Reading Informational Text",
+   "description": "By the end of the year, read and comprehend literary nonfiction in the grades 6–8 text complexity band proficiently, with scaffolding as needed at the high end of the range."
+  },
+  {
+   "key": "OH:ela:RI.7.10",
+   "grade": "7",
+   "code": "RI.7.10",
+   "strand": "Reading Informational Text",
+   "description": "By the end of the year, read and comprehend literary nonfiction in the grades 6–8 text complexity band proficiently, with scaffolding as needed at the high end of the range."
+  },
+  {
+   "key": "OH:ela:RI.8.10",
+   "grade": "8",
+   "code": "RI.8.10",
+   "strand": "Reading Informational Text",
+   "description": "By the end of the year, read and comprehend literary nonfiction at the high end of the grades 6–8 text complexity band independently and proficiently."
+  }
+ ],
+ "candidates": [
+  {
+   "key": "TX:ela:5.6A",
+   "grade": "5",
+   "code": "5.6A",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "establish purpose for reading assigned and self-selected texts;"
+  },
+  {
+   "key": "TX:ela:5.6B",
+   "grade": "5",
+   "code": "5.6B",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "generate questions about text before, during, and after reading to deepen understanding and gain information;"
+  },
+  {
+   "key": "TX:ela:5.6C",
+   "grade": "5",
+   "code": "5.6C",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "make and correct or confirm predictions using text features, characteristics of genre, and structures;"
+  },
+  {
+   "key": "TX:ela:5.6D",
+   "grade": "5",
+   "code": "5.6D",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "create mental images to deepen understanding;"
+  },
+  {
+   "key": "TX:ela:5.6E",
+   "grade": "5",
+   "code": "5.6E",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "make connections to personal experiences, ideas in other texts, and society;"
+  },
+  {
+   "key": "TX:ela:5.6F",
+   "grade": "5",
+   "code": "5.6F",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "make inferences and use evidence to support understanding;"
+  },
+  {
+   "key": "TX:ela:5.6G",
+   "grade": "5",
+   "code": "5.6G",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "evaluate details read to determine key ideas;"
+  },
+  {
+   "key": "TX:ela:5.6H",
+   "grade": "5",
+   "code": "5.6H",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "synthesize information to create new understanding; and"
+  },
+  {
+   "key": "TX:ela:5.6I",
+   "grade": "5",
+   "code": "5.6I",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "monitor comprehension and make adjustments such as re-reading, using background knowledge, asking questions, and annotating when understanding breaks down."
+  },
+  {
+   "key": "TX:ela:5.7A",
+   "grade": "5",
+   "code": "5.7A",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "describe personal connections to a variety of sources, including self-selected texts;"
+  },
+  {
+   "key": "TX:ela:5.7B",
+   "grade": "5",
+   "code": "5.7B",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "write responses that demonstrate understanding of texts, including comparing and contrasting ideas across a variety of sources;"
+  },
+  {
+   "key": "TX:ela:5.7C",
+   "grade": "5",
+   "code": "5.7C",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "use text evidence to support an appropriate response;"
+  },
+  {
+   "key": "TX:ela:5.7D",
+   "grade": "5",
+   "code": "5.7D",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "retell, paraphrase, or summarize texts in ways that maintain meaning and logical order;"
+  },
+  {
+   "key": "TX:ela:5.7E",
+   "grade": "5",
+   "code": "5.7E",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "interact with sources in meaningful ways such as notetaking, annotating, freewriting, or illustrating;"
+  },
+  {
+   "key": "TX:ela:5.7F",
+   "grade": "5",
+   "code": "5.7F",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "respond using newly acquired vocabulary as appropriate; and"
+  },
+  {
+   "key": "TX:ela:5.7G",
+   "grade": "5",
+   "code": "5.7G",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "discuss specific ideas in the text that are important to the meaning."
+  },
+  {
+   "key": "TX:ela:5.8A",
+   "grade": "5",
+   "code": "5.8A",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--literary elements. The student recognizes and analyzes literary elements within and across increasingly complex traditional, contemporary, classical, and diverse literary texts. The student is expected to:",
+   "description": "infer multiple themes within a text using text evidence;"
+  },
+  {
+   "key": "TX:ela:5.8B",
+   "grade": "5",
+   "code": "5.8B",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--literary elements. The student recognizes and analyzes literary elements within and across increasingly complex traditional, contemporary, classical, and diverse literary texts. The student is expected to:",
+   "description": "analyze the relationships of and conflicts among the characters;"
+  },
+  {
+   "key": "TX:ela:5.8C",
+   "grade": "5",
+   "code": "5.8C",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--literary elements. The student recognizes and analyzes literary elements within and across increasingly complex traditional, contemporary, classical, and diverse literary texts. The student is expected to:",
+   "description": "analyze plot elements, including rising action, climax, falling action, and resolution; and"
+  },
+  {
+   "key": "TX:ela:5.8D",
+   "grade": "5",
+   "code": "5.8D",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--literary elements. The student recognizes and analyzes literary elements within and across increasingly complex traditional, contemporary, classical, and diverse literary texts. The student is expected to:",
+   "description": "analyze the influence of the setting, including historical and cultural settings, on the plot."
+  },
+  {
+   "key": "TX:ela:5.9A",
+   "grade": "5",
+   "code": "5.9A",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "demonstrate knowledge of distinguishing characteristics of well-known children's literature such as folktales, fables, legends, myths, and tall tales;"
+  },
+  {
+   "key": "TX:ela:5.9B",
+   "grade": "5",
+   "code": "5.9B",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "explain the use of sound devices and figurative language and distinguish between the poet and the speaker in poems across a variety of poetic forms;"
+  },
+  {
+   "key": "TX:ela:5.9C",
+   "grade": "5",
+   "code": "5.9C",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "explain structure in drama such as character tags, acts, scenes, and stage directions;"
+  },
+  {
+   "key": "TX:ela:5.9D",
+   "grade": "5",
+   "code": "5.9D",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "recognize characteristics and structures of informational text, including: (i) the central idea with supporting evidence; (ii) features such as insets, timelines, and sidebars to support understanding; and (iii) organizational patterns such as logical order and order of importance;"
+  },
+  {
+   "key": "TX:ela:5.9E",
+   "grade": "5",
+   "code": "5.9E",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "recognize characteristics and structures of argumentative text by: (i) identifying the claim; (ii) explaining how the author has used facts for or against an argument; and (iii) identifying the intended audience or reader; and"
+  },
+  {
+   "key": "TX:ela:5.9F",
+   "grade": "5",
+   "code": "5.9F",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "recognize characteristics of multimodal and digital texts."
+  },
+  {
+   "key": "TX:ela:5.10A",
+   "grade": "5",
+   "code": "5.10A",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "explain the author's purpose and message within a text;"
+  },
+  {
+   "key": "TX:ela:5.10B",
+   "grade": "5",
+   "code": "5.10B",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "analyze how the use of text structure contributes to the author's purpose;"
+  },
+  {
+   "key": "TX:ela:5.10C",
+   "grade": "5",
+   "code": "5.10C",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "analyze the author's use of print and graphic features to achieve specific purposes;"
+  },
+  {
+   "key": "TX:ela:5.10D",
+   "grade": "5",
+   "code": "5.10D",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "describe how the author's use of imagery, literal and figurative language such as simile and metaphor, and sound devices achieves specific purposes;"
+  },
+  {
+   "key": "TX:ela:5.10E",
+   "grade": "5",
+   "code": "5.10E",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "identify and understand the use of literary devices, including first- or third-person point of view;"
+  },
+  {
+   "key": "TX:ela:5.10F",
+   "grade": "5",
+   "code": "5.10F",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "examine how the author's use of language contributes to voice; and"
+  },
+  {
+   "key": "TX:ela:5.10G",
+   "grade": "5",
+   "code": "5.10G",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "explain the purpose of hyperbole, stereotyping, and anecdote."
+  },
+  {
+   "key": "TX:ela:6.5A",
+   "grade": "6",
+   "code": "6.5A",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "establish purpose for reading assigned and self-selected text;"
+  },
+  {
+   "key": "TX:ela:6.5B",
+   "grade": "6",
+   "code": "6.5B",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "generate questions about text before, during, and after reading to deepen understanding and gain information;"
+  },
+  {
+   "key": "TX:ela:6.5C",
+   "grade": "6",
+   "code": "6.5C",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "make and correct or confirm predictions using text features, characteristics of genre, and structures;"
+  },
+  {
+   "key": "TX:ela:6.5D",
+   "grade": "6",
+   "code": "6.5D",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "create mental images to deepen understanding;"
+  },
+  {
+   "key": "TX:ela:6.5E",
+   "grade": "6",
+   "code": "6.5E",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "make connections to personal experiences, ideas in other texts, and society;"
+  },
+  {
+   "key": "TX:ela:6.5F",
+   "grade": "6",
+   "code": "6.5F",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "make inferences and use evidence to support understanding;"
+  },
+  {
+   "key": "TX:ela:6.5G",
+   "grade": "6",
+   "code": "6.5G",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "evaluate details read to determine key ideas;"
+  },
+  {
+   "key": "TX:ela:6.5H",
+   "grade": "6",
+   "code": "6.5H",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "synthesize information to create new understanding; and"
+  },
+  {
+   "key": "TX:ela:6.5I",
+   "grade": "6",
+   "code": "6.5I",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "monitor comprehension and make adjustments such as re-reading, using background knowledge, asking questions, and annotating when understanding breaks down."
+  },
+  {
+   "key": "TX:ela:6.6A",
+   "grade": "6",
+   "code": "6.6A",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "describe personal connections to a variety of sources, including self-selected texts;"
+  },
+  {
+   "key": "TX:ela:6.6B",
+   "grade": "6",
+   "code": "6.6B",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "write responses that demonstrate understanding of texts, including comparing sources within and across genres;"
+  },
+  {
+   "key": "TX:ela:6.6C",
+   "grade": "6",
+   "code": "6.6C",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "use text evidence to support an appropriate response;"
+  },
+  {
+   "key": "TX:ela:6.6D",
+   "grade": "6",
+   "code": "6.6D",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "paraphrase and summarize texts in ways that maintain meaning and logical order;"
+  },
+  {
+   "key": "TX:ela:6.6E",
+   "grade": "6",
+   "code": "6.6E",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "interact with sources in meaningful ways such as notetaking, annotating, freewriting, or illustrating;"
+  },
+  {
+   "key": "TX:ela:6.6F",
+   "grade": "6",
+   "code": "6.6F",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "respond using newly acquired vocabulary as appropriate;"
+  },
+  {
+   "key": "TX:ela:6.6G",
+   "grade": "6",
+   "code": "6.6G",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "discuss and write about the explicit or implicit meanings of text;"
+  },
+  {
+   "key": "TX:ela:6.6H",
+   "grade": "6",
+   "code": "6.6H",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "respond orally or in writing with appropriate register, vocabulary, tone, and voice; and"
+  },
+  {
+   "key": "TX:ela:6.6I",
+   "grade": "6",
+   "code": "6.6I",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "reflect on and adjust responses as new evidence is presented."
+  },
+  {
+   "key": "TX:ela:6.7A",
+   "grade": "6",
+   "code": "6.7A",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--literary elements. The student recognizes and analyzes literary elements within and across increasingly complex traditional, contemporary, classical, and diverse literary texts. The student is expected to:",
+   "description": "infer multiple themes within and across texts using text evidence;"
+  },
+  {
+   "key": "TX:ela:6.7B",
+   "grade": "6",
+   "code": "6.7B",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--literary elements. The student recognizes and analyzes literary elements within and across increasingly complex traditional, contemporary, classical, and diverse literary texts. The student is expected to:",
+   "description": "analyze how the characters' internal and external responses develop the plot;"
+  },
+  {
+   "key": "TX:ela:6.7C",
+   "grade": "6",
+   "code": "6.7C",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--literary elements. The student recognizes and analyzes literary elements within and across increasingly complex traditional, contemporary, classical, and diverse literary texts. The student is expected to:",
+   "description": "analyze plot elements, including rising action, climax, falling action, resolution, and non-linear elements such as flashback; and"
+  },
+  {
+   "key": "TX:ela:6.7D",
+   "grade": "6",
+   "code": "6.7D",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--literary elements. The student recognizes and analyzes literary elements within and across increasingly complex traditional, contemporary, classical, and diverse literary texts. The student is expected to:",
+   "description": "analyze how the setting, including historical and cultural settings, influences character and plot development."
+  },
+  {
+   "key": "TX:ela:6.8A",
+   "grade": "6",
+   "code": "6.8A",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "demonstrate knowledge of literary genres such as realistic fiction, adventure stories, historical fiction, mysteries, humor, and myths;"
+  },
+  {
+   "key": "TX:ela:6.8B",
+   "grade": "6",
+   "code": "6.8B",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "analyze the effect of meter and structural elements such as line breaks in poems across a variety of poetic forms;"
+  },
+  {
+   "key": "TX:ela:6.8C",
+   "grade": "6",
+   "code": "6.8C",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "analyze how playwrights develop characters through dialogue and staging;"
+  },
+  {
+   "key": "TX:ela:6.8D",
+   "grade": "6",
+   "code": "6.8D",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "analyze characteristics and structural elements of informational text, including: (i) the controlling idea or thesis with supporting evidence; (ii) features such as introduction, foreword, preface, references, or acknowledgements to gain background information; and (iii) organizational patterns such as definition, classification, advantage, and disadvantage;"
+  },
+  {
+   "key": "TX:ela:6.8E",
+   "grade": "6",
+   "code": "6.8E",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "analyze characteristics and structures of argumentative text by: (i) identifying the claim; (ii) explaining how the author uses various types of evidence to support the argument; and (iii) identifying the intended audience or reader; and"
+  },
+  {
+   "key": "TX:ela:6.8F",
+   "grade": "6",
+   "code": "6.8F",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "analyze characteristics of multimodal and digital texts."
+  },
+  {
+   "key": "TX:ela:6.9A",
+   "grade": "6",
+   "code": "6.9A",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "explain the author's purpose and message within a text;"
+  },
+  {
+   "key": "TX:ela:6.9B",
+   "grade": "6",
+   "code": "6.9B",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "analyze how the use of text structure contributes to the author's purpose;"
+  },
+  {
+   "key": "TX:ela:6.9C",
+   "grade": "6",
+   "code": "6.9C",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "analyze the author's use of print and graphic features to achieve specific purposes;"
+  },
+  {
+   "key": "TX:ela:6.9D",
+   "grade": "6",
+   "code": "6.9D",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "describe how the author's use of figurative language such as metaphor and personification achieves specific purposes;"
+  },
+  {
+   "key": "TX:ela:6.9E",
+   "grade": "6",
+   "code": "6.9E",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "identify the use of literary devices, including omniscient and limited point of view, to achieve a specific purpose;"
+  },
+  {
+   "key": "TX:ela:6.9F",
+   "grade": "6",
+   "code": "6.9F",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "analyze how the author's use of language contributes to mood and voice; and"
+  },
+  {
+   "key": "TX:ela:6.9G",
+   "grade": "6",
+   "code": "6.9G",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "explain the differences between rhetorical devices and logical fallacies."
+  },
+  {
+   "key": "TX:ela:7.5A",
+   "grade": "7",
+   "code": "7.5A",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "establish purpose for reading assigned and self-selected texts;"
+  },
+  {
+   "key": "TX:ela:7.5B",
+   "grade": "7",
+   "code": "7.5B",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "generate questions about text before, during, and after reading to deepen understanding and gain information;"
+  },
+  {
+   "key": "TX:ela:7.5C",
+   "grade": "7",
+   "code": "7.5C",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "make and correct or confirm predictions using text features, characteristics of genre, and structures;"
+  },
+  {
+   "key": "TX:ela:7.5D",
+   "grade": "7",
+   "code": "7.5D",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "create mental images to deepen understanding;"
+  },
+  {
+   "key": "TX:ela:7.5E",
+   "grade": "7",
+   "code": "7.5E",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "make connections to personal experiences, ideas in other texts, and society;"
+  },
+  {
+   "key": "TX:ela:7.5F",
+   "grade": "7",
+   "code": "7.5F",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "make inferences and use evidence to support understanding;"
+  },
+  {
+   "key": "TX:ela:7.5G",
+   "grade": "7",
+   "code": "7.5G",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "evaluate details read to determine key ideas;"
+  },
+  {
+   "key": "TX:ela:7.5H",
+   "grade": "7",
+   "code": "7.5H",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "synthesize information to create new understanding; and"
+  },
+  {
+   "key": "TX:ela:7.5I",
+   "grade": "7",
+   "code": "7.5I",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "monitor comprehension and make adjustments such as re-reading, using background knowledge, asking questions, and annotating when understanding breaks down."
+  },
+  {
+   "key": "TX:ela:7.6A",
+   "grade": "7",
+   "code": "7.6A",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "describe personal connections to a variety of sources, including self-selected texts;"
+  },
+  {
+   "key": "TX:ela:7.6B",
+   "grade": "7",
+   "code": "7.6B",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "write responses that demonstrate understanding of texts, including comparing sources within and across genres;"
+  },
+  {
+   "key": "TX:ela:7.6C",
+   "grade": "7",
+   "code": "7.6C",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "use text evidence to support an appropriate response;"
+  },
+  {
+   "key": "TX:ela:7.6D",
+   "grade": "7",
+   "code": "7.6D",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "paraphrase and summarize texts in ways that maintain meaning and logical order;"
+  },
+  {
+   "key": "TX:ela:7.6E",
+   "grade": "7",
+   "code": "7.6E",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "interact with sources in meaningful ways such as notetaking, annotating, freewriting, or illustrating;"
+  },
+  {
+   "key": "TX:ela:7.6F",
+   "grade": "7",
+   "code": "7.6F",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "respond using newly acquired vocabulary as appropriate;"
+  },
+  {
+   "key": "TX:ela:7.6G",
+   "grade": "7",
+   "code": "7.6G",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "discuss and write about the explicit or implicit meanings of text;"
+  },
+  {
+   "key": "TX:ela:7.6H",
+   "grade": "7",
+   "code": "7.6H",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "respond orally or in writing with appropriate register, vocabulary, tone, and voice; and"
+  },
+  {
+   "key": "TX:ela:7.6I",
+   "grade": "7",
+   "code": "7.6I",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "reflect on and adjust responses as new evidence is presented."
+  },
+  {
+   "key": "TX:ela:7.7A",
+   "grade": "7",
+   "code": "7.7A",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--literary elements. The student recognizes and analyzes literary elements within and across increasingly complex traditional, contemporary, classical, and diverse literary texts. The student is expected to:",
+   "description": "infer multiple themes within and across texts using text evidence;"
+  },
+  {
+   "key": "TX:ela:7.7B",
+   "grade": "7",
+   "code": "7.7B",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--literary elements. The student recognizes and analyzes literary elements within and across increasingly complex traditional, contemporary, classical, and diverse literary texts. The student is expected to:",
+   "description": "analyze how characters' qualities influence events and resolution of the conflict;"
+  },
+  {
+   "key": "TX:ela:7.7C",
+   "grade": "7",
+   "code": "7.7C",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--literary elements. The student recognizes and analyzes literary elements within and across increasingly complex traditional, contemporary, classical, and diverse literary texts. The student is expected to:",
+   "description": "analyze plot elements, including the use of foreshadowing and suspense, to advance the plot; and"
+  },
+  {
+   "key": "TX:ela:7.7D",
+   "grade": "7",
+   "code": "7.7D",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--literary elements. The student recognizes and analyzes literary elements within and across increasingly complex traditional, contemporary, classical, and diverse literary texts. The student is expected to:",
+   "description": "analyze how the setting influences character and plot development."
+  },
+  {
+   "key": "TX:ela:7.8A",
+   "grade": "7",
+   "code": "7.8A",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "demonstrate knowledge of literary genres such as realistic fiction, adventure stories, historical fiction, mysteries, humor, myths, fantasy, and science fiction;"
+  },
+  {
+   "key": "TX:ela:7.8B",
+   "grade": "7",
+   "code": "7.8B",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "analyze the effect of rhyme scheme, meter, and graphical elements such as punctuation and capitalization in poems across a variety of poetic forms;"
+  },
+  {
+   "key": "TX:ela:7.8C",
+   "grade": "7",
+   "code": "7.8C",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "analyze how playwrights develop characters through dialogue and staging;"
+  },
+  {
+   "key": "TX:ela:7.8D",
+   "grade": "7",
+   "code": "7.8D",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "analyze characteristics and structural elements of informational text, including: (i) the controlling idea or thesis with supporting evidence; (ii) features such as references or acknowledgements; and (iii) organizational patterns that support multiple topics, categories, and subcategories;"
+  },
+  {
+   "key": "TX:ela:7.8E",
+   "grade": "7",
+   "code": "7.8E",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "analyze characteristics and structures of argumentative text by: (i) identifying the claim; (ii) explaining how the author uses various types of evidence and consideration of alternatives to support the argument; and (iii) identifying the intended audience or reader; and"
+  },
+  {
+   "key": "TX:ela:7.8F",
+   "grade": "7",
+   "code": "7.8F",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "analyze characteristics of multimodal and digital texts."
+  },
+  {
+   "key": "TX:ela:7.9A",
+   "grade": "7",
+   "code": "7.9A",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "explain the author's purpose and message within a text;"
+  },
+  {
+   "key": "TX:ela:7.9B",
+   "grade": "7",
+   "code": "7.9B",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "analyze how the use of text structure contributes to the author's purpose;"
+  },
+  {
+   "key": "TX:ela:7.9C",
+   "grade": "7",
+   "code": "7.9C",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "analyze the author's use of print and graphic features to achieve specific purposes;"
+  },
+  {
+   "key": "TX:ela:7.9D",
+   "grade": "7",
+   "code": "7.9D",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "describe how the author's use of figurative language such as metaphor and personification achieves specific purposes;"
+  },
+  {
+   "key": "TX:ela:7.9E",
+   "grade": "7",
+   "code": "7.9E",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "identify the use of literary devices, including subjective and objective point of view;"
+  },
+  {
+   "key": "TX:ela:7.9F",
+   "grade": "7",
+   "code": "7.9F",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "analyze how the author's use of language contributes to mood, voice, and tone; and"
+  },
+  {
+   "key": "TX:ela:7.9G",
+   "grade": "7",
+   "code": "7.9G",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "explain the purpose of rhetorical devices such as direct address and rhetorical questions and logical fallacies such as loaded language and sweeping generalizations."
+  },
+  {
+   "key": "TX:ela:8.5A",
+   "grade": "8",
+   "code": "8.5A",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "establish purpose for reading assigned and self-selected texts;"
+  },
+  {
+   "key": "TX:ela:8.5B",
+   "grade": "8",
+   "code": "8.5B",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "generate questions about text before, during, and after reading to deepen understanding and gain information;"
+  },
+  {
+   "key": "TX:ela:8.5C",
+   "grade": "8",
+   "code": "8.5C",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "make and correct or confirm predictions using text features, characteristics of genre, and structures;"
+  },
+  {
+   "key": "TX:ela:8.5D",
+   "grade": "8",
+   "code": "8.5D",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "create mental images to deepen understanding;"
+  },
+  {
+   "key": "TX:ela:8.5E",
+   "grade": "8",
+   "code": "8.5E",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "make connections to personal experiences, ideas in other texts, and society;"
+  },
+  {
+   "key": "TX:ela:8.5F",
+   "grade": "8",
+   "code": "8.5F",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "make inferences and use evidence to support understanding;"
+  },
+  {
+   "key": "TX:ela:8.5G",
+   "grade": "8",
+   "code": "8.5G",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "evaluate details read to determine key ideas;"
+  },
+  {
+   "key": "TX:ela:8.5H",
+   "grade": "8",
+   "code": "8.5H",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "synthesize information to create new understanding; and"
+  },
+  {
+   "key": "TX:ela:8.5I",
+   "grade": "8",
+   "code": "8.5I",
+   "strand": "Comprehension skills",
+   "stem": "Comprehension skills: listening, speaking, reading, writing, and thinking using multiple texts. The student uses metacognitive skills to both develop and deepen comprehension of increasingly complex texts. The student is expected to:",
+   "description": "monitor comprehension and make adjustments such as re-reading, using background knowledge, asking questions, and annotating when understanding breaks down."
+  },
+  {
+   "key": "TX:ela:8.6A",
+   "grade": "8",
+   "code": "8.6A",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "describe personal connections to a variety of sources, including self-selected texts;"
+  },
+  {
+   "key": "TX:ela:8.6B",
+   "grade": "8",
+   "code": "8.6B",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "write responses that demonstrate understanding of texts, including comparing sources within and across genres;"
+  },
+  {
+   "key": "TX:ela:8.6C",
+   "grade": "8",
+   "code": "8.6C",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "use text evidence to support an appropriate response;"
+  },
+  {
+   "key": "TX:ela:8.6D",
+   "grade": "8",
+   "code": "8.6D",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "paraphrase and summarize texts in ways that maintain meaning and logical order;"
+  },
+  {
+   "key": "TX:ela:8.6E",
+   "grade": "8",
+   "code": "8.6E",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "interact with sources in meaningful ways such as notetaking, annotating, freewriting, or illustrating;"
+  },
+  {
+   "key": "TX:ela:8.6F",
+   "grade": "8",
+   "code": "8.6F",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "respond using newly acquired vocabulary as appropriate;"
+  },
+  {
+   "key": "TX:ela:8.6G",
+   "grade": "8",
+   "code": "8.6G",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "discuss and write about the explicit or implicit meanings of text;"
+  },
+  {
+   "key": "TX:ela:8.6H",
+   "grade": "8",
+   "code": "8.6H",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "respond orally or in writing with appropriate register, vocabulary, tone, and voice;"
+  },
+  {
+   "key": "TX:ela:8.6I",
+   "grade": "8",
+   "code": "8.6I",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "reflect on and adjust responses as new evidence is presented; and"
+  },
+  {
+   "key": "TX:ela:8.6J",
+   "grade": "8",
+   "code": "8.6J",
+   "strand": "Response skills",
+   "stem": "Response skills: listening, speaking, reading, writing, and thinking using multiple texts. The student responds to an increasingly challenging variety of sources that are read, heard, or viewed. The student is expected to:",
+   "description": "defend or challenge the authors' claims using relevant text evidence."
+  },
+  {
+   "key": "TX:ela:8.7A",
+   "grade": "8",
+   "code": "8.7A",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--literary elements. The student recognizes and analyzes literary elements within and across increasingly complex traditional, contemporary, classical, and diverse literary texts. The student is expected to:",
+   "description": "analyze how themes are developed through the interaction of characters and events;"
+  },
+  {
+   "key": "TX:ela:8.7B",
+   "grade": "8",
+   "code": "8.7B",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--literary elements. The student recognizes and analyzes literary elements within and across increasingly complex traditional, contemporary, classical, and diverse literary texts. The student is expected to:",
+   "description": "analyze how characters' motivations and behaviors influence events and resolution of the conflict;"
+  },
+  {
+   "key": "TX:ela:8.7C",
+   "grade": "8",
+   "code": "8.7C",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--literary elements. The student recognizes and analyzes literary elements within and across increasingly complex traditional, contemporary, classical, and diverse literary texts. The student is expected to:",
+   "description": "analyze non-linear plot development such as flashbacks, foreshadowing, subplots, and parallel plot structures and compare it to linear plot development; and"
+  },
+  {
+   "key": "TX:ela:8.7D",
+   "grade": "8",
+   "code": "8.7D",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--literary elements. The student recognizes and analyzes literary elements within and across increasingly complex traditional, contemporary, classical, and diverse literary texts. The student is expected to:",
+   "description": "explain how the setting influences the values and beliefs of characters."
+  },
+  {
+   "key": "TX:ela:8.8A",
+   "grade": "8",
+   "code": "8.8A",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "demonstrate knowledge of literary genres such as realistic fiction, adventure stories, historical fiction, mysteries, humor, fantasy, science fiction, and short stories;"
+  },
+  {
+   "key": "TX:ela:8.8B",
+   "grade": "8",
+   "code": "8.8B",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "analyze the effect of graphical elements such as punctuation and line length in poems across a variety of poetic forms such as epic, lyric, and humorous poetry;"
+  },
+  {
+   "key": "TX:ela:8.8C",
+   "grade": "8",
+   "code": "8.8C",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "analyze how playwrights develop dramatic action through the use of acts and scenes;"
+  },
+  {
+   "key": "TX:ela:8.8D",
+   "grade": "8",
+   "code": "8.8D",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "analyze characteristics and structural elements of informational text, including: (i) the controlling idea or thesis with supporting evidence; (ii) features such as footnotes, endnotes, and citations; and (iii) multiple organizational patterns within a text to develop the thesis;"
+  },
+  {
+   "key": "TX:ela:8.8E",
+   "grade": "8",
+   "code": "8.8E",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "analyze characteristics and structures of argumentative text by: (i) identifying the claim and analyzing the argument; (ii) identifying and explaining the counter argument; and (iii) identifying the intended audience or reader; and"
+  },
+  {
+   "key": "TX:ela:8.8F",
+   "grade": "8",
+   "code": "8.8F",
+   "strand": "Multiple genres",
+   "stem": "Multiple genres: listening, speaking, reading, writing, and thinking using multiple texts--genres. The student recognizes and analyzes genre-specific characteristics, structures, and purposes within and across increasingly complex traditional, contemporary, classical, and diverse texts. The student is expected to:",
+   "description": "analyze characteristics of multimodal and digital texts."
+  },
+  {
+   "key": "TX:ela:8.9A",
+   "grade": "8",
+   "code": "8.9A",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "explain the author's purpose and message within a text;"
+  },
+  {
+   "key": "TX:ela:8.9B",
+   "grade": "8",
+   "code": "8.9B",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "analyze how the use of text structure contributes to the author's purpose;"
+  },
+  {
+   "key": "TX:ela:8.9C",
+   "grade": "8",
+   "code": "8.9C",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "analyze the author's use of print and graphic features to achieve specific purposes;"
+  },
+  {
+   "key": "TX:ela:8.9D",
+   "grade": "8",
+   "code": "8.9D",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "describe how the author's use of figurative language such as extended metaphor achieves specific purposes;"
+  },
+  {
+   "key": "TX:ela:8.9E",
+   "grade": "8",
+   "code": "8.9E",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "identify and analyze the use of literary devices, including multiple points of view and irony;"
+  },
+  {
+   "key": "TX:ela:8.9F",
+   "grade": "8",
+   "code": "8.9F",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "analyze how the author's use of language contributes to the mood, voice, and tone; and"
+  },
+  {
+   "key": "TX:ela:8.9G",
+   "grade": "8",
+   "code": "8.9G",
+   "strand": "Author's purpose and craft",
+   "stem": "Author's purpose and craft: listening, speaking, reading, writing, and thinking using multiple texts. The student uses critical inquiry to analyze the authors' choices and how they influence and communicate meaning within a variety of texts. The student analyzes and applies author's craft purposefully in order to develop his or her own products and performances. The student is expected to:",
+   "description": "explain the purpose of rhetorical devices such as analogy and juxtaposition and of logical fallacies such as bandwagon appeals and circular reasoning."
+  }
+ ]
+}

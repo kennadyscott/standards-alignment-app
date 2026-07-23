@@ -1,0 +1,273 @@
+{
+  "links": [
+    {
+      "oh": "RL.4.1",
+      "state": "GA",
+      "code": "4.T.RA.2a",
+      "confidence": "moderate",
+      "rationale": "Both require the student to point to specific text details/passages to support an explanation or answer; GA does not name inference, and because GA has no RL/RI split this same evidence-citing element also serves RI.4.1."
+    },
+    {
+      "oh": "RL.5.1",
+      "state": "GA",
+      "code": "5.T.RA.2a",
+      "confidence": "moderate",
+      "rationale": "Both require quoting/referring to specific passages from a text to support an idea or answer; GA adds page-number recording and omits the inference demand."
+    },
+    {
+      "oh": "RL.4.2",
+      "state": "GA",
+      "code": "4.T.T.1c",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to determine a theme of a literary text from details in the text; GA narrows the details to characters and does not include Ohio's summarizing sub-standard."
+    },
+    {
+      "oh": "RL.5.2",
+      "state": "GA",
+      "code": "5.T.T.1c",
+      "confidence": "strong",
+      "rationale": "Both ask the student to determine a theme and explain how it is conveyed through how a character responds to challenges/conflict; GA lacks only Ohio's summary sub-standard."
+    },
+    {
+      "oh": "RL.4.3",
+      "state": "GA",
+      "code": "4.T.T.1b",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to describe a character in depth from text details and how that character functions in the story; GA restricts the analysis to protagonist/antagonist and adds conflict, and omits setting and event."
+    },
+    {
+      "oh": "RL.4.3",
+      "state": "GA",
+      "code": "3.T.T.1c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (GA 3): GA's 'describe characters' traits, motivations, actions, thoughts, and feelings' is the same skill as Ohio's parenthetical (a character's thoughts, words, or actions), though GA additionally ties it to the central message."
+    },
+    {
+      "oh": "RL.5.4",
+      "state": "GA",
+      "code": "5.T.SS.2a",
+      "confidence": "moderate",
+      "rationale": "Both require interpreting figurative language (similes, metaphors, idioms) as used in a text; GA asks for the impact of the figurative language rather than Ohio's determination of word meaning."
+    },
+    {
+      "oh": "RL.4.5",
+      "state": "GA",
+      "code": "4.T.T.4a",
+      "confidence": "partial",
+      "rationale": "Both ask the student to explain the structural elements that define poetry as a form; GA covers only the poetry half of Ohio's poem/drama/prose comparison and says nothing about drama's structural elements."
+    },
+    {
+      "oh": "RL.4.5",
+      "state": "GA",
+      "code": "4.T.SS.1a",
+      "confidence": "partial",
+      "rationale": "Both ask the student to compare structural/organizational features across texts written in different genres (GA explicitly names rhyme pattern); GA constrains this to texts on the same topic and does not target genre-defining elements like verse, meter, or stage directions."
+    },
+    {
+      "oh": "RL.5.5",
+      "state": "GA",
+      "code": "5.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to explain how the parts of a text (chapters/sections) work together to create the overall structure; GA frames it as features and structure functioning in conjunction rather than Ohio's series-of-parts-to-whole."
+    },
+    {
+      "oh": "RL.4.6",
+      "state": "GA",
+      "code": "4.T.C.2a",
+      "confidence": "strong",
+      "rationale": "Both ask the student to explain/compare the differing points of view and perspectives of narrators or speakers within a text."
+    },
+    {
+      "oh": "RL.5.6",
+      "state": "GA",
+      "code": "5.T.C.2a",
+      "confidence": "strong",
+      "rationale": "Both ask the student to describe how a narrator's or speaker's perspective influences the text and how its events are presented."
+    },
+    {
+      "oh": "RL.5.7",
+      "state": "GA",
+      "code": "5.T.C.1b",
+      "confidence": "partial",
+      "rationale": "Both ask the student to explain how non-prose/multimodal choices contribute to a text's overall effect; GA's demand is classifying texts by mode and its effect on audience/purpose, which is narrower than Ohio's analysis of visual elements' contribution to meaning, tone, and mood."
+    },
+    {
+      "oh": "RL.4.9",
+      "state": "GA",
+      "code": "4.T.T.1d",
+      "confidence": "strong",
+      "rationale": "Near-verbatim: both ask the student to compare and contrast the treatment of similar themes and topics and patterns of events in stories, myths, and traditional literature from different cultures."
+    },
+    {
+      "oh": "RL.5.9",
+      "state": "GA",
+      "code": "5.T.T.1d",
+      "confidence": "strong",
+      "rationale": "Near-verbatim: both ask the student to compare and contrast stories in the same genre on their approaches to similar themes and topics."
+    },
+    {
+      "oh": "RI.4.1",
+      "state": "GA",
+      "code": "4.T.RA.2a",
+      "confidence": "moderate",
+      "rationale": "Both require the student to point to specific text passages to support an explanation or answer; GA does not name inference, and this element is shared with RL.4.1 because GA has no literature/informational strand split."
+    },
+    {
+      "oh": "RI.5.1",
+      "state": "GA",
+      "code": "5.T.RA.2a",
+      "confidence": "moderate",
+      "rationale": "Both require quoting specific passages from a text to support an idea or answer; GA adds page-number recording and omits the inference demand."
+    },
+    {
+      "oh": "RI.4.2",
+      "state": "GA",
+      "code": "4.T.T.2a",
+      "confidence": "moderate",
+      "rationale": "Both center on the main idea of an expository text and the facts and key details that support it; GA's object is the techniques used to present the main idea rather than Ohio's determining it, and GA has no summarizing demand."
+    },
+    {
+      "oh": "RI.5.2",
+      "state": "GA",
+      "code": "5.T.T.2a",
+      "confidence": "moderate",
+      "rationale": "Both address multiple main ideas of an expository text supported by facts and key details; GA's demand is evaluating the presentation techniques rather than Ohio's determining the main ideas and summarizing."
+    },
+    {
+      "oh": "RI.4.3",
+      "state": "GA",
+      "code": "4.T.T.2b",
+      "confidence": "strong",
+      "rationale": "Verbatim match: explain events, procedures, ideas, or concepts in a historical, scientific, or technical text, including what happened and why, based on specific information in the text."
+    },
+    {
+      "oh": "RI.5.3",
+      "state": "GA",
+      "code": "5.T.T.2b",
+      "confidence": "strong",
+      "rationale": "Verbatim match: explain the relationships or interactions between two or more individuals, events, ideas, or concepts in a historical, scientific, or technical text based on specific information in the text."
+    },
+    {
+      "oh": "RI.4.5",
+      "state": "GA",
+      "code": "3.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (GA 3): both ask the student to describe how a text is organized to present information using organizational structures such as cause/effect and to refer to parts of the text; GA grade 4 replaces this describe-one-text skill with a compare-across-texts one, so the nearest same-skill element sits one grade below."
+    },
+    {
+      "oh": "RI.4.5",
+      "state": "GA",
+      "code": "5.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (GA 5): both ask the student to describe the overall organizational structure (GA names problem/solution) by which a text represents ideas and information; GA couples structure with text features."
+    },
+    {
+      "oh": "RI.5.5",
+      "state": "GA",
+      "code": "4.T.SS.1a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (GA 4): both ask the student to compare and contrast the organizational structure of two or more texts; GA constrains the texts to the same topic in different genres."
+    },
+    {
+      "oh": "RI.4.6",
+      "state": "GA",
+      "code": "5.T.T.2c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (GA 5): both ask the student to compare and contrast firsthand and secondhand accounts of the same event or topic; GA has no grade-4 element for this skill."
+    },
+    {
+      "oh": "RI.5.6",
+      "state": "GA",
+      "code": "5.T.T.2c",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to compare multiple accounts of the same event or topic and note how they differ; GA fixes the accounts as firsthand/secondhand rather than Ohio's open 'multiple accounts' and does not name perspective."
+    },
+    {
+      "oh": "RI.5.6",
+      "state": "GA",
+      "code": "6.T.T.2b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (GA 6): both ask the student to compare and contrast two authors' accounts/presentations of the same event or topic; GA restricts to historical events and does not name the perspectives represented."
+    },
+    {
+      "oh": "RI.4.7",
+      "state": "GA",
+      "code": "3.T.C.1b",
+      "confidence": "partial",
+      "rationale": "Cross-grade (GA 3): both ask the student to identify non-prose features of visual/auditory modes and explain how they contribute to the text's purpose and effect; GA does not reach Ohio's interpretation of quantitative displays (charts, graphs, timelines), and GA has no closer element at grade 4 or 5."
+    },
+    {
+      "oh": "RI.5.7",
+      "state": "GA",
+      "code": "5.T.RA.1b",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to locate and draw information from multiple print and digital sources; GA frames this as conducting research on a self-selected topic rather than Ohio's efficient answer-finding/problem-solving."
+    },
+    {
+      "oh": "RI.4.8",
+      "state": "GA",
+      "code": "4.T.T.3a",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to explain how an author uses evidence to support the points/claims made in a text; GA restricts the text type to opinion and argumentative texts, while Ohio allows any informational text."
+    },
+    {
+      "oh": "RI.5.8",
+      "state": "GA",
+      "code": "5.T.T.3a",
+      "confidence": "moderate",
+      "rationale": "Both ask the student to explain how an author's supporting reasons and evidence back the stated claim; GA restricts to opinion/argumentative texts and does not require Ohio's matching of specific evidence to corresponding points."
+    },
+    {
+      "oh": "RI.4.9",
+      "state": "GA",
+      "code": "4.T.T.2c",
+      "confidence": "strong",
+      "rationale": "Both ask the student to integrate information from multiple texts on the same topic in relation to the important points and key details."
+    },
+    {
+      "oh": "RI.5.9",
+      "state": "GA",
+      "code": "4.T.T.2c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (GA 4): both ask the student to integrate information from several texts on the same topic; GA's grade-5 slot in this progression is occupied by firsthand/secondhand accounts, so the integrate-multiple-texts element sits one grade below."
+    }
+  ],
+  "unmatched": [
+    {
+      "oh": "RL.5.3",
+      "why": "GA's only compare-and-contrast-characters/settings/events-within-a-text element is 3.T.T.1d, which is two grades below and therefore out of scope; GA grade 5's narrative element (5.T.T.1b) analyzes how setting/conflict/characterization contribute to plot, a different demand."
+    },
+    {
+      "oh": "RL.4.4",
+      "why": "GA's Texts domain has no determine-word-meaning-in-context element, and nothing in GA addresses allusions to mythological characters; GA grade 4's craft element (4.T.SS.2a) is figurative language, which is Ohio's RL.5.4, not RL.4.4."
+    },
+    {
+      "oh": "RL.4.7",
+      "why": "GA has no element asking students to compare a written story or drama with a visual or oral presentation of that same text; GA's mode elements ask students to classify texts by mode, not to compare versions of one text."
+    },
+    {
+      "oh": "RL.4.10",
+      "why": "GA's 2023 standards contain no text-complexity-band reading standard and no text-to-self/text-to-text connection element; there is no GA counterpart to the CCSS anchor-10 shape."
+    },
+    {
+      "oh": "RL.5.10",
+      "why": "GA's 2023 standards contain no text-complexity-band reading standard; the nearest read-and-comprehend elements (6.T.PM.1a/b) are period/genre knowledge standards, not complexity-band proficiency."
+    },
+    {
+      "oh": "RI.4.4",
+      "why": "GA's Texts domain has no element for determining the meaning of general academic or domain-specific vocabulary in context; GA handles vocabulary outside the Texts domain, so no candidate covers this skill."
+    },
+    {
+      "oh": "RI.5.4",
+      "why": "GA's Texts domain has no element for determining the meaning of general academic or domain-specific vocabulary in context."
+    },
+    {
+      "oh": "RI.4.10",
+      "why": "GA's 2023 standards contain no text-complexity-band reading standard for informational/history/science/technical texts."
+    },
+    {
+      "oh": "RI.5.10",
+      "why": "GA's 2023 standards contain no text-complexity-band reading standard for informational/history/science/technical texts."
+    }
+  ]
+}

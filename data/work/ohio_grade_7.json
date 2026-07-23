@@ -1,0 +1,311 @@
+[
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "7",
+  "code": "7.ESS.1",
+  "strand": "Earth and Space Science",
+  "topic": "Cycles and Patterns of Earth and the Moon",
+  "description": "The hydrologic cycle illustrates the changing states of water as it moves through the lithosphere, biosphere, hydrosphere and atmosphere. Thermal energy is transferred as water changes state throughout the cycle. The cycling of water in the atmosphere is an important part of weather patterns on Earth. The rate at which water flows through soil and rock is dependent upon the porosity and permeability of the soil or rock."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "7",
+  "code": "7.ESS.2",
+  "strand": "Earth and Space Science",
+  "topic": "Cycles and Patterns of Earth and the Moon",
+  "description": "Thermal-energy transfers in the ocean and the atmosphere contribute to the formation of currents, which influence global climate patterns. The sun is the major source of energy for wind, air and ocean currents and the hydrologic cycle. As thermal energy transfers occur in the atmosphere and ocean, currents form. Large bodies of water can influence weather and climate. The jet stream is an example of an atmospheric current and the Gulf Stream is an example of an oceanic current. Ocean currents are influenced by factors other than thermal energy, such as water density, mineral content (such as salinity), ocean floor topography and Earth\u2019s rotation. All of these factors delineate global climate patterns on Earth."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "7",
+  "code": "7.ESS.3",
+  "strand": "Earth and Space Science",
+  "topic": "Cycles and Patterns of Earth and the Moon",
+  "description": "The atmosphere has different properties at different elevations and contains a mixture of gases that cycle through the lithosphere, biosphere, hydrosphere and atmosphere. The atmosphere is held to the Earth by the force of gravity. There are defined layers of the atmosphere that have specific properties, such as temperature, chemical composition and physical characteristics. Gases in the atmosphere include nitrogen, oxygen, water vapor, carbon dioxide and other trace gases. Biogeochemical cycles illustrate the movement of specific elements or molecules (such as carbon or nitrogen) through the lithosphere, biosphere, hydrosphere and atmosphere. Note: The emphasis is on why the atmosphere has defined layers, not on naming the layers."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "7",
+  "code": "7.ESS.4",
+  "strand": "Earth and Space Science",
+  "topic": "Cycles and Patterns of Earth and the Moon",
+  "description": "The relative patterns of motion and positions of Earth, moon and sun cause solar and lunar eclipses, tides and phases of the moon. The moon\u2019s orbit and its change of position relative to Earth and sun result in different parts of the moon being visible from Earth (phases of the moon). A solar eclipse is when Earth moves into the shadow of the moon (during a new moon). A lunar eclipse is when the moon moves into the shadow of Earth (during a full moon). Gravitational force between Earth and the moon causes daily oceanic tides. When the gravitational forces from the sun and moon align (at new and full moons) spring tides occur. When the gravitational forces of the sun and moon are perpendicular (at first and last quarter moons), neap tides occur."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "7",
+  "code": "7.ESS.5",
+  "strand": "Earth and Space Science",
+  "topic": "Cycles and Patterns of Earth and the Moon",
+  "description": "The relative positions of Earth and the sun cause patterns we call seasons. Earth\u2019s axis is tilted at an angle of 23.5\u00b0. This tilt along with Earth\u2019s revolution around the sun, affects the amount of direct sunlight that the earth receives in a single day and throughout the year. The average daily temperature is related to the amount of direct sunlight received."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "7",
+  "code": "7.PS.1",
+  "strand": "Physical Science",
+  "topic": "Conservation of Mass and Energy",
+  "description": "Elements can be organized by properties. Elements can be classified as metals, non-metals and metalloids, and can be organized by similar properties such as color, solubility, hardness, density, conductivity, melting point and boiling point, viscosity, and malleability. Note 1: This is the conceptual introduction of the Periodic Table of Elements and should be limited to classifications based on observable properties; it should not include the names of the families."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "7",
+  "code": "7.PS.2",
+  "strand": "Physical Science",
+  "topic": "Conservation of Mass and Energy",
+  "description": "Matter can be separated or changed, but in a closed system, the number and types of atoms remains constant. When substances interact and form new substances the properties of the new substances may be very different from those of the original substances, but the amount of mass does not change. Physically combining two or more substances forms a mixture, which can be separated through physical processes. Note: Under these standards, classifying specific changes as chemical or physical is not appropriate."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "7",
+  "code": "7.PS.3",
+  "strand": "Physical Science",
+  "topic": "Conservation of Mass and Energy",
+  "description": "Energy can be transformed or transferred but is never lost. When energy is transferred from one system to another, the quantity of energy before transfer equals the quantity of energy after transfer. When energy is transformed from one form to another, the total amount of energy remains the same."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "7",
+  "code": "7.PS.4",
+  "strand": "Physical Science",
+  "topic": "Conservation of Mass and Energy",
+  "description": "Energy can be transferred through a variety of ways. Mechanical energy can be transferred when objects push or pull on each other over a distance. Mechanical and electromagnetic waves transfer energy when they interact with matter. Thermal energy can be transferred through radiation, convection and conduction. An electrical circuit transfers energy from a source to a device. Note: Energy transfers should be experiential and observable at this grade level."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "7",
+  "code": "7.LS.1",
+  "strand": "Life Science",
+  "topic": "Cycles of Matter and Flow of Energy",
+  "description": "Energy flows and matter is transferred continuously from one organism to another and between organisms and their physical environments. Plants use the energy in light to make sugars out of carbon dioxide and water (photosynthesis). These materials can be used or stored for later use. Organisms that eat plants break down plant structures to release the energy and produce the materials they need to survive. The organism may then be consumed by other organisms for materials and energy. Energy can transform from one form to another in living things. Animals get energy from oxidizing food, releasing some of its energy as heat. The total amount of matter and energy remains constant, even though its form and location change. Note: Chemical reactions in terms of subatomic structures of atoms are not appropriate at this grade level. Chemical reactions are presented as the rearrangement of atoms in molecules."
+ },
+ {
+  "state": "OH",
+  "subject": "science",
+  "grade": "7",
+  "code": "7.LS.2",
+  "strand": "Life Science",
+  "topic": "Cycles of Matter and Flow of Energy",
+  "description": "In any particular biome, the number, growth and survival of organisms and populations depend on biotic and abiotic factors. The variety of physical (abiotic) conditions that exists on Earth gives rise to diverse environments (biomes) and allows for the existence of a wide variety of organisms (biodiversity). Biomes are regional ecosystems characterized by distinct types of organisms that have developed under specific soil and climatic conditions. Ecosystems are dynamic in nature; the number and types of species fluctuate over time. Disruptions, deliberate or inadvertent, to the physical (abiotic) or biological (biotic) components of an ecosystem impact the composition of an ecosystem."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.1",
+  "strand": "History",
+  "topic": "Historical Thinking and Skills",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "Historians and archaeologists describe historical events and issues from the perspectives of people living at the time to avoid evaluating the past in terms of today\u2019s norms and values."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.2",
+  "strand": "History",
+  "topic": "Early Civilizations",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "The civilizations that developed in Greece and Rome had an enduring impact on later civilizations. This legacy includes governance and law, engineering and technology, art and architecture, as well as literature and history. The Roman Empire also played an instrumental role in the spread of Christianity."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.3",
+  "strand": "History",
+  "topic": "Feudalism and Transitions",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "The Roman Empire collapsed due to various internal and external factors (political, social and economic) which led to the development of feudalism and the manorial system in the region. The fall of Rome and later invasions also allowed for the creation of new empires in the region."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.4",
+  "strand": "History",
+  "topic": "Feudalism and Transitions",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "The Mongols conquered much of Asia which led to unified states in China and Korea. Mongol failure to conquer Japan allowed a feudal system to persist."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.5",
+  "strand": "History",
+  "topic": "Feudalism and Transitions",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "Achievements in medicine, science, mathematics and geography by the Islamic civilization dominated most of the Mediterranean after the decline of the Roman Empire. These achievements were introduced into Western Europe as a result of the Muslim conquests, Crusades and trade, influencing the European Renaissance."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.6",
+  "strand": "History",
+  "topic": "Feudalism and Transitions",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "The decline of feudalism, the rise of nation-states and the Renaissance in Europe introduced revolutionary ideas, leading to cultural, scientific and social changes."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.7",
+  "strand": "History",
+  "topic": "Feudalism and Transitions",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "The Reformation introduced changes in religion including the emergence of Protestant faiths and a decline in the political power and social influence of the Roman Catholic Church."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.8",
+  "strand": "History",
+  "topic": "First Global Age",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "Empires in Africa and Asia grew as commercial and cultural centers along trade routes."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.9",
+  "strand": "History",
+  "topic": "First Global Age",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "The advent of the trans-Saharan slave trade had profound effects on both West and Central Africa and the receiving societies."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.10",
+  "strand": "History",
+  "topic": "First Global Age",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "European economic and cultural influence dramatically increased through explorations, conquests and colonization."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.11",
+  "strand": "History",
+  "topic": "First Global Age",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "The Columbian exchange (i.e., the exchange of fauna, flora and pathogens) among previously unconnected parts of the world reshaped societies in ways still evident today."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.12",
+  "strand": "Geography",
+  "topic": "Spatial Thinking and Skills",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "Maps and other geographic representations can be used to trace the development of human settlement over time."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.13",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "Geographic factors promote or impede the movement of people, products and ideas."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.14",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "Trade routes connecting Africa, Europe and Asia helped foster the spread of ideas, technology, goods and major world religions (Buddhism, Christianity, Hinduism, Islam and Judaism) that impacted the Eastern Hemisphere."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.15",
+  "strand": "Geography",
+  "topic": "Human Systems",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "Improvements in transportation, communication and technology have facilitated cultural diffusion among peoples around the world."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.16",
+  "strand": "Government",
+  "topic": "Civic Participation and Skills",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "Analyzing individual and group perspectives is essential to understanding historic and contemporary issues. Opportunities for civic engagement exist for students to connect real-world issues and events to classroom learning."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.17",
+  "strand": "Government",
+  "topic": "Roles and Systems of Government",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "Greek democracy and the Roman Republic were a radical departure from monarchy and theocracy, influencing the structure and function of modern democratic governments."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.18",
+  "strand": "Government",
+  "topic": "Roles and Systems of Government",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "With the decline of feudalism, consolidation of power resulted in the emergence of nation-states."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.19",
+  "strand": "Economics",
+  "topic": "Economic Decision Making and Skills",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "Individuals, governments and businesses must analyze costs and benefits when making economic decisions. A cost-benefit analysis consists of determining the potential costs and benefits of an action and then balancing the costs against the benefits."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.20",
+  "strand": "Economics",
+  "topic": "Scarcity",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "The variability in the distribution of productive resources in the various regions of the world contributed to specialization, trade and interdependence."
+ },
+ {
+  "state": "OH",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.SS.21",
+  "strand": "Economics",
+  "topic": "Markets",
+  "theme": "World Studies from 750 B.C. to 1600 A.D.: Ancient Greece to the First Global Age",
+  "description": "The growth of cities and empires fostered the growth of markets. Market exchanges encouraged specialization and the transition from barter to monetary economies."
+ }
+]
