@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202607231430';   // replaced with the deploy stamp
+const APP_BUILD = '202607301925';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -165,6 +165,9 @@ const LS_SETCMS = 'sa_setcms_v1';
 const LS_SETDISMISS = 'sa_setdismiss_v1';
 
 const LS_DECISIONSAT = 'sa_decisionsat_v1';
+const LS_SETFLAG = 'sa_setflag_v1';
+const LS_SETFLAGAT = 'sa_setflagat_v1';
+const LS_SETSTATEID = 'sa_setstateid_v1';
 
 const readLS = (k, fallback) => {
   try { return JSON.parse(localStorage.getItem(k)) || fallback; } catch { return fallback; }
@@ -182,6 +185,9 @@ function loadLocal() {
   state.setStateStd = readLS(LS_SETSTATESTD, {});
   state.setCms = readLS(LS_SETCMS, {});
   state.setDismiss = readLS(LS_SETDISMISS, {});
+  state.setFlag = readLS(LS_SETFLAG, {});
+  state.setFlagAt = readLS(LS_SETFLAGAT, {});
+  state.setStateId = readLS(LS_SETSTATEID, {});
 }
 function mirrorLocal() {
   // localStorage is only a FALLBACK mirror — the cloud file is the source of truth.
@@ -202,6 +208,9 @@ function mirrorLocal() {
   put(LS_SETSTATESTD, JSON.stringify(state.setStateStd));
   put(LS_SETCMS, JSON.stringify(state.setCms));
   put(LS_SETDISMISS, JSON.stringify(state.setDismiss));
+  put(LS_SETFLAG, JSON.stringify(state.setFlag || {}));
+  put(LS_SETFLAGAT, JSON.stringify(state.setFlagAt || {}));
+  put(LS_SETSTATEID, JSON.stringify(state.setStateId || {}));
   if (!put(LS_SETS, JSON.stringify(state.sets))) {
     try { localStorage.removeItem(LS_SETS); } catch { /* nothing left to free */ }
   }
@@ -222,6 +231,9 @@ function stateBody() {
     setStateStd: state.setStateStd,
     setCms: state.setCms,
     setDismiss: state.setDismiss,
+    setFlag: state.setFlag || {},
+    setFlagAt: state.setFlagAt || {},
+    setStateId: state.setStateId || {},
     sets: state.sets,
     savedAt: new Date().toISOString(),
   });
@@ -314,6 +326,13 @@ function mergeForSave(server) {
   state.setStateStd = { ...S('setStateStd'), ...state.setStateStd };
   state.setCms = { ...S('setCms'), ...state.setCms };
   state.setDismiss = { ...S('setDismiss'), ...state.setDismiss };
+  state.setStateId = { ...S('setStateId'), ...(state.setStateId || {}) };
+  {
+    // Flags are raised AND resolved — same both-directions story as decisions,
+    // so they get the same newest-wins timestamped merge.
+    const m = mergeDecisions(S('setFlag'), S('setFlagAt'), state.setFlag || {}, state.setFlagAt || {}, 'local');
+    state.setFlag = m.decisions; state.setFlagAt = m.decisionsAt;
+  }
   state.manual = dedupeById([...state.manual, ...(server.manual || [])]);
 
   const byId = new Map(state.sets.map(x => [x.id, x]));
@@ -542,6 +561,8 @@ function mergeServerState(s) {
       setStateStd: { ...state.setStateStd, ...(s.setStateStd || {}) },
       setCms: { ...state.setCms, ...(s.setCms || {}) },
       setDismiss: { ...state.setDismiss, ...(s.setDismiss || {}) },
+      setStateId: { ...(state.setStateId || {}), ...(s.setStateId || {}) },
+      setFlagM: mergeDecisions(s.setFlag || {}, s.setFlagAt || {}, state.setFlag || {}, state.setFlagAt || {}, 'server'),
       // Server copies win on CONTENT (freshest deck text), but LOCAL reviewer progress
       // is grafted on so a clobbered/older server copy can never revert this browser's
       // own approvals at load time (that's how a stale server state once "infected"
@@ -568,6 +589,9 @@ function mergeServerState(s) {
     state.setStateStd = merged.setStateStd;
     state.setCms = merged.setCms;
     state.setDismiss = merged.setDismiss;
+    state.setStateId = merged.setStateId;
+    state.setFlag = merged.setFlagM.decisions;
+    state.setFlagAt = merged.setFlagM.decisionsAt;
     state.sets = merged.sets;
     normalizeSets();
     mergeImportedDrafts();   // re-add any imported draft the server copy doesn't have
@@ -595,6 +619,13 @@ function pruneOrphanDecisions() {
    an old decision forever. Each write is therefore timestamped, and merges pick the
    NEWEST call per link. Legacy entries (made before timestamps) rank as 0, so any
    re-decision beats every stale copy still cached in other browsers. */
+// Review flags use the same timestamped write so resolving one sticks (see setDecision).
+function setFlagValue(key, val) {
+  state.setFlag = state.setFlag || {};
+  if (val === undefined) delete state.setFlag[key];
+  else state.setFlag[key] = val;
+  (state.setFlagAt = state.setFlagAt || {})[key] = Date.now();
+}
 function setDecision(id, val) {
   if (val === undefined) delete state.decisions[id];
   else state.decisions[id] = val;
@@ -2077,13 +2108,19 @@ function inputListItem(row, selected) {
     standards: '<span class="chip chip-stage">Needs standards</span>',
     peer: '<span class="chip chip-stage">Needs peer task</span>',
     enter: '<span class="chip">To be entered</span>',
+    flagged: '<span class="chip chip-warn">⚑ Flagged</span>',
   }[stage] || '<span class="chip">Aligned</span>';
+  const k = inputKey(s.id, state.ui.inState, state.ui.inGrade);
+  const stId = (state.setStateId || {})[k];
+  const idPart = stId
+    ? `${esc(state.ui.inState)} ID ${esc(stId)}`
+    : (s.passageId ? 'ID ' + esc(s.passageId) : 'No ID');
   return `
     <div class="std-item ${selected ? 'active' : ''}" data-insel="${esc(s.id)}">
       <div class="std-item-top">
         <span class="std-code">${isDraft(s) ? '<span class="draft-tag">DRAFT</span> ' : ''}${esc(s.title || 'Untitled set')}</span>
       </div>
-      <div class="std-desc">${s.gaGrade ? `G${esc(s.gaGrade)} · ` : ''}${s.passageId ? 'ID ' + esc(s.passageId) : 'No ID'}</div>
+      <div class="std-desc">${s.gaGrade ? `G${esc(s.gaGrade)} · ` : ''}${idPart}</div>
       <div class="concept-meta" style="margin-top:4px">${catChip}</div>
     </div>`;
 }
@@ -2377,13 +2414,14 @@ function renderInputDetail(row, st, grade) {
     // In CMS unlocks only at the To Be Entered stage, and only with a passage ID —
     // earlier stages say what still blocks it.
     const stage = row.stage || rowStage(row, st, grade);
+    const cmsId = (state.setStateId || {})[k] || s.passageId;   // a state-specific ID satisfies the gate
     const cmsPart = stage === 'standards'
       ? `<span class="cms-chip disabled">Not in CMS — tag the ${STATE_NAMES[st]} standards below first</span>`
       : stage === 'peer'
         ? `<span class="cms-chip disabled">Not in CMS — create the peer revision task below</span>`
-        : s.passageId
+        : cmsId
           ? `<button class="act-btn approve" data-iact="cms|${esc(k)}">✓ Entered in CMS</button>`
-          : `<span class="cms-chip disabled" title="Add a passage ID on the Master Passage List first">Not in CMS — needs a passage ID</span>`;
+          : `<span class="cms-chip disabled" title="Add a passage ID on the Master Passage List, or a ${STATE_NAMES[st]} ID here">Not in CMS — needs a passage ID</span>`;
     actions = `${cmsPart}
        ${nativeRow ? '' : `<button class="act-btn" data-iact="override|${esc(k)}">Override</button>`}
        <button class="act-btn reject" data-iact="${dismissAct}" title="Remove from this grade">Dismiss</button>`;
@@ -2413,18 +2451,37 @@ function renderInputDetail(row, st, grade) {
   const genreLabel = (GENRES.find(g => g.key === s.genre) || {}).label;
   const istLabel = (ITEM_SET_TYPES.find(t => t.key === s.itemSetType) || {}).label;
 
+  // Review flag + per-state ID (cross-grade pushes get their own CMS ID in each state).
+  const flagNote = (state.setFlag || {})[k];
+  const isFlagged = flagNote !== undefined;
+  const stId = (state.setStateId || {})[k];
+  const flagBtn = isFlagged
+    ? `<button class="act-btn reject" data-iact="unflag|${esc(k)}">⚑ Resolve flag</button>`
+    : `<button class="act-btn" data-iact="flag|${esc(k)}" title="Pull this set out of the queue for Kennady to review">⚑ Flag for review</button>`;
+  const stIdBtn = `<button class="act-btn" data-iact="stateid|${esc(k)}" title="ID used when this set enters the ${STATE_NAMES[st]} CMS at this grade (cross-grade pushes get their own ID)">${stId ? `✎ ${st} ID` : `＋ ${st} ID`}</button>`;
+  const flagBanner = isFlagged
+    ? `<div class="align-mini" style="border-left-color:var(--red, #c0392b); margin:10px 0 0">
+         <div class="align-mini-title">⚑ Flagged for review</div>
+         <div style="font-size:13px">${flagNote ? esc(flagNote) : 'No note left — ask whoever flagged it.'}</div>
+       </div>`
+    : '';
+
   box.innerHTML = `
     <div class="detail-head ${category === 'cms' ? 'decided-approved' : ''}">
       <div class="concept-title" style="font-size:18px">${isDraft(s) ? '<span class="draft-tag">DRAFT</span> ' : ''}${esc(s.title || 'Untitled set')}</div>
       <div class="concept-meta" style="margin-top:6px">
         ${s.passageId ? `<span class="chip">ID ${esc(s.passageId)}</span>` : '<span class="chip chip-warn">No passage ID</span>'}
+        ${stId ? `<span class="chip chip-concept">${esc(st)} ID ${esc(stId)}</span>` : ''}
         ${s.gaGrade ? `<span class="chip">Grade ${esc(s.gaGrade)}</span>` : ''}
         ${istLabel ? `<span class="chip">${esc(istLabel)}</span>` : ''}
         ${genreLabel ? `<span class="chip">${esc(genreLabel)}</span>` : ''}
         ${s.gaSubtopic ? `<span class="chip">${esc(s.gaSubtopic)}</span>` : ''}
       </div>
       <div style="margin-top:10px">${stdLine}</div>
+      ${flagBanner}
       <div class="detail-actions">${actions}
+        ${stIdBtn}
+        ${flagBtn}
         <button class="act-btn" id="editOnMaster" title="Passage text, questions and prompt live on the master set — editing there updates every state">✎ Edit set</button>
       </div>
     </div>
@@ -2702,7 +2759,8 @@ function inputStages(st) {
   if (st === 'GA') stages.push({ key: 'peer', label: 'Needs Peer Task', short: 'need peer task', hint: 'create the peer revision task — Kennady · Erin' });
   stages.push(
     { key: 'enter', label: 'To Be Entered', short: 'to be entered', hint: 'tag the ECR set in CMS — Kayli · Han · Sophie' },
-    { key: 'entered', label: 'Entered in CMS', short: 'entered', hint: 'done' });
+    { key: 'entered', label: 'Entered in CMS', short: 'entered', hint: 'done' },
+    { key: 'flagged', label: '⚑ Flagged', short: 'flagged', hint: 'pulled out of the queue for Kennady to review' });
   return stages;
 }
 
@@ -2715,6 +2773,8 @@ function questionsTagged(s, st) {
 
 function rowStage(row, st, grade) {
   const { set: s, category } = row;
+  // A raised flag beats every other stage — the set leaves its queue until resolved.
+  if ((state.setFlag || {})[inputKey(s.id, st, grade)] !== undefined) return 'flagged';
   if (category === 'cms') return 'entered';
   if (category === 'needs') return 'approval';
   if (!questionsTagged(s, st)) return 'standards';
@@ -2734,6 +2794,27 @@ function handleInputAction(spec) {
   const [stt, grd] = sg.split(':');
   if (act === 'override') { state.ui.overrideKey = key; renderInput(); return; }
   if (act === 'canceloverride') { state.ui.overrideKey = null; renderInput(); return; }
+  if (act === 'flag') {
+    const note = prompt('Flag this set for Kennady to review.\nWhat looks wrong? (optional note)', '');
+    if (note === null) return;
+    setFlagValue(key, note.trim());
+    pushState(); renderInput(); toast('⚑ Flagged — moved to the Flagged list');
+    return;
+  }
+  if (act === 'unflag') {
+    setFlagValue(key, undefined);
+    pushState(); renderInput(); toast('Flag resolved — back in its queue');
+    return;
+  }
+  if (act === 'stateid') {
+    const cur = (state.setStateId || {})[key] || '';
+    const v = prompt(`${STATE_NAMES[stt]} passage ID for Grade ${grd} (leave blank to remove):`, cur);
+    if (v === null) return;
+    state.setStateId = state.setStateId || {};
+    if (v.trim()) state.setStateId[key] = v.trim(); else delete state.setStateId[key];
+    pushState(); renderInput(); toast(v.trim() ? `${STATE_NAMES[stt]} ID saved` : `${STATE_NAMES[stt]} ID removed`);
+    return;
+  }
   if (act === 'cms') { state.setCms[key] = true; pushState(); renderInput(); toast('Marked entered in CMS'); }
   else if (act === 'uncms') { delete state.setCms[key]; pushState(); renderInput(); toast('CMS mark removed'); }
   else if (act === 'dismiss') {
