@@ -1,0 +1,1362 @@
+[
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.R.1.1",
+    "strand": "Reading Prose and Poetry",
+    "description": "Identify plot structure and describe main story elements in a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.R.1.2",
+    "strand": "Reading Prose and Poetry",
+    "description": "Identify and explain a theme of a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.R.1.3",
+    "strand": "Reading Prose and Poetry",
+    "description": "Identify different characters’ perspectives in a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.R.1.4",
+    "strand": "Reading Prose and Poetry",
+    "description": "Identify rhyme schemes in poems."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.R.2.1",
+    "strand": "Reading Informational Text",
+    "description": "Explain how text features—including titles, headings, captions, graphs, maps, glossaries, and/or illustrations—contribute to the meaning of texts."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.R.2.2",
+    "strand": "Reading Informational Text",
+    "description": "Identify the central idea and relevant details in a text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.R.2.3",
+    "strand": "Reading Informational Text",
+    "description": "Explain an author’s purpose in an informational text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.R.2.4",
+    "strand": "Reading Informational Text",
+    "description": "Explain an author’s opinion(s) and supporting evidence."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.R.3.1",
+    "strand": "Reading Across Genres",
+    "description": "Identify and explain similes, idioms, and alliteration in text(s)."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.R.3.2",
+    "strand": "Reading Across Genres",
+    "description": "Retell a text to enhance comprehension.",
+    "elements": [
+      "a. Use main story elements in a logical sequence for a literary text.",
+      "b. Use the central idea and relevant details for an informational text."
+    ]
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.R.3.3",
+    "strand": "Reading Across Genres",
+    "description": "Compare and contrast important details presented by two texts on the same topic or theme."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.C.1.1",
+    "strand": "Communicating Through Writing",
+    "description": "Demonstrate legible printing skills."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.C.1.2",
+    "strand": "Communicating Through Writing",
+    "description": "Write personal or fictional narratives using a logical sequence of events, transitions, and an ending."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.C.1.3",
+    "strand": "Communicating Through Writing",
+    "description": "Write opinions about a topic or text with reasons supported by details from a source, use transitions, and provide a conclusion."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.C.1.4",
+    "strand": "Communicating Through Writing",
+    "description": "Write expository texts about a topic, using a source, providing an introduction, facts, transitions, and a conclusion."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.C.1.5",
+    "strand": "Communicating Through Writing",
+    "description": "Improve writing as needed by planning, revising, and editing with guidance and support from adults and feedback from peers."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.C.2.1",
+    "strand": "Communicating Orally",
+    "description": "Present information orally using complete sentences, appropriate volume, and clear pronunciation."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.C.3.1",
+    "strand": "Following Conventions",
+    "description": "Follow the rules of standard English grammar, punctuation, capitalization, and spelling appropriate to grade level."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.C.4.1",
+    "strand": "Researching",
+    "description": "Participate in research to gather information to answer a question about a single topic using multiple sources."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.C.5.1",
+    "strand": "Creating and Collaborating",
+    "description": "Use one or more multimedia element(s) to enhance oral or written tasks."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.C.5.2",
+    "strand": "Creating and Collaborating",
+    "description": "Use digital tools to produce and publish writing individually or with peers and with support from adults."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.V.1.1",
+    "strand": "Finding Meaning",
+    "description": "Use grade-level academic vocabulary appropriately in speaking and writing."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.V.1.2",
+    "strand": "Finding Meaning",
+    "description": "Identify and use base words and affixes to determine the meaning of unfamiliar words in grade-level content."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.V.1.3",
+    "strand": "Finding Meaning",
+    "description": "Identify and use context clues, word relationships, reference materials, and/or background knowledge to determine the meaning of unknown words."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.R.1.1",
+    "strand": "Reading Prose and Poetry",
+    "description": "Explain how one or more characters develop throughout the plot in a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.R.1.2",
+    "strand": "Reading Prose and Poetry",
+    "description": "Explain a theme and how it develops, using details, in a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.R.1.3",
+    "strand": "Reading Prose and Poetry",
+    "description": "Explain different characters’ perspectives in a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.R.1.4",
+    "strand": "Reading Prose and Poetry",
+    "description": "Identify types of poems: free verse, rhymed verse, haiku, and limerick."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.R.2.1",
+    "strand": "Reading Informational Text",
+    "description": "Explain how text features contribute to meaning and identify the text structures of chronology, comparison, and cause/effect in texts."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.R.2.2",
+    "strand": "Reading Informational Text",
+    "description": "Identify the central idea and explain how relevant details support that idea in a text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.R.2.3",
+    "strand": "Reading Informational Text",
+    "description": "Explain the development of an author's purpose in an informational text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.R.2.4",
+    "strand": "Reading Informational Text",
+    "description": "Identify an author’s claim and explain how an author uses evidence to support the claim."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.R.3.1",
+    "strand": "Reading Across Genres",
+    "description": "Identify and explain metaphors, personification, and hyperbole in text(s)."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.R.3.2",
+    "strand": "Reading Across Genres",
+    "description": "Summarize a text to enhance comprehension.",
+    "elements": [
+      "a. Include plot and theme for a literary text.",
+      "b. Use the central idea and relevant details for an informational text."
+    ]
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.R.3.3",
+    "strand": "Reading Across Genres",
+    "description": "Compare and contrast how two authors present information on the same topic or theme."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.C.1.1",
+    "strand": "Communicating Through Writing",
+    "description": "Write in cursive all upper- and lowercase letters."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.C.1.2",
+    "strand": "Communicating Through Writing",
+    "description": "Write personal or fictional narratives using a logical sequence of events, appropriate descriptions, dialogue, a variety of transitional words or phrases, and an ending."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.C.1.3",
+    "strand": "Communicating Through Writing",
+    "description": "Write opinions about a topic or text, include reasons supported by details from one or more sources, use transitions, and provide a conclusion."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.C.1.4",
+    "strand": "Communicating Through Writing",
+    "description": "Write expository texts about a topic, using one or more sources, providing an introduction, facts and details, some elaboration, transitions, and a conclusion."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.C.1.5",
+    "strand": "Communicating Through Writing",
+    "description": "Improve writing as needed by planning, revising, and editing with guidance and support from adults and feedback from peers."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.C.2.1",
+    "strand": "Communicating Orally",
+    "description": "Present information orally, in a logical sequence, using nonverbal cues, appropriate volume, and clear pronunciation."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.C.3.1",
+    "strand": "Following Conventions",
+    "description": "Follow the rules of standard English grammar, punctuation, capitalization, and spelling appropriate to grade level."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.C.4.1",
+    "strand": "Researching",
+    "description": "Conduct research to answer a question, organizing information about the topic from multiple sources."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.C.5.1",
+    "strand": "Creating and Collaborating",
+    "description": "Use two or more multimedia elements to enhance oral or written tasks."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.C.5.2",
+    "strand": "Creating and Collaborating",
+    "description": "Use digital writing tools individually or collaboratively to plan, draft, and revise writing."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.V.1.1",
+    "strand": "Finding Meaning",
+    "description": "Use grade-level academic vocabulary appropriately in speaking and writing."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.V.1.2",
+    "strand": "Finding Meaning",
+    "description": "Identify and apply knowledge of common Greek and Latin roots, base words, and affixes to determine the meaning of unfamiliar words in grade-level content."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.V.1.3",
+    "strand": "Finding Meaning",
+    "description": "Use context clues, figurative language, word relationships, reference materials, and/or background knowledge to determine the meaning of multiple-meaning and unknown words and phrases, appropriate to grade level."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.R.1.1",
+    "strand": "Reading Prose and Poetry",
+    "description": "Explain how setting, events, conflict, and character development contribute to the plot in a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.R.1.2",
+    "strand": "Reading Prose and Poetry",
+    "description": "Explain a stated or implied theme and how it develops, using details, in a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.R.1.3",
+    "strand": "Reading Prose and Poetry",
+    "description": "Identify the narrator’s point of view and explain the difference between a narrator’s point of view and character perspective in a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.R.1.4",
+    "strand": "Reading Prose and Poetry",
+    "description": "Explain how rhyme and structure create meaning in a poem."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.R.2.1",
+    "strand": "Reading Informational Text",
+    "description": "Explain how text features contribute to the meaning and identify the text structures of problem/solution, sequence, and description in texts."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.R.2.2",
+    "strand": "Reading Informational Text",
+    "description": "Explain how relevant details support the central idea, implied or explicit."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.R.2.3",
+    "strand": "Reading Informational Text",
+    "description": "Explain an author’s perspective toward a topic in an informational text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.R.2.4",
+    "strand": "Reading Informational Text",
+    "description": "Explain an author’s claim and the reasons and evidence used to support the claim."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.R.3.1",
+    "strand": "Reading Across Genres",
+    "description": "Explain how figurative language contributes to meaning in text(s)."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.R.3.2",
+    "strand": "Reading Across Genres",
+    "description": "Summarize a text to enhance comprehension.",
+    "elements": [
+      "a. Include plot and theme for a literary text.",
+      "b. Include the central idea and relevant details for an informational text."
+    ]
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.R.3.3",
+    "strand": "Reading Across Genres",
+    "description": "Compare and contrast accounts of the same event using primary and/or secondary sources."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.C.1.1",
+    "strand": "Communicating Through Writing",
+    "description": "Demonstrate legible cursive writing skills."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.C.1.2",
+    "strand": "Communicating Through Writing",
+    "description": "Write personal or fictional narratives using a logical sequence of events and demonstrating an effective use of techniques such as descriptions and transitional words and phrases."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.C.1.3",
+    "strand": "Communicating Through Writing",
+    "description": "Write to make a claim supporting a perspective with logical reasons, using evidence from multiple sources, elaboration, and an organizational structure with transitions."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.C.1.4",
+    "strand": "Communicating Through Writing",
+    "description": "Write expository texts about a topic, using multiple sources, elaboration, and an organizational structure with transitions."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.C.1.5",
+    "strand": "Communicating Through Writing",
+    "description": "Improve writing by planning, revising, and editing, with guidance and support from adults and feedback from peers."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.C.2.1",
+    "strand": "Communicating Orally",
+    "description": "Present information orally, in a logical sequence, using nonverbal cues, appropriate volume, and clear pronunciation."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.C.3.1",
+    "strand": "Following Conventions",
+    "description": "Follow the rules of standard English grammar, punctuation, capitalization, and spelling appropriate to grade level."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.C.4.1",
+    "strand": "Researching",
+    "description": "Conduct research to answer a question, organizing information about the topic, using multiple valid sources."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.C.5.1",
+    "strand": "Creating and Collaborating",
+    "description": "Arrange multimedia elements to create emphasis in oral or written tasks."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.C.5.2",
+    "strand": "Creating and Collaborating",
+    "description": "Use digital writing tools individually or collaboratively to plan, draft, and revise writing."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.V.1.1",
+    "strand": "Finding Meaning",
+    "description": "Use grade-level academic vocabulary appropriately in speaking and writing."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.V.1.2",
+    "strand": "Finding Meaning",
+    "description": "Apply knowledge of common Greek and Latin roots, base words, and affixes to determine the meaning of unfamiliar words in grade-level content."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.V.1.3",
+    "strand": "Finding Meaning",
+    "description": "Use context clues, figurative language, word relationships, reference materials, and/or background knowledge to determine the meaning of multiple-meaning and unknown words and phrases, appropriate to grade level."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.R.1.1",
+    "strand": "Reading Prose and Poetry",
+    "description": "Analyze how setting, events, conflict, and characterization contribute to the plot in a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.R.1.2",
+    "strand": "Reading Prose and Poetry",
+    "description": "Explain the development of stated or implied theme(s) throughout a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.R.1.3",
+    "strand": "Reading Prose and Poetry",
+    "description": "Describe how an author develops a character’s perspective in a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.R.1.4",
+    "strand": "Reading Prose and Poetry",
+    "description": "Explain how figurative language and other poetic elements work together in a poem."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.R.2.1",
+    "strand": "Reading Informational Text",
+    "description": "Explain how text structures and/or features contribute to the overall meaning of texts."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.R.2.2",
+    "strand": "Reading Informational Text",
+    "description": "Explain how relevant details support the central idea(s), implied or explicit."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.R.2.3",
+    "strand": "Reading Informational Text",
+    "description": "Analyze an author’s purpose and/or perspective in an informational text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.R.2.4",
+    "strand": "Reading Informational Text",
+    "description": "Track the development of an argument, identifying the specific claim(s), evidence, and reasoning."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.R.3.1",
+    "strand": "Reading Across Genres",
+    "description": "Analyze how figurative language contributes to meaning in text(s)."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.R.3.2",
+    "strand": "Reading Across Genres",
+    "description": "Summarize a text to enhance comprehension.",
+    "elements": [
+      "a. Include plot and theme for a literary text.",
+      "b. Include the central idea and relevant details for an informational text."
+    ]
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.R.3.3",
+    "strand": "Reading Across Genres",
+    "description": "Compare and contrast primary and secondary sources related to the same topic."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.C.1.1",
+    "strand": "Communicating Through Writing",
+    "description": "Demonstrate fluent and legible cursive writing skills."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.C.1.2",
+    "strand": "Communicating Through Writing",
+    "description": "Write personal or fictional narratives using a logical sequence of events and demonstrating an effective use of techniques such as dialogue, description, and transitional words and phrases."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.C.1.3",
+    "strand": "Communicating Through Writing",
+    "description": "Write to make a claim supporting a perspective with logical reasons, relevant evidence from sources, elaboration, and an organizational structure with varied transitions."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.C.1.4",
+    "strand": "Communicating Through Writing",
+    "description": "Write expository texts about a topic using multiple sources and including an organizational structure, relevant elaboration, and varied transitions."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.C.1.5",
+    "strand": "Communicating Through Writing",
+    "description": "Improve writing by planning, revising, and editing, with guidance and support from adults and feedback from peers."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.C.2.1",
+    "strand": "Communicating Orally",
+    "description": "Present information orally, in a logical sequence, using nonverbal cues, appropriate volume, clear pronunciation, and appropriate pacing."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.C.3.1",
+    "strand": "Following Conventions",
+    "description": "Follow the rules of standard English grammar, punctuation, capitalization, and spelling appropriate to grade level."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.C.4.1",
+    "strand": "Researching",
+    "description": "Conduct research to answer a question, organizing information about the topic and using multiple reliable and valid sources."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.C.5.1",
+    "strand": "Creating and Collaborating",
+    "description": "Arrange multimedia elements to create emphasis and/or clarity in oral or written tasks."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.C.5.2",
+    "strand": "Creating and Collaborating",
+    "description": "Use digital writing tools individually or collaboratively to plan, draft, and revise writing."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.V.1.1",
+    "strand": "Finding Meaning",
+    "description": "Use grade-level academic vocabulary appropriately in speaking and writing."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.V.1.2",
+    "strand": "Finding Meaning",
+    "description": "Apply knowledge of Greek and Latin roots and affixes, recognizing the connection between affixes and parts of speech, to determine the meaning of unfamiliar words in grade-level content."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.V.1.3",
+    "strand": "Finding Meaning",
+    "description": "Use context clues, figurative language, word relationships, reference materials, and/or background knowledge to determine the meaning of multiple-meaning and unknown words and phrases, appropriate to grade level."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.1.1",
+    "strand": "Reading Prose and Poetry",
+    "description": "Analyze how the interaction between characters contributes to the development of a plot in a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.1.2",
+    "strand": "Reading Prose and Poetry",
+    "description": "Analyze the development of stated or implied theme(s) throughout a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.1.3",
+    "strand": "Reading Prose and Poetry",
+    "description": "Explain the influence of multiple narrators and/or shifts in point of view in a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.1.4",
+    "strand": "Reading Prose and Poetry",
+    "description": "Describe the impact of various poetic forms on meaning and style."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.2.1",
+    "strand": "Reading Informational Text",
+    "description": "Explain how individual text sections and/or features convey meaning in texts."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.2.2",
+    "strand": "Reading Informational Text",
+    "description": "Analyze the central idea(s), implied or explicit, and its development throughout a text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.2.3",
+    "strand": "Reading Informational Text",
+    "description": "Analyze authors’ purpose(s) in multiple accounts of the same event or topic."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.2.4",
+    "strand": "Reading Informational Text",
+    "description": "Track the development of an argument, identifying the types of reasoning used."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.3.1",
+    "strand": "Reading Across Genres",
+    "description": "Explain how figurative language contributes to tone and meaning in text(s)."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.3.2",
+    "strand": "Reading Across Genres",
+    "description": "Paraphrase content from grade-level texts."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.3.3",
+    "strand": "Reading Across Genres",
+    "description": "Compare and contrast how authors from different time periods address the same or related topics."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.3.4",
+    "strand": "Reading Across Genres",
+    "description": "Identify rhetorical appeals in a text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.C.1.2",
+    "strand": "Communicating Through Writing",
+    "description": "Write personal or fictional narratives using narrative techniques, precise words and phrases, and figurative language."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.C.1.3",
+    "strand": "Communicating Through Writing",
+    "description": "Write and support a claim using logical reasoning, relevant evidence from sources, elaboration, and a logical organizational structure with varied transitions."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.C.1.4",
+    "strand": "Communicating Through Writing",
+    "description": "Write expository texts to explain and/or analyze information from multiple sources, using a logical organizational structure, relevant elaboration, and varied transitions."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.C.1.5",
+    "strand": "Communicating Through Writing",
+    "description": "Improve writing by planning, revising, and editing, considering feedback from adults and peers."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.C.2.1",
+    "strand": "Communicating Orally",
+    "description": "Present information orally, in a logical sequence, using nonverbal cues, appropriate volume, clear pronunciation, and appropriate pacing."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.C.3.1",
+    "strand": "Following Conventions",
+    "description": "Follow the rules of standard English grammar, punctuation, capitalization, and spelling appropriate to grade level."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.C.4.1",
+    "strand": "Researching",
+    "description": "Conduct research to answer a question, drawing on multiple reliable and valid sources, and refocusing the inquiry when appropriate."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.C.5.1",
+    "strand": "Creating and Collaborating",
+    "description": "Integrate diverse digital media to enhance audience engagement in oral or written tasks."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.C.5.2",
+    "strand": "Creating and Collaborating",
+    "description": "Use digital tools to produce writing."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.V.1.1",
+    "strand": "Finding Meaning",
+    "description": "Integrate academic vocabulary appropriate to grade level in speaking and writing."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.V.1.2",
+    "strand": "Finding Meaning",
+    "description": "Apply knowledge of Greek and Latin roots and affixes to determine meanings of words and phrases in grade-level content."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.V.1.3",
+    "strand": "Finding Meaning",
+    "description": "Apply knowledge of context clues, figurative language, word relationships, reference materials, and/or background knowledge to determine the connotative and denotative meaning of words and phrases, appropriate to grade level."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.1.1",
+    "strand": "Reading Prose and Poetry",
+    "description": "Analyze the impact of setting on character development and plot in a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.1.2",
+    "strand": "Reading Prose and Poetry",
+    "description": "Compare two or more themes and their development throughout a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.1.3",
+    "strand": "Reading Prose and Poetry",
+    "description": "Explain the influence of narrator(s), including unreliable narrator(s), and/or shifts in point of view in a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.1.4",
+    "strand": "Reading Prose and Poetry",
+    "description": "Analyze the impact of various poetic forms on meaning and style."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.2.1",
+    "strand": "Reading Informational Text",
+    "description": "Explain how individual text sections and/or features convey a purpose in texts."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.2.2",
+    "strand": "Reading Informational Text",
+    "description": "Compare two or more central ideas and their development throughout a text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.2.3",
+    "strand": "Reading Informational Text",
+    "description": "Explain how an author establishes and achieves purpose(s) through diction and syntax."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.2.4",
+    "strand": "Reading Informational Text",
+    "description": "Track the development of an argument, analyzing the types of reasoning used and their effectiveness."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.3.1",
+    "strand": "Reading Across Genres",
+    "description": "Analyze how figurative language contributes to tone and meaning and explain examples of allusions in text(s)."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.3.2",
+    "strand": "Reading Across Genres",
+    "description": "Paraphrase content from grade-level texts."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.3.3",
+    "strand": "Reading Across Genres",
+    "description": "Compare and contrast how authors with differing perspectives address the same or related topics or themes."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.3.4",
+    "strand": "Reading Across Genres",
+    "description": "Explain the meaning and/or significance of rhetorical devices in a text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.C.1.2",
+    "strand": "Communicating Through Writing",
+    "description": "Write personal or fictional narratives using narrative techniques, a recognizable point of view, precise words and phrases, and figurative language."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.C.1.3",
+    "strand": "Communicating Through Writing",
+    "description": "Write and support a claim using logical reasoning, relevant evidence from sources, elaboration, a logical organizational structure with varied transitions, and acknowledging at least one counterclaim."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.C.1.4",
+    "strand": "Communicating Through Writing",
+    "description": "Write expository texts to explain and analyze information from multiple sources, using relevant supporting details and a logical organizational pattern."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.C.1.5",
+    "strand": "Communicating Through Writing",
+    "description": "Improve writing by planning, revising, and editing, considering feedback from adults and peers."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.C.2.1",
+    "strand": "Communicating Orally",
+    "description": "Present information orally, in a logical sequence, emphasizing key points that support the central idea."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.C.3.1",
+    "strand": "Following Conventions",
+    "description": "Follow the rules of standard English grammar, punctuation, capitalization, and spelling appropriate to grade level."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.C.4.1",
+    "strand": "Researching",
+    "description": "Conduct research to answer a question, drawing on multiple reliable and valid sources, and generating additional questions for further research."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.C.5.1",
+    "strand": "Creating and Collaborating",
+    "description": "Integrate diverse digital media to build cohesion in oral or written tasks."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.C.5.2",
+    "strand": "Creating and Collaborating",
+    "description": "Use digital tools to produce and share writing."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.V.1.1",
+    "strand": "Finding Meaning",
+    "description": "Integrate academic vocabulary appropriate to grade level in speaking and writing."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.V.1.2",
+    "strand": "Finding Meaning",
+    "description": "Apply knowledge of Greek and Latin roots and affixes to determine meanings of words and phrases in grade-level content."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.V.1.3",
+    "strand": "Finding Meaning",
+    "description": "Apply knowledge of context clues, figurative language, word relationships, reference materials, and/or background knowledge to determine the connotative and denotative meaning of words and phrases, appropriate to grade level."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.1.1",
+    "strand": "Reading Prose and Poetry",
+    "description": "Analyze the interaction between character development, setting, and plot in a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.1.2",
+    "strand": "Reading Prose and Poetry",
+    "description": "Analyze two or more themes and their development throughout a literary text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.1.3",
+    "strand": "Reading Prose and Poetry",
+    "description": "Analyze how an author develops and individualizes the perspectives of different characters."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.1.4",
+    "strand": "Reading Prose and Poetry",
+    "description": "Analyze structure, sound, imagery, and figurative language in poetry."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.2.1",
+    "strand": "Reading Informational Text",
+    "description": "Analyze how individual text sections and/or features convey a purpose and/or meaning in texts."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.2.2",
+    "strand": "Reading Informational Text",
+    "description": "Analyze two or more central ideas and their development throughout a text."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.2.3",
+    "strand": "Reading Informational Text",
+    "description": "Explain how an author establishes and achieves purpose(s) through rhetorical appeals and/or figurative language."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.2.4",
+    "strand": "Reading Informational Text",
+    "description": "Track the development of an argument, analyzing the types of reasoning used and their effectiveness, identifying ways in which the argument could be improved."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.3.1",
+    "strand": "Reading Across Genres",
+    "description": "Analyze how figurative language contributes to meaning and explain examples of symbolism in text(s)."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.3.2",
+    "strand": "Reading Across Genres",
+    "description": "Paraphrase content from grade-level texts."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.3.3",
+    "strand": "Reading Across Genres",
+    "description": "Compare and contrast the use or discussion of archetypes in texts."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.3.4",
+    "strand": "Reading Across Genres",
+    "description": "Explain how an author uses rhetorical devices to support or advance an appeal."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.C.1.2",
+    "strand": "Communicating Through Writing",
+    "description": "Write personal or fictional narratives using narrative techniques, varied transitions, and a clearly established point of view."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.C.1.3",
+    "strand": "Communicating Through Writing",
+    "description": "Write to argue a position, supporting at least one claim and rebutting at least one counterclaim with logical reasoning, credible evidence from sources, elaboration, and using a logical organizational structure."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.C.1.4",
+    "strand": "Communicating Through Writing",
+    "description": "Write expository texts to explain and analyze information from multiple sources, using relevant supporting details, logical organization, and varied purposeful transitions."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.C.1.5",
+    "strand": "Communicating Through Writing",
+    "description": "Improve writing by planning, editing, considering feedback from adults and peers, and revising for clarity and cohesiveness."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.C.2.1",
+    "strand": "Communicating Orally",
+    "description": "Present information orally, in a logical sequence, supporting the central idea with credible evidence."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.C.3.1",
+    "strand": "Following Conventions",
+    "description": "Follow the rules of standard English grammar, punctuation, capitalization, and spelling appropriate to grade level."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.C.4.1",
+    "strand": "Researching",
+    "description": "Conduct research to answer a question, drawing on multiple reliable and valid sources, and generating additional questions for further research."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.C.5.1",
+    "strand": "Creating and Collaborating",
+    "description": "Integrate diverse digital media to emphasize the relevance of a topic or idea in oral or written tasks."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.C.5.2",
+    "strand": "Creating and Collaborating",
+    "description": "Use a variety of digital tools to collaborate with others to produce writing."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.V.1.1",
+    "strand": "Finding Meaning",
+    "description": "Integrate academic vocabulary appropriate to grade level in speaking and writing."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.V.1.2",
+    "strand": "Finding Meaning",
+    "description": "Apply knowledge of Greek and Latin roots and affixes to determine meanings of words and phrases in grade-level content."
+  },
+  {
+    "state": "FL",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.V.1.3",
+    "strand": "Finding Meaning",
+    "description": "Apply knowledge of context clues, figurative language, word relationships, reference materials, and/or background knowledge to determine the connotative and denotative meaning of words and phrases, appropriate to grade level."
+  }
+]

@@ -16,12 +16,12 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202607301925';   // replaced with the deploy stamp
+const APP_BUILD = '202608032235';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
-const STATES = ['OH', 'GA', 'TX'];
-const STATE_NAMES = { OH: 'Ohio', GA: 'Georgia', TX: 'Texas', ALL: 'All States' };
+const STATES = ['OH', 'GA', 'TX', 'FL'];
+const STATE_NAMES = { OH: 'Ohio', GA: 'Georgia', TX: 'Texas', FL: 'Florida', ALL: 'All States' };
 const SUBJECT_NAMES = { social_studies: 'Social Studies', science: 'Science', ela: 'ELAR' };
 function otherStates(st) { return STATES.filter(s => s !== st); }
 
@@ -67,6 +67,16 @@ function gaSubtopicsFor(grade, genre) {
   return GA_SUBTOPICS[band][genre] || [];
 }
 function gradeLabel(g) { return g === 'All' ? 'All grades' : `G${g}`; }
+// Florida codes some benchmarks to a grade BAND (e.g. SS.68.AA.* -> grade "6-8").
+// Every single-grade comparison goes through here so banded standards surface at
+// each grade the band covers.
+function gradeMatches(stdGrade, grade) {
+  const g = String(stdGrade);
+  if (g === 'All') return true;
+  const m = g.match(/^(\d+)-(\d+)$/);
+  if (m) return +grade >= +m[1] && +grade <= +m[2];
+  return g === String(grade);
+}
 // Universal (all-state) standards whose domain matches a hierarchy subtopic
 function universalForDomain(domain) {
   if (!domain) return [];
@@ -109,7 +119,7 @@ function primaryScope(s) {
   const grade = s.gaGrade, subtopic = s.gaSubtopic;
   if (!grade || !subtopic) return null;
   return std =>
-    (std.state === 'ALL' || std.grade === 'All' || String(std.grade) === String(grade)) &&
+    (std.state === 'ALL' || gradeMatches(std.grade, grade)) &&
     matchesSubtopic(std, subtopic);
 }
 
@@ -117,7 +127,7 @@ function primaryScope(s) {
 function questionScope(s) {
   if (!s.gaGrade) return null;
   return std => std.subject === 'ela' &&
-    (std.state === 'ALL' || std.grade === 'All' || String(std.grade) === String(s.gaGrade));
+    (std.state === 'ALL' || gradeMatches(std.grade, s.gaGrade));
 }
 
 const state = {
@@ -697,6 +707,7 @@ const DATA_FILES = [
   'data/ohio_science.json', 'data/ohio_social_studies.json', 'data/ohio_ela.json',
   'data/georgia_science.json', 'data/georgia_social_studies.json', 'data/georgia_ela.json',
   'data/texas_science.json', 'data/texas_social_studies.json', 'data/texas_ela.json',
+  'data/florida_science.json', 'data/florida_social_studies.json', 'data/florida_ela.json',
   'data/universal_ela.json', // state:"ALL" — domains that apply everywhere, shown for every state
 ];
 
@@ -900,7 +911,7 @@ function renderGradeRow(containerId, activeGrade, onPick) {
 /* ---------- explorer ---------- */
 function currentStandards() {
   const { expState, expSubject, expGrade, search } = state.ui;
-  let list = state.standards.filter(s => s.state === expState && s.subject === expSubject && s.grade === expGrade);
+  let list = state.standards.filter(s => s.state === expState && s.subject === expSubject && gradeMatches(s.grade, expGrade));
   if (search) {
     const q = search.toLowerCase();
     list = list.filter(s => s.code.toLowerCase().includes(q) || s.description.toLowerCase().includes(q) || (s.strand || '').toLowerCase().includes(q));
@@ -983,7 +994,8 @@ const MAX_GRADE_SPAN = 1;
 function maxSpanFor(subject) { return subject === 'ela' ? 0 : MAX_GRADE_SPAN; }
 function gradeNum(g) { return g === 'K' ? 0 : parseInt(g, 10); }
 function gradeSpan(a, b) {
-  if (!a || !b || a.grade === 'All' || b.grade === 'All') return 0;
+  if (!a || !b || a.grade === 'All' || b.grade === 'All'
+      || String(a.grade).includes('-') || String(b.grade).includes('-')) return 0;  // banded = no span penalty
   return Math.abs(gradeNum(a.grade) - gradeNum(b.grade));
 }
 function withinGradeSpan(a, b, subject) {
@@ -2069,7 +2081,7 @@ function pushKeysFor(setId, st, grade) {
   const std = s && tagStd(s.standard);
   if (!std || std.state === 'ALL') return [];
   return alignedTo(std)
-    .filter(h => h.std.state === st && String(h.std.grade) === String(grade) && withinGradeSpan(std, h.std, std.subject))
+    .filter(h => h.std.state === st && gradeMatches(h.std.grade, grade) && withinGradeSpan(std, h.std, std.subject))
     .map(h => pushKey(setId, h.std));
 }
 
@@ -2169,7 +2181,7 @@ function detailQuestionHtml(q, i, s, st, grade) {
       // Recommend from the alignment work already done: the question's native standard's
       // approved alignments into this state at this grade. Accept in one click, or pick another.
       const recs = nstd
-        ? alignedTo(nstd).filter(h => h.std.state === st && String(h.std.grade) === String(grade)).slice(0, 3)
+        ? alignedTo(nstd).filter(h => h.std.state === st && gradeMatches(h.std.grade, grade)).slice(0, 3)
         : [];
       inner = recs.length
         ? `<div class="q-recs">
@@ -2198,7 +2210,7 @@ function detailQuestionHtml(q, i, s, st, grade) {
 
 function qstateScope(grade) {
   return std => std.subject === 'ela' &&
-    (std.grade === 'All' || String(std.grade) === String(grade));
+    gradeMatches(std.grade, grade);
 }
 
 /* ---------- AI builder: Georgia Peer Revision Task ----------
@@ -2279,7 +2291,7 @@ const PEER_SCHEMA = {
 
 async function buildPeerTask(s, grade) {
   const pool = state.standards
-    .filter(x => x.state === 'GA' && x.subject === 'ela' && (x.grade === 'All' || String(x.grade) === String(grade)))
+    .filter(x => x.state === 'GA' && x.subject === 'ela' && gradeMatches(x.grade, grade))
     .map(x => `${x.code} — ${x.description}`);
   const passages = s.passages.map((p, i) =>
     `PASSAGE ${i + 1}${p.title ? ` — ${p.title}` : ''}\n${p.text}`).join('\n\n');
@@ -2396,7 +2408,7 @@ function renderInputDetail(row, st, grade) {
   if (overriding) {
     // Inline picker: any standard in this state at this grade (same subject as the alignment).
     const opts = state.standards
-      .filter(x => x.state === st && x.subject === assigned.subject && String(x.grade) === String(grade))
+      .filter(x => x.state === st && x.subject === assigned.subject && gradeMatches(x.grade, grade))
       .sort((a, b) => a.code.localeCompare(b.code));
     actions = `<select class="ps-input" data-override="${esc(k)}" style="max-width:100%">
         <option value="">Choose the ${STATE_NAMES[st]} Grade ${grade} standard…</option>
