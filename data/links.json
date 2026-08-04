@@ -6782,6 +6782,4016 @@
    "confidence": "moderate",
    "rationale": "OH's evidence-based analysis of explicit and inferred meaning in informational text matches GA's drawing on accumulated knowledge to analyze texts, supporting or challenging ideas.",
    "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0001",
+   "subject": "ela",
+   "oh": "RL.2.2",
+   "state": "FL",
+   "code": "ELA.2.R.1.2",
+   "confidence": "strong",
+   "rationale": "Both target identifying the lesson/moral or theme of a literary text; FL says 'theme' where Ohio says 'lesson or moral.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0002",
+   "subject": "ela",
+   "oh": "RL.2.2",
+   "state": "FL",
+   "code": "ELA.2.R.3.2a",
+   "confidence": "strong",
+   "rationale": "Ohio's retell-stories component matches FL's retell of a literary text using main story elements; FL requires a logical sequence, Ohio emphasizes fables/folktales from diverse cultures.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0003",
+   "subject": "ela",
+   "oh": "RL.2.3",
+   "state": "FL",
+   "code": "ELA.2.R.1.1",
+   "confidence": "moderate",
+   "rationale": "Both address characters within story events; Ohio focuses on how characters respond to major events, while FL is broader plot structure and main story elements.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0004",
+   "subject": "ela",
+   "oh": "RL.2.4",
+   "state": "FL",
+   "code": "ELA.2.R.1.4",
+   "confidence": "moderate",
+   "rationale": "Both address sound patterns in poems; Ohio covers rhythm/rhyme/repeated lines supplying meaning, FL is narrower (identify rhyme schemes).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0005",
+   "subject": "ela",
+   "oh": "RL.2.4",
+   "state": "FL",
+   "code": "ELA.2.R.3.1",
+   "confidence": "moderate",
+   "rationale": "Alliteration appears explicitly in both; FL also covers similes/idioms while Ohio focuses on rhythm and meaning in stories, poems, and songs.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0006",
+   "subject": "ela",
+   "oh": "RL.2.5",
+   "state": "FL",
+   "code": "ELA.2.R.1.1",
+   "confidence": "moderate",
+   "rationale": "Both address overall story structure; Ohio emphasizes how beginning introduces and ending concludes, FL frames it as identifying plot structure.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0007",
+   "subject": "ela",
+   "oh": "RL.2.6",
+   "state": "FL",
+   "code": "ELA.2.R.1.3",
+   "confidence": "moderate",
+   "rationale": "Both distinguish whose viewpoint is represented in a story; Ohio centers on narrator vs. character point of view, FL on identifying different characters' perspectives.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0008",
+   "subject": "ela",
+   "oh": "RL.2.9",
+   "state": "FL",
+   "code": "ELA.2.R.3.3",
+   "confidence": "moderate",
+   "rationale": "Both compare/contrast two texts; Ohio specifies versions of the same story from different authors/cultures, FL is any two texts on the same topic or theme.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0009",
+   "subject": "ela",
+   "oh": "RI.2.2",
+   "state": "FL",
+   "code": "ELA.2.R.2.2",
+   "confidence": "strong",
+   "rationale": "Both identify the main topic/central idea of an informational text; Ohio adds paragraph-level focus, FL adds relevant details.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0010",
+   "subject": "ela",
+   "oh": "RI.2.4",
+   "state": "FL",
+   "code": "ELA.2.V.1.3",
+   "confidence": "moderate",
+   "rationale": "Both determine meanings of unknown words in grade-level content; FL specifies the strategies (context clues, word relationships, reference materials).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0011",
+   "subject": "ela",
+   "oh": "RI.2.5",
+   "state": "FL",
+   "code": "ELA.2.R.2.1",
+   "confidence": "moderate",
+   "rationale": "Both center on text features (captions, glossaries, headings); Ohio uses them to locate information efficiently, FL explains how they contribute to meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0012",
+   "subject": "ela",
+   "oh": "RI.2.6",
+   "state": "FL",
+   "code": "ELA.2.R.2.3",
+   "confidence": "strong",
+   "rationale": "Both identify/explain the author's purpose in an informational text, including what the author wants to answer, explain, or describe.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0013",
+   "subject": "ela",
+   "oh": "RI.2.7",
+   "state": "FL",
+   "code": "ELA.2.R.2.1",
+   "confidence": "strong",
+   "rationale": "Both explain how visuals (images/illustrations, diagrams/graphs) contribute to and clarify an informational text; FL folds them into a broader text-features list.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0014",
+   "subject": "ela",
+   "oh": "RI.2.8",
+   "state": "FL",
+   "code": "ELA.2.R.2.4",
+   "confidence": "strong",
+   "rationale": "Both connect an author's points/opinions to the reasons or evidence that support them in an informational text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0015",
+   "subject": "ela",
+   "oh": "RI.2.9",
+   "state": "FL",
+   "code": "ELA.2.R.3.3",
+   "confidence": "strong",
+   "rationale": "Both compare and contrast the most important points/details presented by two texts on the same topic.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0016",
+   "subject": "ela",
+   "oh": "L.2.4",
+   "state": "FL",
+   "code": "ELA.2.V.1.2",
+   "confidence": "strong",
+   "rationale": "Ohio's prefix/root-word strategies match FL's use of base words and affixes to determine meanings of unfamiliar words.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0017",
+   "subject": "ela",
+   "oh": "L.2.4",
+   "state": "FL",
+   "code": "ELA.2.V.1.3",
+   "confidence": "strong",
+   "rationale": "Ohio's sentence-level context and glossary/dictionary strategies match FL's context clues and reference materials for determining unknown-word meanings.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0018",
+   "subject": "ela",
+   "oh": "L.2.5",
+   "state": "FL",
+   "code": "ELA.2.V.1.3",
+   "confidence": "moderate",
+   "rationale": "Both use word relationships to work out meaning; Ohio's shades-of-meaning/real-life-connections focus is narrower than FL's general unknown-word strategy benchmark.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0019",
+   "subject": "ela",
+   "oh": "L.2.6",
+   "state": "FL",
+   "code": "ELA.2.V.1.1",
+   "confidence": "moderate",
+   "rationale": "Both require using acquired vocabulary in speaking and writing; Ohio includes conversational words and adjectives/adverbs, FL is limited to academic vocabulary.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0020",
+   "subject": "ela",
+   "oh": "RL.3.2",
+   "state": "FL",
+   "code": "ELA.3.R.1.2",
+   "confidence": "strong",
+   "rationale": "Both determine a theme and explain how it is conveyed/develops through details in a literary text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0021",
+   "subject": "ela",
+   "oh": "RL.3.2",
+   "state": "FL",
+   "code": "ELA.3.R.3.2a",
+   "confidence": "strong",
+   "rationale": "Ohio's retell-stories component matches FL's literary summary including plot and theme; FL frames it as summarizing rather than retelling.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0022",
+   "subject": "ela",
+   "oh": "RL.3.3",
+   "state": "FL",
+   "code": "ELA.3.R.1.1",
+   "confidence": "strong",
+   "rationale": "Both explain how characters (traits, motivations, actions) develop and contribute to the plot/sequence of events.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0023",
+   "subject": "ela",
+   "oh": "RL.3.4",
+   "state": "FL",
+   "code": "ELA.3.V.1.3",
+   "confidence": "strong",
+   "rationale": "Both determine meanings of words/phrases in text including nonliteral/figurative uses; FL enumerates the strategies (context clues, figurative language, word relationships).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0024",
+   "subject": "ela",
+   "oh": "RL.3.4",
+   "state": "FL",
+   "code": "ELA.3.R.3.1",
+   "confidence": "moderate",
+   "rationale": "Ohio's literal-vs-nonliteral distinction overlaps FL's identify-and-explain figurative language, though FL names specific devices (metaphor, personification, hyperbole).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0025",
+   "subject": "ela",
+   "oh": "RL.3.6",
+   "state": "FL",
+   "code": "ELA.3.R.1.3",
+   "confidence": "moderate",
+   "rationale": "Both address whose viewpoint is expressed in a literary text; Ohio targets first- vs. third-person narration, FL targets characters' perspectives rather than narrative point of view.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0026",
+   "subject": "ela",
+   "oh": "RL.3.9",
+   "state": "FL",
+   "code": "ELA.3.R.3.3",
+   "confidence": "moderate",
+   "rationale": "Both compare two texts on the same topic or theme; Ohio compares stories by the same author (series), FL compares presentations by two different authors.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0027",
+   "subject": "ela",
+   "oh": "RI.3.2",
+   "state": "FL",
+   "code": "ELA.3.R.2.2",
+   "confidence": "strong",
+   "rationale": "Both identify the main/central idea and explain how key/relevant details support it in an informational text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0028",
+   "subject": "ela",
+   "oh": "RI.3.2",
+   "state": "FL",
+   "code": "ELA.3.R.3.2b",
+   "confidence": "strong",
+   "rationale": "Ohio's retell-key-details component matches FL's informational summary using the central idea and relevant details.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0029",
+   "subject": "ela",
+   "oh": "RI.3.3",
+   "state": "FL",
+   "code": "ELA.3.R.2.1",
+   "confidence": "moderate",
+   "rationale": "Both work with chronology and cause/effect in informational text; Ohio describes relationships between events/ideas, FL identifies these as text structures.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0030",
+   "subject": "ela",
+   "oh": "RI.3.4",
+   "state": "FL",
+   "code": "ELA.3.V.1.3",
+   "confidence": "strong",
+   "rationale": "Both determine meanings of academic and unknown words/phrases in grade-3 content; FL specifies the strategies to use.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0031",
+   "subject": "ela",
+   "oh": "RI.3.5",
+   "state": "FL",
+   "code": "ELA.3.R.2.1",
+   "confidence": "moderate",
+   "rationale": "Both center on informational text features; Ohio uses features/search tools to locate information, FL explains how features contribute to meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0032",
+   "subject": "ela",
+   "oh": "RI.3.6",
+   "state": "FL",
+   "code": "ELA.3.R.2.3",
+   "confidence": "moderate",
+   "rationale": "Both require attending to the author's stance in an informational text; Ohio distinguishes the reader's own perspective from the author's, FL explains the development of the author's purpose.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0033",
+   "subject": "ela",
+   "oh": "RI.3.7",
+   "state": "FL",
+   "code": "ELA.3.R.2.1",
+   "confidence": "moderate",
+   "rationale": "Both use visual features (maps, photographs/illustrations) plus words to build meaning from informational text; FL frames visuals within its text-features benchmark.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0034",
+   "subject": "ela",
+   "oh": "RI.3.8",
+   "state": "FL",
+   "code": "ELA.3.R.2.4",
+   "confidence": "strong",
+   "rationale": "Both describe/explain how an author's evidence supports the author's points/claim in a text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0035",
+   "subject": "ela",
+   "oh": "RI.3.9",
+   "state": "FL",
+   "code": "ELA.3.R.3.3",
+   "confidence": "strong",
+   "rationale": "Both compare and contrast how information/key points are presented in two texts on the same topic.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0036",
+   "subject": "ela",
+   "oh": "L.3.4",
+   "state": "FL",
+   "code": "ELA.3.V.1.2",
+   "confidence": "strong",
+   "rationale": "Ohio's affix and root-word strategies match FL's use of Greek/Latin roots, base words, and affixes for unfamiliar words.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0037",
+   "subject": "ela",
+   "oh": "L.3.4",
+   "state": "FL",
+   "code": "ELA.3.V.1.3",
+   "confidence": "strong",
+   "rationale": "Ohio's sentence-level context and glossary/dictionary strategies match FL's context clues and reference materials for multiple-meaning and unknown words.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0038",
+   "subject": "ela",
+   "oh": "L.3.5",
+   "state": "FL",
+   "code": "ELA.3.V.1.3",
+   "confidence": "moderate",
+   "rationale": "Ohio's literal/nonliteral distinction and word relationships overlap FL's figurative-language and word-relationship strategies; Ohio adds shades of meaning FL doesn't call out.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0039",
+   "subject": "ela",
+   "oh": "L.3.5",
+   "state": "FL",
+   "code": "ELA.3.R.3.1",
+   "confidence": "moderate",
+   "rationale": "Both address nonliteral/figurative meanings in context; FL is device-specific (metaphor, personification, hyperbole) while Ohio is broader word-relationship work.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0040",
+   "subject": "ela",
+   "oh": "L.3.6",
+   "state": "FL",
+   "code": "ELA.3.V.1.1",
+   "confidence": "strong",
+   "rationale": "Both require accurately using grade-appropriate academic vocabulary in expression; Ohio adds conversational and domain-specific words.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0041",
+   "subject": "ela",
+   "oh": "RL.4.2",
+   "state": "FL",
+   "code": "ELA.4.R.1.2",
+   "confidence": "strong",
+   "rationale": "Both determine/explain a theme (FL: stated or implied) and how it develops from details in a literary text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0042",
+   "subject": "ela",
+   "oh": "RL.4.2",
+   "state": "FL",
+   "code": "ELA.4.R.3.2a",
+   "confidence": "strong",
+   "rationale": "Ohio's summarize-incorporating-theme component matches FL's literary summary including plot and theme.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0043",
+   "subject": "ela",
+   "oh": "RL.4.3",
+   "state": "FL",
+   "code": "ELA.4.R.1.1",
+   "confidence": "strong",
+   "rationale": "Both use specific text details to examine character, setting, and events; FL adds explaining their contribution to plot.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0044",
+   "subject": "ela",
+   "oh": "RL.4.4",
+   "state": "FL",
+   "code": "ELA.4.V.1.3",
+   "confidence": "moderate",
+   "rationale": "Both determine meanings of words/phrases as used in text; Ohio's mythology-allusion focus (e.g., Herculean) has no direct FL grade-4 counterpart, so FL's general strategy benchmark is the closest fit.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0045",
+   "subject": "ela",
+   "oh": "RL.4.5",
+   "state": "FL",
+   "code": "ELA.4.R.1.4",
+   "confidence": "moderate",
+   "rationale": "Both address how structural elements of poetry create meaning; Ohio also covers drama and prose distinctions that FL grade 4 does not.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0046",
+   "subject": "ela",
+   "oh": "RL.4.6",
+   "state": "FL",
+   "code": "ELA.4.R.1.3",
+   "confidence": "strong",
+   "rationale": "Both explain the difference between the narrator's point of view and characters' perspectives in a literary text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0047",
+   "subject": "ela",
+   "oh": "RI.4.2",
+   "state": "FL",
+   "code": "ELA.4.R.2.2",
+   "confidence": "strong",
+   "rationale": "Both explain how key/relevant details support the main/central idea of an informational text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0048",
+   "subject": "ela",
+   "oh": "RI.4.2",
+   "state": "FL",
+   "code": "ELA.4.R.3.2b",
+   "confidence": "strong",
+   "rationale": "Ohio's summary component matches FL's informational summary including the central idea and relevant details.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0049",
+   "subject": "ela",
+   "oh": "RI.4.4",
+   "state": "FL",
+   "code": "ELA.4.V.1.3",
+   "confidence": "strong",
+   "rationale": "Both determine meanings of academic and domain-relevant words/phrases in grade-4 content; FL specifies the strategies.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0050",
+   "subject": "ela",
+   "oh": "RI.4.5",
+   "state": "FL",
+   "code": "ELA.4.R.2.1",
+   "confidence": "strong",
+   "rationale": "Both identify/describe informational text structures; FL grade 4 names problem/solution, sequence, and description, while Ohio also lists chronology, comparison, and cause/effect (FL covers those in grade 3).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0051",
+   "subject": "ela",
+   "oh": "RI.4.6",
+   "state": "FL",
+   "code": "ELA.4.R.3.3",
+   "confidence": "strong",
+   "rationale": "Ohio's firsthand/secondhand account comparison maps directly to FL's compare-and-contrast of accounts of the same event using primary and/or secondary sources.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0052",
+   "subject": "ela",
+   "oh": "RI.4.7",
+   "state": "FL",
+   "code": "ELA.4.R.2.1",
+   "confidence": "moderate",
+   "rationale": "Both explain how visual/graphic elements contribute to understanding an informational text; Ohio's oral and quantitative formats extend beyond FL's text-features scope.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0053",
+   "subject": "ela",
+   "oh": "RI.4.8",
+   "state": "FL",
+   "code": "ELA.4.R.2.4",
+   "confidence": "strong",
+   "rationale": "Both explain how an author uses reasons and evidence to support particular points/claims in a text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0054",
+   "subject": "ela",
+   "oh": "RI.4.9",
+   "state": "FL",
+   "code": "ELA.4.C.4.1",
+   "confidence": "moderate",
+   "rationale": "Both gather and organize information from multiple texts/sources on a topic to communicate knowledgeably; FL frames it as a research process.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0055",
+   "subject": "ela",
+   "oh": "L.4.4",
+   "state": "FL",
+   "code": "ELA.4.V.1.2",
+   "confidence": "strong",
+   "rationale": "Both apply common grade-appropriate Greek and Latin roots and affixes to determine word meanings.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0056",
+   "subject": "ela",
+   "oh": "L.4.4",
+   "state": "FL",
+   "code": "ELA.4.V.1.3",
+   "confidence": "strong",
+   "rationale": "Ohio's context and reference-material strategies match FL's context clues and reference materials for multiple-meaning and unknown words.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0057",
+   "subject": "ela",
+   "oh": "L.4.5",
+   "state": "FL",
+   "code": "ELA.4.R.3.1",
+   "confidence": "strong",
+   "rationale": "Both explain the meaning of figurative language (similes, metaphors, idioms) in context; FL frames it as how it contributes to meaning in texts.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0058",
+   "subject": "ela",
+   "oh": "L.4.5",
+   "state": "FL",
+   "code": "ELA.4.V.1.3",
+   "confidence": "moderate",
+   "rationale": "Ohio's antonym/synonym component matches FL's word-relationships strategy; the figurative pieces sit more squarely in FL R.3.1.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0059",
+   "subject": "ela",
+   "oh": "L.4.6",
+   "state": "FL",
+   "code": "ELA.4.V.1.1",
+   "confidence": "strong",
+   "rationale": "Both require accurately using grade-appropriate academic (and domain-specific, in Ohio) vocabulary in speaking and writing.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0060",
+   "subject": "ela",
+   "oh": "RL.5.2",
+   "state": "FL",
+   "code": "ELA.5.R.1.2",
+   "confidence": "strong",
+   "rationale": "Both explain the development of a theme through details across a literary text, including how characters respond or the speaker reflects.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0061",
+   "subject": "ela",
+   "oh": "RL.5.2",
+   "state": "FL",
+   "code": "ELA.5.R.3.2a",
+   "confidence": "strong",
+   "rationale": "Ohio's summarize-incorporating-theme component matches FL's literary summary including plot and theme.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0062",
+   "subject": "ela",
+   "oh": "RL.5.3",
+   "state": "FL",
+   "code": "ELA.5.R.1.1",
+   "confidence": "moderate",
+   "rationale": "Both analyze characters, settings, and events using specific details; Ohio compares/contrasts two or more of them, FL analyzes how they contribute to plot.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0063",
+   "subject": "ela",
+   "oh": "RL.5.4",
+   "state": "FL",
+   "code": "ELA.5.R.3.1",
+   "confidence": "strong",
+   "rationale": "Both interpret figurative language such as metaphors, similes, and idioms and its role in a text's meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0064",
+   "subject": "ela",
+   "oh": "RL.5.4",
+   "state": "FL",
+   "code": "ELA.5.V.1.3",
+   "confidence": "moderate",
+   "rationale": "Both determine meanings of words/phrases as used in text; FL's benchmark is the general vocabulary-strategy home for figurative and unknown words.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0065",
+   "subject": "ela",
+   "oh": "RL.5.6",
+   "state": "FL",
+   "code": "ELA.5.R.1.3",
+   "confidence": "moderate",
+   "rationale": "Both examine how a viewpoint shapes a literary text; Ohio targets the narrator's/speaker's point of view influencing description, FL targets how the author develops a character's perspective.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0066",
+   "subject": "ela",
+   "oh": "RI.5.2",
+   "state": "FL",
+   "code": "ELA.5.R.2.2",
+   "confidence": "strong",
+   "rationale": "Both explain how key/relevant details support the central idea(s), implied or explicit, of an informational text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0067",
+   "subject": "ela",
+   "oh": "RI.5.2",
+   "state": "FL",
+   "code": "ELA.5.R.3.2b",
+   "confidence": "strong",
+   "rationale": "Ohio's summary component matches FL's informational summary including central idea and relevant details.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0068",
+   "subject": "ela",
+   "oh": "RI.5.4",
+   "state": "FL",
+   "code": "ELA.5.V.1.3",
+   "confidence": "strong",
+   "rationale": "Both determine meanings of academic and domain-relevant words/phrases in grade-5 content; FL specifies the strategies.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0069",
+   "subject": "ela",
+   "oh": "RI.5.5",
+   "state": "FL",
+   "code": "ELA.5.R.2.1",
+   "confidence": "moderate",
+   "rationale": "Both analyze informational text structures (chronology, comparison, cause/effect, problem/solution); Ohio compares structures across two or more texts, FL explains structure within texts.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0070",
+   "subject": "ela",
+   "oh": "RI.5.6",
+   "state": "FL",
+   "code": "ELA.5.R.3.3",
+   "confidence": "strong",
+   "rationale": "Both compare multiple accounts/sources on the same event or topic and note differences; FL frames the accounts as primary and secondary sources.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0071",
+   "subject": "ela",
+   "oh": "RI.5.7",
+   "state": "FL",
+   "code": "ELA.5.C.4.1",
+   "confidence": "moderate",
+   "rationale": "Both draw on multiple print/digital sources to answer a question; Ohio emphasizes locating answers efficiently, FL frames it as conducting research with reliable, valid sources.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0072",
+   "subject": "ela",
+   "oh": "RI.5.8",
+   "state": "FL",
+   "code": "ELA.5.R.2.4",
+   "confidence": "strong",
+   "rationale": "Both trace how an author's claims/points are supported, matching specific evidence and reasoning to the corresponding claim.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0073",
+   "subject": "ela",
+   "oh": "RI.5.9",
+   "state": "FL",
+   "code": "ELA.5.C.4.1",
+   "confidence": "moderate",
+   "rationale": "Both integrate/organize information from several sources on a topic in order to write or speak knowledgeably; FL frames it as research.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0074",
+   "subject": "ela",
+   "oh": "L.5.4",
+   "state": "FL",
+   "code": "ELA.5.V.1.2",
+   "confidence": "strong",
+   "rationale": "Both apply grade-appropriate Greek and Latin roots and affixes to determine meanings of unfamiliar words.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0075",
+   "subject": "ela",
+   "oh": "L.5.4",
+   "state": "FL",
+   "code": "ELA.5.V.1.3",
+   "confidence": "strong",
+   "rationale": "Ohio's context and reference-material strategies match FL's context clues and reference materials for multiple-meaning and unknown words.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0076",
+   "subject": "ela",
+   "oh": "L.5.5",
+   "state": "FL",
+   "code": "ELA.5.R.3.1",
+   "confidence": "strong",
+   "rationale": "Both interpret figurative language, including similes and metaphors, in context and its contribution to meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0077",
+   "subject": "ela",
+   "oh": "L.5.5",
+   "state": "FL",
+   "code": "ELA.5.V.1.3",
+   "confidence": "moderate",
+   "rationale": "Ohio's synonym/antonym/homograph relationships match FL's word-relationships strategy for determining word meanings.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0078",
+   "subject": "ela",
+   "oh": "L.5.6",
+   "state": "FL",
+   "code": "ELA.5.V.1.1",
+   "confidence": "strong",
+   "rationale": "Both require accurately using grade-appropriate academic (and domain-specific, in Ohio) vocabulary in speaking and writing.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0079",
+   "subject": "ela",
+   "oh": "RL.6.2",
+   "state": "FL",
+   "code": "ELA.6.R.1.2",
+   "confidence": "strong",
+   "rationale": "Both analyze how a stated or implied theme is conveyed/develops through details across a literary text; Ohio adds an objective-summary component FL handles only as paraphrasing.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0080",
+   "subject": "ela",
+   "oh": "RL.6.3",
+   "state": "FL",
+   "code": "ELA.6.R.1.1",
+   "confidence": "strong",
+   "rationale": "Both analyze how characters' responses and interactions drive the plot's development toward resolution.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0081",
+   "subject": "ela",
+   "oh": "RL.6.4",
+   "state": "FL",
+   "code": "ELA.6.R.3.1",
+   "confidence": "strong",
+   "rationale": "Both analyze how figurative language and specific word choices affect tone and meaning in a text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0082",
+   "subject": "ela",
+   "oh": "RL.6.4",
+   "state": "FL",
+   "code": "ELA.6.V.1.3",
+   "confidence": "strong",
+   "rationale": "Both determine figurative and connotative meanings of words/phrases as used in text; FL explicitly targets connotative vs. denotative meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0083",
+   "subject": "ela",
+   "oh": "RL.6.5",
+   "state": "FL",
+   "code": "ELA.6.R.1.4",
+   "confidence": "moderate",
+   "rationale": "Both analyze how a text's form/structure contributes to meaning; FL grade 6 limits this to poetic forms, while Ohio covers sentences, chapters, and scenes too.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0084",
+   "subject": "ela",
+   "oh": "RL.6.6",
+   "state": "FL",
+   "code": "ELA.6.R.1.3",
+   "confidence": "moderate",
+   "rationale": "Both analyze how point of view shapes a literary text; Ohio focuses on developing the narrator's perspective, FL on the influence of multiple narrators and/or POV shifts.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0085",
+   "subject": "ela",
+   "oh": "RL.6.9",
+   "state": "FL",
+   "code": "ELA.6.R.3.3",
+   "confidence": "moderate",
+   "rationale": "Both compare texts' approaches to similar themes/topics; Ohio compares across forms or genres, FL across authors from different time periods.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0086",
+   "subject": "ela",
+   "oh": "RI.6.2",
+   "state": "FL",
+   "code": "ELA.6.R.2.2",
+   "confidence": "strong",
+   "rationale": "Both analyze a central idea (implied or explicit) and how it is conveyed/develops through details across an informational text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0087",
+   "subject": "ela",
+   "oh": "RI.6.3",
+   "state": "FL",
+   "code": "ELA.6.R.2.2",
+   "confidence": "moderate",
+   "rationale": "Both trace how ideas are introduced and elaborated across an informational text; Ohio centers on a key individual/event/idea, FL on the central idea's development.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0088",
+   "subject": "ela",
+   "oh": "RI.6.4",
+   "state": "FL",
+   "code": "ELA.6.V.1.3",
+   "confidence": "strong",
+   "rationale": "Both determine figurative and connotative meanings of words/phrases in text; FL explicitly targets connotative vs. denotative meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0089",
+   "subject": "ela",
+   "oh": "RI.6.4",
+   "state": "FL",
+   "code": "ELA.6.R.3.1",
+   "confidence": "moderate",
+   "rationale": "Both cover figurative language in texts; Ohio adds technical meanings while FL frames it as figurative language's contribution to tone and meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0090",
+   "subject": "ela",
+   "oh": "RI.6.5",
+   "state": "FL",
+   "code": "ELA.6.R.2.1",
+   "confidence": "strong",
+   "rationale": "Both analyze how an individual sentence/paragraph/section fits into and conveys meaning within the overall informational text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0091",
+   "subject": "ela",
+   "oh": "RI.6.6",
+   "state": "FL",
+   "code": "ELA.6.R.2.3",
+   "confidence": "moderate",
+   "rationale": "Both determine an author's purpose in an informational text; FL frames it as analyzing purposes across multiple accounts of the same event/topic.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0092",
+   "subject": "ela",
+   "oh": "RI.6.8",
+   "state": "FL",
+   "code": "ELA.6.R.2.4",
+   "confidence": "strong",
+   "rationale": "Both trace/track the development of an argument and its claims; Ohio evaluates whether claims are evidence-supported, FL identifies the types of reasoning used.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0093",
+   "subject": "ela",
+   "oh": "RI.6.9",
+   "state": "FL",
+   "code": "ELA.6.R.2.3",
+   "confidence": "moderate",
+   "rationale": "Both compare how different authors present the same event or topic; FL frames the comparison around authors' purposes.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0094",
+   "subject": "ela",
+   "oh": "RI.6.9",
+   "state": "FL",
+   "code": "ELA.6.R.3.3",
+   "confidence": "moderate",
+   "rationale": "Both compare two authors' treatments of the same or related topics; FL specifies authors from different time periods.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0095",
+   "subject": "ela",
+   "oh": "L.6.4",
+   "state": "FL",
+   "code": "ELA.6.V.1.2",
+   "confidence": "strong",
+   "rationale": "Both apply grade-appropriate Greek and Latin roots and affixes to determine meanings of words and phrases.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0096",
+   "subject": "ela",
+   "oh": "L.6.4",
+   "state": "FL",
+   "code": "ELA.6.V.1.3",
+   "confidence": "strong",
+   "rationale": "Ohio's context and reference-material strategies match FL's context clues and reference materials for determining word meanings.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0097",
+   "subject": "ela",
+   "oh": "L.6.5",
+   "state": "FL",
+   "code": "ELA.6.V.1.3",
+   "confidence": "strong",
+   "rationale": "Both use word relationships and distinguish connotations of words with similar denotations; FL folds these into its connotative/denotative meaning benchmark.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0098",
+   "subject": "ela",
+   "oh": "L.6.5",
+   "state": "FL",
+   "code": "ELA.6.R.3.1",
+   "confidence": "moderate",
+   "rationale": "Ohio's interpret-figures-of-speech component (e.g., personification) matches FL's figurative-language benchmark, which adds tone analysis.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0099",
+   "subject": "ela",
+   "oh": "L.6.6",
+   "state": "FL",
+   "code": "ELA.6.V.1.1",
+   "confidence": "strong",
+   "rationale": "Both require acquiring and using grade-appropriate academic (and domain-specific, in Ohio) vocabulary in expression.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0100",
+   "subject": "ela",
+   "oh": "RL.7.2",
+   "state": "FL",
+   "code": "ELA.7.R.1.2",
+   "confidence": "strong",
+   "rationale": "Both analyze theme development over the course of a literary text; FL adds comparing two or more themes, Ohio adds an objective summary.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0101",
+   "subject": "ela",
+   "oh": "RL.7.3",
+   "state": "FL",
+   "code": "ELA.7.R.1.1",
+   "confidence": "strong",
+   "rationale": "Both analyze how story elements interact, specifically how setting shapes characters and plot.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0102",
+   "subject": "ela",
+   "oh": "RL.7.4",
+   "state": "FL",
+   "code": "ELA.7.R.3.1",
+   "confidence": "strong",
+   "rationale": "Both analyze how figurative language and specific language choices affect tone and meaning; FL adds allusions, Ohio adds sound devices in poetry.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0103",
+   "subject": "ela",
+   "oh": "RL.7.4",
+   "state": "FL",
+   "code": "ELA.7.V.1.3",
+   "confidence": "strong",
+   "rationale": "Both determine figurative and connotative meanings of words/phrases as used in text; FL explicitly targets connotative vs. denotative meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0104",
+   "subject": "ela",
+   "oh": "RL.7.5",
+   "state": "FL",
+   "code": "ELA.7.R.1.4",
+   "confidence": "strong",
+   "rationale": "Both analyze how a poem's form/structure contributes to its meaning; Ohio also includes dramatic forms (e.g., soliloquy) that FL grade 7 does not cover.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0105",
+   "subject": "ela",
+   "oh": "RL.7.6",
+   "state": "FL",
+   "code": "ELA.7.R.1.3",
+   "confidence": "strong",
+   "rationale": "Both analyze how narrators and point of view develop or contrast perspectives in a literary text; FL adds unreliable narrators and POV shifts.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0106",
+   "subject": "ela",
+   "oh": "RL.7.9",
+   "state": "FL",
+   "code": "ELA.7.R.3.3",
+   "confidence": "moderate",
+   "rationale": "Both compare texts addressing the same or related topics; Ohio specifically pairs a fictional portrayal with a historical account, FL pairs authors with differing perspectives.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0107",
+   "subject": "ela",
+   "oh": "RI.7.2",
+   "state": "FL",
+   "code": "ELA.7.R.2.2",
+   "confidence": "strong",
+   "rationale": "Both analyze/compare two or more central ideas and their development over the course of an informational text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0108",
+   "subject": "ela",
+   "oh": "RI.7.4",
+   "state": "FL",
+   "code": "ELA.7.V.1.3",
+   "confidence": "strong",
+   "rationale": "Both determine figurative, connotative, and technical meanings of words/phrases as used in text; FL explicitly targets connotative vs. denotative meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0109",
+   "subject": "ela",
+   "oh": "RI.7.4",
+   "state": "FL",
+   "code": "ELA.7.R.2.3",
+   "confidence": "moderate",
+   "rationale": "Ohio's analysis of word-choice impact on meaning and tone overlaps FL's analysis of how an author achieves purpose through diction and syntax.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0110",
+   "subject": "ela",
+   "oh": "RI.7.5",
+   "state": "FL",
+   "code": "ELA.7.R.2.1",
+   "confidence": "strong",
+   "rationale": "Both analyze how an informational text's sections are organized and contribute to the whole/its purpose.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0111",
+   "subject": "ela",
+   "oh": "RI.7.6",
+   "state": "FL",
+   "code": "ELA.7.R.2.3",
+   "confidence": "moderate",
+   "rationale": "Both determine how an author establishes purpose/position in an informational text; Ohio adds distinguishing the author's position from others', FL focuses on diction and syntax.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0112",
+   "subject": "ela",
+   "oh": "RI.7.8",
+   "state": "FL",
+   "code": "ELA.7.R.2.4",
+   "confidence": "strong",
+   "rationale": "Both trace/track an argument's development and evaluate the soundness/effectiveness of its reasoning and evidence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0113",
+   "subject": "ela",
+   "oh": "RI.7.9",
+   "state": "FL",
+   "code": "ELA.7.R.3.3",
+   "confidence": "strong",
+   "rationale": "Both compare how two or more authors with differing perspectives/interpretations present the same or related topics.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0114",
+   "subject": "ela",
+   "oh": "L.7.4",
+   "state": "FL",
+   "code": "ELA.7.V.1.2",
+   "confidence": "strong",
+   "rationale": "Both apply grade-appropriate Greek and Latin roots and affixes to determine meanings of words and phrases.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0115",
+   "subject": "ela",
+   "oh": "L.7.4",
+   "state": "FL",
+   "code": "ELA.7.V.1.3",
+   "confidence": "strong",
+   "rationale": "Ohio's context and reference-material strategies match FL's context clues and reference materials for determining word meanings.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0116",
+   "subject": "ela",
+   "oh": "L.7.5",
+   "state": "FL",
+   "code": "ELA.7.R.3.1",
+   "confidence": "strong",
+   "rationale": "Ohio's interpretation of figures of speech including literary, biblical, and mythological allusions matches FL's figurative-language benchmark, which explicitly includes explaining allusions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0117",
+   "subject": "ela",
+   "oh": "L.7.5",
+   "state": "FL",
+   "code": "ELA.7.V.1.3",
+   "confidence": "strong",
+   "rationale": "Both use word relationships (synonym/antonym, analogy) and distinguish connotations of words with similar denotations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0118",
+   "subject": "ela",
+   "oh": "L.7.6",
+   "state": "FL",
+   "code": "ELA.7.V.1.1",
+   "confidence": "strong",
+   "rationale": "Both require acquiring and using grade-appropriate academic (and domain-specific, in Ohio) vocabulary in expression.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0119",
+   "subject": "ela",
+   "oh": "RL.8.2",
+   "state": "FL",
+   "code": "ELA.8.R.1.2",
+   "confidence": "strong",
+   "rationale": "Both analyze theme development across a literary text including its relationship to other story elements; FL analyzes two or more themes, Ohio adds an objective summary.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0120",
+   "subject": "ela",
+   "oh": "RL.8.3",
+   "state": "FL",
+   "code": "ELA.8.R.1.1",
+   "confidence": "strong",
+   "rationale": "Both analyze how story elements interact — Ohio via dialogue/incidents propelling action and revealing character, FL via the interaction of character development, setting, and plot.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0121",
+   "subject": "ela",
+   "oh": "RL.8.4",
+   "state": "FL",
+   "code": "ELA.8.R.3.1",
+   "confidence": "strong",
+   "rationale": "Both analyze how figurative language contributes to meaning; Ohio adds analogies/allusions and mood/tone, FL adds symbolism.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0122",
+   "subject": "ela",
+   "oh": "RL.8.4",
+   "state": "FL",
+   "code": "ELA.8.V.1.3",
+   "confidence": "strong",
+   "rationale": "Both determine figurative and connotative meanings of words/phrases as used in text; FL explicitly targets connotative vs. denotative meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0123",
+   "subject": "ela",
+   "oh": "RL.8.5",
+   "state": "FL",
+   "code": "ELA.8.R.1.4",
+   "confidence": "moderate",
+   "rationale": "Both analyze how structure contributes to a literary text's meaning and style; FL grade 8 restricts this analysis to poetry, while Ohio compares structures across texts.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0124",
+   "subject": "ela",
+   "oh": "RL.8.6",
+   "state": "FL",
+   "code": "ELA.8.R.1.3",
+   "confidence": "moderate",
+   "rationale": "Both analyze differing character perspectives in a literary text; Ohio adds the audience/reader gap (dramatic irony) creating suspense or humor, which FL does not address.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0125",
+   "subject": "ela",
+   "oh": "RL.8.9",
+   "state": "FL",
+   "code": "ELA.8.R.3.3",
+   "confidence": "strong",
+   "rationale": "Ohio's analysis of modern fiction drawing themes, event patterns, and character types from myths and traditional stories aligns with FL's compare/contrast of the use of archetypes in texts.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0126",
+   "subject": "ela",
+   "oh": "RI.8.2",
+   "state": "FL",
+   "code": "ELA.8.R.2.2",
+   "confidence": "strong",
+   "rationale": "Both analyze central idea development over the course of an informational text, including relationships to supporting ideas; FL analyzes two or more central ideas.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0127",
+   "subject": "ela",
+   "oh": "RI.8.4",
+   "state": "FL",
+   "code": "ELA.8.V.1.3",
+   "confidence": "strong",
+   "rationale": "Both determine figurative, connotative, and technical meanings of words/phrases as used in text; FL explicitly targets connotative vs. denotative meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0128",
+   "subject": "ela",
+   "oh": "RI.8.4",
+   "state": "FL",
+   "code": "ELA.8.R.2.3",
+   "confidence": "moderate",
+   "rationale": "Ohio's analysis of word choices (including analogies/allusions) on meaning and tone overlaps FL's analysis of how an author achieves purpose through rhetorical appeals and figurative language.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0129",
+   "subject": "ela",
+   "oh": "RI.8.5",
+   "state": "FL",
+   "code": "ELA.8.R.2.1",
+   "confidence": "strong",
+   "rationale": "Both analyze in detail how individual sections/paragraphs of an informational text develop and convey meaning or a key concept.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0130",
+   "subject": "ela",
+   "oh": "RI.8.6",
+   "state": "FL",
+   "code": "ELA.8.R.2.3",
+   "confidence": "moderate",
+   "rationale": "Both analyze how an author establishes purpose in an informational text; Ohio adds responding to conflicting evidence/viewpoints, FL focuses on rhetorical appeals and figurative language.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0131",
+   "subject": "ela",
+   "oh": "RI.8.8",
+   "state": "FL",
+   "code": "ELA.8.R.2.4",
+   "confidence": "strong",
+   "rationale": "Both delineate/track an argument, evaluate the soundness and effectiveness of reasoning and evidence, and identify weaknesses (irrelevant evidence in Ohio; possible improvements in FL).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0132",
+   "subject": "ela",
+   "oh": "L.8.4",
+   "state": "FL",
+   "code": "ELA.8.V.1.2",
+   "confidence": "strong",
+   "rationale": "Both apply grade-appropriate Greek and Latin roots and affixes to determine meanings of words and phrases.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0133",
+   "subject": "ela",
+   "oh": "L.8.4",
+   "state": "FL",
+   "code": "ELA.8.V.1.3",
+   "confidence": "strong",
+   "rationale": "Ohio's context and reference-material strategies match FL's context clues and reference materials for determining word meanings.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0134",
+   "subject": "ela",
+   "oh": "L.8.5",
+   "state": "FL",
+   "code": "ELA.8.V.1.3",
+   "confidence": "strong",
+   "rationale": "Both use word relationships and distinguish connotations of words with similar denotations; FL folds these into its connotative/denotative meaning benchmark.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0135",
+   "subject": "ela",
+   "oh": "L.8.5",
+   "state": "FL",
+   "code": "ELA.8.R.3.1",
+   "confidence": "moderate",
+   "rationale": "Ohio's interpretation of figures of speech (verbal irony, puns) in context overlaps FL's analysis of figurative language and symbolism in texts.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-fl-0136",
+   "subject": "ela",
+   "oh": "L.8.6",
+   "state": "FL",
+   "code": "ELA.8.V.1.1",
+   "confidence": "strong",
+   "rationale": "Both require acquiring and using grade-appropriate academic (and domain-specific, in Ohio) vocabulary in expression.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0001",
+   "subject": "science",
+   "oh": "2.ESS.1",
+   "state": "FL",
+   "code": "SC.2.E.7.4",
+   "confidence": "strong",
+   "rationale": "Both establish that air surrounds Earth and that moving air is wind. Ohio's 'air has properties that can be observed' is the same investigative target.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0002",
+   "subject": "science",
+   "oh": "2.ESS.1",
+   "state": "FL",
+   "code": "SC.2.E.7.2",
+   "confidence": "moderate",
+   "rationale": "Ohio attributes air movement to energy transfer in the atmosphere; Florida has students investigate that the Sun's energy warms water, land, and air, which is the driver of that transfer.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0003",
+   "subject": "science",
+   "oh": "2.ESS.2",
+   "state": "FL",
+   "code": "SC.2.E.7.3",
+   "confidence": "strong",
+   "rationale": "Ohio's emphasis note names evaporation and condensation as the focus; Florida's open- vs. closed-container investigation is exactly that evaporation experience.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0004",
+   "subject": "science",
+   "oh": "2.ESS.2",
+   "state": "FL",
+   "code": "SC.3.P.9.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 3). Both target the changes water undergoes on heating and cooling, naming evaporation and condensation explicitly.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0005",
+   "subject": "science",
+   "oh": "2.ESS.2",
+   "state": "FL",
+   "code": "SC.2.P.8.4",
+   "confidence": "moderate",
+   "rationale": "Ohio requires recognizing water as vapor, liquid, and ice in the atmosphere; Florida has students observe and describe water in its solid, liquid, and gaseous states.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0006",
+   "subject": "science",
+   "oh": "2.ESS.3",
+   "state": "FL",
+   "code": "SC.2.E.7.1",
+   "confidence": "strong",
+   "rationale": "Both address short- and long-term weather change through temperature and precipitation patterns, day to day and season to season.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0007",
+   "subject": "science",
+   "oh": "2.ESS.3",
+   "state": "FL",
+   "code": "SC.2.E.7.2",
+   "confidence": "moderate",
+   "rationale": "Ohio attributes weather changes to changes in energy; Florida grounds that in measuring how the Sun's energy warms water, land, and air.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0008",
+   "subject": "science",
+   "oh": "2.PS.1",
+   "state": "FL",
+   "code": "SC.2.P.13.1",
+   "confidence": "strong",
+   "rationale": "Both have students investigate how applying pushes and pulls changes the motion of different objects.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0009",
+   "subject": "science",
+   "oh": "2.PS.1",
+   "state": "FL",
+   "code": "SC.2.P.13.4",
+   "confidence": "strong",
+   "rationale": "Both state the proportional idea that the greater the force applied, the greater the change in motion of the object.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0010",
+   "subject": "science",
+   "oh": "2.PS.1",
+   "state": "FL",
+   "code": "SC.2.P.13.2",
+   "confidence": "strong",
+   "rationale": "Ohio's 'some forces act without touching, such as using a magnet to move an object' matches Florida's demonstration that magnets move things without contact.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0011",
+   "subject": "science",
+   "oh": "2.LS.1",
+   "state": "FL",
+   "code": "SC.2.L.17.2",
+   "confidence": "moderate",
+   "rationale": "Both concern how living things function within and depend on their physical environments, though Florida frames it as habitat requirements rather than organism-caused change.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0012",
+   "subject": "science",
+   "oh": "3.ESS.1",
+   "state": "FL",
+   "code": "SC.2.E.6.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 2). Both define soil as a mixture of rock pieces and organic material and address how soil forms.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0013",
+   "subject": "science",
+   "oh": "3.ESS.1",
+   "state": "FL",
+   "code": "SC.2.E.6.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 2). Ohio requires soil characteristics that can be measured and observed; Florida classifies soils by color, texture, water retention, and plant support.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0014",
+   "subject": "science",
+   "oh": "3.ESS.1",
+   "state": "FL",
+   "code": "SC.2.E.6.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 2). Both use observable rock characteristics such as size and shape for sorting and comparison rather than formal classification, matching Ohio's explicit note.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0015",
+   "subject": "science",
+   "oh": "3.ESS.2",
+   "state": "FL",
+   "code": "SC.4.E.6.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Both establish the renewable/nonrenewable distinction for Earth resources humans depend on.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0016",
+   "subject": "science",
+   "oh": "3.ESS.2",
+   "state": "FL",
+   "code": "SC.4.E.6.6",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Florida's resource list (oil, wind, solar energy) is the same renewable/nonrenewable energy-resource content Ohio names.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0017",
+   "subject": "science",
+   "oh": "3.ESS.2",
+   "state": "FL",
+   "code": "SC.4.P.10.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Both treat moving water and wind as energy resources that can do work, matching Ohio's renewable energy examples.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0018",
+   "subject": "science",
+   "oh": "3.ESS.3",
+   "state": "FL",
+   "code": "SC.4.E.6.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Ohio's 'some of Earth's resources are limited' is the finite/nonrenewable resource idea Florida requires students to recognize.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0019",
+   "subject": "science",
+   "oh": "3.ESS.3",
+   "state": "FL",
+   "code": "SC.4.L.17.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Both concern human impact on resources and environment, covering Ohio's overuse, contamination, and conservation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0020",
+   "subject": "science",
+   "oh": "3.PS.1",
+   "state": "FL",
+   "code": "SC.3.P.8.2",
+   "confidence": "strong",
+   "rationale": "Ohio defines matter as taking up space and having mass; Florida operationalizes this by measuring and comparing the mass and volume of solids and liquids.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0021",
+   "subject": "science",
+   "oh": "3.PS.2",
+   "state": "FL",
+   "code": "SC.3.P.9.1",
+   "confidence": "strong",
+   "rationale": "Both cover changing matter from one state to another by heating and cooling, using melting, freezing, boiling, evaporation, and condensation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0022",
+   "subject": "science",
+   "oh": "3.PS.2",
+   "state": "FL",
+   "code": "SC.2.P.8.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 2). Both require identifying matter as solid, liquid, or gas as the recognizable states of matter.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0023",
+   "subject": "science",
+   "oh": "3.PS.2",
+   "state": "FL",
+   "code": "SC.2.P.8.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 2). Ohio names shape as the property distinguishing states; Florida states solids have definite shape while liquids and gases take the shape of their container.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0024",
+   "subject": "science",
+   "oh": "3.PS.3",
+   "state": "FL",
+   "code": "SC.3.P.10.1",
+   "confidence": "strong",
+   "rationale": "Both enumerate the same familiar forms of energy: light, heat, sound, and electrical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0025",
+   "subject": "science",
+   "oh": "3.PS.3",
+   "state": "FL",
+   "code": "SC.3.P.10.2",
+   "confidence": "strong",
+   "rationale": "Ohio's 'energy is the ability to cause motion or create change' is stated nearly verbatim in the Florida benchmark.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0026",
+   "subject": "science",
+   "oh": "3.LS.1",
+   "state": "FL",
+   "code": "SC.4.L.16.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Both establish that traits are inherited from parents while some characteristics are shaped by the environment rather than inheritance.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0027",
+   "subject": "science",
+   "oh": "3.LS.1",
+   "state": "FL",
+   "code": "SC.4.L.16.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Ohio's 'some behavioral traits are learned through interactions with the environment and are not inherited' matches Florida's heredity-versus-learning framing of behavior.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0028",
+   "subject": "science",
+   "oh": "3.LS.2",
+   "state": "FL",
+   "code": "SC.3.L.17.1",
+   "confidence": "moderate",
+   "rationale": "Both concern physical and behavioral characteristics tied to the environment organisms live in, though Florida narrows it to seasonal response rather than survival advantage.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0029",
+   "subject": "science",
+   "oh": "3.LS.3",
+   "state": "FL",
+   "code": "SC.2.L.16.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 2). Both address the major stages in plant and animal life cycles, with details varying by organism.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0030",
+   "subject": "science",
+   "oh": "3.LS.3",
+   "state": "FL",
+   "code": "SC.4.L.16.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Both compare life cycles across different organisms and connect the differences to how organisms live and reproduce.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0031",
+   "subject": "science",
+   "oh": "4.ESS.1",
+   "state": "FL",
+   "code": "SC.4.E.6.4",
+   "confidence": "moderate",
+   "rationale": "Ohio's claim that Earth's surface changes through erosion and deposition of soil, rock, or sediment is covered by Florida's weathering-versus-erosion benchmark, though Florida omits landforms and water distribution.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0032",
+   "subject": "science",
+   "oh": "4.ESS.2",
+   "state": "FL",
+   "code": "SC.4.E.6.4",
+   "confidence": "strong",
+   "rationale": "Both define physical weathering as the breaking down of rock by wind, water, ice, temperature change, and plants, matching Ohio's note that chemical/physical distinction is not the focus.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0033",
+   "subject": "science",
+   "oh": "4.ESS.3",
+   "state": "FL",
+   "code": "SC.4.E.6.4",
+   "confidence": "strong",
+   "rationale": "Both define erosion as the movement of rock and sediment by gravity, wind, water, and ice.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0034",
+   "subject": "science",
+   "oh": "4.PS.1",
+   "state": "FL",
+   "code": "SC.4.P.8.3",
+   "confidence": "strong",
+   "rationale": "Both state conservation of matter for a broken object: the mass of the whole equals the sum of the masses of its parts.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0035",
+   "subject": "science",
+   "oh": "4.PS.2",
+   "state": "FL",
+   "code": "SC.4.P.11.1",
+   "confidence": "strong",
+   "rationale": "Both state that heat flows from a hot object to a cold object and that this transfer produces a temperature change.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0036",
+   "subject": "science",
+   "oh": "4.PS.2",
+   "state": "FL",
+   "code": "SC.5.P.11.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 5). Ohio's 'electric circuits require a complete loop of conducting materials' is Florida's closed-circuit requirement.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0037",
+   "subject": "science",
+   "oh": "4.PS.2",
+   "state": "FL",
+   "code": "SC.5.P.10.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 5). Both state that electrical energy in circuits is transformed into light, heat, sound, and the energy of motion.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0038",
+   "subject": "science",
+   "oh": "4.LS.1",
+   "state": "FL",
+   "code": "SC.5.L.15.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 5). Both state that when the environment changes some plants and animals survive and reproduce while others die or move to new locations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0039",
+   "subject": "science",
+   "oh": "4.LS.1",
+   "state": "FL",
+   "code": "SC.4.L.17.4",
+   "confidence": "moderate",
+   "rationale": "Ohio's ecosystem changes include human and organism-driven change; Florida's benchmark covers ways plants, animals, and humans impact the environment.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0040",
+   "subject": "science",
+   "oh": "5.ESS.1",
+   "state": "FL",
+   "code": "SC.5.E.5.3",
+   "confidence": "strong",
+   "rationale": "Both require distinguishing the Sun, planets, moons, asteroids, and comets as the members of the solar system.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0041",
+   "subject": "science",
+   "oh": "5.ESS.1",
+   "state": "FL",
+   "code": "SC.5.E.5.2",
+   "confidence": "strong",
+   "rationale": "Ohio's 'each planet in the solar system has unique characteristics' of distance, size, composition, and movement is Florida's compare/contrast of planet properties.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0042",
+   "subject": "science",
+   "oh": "5.ESS.2",
+   "state": "FL",
+   "code": "SC.5.E.5.1",
+   "confidence": "moderate",
+   "rationale": "Both place the Sun among the many stars of the larger universe, though Florida frames it through galaxy composition rather than relative star size.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0043",
+   "subject": "science",
+   "oh": "5.ESS.3",
+   "state": "FL",
+   "code": "SC.4.E.5.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Both state that Earth revolves around the Sun in a year and rotates on its axis in a 24-hour day.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0044",
+   "subject": "science",
+   "oh": "5.ESS.3",
+   "state": "FL",
+   "code": "SC.4.E.5.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Both connect Earth's rotation to day and night and to the apparent movement of the Sun, Moon, and stars.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0045",
+   "subject": "science",
+   "oh": "5.ESS.3",
+   "state": "FL",
+   "code": "SC.4.E.5.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Ohio's 'rotation makes the sun, stars and moon appear to change position in the sky' matches Florida's observation that star patterns appear to shift across the sky.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0046",
+   "subject": "science",
+   "oh": "5.PS.1",
+   "state": "FL",
+   "code": "SC.5.P.13.2",
+   "confidence": "strong",
+   "rationale": "Both state that the greater the force applied to an object, the greater the change in its motion.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0047",
+   "subject": "science",
+   "oh": "5.PS.1",
+   "state": "FL",
+   "code": "SC.5.P.13.3",
+   "confidence": "strong",
+   "rationale": "Both state the mass dependence: the more mass an object has, the less effect a given force has on its motion.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0048",
+   "subject": "science",
+   "oh": "5.PS.1",
+   "state": "FL",
+   "code": "SC.4.P.12.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Ohio's speed as distance traveled in a period of time is Florida's definition of speed as distance per unit of time.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0049",
+   "subject": "science",
+   "oh": "5.PS.2",
+   "state": "FL",
+   "code": "SC.4.P.10.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Both state that sound is produced by vibrating objects and that pitch depends on the rate of vibration.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0050",
+   "subject": "science",
+   "oh": "5.PS.2",
+   "state": "FL",
+   "code": "SC.5.P.10.1",
+   "confidence": "moderate",
+   "rationale": "Ohio treats light and sound as forms of energy; Florida's benchmark has students investigate light and sound among the basic forms of energy, without the behavior detail.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0051",
+   "subject": "science",
+   "oh": "5.LS.1",
+   "state": "FL",
+   "code": "SC.4.L.17.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Both trace energy through producers and consumers to identify feeding relationships in an ecosystem.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0052",
+   "subject": "science",
+   "oh": "5.LS.1",
+   "state": "FL",
+   "code": "SC.4.L.17.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Ohio categorizes populations by how they acquire energy; Florida establishes that animals cannot make their own food and gain stored energy by eating.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0053",
+   "subject": "science",
+   "oh": "5.LS.2",
+   "state": "FL",
+   "code": "SC.4.L.17.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Both identify sunlight as the entry point of energy into an ecosystem and follow it from producers to consumers.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0054",
+   "subject": "science",
+   "oh": "6.ESS.2",
+   "state": "FL",
+   "code": "SC.7.E.6.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both use rock type to interpret formation, breakdown by weathering, and transport by erosion within the rock cycle.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0055",
+   "subject": "science",
+   "oh": "6.ESS.3",
+   "state": "FL",
+   "code": "SC.7.E.6.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both relate how igneous, sedimentary, and metamorphic rocks form to surface events (weathering, erosion) and sub-surface events (heat, pressure, tectonics).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0056",
+   "subject": "science",
+   "oh": "6.ESS.3",
+   "state": "FL",
+   "code": "SC.6.E.6.1",
+   "confidence": "moderate",
+   "rationale": "Ohio's sedimentary pathway depends on weathering, transport, and compaction of material, which is the build-up/tear-down process Florida describes.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0057",
+   "subject": "science",
+   "oh": "6.PS.1",
+   "state": "FL",
+   "code": "SC.5.P.8.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 5). Both introduce atomic theory: matter is made of particles too small to see, called atoms.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0058",
+   "subject": "science",
+   "oh": "6.PS.2",
+   "state": "FL",
+   "code": "SC.7.P.11.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both state that adding or removing heat can produce either a temperature change or a change of state.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0059",
+   "subject": "science",
+   "oh": "6.PS.2",
+   "state": "FL",
+   "code": "SC.7.P.11.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both treat heat as a process of energy transfer that moves from warmer to cooler until temperatures equalize.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0060",
+   "subject": "science",
+   "oh": "6.PS.3",
+   "state": "FL",
+   "code": "SC.6.P.11.1",
+   "confidence": "strong",
+   "rationale": "Both establish the two categories of energy, kinetic (motion) and potential (position), and the transformation between them.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0061",
+   "subject": "science",
+   "oh": "6.PS.4",
+   "state": "FL",
+   "code": "SC.6.P.12.1",
+   "confidence": "strong",
+   "rationale": "Both require measuring and graphing an object's position and speed as a function of time and interpreting the relationship.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0062",
+   "subject": "science",
+   "oh": "6.LS.1",
+   "state": "FL",
+   "code": "SC.6.L.14.2",
+   "confidence": "strong",
+   "rationale": "Both state cell theory: all living things are composed of cells and cells are the fundamental unit of life.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0063",
+   "subject": "science",
+   "oh": "6.LS.1",
+   "state": "FL",
+   "code": "SC.6.L.14.4",
+   "confidence": "strong",
+   "rationale": "Ohio's note directs emphasis to the function and coordination of cell organelles; Florida's benchmark compares the structure and function of major plant and animal organelles.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0064",
+   "subject": "science",
+   "oh": "6.LS.1",
+   "state": "FL",
+   "code": "SC.6.L.14.3",
+   "confidence": "strong",
+   "rationale": "Ohio's 'the ways cells function are similar in all living organisms' matches Florida's requirement that cells of all organisms undergo similar processes.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0065",
+   "subject": "science",
+   "oh": "6.LS.2",
+   "state": "FL",
+   "code": "SC.6.L.14.2",
+   "confidence": "strong",
+   "rationale": "Both state the cell-theory claim that all cells come from pre-existing cells, the basis for growth and repair.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0066",
+   "subject": "science",
+   "oh": "6.LS.3",
+   "state": "FL",
+   "code": "SC.6.L.14.3",
+   "confidence": "strong",
+   "rationale": "Both describe the life-sustaining processes cells carry out: extracting energy from nutrients, disposing of waste, and reproducing.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0067",
+   "subject": "science",
+   "oh": "6.LS.3",
+   "state": "FL",
+   "code": "SC.6.L.14.4",
+   "confidence": "strong",
+   "rationale": "Ohio's specialized cell parts for transport, energy capture and release, and the membrane that controls entry and exit map to Florida's organelle list including cell membrane, mitochondria, chloroplasts, and vacuoles.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0068",
+   "subject": "science",
+   "oh": "6.LS.4",
+   "state": "FL",
+   "code": "SC.6.L.14.1",
+   "confidence": "strong",
+   "rationale": "Both lay out the same hierarchy of biological organization from cells to tissues to organs to organ systems to organisms.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0069",
+   "subject": "science",
+   "oh": "6.LS.4",
+   "state": "FL",
+   "code": "SC.6.L.14.5",
+   "confidence": "strong",
+   "rationale": "Ohio's claim that all parts function as a whole for survival matches Florida's investigation of how major human body systems interact to maintain homeostasis.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0070",
+   "subject": "science",
+   "oh": "6.LS.4",
+   "state": "FL",
+   "code": "SC.5.L.14.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 5). Both address the complementary nature of structure and function across diverse body plans in plants and animals.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0071",
+   "subject": "science",
+   "oh": "7.ESS.1",
+   "state": "FL",
+   "code": "SC.6.E.7.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both address the cycling of water between atmosphere and hydrosphere and its effect on weather patterns.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0072",
+   "subject": "science",
+   "oh": "7.ESS.1",
+   "state": "FL",
+   "code": "SC.6.E.7.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Ohio traces water through lithosphere, biosphere, hydrosphere, and atmosphere; Florida requires showing interactions among those same spheres.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0073",
+   "subject": "science",
+   "oh": "7.ESS.2",
+   "state": "FL",
+   "code": "SC.6.E.7.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both name the jet stream and ocean currents as global patterns that shape local weather and climate.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0074",
+   "subject": "science",
+   "oh": "7.ESS.2",
+   "state": "FL",
+   "code": "SC.6.E.7.5",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both identify the Sun as the driver of atmospheric movement and of temperature differences among air, water, and land.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0075",
+   "subject": "science",
+   "oh": "7.ESS.2",
+   "state": "FL",
+   "code": "SC.6.E.7.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Ohio's thermal-energy transfers that form ocean and atmospheric currents are Florida's radiation, conduction, and convection mechanisms in Earth's system.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0076",
+   "subject": "science",
+   "oh": "7.ESS.3",
+   "state": "FL",
+   "code": "SC.6.E.7.9",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both address the composition and layered structure of the atmosphere and the properties that let it protect and insulate the planet.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0077",
+   "subject": "science",
+   "oh": "7.ESS.3",
+   "state": "FL",
+   "code": "SC.6.E.7.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Ohio's biogeochemical cycling of gases through lithosphere, biosphere, hydrosphere, and atmosphere is Florida's interactions among those spheres.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0078",
+   "subject": "science",
+   "oh": "7.ESS.3",
+   "state": "FL",
+   "code": "SC.8.L.18.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 8). Ohio names carbon and nitrogen biogeochemical cycles; Florida's carbon-cycle model shows the same movement of matter between organisms and the physical environment.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0079",
+   "subject": "science",
+   "oh": "7.ESS.4",
+   "state": "FL",
+   "code": "SC.8.E.5.9",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 8). Both cover the effects of the relative positions of Earth, Moon, and Sun: moon phases, tides, and eclipses.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0080",
+   "subject": "science",
+   "oh": "7.ESS.5",
+   "state": "FL",
+   "code": "SC.8.E.5.9",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 8). Both attribute seasons to the Sun's effect on Earth given their relative positions over the year.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0081",
+   "subject": "science",
+   "oh": "7.PS.1",
+   "state": "FL",
+   "code": "SC.8.P.8.6",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 8). Both introduce the periodic table as an organization of elements by similarity of properties.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0082",
+   "subject": "science",
+   "oh": "7.PS.1",
+   "state": "FL",
+   "code": "SC.8.P.8.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 8). Ohio's property list (solubility, hardness, density, conductivity, melting and boiling point) matches Florida's characteristic physical properties used to classify substances.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0083",
+   "subject": "science",
+   "oh": "7.PS.2",
+   "state": "FL",
+   "code": "SC.8.P.9.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 8). Both state conservation of mass: when substances interact and form new substances, the amount of mass does not change.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0084",
+   "subject": "science",
+   "oh": "7.PS.2",
+   "state": "FL",
+   "code": "SC.8.P.8.9",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 8). Ohio's mixtures formed by physically combining substances and separable by physical processes is Florida's mixture-versus-pure-substance distinction.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0085",
+   "subject": "science",
+   "oh": "7.PS.3",
+   "state": "FL",
+   "code": "SC.7.P.11.3",
+   "confidence": "strong",
+   "rationale": "Both state conservation of energy: energy cannot be created or destroyed, only changed from one form to another.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0086",
+   "subject": "science",
+   "oh": "7.PS.3",
+   "state": "FL",
+   "code": "SC.7.P.11.2",
+   "confidence": "strong",
+   "rationale": "Both require investigating the transformation of energy from one form to another with the total amount unchanged.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0087",
+   "subject": "science",
+   "oh": "7.PS.4",
+   "state": "FL",
+   "code": "SC.7.P.11.4",
+   "confidence": "strong",
+   "rationale": "Ohio lists thermal energy transfer as one of the ways energy moves; Florida describes heat flowing predictably from warmer to cooler objects.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0088",
+   "subject": "science",
+   "oh": "7.PS.4",
+   "state": "FL",
+   "code": "SC.6.E.7.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Ohio names radiation, convection, and conduction as thermal energy transfer modes; Florida's benchmark differentiates those same three mechanisms.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0089",
+   "subject": "science",
+   "oh": "7.PS.4",
+   "state": "FL",
+   "code": "SC.7.P.10.3",
+   "confidence": "moderate",
+   "rationale": "Ohio states that mechanical and electromagnetic waves transfer energy when they interact with matter; Florida addresses wave behavior in different materials without framing it as energy transfer.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0090",
+   "subject": "science",
+   "oh": "7.LS.1",
+   "state": "FL",
+   "code": "SC.7.L.17.1",
+   "confidence": "strong",
+   "rationale": "Both trace energy transfer through producers, consumers, and decomposers in a food web.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0091",
+   "subject": "science",
+   "oh": "7.LS.1",
+   "state": "FL",
+   "code": "SC.8.L.18.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 8). Ohio's 'plants use the energy in light to make sugars out of carbon dioxide and water' is Florida's photosynthesis benchmark.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0092",
+   "subject": "science",
+   "oh": "7.LS.1",
+   "state": "FL",
+   "code": "SC.8.L.18.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 8). Ohio's organisms breaking down food and oxidizing it to release energy and heat is Florida's cellular respiration benchmark.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0093",
+   "subject": "science",
+   "oh": "7.LS.2",
+   "state": "FL",
+   "code": "SC.7.L.17.3",
+   "confidence": "strong",
+   "rationale": "Both address how biotic and abiotic limiting factors (food, water, space, disease, predation) determine the number and survival of organisms in an ecosystem.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0094",
+   "subject": "science",
+   "oh": "7.LS.2",
+   "state": "FL",
+   "code": "SC.7.L.17.2",
+   "confidence": "moderate",
+   "rationale": "Ohio's biotic factors shaping population growth and survival include the interspecies relationships Florida enumerates (mutualism, predation, parasitism, competition).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0095",
+   "subject": "science",
+   "oh": "8.ESS.1",
+   "state": "FL",
+   "code": "SC.7.E.6.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both describe Earth's interior layers: crust/lithosphere, the hot convecting mantle, and the core.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0096",
+   "subject": "science",
+   "oh": "8.ESS.1",
+   "state": "FL",
+   "code": "SC.7.E.6.7",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Ohio's thermal energy from the core driving convection in the asthenosphere is Florida's heat flow and movement of material within Earth.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0097",
+   "subject": "science",
+   "oh": "8.ESS.2",
+   "state": "FL",
+   "code": "SC.7.E.6.5",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both address the theory of plate tectonics and the slow and rapid surface changes plate motion produces, including earthquakes, volcanoes, and mountain building.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0098",
+   "subject": "science",
+   "oh": "8.ESS.2",
+   "state": "FL",
+   "code": "SC.7.E.6.7",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Ohio's convection currents driving plate movement and producing boundary features matches Florida's heat flow creating mountains and ocean basins.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0099",
+   "subject": "science",
+   "oh": "8.ESS.3",
+   "state": "FL",
+   "code": "SC.7.E.6.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Ohio's combination of constructive and destructive processes forming Earth's surface is Florida's pairing of surface events (weathering, erosion) with sub-surface events (tectonics, mountain building).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0100",
+   "subject": "science",
+   "oh": "8.ESS.3",
+   "state": "FL",
+   "code": "SC.7.E.6.5",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Ohio names plate tectonics among the geologic processes forming Earth's surface; Florida describes how crustal plate movement causes those surface changes.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0101",
+   "subject": "science",
+   "oh": "8.ESS.4",
+   "state": "FL",
+   "code": "SC.7.E.6.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both cover methods of determining relative and absolute age of rock, naming the law of superposition explicitly.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0102",
+   "subject": "science",
+   "oh": "8.ESS.4",
+   "state": "FL",
+   "code": "SC.7.E.6.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both use physical evidence in the geologic record to show Earth has changed over geologic time through natural processes.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0103",
+   "subject": "science",
+   "oh": "8.PS.1",
+   "state": "FL",
+   "code": "SC.8.E.5.4",
+   "confidence": "moderate",
+   "rationale": "Both treat gravity as a force acting at a distance between objects, though Florida applies it to the formation and motion of planets and stars rather than to fields generally.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0104",
+   "subject": "science",
+   "oh": "8.LS.1",
+   "state": "FL",
+   "code": "SC.7.L.15.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both use the fossil record as evidence that species have changed over time.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0105",
+   "subject": "science",
+   "oh": "8.LS.1",
+   "state": "FL",
+   "code": "SC.7.L.15.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both attribute species diversity to variation of traits plus environmental factors acting through natural selection.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0106",
+   "subject": "science",
+   "oh": "8.LS.1",
+   "state": "FL",
+   "code": "SC.7.L.15.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both state that extinction occurs when a species lacks the traits needed to survive and reproduce in a changed environment.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0107",
+   "subject": "science",
+   "oh": "8.LS.2",
+   "state": "FL",
+   "code": "SC.7.L.16.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both compare sexual reproduction, which mixes genes from two individuals, with asexual reproduction from a single parent.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0108",
+   "subject": "science",
+   "oh": "8.LS.2",
+   "state": "FL",
+   "code": "SC.7.L.16.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Ohio defines reproduction as the transfer of genetic information between generations; Florida defines heredity as the passage of DNA instructions from one generation to another.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0109",
+   "subject": "science",
+   "oh": "8.LS.3",
+   "state": "FL",
+   "code": "SC.7.L.16.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both state that an organism's traits are specified by hereditary information (DNA/genes) transmitted from parent to offspring.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-fl-0110",
+   "subject": "science",
+   "oh": "8.LS.3",
+   "state": "FL",
+   "code": "SC.7.L.16.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Ohio's contrast of one parent contributing DNA in asexual reproduction versus both parents in sexual reproduction is Florida's sexual/asexual comparison.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0001",
+   "subject": "social_studies",
+   "oh": "2.SS.1",
+   "state": "FL",
+   "code": "SS.2.A.3.1",
+   "confidence": "moderate",
+   "rationale": "Both address foundational time-sequencing skills; Ohio shows time on calendars and timelines while Florida identifies terms and designations of time sequence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0002",
+   "subject": "social_studies",
+   "oh": "2.SS.2",
+   "state": "FL",
+   "code": "SS.2.A.1.1",
+   "confidence": "moderate",
+   "rationale": "Both have students use sources of evidence about the past; Ohio uses artifacts, maps, and photographs to show change over time while Florida examines primary and secondary sources.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0003",
+   "subject": "social_studies",
+   "oh": "2.SS.5",
+   "state": "FL",
+   "code": "SS.2.G.1.1",
+   "confidence": "strong",
+   "rationale": "Both teach interpreting maps and their elements/symbols to answer questions about places at grade 2.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0004",
+   "subject": "social_studies",
+   "oh": "2.SS.5",
+   "state": "FL",
+   "code": "SS.3.G.1.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 3). Both cover the same map-skills content: cardinal directions, titles, symbols, and keys/legends used to locate places.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0005",
+   "subject": "social_studies",
+   "oh": "2.SS.8",
+   "state": "FL",
+   "code": "SS.2.A.2.2",
+   "confidence": "moderate",
+   "rationale": "Both examine how cultures develop differently across places; Ohio ties culture to physical environment while Florida compares Native American tribal cultures from various geographic regions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0006",
+   "subject": "social_studies",
+   "oh": "2.SS.9",
+   "state": "FL",
+   "code": "SS.2.A.2.8",
+   "confidence": "moderate",
+   "rationale": "Both address cultural sharing through interaction; Ohio says interactions among cultures lead to sharing ways of life, Florida explains cultural influences and contributions of immigrants.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0007",
+   "subject": "social_studies",
+   "oh": "2.SS.10",
+   "state": "FL",
+   "code": "SS.2.CG.2.2",
+   "confidence": "strong",
+   "rationale": "Both define responsible personal citizenship at grade 2: Ohio's responsible choices and accountability for personal actions parallels Florida's characteristics of responsible citizenship.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0008",
+   "subject": "social_studies",
+   "oh": "2.SS.14",
+   "state": "FL",
+   "code": "SS.2.E.1.1",
+   "confidence": "moderate",
+   "rationale": "Both introduce limited resources; Ohio focuses on resources being used in various ways while Florida focuses on choices forced by limited resources.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0009",
+   "subject": "social_studies",
+   "oh": "2.SS.15",
+   "state": "FL",
+   "code": "SS.2.E.1.2",
+   "confidence": "moderate",
+   "rationale": "Both address people producing/supplying goods and services; Florida adds the consumer-demand driver.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0010",
+   "subject": "social_studies",
+   "oh": "2.SS.16",
+   "state": "FL",
+   "code": "SS.3.E.1.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 3). Both state the same idea: buyers and sellers use money/trade to exchange goods and services.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0011",
+   "subject": "social_studies",
+   "oh": "3.SS.2",
+   "state": "FL",
+   "code": "SS.3.A.1.1",
+   "confidence": "strong",
+   "rationale": "Both are grade-3 primary/secondary source analysis skills; Ohio applies them to showing change over time.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0012",
+   "subject": "social_studies",
+   "oh": "3.SS.4",
+   "state": "FL",
+   "code": "SS.3.G.1.2",
+   "confidence": "strong",
+   "rationale": "Both cover the same map elements at grade 3: title, key/legend, coordinate/alphanumeric grid, and cardinal directions used to locate places.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0013",
+   "subject": "social_studies",
+   "oh": "3.SS.4",
+   "state": "FL",
+   "code": "SS.3.G.1.4",
+   "confidence": "strong",
+   "rationale": "Ohio's distinction between physical and political maps and their purposes matches Florida's identification of map types (physical, political) and their purposes.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0014",
+   "subject": "social_studies",
+   "oh": "3.SS.5",
+   "state": "FL",
+   "code": "SS.3.G.3.2",
+   "confidence": "moderate",
+   "rationale": "Both connect communities/regions to their natural resources; Ohio ties daily life to agriculture, industry, and natural resources while Florida describes natural resources of North American regions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0015",
+   "subject": "social_studies",
+   "oh": "3.SS.8",
+   "state": "FL",
+   "code": "SS.3.G.4.3",
+   "confidence": "moderate",
+   "rationale": "Both examine cultural diversity within communities/regions; Florida compares cultural characteristics of diverse populations across regions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0016",
+   "subject": "social_studies",
+   "oh": "3.SS.8",
+   "state": "FL",
+   "code": "SS.3.G.4.4",
+   "confidence": "moderate",
+   "rationale": "Ohio's diverse cultural groups in communities parallels Florida's contributions of various ethnic groups to the United States.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0017",
+   "subject": "social_studies",
+   "oh": "3.SS.9",
+   "state": "FL",
+   "code": "SS.3.CG.2.1",
+   "confidence": "moderate",
+   "rationale": "Both address civic behavior of community members; Ohio frames rights and responsibilities while Florida describes civility, cooperation, volunteerism, and other civic virtues.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0018",
+   "subject": "social_studies",
+   "oh": "3.SS.10",
+   "state": "FL",
+   "code": "SS.4.CG.2.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Both center on citizens taking action to solve community problems for the common good; Florida adds working with local and state governments.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0019",
+   "subject": "social_studies",
+   "oh": "3.SS.12",
+   "state": "FL",
+   "code": "SS.3.CG.1.1",
+   "confidence": "moderate",
+   "rationale": "Both address the purpose and authority of government; Ohio states governments make and enforce laws while Florida explains how the Constitution establishes the purpose and need for government.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0020",
+   "subject": "social_studies",
+   "oh": "3.SS.13",
+   "state": "FL",
+   "code": "SS.3.CG.3.2",
+   "confidence": "moderate",
+   "rationale": "Both introduce that government exists at more than one level; Ohio notes local government structures differ while Florida recognizes local, state, and national levels.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0021",
+   "subject": "social_studies",
+   "oh": "3.SS.16",
+   "state": "FL",
+   "code": "SS.2.E.1.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 2). Both state the core scarcity concept: limited resources force people to make choices.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0022",
+   "subject": "social_studies",
+   "oh": "3.SS.16",
+   "state": "FL",
+   "code": "SS.4.FL.2.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Ohio's decisions involving trade-offs is the same concept as Florida's opportunity cost — the value of the next best alternative given up in a choice.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0023",
+   "subject": "social_studies",
+   "oh": "3.SS.17",
+   "state": "FL",
+   "code": "SS.2.E.1.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 2). Both center producers supplying goods and services and consumers whose wants/demands they satisfy.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0024",
+   "subject": "social_studies",
+   "oh": "3.SS.18",
+   "state": "FL",
+   "code": "SS.3.E.1.3",
+   "confidence": "strong",
+   "rationale": "Ohio defines a market as where buyers and sellers exchange goods and services; Florida describes buyers and sellers interacting to exchange goods and services through trade or money.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0025",
+   "subject": "social_studies",
+   "oh": "3.SS.19",
+   "state": "FL",
+   "code": "SS.2.E.1.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 2). Both weigh personal benefits and costs of economic decisions such as saving and spending.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0026",
+   "subject": "social_studies",
+   "oh": "3.SS.19",
+   "state": "FL",
+   "code": "SS.4.FL.2.5",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Both teach making informed decisions by comparing costs (what is given up) and benefits (what is gained).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0027",
+   "subject": "social_studies",
+   "oh": "3.SS.20",
+   "state": "FL",
+   "code": "SS.4.FL.2.7",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 4). Both teach budgeting as a plan for spending, saving, and managing income to make informed personal economic decisions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0028",
+   "subject": "social_studies",
+   "oh": "4.SS.1",
+   "state": "FL",
+   "code": "SS.4.A.9.1",
+   "confidence": "strong",
+   "rationale": "Parallel grade-4 skill in each state's history course: placing/sequencing key events of state history on a timeline.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0029",
+   "subject": "social_studies",
+   "oh": "4.SS.2",
+   "state": "FL",
+   "code": "SS.4.A.1.1",
+   "confidence": "strong",
+   "rationale": "Parallel grade-4 skill: using/analyzing primary and secondary sources in the context of state history.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0030",
+   "subject": "social_studies",
+   "oh": "4.SS.4",
+   "state": "FL",
+   "code": "SS.5.A.5.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 5). Both cover the colonies uniting around liberty and the events leading to the American Revolution and independence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0031",
+   "subject": "social_studies",
+   "oh": "4.SS.5",
+   "state": "FL",
+   "code": "SS.5.A.5.9",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 5). Both specifically address the Northwest Ordinance of 1787 and its significance as a land/territorial policy of the early United States.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0032",
+   "subject": "social_studies",
+   "oh": "4.SS.6",
+   "state": "FL",
+   "code": "SS.5.A.6.5",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 5). Both address the causes and effects of the War of 1812; Ohio approaches it through frontier conflicts that contributed to U.S. involvement.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0033",
+   "subject": "social_studies",
+   "oh": "4.SS.7",
+   "state": "FL",
+   "code": "SS.5.AA.1.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 5). Both examine the Underground Railroad and cooperation in assisting freedom seekers; Ohio frames it through Ohio's key role.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0034",
+   "subject": "social_studies",
+   "oh": "4.SS.7",
+   "state": "FL",
+   "code": "SS.5.AA.1.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 5). Ohio's anti-slavery movement content matches Florida's examination of key figures and events in abolitionist movements.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0035",
+   "subject": "social_studies",
+   "oh": "4.SS.8",
+   "state": "FL",
+   "code": "SS.4.A.4.1",
+   "confidence": "moderate",
+   "rationale": "Parallel state-history standards on the effects of technological advances; the specific innovations differ (Ohio-origin inventions vs. Florida impacts).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0036",
+   "subject": "social_studies",
+   "oh": "4.SS.9",
+   "state": "FL",
+   "code": "SS.4.G.1.4",
+   "confidence": "strong",
+   "rationale": "Both are grade-4 map-interpretation skills using scale and cardinal/intermediate directions (Florida adds symbols, legend, latitude/longitude) to describe locations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0037",
+   "subject": "social_studies",
+   "oh": "4.SS.10",
+   "state": "FL",
+   "code": "SS.4.A.6.1",
+   "confidence": "moderate",
+   "rationale": "Parallel standards on the economic development of the state's major industries; the industries themselves are state-specific.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0038",
+   "subject": "social_studies",
+   "oh": "4.SS.10",
+   "state": "FL",
+   "code": "SS.4.E.1.2",
+   "confidence": "moderate",
+   "rationale": "Both connect the state economy to the national economy; Ohio via agriculture, industry, and natural resources, Florida via its role and conditions attracting business.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0039",
+   "subject": "social_studies",
+   "oh": "4.SS.13",
+   "state": "FL",
+   "code": "SS.4.A.6.2",
+   "confidence": "moderate",
+   "rationale": "Both address how immigrant groups changed the state's population and contributed to its diversity; specific groups differ by state.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0040",
+   "subject": "social_studies",
+   "oh": "4.SS.13",
+   "state": "FL",
+   "code": "SS.4.A.8.2",
+   "confidence": "moderate",
+   "rationale": "Ohio's increasingly diverse population parallels Florida's examination of how and why immigration impacts the state today.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0041",
+   "subject": "social_studies",
+   "oh": "4.SS.15",
+   "state": "FL",
+   "code": "SS.4.CG.2.1",
+   "confidence": "strong",
+   "rationale": "Both describe how citizens act in and influence state government, including working with government to address problems.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0042",
+   "subject": "social_studies",
+   "oh": "4.SS.15",
+   "state": "FL",
+   "code": "SS.4.CG.2.2",
+   "confidence": "strong",
+   "rationale": "Ohio's civic rights, responsibilities, and opportunities to influence state/national government matches Florida's importance of voting, public service, and volunteerism to the state and nation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0043",
+   "subject": "social_studies",
+   "oh": "4.SS.18",
+   "state": "FL",
+   "code": "SS.5.CG.3.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 5). Both teach that the U.S. Constitution establishes limited government and protects citizens' rights from government overreach.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0044",
+   "subject": "social_studies",
+   "oh": "4.SS.18",
+   "state": "FL",
+   "code": "SS.5.CG.1.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 5). Ohio's First Amendment rights content aligns with Florida's history, meaning, and significance of the Bill of Rights.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0045",
+   "subject": "social_studies",
+   "oh": "4.SS.19",
+   "state": "FL",
+   "code": "SS.4.CG.1.1",
+   "confidence": "strong",
+   "rationale": "Both teach that a constitution is a written plan for government at the state level; Florida explains why the state has a written constitution.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0046",
+   "subject": "social_studies",
+   "oh": "4.SS.19",
+   "state": "FL",
+   "code": "SS.4.CG.3.1",
+   "confidence": "strong",
+   "rationale": "Both cover the separation of government responsibilities among three branches as established by the state constitution.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0047",
+   "subject": "social_studies",
+   "oh": "4.SS.21",
+   "state": "FL",
+   "code": "SS.4.FL.1.7",
+   "confidence": "strong",
+   "rationale": "Both define entrepreneurs as people who take risks to start businesses in pursuit of profit, with explicit attention to risk.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0048",
+   "subject": "social_studies",
+   "oh": "4.SS.21",
+   "state": "FL",
+   "code": "SS.4.E.1.1",
+   "confidence": "moderate",
+   "rationale": "Both cover entrepreneurs in the state economy; Ohio emphasizes the concept (organizing resources, risk, profit, competition) while Florida identifies influential entrepreneurs.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0049",
+   "subject": "social_studies",
+   "oh": "4.SS.22",
+   "state": "FL",
+   "code": "SS.4.FL.3.2",
+   "confidence": "strong",
+   "rationale": "Both teach the saving trade-off: setting aside income (reducing spending now) to improve future financial well-being.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0050",
+   "subject": "social_studies",
+   "oh": "4.SS.22",
+   "state": "FL",
+   "code": "SS.4.FL.3.4",
+   "confidence": "moderate",
+   "rationale": "Both address motivations for saving; Ohio ties saving to financial well-being while Florida identifies savings goals as incentives to save.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0051",
+   "subject": "social_studies",
+   "oh": "5.SS.1",
+   "state": "FL",
+   "code": "SS.6.W.1.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both explicitly teach the B.C./A.D. and B.C.E./C.E. conventions for ordering events in time.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0052",
+   "subject": "social_studies",
+   "oh": "5.SS.2",
+   "state": "FL",
+   "code": "SS.5.A.2.1",
+   "confidence": "strong",
+   "rationale": "Both compare pre-Columbian American civilizations (Maya/Aztec and mound builders/Mississippian by name) and their cultural, governmental, and technological features.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0053",
+   "subject": "social_studies",
+   "oh": "5.SS.2",
+   "state": "FL",
+   "code": "SS.6.W.2.10",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both study the advanced pre-Columbian civilizations of Mesoamerica and South America (Maya, Inca, Aztec) as complex societies.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0054",
+   "subject": "social_studies",
+   "oh": "5.SS.3",
+   "state": "FL",
+   "code": "SS.5.A.3.2",
+   "confidence": "strong",
+   "rationale": "Both cover European exploration of the 1400s-1600s; Florida investigates explorers' motives, routes, and accomplishments while Ohio examines exploration's lasting effects.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0055",
+   "subject": "social_studies",
+   "oh": "5.SS.3",
+   "state": "FL",
+   "code": "SS.5.A.3.3",
+   "confidence": "strong",
+   "rationale": "Ohio's lasting effects of European colonization on the Western Hemisphere aligns with Florida's interactions among Native Americans, Africans, and European powers for control of North America.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0056",
+   "subject": "social_studies",
+   "oh": "5.SS.4",
+   "state": "FL",
+   "code": "SS.5.G.1.1",
+   "confidence": "strong",
+   "rationale": "Both are grade-5 skills for using a variety of geographic tools to gather and interpret information about people, places, and environments.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0057",
+   "subject": "social_studies",
+   "oh": "5.SS.4",
+   "state": "FL",
+   "code": "SS.5.G.1.4",
+   "confidence": "strong",
+   "rationale": "Ohio's use of geographic tools to process and report information matches Florida's constructing maps, charts, and graphs to display geographic information.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0058",
+   "subject": "social_studies",
+   "oh": "5.SS.5",
+   "state": "FL",
+   "code": "SS.5.G.1.2",
+   "confidence": "strong",
+   "rationale": "Both teach using latitude and longitude to locate places and make observations about location at grade 5.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0059",
+   "subject": "social_studies",
+   "oh": "5.SS.8",
+   "state": "FL",
+   "code": "SS.5.A.2.2",
+   "confidence": "strong",
+   "rationale": "Both classify American Indian tribes/nations by geographic region at grade 5.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0060",
+   "subject": "social_studies",
+   "oh": "5.SS.8",
+   "state": "FL",
+   "code": "SS.5.A.2.3",
+   "confidence": "strong",
+   "rationale": "Both compare the distinct cultures of Native American tribes across geographic regions, tying cultural similarity to geography.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0061",
+   "subject": "social_studies",
+   "oh": "5.SS.9",
+   "state": "FL",
+   "code": "SS.5.G.2.1",
+   "confidence": "moderate",
+   "rationale": "Both examine factors that cause movement/change of people and places; Ohio's political, environmental, social, and economic movement factors parallel Florida's push-pull factors.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0062",
+   "subject": "social_studies",
+   "oh": "5.SS.15",
+   "state": "FL",
+   "code": "SS.5.E.1.1",
+   "confidence": "moderate",
+   "rationale": "Both connect productive resources and trade to economic growth; Ohio emphasizes specialization leading to trade while Florida traces how trade promoted growth in North America.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0063",
+   "subject": "social_studies",
+   "oh": "5.SS.17",
+   "state": "FL",
+   "code": "SS.5.E.2.1",
+   "confidence": "moderate",
+   "rationale": "Both address effects of trade between peoples/regions; Ohio frames interdependence through specialization while Florida weighs positive and negative effects of voluntary trade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0064",
+   "subject": "social_studies",
+   "oh": "6.SS.1",
+   "state": "FL",
+   "code": "SS.6.W.1.1",
+   "confidence": "strong",
+   "rationale": "Both are grade-6 timeline skills for showing chronological order and relationships among historical events.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0065",
+   "subject": "social_studies",
+   "oh": "6.SS.2",
+   "state": "FL",
+   "code": "SS.6.W.2.4",
+   "confidence": "strong",
+   "rationale": "Both compare the political, economic, social, and religious institutions of the early river civilizations (Egypt, Mesopotamia, India, China).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0066",
+   "subject": "social_studies",
+   "oh": "6.SS.2",
+   "state": "FL",
+   "code": "SS.6.W.2.5",
+   "confidence": "strong",
+   "rationale": "Ohio's study of early Egypt's government, religion, technology, and agriculture aligns with Florida's achievements of Egyptian civilization.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0067",
+   "subject": "social_studies",
+   "oh": "6.SS.2",
+   "state": "FL",
+   "code": "SS.6.W.2.7",
+   "confidence": "strong",
+   "rationale": "Ohio's study of early Mesopotamia aligns with Florida's achievements of Mesopotamian civilization.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0068",
+   "subject": "social_studies",
+   "oh": "6.SS.3",
+   "state": "FL",
+   "code": "SS.6.G.1.4",
+   "confidence": "strong",
+   "rationale": "Both are grade-6 skills for using the tools geographers use to gather, process, and report information about the world.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0069",
+   "subject": "social_studies",
+   "oh": "6.SS.3",
+   "state": "FL",
+   "code": "SS.6.G.1.2",
+   "confidence": "moderate",
+   "rationale": "Ohio's cartographer decisions about what to include and how it is displayed relates to Florida's analysis of map projections and applications of various map types.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0070",
+   "subject": "social_studies",
+   "oh": "6.SS.4",
+   "state": "FL",
+   "code": "SS.6.G.1.1",
+   "confidence": "strong",
+   "rationale": "Both teach using latitude and longitude coordinates to identify absolute location at grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0071",
+   "subject": "social_studies",
+   "oh": "6.SS.5",
+   "state": "FL",
+   "code": "SS.6.G.2.2",
+   "confidence": "moderate",
+   "rationale": "Both classify and compare regions; Ohio determines regions using landform, climate, population, and economic data while Florida differentiates continents, regions, countries, and cities.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0072",
+   "subject": "social_studies",
+   "oh": "6.SS.6",
+   "state": "FL",
+   "code": "SS.6.G.2.1",
+   "confidence": "strong",
+   "rationale": "Both examine how physical environment (climate, resources, location) influenced settlement and human/economic activity in ancient Eastern Hemisphere civilizations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0073",
+   "subject": "social_studies",
+   "oh": "6.SS.6",
+   "state": "FL",
+   "code": "SS.6.G.3.2",
+   "confidence": "strong",
+   "rationale": "Ohio's human modification of the physical environment matches Florida's analysis of human populations' impact on ancient ecosystems.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0074",
+   "subject": "social_studies",
+   "oh": "6.SS.7",
+   "state": "FL",
+   "code": "SS.6.G.4.2",
+   "confidence": "moderate",
+   "rationale": "Both study movement of people in the Eastern Hemisphere; Florida traces significant migrations and their results on maps.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0075",
+   "subject": "social_studies",
+   "oh": "6.SS.7",
+   "state": "FL",
+   "code": "SS.6.W.4.10",
+   "confidence": "moderate",
+   "rationale": "Ohio's movement of products and ideas aligns with Florida's silk roads and maritime routes moving goods and ideas among Asia, East Africa, and the Mediterranean.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0076",
+   "subject": "social_studies",
+   "oh": "6.SS.8",
+   "state": "FL",
+   "code": "SS.6.G.2.6",
+   "confidence": "strong",
+   "rationale": "Both teach cultural diffusion among ancient civilizations of the Eastern Hemisphere, including practices and technology spreading between cultures.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0077",
+   "subject": "social_studies",
+   "oh": "6.SS.8",
+   "state": "FL",
+   "code": "SS.6.G.4.4",
+   "confidence": "strong",
+   "rationale": "Ohio's diffusion of major world religions impacting the Eastern Hemisphere matches Florida's mapping and analyzing the spread of belief systems in the ancient world.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0078",
+   "subject": "social_studies",
+   "oh": "6.SS.9",
+   "state": "FL",
+   "code": "SS.6.W.1.3",
+   "confidence": "moderate",
+   "rationale": "Both involve working with historical sources; Ohio adds evaluating accuracy/credibility and defending claims while Florida focuses on interpreting primary and secondary sources.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0079",
+   "subject": "social_studies",
+   "oh": "6.SS.12",
+   "state": "FL",
+   "code": "SS.6.E.2.1",
+   "confidence": "moderate",
+   "rationale": "Both address economic decision-making with future consequences; Florida evaluates how civilizations' economic decisions framed future development.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0080",
+   "subject": "social_studies",
+   "oh": "6.SS.13",
+   "state": "FL",
+   "code": "SS.6.E.1.2",
+   "confidence": "moderate",
+   "rationale": "Ohio's fundamental economic questions (what, how, for whom to produce) underlie Florida's description of traditional and command economies in different civilizations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0081",
+   "subject": "social_studies",
+   "oh": "6.SS.14",
+   "state": "FL",
+   "code": "SS.6.E.3.4",
+   "confidence": "moderate",
+   "rationale": "Both connect specialization/trade between societies; Florida describes trading relationships among civilizations and the benefits and drawbacks of voluntary trade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0082",
+   "subject": "social_studies",
+   "oh": "6.SS.14",
+   "state": "FL",
+   "code": "SS.6.E.3.2",
+   "confidence": "moderate",
+   "rationale": "Ohio's regional specialization producing global trade parallels Florida's categorizing products traded among civilizations and barriers to that trade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0083",
+   "subject": "social_studies",
+   "oh": "6.SS.15",
+   "state": "FL",
+   "code": "SS.6.E.1.3",
+   "confidence": "strong",
+   "rationale": "Both cover supply and demand, price/market interaction, and productive resources (land, labor, capital, entrepreneurship) at grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0084",
+   "subject": "social_studies",
+   "oh": "7.SS.1",
+   "state": "FL",
+   "code": "SS.6.W.1.5",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both address how historians interpret the past, including varying interpretations rather than judging by present-day norms.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0085",
+   "subject": "social_studies",
+   "oh": "7.SS.1",
+   "state": "FL",
+   "code": "SS.8.A.1.7",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 8). Both teach viewing historical events through the perspectives of the people who lived them.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0086",
+   "subject": "social_studies",
+   "oh": "7.SS.2",
+   "state": "FL",
+   "code": "SS.6.W.3.5",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both cover the enduring achievements and contributions of ancient Greek civilization, including governance, art, and literature.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0087",
+   "subject": "social_studies",
+   "oh": "7.SS.2",
+   "state": "FL",
+   "code": "SS.6.W.3.14",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both cover the key achievements and lasting contributions of Roman civilization, including law, engineering, and architecture.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0088",
+   "subject": "social_studies",
+   "oh": "7.SS.2",
+   "state": "FL",
+   "code": "SS.6.W.3.13",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both address early Christianity's relationship to and spread within the Roman Empire.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0089",
+   "subject": "social_studies",
+   "oh": "7.SS.3",
+   "state": "FL",
+   "code": "SS.6.W.3.15",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both explain the internal and external factors behind the decline/collapse of the Western Roman Empire.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0090",
+   "subject": "social_studies",
+   "oh": "7.SS.4",
+   "state": "FL",
+   "code": "SS.6.W.4.11",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both cover the Mongol conquest and expansion across Asia and its effects on Asian and European peoples.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0091",
+   "subject": "social_studies",
+   "oh": "7.SS.8",
+   "state": "FL",
+   "code": "SS.6.W.4.10",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both address African and Asian trade routes (silk roads, Indian Ocean) as commercial connectors along which empires and exchange grew.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0092",
+   "subject": "social_studies",
+   "oh": "7.SS.8",
+   "state": "FL",
+   "code": "SS.6.W.3.18",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both cover African empires/kingdoms (Kush, Axum) growing as commercial and cultural centers along trade routes.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0093",
+   "subject": "social_studies",
+   "oh": "7.SS.9",
+   "state": "FL",
+   "code": "SS.68.AA.1.1",
+   "confidence": "strong",
+   "rationale": "Both cover African slave-trade routes prior to the Atlantic trade; Florida's Afro-Eurasian trade routes and methods encompass the trans-Saharan slave trade Ohio names (banded FL 6-8 code).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0094",
+   "subject": "social_studies",
+   "oh": "7.SS.9",
+   "state": "FL",
+   "code": "SS.68.AA.1.2",
+   "confidence": "moderate",
+   "rationale": "Both address the systematic slave trading occurring in Africa; Florida focuses on European explorers' first contact with it (banded FL 6-8 code).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0095",
+   "subject": "social_studies",
+   "oh": "7.SS.10",
+   "state": "FL",
+   "code": "SS.8.A.2.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 8). Both examine European powers' expansion of influence through exploration, conquest, and colonization; Florida focuses it on North America.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0096",
+   "subject": "social_studies",
+   "oh": "7.SS.12",
+   "state": "FL",
+   "code": "SS.6.G.4.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both use maps to trace the development of human settlement/migration over time and analyze the results.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0097",
+   "subject": "social_studies",
+   "oh": "7.SS.13",
+   "state": "FL",
+   "code": "SS.6.G.2.5",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both examine how geographic factors/boundaries promote or impede movement and interaction among peoples and regions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0098",
+   "subject": "social_studies",
+   "oh": "7.SS.14",
+   "state": "FL",
+   "code": "SS.6.W.4.10",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both cover trade routes connecting Africa, Europe/the Mediterranean, and Asia as conduits for goods, technology, and ideas.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0099",
+   "subject": "social_studies",
+   "oh": "7.SS.14",
+   "state": "FL",
+   "code": "SS.6.G.4.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Ohio's spread of major world religions along trade routes matches Florida's mapping and analyzing the spread of belief systems.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0100",
+   "subject": "social_studies",
+   "oh": "7.SS.15",
+   "state": "FL",
+   "code": "SS.7.G.4.1",
+   "confidence": "moderate",
+   "rationale": "Both teach cultural diffusion facilitated by movement; Ohio ties it to transportation/communication improvements globally while Florida applies it to North America.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0101",
+   "subject": "social_studies",
+   "oh": "7.SS.16",
+   "state": "FL",
+   "code": "SS.7.CG.2.10",
+   "confidence": "moderate",
+   "rationale": "Both address student civic engagement with real-world issues; Florida details the process of researching policy alternatives to address a state or local problem.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0102",
+   "subject": "social_studies",
+   "oh": "7.SS.17",
+   "state": "FL",
+   "code": "SS.7.CG.1.1",
+   "confidence": "strong",
+   "rationale": "Both analyze how ancient Greek democracy and the Roman Republic influenced the structure of modern (U.S.) democratic government.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0103",
+   "subject": "social_studies",
+   "oh": "7.SS.17",
+   "state": "FL",
+   "code": "SS.6.CG.1.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both analyze Greek democratic concepts as a foundation for modern democratic government.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0104",
+   "subject": "social_studies",
+   "oh": "7.SS.17",
+   "state": "FL",
+   "code": "SS.6.CG.1.2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both analyze the Roman Republic's influence on modern democratic/constitutional government.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0105",
+   "subject": "social_studies",
+   "oh": "7.SS.19",
+   "state": "FL",
+   "code": "SS.7.E.1.3",
+   "confidence": "moderate",
+   "rationale": "Both address economic decision-making concepts; Ohio's cost-benefit analysis parallels Florida's review of choice, scarcity, and opportunity cost.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0106",
+   "subject": "social_studies",
+   "oh": "7.SS.20",
+   "state": "FL",
+   "code": "SS.7.E.3.3",
+   "confidence": "moderate",
+   "rationale": "Both examine how the distribution of productive resources shapes economies; Florida contrasts single-resource and diversified economies.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0107",
+   "subject": "social_studies",
+   "oh": "7.SS.21",
+   "state": "FL",
+   "code": "SS.6.E.3.1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 6). Both cover the transition from barter to monetary exchange and why trade requires a medium of exchange.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0108",
+   "subject": "social_studies",
+   "oh": "8.SS.1",
+   "state": "FL",
+   "code": "SS.8.A.1.5",
+   "confidence": "strong",
+   "rationale": "Both are grade-8 skills for analyzing primary and secondary sources, attending to author, audience, and purpose.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0109",
+   "subject": "social_studies",
+   "oh": "8.SS.1",
+   "state": "FL",
+   "code": "SS.8.A.1.6",
+   "confidence": "strong",
+   "rationale": "Ohio's examining events from multiple perspectives to defend a position matches Florida's comparing interpretations of key events and issues in American history.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0110",
+   "subject": "social_studies",
+   "oh": "8.SS.2",
+   "state": "FL",
+   "code": "SS.8.A.2.1",
+   "confidence": "strong",
+   "rationale": "Both cover European exploration and colonization of a North America originally inhabited by American Indians, including the competing colonial powers.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0111",
+   "subject": "social_studies",
+   "oh": "8.SS.2",
+   "state": "FL",
+   "code": "SS.8.A.2.5",
+   "confidence": "moderate",
+   "rationale": "Both address the encounter between European colonizers and Native American inhabitants; Florida focuses on colonization's impact on Native populations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0112",
+   "subject": "social_studies",
+   "oh": "8.SS.3",
+   "state": "FL",
+   "code": "SS.8.A.2.6",
+   "confidence": "strong",
+   "rationale": "Both cover conflicts among colonizing powers over North American territory and resources; the French and Indian War is the central case in each course.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0113",
+   "subject": "social_studies",
+   "oh": "8.SS.4",
+   "state": "FL",
+   "code": "SS.8.A.2.3",
+   "confidence": "strong",
+   "rationale": "Both examine race-based slavery and enslaved labor as foundations of colonial economic systems.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0114",
+   "subject": "social_studies",
+   "oh": "8.SS.4",
+   "state": "FL",
+   "code": "SS.8.A.2.7",
+   "confidence": "strong",
+   "rationale": "Both recognize the contributions of Africans — their knowledge, skills, and traditions — to the society, culture, and development of the colonies.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0115",
+   "subject": "social_studies",
+   "oh": "8.SS.4",
+   "state": "FL",
+   "code": "SS.8.E.2.3",
+   "confidence": "strong",
+   "rationale": "Both assess the essential role of Africans and other minority groups in the economic development of the colonies/United States.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0116",
+   "subject": "social_studies",
+   "oh": "8.SS.5",
+   "state": "FL",
+   "code": "SS.8.A.3.2",
+   "confidence": "strong",
+   "rationale": "Both cover colonial dissatisfaction with British rule and the colonial reaction to British policies that led toward revolution.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0117",
+   "subject": "social_studies",
+   "oh": "8.SS.5",
+   "state": "FL",
+   "code": "SS.8.A.3.7",
+   "confidence": "strong",
+   "rationale": "Both examine the Declaration of Independence — its ideas and consequences — as the launch point of the American Revolution.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0118",
+   "subject": "social_studies",
+   "oh": "8.SS.5",
+   "state": "FL",
+   "code": "SS.7.CG.1.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both cover how Enlightenment ideas (natural law, social contract) motivated the Declaration of Independence and the founding.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0119",
+   "subject": "social_studies",
+   "oh": "8.SS.6",
+   "state": "FL",
+   "code": "SS.8.A.3.6",
+   "confidence": "strong",
+   "rationale": "Both examine the causes, course, and outcome of the American Revolution including its key events.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0120",
+   "subject": "social_studies",
+   "oh": "8.SS.6",
+   "state": "FL",
+   "code": "SS.8.A.3.5",
+   "confidence": "strong",
+   "rationale": "Both address how significant individuals influenced developments and the course of the Revolutionary era.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0121",
+   "subject": "social_studies",
+   "oh": "8.SS.7",
+   "state": "FL",
+   "code": "SS.8.A.3.6",
+   "confidence": "strong",
+   "rationale": "Ohio's outcome of the Revolution — independence and new political, social, and economic relationships — is the consequences portion of Florida's causes/course/consequences standard.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0122",
+   "subject": "social_studies",
+   "oh": "8.SS.8",
+   "state": "FL",
+   "code": "SS.8.A.3.9",
+   "confidence": "strong",
+   "rationale": "Both cover the weaknesses of the Articles of Confederation leading to the Constitutional Convention.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0123",
+   "subject": "social_studies",
+   "oh": "8.SS.8",
+   "state": "FL",
+   "code": "SS.8.A.3.10",
+   "confidence": "strong",
+   "rationale": "Both cover the Constitutional Convention and its debates/compromises in adopting the U.S. Constitution.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0124",
+   "subject": "social_studies",
+   "oh": "8.SS.8",
+   "state": "FL",
+   "code": "SS.8.A.3.11",
+   "confidence": "strong",
+   "rationale": "Ohio's debate over adoption of the Constitution matches Florida's Federalist/Anti-Federalist support and opposition to ratification.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0125",
+   "subject": "social_studies",
+   "oh": "8.SS.9",
+   "state": "FL",
+   "code": "SS.8.A.3.12",
+   "confidence": "strong",
+   "rationale": "Both cover Washington's presidency establishing the new national government and precedents for a strong federal government.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0126",
+   "subject": "social_studies",
+   "oh": "8.SS.9",
+   "state": "FL",
+   "code": "SS.8.A.3.13",
+   "confidence": "strong",
+   "rationale": "Both cover the Adams administration's domestic and international events as part of the early presidential administrations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0127",
+   "subject": "social_studies",
+   "oh": "8.SS.9",
+   "state": "FL",
+   "code": "SS.8.A.3.14",
+   "confidence": "strong",
+   "rationale": "Both cover the Jefferson administration and peaceful transition of power among early presidential administrations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0128",
+   "subject": "social_studies",
+   "oh": "8.SS.10",
+   "state": "FL",
+   "code": "SS.8.A.4.1",
+   "confidence": "strong",
+   "rationale": "Both cover U.S. territorial growth through treaties and purchases (e.g., Convention of 1818, Adams-Onis Treaty) during westward expansion.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0129",
+   "subject": "social_studies",
+   "oh": "8.SS.10",
+   "state": "FL",
+   "code": "SS.8.A.4.12",
+   "confidence": "moderate",
+   "rationale": "Both address U.S. territorial acquisition by purchase; Florida focuses on the Haitian Revolution's effect on acquiring the Louisiana Territory.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0130",
+   "subject": "social_studies",
+   "oh": "8.SS.11",
+   "state": "FL",
+   "code": "SS.8.A.4.2",
+   "confidence": "strong",
+   "rationale": "Both cover the sectional debates over the spread of slavery into western territories driven by westward expansion.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0131",
+   "subject": "social_studies",
+   "oh": "8.SS.11",
+   "state": "FL",
+   "code": "SS.8.A.4.4",
+   "confidence": "strong",
+   "rationale": "Both cover westward expansion's impact on and displacement of Native Americans and other minority groups.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0132",
+   "subject": "social_studies",
+   "oh": "8.SS.12",
+   "state": "FL",
+   "code": "SS.8.A.5.1",
+   "confidence": "strong",
+   "rationale": "Both explain the causes of the Civil War through sectionalism, slavery, states' rights/federalism disputes, and economic differences.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0133",
+   "subject": "social_studies",
+   "oh": "8.SS.12",
+   "state": "FL",
+   "code": "SS.8.A.5.2",
+   "confidence": "strong",
+   "rationale": "Both analyze slavery's central role in the development of sectional conflict leading to the Civil War.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0134",
+   "subject": "social_studies",
+   "oh": "8.SS.13",
+   "state": "FL",
+   "code": "SS.8.A.5.6",
+   "confidence": "strong",
+   "rationale": "Both cover key Civil War battles and events and their influence on the war's course and outcome.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0135",
+   "subject": "social_studies",
+   "oh": "8.SS.13",
+   "state": "FL",
+   "code": "SS.8.A.5.3",
+   "confidence": "strong",
+   "rationale": "Both cover significant figures of the Civil War; Florida centers Lincoln's presidency and its military and political events.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0136",
+   "subject": "social_studies",
+   "oh": "8.SS.14",
+   "state": "FL",
+   "code": "SS.8.A.5.8",
+   "confidence": "strong",
+   "rationale": "Both evaluate Reconstruction's policies, practices, and consequences, including federal authority and lingering social/political differences.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0137",
+   "subject": "social_studies",
+   "oh": "8.SS.14",
+   "state": "FL",
+   "code": "SS.8.CG.2.6",
+   "confidence": "strong",
+   "rationale": "Ohio's Reconstruction-era changes to the U.S. Constitution match Florida's evaluation of amendments expanding civic participation through Reconstruction.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0138",
+   "subject": "social_studies",
+   "oh": "8.SS.15",
+   "state": "FL",
+   "code": "SS.8.G.1.1",
+   "confidence": "strong",
+   "rationale": "Both use modern and historical maps to connect geography to events and regions throughout American history.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0139",
+   "subject": "social_studies",
+   "oh": "8.SS.15",
+   "state": "FL",
+   "code": "SS.8.G.6.1",
+   "confidence": "strong",
+   "rationale": "Both use maps and geographic tools/representations to analyze how historic events and changes over time were shaped by geography.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0140",
+   "subject": "social_studies",
+   "oh": "8.SS.16",
+   "state": "FL",
+   "code": "SS.8.G.5.2",
+   "confidence": "strong",
+   "rationale": "Both cover unintended environmental consequences: Ohio's resource-driven expansion parallels Florida's impact of human modifications on U.S. environments and ecosystems.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0141",
+   "subject": "social_studies",
+   "oh": "8.SS.16",
+   "state": "FL",
+   "code": "SS.8.G.5.1",
+   "confidence": "moderate",
+   "rationale": "Both address dependence on natural resources; Florida describes human dependence on the physical environment to meet needs while Ohio ties resources to expansion.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0142",
+   "subject": "social_studies",
+   "oh": "8.SS.17",
+   "state": "FL",
+   "code": "SS.8.G.4.2",
+   "confidence": "strong",
+   "rationale": "Both analyze the effects of migration to and within the United States on settlement patterns and development.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0143",
+   "subject": "social_studies",
+   "oh": "8.SS.17",
+   "state": "FL",
+   "code": "SS.8.G.4.3",
+   "confidence": "strong",
+   "rationale": "Ohio's movement of people, products, and ideas shaping development matches Florida's cultural diffusion across the expanding United States.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0144",
+   "subject": "social_studies",
+   "oh": "8.SS.18",
+   "state": "FL",
+   "code": "SS.8.A.3.15",
+   "confidence": "moderate",
+   "rationale": "Both examine the era's under-represented and minority groups; Ohio focuses on consequences of bias and prejudice while Florida examines the period from those groups' perspectives.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0145",
+   "subject": "social_studies",
+   "oh": "8.SS.20",
+   "state": "FL",
+   "code": "SS.8.CG.2.4",
+   "confidence": "moderate",
+   "rationale": "Both address civic and political participation; Florida traces how forms of participation changed from the Colonial period through Reconstruction.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0146",
+   "subject": "social_studies",
+   "oh": "8.SS.21",
+   "state": "FL",
+   "code": "SS.7.CG.2.9",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both teach media literacy for citizens: analyzing media/political communication including bias and propaganda that shape public opinion.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0147",
+   "subject": "social_studies",
+   "oh": "8.SS.21",
+   "state": "FL",
+   "code": "SS.7.CG.2.8",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both examine how media (and interest groups) influence public opinion and government.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0148",
+   "subject": "social_studies",
+   "oh": "8.SS.22",
+   "state": "FL",
+   "code": "SS.7.CG.1.9",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both cover the constitutional framework of separation of powers and checks and balances limiting government.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0149",
+   "subject": "social_studies",
+   "oh": "8.SS.22",
+   "state": "FL",
+   "code": "SS.7.CG.3.3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both describe the structure and function of the three branches established by the U.S. Constitution in a federal republic.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0150",
+   "subject": "social_studies",
+   "oh": "8.SS.23",
+   "state": "FL",
+   "code": "SS.8.CG.2.5",
+   "confidence": "strong",
+   "rationale": "Both cover how the Constitution/Bill of Rights protects citizens' rights and liberties.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0151",
+   "subject": "social_studies",
+   "oh": "8.SS.23",
+   "state": "FL",
+   "code": "SS.7.CG.2.4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (FL grade 7). Both explain how the U.S. Constitution and Bill of Rights safeguard individual rights by limiting government power.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0152",
+   "subject": "social_studies",
+   "oh": "8.SS.24",
+   "state": "FL",
+   "code": "SS.8.E.1.1",
+   "confidence": "moderate",
+   "rationale": "Both address economic decision factors with lasting consequences; Florida examines scarcity, opportunity costs, and incentives shaping U.S. economic development.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0153",
+   "subject": "social_studies",
+   "oh": "8.SS.25",
+   "state": "FL",
+   "code": "SS.8.A.4.6",
+   "confidence": "strong",
+   "rationale": "Both cover the technological improvements and inventions that drove industrial growth during the Industrial Revolution.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0154",
+   "subject": "social_studies",
+   "oh": "8.SS.25",
+   "state": "FL",
+   "code": "SS.8.A.4.7",
+   "confidence": "strong",
+   "rationale": "Ohio's shift from craftwork to factory work matches Florida's causes, course, and consequences of New England's textile industry.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-fl-0155",
+   "subject": "social_studies",
+   "oh": "8.SS.26",
+   "state": "FL",
+   "code": "SS.8.E.2.2",
+   "confidence": "strong",
+   "rationale": "Both cover how government policies (spending, regulation, taxes, trade measures) impact markets and the economy.",
+   "source": "ai_draft"
   }
  ]
 }
