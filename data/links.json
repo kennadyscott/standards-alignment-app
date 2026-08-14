@@ -10792,6 +10792,2466 @@
    "confidence": "strong",
    "rationale": "Both cover how government policies (spending, regulation, taxes, trade measures) impact markets and the economy.",
    "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0001",
+   "subject": "science",
+   "oh": "2.ESS.1",
+   "state": "TX",
+   "code": "2.10B",
+   "confidence": "moderate",
+   "rationale": "Ohio has students measure wind speed/direction and air properties; TX has students measure, record, and graph weather information. Both are grade-2 measurement of atmospheric conditions, though TX names temperature and precipitation rather than wind.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0002",
+   "subject": "science",
+   "oh": "2.ESS.2",
+   "state": "TX",
+   "code": "3.6C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 3). Ohio's stated emphasis is investigating condensation and evaporation of atmospheric water; TX 3.6C targets exactly those state changes, using condensation on a glass and water becoming vapor as its examples.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0003",
+   "subject": "science",
+   "oh": "2.ESS.3",
+   "state": "TX",
+   "code": "2.10B",
+   "confidence": "moderate",
+   "rationale": "Ohio addresses short- and long-term weather changes in temperature, precipitation, and wind; TX 2.10B has students measure, record, and graph temperature and precipitation over time, which surfaces those weather changes without addressing their energy causes.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0004",
+   "subject": "science",
+   "oh": "2.PS.1",
+   "state": "TX",
+   "code": "2.7B",
+   "confidence": "strong",
+   "rationale": "Both are grade-2 force-and-motion standards: Ohio's 'change in motion is related to the size of the force' is the same idea as TX's investigation of how the strength of a push or pull changes an object's motion.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0005",
+   "subject": "science",
+   "oh": "2.PS.1",
+   "state": "TX",
+   "code": "2.7A",
+   "confidence": "moderate",
+   "rationale": "Ohio covers forces changing an object's motion; TX 2.7A covers the contact-force half (objects pushing on each other when they touch or collide) but focuses on shape change rather than motion change.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0006",
+   "subject": "science",
+   "oh": "2.PS.1",
+   "state": "TX",
+   "code": "3.7A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 3). Ohio explicitly includes forces that act without touching (magnets, falling objects); TX 3.7A is the standard that covers forces at a distance, including magnetism and gravity, alongside pushes and pulls.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0007",
+   "subject": "science",
+   "oh": "3.ESS.1",
+   "state": "TX",
+   "code": "3.10B",
+   "confidence": "strong",
+   "rationale": "Ohio defines soil as pieces of rock, organic material, water, and air; TX 3.10B has students explain how soils are formed by weathering of rock and decomposition of plant and animal remains — the same grade-3 soil-composition content.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0008",
+   "subject": "science",
+   "oh": "3.ESS.2",
+   "state": "TX",
+   "code": "4.11A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 4). Both center on the renewable/nonrenewable distinction with nearly identical example lists (wind, water, solar vs. coal, oil, natural gas).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0009",
+   "subject": "science",
+   "oh": "3.ESS.2",
+   "state": "TX",
+   "code": "3.11A",
+   "confidence": "moderate",
+   "rationale": "Both are grade-3 natural-resource standards; TX 3.11A covers human uses of natural resources broadly, while Ohio focuses specifically on energy resources and the renewable/nonrenewable distinction.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0010",
+   "subject": "science",
+   "oh": "3.ESS.3",
+   "state": "TX",
+   "code": "3.11B",
+   "confidence": "strong",
+   "rationale": "Ohio explains that some resources become limited through overuse and contamination; TX 3.11B has students explain why conservation of natural resources is important — the same grade-3 rationale for conservation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0011",
+   "subject": "science",
+   "oh": "3.ESS.3",
+   "state": "TX",
+   "code": "3.11C",
+   "confidence": "strong",
+   "rationale": "Ohio names reducing use, recycling, and reusing as conservation strategies; TX 3.11C asks students to identify ways to conserve through reducing, reusing, or recycling — a near-verbatim match.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0012",
+   "subject": "science",
+   "oh": "3.PS.1",
+   "state": "TX",
+   "code": "3.6A",
+   "confidence": "moderate",
+   "rationale": "Ohio establishes that matter takes up space and has mass; TX 3.6A has students measure and record physical properties of matter including mass. TX is measurement-focused rather than conceptual, but both are grade-3 foundations on matter and mass.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0013",
+   "subject": "science",
+   "oh": "3.PS.2",
+   "state": "TX",
+   "code": "3.6B",
+   "confidence": "strong",
+   "rationale": "Both cover the grade-3 states of matter: Ohio's distinguishing properties of solids, liquids, and gases map directly to TX's classification of matter by state, including definite shape vs. taking the shape of a container.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0014",
+   "subject": "science",
+   "oh": "3.PS.2",
+   "state": "TX",
+   "code": "3.6C",
+   "confidence": "strong",
+   "rationale": "Ohio's 'one way to change matter from one state to another is by heating or cooling' is exactly TX 3.6C: predict, observe, and record changes in state caused by heating or cooling.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0015",
+   "subject": "science",
+   "oh": "3.PS.3",
+   "state": "TX",
+   "code": "3.8A",
+   "confidence": "strong",
+   "rationale": "Both are grade-3 surveys of observable energy forms: Ohio lists heat, electrical, light, sound, and magnetic energy; TX 3.8A has students identify everyday examples of light, sound, thermal, and mechanical energy.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0016",
+   "subject": "science",
+   "oh": "3.LS.1",
+   "state": "TX",
+   "code": "4.13B",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 4). Ohio distinguishes inherited traits from behaviors learned through the environment; TX 4.13B makes the same distinction by differentiating inherited from acquired traits.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0017",
+   "subject": "science",
+   "oh": "3.LS.2",
+   "state": "TX",
+   "code": "3.13A",
+   "confidence": "strong",
+   "rationale": "Ohio links physical features of plants and animals to survival in their environments; TX 3.13A has students explain how external structures of animals (giraffe neck, webbed feet) enable survival in their environment.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0018",
+   "subject": "science",
+   "oh": "3.LS.2",
+   "state": "TX",
+   "code": "4.13A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 4). Ohio includes plants' physical features that influence survival in particular environments; TX 4.13A covers exactly the plant side — structures like waxy leaves and deep roots enabling survival.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0019",
+   "subject": "science",
+   "oh": "3.LS.3",
+   "state": "TX",
+   "code": "3.13B",
+   "confidence": "strong",
+   "rationale": "Both are grade-3 life-cycle standards: Ohio's life cycles that differ across organisms map directly to TX's exploring and comparing life cycles of organisms such as beetles, crickets, radishes, and lima beans.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0020",
+   "subject": "science",
+   "oh": "3.LS.3",
+   "state": "TX",
+   "code": "2.13D",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 2). Ohio emphasizes that life-cycle details differ across organisms; TX 2.13D investigates unique animal life cycles where young do not resemble their parents (butterflies, frogs).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0021",
+   "subject": "science",
+   "oh": "4.ESS.1",
+   "state": "TX",
+   "code": "4.10B",
+   "confidence": "strong",
+   "rationale": "Ohio states that Earth's surface changes through erosion and deposition of soil, rock, and sediment; TX 4.10B models those same slow surface changes from weathering, erosion, and deposition by water, wind, and ice.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0022",
+   "subject": "science",
+   "oh": "4.ESS.1",
+   "state": "TX",
+   "code": "5.10C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 5). Ohio's identifiable landforms produced by surface change map to TX 5.10C, where changes by wind, water, or ice form landforms including deltas, canyons, and sand dunes.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0023",
+   "subject": "science",
+   "oh": "4.ESS.1",
+   "state": "TX",
+   "code": "3.10C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 3). Ohio's catastrophic events that create landforms (flooding, volcanoes, earthquakes) match TX 3.10C's rapid changes to Earth's surface such as volcanic eruptions, earthquakes, and landslides.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0024",
+   "subject": "science",
+   "oh": "4.ESS.2",
+   "state": "TX",
+   "code": "4.10B",
+   "confidence": "strong",
+   "rationale": "Both are grade-4 weathering standards: Ohio's rocks changing shape, size, and form from water, ice, and wind is TX 4.10B's slow changes to Earth's surface caused by weathering from water, wind, and ice.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0025",
+   "subject": "science",
+   "oh": "4.ESS.3",
+   "state": "TX",
+   "code": "4.10B",
+   "confidence": "strong",
+   "rationale": "Ohio defines erosion (water, wind, ice removing and carrying material) and deposition in a new location; TX 4.10B models slow surface changes caused by exactly these processes — weathering, erosion, and deposition from water, wind, and ice.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0026",
+   "subject": "science",
+   "oh": "4.ESS.3",
+   "state": "TX",
+   "code": "5.10C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 5). Ohio's erosion/deposition moving material to new locations is extended in TX 5.10C, where wind, water, and ice changes produce depositional and erosional landforms like deltas and canyons.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0027",
+   "subject": "science",
+   "oh": "4.PS.1",
+   "state": "TX",
+   "code": "4.6C",
+   "confidence": "strong",
+   "rationale": "Both are grade-4 conservation-of-matter standards: Ohio's total amount of matter staying constant when substances combine or change maps to TX's demonstration that matter is conserved when mixtures are formed.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0028",
+   "subject": "science",
+   "oh": "4.PS.1",
+   "state": "TX",
+   "code": "5.6C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 5). Ohio's conservation of matter when a solid dissolves in a liquid is TX 5.6C's demonstration that matter is conserved in solutions, comparing properties before and after combining.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0029",
+   "subject": "science",
+   "oh": "4.PS.2",
+   "state": "TX",
+   "code": "4.8C",
+   "confidence": "strong",
+   "rationale": "Ohio's complete-loop circuits of conducting materials that transform electrical energy match TX 4.8C: electrical energy travels in a closed path that can produce light and thermal energy.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0030",
+   "subject": "science",
+   "oh": "4.PS.2",
+   "state": "TX",
+   "code": "5.8B",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 5). Ohio's electrical energy in circuits transforming to light, heat, sound, and motion is nearly verbatim TX 5.8B, which also covers the requirements for a functioning circuit.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0031",
+   "subject": "science",
+   "oh": "4.PS.2",
+   "state": "TX",
+   "code": "4.8B",
+   "confidence": "moderate",
+   "rationale": "Ohio's heat transfer from hot to cold objects and circuits requiring conducting materials relate to TX 4.8B's conductors and insulators of thermal and electrical energy, though TX frames it as material classification.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0032",
+   "subject": "science",
+   "oh": "4.LS.1",
+   "state": "TX",
+   "code": "3.12C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 3). Ohio's 'when the environment changes, some plants and animals survive and reproduce and others die or move' is nearly verbatim TX 3.12C: environmental changes cause some organisms to thrive and others to perish or move.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0033",
+   "subject": "science",
+   "oh": "4.LS.1",
+   "state": "TX",
+   "code": "5.12A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 5). Ohio grounds ecosystems in interrelationships among biotic and abiotic factors; TX 5.12A has students describe how organisms survive by interacting with biotic and abiotic factors in an ecosystem.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0034",
+   "subject": "science",
+   "oh": "4.LS.2",
+   "state": "TX",
+   "code": "4.12C",
+   "confidence": "strong",
+   "rationale": "Both are grade-4 fossil standards: Ohio's fossils as a point of comparison between past and present organisms maps to TX's describing past environments based on fossil evidence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0035",
+   "subject": "science",
+   "oh": "4.LS.2",
+   "state": "TX",
+   "code": "3.12D",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 3). Ohio's fossils showing what organisms lived long ago matches TX 3.12D: fossils as evidence of past living organisms and environments.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0036",
+   "subject": "science",
+   "oh": "5.ESS.3",
+   "state": "TX",
+   "code": "5.9",
+   "confidence": "strong",
+   "rationale": "Both are grade-5 standards on Earth's 24-hour rotation producing day and night and the apparent movement of the sun across the sky. TX 5.9 has no lettered elements, so the parent code is used.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0037",
+   "subject": "science",
+   "oh": "5.PS.1",
+   "state": "TX",
+   "code": "5.7A",
+   "confidence": "strong",
+   "rationale": "Ohio's 'any change in speed or direction of an object requires a force' maps directly to TX 5.7A: how equal and unequal forces acting on an object cause patterns of motion.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0038",
+   "subject": "science",
+   "oh": "5.PS.1",
+   "state": "TX",
+   "code": "5.7B",
+   "confidence": "moderate",
+   "rationale": "Ohio relates change in movement to the amount of force exerted; TX 5.7B has students design an investigation testing the effect of force on an object in a system, covering the force-effect idea without Ohio's mass and speed-calculation content.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0039",
+   "subject": "science",
+   "oh": "5.PS.2",
+   "state": "TX",
+   "code": "5.8C",
+   "confidence": "strong",
+   "rationale": "Ohio's light traveling until it is reflected, refracted, or absorbed is nearly verbatim TX 5.8C: light travels in a straight line and can be reflected, refracted, or absorbed.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0040",
+   "subject": "science",
+   "oh": "5.LS.1",
+   "state": "TX",
+   "code": "5.12B",
+   "confidence": "strong",
+   "rationale": "Both are grade-5 food-web standards: Ohio uses food webs to identify producer/consumer/decomposer relationships; TX 5.12B works with cycling of matter and flow of energy in a food web.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0041",
+   "subject": "science",
+   "oh": "5.LS.1",
+   "state": "TX",
+   "code": "4.12B",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 4). Ohio's food-web roles of producers, consumers, and decomposers are named explicitly in TX 4.12B's cycling of matter and flow of energy through food webs.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0042",
+   "subject": "science",
+   "oh": "5.LS.2",
+   "state": "TX",
+   "code": "4.12A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 4). Ohio's producers transforming sunlight into usable energy through photosynthesis is TX 4.12A: producers make their own food using sunlight, water, and carbon dioxide.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0043",
+   "subject": "science",
+   "oh": "5.LS.2",
+   "state": "TX",
+   "code": "4.12B",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 4). Ohio's energy entering ecosystems as sunlight and passing organism to organism through food webs matches TX 4.12B's flow of energy through food webs including the roles of the Sun and producers.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0044",
+   "subject": "science",
+   "oh": "6.ESS.2",
+   "state": "TX",
+   "code": "6.10C",
+   "confidence": "moderate",
+   "rationale": "Both are grade-6 standards naming igneous, metamorphic, and sedimentary rocks; Ohio focuses on identifying/classifying rocks by their characteristics while TX 6.10C focuses on how they form and change in the rock cycle.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0045",
+   "subject": "science",
+   "oh": "6.ESS.3",
+   "state": "TX",
+   "code": "6.10C",
+   "confidence": "strong",
+   "rationale": "Ohio describes how igneous, metamorphic, and sedimentary rocks each form; TX 6.10C has students describe how those same three rock types form and change through geologic processes in the rock cycle.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0046",
+   "subject": "science",
+   "oh": "6.ESS.5",
+   "state": "TX",
+   "code": "6.11B",
+   "confidence": "moderate",
+   "rationale": "Ohio treats rocks, minerals, and soil as nonrenewable geologic resources with practical uses; TX 6.11B addresses managing soil and other resources through conservation, efficiency, and technology. Both are grade-6 resource standards but with different emphases.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0047",
+   "subject": "science",
+   "oh": "6.PS.1",
+   "state": "TX",
+   "code": "7.6A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 7). Ohio defines elements as one kind of atom and molecules as chemically joined atoms; TX 7.6A compares elements and compounds in terms of atoms and molecules.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0048",
+   "subject": "science",
+   "oh": "6.PS.1",
+   "state": "TX",
+   "code": "6.6D",
+   "confidence": "moderate",
+   "rationale": "Ohio includes density among the measurable properties of matter (mass, volume, density); TX 6.6D compares the density of substances relative to fluids, covering that property at the same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0049",
+   "subject": "science",
+   "oh": "6.PS.2",
+   "state": "TX",
+   "code": "6.6A",
+   "confidence": "strong",
+   "rationale": "Ohio explains states of matter with a particle-in-motion model; TX 6.6A compares solids, liquids, and gases in terms of structure and the kinetic energy of their atoms and molecules — the same grade-6 particle model.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0050",
+   "subject": "science",
+   "oh": "6.PS.2",
+   "state": "TX",
+   "code": "7.8C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 7). Ohio's 'temperature is a measure of the average motion of the particles' is TX 7.8C's relationship between temperature and the kinetic energy of particles within a substance.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0051",
+   "subject": "science",
+   "oh": "6.PS.3",
+   "state": "TX",
+   "code": "6.8A",
+   "confidence": "strong",
+   "rationale": "Both are grade-6 kinetic/potential energy standards: Ohio's two categories of energy (motion vs. position) map to TX 6.8A's comparison of potential energies with kinetic energy.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0052",
+   "subject": "science",
+   "oh": "6.PS.4",
+   "state": "TX",
+   "code": "7.7C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 7). Ohio's position and speed measured and graphed as a function of time is TX 7.7C: measure, record, and interpret an object's motion using distance-time graphs.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0053",
+   "subject": "science",
+   "oh": "6.LS.1",
+   "state": "TX",
+   "code": "6.13A",
+   "confidence": "strong",
+   "rationale": "Both are grade-6 cell-theory standards: Ohio's cells as the fundamental unit of life composing all living things maps to TX's organisms composed of one or more cells that are the basic unit of structure and function.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0054",
+   "subject": "science",
+   "oh": "6.LS.2",
+   "state": "TX",
+   "code": "6.13A",
+   "confidence": "strong",
+   "rationale": "Ohio's 'all cells come from pre-existing cells' appears verbatim in TX 6.13A's statement of cell theory: cells come from pre-existing cells and are the basic unit of structure and function.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0055",
+   "subject": "science",
+   "oh": "6.LS.4",
+   "state": "TX",
+   "code": "7.13B",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 7). Ohio's levels of organization (cells, tissues, organs, organ systems, organisms) match TX 7.13B's hierarchical organization of cells, tissues, organs, and organ systems within plants and animals.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0056",
+   "subject": "science",
+   "oh": "6.LS.4",
+   "state": "TX",
+   "code": "6.13B",
+   "confidence": "moderate",
+   "rationale": "Ohio notes that both single-celled and multicellular organisms function as a whole; TX 6.13B compares unicellular and multicellular (and other basic) characteristics of organisms at the same grade, though without Ohio's structure-function emphasis.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0057",
+   "subject": "science",
+   "oh": "7.ESS.2",
+   "state": "TX",
+   "code": "8.10A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 8). Ohio's sun-driven thermal transfers in ocean and atmosphere shaping global climate map to TX 8.10A: energy from the Sun, hydrosphere, and atmosphere interact and influence weather and climate.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0058",
+   "subject": "science",
+   "oh": "7.ESS.2",
+   "state": "TX",
+   "code": "8.10B",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 8). Ohio's atmospheric currents (e.g., the jet stream) influencing weather and climate patterns match TX 8.10B's global patterns of atmospheric movement and their influence on local weather.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0059",
+   "subject": "science",
+   "oh": "7.ESS.3",
+   "state": "TX",
+   "code": "8.11C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 8). Ohio explicitly includes biogeochemical cycles moving elements like carbon through the lithosphere, biosphere, hydrosphere, and atmosphere; TX 8.11C has students describe the carbon cycle.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0060",
+   "subject": "science",
+   "oh": "7.ESS.4",
+   "state": "TX",
+   "code": "6.9B",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Both cover gravitationally driven tides from Earth-Sun-Moon positions, including spring and neap tides — nearly identical content.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0061",
+   "subject": "science",
+   "oh": "7.ESS.5",
+   "state": "TX",
+   "code": "6.9A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's seasons caused by Earth's 23.5-degree tilt plus revolution around the sun is exactly TX 6.9A: model how the tilted Earth revolves around the Sun, causing changes in seasons.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0062",
+   "subject": "science",
+   "oh": "7.PS.1",
+   "state": "TX",
+   "code": "6.6C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's classification of elements as metals, non-metals, and metalloids by observable properties is TX 6.6C: identify elements on the periodic table as metals, nonmetals, and metalloids based on physical properties.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0063",
+   "subject": "science",
+   "oh": "7.PS.2",
+   "state": "TX",
+   "code": "8.6E",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 8). Ohio's constant number and types of atoms in a closed system when substances change is TX 8.6E: mass is conserved in chemical reactions through the rearrangement of atoms.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0064",
+   "subject": "science",
+   "oh": "7.PS.2",
+   "state": "TX",
+   "code": "7.6C",
+   "confidence": "moderate",
+   "rationale": "Both address substances interacting to form new substances with different properties versus physically combined mixtures; however, Ohio explicitly avoids classifying changes as chemical or physical, which is the point of TX 7.6C.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0065",
+   "subject": "science",
+   "oh": "7.PS.3",
+   "state": "TX",
+   "code": "6.8B",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's conservation of energy through transfers and transformations is TX 6.8B: describe how energy is conserved through transfers and transformations in systems.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0066",
+   "subject": "science",
+   "oh": "7.PS.4",
+   "state": "TX",
+   "code": "7.8A",
+   "confidence": "strong",
+   "rationale": "Ohio names radiation, convection, and conduction as ways thermal energy transfers; TX 7.8A investigates thermal energy transfer into and out of systems by exactly those three methods, at the same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0067",
+   "subject": "science",
+   "oh": "7.PS.4",
+   "state": "TX",
+   "code": "6.8C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's mechanical and electromagnetic waves transferring energy when they interact with matter maps to TX 6.8C: explain how energy is transferred through transverse and longitudinal waves.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0068",
+   "subject": "science",
+   "oh": "7.LS.1",
+   "state": "TX",
+   "code": "7.12A",
+   "confidence": "strong",
+   "rationale": "Ohio's energy flowing from organism to organism with some released as heat matches TX 7.12A's flow of energy within trophic levels and decreasing available energy in energy pyramids, at the same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0069",
+   "subject": "science",
+   "oh": "7.LS.1",
+   "state": "TX",
+   "code": "7.12B",
+   "confidence": "strong",
+   "rationale": "Ohio's continuous flow of energy and transfer of matter between organisms and their environments, with total matter and energy constant, is TX 7.12B: ecosystems sustained by continuous energy flow and recycling of matter within the biosphere.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0070",
+   "subject": "science",
+   "oh": "7.LS.2",
+   "state": "TX",
+   "code": "6.12A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's number, growth, and survival of organisms depending on biotic and abiotic factors is TX 6.12A: organisms and populations depend on and compete for biotic and abiotic factors.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0071",
+   "subject": "science",
+   "oh": "7.LS.2",
+   "state": "TX",
+   "code": "8.12A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 8). Ohio's disruptions to biotic or abiotic components impacting ecosystem composition maps to TX 8.12A: disruptions such as population changes, natural disasters, and human intervention impact energy transfer in food webs.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0072",
+   "subject": "science",
+   "oh": "8.ESS.2",
+   "state": "TX",
+   "code": "7.10A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 7). Ohio's historical evidence for plate tectonics (fossil distribution, continental drift, seafloor spreading) matches TX 7.10A's evidence that Earth has changed over time, including fossil evidence and plate tectonics.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0073",
+   "subject": "science",
+   "oh": "8.ESS.2",
+   "state": "TX",
+   "code": "7.10B",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 7). Ohio's plate boundaries producing earthquakes, volcanic activity, mountains, and trenches is TX 7.10B: plate tectonics causes ocean basin formation, earthquakes, mountain building, and volcanic eruptions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0074",
+   "subject": "science",
+   "oh": "8.ESS.3",
+   "state": "TX",
+   "code": "7.10B",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 7). Ohio's constructive and destructive geologic processes forming Earth's surface, including plate tectonics, maps to TX 7.10B's tectonic processes that build mountains and form ocean basins.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0075",
+   "subject": "science",
+   "oh": "8.ESS.4",
+   "state": "TX",
+   "code": "7.10A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 7). Ohio's geologic record read through superposition and fossil evidence of change over time matches TX 7.10A, which names fossil evidence and superposition as evidence Earth has changed over time.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0076",
+   "subject": "science",
+   "oh": "8.PS.2",
+   "state": "TX",
+   "code": "8.7A",
+   "confidence": "strong",
+   "rationale": "Both are grade-8 net-force standards: Ohio's nonzero net force changing an object's speed and/or direction is the core of TX 8.7A's Newton's Second Law relationship among net force, mass, and acceleration.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0077",
+   "subject": "science",
+   "oh": "8.PS.2",
+   "state": "TX",
+   "code": "7.7D",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 7). Ohio's summing forces to a net force that determines whether motion changes is TX 7.7D: analyze the effect of balanced and unbalanced forces on the state of motion using Newton's First Law.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0078",
+   "subject": "science",
+   "oh": "8.PS.2",
+   "state": "TX",
+   "code": "8.7B",
+   "confidence": "moderate",
+   "rationale": "Ohio's forces acting to change motion in real contexts (including friction and drag) relates to TX 8.7B's Newton's laws acting simultaneously in systems, though TX frames it around all three laws together.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0079",
+   "subject": "science",
+   "oh": "8.LS.1",
+   "state": "TX",
+   "code": "8.13C",
+   "confidence": "strong",
+   "rationale": "Both are grade-8 standards on trait variation driving survival: Ohio's variation of traits determining survival and reproductive success as environments change is TX 8.13C's variations leading to adaptations that influence survival and reproductive success over generations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0080",
+   "subject": "science",
+   "oh": "8.LS.1",
+   "state": "TX",
+   "code": "7.13D",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 7). Ohio's diversity of species arising through evolution over generations maps to TX 7.13D: natural (and artificial) selection changing the occurrence of traits in a population over generations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0081",
+   "subject": "science",
+   "oh": "8.LS.2",
+   "state": "TX",
+   "code": "7.13C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 7). Ohio's sexual reproduction (mixing genes from two individuals) versus asexual reproduction (genes from one) is TX 7.13C: compare the results of asexual and sexual reproduction in relation to diversity of offspring.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0082",
+   "subject": "science",
+   "oh": "8.LS.2",
+   "state": "TX",
+   "code": "8.13B",
+   "confidence": "moderate",
+   "rationale": "Ohio's reproduction as the transfer of genetic information between generations relates to TX 8.13B's genes determining inherited traits of offspring, though TX focuses on gene function rather than reproduction modes.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-tx-0083",
+   "subject": "science",
+   "oh": "8.LS.3",
+   "state": "TX",
+   "code": "8.13B",
+   "confidence": "strong",
+   "rationale": "Both are grade-8 heredity standards: Ohio's traits determined by genes with DNA transmitted from parent to offspring is TX 8.13B: describe the function of genes within chromosomes in determining inherited traits of offspring.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0001",
+   "subject": "social_studies",
+   "oh": "2.SS.1",
+   "state": "TX",
+   "code": "2.16C",
+   "confidence": "strong",
+   "rationale": "Ohio's showing time graphically on calendars and timelines matches TX 2.16C, which has students create and interpret timelines for events in the past and present.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0002",
+   "subject": "social_studies",
+   "oh": "2.SS.1",
+   "state": "TX",
+   "code": "2.16B",
+   "confidence": "moderate",
+   "rationale": "TX 2.16B applies chronology vocabulary (past, present, future), supporting Ohio's graphic representation of time, though it does not require calendars or timelines themselves.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0003",
+   "subject": "social_studies",
+   "oh": "2.SS.2",
+   "state": "TX",
+   "code": "2.15B",
+   "confidence": "strong",
+   "rationale": "Ohio's showing change over time with artifacts, maps, and photographs aligns with TX 2.15B, identifying kinds of historical sources and artifacts and explaining how they are used to study the past.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0004",
+   "subject": "social_studies",
+   "oh": "2.SS.2",
+   "state": "TX",
+   "code": "2.15C",
+   "confidence": "moderate",
+   "rationale": "TX 2.15C gathers information from visual sources such as pictures, maps, and artifacts, overlapping Ohio's use of those sources, though without Ohio's explicit change-over-time focus.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0005",
+   "subject": "social_studies",
+   "oh": "2.SS.5",
+   "state": "TX",
+   "code": "2.3A",
+   "confidence": "strong",
+   "rationale": "Both have students interpret maps using basic map elements — Ohio names symbols and cardinal directions; TX 2.3A names title, cardinal directions, and legend — to answer questions about location.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0006",
+   "subject": "social_studies",
+   "oh": "2.SS.7",
+   "state": "TX",
+   "code": "2.5A",
+   "confidence": "strong",
+   "rationale": "Ohio's human alteration of the physical environment matches TX 2.5A, identifying ways people have modified the environment such as clearing land, building roads, and drilling for oil.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0007",
+   "subject": "social_studies",
+   "oh": "2.SS.7",
+   "state": "TX",
+   "code": "2.5B",
+   "confidence": "strong",
+   "rationale": "Ohio's positive and negative alteration of the environment matches TX 2.5B, identifying consequences of human modification of the physical environment.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0008",
+   "subject": "social_studies",
+   "oh": "2.SS.10",
+   "state": "TX",
+   "code": "2.10A",
+   "confidence": "strong",
+   "rationale": "Ohio's respect for the rights of self and others, responsible choices, and personal accountability aligns with TX 2.10A's characteristics of good citizenship, including respect for oneself and others and responsibility in daily life.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0009",
+   "subject": "social_studies",
+   "oh": "2.SS.11",
+   "state": "TX",
+   "code": "2.17A",
+   "confidence": "moderate",
+   "rationale": "Ohio's group accountability for choices and actions partially aligns with TX 2.17A, where students use democratic procedures to collaborate on group decisions in the classroom, school, or community.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0010",
+   "subject": "social_studies",
+   "oh": "2.SS.12",
+   "state": "TX",
+   "code": "2.8A",
+   "confidence": "moderate",
+   "rationale": "Ohio's rules and laws governing behavior in different settings relates to TX 2.8A's functions of governments such as establishing order, providing security, and managing conflict, though TX does not compare settings.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0011",
+   "subject": "social_studies",
+   "oh": "2.SS.13",
+   "state": "TX",
+   "code": "3.14D",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 3). Ohio's interpreting bar graphs to compare quantities matches TX 3.14D, interpreting and creating visuals including graphs, charts, and tables.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0012",
+   "subject": "social_studies",
+   "oh": "2.SS.14",
+   "state": "TX",
+   "code": "2.7C",
+   "confidence": "moderate",
+   "rationale": "Ohio's resources being used in various ways relates to TX 2.7C, tracing the development of a product from a natural resource to a finished product, though TX follows one production chain rather than varied uses.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0013",
+   "subject": "social_studies",
+   "oh": "2.SS.15",
+   "state": "TX",
+   "code": "2.7B",
+   "confidence": "strong",
+   "rationale": "Ohio's people working in jobs producing specific goods and services aligns with TX 2.7B, identifying ways in which people are both producers and consumers.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0014",
+   "subject": "social_studies",
+   "oh": "2.SS.15",
+   "state": "TX",
+   "code": "2.6A",
+   "confidence": "moderate",
+   "rationale": "TX 2.6A explains how work provides income to purchase goods and services, overlapping Ohio's focus on people working to produce goods and services.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0015",
+   "subject": "social_studies",
+   "oh": "2.SS.16",
+   "state": "TX",
+   "code": "2.6A",
+   "confidence": "strong",
+   "rationale": "Ohio's people using money to buy and sell goods and services matches TX 2.6A, explaining how work provides income used to purchase goods and services.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0016",
+   "subject": "social_studies",
+   "oh": "2.SS.16",
+   "state": "TX",
+   "code": "2.6B",
+   "confidence": "moderate",
+   "rationale": "TX 2.6B's choices about earning, spending, and saving money overlaps Ohio's use of money for buying and selling, though TX emphasizes decision making over exchange.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0017",
+   "subject": "social_studies",
+   "oh": "3.SS.1",
+   "state": "TX",
+   "code": "3.15B",
+   "confidence": "strong",
+   "rationale": "Ohio's local-history events shown on timelines matches TX 3.15B, creating and interpreting timelines.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0018",
+   "subject": "social_studies",
+   "oh": "3.SS.1",
+   "state": "TX",
+   "code": "3.15C",
+   "confidence": "strong",
+   "rationale": "Ohio's organizing timelines by years, decades, and centuries matches TX 3.15C, applying the terms year, decade, and century to describe historical times.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0019",
+   "subject": "social_studies",
+   "oh": "3.SS.2",
+   "state": "TX",
+   "code": "3.14B",
+   "confidence": "strong",
+   "rationale": "Ohio's use of primary and secondary sources to show change over time aligns with TX 3.14B, differentiating and comparing information about an issue or event in primary and secondary sources.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0020",
+   "subject": "social_studies",
+   "oh": "3.SS.3",
+   "state": "TX",
+   "code": "3.1A",
+   "confidence": "strong",
+   "rationale": "Ohio's local communities changing over time matches TX 3.1A, describing how individuals, events, and ideas have changed communities past and present.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0021",
+   "subject": "social_studies",
+   "oh": "3.SS.4",
+   "state": "TX",
+   "code": "3.4C",
+   "confidence": "strong",
+   "rationale": "Ohio's locating places using a map's title, key, grid, and cardinal directions matches TX 3.4C, interpreting maps that contain a title, compass rose, legend, scale, and grid system.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0022",
+   "subject": "social_studies",
+   "oh": "3.SS.4",
+   "state": "TX",
+   "code": "3.4A",
+   "confidence": "strong",
+   "rationale": "Ohio's use of cardinal directions to locate places on maps matches TX 3.4A, using cardinal and intermediate directions to locate places on maps and globes.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0023",
+   "subject": "social_studies",
+   "oh": "3.SS.6",
+   "state": "TX",
+   "code": "3.3C",
+   "confidence": "strong",
+   "rationale": "Ohio's positive and negative human modification of the local environment matches TX 3.3C, describing effects of human processes such as building homes, conservation, and pollution in shaping the landscape.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0024",
+   "subject": "social_studies",
+   "oh": "3.SS.6",
+   "state": "TX",
+   "code": "2.5B",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 2). Ohio's observing positive and negative human modification matches TX 2.5B, identifying consequences of human modification of the physical environment.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0025",
+   "subject": "social_studies",
+   "oh": "3.SS.7",
+   "state": "TX",
+   "code": "3.2B",
+   "confidence": "moderate",
+   "rationale": "Ohio's transportation and communication systems moving people, products, and ideas overlaps TX 3.2B, comparing how communities meet needs for communication and transportation, though TX frames it as community needs rather than movement.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0026",
+   "subject": "social_studies",
+   "oh": "3.SS.10",
+   "state": "TX",
+   "code": "3.9C",
+   "confidence": "strong",
+   "rationale": "Ohio's individuals improving the community by solving problems for the common good matches TX 3.9C, describing individual acts of civic responsibility including serving and improving the community.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0027",
+   "subject": "social_studies",
+   "oh": "3.SS.10",
+   "state": "TX",
+   "code": "3.9D",
+   "confidence": "moderate",
+   "rationale": "TX 3.9D's nonprofit and civic organizations serving the common good overlaps Ohio's community problem-solving for the common good, though TX focuses on organizations rather than individuals.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0028",
+   "subject": "social_studies",
+   "oh": "3.SS.12",
+   "state": "TX",
+   "code": "3.7A",
+   "confidence": "moderate",
+   "rationale": "Ohio's governments having authority to make and enforce laws relates to TX 3.7A, describing the basic structure of government at local, state, and national levels, though TX emphasizes structure over lawmaking authority.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0029",
+   "subject": "social_studies",
+   "oh": "3.SS.13",
+   "state": "TX",
+   "code": "3.7A",
+   "confidence": "strong",
+   "rationale": "Ohio's differing structures of local governments matches TX 3.7A, describing the basic structure of government in the local community, state, and nation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0030",
+   "subject": "social_studies",
+   "oh": "3.SS.14",
+   "state": "TX",
+   "code": "3.14D",
+   "confidence": "strong",
+   "rationale": "Ohio's using line graphs to show changes in data over time matches TX 3.14D, interpreting and creating visuals including graphs, charts, tables, and timelines.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0031",
+   "subject": "social_studies",
+   "oh": "3.SS.18",
+   "state": "TX",
+   "code": "3.6A",
+   "confidence": "moderate",
+   "rationale": "Ohio's market as a place where buyers and sellers exchange goods and services relates to TX 3.6A, explaining how supply and demand affect the price of a good or service in a market.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0032",
+   "subject": "social_studies",
+   "oh": "3.SS.19",
+   "state": "TX",
+   "code": "3.16B",
+   "confidence": "moderate",
+   "rationale": "Ohio's weighing costs and benefits in decisions overlaps TX 3.16B's decision-making process of considering advantages and disadvantages before choosing a solution.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0033",
+   "subject": "social_studies",
+   "oh": "3.SS.20",
+   "state": "TX",
+   "code": "3.5B",
+   "confidence": "strong",
+   "rationale": "Ohio's budget as a plan for personal economic decisions matches TX 3.5B, creating a simple budget that allocates money for spending and saving.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0034",
+   "subject": "social_studies",
+   "oh": "4.SS.1",
+   "state": "TX",
+   "code": "4.19C",
+   "confidence": "strong",
+   "rationale": "Ohio's ordering significant events on a timeline matches TX 4.19C, applying absolute and relative chronology through sequencing when analyzing information.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0035",
+   "subject": "social_studies",
+   "oh": "4.SS.1",
+   "state": "TX",
+   "code": "4.19D",
+   "confidence": "moderate",
+   "rationale": "TX 4.19D organizes and interprets information in visuals including timelines, supporting Ohio's timeline construction, though timelines are one of several formats.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0036",
+   "subject": "social_studies",
+   "oh": "4.SS.2",
+   "state": "TX",
+   "code": "4.19A",
+   "confidence": "strong",
+   "rationale": "Ohio's using primary and secondary sources to create historical narratives aligns with TX 4.19A, differentiating between, locating, and using valid primary and secondary sources to acquire information.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0037",
+   "subject": "social_studies",
+   "oh": "4.SS.6",
+   "state": "TX",
+   "code": "5.4A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 5). Ohio's frontier conflicts with American Indians and Great Britain contributing to the War of 1812 matches TX 5.4A, describing causes and effects of the War of 1812 including territorial conflicts with Great Britain.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0038",
+   "subject": "social_studies",
+   "oh": "4.SS.8",
+   "state": "TX",
+   "code": "5.22C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 5). Ohio's technological innovations benefiting the United States matches TX 5.22C, explaining how scientific discoveries and technological innovations have benefited individuals and society in the United States.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0039",
+   "subject": "social_studies",
+   "oh": "4.SS.8",
+   "state": "TX",
+   "code": "4.18B",
+   "confidence": "moderate",
+   "rationale": "TX 4.18B describes how scientific discoveries and innovations benefited individuals, businesses, and society — the same concept as Ohio's standard but applied to Texas rather than Ohio innovations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0040",
+   "subject": "social_studies",
+   "oh": "4.SS.9",
+   "state": "TX",
+   "code": "4.20A",
+   "confidence": "strong",
+   "rationale": "Ohio's using map scale and directions to describe location matches TX 4.20A, applying mapping elements including grid systems, legends, symbols, scales, and compass roses to create and interpret maps.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0041",
+   "subject": "social_studies",
+   "oh": "4.SS.9",
+   "state": "TX",
+   "code": "3.4A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 3). Ohio's cardinal and intermediate directions for describing relative location matches TX 3.4A, using cardinal and intermediate directions to locate places on maps and globes.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0042",
+   "subject": "social_studies",
+   "oh": "4.SS.10",
+   "state": "TX",
+   "code": "5.12B",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 5). Ohio's economic development influenced by agriculture, industry, and natural resources matches TX 5.12B, explaining how geographic factors have influenced the location of economic activities in the United States.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0043",
+   "subject": "social_studies",
+   "oh": "4.SS.10",
+   "state": "TX",
+   "code": "4.11B",
+   "confidence": "moderate",
+   "rationale": "TX 4.11B explains how climate and natural resources influenced the location of economic activities — the same relationship Ohio targets, but in a Texas rather than Ohio/U.S. context.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0044",
+   "subject": "social_studies",
+   "oh": "4.SS.12",
+   "state": "TX",
+   "code": "4.8C",
+   "confidence": "strong",
+   "rationale": "Ohio's environmental modification with positive and negative consequences matches TX 4.8C, comparing positive and negative consequences of human modification of the environment past and present.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0045",
+   "subject": "social_studies",
+   "oh": "4.SS.12",
+   "state": "TX",
+   "code": "5.8B",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 5). Ohio's positive and negative consequences of modifying the environment in Ohio and the U.S. matches TX 5.8B, analyzing positive and negative consequences of human modification of the environment in the United States.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0046",
+   "subject": "social_studies",
+   "oh": "4.SS.13",
+   "state": "TX",
+   "code": "4.11C",
+   "confidence": "moderate",
+   "rationale": "Ohio's changing, increasingly diverse population relates to TX 4.11C, identifying effects of exploration, immigration, and migration on growth, though TX frames the change economically rather than demographically.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0047",
+   "subject": "social_studies",
+   "oh": "4.SS.14",
+   "state": "TX",
+   "code": "4.11D",
+   "confidence": "moderate",
+   "rationale": "Ohio's location and transportation systems influencing movement of people, products, and ideas parallels TX 4.11D, explaining how developments in transportation and communication influenced economic activities, in a Texas rather than Ohio context.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0048",
+   "subject": "social_studies",
+   "oh": "4.SS.15",
+   "state": "TX",
+   "code": "4.15B",
+   "confidence": "strong",
+   "rationale": "Ohio's opportunities for individuals to act in and influence state government matches TX 4.15B, explaining how individuals can participate voluntarily in civic affairs at state and local levels.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0049",
+   "subject": "social_studies",
+   "oh": "4.SS.15",
+   "state": "TX",
+   "code": "4.15C",
+   "confidence": "moderate",
+   "rationale": "TX 4.15C's duty of the individual in state and local elections — being informed and voting — supports Ohio's citizens' rights and responsibilities, though narrower than Ohio's full participation standard.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0050",
+   "subject": "social_studies",
+   "oh": "4.SS.15",
+   "state": "TX",
+   "code": "5.17A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 5). Ohio's civic participation and citizen responsibilities matches TX 5.17A, explaining why individuals have a duty to participate in civic affairs at the local, state, and national levels.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0051",
+   "subject": "social_studies",
+   "oh": "4.SS.16",
+   "state": "TX",
+   "code": "4.22B",
+   "confidence": "strong",
+   "rationale": "Ohio's informed and reasoned civic decision making by accessing and evaluating information matches TX 4.22B, using a decision-making process to gather information, weigh options, and evaluate solutions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0052",
+   "subject": "social_studies",
+   "oh": "4.SS.16",
+   "state": "TX",
+   "code": "4.19E",
+   "confidence": "moderate",
+   "rationale": "TX 4.19E identifies different points of view about an issue, supporting Ohio's requirement to evaluate information and engage in compromise, though it omits the decision-making component.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0053",
+   "subject": "social_studies",
+   "oh": "4.SS.19",
+   "state": "TX",
+   "code": "4.13B",
+   "confidence": "strong",
+   "rationale": "Ohio's constitutions separating responsibilities among three branches matches TX 4.13B, identifying and explaining the basic functions of the three branches under the Texas Constitution (state constitution parallel to Ohio's).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0054",
+   "subject": "social_studies",
+   "oh": "4.SS.19",
+   "state": "TX",
+   "code": "5.15A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 5). Ohio's separation of major government responsibilities among three branches matches TX 5.15A, identifying and explaining the basic functions of the three branches of government.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0055",
+   "subject": "social_studies",
+   "oh": "4.SS.20",
+   "state": "TX",
+   "code": "4.19D",
+   "confidence": "strong",
+   "rationale": "Ohio's tables and charts organizing data matches TX 4.19D, organizing and interpreting information in outlines, databases, and visuals including graphs and charts.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0056",
+   "subject": "social_studies",
+   "oh": "5.SS.1",
+   "state": "TX",
+   "code": "5.23C",
+   "confidence": "strong",
+   "rationale": "Ohio's arranging events using B.C./A.D. and B.C.E./C.E. conventions matches TX 5.23C, analyzing information by applying absolute and relative chronology through sequencing.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0057",
+   "subject": "social_studies",
+   "oh": "5.SS.3",
+   "state": "TX",
+   "code": "5.1A",
+   "confidence": "strong",
+   "rationale": "Ohio's European exploration and colonization of the 1400s-1600s aligns with TX 5.1A, explaining when, where, and why groups explored, colonized, and settled, including religious freedom and economic gain.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0058",
+   "subject": "social_studies",
+   "oh": "5.SS.3",
+   "state": "TX",
+   "code": "6.1A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's lasting effects of colonization used to understand the hemisphere today matches TX 6.1A, tracing characteristics of contemporary societies that resulted from historical factors such as colonization.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0059",
+   "subject": "social_studies",
+   "oh": "5.SS.4",
+   "state": "TX",
+   "code": "5.24A",
+   "confidence": "strong",
+   "rationale": "Ohio's geographic tools for gathering and reporting information, with cartographic choices, matches TX 5.24A, applying mapping elements to create and interpret maps.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0060",
+   "subject": "social_studies",
+   "oh": "5.SS.4",
+   "state": "TX",
+   "code": "5.24B",
+   "confidence": "strong",
+   "rationale": "Ohio's processing and reporting geographic information matches TX 5.24B, interpreting geographic data, population distribution, and natural resources into formats such as graphs and maps.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0061",
+   "subject": "social_studies",
+   "oh": "5.SS.5",
+   "state": "TX",
+   "code": "6.20A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's latitude and longitude for observations about location matches TX 6.20A, answering geographic questions including locating places using latitude and longitude.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0062",
+   "subject": "social_studies",
+   "oh": "5.SS.6",
+   "state": "TX",
+   "code": "5.6A",
+   "confidence": "strong",
+   "rationale": "Ohio's determining regions by population, cultural, and economic criteria matches TX 5.6A, describing political and economic regions that result from patterns of human activity.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0063",
+   "subject": "social_studies",
+   "oh": "5.SS.6",
+   "state": "TX",
+   "code": "5.6B",
+   "confidence": "strong",
+   "rationale": "Ohio's determining regions by landform and climate matches TX 5.6B, describing regions based on physical characteristics such as landform, climate, and vegetation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0064",
+   "subject": "social_studies",
+   "oh": "5.SS.7",
+   "state": "TX",
+   "code": "5.8A",
+   "confidence": "strong",
+   "rationale": "Ohio's physical environments influencing human activities and humans modifying environments matches TX 5.8A, describing how and why people have adapted to and modified their environment.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0065",
+   "subject": "social_studies",
+   "oh": "5.SS.7",
+   "state": "TX",
+   "code": "6.5C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's human modification of physical environments matches TX 6.5C, identifying and analyzing ways people have modified the physical environment such as mining, irrigation, and infrastructure.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0066",
+   "subject": "social_studies",
+   "oh": "5.SS.10",
+   "state": "TX",
+   "code": "6.15D",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's cultural diversity resulting from the influences and interactions of world cultures matches TX 6.15D, identifying the impact of cultural diffusion on individuals and world societies.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0067",
+   "subject": "social_studies",
+   "oh": "5.SS.10",
+   "state": "TX",
+   "code": "5.21A",
+   "confidence": "moderate",
+   "rationale": "TX 5.21A describes customs and traditions of various racial, ethnic, and religious groups, overlapping Ohio's cultural diversity of the hemisphere, though limited to the United States.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0068",
+   "subject": "social_studies",
+   "oh": "5.SS.11",
+   "state": "TX",
+   "code": "5.23B",
+   "confidence": "strong",
+   "rationale": "Ohio's checking information for accuracy from multiple sources matches TX 5.23B, identifying and asking questions about the credibility of primary and secondary sources.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0069",
+   "subject": "social_studies",
+   "oh": "5.SS.11",
+   "state": "TX",
+   "code": "5.23D",
+   "confidence": "strong",
+   "rationale": "Ohio's displaying data graphically to communicate about public issues matches TX 5.23D, organizing and interpreting information in visuals including graphs, charts, timelines, and maps.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0070",
+   "subject": "social_studies",
+   "oh": "5.SS.12",
+   "state": "TX",
+   "code": "6.10A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's democracies, dictatorships, and monarchies as categories of power matches TX 6.10A, identifying and giving examples of governments with rule by one, few, or many.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0071",
+   "subject": "social_studies",
+   "oh": "5.SS.12",
+   "state": "TX",
+   "code": "6.9A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's relationship between those in power and citizens matches TX 6.9A, describing and comparing limited and unlimited governments such as constitutional and totalitarian.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0072",
+   "subject": "social_studies",
+   "oh": "5.SS.12",
+   "state": "TX",
+   "code": "5.13A",
+   "confidence": "moderate",
+   "rationale": "TX 5.13A compares representative government and monarchy among early colonists, a narrower colonial-era version of Ohio's categories of government.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0073",
+   "subject": "social_studies",
+   "oh": "5.SS.13",
+   "state": "TX",
+   "code": "5.23D",
+   "confidence": "strong",
+   "rationale": "Ohio's interpreting circle graphs showing proportions of data matches TX 5.23D, organizing and interpreting information in visuals including graphs and charts.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0074",
+   "subject": "social_studies",
+   "oh": "5.SS.14",
+   "state": "TX",
+   "code": "5.26B",
+   "confidence": "moderate",
+   "rationale": "Ohio's choices having present and future consequences overlaps TX 5.26B, using a decision-making process that weighs advantages and disadvantages and evaluates the effectiveness of solutions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0075",
+   "subject": "social_studies",
+   "oh": "6.SS.1",
+   "state": "TX",
+   "code": "6.19C",
+   "confidence": "strong",
+   "rationale": "Ohio's multiple-tier timelines showing relationships among events and places matches TX 6.19C, organizing and interpreting information from visuals including timelines.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0076",
+   "subject": "social_studies",
+   "oh": "6.SS.2",
+   "state": "TX",
+   "code": "6.1B",
+   "confidence": "moderate",
+   "rationale": "Ohio's early civilizations helping to understand the Eastern Hemisphere today overlaps TX 6.1B, analyzing the historical background of contemporary societies, though TX starts from the contemporary society rather than the ancient civilization.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0077",
+   "subject": "social_studies",
+   "oh": "6.SS.3",
+   "state": "TX",
+   "code": "6.20D",
+   "confidence": "strong",
+   "rationale": "Ohio's geographic tools for gathering, processing, and reporting information matches TX 6.20D, creating and interpreting sketch maps, thematic maps, graphs, and charts of world regions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0078",
+   "subject": "social_studies",
+   "oh": "6.SS.3",
+   "state": "TX",
+   "code": "6.20B",
+   "confidence": "moderate",
+   "rationale": "TX 6.20B poses and answers questions about geographic distributions shown on maps, graphs, and charts, supporting Ohio's processing and reporting of geographic information.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0079",
+   "subject": "social_studies",
+   "oh": "6.SS.4",
+   "state": "TX",
+   "code": "6.20A",
+   "confidence": "strong",
+   "rationale": "Ohio's latitude and longitude for absolute location matches TX 6.20A, answering geographic questions including locating places using latitude and longitude.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0080",
+   "subject": "social_studies",
+   "oh": "6.SS.5",
+   "state": "TX",
+   "code": "6.20C",
+   "confidence": "strong",
+   "rationale": "Ohio's determining and comparing regions using data matches TX 6.20C, comparing various world regions and countries using data from maps, graphs, and charts.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0081",
+   "subject": "social_studies",
+   "oh": "6.SS.5",
+   "state": "TX",
+   "code": "6.3C",
+   "confidence": "moderate",
+   "rationale": "TX 6.3C identifies and locates major physical and human geographic features of places and regions, supporting Ohio's region classification by landform and population criteria.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0082",
+   "subject": "social_studies",
+   "oh": "6.SS.6",
+   "state": "TX",
+   "code": "6.5B",
+   "confidence": "strong",
+   "rationale": "Ohio's physical environments influencing human activities matches TX 6.5B, identifying and analyzing ways people have adapted to the physical environment in various places and regions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0083",
+   "subject": "social_studies",
+   "oh": "6.SS.6",
+   "state": "TX",
+   "code": "6.5C",
+   "confidence": "strong",
+   "rationale": "Ohio's human activities modifying the physical environment matches TX 6.5C, identifying and analyzing ways people have modified the physical environment such as mining, irrigation, and transportation infrastructure.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0084",
+   "subject": "social_studies",
+   "oh": "6.SS.7",
+   "state": "TX",
+   "code": "6.3B",
+   "confidence": "strong",
+   "rationale": "Ohio's factors causing people to move from place to place in the Eastern Hemisphere matches TX 6.3B, explaining ways in which human migration influences the character of places and regions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0085",
+   "subject": "social_studies",
+   "oh": "6.SS.7",
+   "state": "TX",
+   "code": "6.15A",
+   "confidence": "moderate",
+   "rationale": "TX 6.15A's means of cultural diffusion — trade, travel, and war — overlaps Ohio's movement of products and ideas from place to place.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0086",
+   "subject": "social_studies",
+   "oh": "6.SS.9",
+   "state": "TX",
+   "code": "6.19E",
+   "confidence": "strong",
+   "rationale": "Ohio's communicating and defending a claim based on evidence matches TX 6.19E, formulating and communicating a claim supported by evidence and reasoning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0087",
+   "subject": "social_studies",
+   "oh": "6.SS.9",
+   "state": "TX",
+   "code": "6.19F",
+   "confidence": "strong",
+   "rationale": "Ohio's examining sources for accuracy and credibility matches TX 6.19F, evaluating a variety of historical and contemporary sources for validity, credibility, bias, and accuracy.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0088",
+   "subject": "social_studies",
+   "oh": "6.SS.10",
+   "state": "TX",
+   "code": "6.10A",
+   "confidence": "strong",
+   "rationale": "Ohio's categorizing governments as monarchies, theocracies, dictatorships, or democracies matches TX 6.10A, identifying governments with rule by one, few, or many.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0089",
+   "subject": "social_studies",
+   "oh": "6.SS.10",
+   "state": "TX",
+   "code": "6.9A",
+   "confidence": "strong",
+   "rationale": "Ohio's citizens' liberties varying by limits on governmental authority matches TX 6.9A, describing and comparing limited and unlimited governments.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0090",
+   "subject": "social_studies",
+   "oh": "6.SS.11",
+   "state": "TX",
+   "code": "6.8B",
+   "confidence": "moderate",
+   "rationale": "Ohio's comparing data sets to draw economic conclusions overlaps TX 6.8B, describing levels of economic development using indicators such as GDP, GDP per capita, and literacy.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0091",
+   "subject": "social_studies",
+   "oh": "6.SS.11",
+   "state": "TX",
+   "code": "6.20C",
+   "confidence": "moderate",
+   "rationale": "TX 6.20C compares world regions and countries using data from maps, graphs, and charts, supporting Ohio's comparison of data sets to draw conclusions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0092",
+   "subject": "social_studies",
+   "oh": "6.SS.12",
+   "state": "TX",
+   "code": "6.22B",
+   "confidence": "moderate",
+   "rationale": "Ohio's evaluating choices and their present and future consequences overlaps TX 6.22B, using a decision-making process that considers advantages and disadvantages and evaluates solutions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0093",
+   "subject": "social_studies",
+   "oh": "6.SS.15",
+   "state": "TX",
+   "code": "5.11A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 5). Ohio's interaction of supply and demand determining price matches TX 5.11A, explaining how supply and demand affect consumers.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0094",
+   "subject": "social_studies",
+   "oh": "7.SS.1",
+   "state": "TX",
+   "code": "7.20D",
+   "confidence": "strong",
+   "rationale": "Ohio's describing events from the perspectives of people living at the time matches TX 7.20D, identifying bias and points of view from the historical context surrounding an event that influenced the participants.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0095",
+   "subject": "social_studies",
+   "oh": "7.SS.2",
+   "state": "TX",
+   "code": "6.10C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's enduring governance legacy of Greece and Rome matches TX 6.10C, identifying historical origins of democratic forms of government such as Ancient Greece.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0096",
+   "subject": "social_studies",
+   "oh": "7.SS.10",
+   "state": "TX",
+   "code": "8.2A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 8). Ohio's increased European influence through exploration, conquest, and colonization matches TX 8.2A, identifying reasons for English, Spanish, and French exploration and colonization of North America.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0097",
+   "subject": "social_studies",
+   "oh": "7.SS.12",
+   "state": "TX",
+   "code": "7.21B",
+   "confidence": "moderate",
+   "rationale": "Ohio's using maps to trace the development of human settlement over time overlaps TX 7.21B, analyzing and interpreting geographic distributions and patterns across the 19th-21st centuries, though TX is Texas-specific.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0098",
+   "subject": "social_studies",
+   "oh": "7.SS.13",
+   "state": "TX",
+   "code": "6.4B",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's geographic factors promoting or impeding movement of people, products, and ideas matches TX 6.4B, identifying geographic factors such as physical features, transportation corridors and barriers, and resource distribution.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0099",
+   "subject": "social_studies",
+   "oh": "7.SS.13",
+   "state": "TX",
+   "code": "7.8C",
+   "confidence": "moderate",
+   "rationale": "TX 7.8C analyzes effects of physical and human factors such as landforms, transportation, and communication on major events, overlapping Ohio's geographic factors affecting movement, in a Texas context.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0100",
+   "subject": "social_studies",
+   "oh": "7.SS.14",
+   "state": "TX",
+   "code": "6.15A",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's trade routes fostering the spread of ideas, technology, goods, and religions matches TX 6.15A, identifying and describing means of cultural diffusion such as trade, travel, and war.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0101",
+   "subject": "social_studies",
+   "oh": "7.SS.15",
+   "state": "TX",
+   "code": "6.15B",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's improvements in transportation, communication, and technology facilitating cultural diffusion matches TX 6.15B, identifying factors influencing cultural change such as improvements in communication, transportation, and economic development.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0102",
+   "subject": "social_studies",
+   "oh": "7.SS.15",
+   "state": "TX",
+   "code": "6.15C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's technology facilitating cultural diffusion among peoples matches TX 6.15C, analyzing the impact of improved communication technology among cultures.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0103",
+   "subject": "social_studies",
+   "oh": "7.SS.16",
+   "state": "TX",
+   "code": "7.16A",
+   "confidence": "moderate",
+   "rationale": "Ohio's analyzing individual and group perspectives on issues overlaps TX 7.16A, identifying different points of view of political parties and interest groups on important issues past and present.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0104",
+   "subject": "social_studies",
+   "oh": "7.SS.16",
+   "state": "TX",
+   "code": "7.15B",
+   "confidence": "moderate",
+   "rationale": "TX 7.15B explains civic responsibilities and the importance of civic participation, overlapping Ohio's opportunities for civic engagement connecting real-world issues to learning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0105",
+   "subject": "social_studies",
+   "oh": "7.SS.17",
+   "state": "TX",
+   "code": "6.10C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's Greek democracy and Roman Republic influencing modern democratic governments matches TX 6.10C, identifying historical origins of democratic forms of government such as Ancient Greece.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0106",
+   "subject": "social_studies",
+   "oh": "7.SS.19",
+   "state": "TX",
+   "code": "7.23B",
+   "confidence": "moderate",
+   "rationale": "Ohio's cost-benefit analysis for economic decisions overlaps TX 7.23B, using a decision-making process of weighing advantages and disadvantages before choosing and evaluating a solution.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0107",
+   "subject": "social_studies",
+   "oh": "7.SS.20",
+   "state": "TX",
+   "code": "6.6C",
+   "confidence": "strong",
+   "rationale": "Cross-grade (TX grade 6). Ohio's variable distribution of productive resources leading to specialization, trade, and interdependence matches TX 6.6C, explaining the impact of resource distribution on international trade and economic interdependence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0108",
+   "subject": "social_studies",
+   "oh": "8.SS.1",
+   "state": "TX",
+   "code": "8.29A",
+   "confidence": "strong",
+   "rationale": "Ohio's use of primary and secondary sources matches TX 8.29A, differentiating between, locating, and using valid primary and secondary sources to acquire information.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0109",
+   "subject": "social_studies",
+   "oh": "8.SS.1",
+   "state": "TX",
+   "code": "8.29D",
+   "confidence": "strong",
+   "rationale": "Ohio's examining events from multiple perspectives matches TX 8.29D, identifying bias and points of view created by the historical context surrounding an event.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0110",
+   "subject": "social_studies",
+   "oh": "8.SS.1",
+   "state": "TX",
+   "code": "8.29E",
+   "confidence": "strong",
+   "rationale": "Ohio's presenting and defending a position matches TX 8.29E, formulating and communicating a claim supported by evidence and reasoning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0111",
+   "subject": "social_studies",
+   "oh": "8.SS.3",
+   "state": "TX",
+   "code": "8.2A",
+   "confidence": "moderate",
+   "rationale": "Ohio's competition for territory and resources among colonizing powers relates to TX 8.2A, identifying reasons for English, Spanish, and French colonization, though TX addresses motivations rather than the resulting conflicts.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0112",
+   "subject": "social_studies",
+   "oh": "8.SS.4",
+   "state": "TX",
+   "code": "8.12B",
+   "confidence": "strong",
+   "rationale": "Ohio's race-based slavery, forced migration of Africans, and colonial economic development matches TX 8.12B, explaining reasons for the plantation system, the transatlantic slave trade, and the spread of slavery.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0113",
+   "subject": "social_studies",
+   "oh": "8.SS.4",
+   "state": "TX",
+   "code": "8.7B",
+   "confidence": "moderate",
+   "rationale": "TX 8.7B compares effects of political, economic, and social factors on slaves and free Blacks, overlapping Ohio's standard, though centered on the antebellum period rather than the colonial era.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0114",
+   "subject": "social_studies",
+   "oh": "8.SS.5",
+   "state": "TX",
+   "code": "8.4A",
+   "confidence": "strong",
+   "rationale": "Ohio's dissatisfaction with colonial rule leading to the Revolution matches TX 8.4A, analyzing causes of the American Revolution including the Stamp Act, lack of representation, and British economic policies.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0115",
+   "subject": "social_studies",
+   "oh": "8.SS.5",
+   "state": "TX",
+   "code": "8.15E",
+   "confidence": "strong",
+   "rationale": "Ohio's Enlightenment ideas behind the Declaration matches TX 8.15E, explaining the role of individuals such as Montesquieu and Locke in the development of self-government in colonial America.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0116",
+   "subject": "social_studies",
+   "oh": "8.SS.5",
+   "state": "TX",
+   "code": "8.15C",
+   "confidence": "strong",
+   "rationale": "Ohio's Declaration of Independence arising from grievances with colonial rule matches TX 8.15C, identifying colonial grievances listed in the Declaration of Independence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0117",
+   "subject": "social_studies",
+   "oh": "8.SS.6",
+   "state": "TX",
+   "code": "8.4B",
+   "confidence": "strong",
+   "rationale": "Ohio's significant figures influencing the American Revolution matches TX 8.4B, explaining the roles played by significant individuals during the American Revolution.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0118",
+   "subject": "social_studies",
+   "oh": "8.SS.6",
+   "state": "TX",
+   "code": "8.4C",
+   "confidence": "strong",
+   "rationale": "Ohio's key events influencing the course and outcome of the Revolution matches TX 8.4C, explaining issues surrounding important events including Lexington and Concord, Saratoga, Yorktown, and the Treaty of Paris.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0119",
+   "subject": "social_studies",
+   "oh": "8.SS.7",
+   "state": "TX",
+   "code": "8.5A",
+   "confidence": "strong",
+   "rationale": "Ohio's new political, social, and economic relationships after independence matches TX 8.5A, describing major domestic problems faced by leaders of the new republic including creating a stable economic system.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0120",
+   "subject": "social_studies",
+   "oh": "8.SS.7",
+   "state": "TX",
+   "code": "8.4C",
+   "confidence": "moderate",
+   "rationale": "TX 8.4C includes declaring independence and the Treaty of Paris of 1783, overlapping Ohio's outcome of national independence, though TX centers on wartime events.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0121",
+   "subject": "social_studies",
+   "oh": "8.SS.8",
+   "state": "TX",
+   "code": "8.15B",
+   "confidence": "strong",
+   "rationale": "Ohio's problems under the Articles of Confederation matches TX 8.15B, summarizing the strengths and weaknesses of the Articles of Confederation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0122",
+   "subject": "social_studies",
+   "oh": "8.SS.8",
+   "state": "TX",
+   "code": "8.4D",
+   "confidence": "strong",
+   "rationale": "Ohio's debate over adoption of the Constitution matches TX 8.4D, analyzing issues of the Constitutional Convention of 1787 including the Great Compromise and the Three-Fifths Compromise.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0123",
+   "subject": "social_studies",
+   "oh": "8.SS.8",
+   "state": "TX",
+   "code": "8.17A",
+   "confidence": "strong",
+   "rationale": "Ohio's ratification debate matches TX 8.17A, analyzing the arguments of the Federalists and Anti-Federalists including Hamilton, Henry, Madison, and Mason.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0124",
+   "subject": "social_studies",
+   "oh": "8.SS.9",
+   "state": "TX",
+   "code": "8.5A",
+   "confidence": "strong",
+   "rationale": "Ohio's early administrations establishing a strong federal government matches TX 8.5A, describing domestic problems of the new republic including national security, a stable economy, and the court system.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0125",
+   "subject": "social_studies",
+   "oh": "8.SS.9",
+   "state": "TX",
+   "code": "8.5E",
+   "confidence": "strong",
+   "rationale": "Ohio's repelling a foreign invasion matches TX 8.5E, explaining the causes, important events, and effects of the War of 1812.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0126",
+   "subject": "social_studies",
+   "oh": "8.SS.9",
+   "state": "TX",
+   "code": "8.5F",
+   "confidence": "strong",
+   "rationale": "Ohio's actions of early presidential administrations matches TX 8.5F, identifying the foreign policies of presidents Washington through Monroe including the Farewell Address and Monroe Doctrine.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0127",
+   "subject": "social_studies",
+   "oh": "8.SS.10",
+   "state": "TX",
+   "code": "8.6B",
+   "confidence": "strong",
+   "rationale": "Ohio's territorial additions through treaties and purchases matches TX 8.6B, analyzing westward growth including the Louisiana Purchase and Manifest Destiny.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0128",
+   "subject": "social_studies",
+   "oh": "8.SS.10",
+   "state": "TX",
+   "code": "8.6C",
+   "confidence": "strong",
+   "rationale": "Ohio's territory added through treaties matches TX 8.6C, explaining the causes and effects of the U.S.-Mexican War, which ended in the treaty ceding the Mexican Cession.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0129",
+   "subject": "social_studies",
+   "oh": "8.SS.11",
+   "state": "TX",
+   "code": "8.6B",
+   "confidence": "strong",
+   "rationale": "Ohio's westward expansion and its national effects matches TX 8.6B, analyzing the westward growth of the nation including the Louisiana Purchase and Manifest Destiny.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0130",
+   "subject": "social_studies",
+   "oh": "8.SS.11",
+   "state": "TX",
+   "code": "8.6C",
+   "confidence": "strong",
+   "rationale": "Ohio's war with Mexico as a result of westward expansion matches TX 8.6C, explaining the causes and effects of the U.S.-Mexican War and their impact on the United States.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0131",
+   "subject": "social_studies",
+   "oh": "8.SS.11",
+   "state": "TX",
+   "code": "8.5H",
+   "confidence": "strong",
+   "rationale": "Ohio's displacement of American Indians during expansion matches TX 8.5H, analyzing the removal and resettlement of Cherokee Indians including the Indian Removal Act and the Trail of Tears.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0132",
+   "subject": "social_studies",
+   "oh": "8.SS.12",
+   "state": "TX",
+   "code": "8.8B",
+   "confidence": "strong",
+   "rationale": "Ohio's sectional disputes including slavery leading to the Civil War matches TX 8.8B, explaining the central role of the expansion of slavery in causing sectionalism, disagreement over states' rights, and the Civil War.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0133",
+   "subject": "social_studies",
+   "oh": "8.SS.12",
+   "state": "TX",
+   "code": "8.17B",
+   "confidence": "strong",
+   "rationale": "Ohio's disputes over the nature of federalism matches TX 8.17B, explaining constitutional issues over states' rights including the Nullification Crisis and the Civil War.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0134",
+   "subject": "social_studies",
+   "oh": "8.SS.12",
+   "state": "TX",
+   "code": "8.7D",
+   "confidence": "strong",
+   "rationale": "Ohio's economic developments complicating sectional issues matches TX 8.7D, analyzing the impact of slavery on different sections of the United States.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0135",
+   "subject": "social_studies",
+   "oh": "8.SS.13",
+   "state": "TX",
+   "code": "8.8A",
+   "confidence": "strong",
+   "rationale": "Ohio's significant figures influencing the Civil War matches TX 8.8A, explaining the roles of significant individuals during the Civil War including Davis, Grant, Lee, and Lincoln.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0136",
+   "subject": "social_studies",
+   "oh": "8.SS.13",
+   "state": "TX",
+   "code": "8.8C",
+   "confidence": "strong",
+   "rationale": "Ohio's key events influencing the course and outcome of the Civil War matches TX 8.8C, explaining significant events including Fort Sumter, Antietam, Gettysburg, Vicksburg, the Emancipation Proclamation, and Appomattox.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0137",
+   "subject": "social_studies",
+   "oh": "8.SS.14",
+   "state": "TX",
+   "code": "8.9C",
+   "confidence": "strong",
+   "rationale": "Ohio's Reconstruction resulting in lingering social and political differences matches TX 8.9C, explaining economic, political, and social problems during Reconstruction and their impact on different groups.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0138",
+   "subject": "social_studies",
+   "oh": "8.SS.14",
+   "state": "TX",
+   "code": "8.16B",
+   "confidence": "strong",
+   "rationale": "Ohio's Reconstruction-era changes to the U.S. Constitution matches TX 8.16B, describing the impact of the 13th, 14th, and 15th amendments.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0139",
+   "subject": "social_studies",
+   "oh": "8.SS.14",
+   "state": "TX",
+   "code": "8.9A",
+   "confidence": "moderate",
+   "rationale": "TX 8.9A evaluates legislative reform programs of the Radical Reconstruction Congress, supporting Ohio's affirmation of federal authority during Reconstruction.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0140",
+   "subject": "social_studies",
+   "oh": "8.SS.15",
+   "state": "TX",
+   "code": "8.10C",
+   "confidence": "strong",
+   "rationale": "Ohio's analyzing how historic events are shaped by geography matches TX 8.10C, analyzing effects of physical and human geographic factors such as weather, landforms, and waterways on major historical events.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0141",
+   "subject": "social_studies",
+   "oh": "8.SS.15",
+   "state": "TX",
+   "code": "8.10A",
+   "confidence": "strong",
+   "rationale": "Ohio's use of modern and historical maps for historical analysis matches TX 8.10A, locating places and regions directly related to major eras and turning points of the 17th-19th centuries.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0142",
+   "subject": "social_studies",
+   "oh": "8.SS.16",
+   "state": "TX",
+   "code": "8.11B",
+   "confidence": "strong",
+   "rationale": "Ohio's unintended environmental consequences of expansion matches TX 8.11B, describing positive and negative consequences of human modification of the physical environment.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0143",
+   "subject": "social_studies",
+   "oh": "8.SS.16",
+   "state": "TX",
+   "code": "8.11A",
+   "confidence": "moderate",
+   "rationale": "TX 8.11A analyzes how physical characteristics of the environment influenced economic activities, overlapping Ohio's natural resources contributing to geographic and economic expansion.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0144",
+   "subject": "social_studies",
+   "oh": "8.SS.17",
+   "state": "TX",
+   "code": "8.11A",
+   "confidence": "strong",
+   "rationale": "Ohio's movement producing new settlement and land-use patterns matches TX 8.11A, analyzing how the environment influenced population distribution, settlement patterns, and economic activities.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0145",
+   "subject": "social_studies",
+   "oh": "8.SS.17",
+   "state": "TX",
+   "code": "8.23A",
+   "confidence": "moderate",
+   "rationale": "TX 8.23A identifies groups that settled in the United States and their reasons for immigration, overlapping Ohio's movement of people creating new settlement patterns.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0146",
+   "subject": "social_studies",
+   "oh": "8.SS.18",
+   "state": "TX",
+   "code": "8.23C",
+   "confidence": "strong",
+   "rationale": "Ohio's consequences of bias and prejudice for minority groups matches TX 8.23C, identifying ways conflicts between people from various racial, ethnic, and religious groups were addressed.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0147",
+   "subject": "social_studies",
+   "oh": "8.SS.18",
+   "state": "TX",
+   "code": "8.7B",
+   "confidence": "strong",
+   "rationale": "Ohio's social, political, and economic consequences for minority groups matches TX 8.7B, comparing the effects of political, economic, and social factors on slaves and free Blacks.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0148",
+   "subject": "social_studies",
+   "oh": "8.SS.18",
+   "state": "TX",
+   "code": "8.23B",
+   "confidence": "moderate",
+   "rationale": "TX 8.23B explains how urbanization contributed to conflicts from differences in religion, social class, and political beliefs, overlapping Ohio's consequences of cultural biases and prejudices.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0149",
+   "subject": "social_studies",
+   "oh": "8.SS.19",
+   "state": "TX",
+   "code": "8.23D",
+   "confidence": "strong",
+   "rationale": "Ohio's unique national identity emerging from diverse populations matches TX 8.23D, analyzing the contributions of people of various racial, ethnic, and religious groups to our national identity.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0150",
+   "subject": "social_studies",
+   "oh": "8.SS.20",
+   "state": "TX",
+   "code": "8.24B",
+   "confidence": "strong",
+   "rationale": "Ohio's participation in social and civic groups attaining public goals matches TX 8.24B, evaluating the impact of reform movements including education, temperance, women's rights, prison reform, and labor reform.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0151",
+   "subject": "social_studies",
+   "oh": "8.SS.20",
+   "state": "TX",
+   "code": "8.19C",
+   "confidence": "moderate",
+   "rationale": "TX 8.19C identifies examples of responsible citizenship including staying informed and voting, overlapping Ohio's civic participation toward individual and public goals.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0152",
+   "subject": "social_studies",
+   "oh": "8.SS.20",
+   "state": "TX",
+   "code": "8.20B",
+   "confidence": "moderate",
+   "rationale": "TX 8.20B analyzes reasons for and impact of civil disobedience in U.S. history, one form of Ohio's civic-group participation aimed at public goals.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0153",
+   "subject": "social_studies",
+   "oh": "8.SS.21",
+   "state": "TX",
+   "code": "8.21B",
+   "confidence": "moderate",
+   "rationale": "Ohio's media influence on public opinion relates to TX 8.21B, describing the importance of free speech and press in a constitutional republic, though TX stresses press freedom over media influence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0154",
+   "subject": "social_studies",
+   "oh": "8.SS.21",
+   "state": "TX",
+   "code": "8.29F",
+   "confidence": "moderate",
+   "rationale": "TX 8.29F evaluates sources for validity, credibility, bias, and accuracy, supporting Ohio's informed citizens understanding how media influence public opinion.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0155",
+   "subject": "social_studies",
+   "oh": "8.SS.22",
+   "state": "TX",
+   "code": "8.15D",
+   "confidence": "strong",
+   "rationale": "Ohio's federal republic with separation of powers and checks and balances matches TX 8.15D, analyzing how the U.S. Constitution reflects limited government, republicanism, checks and balances, federalism, and separation of powers.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0156",
+   "subject": "social_studies",
+   "oh": "8.SS.23",
+   "state": "TX",
+   "code": "8.19B",
+   "confidence": "strong",
+   "rationale": "Ohio's Constitution protecting citizens' rights matches TX 8.19B, summarizing rights guaranteed in the Bill of Rights.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0157",
+   "subject": "social_studies",
+   "oh": "8.SS.23",
+   "state": "TX",
+   "code": "8.15D",
+   "confidence": "strong",
+   "rationale": "Ohio's Constitution limiting the powers of government matches TX 8.15D, analyzing how the Constitution reflects the principles of limited government and individual rights.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0158",
+   "subject": "social_studies",
+   "oh": "8.SS.24",
+   "state": "TX",
+   "code": "8.31B",
+   "confidence": "moderate",
+   "rationale": "Ohio's choices having present and future consequences overlaps TX 8.31B, using a decision-making process that weighs advantages and disadvantages and evaluates the effectiveness of solutions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0159",
+   "subject": "social_studies",
+   "oh": "8.SS.25",
+   "state": "TX",
+   "code": "8.27A",
+   "confidence": "strong",
+   "rationale": "Ohio's Industrial Revolution improvements including interchangeable parts matches TX 8.27A, explaining effects of innovations such as the steamboat, the cotton gin, the telegraph, and interchangeable parts.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0160",
+   "subject": "social_studies",
+   "oh": "8.SS.25",
+   "state": "TX",
+   "code": "8.27C",
+   "confidence": "strong",
+   "rationale": "Ohio's shift from craftwork to factory work matches TX 8.27C, analyzing how technological innovations brought about economic growth such as the development of the factory system.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0161",
+   "subject": "social_studies",
+   "oh": "8.SS.25",
+   "state": "TX",
+   "code": "8.13B",
+   "confidence": "strong",
+   "rationale": "Ohio's Industrial Revolution changing the means of production matches TX 8.13B, identifying the economic factors that brought about rapid industrialization and urbanization.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0162",
+   "subject": "social_studies",
+   "oh": "8.SS.26",
+   "state": "TX",
+   "code": "8.5C",
+   "confidence": "strong",
+   "rationale": "Ohio's government impact on markets through taxes and trade barriers matches TX 8.5C, summarizing arguments regarding protective tariffs, taxation, and the banking system.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-tx-0163",
+   "subject": "social_studies",
+   "oh": "8.SS.26",
+   "state": "TX",
+   "code": "8.14A",
+   "confidence": "moderate",
+   "rationale": "TX 8.14A explains free enterprise development including minimal government regulation, taxation, and property rights, overlapping Ohio's government impacts on markets via regulation and taxes.",
+   "source": "ai_draft"
   }
  ]
 }
