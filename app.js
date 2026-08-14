@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608142135';   // replaced with the deploy stamp
+const APP_BUILD = '202608142142';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -891,6 +891,22 @@ function toastUndo(msg, undoFn) {
   t.append(btn);
   t.classList.add('show');
   undoTimer = setTimeout(() => t.classList.remove('show'), 15000);
+}
+
+/* State pickers are DROPDOWNS, alphabetical by state name — the roster keeps growing,
+   and buttons stopped scaling at five. Populated from STATES: adding a state is now a
+   data-only change (no index.html edits). */
+function stateOptionsHtml(includeAll) {
+  const sorted = [...STATES].sort((a, b) => STATE_NAMES[a].localeCompare(STATE_NAMES[b]));
+  return (includeAll ? `<option value="ALL">All states</option>` : '')
+    + sorted.map(s => `<option value="${s}">${STATE_NAMES[s]}</option>`).join('');
+}
+function bindStateSelect(id, includeAll, initial, onChange) {
+  const sel = document.getElementById(id);
+  if (!sel) return;
+  sel.innerHTML = stateOptionsHtml(includeAll);
+  sel.value = initial;
+  sel.addEventListener('change', e => onChange(e.target.value));
 }
 
 function bindSeg(id, key, onChange) {
@@ -2682,7 +2698,7 @@ function renderInput() {
   const gSel = document.getElementById('inGrade');
   if (!stSel) return;
   if (!stSel.options.length) {
-    stSel.innerHTML = STATES.map(s => `<option value="${s}">${STATE_NAMES[s]}</option>`).join('');
+    stSel.innerHTML = stateOptionsHtml(false);
     gSel.innerHTML = GRADES.map(g => `<option value="${g}">Grade ${g}</option>`).join('');
   }
   stSel.value = state.ui.inState;
@@ -2999,7 +3015,7 @@ function init() {
     state.ui.inGrade = e.target.value; state.ui.inSelected = null; state.ui.openPicker = null; renderInput();
   });
   bindSeg('inStageSeg', 'inStage', v => { state.ui.inStage = v; state.ui.openPicker = null; renderInput(); });
-  bindSeg('dashStateSeg', 'dashState', v => { state.ui.dashState = v; renderDash(); });
+  bindStateSelect('dashStateSeg', false, state.ui.dashState, v => { state.ui.dashState = v; renderDash(); });
 
   document.getElementById('newSetBtn').addEventListener('click', newPassageSet);
 
@@ -3036,10 +3052,10 @@ function init() {
     }
   });
 
-  bindSeg('stateSeg', 'expState', v => { state.ui.expState = v; state.ui.selectedKey = null; renderAll(); });
+  bindStateSelect('stateSeg', false, state.ui.expState, v => { state.ui.expState = v; state.ui.selectedKey = null; renderAll(); });
   bindSeg('subjectSeg', 'expSubject', v => { state.ui.expSubject = v; state.ui.selectedKey = null; renderAll(); });
   bindSeg('revSubjectSeg', 'revSubject', v => { state.ui.revSubject = v; renderReview(); });
-  bindSeg('revStateSeg', 'revState', v => { state.ui.revState = v; renderReview(); });
+  bindStateSelect('revStateSeg', true, state.ui.revState, v => { state.ui.revState = v; renderReview(); });
   bindSeg('revStatusSeg', 'revStatus', v => { state.ui.revStatus = v; renderReview(); });
 
   renderGradeRow('gradeRow', state.ui.expGrade, g => {

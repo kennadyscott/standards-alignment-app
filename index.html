@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=202608142135">
+<link rel="stylesheet" href="styles.css?v=202608142142">
 </head>
 <body>
 <header class="topbar">
@@ -35,13 +35,7 @@
   <aside class="picker-panel">
     <div class="picker-group">
       <label>State</label>
-      <div class="seg" id="stateSeg">
-        <button class="seg-btn active" data-val="OH">Ohio</button>
-        <button class="seg-btn" data-val="GA">Georgia</button>
-        <button class="seg-btn" data-val="TX">Texas</button>
-        <button class="seg-btn" data-val="FL">Florida</button>
-        <button class="seg-btn" data-val="NC">North Carolina</button>
-      </div>
+      <select id="stateSeg" class="ps-input"></select>
     </div>
     <div class="picker-group">
       <label>Subject</label>
@@ -81,14 +75,7 @@
         <button class="seg-btn" data-val="ela">ELAR</button>
       </div>
       <div class="grade-row" id="revGradeRow"></div>
-      <div class="seg" id="revStateSeg">
-        <button class="seg-btn active" data-val="ALL">All states</button>
-        <button class="seg-btn" data-val="OH">Ohio</button>
-        <button class="seg-btn" data-val="GA">Georgia</button>
-        <button class="seg-btn" data-val="TX">Texas</button>
-        <button class="seg-btn" data-val="FL">Florida</button>
-        <button class="seg-btn" data-val="NC">North Carolina</button>
-      </div>
+      <select id="revStateSeg" class="ps-input" style="max-width:180px"></select>
       <div class="seg" id="revStatusSeg">
         <button class="seg-btn active" data-val="pending">Pending</button>
         <button class="seg-btn" data-val="approved">Approved</button>
@@ -142,13 +129,7 @@
   <div class="review-header">
     <div class="review-filters">
       <label class="in-lbl">State</label>
-      <div class="seg" id="dashStateSeg">
-        <button class="seg-btn active" data-val="OH">Ohio</button>
-        <button class="seg-btn" data-val="GA">Georgia</button>
-        <button class="seg-btn" data-val="TX">Texas</button>
-        <button class="seg-btn" data-val="FL">Florida</button>
-        <button class="seg-btn" data-val="NC">North Carolina</button>
-      </div>
+      <select id="dashStateSeg" class="ps-input" style="max-width:180px"></select>
     </div>
     <div class="review-progress" id="dashProgress"></div>
   </div>
@@ -156,6 +137,6 @@
 </main>
 
 <div class="toast" id="toast"></div>
-<script src="app.js?v=202608142135"></script>
+<script src="app.js?v=202608142142"></script>
 </body>
 </html>
