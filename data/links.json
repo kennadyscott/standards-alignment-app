@@ -13252,6 +13252,3676 @@
    "confidence": "moderate",
    "rationale": "TX 8.14A explains free enterprise development including minimal government regulation, taxation, and property rights, overlapping Ohio's government impacts on markets via regulation and taxes.",
    "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0001",
+   "subject": "ela",
+   "oh": "RL.2.1",
+   "state": "NC",
+   "code": "RL.2.1",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0002",
+   "subject": "ela",
+   "oh": "RL.2.2",
+   "state": "NC",
+   "code": "RL.2.2",
+   "confidence": "strong",
+   "rationale": "Same CCSS content; Ohio splits determine-the-lesson/retell into parts a/b while NC keeps the single recount-and-determine-central-message sentence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0003",
+   "subject": "ela",
+   "oh": "RL.2.3",
+   "state": "NC",
+   "code": "RL.2.3",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0004",
+   "subject": "ela",
+   "oh": "RL.2.4",
+   "state": "NC",
+   "code": "RL.2.4",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops Ohio's parenthetical examples (regular beats, alliteration, rhymes, repeated lines).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0005",
+   "subject": "ela",
+   "oh": "RL.2.5",
+   "state": "NC",
+   "code": "RL.2.5",
+   "confidence": "strong",
+   "rationale": "Nearly identical story-structure standard; NC adds 'the events unfold in the middle.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0006",
+   "subject": "ela",
+   "oh": "RL.2.6",
+   "state": "NC",
+   "code": "RL.2.6",
+   "confidence": "moderate",
+   "rationale": "Both address distinguishing characters' points of view, but Ohio emphasizes recognizing when the narrator is a character while NC (CCSS original) emphasizes speaking in different voices when reading dialogue aloud.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0007",
+   "subject": "ela",
+   "oh": "RL.2.7",
+   "state": "NC",
+   "code": "RL.2.7",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0008",
+   "subject": "ela",
+   "oh": "RL.2.9",
+   "state": "NC",
+   "code": "RL.2.9",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the '(e.g., Cinderella stories)' example.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0009",
+   "subject": "ela",
+   "oh": "RL.2.10",
+   "state": "NC",
+   "code": "RL.2.10",
+   "confidence": "strong",
+   "rationale": "Both are the grades 2-3 band range-of-reading standard, and each state appends its own prior-knowledge/connections sentence. Ohio pre-marks its .10 noAlign, but NC kept the CCSS .10, so a link is available.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0010",
+   "subject": "ela",
+   "oh": "RI.2.1",
+   "state": "NC",
+   "code": "RI.2.1",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0011",
+   "subject": "ela",
+   "oh": "RI.2.2",
+   "state": "NC",
+   "code": "RI.2.2",
+   "confidence": "strong",
+   "rationale": "Same content; Ohio splits main topic vs. paragraph focus into parts a/b while NC keeps the single CCSS sentence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0012",
+   "subject": "ela",
+   "oh": "RI.2.3",
+   "state": "NC",
+   "code": "RI.2.3",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0013",
+   "subject": "ela",
+   "oh": "RI.2.4",
+   "state": "NC",
+   "code": "RI.2.4",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0014",
+   "subject": "ela",
+   "oh": "RI.2.5",
+   "state": "NC",
+   "code": "RI.2.5",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the text-feature examples (captions, bold print, subheadings, etc.).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0015",
+   "subject": "ela",
+   "oh": "RI.2.6",
+   "state": "NC",
+   "code": "RI.2.6",
+   "confidence": "strong",
+   "rationale": "Nearly identical; NC says 'the author's main purpose' where Ohio says 'the main purpose.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0016",
+   "subject": "ela",
+   "oh": "RI.2.7",
+   "state": "NC",
+   "code": "RI.2.7",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the diagram example.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0017",
+   "subject": "ela",
+   "oh": "RI.2.8",
+   "state": "NC",
+   "code": "RI.2.8",
+   "confidence": "moderate",
+   "rationale": "Both target reasons supporting an author's points, but Ohio asks students to identify main points and explain (with support) how reasons connect to them, while NC only asks them to identify the reasons the author gives.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0018",
+   "subject": "ela",
+   "oh": "RI.2.9",
+   "state": "NC",
+   "code": "RI.2.9",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0019",
+   "subject": "ela",
+   "oh": "RI.2.10",
+   "state": "NC",
+   "code": "RI.2.10",
+   "confidence": "strong",
+   "rationale": "Both are the grades 2-3 band range-of-reading standard for informational text. Ohio pre-marks its .10 noAlign, but NC kept the CCSS .10, so a link is available.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0020",
+   "subject": "ela",
+   "oh": "L.2.4",
+   "state": "NC",
+   "code": "L.2.4",
+   "confidence": "strong",
+   "rationale": "Same vocabulary-strategies standard; Ohio lists the CCSS strategies as elements a-e while NC condenses them to 'context clues, word parts, word relationships, and reference materials.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0021",
+   "subject": "ela",
+   "oh": "L.2.5",
+   "state": "NC",
+   "code": "L.2.5",
+   "confidence": "moderate",
+   "rationale": "Overlaps on distinguishing shades of meaning among closely related verbs and adjectives, but NC dropped Ohio's word-relationships framing and its real-life-connections element.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0022",
+   "subject": "ela",
+   "oh": "L.2.6",
+   "state": "NC",
+   "code": "L.2.6",
+   "confidence": "strong",
+   "rationale": "Nearly identical; NC says 'learned' for 'acquired' and drops the example.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0023",
+   "subject": "ela",
+   "oh": "RL.3.1",
+   "state": "NC",
+   "code": "RL.3.1",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0024",
+   "subject": "ela",
+   "oh": "RL.3.2",
+   "state": "NC",
+   "code": "RL.3.2",
+   "confidence": "strong",
+   "rationale": "Same CCSS content; Ohio splits determine-a-theme/retell into parts a/b while NC keeps the single recount-and-determine-central-message sentence with key details.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0025",
+   "subject": "ela",
+   "oh": "RL.3.3",
+   "state": "NC",
+   "code": "RL.3.3",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops '(e.g., their traits, motivations, or feelings)'.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0026",
+   "subject": "ela",
+   "oh": "RL.3.4",
+   "state": "NC",
+   "code": "RL.3.4",
+   "confidence": "moderate",
+   "rationale": "Shared main clause on determining word/phrase meaning in context, but Ohio extends to distinguishing literal from nonliteral language while NC extends to identifying words that impact meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0027",
+   "subject": "ela",
+   "oh": "RL.3.5",
+   "state": "NC",
+   "code": "RL.3.5",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0028",
+   "subject": "ela",
+   "oh": "RL.3.6",
+   "state": "NC",
+   "code": "RL.3.6",
+   "confidence": "moderate",
+   "rationale": "Both are grade-3 point-of-view standards, but Ohio targets differences between points of view in texts (first- vs. third-person narration) while NC targets distinguishing the reader's own point of view from the narrator's or characters'.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0029",
+   "subject": "ela",
+   "oh": "RL.3.7",
+   "state": "NC",
+   "code": "RL.3.7",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the parenthetical example.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0030",
+   "subject": "ela",
+   "oh": "RL.3.9",
+   "state": "NC",
+   "code": "RL.3.9",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops '(e.g., in books from a series)'.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0031",
+   "subject": "ela",
+   "oh": "RL.3.10",
+   "state": "NC",
+   "code": "RL.3.10",
+   "confidence": "strong",
+   "rationale": "Both are the high-end grades 2-3 band range-of-reading standard with a prior-knowledge/connections addition. Ohio pre-marks its .10 noAlign, but NC kept the CCSS .10, so a link is available.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0032",
+   "subject": "ela",
+   "oh": "RI.3.1",
+   "state": "NC",
+   "code": "RI.3.1",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0033",
+   "subject": "ela",
+   "oh": "RI.3.2",
+   "state": "NC",
+   "code": "RI.3.2",
+   "confidence": "strong",
+   "rationale": "Same content; Ohio splits main idea vs. key details into parts a/b while NC keeps the single CCSS sentence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0034",
+   "subject": "ela",
+   "oh": "RI.3.3",
+   "state": "NC",
+   "code": "RI.3.3",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0035",
+   "subject": "ela",
+   "oh": "RI.3.4",
+   "state": "NC",
+   "code": "RI.3.4",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0036",
+   "subject": "ela",
+   "oh": "RI.3.5",
+   "state": "NC",
+   "code": "RI.3.5",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the examples (key words, sidebars, hyperlinks).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0037",
+   "subject": "ela",
+   "oh": "RI.3.6",
+   "state": "NC",
+   "code": "RI.3.6",
+   "confidence": "strong",
+   "rationale": "Identical except Ohio says 'perspective' where NC says 'point of view.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0038",
+   "subject": "ela",
+   "oh": "RI.3.7",
+   "state": "NC",
+   "code": "RI.3.7",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops both parenthetical example lists.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0039",
+   "subject": "ela",
+   "oh": "RI.3.8",
+   "state": "NC",
+   "code": "RI.3.8",
+   "confidence": "moderate",
+   "rationale": "Both concern how an author supports specific points, but Ohio focuses on evidence-to-point relationships while NC focuses on how the author connects ideas between sentences and paragraphs.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0040",
+   "subject": "ela",
+   "oh": "RI.3.9",
+   "state": "NC",
+   "code": "RI.3.9",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0041",
+   "subject": "ela",
+   "oh": "RI.3.10",
+   "state": "NC",
+   "code": "RI.3.10",
+   "confidence": "strong",
+   "rationale": "Both are the high-end grades 2-3 band range-of-reading standard for informational text. Ohio pre-marks its .10 noAlign, but NC kept the CCSS .10, so a link is available.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0042",
+   "subject": "ela",
+   "oh": "L.3.4",
+   "state": "NC",
+   "code": "L.3.4",
+   "confidence": "strong",
+   "rationale": "Same vocabulary-strategies standard; Ohio lists the CCSS strategies as elements a-d while NC condenses them to 'context clues, word parts, word relationships, and reference materials.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0043",
+   "subject": "ela",
+   "oh": "L.3.5",
+   "state": "NC",
+   "code": "L.3.5",
+   "confidence": "strong",
+   "rationale": "Elements match on literal/nonliteral meanings and shades of meaning for states of mind; NC drops Ohio's real-life-connections element and word-relationships framing.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0044",
+   "subject": "ela",
+   "oh": "L.3.6",
+   "state": "NC",
+   "code": "L.3.6",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the example sentence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0045",
+   "subject": "ela",
+   "oh": "RL.4.1",
+   "state": "NC",
+   "code": "RL.4.1",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0046",
+   "subject": "ela",
+   "oh": "RL.4.2",
+   "state": "NC",
+   "code": "RL.4.2",
+   "confidence": "strong",
+   "rationale": "Same CCSS content; Ohio splits determine-a-theme/summarize into parts a/b while NC keeps the single 'determine a theme...; summarize the text' sentence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0047",
+   "subject": "ela",
+   "oh": "RL.4.3",
+   "state": "NC",
+   "code": "RL.4.3",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops '(e.g., a character's thoughts, words, or actions)'.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0048",
+   "subject": "ela",
+   "oh": "RL.4.4",
+   "state": "NC",
+   "code": "RL.4.4",
+   "confidence": "moderate",
+   "rationale": "Shared main clause on determining word/phrase meaning in context, but Ohio extends to mythological allusions (e.g., Herculean) while NC extends to words that affect meaning and tone.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0049",
+   "subject": "ela",
+   "oh": "RL.4.5",
+   "state": "NC",
+   "code": "RL.4.5",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the structural-element examples for poems and drama.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0050",
+   "subject": "ela",
+   "oh": "RL.4.6",
+   "state": "NC",
+   "code": "RL.4.6",
+   "confidence": "moderate",
+   "rationale": "Both are grade-4 point-of-view standards, but Ohio addresses point(s) of view and character perspectives within a text while NC (CCSS original) compares the narration of different stories, including first- vs. third-person.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0051",
+   "subject": "ela",
+   "oh": "RL.4.7",
+   "state": "NC",
+   "code": "RL.4.7",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0052",
+   "subject": "ela",
+   "oh": "RL.4.9",
+   "state": "NC",
+   "code": "RL.4.9",
+   "confidence": "strong",
+   "rationale": "Nearly identical; Ohio says 'treatment of' where NC says 'use of,' and NC drops the examples.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0053",
+   "subject": "ela",
+   "oh": "RL.4.10",
+   "state": "NC",
+   "code": "RL.4.10",
+   "confidence": "strong",
+   "rationale": "Both are the grades 4-5 band range-of-reading standard with a prior-knowledge/connections addition. Ohio pre-marks its .10 noAlign, but NC kept the CCSS .10, so a link is available.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0054",
+   "subject": "ela",
+   "oh": "RI.4.1",
+   "state": "NC",
+   "code": "RI.4.1",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0055",
+   "subject": "ela",
+   "oh": "RI.4.2",
+   "state": "NC",
+   "code": "RI.4.2",
+   "confidence": "strong",
+   "rationale": "Same content; Ohio splits main-idea-with-details/summary into parts a/b while NC keeps the single 'determine the main idea...; summarize the text' sentence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0056",
+   "subject": "ela",
+   "oh": "RI.4.3",
+   "state": "NC",
+   "code": "RI.4.3",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0057",
+   "subject": "ela",
+   "oh": "RI.4.4",
+   "state": "NC",
+   "code": "RI.4.4",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0058",
+   "subject": "ela",
+   "oh": "RI.4.5",
+   "state": "NC",
+   "code": "RI.4.5",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the structure examples (chronology, comparison, cause/effect, problem/solution).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0059",
+   "subject": "ela",
+   "oh": "RI.4.6",
+   "state": "NC",
+   "code": "RI.4.6",
+   "confidence": "strong",
+   "rationale": "Nearly identical; Ohio says 'differences in perspective' where NC keeps CCSS 'differences in focus.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0060",
+   "subject": "ela",
+   "oh": "RI.4.7",
+   "state": "NC",
+   "code": "RI.4.7",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the examples (charts, graphs, diagrams, time lines, etc.).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0061",
+   "subject": "ela",
+   "oh": "RI.4.8",
+   "state": "NC",
+   "code": "RI.4.8",
+   "confidence": "strong",
+   "rationale": "Nearly identical; NC says 'reasons and evidence' where Ohio says 'evidence.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0062",
+   "subject": "ela",
+   "oh": "RI.4.9",
+   "state": "NC",
+   "code": "RI.4.9",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0063",
+   "subject": "ela",
+   "oh": "RI.4.10",
+   "state": "NC",
+   "code": "RI.4.10",
+   "confidence": "strong",
+   "rationale": "Both are the grades 4-5 band range-of-reading standard for informational text. Ohio pre-marks its .10 noAlign, but NC kept the CCSS .10, so a link is available.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0064",
+   "subject": "ela",
+   "oh": "L.4.4",
+   "state": "NC",
+   "code": "L.4.4",
+   "confidence": "strong",
+   "rationale": "Same vocabulary-strategies standard; Ohio lists the CCSS strategies as elements a-c while NC condenses them to 'context clues, word parts, word relationships, and reference materials.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0065",
+   "subject": "ela",
+   "oh": "L.4.5",
+   "state": "NC",
+   "code": "L.4.5",
+   "confidence": "strong",
+   "rationale": "Elements match on similes/metaphors and idioms/adages/proverbs; NC drops Ohio's antonym/synonym element and the word-relationships framing.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0066",
+   "subject": "ela",
+   "oh": "L.4.6",
+   "state": "NC",
+   "code": "L.4.6",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the parenthetical examples.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0067",
+   "subject": "ela",
+   "oh": "RL.5.1",
+   "state": "NC",
+   "code": "RL.5.1",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0068",
+   "subject": "ela",
+   "oh": "RL.5.2",
+   "state": "NC",
+   "code": "RL.5.2",
+   "confidence": "strong",
+   "rationale": "Same CCSS content including characters responding to challenges and the poem speaker's reflection; Ohio splits it into parts a/b while NC keeps the single 'determine a theme...; summarize the text' sentence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0069",
+   "subject": "ela",
+   "oh": "RL.5.3",
+   "state": "NC",
+   "code": "RL.5.3",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops '(e.g., how characters interact)'.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0070",
+   "subject": "ela",
+   "oh": "RL.5.4",
+   "state": "NC",
+   "code": "RL.5.4",
+   "confidence": "moderate",
+   "rationale": "Shared main clause on determining word/phrase meaning in context, but Ohio extends to figurative language (metaphors, similes, idioms) while NC extends to word choices that contribute to meaning and tone.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0071",
+   "subject": "ela",
+   "oh": "RL.5.5",
+   "state": "NC",
+   "code": "RL.5.5",
+   "confidence": "strong",
+   "rationale": "Nearly identical; Ohio says a series of chapters/scenes/stanzas 'fits together to provide' the overall structure while NC says they 'provide' it.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0072",
+   "subject": "ela",
+   "oh": "RL.5.6",
+   "state": "NC",
+   "code": "RL.5.6",
+   "confidence": "strong",
+   "rationale": "Nearly identical; Ohio adds 'and perspective' to the narrator's or speaker's point of view.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0073",
+   "subject": "ela",
+   "oh": "RL.5.7",
+   "state": "NC",
+   "code": "RL.5.7",
+   "confidence": "strong",
+   "rationale": "Nearly identical; Ohio says 'meaning, tone, mood, or appeal' with examples while NC says 'meaning, tone, or aesthetics.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0074",
+   "subject": "ela",
+   "oh": "RL.5.9",
+   "state": "NC",
+   "code": "RL.5.9",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops '(e.g., mysteries and adventure stories)'.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0075",
+   "subject": "ela",
+   "oh": "RL.5.10",
+   "state": "NC",
+   "code": "RL.5.10",
+   "confidence": "strong",
+   "rationale": "Both are the high-end grades 4-5 band range-of-reading standard with a prior-knowledge/connections addition. Ohio pre-marks its .10 noAlign, but NC kept the CCSS .10, so a link is available.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0076",
+   "subject": "ela",
+   "oh": "RI.5.1",
+   "state": "NC",
+   "code": "RI.5.1",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0077",
+   "subject": "ela",
+   "oh": "RI.5.2",
+   "state": "NC",
+   "code": "RI.5.2",
+   "confidence": "strong",
+   "rationale": "Same content; Ohio splits main-ideas/summary into parts a/b while NC keeps the single 'determine two or more main ideas...; summarize the text' sentence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0078",
+   "subject": "ela",
+   "oh": "RI.5.3",
+   "state": "NC",
+   "code": "RI.5.3",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0079",
+   "subject": "ela",
+   "oh": "RI.5.4",
+   "state": "NC",
+   "code": "RI.5.4",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0080",
+   "subject": "ela",
+   "oh": "RI.5.5",
+   "state": "NC",
+   "code": "RI.5.5",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the structure examples (chronology, comparison, cause/effect, problem/solution).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0081",
+   "subject": "ela",
+   "oh": "RI.5.6",
+   "state": "NC",
+   "code": "RI.5.6",
+   "confidence": "strong",
+   "rationale": "Identical except Ohio says 'perspectives they represent' where NC says 'point of view they represent.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0082",
+   "subject": "ela",
+   "oh": "RI.5.7",
+   "state": "NC",
+   "code": "RI.5.7",
+   "confidence": "strong",
+   "rationale": "Nearly identical; NC drops 'quickly' from locating an answer.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0083",
+   "subject": "ela",
+   "oh": "RI.5.8",
+   "state": "NC",
+   "code": "RI.5.8",
+   "confidence": "strong",
+   "rationale": "Nearly identical; NC says 'reasons and evidence' where Ohio says 'evidence.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0084",
+   "subject": "ela",
+   "oh": "RI.5.9",
+   "state": "NC",
+   "code": "RI.5.9",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0085",
+   "subject": "ela",
+   "oh": "RI.5.10",
+   "state": "NC",
+   "code": "RI.5.10",
+   "confidence": "strong",
+   "rationale": "Both are the high-end grades 4-5 band range-of-reading standard for informational text. Ohio pre-marks its .10 noAlign, but NC kept the CCSS .10, so a link is available.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0086",
+   "subject": "ela",
+   "oh": "L.5.4",
+   "state": "NC",
+   "code": "L.5.4",
+   "confidence": "strong",
+   "rationale": "Same vocabulary-strategies standard; Ohio lists the CCSS strategies as elements a-c while NC condenses them to 'context clues, word parts, word relationships, and reference materials.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0087",
+   "subject": "ela",
+   "oh": "L.5.5",
+   "state": "NC",
+   "code": "L.5.5",
+   "confidence": "strong",
+   "rationale": "Elements match on interpreting figurative language (similes, metaphors) and idioms/adages/proverbs; NC drops Ohio's synonym/antonym/homograph element and the word-relationships framing.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0088",
+   "subject": "ela",
+   "oh": "L.5.6",
+   "state": "NC",
+   "code": "L.5.6",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the parenthetical examples.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0089",
+   "subject": "ela",
+   "oh": "RL.6.1",
+   "state": "NC",
+   "code": "RL.6.1",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0090",
+   "subject": "ela",
+   "oh": "RL.6.2",
+   "state": "NC",
+   "code": "RL.6.2",
+   "confidence": "strong",
+   "rationale": "Same CCSS content; Ohio splits theme/objective-summary into parts a/b while NC keeps the single sentence with 'a summary distinct from personal opinions or judgments.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0091",
+   "subject": "ela",
+   "oh": "RL.6.3",
+   "state": "NC",
+   "code": "RL.6.3",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0092",
+   "subject": "ela",
+   "oh": "RL.6.4",
+   "state": "NC",
+   "code": "RL.6.4",
+   "confidence": "strong",
+   "rationale": "Shared main clause and shared 'analyze the impact of word choice on meaning and tone'; NC drops Ohio's figurative/connotative-meanings and sensory-language phrases.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0093",
+   "subject": "ela",
+   "oh": "RL.6.5",
+   "state": "NC",
+   "code": "RL.6.5",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0094",
+   "subject": "ela",
+   "oh": "RL.6.6",
+   "state": "NC",
+   "code": "RL.6.6",
+   "confidence": "strong",
+   "rationale": "Nearly identical; Ohio says the author 'uses the point of view to develop the perspective' of the narrator or speaker while NC says the author 'develops the point of view.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0095",
+   "subject": "ela",
+   "oh": "RL.6.7",
+   "state": "NC",
+   "code": "RL.6.7",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0096",
+   "subject": "ela",
+   "oh": "RL.6.9",
+   "state": "NC",
+   "code": "RL.6.9",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the genre examples.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0097",
+   "subject": "ela",
+   "oh": "RL.6.10",
+   "state": "NC",
+   "code": "RL.6.10",
+   "confidence": "strong",
+   "rationale": "Both are the grades 6-8 band range-of-reading standard with a knowledge/connections addition. Ohio pre-marks its .10 noAlign, but NC kept the CCSS .10, so a link is available.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0098",
+   "subject": "ela",
+   "oh": "RI.6.1",
+   "state": "NC",
+   "code": "RI.6.1",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0099",
+   "subject": "ela",
+   "oh": "RI.6.2",
+   "state": "NC",
+   "code": "RI.6.2",
+   "confidence": "strong",
+   "rationale": "Same content; Ohio splits central-idea/objective-summary into parts a/b while NC keeps the single sentence with 'a summary distinct from personal opinions or judgments.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0100",
+   "subject": "ela",
+   "oh": "RI.6.3",
+   "state": "NC",
+   "code": "RI.6.3",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops '(e.g., through examples or anecdotes)'.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0101",
+   "subject": "ela",
+   "oh": "RI.6.4",
+   "state": "NC",
+   "code": "RI.6.4",
+   "confidence": "moderate",
+   "rationale": "Shared main clause on determining word meaning in context, but Ohio extends to figurative, connotative, and technical meanings while NC instead adds analyzing a specific word choice's impact on meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0102",
+   "subject": "ela",
+   "oh": "RI.6.5",
+   "state": "NC",
+   "code": "RI.6.5",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0103",
+   "subject": "ela",
+   "oh": "RI.6.6",
+   "state": "NC",
+   "code": "RI.6.6",
+   "confidence": "strong",
+   "rationale": "Identical except Ohio says 'perspective or purpose' where NC says 'point of view or purpose.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0104",
+   "subject": "ela",
+   "oh": "RI.6.7",
+   "state": "NC",
+   "code": "RI.6.7",
+   "confidence": "strong",
+   "rationale": "Nearly identical; NC folds Ohio's parenthetical '(e.g., visually, quantitatively)' into 'including visually and quantitatively.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0105",
+   "subject": "ela",
+   "oh": "RI.6.8",
+   "state": "NC",
+   "code": "RI.6.8",
+   "confidence": "strong",
+   "rationale": "Nearly identical; NC says claims 'supported by reasons and evidence' where Ohio says 'supported by evidence.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0106",
+   "subject": "ela",
+   "oh": "RI.6.9",
+   "state": "NC",
+   "code": "RI.6.9",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the memoir/biography example.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0107",
+   "subject": "ela",
+   "oh": "RI.6.10",
+   "state": "NC",
+   "code": "RI.6.10",
+   "confidence": "strong",
+   "rationale": "Both are the grades 6-8 band range-of-reading standard; Ohio scopes it to literary nonfiction while NC says informational texts. Ohio pre-marks its .10 noAlign, but NC kept the CCSS .10, so a link is available.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0108",
+   "subject": "ela",
+   "oh": "L.6.4",
+   "state": "NC",
+   "code": "L.6.4",
+   "confidence": "strong",
+   "rationale": "Same vocabulary-strategies standard; Ohio lists the CCSS strategies as elements a-d while NC condenses them to 'context clues, word parts, word relationships, and reference materials.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0109",
+   "subject": "ela",
+   "oh": "L.6.5",
+   "state": "NC",
+   "code": "L.6.5",
+   "confidence": "strong",
+   "rationale": "Elements match on interpreting figures of speech and distinguishing connotations of words with similar denotations; NC drops Ohio's word-relationships element (cause/effect, part/whole, item/category).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0110",
+   "subject": "ela",
+   "oh": "L.6.6",
+   "state": "NC",
+   "code": "L.6.6",
+   "confidence": "strong",
+   "rationale": "Nearly identical; NC says 'develop vocabulary knowledge' where Ohio says 'gather vocabulary knowledge.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0111",
+   "subject": "ela",
+   "oh": "RL.7.1",
+   "state": "NC",
+   "code": "RL.7.1",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0112",
+   "subject": "ela",
+   "oh": "RL.7.2",
+   "state": "NC",
+   "code": "RL.7.2",
+   "confidence": "strong",
+   "rationale": "Same CCSS content; Ohio splits theme-development/objective-summary into parts a/b while NC keeps the single sentence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0113",
+   "subject": "ela",
+   "oh": "RL.7.3",
+   "state": "NC",
+   "code": "RL.7.3",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops '(e.g., how setting shapes the characters or plot)'.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0114",
+   "subject": "ela",
+   "oh": "RL.7.4",
+   "state": "NC",
+   "code": "RL.7.4",
+   "confidence": "strong",
+   "rationale": "Shared main clause and shared analysis of rhymes and repetitions of sounds on meaning and tone in a specific section; NC drops Ohio's figurative/connotative-meanings and sensory-language phrases.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0115",
+   "subject": "ela",
+   "oh": "RL.7.5",
+   "state": "NC",
+   "code": "RL.7.5",
+   "confidence": "strong",
+   "rationale": "Nearly identical; NC replaces Ohio's '(e.g., soliloquy, sonnet)' with '(or other literary genre's)'.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0116",
+   "subject": "ela",
+   "oh": "RL.7.6",
+   "state": "NC",
+   "code": "RL.7.6",
+   "confidence": "strong",
+   "rationale": "Nearly identical; Ohio says the author 'uses the point of view to develop and contrast the perspectives of different characters or narrators' while NC says the author 'develops and contrasts the perspectives of different characters.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0117",
+   "subject": "ela",
+   "oh": "RL.7.7",
+   "state": "NC",
+   "code": "RL.7.7",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the film-technique examples.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0118",
+   "subject": "ela",
+   "oh": "RL.7.9",
+   "state": "NC",
+   "code": "RL.7.9",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0119",
+   "subject": "ela",
+   "oh": "RL.7.10",
+   "state": "NC",
+   "code": "RL.7.10",
+   "confidence": "strong",
+   "rationale": "Both are the grades 6-8 band range-of-reading standard with a knowledge/connections addition. Ohio pre-marks its .10 noAlign, but NC kept the CCSS .10, so a link is available.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0120",
+   "subject": "ela",
+   "oh": "RI.7.1",
+   "state": "NC",
+   "code": "RI.7.1",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0121",
+   "subject": "ela",
+   "oh": "RI.7.2",
+   "state": "NC",
+   "code": "RI.7.2",
+   "confidence": "strong",
+   "rationale": "Same content; Ohio splits central-ideas/objective-summary into parts a/b while NC keeps the single sentence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0122",
+   "subject": "ela",
+   "oh": "RI.7.3",
+   "state": "NC",
+   "code": "RI.7.3",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the parenthetical examples.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0123",
+   "subject": "ela",
+   "oh": "RI.7.4",
+   "state": "NC",
+   "code": "RI.7.4",
+   "confidence": "strong",
+   "rationale": "Shared main clause and identical 'analyze the impact of a specific word choice on meaning and tone'; NC drops Ohio's figurative/connotative/technical-meanings phrase.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0124",
+   "subject": "ela",
+   "oh": "RI.7.5",
+   "state": "NC",
+   "code": "RI.7.5",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0125",
+   "subject": "ela",
+   "oh": "RI.7.6",
+   "state": "NC",
+   "code": "RI.7.6",
+   "confidence": "strong",
+   "rationale": "Identical except Ohio says 'perspective or purpose' where NC says 'point of view or purpose.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0126",
+   "subject": "ela",
+   "oh": "RI.7.7",
+   "state": "NC",
+   "code": "RI.7.7",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the speech-delivery example.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0127",
+   "subject": "ela",
+   "oh": "RI.7.8",
+   "state": "NC",
+   "code": "RI.7.8",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0128",
+   "subject": "ela",
+   "oh": "RI.7.9",
+   "state": "NC",
+   "code": "RI.7.9",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0129",
+   "subject": "ela",
+   "oh": "RI.7.10",
+   "state": "NC",
+   "code": "RI.7.10",
+   "confidence": "strong",
+   "rationale": "Both are the grades 6-8 band range-of-reading standard; Ohio scopes it to literary nonfiction while NC says informational texts. Ohio pre-marks its .10 noAlign, but NC kept the CCSS .10, so a link is available.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0130",
+   "subject": "ela",
+   "oh": "L.7.4",
+   "state": "NC",
+   "code": "L.7.4",
+   "confidence": "strong",
+   "rationale": "Same vocabulary-strategies standard; Ohio lists the CCSS strategies as elements a-d while NC condenses them to 'context clues, word parts, word relationships, and reference materials.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0131",
+   "subject": "ela",
+   "oh": "L.7.5",
+   "state": "NC",
+   "code": "L.7.5",
+   "confidence": "strong",
+   "rationale": "Elements match on interpreting figures of speech and distinguishing connotations of words with similar denotations; NC drops Ohio's word-relationships element (synonym/antonym, analogy).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0132",
+   "subject": "ela",
+   "oh": "L.7.6",
+   "state": "NC",
+   "code": "L.7.6",
+   "confidence": "strong",
+   "rationale": "Nearly identical; NC says 'develop vocabulary knowledge' where Ohio says 'gather vocabulary knowledge.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0133",
+   "subject": "ela",
+   "oh": "RL.8.1",
+   "state": "NC",
+   "code": "RL.8.1",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops 'the' before 'textual evidence.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0134",
+   "subject": "ela",
+   "oh": "RL.8.2",
+   "state": "NC",
+   "code": "RL.8.2",
+   "confidence": "strong",
+   "rationale": "Same CCSS content including the theme's relationship to characters, setting, and plot; Ohio splits it into parts a/b while NC keeps the single sentence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0135",
+   "subject": "ela",
+   "oh": "RL.8.3",
+   "state": "NC",
+   "code": "RL.8.3",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0136",
+   "subject": "ela",
+   "oh": "RL.8.4",
+   "state": "NC",
+   "code": "RL.8.4",
+   "confidence": "strong",
+   "rationale": "Shared main clause and shared analysis of word choices on meaning and tone including analogies or allusions; NC drops Ohio's figurative/connotative-meanings phrase and 'mood.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0137",
+   "subject": "ela",
+   "oh": "RL.8.5",
+   "state": "NC",
+   "code": "RL.8.5",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0138",
+   "subject": "ela",
+   "oh": "RL.8.6",
+   "state": "NC",
+   "code": "RL.8.6",
+   "confidence": "strong",
+   "rationale": "Nearly identical; NC drops 'points of view and' and the dramatic-irony example but keeps the same character/audience-perspective analysis creating suspense or humor.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0139",
+   "subject": "ela",
+   "oh": "RL.8.7",
+   "state": "NC",
+   "code": "RL.8.7",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0140",
+   "subject": "ela",
+   "oh": "RL.8.9",
+   "state": "NC",
+   "code": "RL.8.9",
+   "confidence": "strong",
+   "rationale": "Nearly identical; Ohio says 'alludes to' with the Bible/Gilgamesh examples while NC says 'draws on' religious works without examples.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0141",
+   "subject": "ela",
+   "oh": "RL.8.10",
+   "state": "NC",
+   "code": "RL.8.10",
+   "confidence": "strong",
+   "rationale": "Both are the high-end grades 6-8 band range-of-reading standard with a knowledge/connections addition. Ohio pre-marks its .10 noAlign, but NC kept the CCSS .10, so a link is available.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0142",
+   "subject": "ela",
+   "oh": "RI.8.1",
+   "state": "NC",
+   "code": "RI.8.1",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops 'the' before 'textual evidence.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0143",
+   "subject": "ela",
+   "oh": "RI.8.2",
+   "state": "NC",
+   "code": "RI.8.2",
+   "confidence": "strong",
+   "rationale": "Same content including the central idea's relationship to supporting ideas; Ohio splits it into parts a/b while NC keeps the single sentence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0144",
+   "subject": "ela",
+   "oh": "RI.8.3",
+   "state": "NC",
+   "code": "RI.8.3",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops '(e.g., through comparisons, analogies, or categories)'.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0145",
+   "subject": "ela",
+   "oh": "RI.8.4",
+   "state": "NC",
+   "code": "RI.8.4",
+   "confidence": "strong",
+   "rationale": "Shared main clause and identical analysis of word choices on meaning and tone including analogies or allusions; NC drops Ohio's figurative/connotative/technical-meanings phrase.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0146",
+   "subject": "ela",
+   "oh": "RI.8.5",
+   "state": "NC",
+   "code": "RI.8.5",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0147",
+   "subject": "ela",
+   "oh": "RI.8.6",
+   "state": "NC",
+   "code": "RI.8.6",
+   "confidence": "strong",
+   "rationale": "Identical except Ohio says 'perspective or purpose' where NC says 'point of view or purpose.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0148",
+   "subject": "ela",
+   "oh": "RI.8.7",
+   "state": "NC",
+   "code": "RI.8.7",
+   "confidence": "strong",
+   "rationale": "Identical except NC drops the medium examples.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0149",
+   "subject": "ela",
+   "oh": "RI.8.8",
+   "state": "NC",
+   "code": "RI.8.8",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0150",
+   "subject": "ela",
+   "oh": "RI.8.9",
+   "state": "NC",
+   "code": "RI.8.9",
+   "confidence": "strong",
+   "rationale": "Verbatim identical.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0151",
+   "subject": "ela",
+   "oh": "RI.8.10",
+   "state": "NC",
+   "code": "RI.8.10",
+   "confidence": "strong",
+   "rationale": "Both are the high-end grades 6-8 band range-of-reading standard; Ohio scopes it to literary nonfiction while NC says informational texts. Ohio pre-marks its .10 noAlign, but NC kept the CCSS .10, so a link is available.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0152",
+   "subject": "ela",
+   "oh": "L.8.4",
+   "state": "NC",
+   "code": "L.8.4",
+   "confidence": "strong",
+   "rationale": "Same vocabulary-strategies standard; Ohio lists the CCSS strategies as elements a-d while NC condenses them to 'context clues, word parts, word relationships, and reference materials.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0153",
+   "subject": "ela",
+   "oh": "L.8.5",
+   "state": "NC",
+   "code": "L.8.5",
+   "confidence": "strong",
+   "rationale": "Elements match on interpreting figures of speech and distinguishing connotations of words with similar denotations; NC drops Ohio's word-relationships element.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-nc-0154",
+   "subject": "ela",
+   "oh": "L.8.6",
+   "state": "NC",
+   "code": "L.8.6",
+   "confidence": "strong",
+   "rationale": "Nearly identical; NC says 'develop vocabulary knowledge' where Ohio says 'gather vocabulary knowledge.'",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0001",
+   "subject": "science",
+   "oh": "2.ESS.1",
+   "state": "NC",
+   "code": "ESS.2.1.2",
+   "confidence": "moderate",
+   "rationale": "Both cover measuring wind speed and wind direction as observable weather conditions; NC frames it as summarizing weather data while Ohio also covers air properties and energy transfer causing wind.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0002",
+   "subject": "science",
+   "oh": "2.ESS.2",
+   "state": "NC",
+   "code": "PS.2.1.3",
+   "confidence": "moderate",
+   "rationale": "Ohio's stated emphasis is investigating evaporation and condensation, and NC's open-vs-closed container investigation is exactly an evaporation investigation; Ohio's broader atmosphere/precipitation content is not covered.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0003",
+   "subject": "science",
+   "oh": "2.ESS.3",
+   "state": "NC",
+   "code": "ESS.2.1.3",
+   "confidence": "moderate",
+   "rationale": "Both address short- and long-term weather change: NC compares weather patterns over time (time of day, time of year) matching Ohio's long- and short-term weather changes, though NC omits Ohio's energy-change cause.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0004",
+   "subject": "science",
+   "oh": "2.ESS.3",
+   "state": "NC",
+   "code": "ESS.2.1.1",
+   "confidence": "moderate",
+   "rationale": "NC's sun-energy warming land, air, and water supplies the energy driver behind Ohio's 'changes in energy affect all aspects of weather,' but only the solar-energy piece of Ohio's statement.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0005",
+   "subject": "science",
+   "oh": "2.PS.1",
+   "state": "NC",
+   "code": "PS.3.2.1",
+   "confidence": "strong",
+   "rationale": "Direct match on the core idea that forces change an object's speed or direction of motion. Cross-grade: Ohio grade 2 vs NC grade 3.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0006",
+   "subject": "science",
+   "oh": "3.ESS.1",
+   "state": "NC",
+   "code": "LS.3.3.2",
+   "confidence": "moderate",
+   "rationale": "Both examine the components and measurable properties of soil; NC ties soil properties to plant growth while Ohio treats soil as a nonliving resource alongside rocks, air, and water.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0007",
+   "subject": "science",
+   "oh": "3.ESS.1",
+   "state": "NC",
+   "code": "ESS.4.2.2",
+   "confidence": "strong",
+   "rationale": "Both have students classify rocks by observable characteristics and by how they form (Ohio: 'rocks have specific characteristics that allow them to be sorted... rocks form in different ways'). Cross-grade: Ohio grade 3 vs NC grade 4.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0008",
+   "subject": "science",
+   "oh": "3.PS.1",
+   "state": "NC",
+   "code": "PS.3.1.1",
+   "confidence": "strong",
+   "rationale": "Both establish that matter takes up space and has mass; NC applies the idea to air as a substance, Ohio states it for all objects and substances. Same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0009",
+   "subject": "science",
+   "oh": "3.PS.2",
+   "state": "NC",
+   "code": "PS.3.1.2",
+   "confidence": "strong",
+   "rationale": "Both classify solids, liquids, and gases by their basic properties at the same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0010",
+   "subject": "science",
+   "oh": "3.PS.2",
+   "state": "NC",
+   "code": "PS.3.1.3",
+   "confidence": "strong",
+   "rationale": "Both cover observable changes to matter (including changes of state) caused by heating or cooling, at the same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0011",
+   "subject": "science",
+   "oh": "3.PS.3",
+   "state": "NC",
+   "code": "PS.4.2.1",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match: identifying basic forms of energy (light, sound, heat, electrical) that cause motion or create change — Ohio defines energy identically as 'the ability to cause motion or create change.' Cross-grade: Ohio grade 3 vs NC grade 4.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0012",
+   "subject": "science",
+   "oh": "3.LS.1",
+   "state": "NC",
+   "code": "LS.2.2.1",
+   "confidence": "strong",
+   "rationale": "Direct match on offspring closely resembling their parents while also differing, i.e., traits transferred from parent to offspring. Cross-grade: Ohio grade 3 vs NC grade 2.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0013",
+   "subject": "science",
+   "oh": "3.LS.2",
+   "state": "NC",
+   "code": "LS.4.1.3",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match: differences among individuals of the same kind/population give some individuals an advantage in surviving and reproducing. Cross-grade: Ohio grade 3 vs NC grade 4.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0014",
+   "subject": "science",
+   "oh": "3.LS.3",
+   "state": "NC",
+   "code": "LS.3.2.2",
+   "confidence": "strong",
+   "rationale": "NC's stages of the life cycle of seed plants sits directly inside Ohio's plant-and-animal life cycles statement, at the same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0015",
+   "subject": "science",
+   "oh": "3.LS.3",
+   "state": "NC",
+   "code": "LS.2.1.2",
+   "confidence": "strong",
+   "rationale": "Both compare the life cycles of different animals, matching Ohio's point that life-cycle details differ across organisms. Cross-grade: Ohio grade 3 vs NC grade 2.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0016",
+   "subject": "science",
+   "oh": "4.ESS.1",
+   "state": "NC",
+   "code": "ESS.4.2.3",
+   "confidence": "strong",
+   "rationale": "Both explain changes in Earth's surface via slow erosion/deposition and fast catastrophic events (earthquakes, volcanic activity), at the same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0017",
+   "subject": "science",
+   "oh": "4.ESS.1",
+   "state": "NC",
+   "code": "ESS.3.2.1",
+   "confidence": "strong",
+   "rationale": "Direct match on Earth's water distribution: oceans as saltwater plus freshwater in rivers, lakes, and glaciers. Cross-grade: Ohio grade 4 vs NC grade 3.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0018",
+   "subject": "science",
+   "oh": "4.ESS.1",
+   "state": "NC",
+   "code": "ESS.3.2.2",
+   "confidence": "strong",
+   "rationale": "Both identify Earth's surface landforms (volcanoes, mountains, valleys, etc.), matching Ohio's 'specific characteristics and landforms that can be identified.' Cross-grade: Ohio grade 4 vs NC grade 3.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0019",
+   "subject": "science",
+   "oh": "4.ESS.2",
+   "state": "NC",
+   "code": "ESS.4.2.3",
+   "confidence": "strong",
+   "rationale": "Both cover surface change from weathering plus fast changes such as earthquakes and volcanic activity, at the same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0020",
+   "subject": "science",
+   "oh": "4.ESS.3",
+   "state": "NC",
+   "code": "ESS.4.2.3",
+   "confidence": "strong",
+   "rationale": "NC's slow changes of erosion (and weathering) over time directly cover Ohio's erosion statement at the same grade; NC does not separately name deposition.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0021",
+   "subject": "science",
+   "oh": "4.PS.1",
+   "state": "NC",
+   "code": "PS.5.1.1",
+   "confidence": "strong",
+   "rationale": "Both target conservation of matter through comparing the amount/weight of matter before and after an interaction or change. Cross-grade: Ohio grade 4 vs NC grade 5.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0022",
+   "subject": "science",
+   "oh": "4.PS.2",
+   "state": "NC",
+   "code": "PS.4.2.2",
+   "confidence": "strong",
+   "rationale": "Direct match: an electric circuit requires a complete loop of necessary components for electrical energy to be transferred, at the same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0023",
+   "subject": "science",
+   "oh": "4.PS.2",
+   "state": "NC",
+   "code": "PS.3.3.2",
+   "confidence": "strong",
+   "rationale": "Direct match on heat transfer from a warmer object to a cooler one, which Ohio states as 'energy transfers from hot objects to cold objects as heat.' Cross-grade: Ohio grade 4 vs NC grade 3.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0024",
+   "subject": "science",
+   "oh": "4.PS.2",
+   "state": "NC",
+   "code": "PS.4.2.3",
+   "confidence": "moderate",
+   "rationale": "NC's insulators/conductors investigation supports Ohio's requirement that circuits need conducting materials, but conductors are only one piece of Ohio's energy transfer/transformation statement.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0025",
+   "subject": "science",
+   "oh": "4.LS.1",
+   "state": "NC",
+   "code": "ESS.4.3.1",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match: inferring whether changes in an organism's environment are beneficial or harmful, at the same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0026",
+   "subject": "science",
+   "oh": "4.LS.1",
+   "state": "NC",
+   "code": "LS.4.1.3",
+   "confidence": "strong",
+   "rationale": "Both explain that when habitats change, differences among individuals affect which survive and reproduce, at the same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0027",
+   "subject": "science",
+   "oh": "4.LS.2",
+   "state": "NC",
+   "code": "LS.4.2.1",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match: comparing fossils to one another and to living organisms, at the same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0028",
+   "subject": "science",
+   "oh": "4.LS.2",
+   "state": "NC",
+   "code": "LS.4.2.2",
+   "confidence": "moderate",
+   "rationale": "Both use fossils as evidence about past life and environments; NC focuses on inferring Earth's early environment while Ohio emphasizes comparison and extinction.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0029",
+   "subject": "science",
+   "oh": "5.ESS.1",
+   "state": "NC",
+   "code": "ESS.6.1.2",
+   "confidence": "strong",
+   "rationale": "Both compare the planets of the solar system by size, distance from the sun, and surface/atmospheric characteristics — Ohio's 'each planet has unique characteristics.' Cross-grade: Ohio grade 5 vs NC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0030",
+   "subject": "science",
+   "oh": "5.ESS.3",
+   "state": "NC",
+   "code": "ESS.4.1.1",
+   "confidence": "strong",
+   "rationale": "Direct match: Earth's rotation on its axis in 24 hours causes day and night. Cross-grade: Ohio grade 5 vs NC grade 4.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0031",
+   "subject": "science",
+   "oh": "5.PS.1",
+   "state": "NC",
+   "code": "PS.5.2.1",
+   "confidence": "strong",
+   "rationale": "Both explain how force and mass (plus gravity/friction) affect the motion of objects, at the same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0032",
+   "subject": "science",
+   "oh": "5.PS.1",
+   "state": "NC",
+   "code": "PS.5.2.2",
+   "confidence": "strong",
+   "rationale": "Both use measurement/computation to describe motion by position, direction, and speed, matching Ohio's speed = distance over time. Same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0033",
+   "subject": "science",
+   "oh": "5.PS.2",
+   "state": "NC",
+   "code": "PS.4.3.1",
+   "confidence": "strong",
+   "rationale": "Direct match on light traveling from a source and being reflected at different angles, part of Ohio's light behavior content. Cross-grade: Ohio grade 5 vs NC grade 4.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0034",
+   "subject": "science",
+   "oh": "5.PS.2",
+   "state": "NC",
+   "code": "PS.4.3.2",
+   "confidence": "strong",
+   "rationale": "Direct match on light being refracted and absorbed when it interacts with objects or media. Cross-grade: Ohio grade 5 vs NC grade 4.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0035",
+   "subject": "science",
+   "oh": "5.PS.2",
+   "state": "NC",
+   "code": "PS.6.3.3",
+   "confidence": "strong",
+   "rationale": "Direct match on sound: produced by vibration, rate of vibration (pitch), and requiring a medium through which vibrations travel. Cross-grade: Ohio grade 5 vs NC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0036",
+   "subject": "science",
+   "oh": "5.LS.1",
+   "state": "NC",
+   "code": "LS.5.2.2",
+   "confidence": "strong",
+   "rationale": "Direct match: classifying organisms in an ecosystem by the role/energy-acquisition function they serve — producers, consumers, decomposers. Same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0037",
+   "subject": "science",
+   "oh": "5.LS.1",
+   "state": "NC",
+   "code": "LS.5.2.3",
+   "confidence": "moderate",
+   "rationale": "NC's interconnected plant-animal relationships within an ecosystem parallel Ohio's use of food webs to identify relationships among organisms, though NC stresses effects of those relationships.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0038",
+   "subject": "science",
+   "oh": "5.LS.2",
+   "state": "NC",
+   "code": "LS.6.2.1",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match: energy from sunlight is captured by producers through photosynthesis and transferred to consumers and decomposers. Cross-grade: Ohio grade 5 vs NC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0039",
+   "subject": "science",
+   "oh": "6.ESS.2",
+   "state": "NC",
+   "code": "ESS.6.2.3",
+   "confidence": "moderate",
+   "rationale": "NC's rock cycle model involves the same igneous/metamorphic/sedimentary rock types, but Ohio's focus on identifying and classifying rocks by composition is not NC's emphasis at this grade (NC classifies rocks in grade 4).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0040",
+   "subject": "science",
+   "oh": "6.ESS.3",
+   "state": "NC",
+   "code": "ESS.6.2.3",
+   "confidence": "strong",
+   "rationale": "Both explain how the rock cycle forms igneous, metamorphic, and sedimentary rocks through cooling, heat/pressure, and weathering/lithification processes. Same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0041",
+   "subject": "science",
+   "oh": "6.ESS.4",
+   "state": "NC",
+   "code": "ESS.6.2.3",
+   "confidence": "moderate",
+   "rationale": "NC ties the rock cycle to soil formation (different soils from different rocks), matching Ohio's soil formation from bedrock and weathering; Ohio's soil horizons and measurable properties are not covered.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0042",
+   "subject": "science",
+   "oh": "6.PS.1",
+   "state": "NC",
+   "code": "PS.6.1.1",
+   "confidence": "strong",
+   "rationale": "Direct match: matter is made of atoms, and elements are distinguished by the kinds of atoms that compose them. Same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0043",
+   "subject": "science",
+   "oh": "6.PS.1",
+   "state": "NC",
+   "code": "PS.6.1.3",
+   "confidence": "moderate",
+   "rationale": "NC's physical properties of pure substances (including density) support Ohio's 'matter has mass, volume and density,' though NC's focus is amount-dependent vs independent properties.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0044",
+   "subject": "science",
+   "oh": "6.PS.2",
+   "state": "NC",
+   "code": "PS.6.1.2",
+   "confidence": "strong",
+   "rationale": "Direct match: changes in thermal energy relate to the motion of particles, including phase changes — Ohio's particle model of changes of state. Same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0045",
+   "subject": "science",
+   "oh": "6.PS.2",
+   "state": "NC",
+   "code": "PS.6.2.2",
+   "confidence": "moderate",
+   "rationale": "Both connect heat transfer to a resulting temperature change and its effect on the behavior of matter, though NC emphasizes expansion/contraction rather than changes of state.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0046",
+   "subject": "science",
+   "oh": "6.PS.3",
+   "state": "NC",
+   "code": "PS.7.2.1",
+   "confidence": "strong",
+   "rationale": "Direct match on the two categories of energy — kinetic (motion) and potential (position) — framed by NC as contributions to mechanical energy. Cross-grade: Ohio grade 6 vs NC grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0047",
+   "subject": "science",
+   "oh": "6.PS.4",
+   "state": "NC",
+   "code": "PS.7.1.1",
+   "confidence": "strong",
+   "rationale": "Both describe an object's motion by its position, direction, and speed. Cross-grade: Ohio grade 6 vs NC grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0048",
+   "subject": "science",
+   "oh": "6.PS.4",
+   "state": "NC",
+   "code": "PS.7.1.3",
+   "confidence": "strong",
+   "rationale": "Direct match: interpreting graphs of an object's change in position over time, Ohio's 'position and speed can be measured and graphed as a function of time.' Cross-grade: Ohio grade 6 vs NC grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0049",
+   "subject": "science",
+   "oh": "6.PS.4",
+   "state": "NC",
+   "code": "PS.7.1.4",
+   "confidence": "strong",
+   "rationale": "Direct match on graphing distance over time for constant and variable speed, within Ohio's speed-and-graphing statement. Cross-grade: Ohio grade 6 vs NC grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0050",
+   "subject": "science",
+   "oh": "6.LS.1",
+   "state": "NC",
+   "code": "LS.7.1.2",
+   "confidence": "strong",
+   "rationale": "Both focus on how cell structures/organelles (membrane, nucleus, mitochondria, etc.) function to support life across organism types — Ohio's stated emphasis for this statement. Cross-grade: Ohio grade 6 vs NC grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0051",
+   "subject": "science",
+   "oh": "6.LS.3",
+   "state": "NC",
+   "code": "LS.7.1.2",
+   "confidence": "strong",
+   "rationale": "Direct match: specialized cell structures, including the controlling cell membrane, carry out the functions that sustain life. Cross-grade: Ohio grade 6 vs NC grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0052",
+   "subject": "science",
+   "oh": "6.LS.4",
+   "state": "NC",
+   "code": "LS.7.1.3",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match: hierarchical organization from cells to tissues to organs to systems to organisms, with parts functioning together to support life. Cross-grade: Ohio grade 6 vs NC grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0053",
+   "subject": "science",
+   "oh": "6.LS.4",
+   "state": "NC",
+   "code": "LS.5.1.1",
+   "confidence": "strong",
+   "rationale": "Direct match on the levels of organization (cell, tissue, organ, system, organism), applied by NC to humans as multicellular organisms. Cross-grade: Ohio grade 6 vs NC grade 5.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0054",
+   "subject": "science",
+   "oh": "7.ESS.1",
+   "state": "NC",
+   "code": "ESS.7.1.2",
+   "confidence": "strong",
+   "rationale": "Direct match: the sun's energy (and gravity) drives the water cycle, including changes of state, as water moves through Earth's systems and relates to weather. Same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0055",
+   "subject": "science",
+   "oh": "7.ESS.2",
+   "state": "NC",
+   "code": "ESS.7.1.5",
+   "confidence": "strong",
+   "rationale": "Direct match on convection, global winds, and the jet stream influencing weather and climate — Ohio's atmospheric currents formed by thermal energy transfer. Same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0056",
+   "subject": "science",
+   "oh": "7.ESS.2",
+   "state": "NC",
+   "code": "ESS.8.2.2",
+   "confidence": "strong",
+   "rationale": "Both explain how ocean currents form (thermal/salinity-driven) and how they influence climate, matching Ohio's Gulf Stream example. Cross-grade: Ohio grade 7 vs NC grade 8.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0057",
+   "subject": "science",
+   "oh": "7.ESS.3",
+   "state": "NC",
+   "code": "ESS.7.1.1",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match: the atmosphere's composition (mixture of gases) and its layers with differing temperature and pressure properties. Same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0058",
+   "subject": "science",
+   "oh": "7.ESS.4",
+   "state": "NC",
+   "code": "ESS.6.1.1",
+   "confidence": "strong",
+   "rationale": "Direct match: relative motion and positions of the sun, Earth, and moon cause tides, moon phases, and eclipses. Cross-grade: Ohio grade 7 vs NC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0059",
+   "subject": "science",
+   "oh": "7.ESS.5",
+   "state": "NC",
+   "code": "ESS.6.1.1",
+   "confidence": "strong",
+   "rationale": "NC's sun-Earth-moon relative motion explicitly includes the cause of seasons, Ohio's focus here (axial tilt plus revolution). Cross-grade: Ohio grade 7 vs NC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0060",
+   "subject": "science",
+   "oh": "7.PS.1",
+   "state": "NC",
+   "code": "PS.8.1.3",
+   "confidence": "strong",
+   "rationale": "Both organize elements by their physical properties as the conceptual basis of the Periodic Table. Cross-grade: Ohio grade 7 vs NC grade 8, where NC adds reactivity.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0061",
+   "subject": "science",
+   "oh": "7.PS.2",
+   "state": "NC",
+   "code": "PS.8.1.5",
+   "confidence": "strong",
+   "rationale": "Direct match on conservation of mass: atoms are rearranged but the number and types of atoms remain constant in a closed system. Cross-grade: Ohio grade 7 vs NC grade 8.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0062",
+   "subject": "science",
+   "oh": "7.PS.2",
+   "state": "NC",
+   "code": "PS.8.1.4",
+   "confidence": "strong",
+   "rationale": "Both distinguish physical combination/separation of substances from interactions that form new substances with different properties. Cross-grade: Ohio grade 7 vs NC grade 8.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0063",
+   "subject": "science",
+   "oh": "7.PS.3",
+   "state": "NC",
+   "code": "PS.7.2.2",
+   "confidence": "moderate",
+   "rationale": "Both address energy transforming from one form to another; NC restricts to potential/kinetic examples and does not state Ohio's conservation principle that total energy remains constant.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0064",
+   "subject": "science",
+   "oh": "7.PS.4",
+   "state": "NC",
+   "code": "PS.7.2.3",
+   "confidence": "strong",
+   "rationale": "Direct match: mechanical energy is transferred when objects push or pull on each other over a distance. Same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0065",
+   "subject": "science",
+   "oh": "7.PS.4",
+   "state": "NC",
+   "code": "PS.6.2.1",
+   "confidence": "strong",
+   "rationale": "Direct match on thermal energy transfer through radiation, convection, and conduction. Cross-grade: Ohio grade 7 vs NC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0066",
+   "subject": "science",
+   "oh": "7.PS.4",
+   "state": "NC",
+   "code": "PS.6.2.5",
+   "confidence": "strong",
+   "rationale": "Direct match: an electrical circuit transfers energy and requires a complete loop through which current can pass. Cross-grade: Ohio grade 7 vs NC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0067",
+   "subject": "science",
+   "oh": "7.LS.1",
+   "state": "NC",
+   "code": "LS.6.2.1",
+   "confidence": "strong",
+   "rationale": "Direct match: plants use light energy to produce sugars (photosynthesis) and that energy is transferred to consumers and decomposers. Cross-grade: Ohio grade 7 vs NC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0068",
+   "subject": "science",
+   "oh": "7.LS.1",
+   "state": "NC",
+   "code": "LS.8.2.4",
+   "confidence": "strong",
+   "rationale": "Direct match: energy flow through food webs is interconnected with the continuous cycling of matter between organisms and their environments. Cross-grade: Ohio grade 7 vs NC grade 8.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0069",
+   "subject": "science",
+   "oh": "7.LS.1",
+   "state": "NC",
+   "code": "LS.8.2.3",
+   "confidence": "strong",
+   "rationale": "Both explain that food provides the energy and building materials organisms (including plants) need to survive and grow, matching Ohio's breakdown of plant structures for energy and materials. Cross-grade: Ohio grade 7 vs NC grade 8.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0070",
+   "subject": "science",
+   "oh": "7.LS.2",
+   "state": "NC",
+   "code": "LS.6.2.2",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match: biotic and abiotic factors determine how well organisms grow and survive in different biomes. Cross-grade: Ohio grade 7 vs NC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0071",
+   "subject": "science",
+   "oh": "7.LS.2",
+   "state": "NC",
+   "code": "LS.8.2.1",
+   "confidence": "strong",
+   "rationale": "Direct match: changing biotic and abiotic factors (food, water, shelter, space) affect the number, growth, and survival of populations. Cross-grade: Ohio grade 7 vs NC grade 8.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0072",
+   "subject": "science",
+   "oh": "8.ESS.4",
+   "state": "NC",
+   "code": "ESS.8.1.1",
+   "confidence": "strong",
+   "rationale": "Direct match: determining the relative age of Earth, rocks, and fossils using index fossils and the ordering of rock layers in the geologic record. Same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0073",
+   "subject": "science",
+   "oh": "8.ESS.4",
+   "state": "NC",
+   "code": "ESS.8.1.2",
+   "confidence": "strong",
+   "rationale": "Both use fossils and rock-layer evidence (sedimentary composition, faults, igneous formations) as the record of Earth's dynamic changes through time. Same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0074",
+   "subject": "science",
+   "oh": "8.PS.2",
+   "state": "NC",
+   "code": "PS.7.1.2",
+   "confidence": "strong",
+   "rationale": "Direct match: balanced vs unbalanced (net) forces, including friction, determine whether an object's motion changes. Cross-grade: Ohio grade 8 vs NC grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0075",
+   "subject": "science",
+   "oh": "8.PS.2",
+   "state": "NC",
+   "code": "PS.7.1.1",
+   "confidence": "strong",
+   "rationale": "Direct match on Ohio's reference-point idea: motion is described by position, direction, and speed with respect to some other object. Cross-grade: Ohio grade 8 vs NC grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0076",
+   "subject": "science",
+   "oh": "8.LS.1",
+   "state": "NC",
+   "code": "LS.8.3.1",
+   "confidence": "strong",
+   "rationale": "Direct match: the fossil record (with comparative anatomy) provides evidence of evolutionary change in the number and types of species. Same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0077",
+   "subject": "science",
+   "oh": "8.LS.1",
+   "state": "NC",
+   "code": "LS.8.3.2",
+   "confidence": "strong",
+   "rationale": "Direct match: natural selection — genetic variation of traits affects individuals' likelihood of surviving and reproducing as environments change. Same grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0078",
+   "subject": "science",
+   "oh": "8.LS.2",
+   "state": "NC",
+   "code": "LS.7.2.2",
+   "confidence": "strong",
+   "rationale": "Direct match: sexual reproduction mixes genes from two individuals producing variation while asexual reproduction transfers one parent's genetic information. Cross-grade: Ohio grade 8 vs NC grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-nc-0079",
+   "subject": "science",
+   "oh": "8.LS.3",
+   "state": "NC",
+   "code": "LS.7.2.1",
+   "confidence": "strong",
+   "rationale": "Direct match: genes on chromosomes are inherited structures transmitted from parent to offspring that determine an organism's traits. Cross-grade: Ohio grade 8 vs NC grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0001",
+   "subject": "social_studies",
+   "oh": "2.SS.2",
+   "state": "NC",
+   "code": "2.H.1.3",
+   "confidence": "moderate",
+   "rationale": "Both build early historical-source skills: Ohio shows change over time with artifacts, maps, and photographs, while NC has students compare perspectives of a time period using primary and secondary sources.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0002",
+   "subject": "social_studies",
+   "oh": "2.SS.4",
+   "state": "NC",
+   "code": "2.H.1.1",
+   "confidence": "moderate",
+   "rationale": "Ohio uses biographies to show how people's actions shaped the world; NC summarizes contributions of various individuals and groups that impacted American history.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0003",
+   "subject": "social_studies",
+   "oh": "2.SS.5",
+   "state": "NC",
+   "code": "2.G.1.1",
+   "confidence": "moderate",
+   "rationale": "Both address locating places: Ohio interprets maps, symbols, and cardinal directions to answer location questions, while NC recognizes absolute and relative location of settlements and states.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0004",
+   "subject": "social_studies",
+   "oh": "2.SS.6",
+   "state": "NC",
+   "code": "3.G.1.2",
+   "confidence": "strong",
+   "rationale": "Both address how the physical characteristics of a place shape how people live and work. NC covers this at grade 3, one grade above Ohio's grade 2 treatment.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0005",
+   "subject": "social_studies",
+   "oh": "2.SS.9",
+   "state": "NC",
+   "code": "2.B.1.2",
+   "confidence": "moderate",
+   "rationale": "Ohio addresses interactions among cultures leading to shared ways of life; NC addresses how belief systems of various groups have influenced and contributed to American culture.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0006",
+   "subject": "social_studies",
+   "oh": "2.SS.14",
+   "state": "NC",
+   "code": "2.E.1.2",
+   "confidence": "moderate",
+   "rationale": "Ohio's idea that resources can be used in various ways pairs with NC's focus on how the availability of resources impacts the production of goods.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0007",
+   "subject": "social_studies",
+   "oh": "3.SS.2",
+   "state": "NC",
+   "code": "3.H.1.3",
+   "confidence": "moderate",
+   "rationale": "Both use primary and secondary sources to examine local history, though Ohio focuses on showing change over time while NC focuses on comparing multiple interpretations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0008",
+   "subject": "social_studies",
+   "oh": "3.SS.3",
+   "state": "NC",
+   "code": "3.H.1.2",
+   "confidence": "strong",
+   "rationale": "Ohio's focus on local communities changing over time matches NC's focus on the lasting impact historical events have had on local communities.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0009",
+   "subject": "social_studies",
+   "oh": "3.SS.5",
+   "state": "NC",
+   "code": "3.E.1.2",
+   "confidence": "strong",
+   "rationale": "Both address how a region's natural resources and industry shape economic life in local communities: Ohio via daily life influenced by agriculture, industry, and resources; NC via resources' impact on local production and consumption.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0010",
+   "subject": "social_studies",
+   "oh": "3.SS.5",
+   "state": "NC",
+   "code": "3.G.1.2",
+   "confidence": "moderate",
+   "rationale": "NC's focus on how climate and physical characteristics affect how people live in a region overlaps with Ohio's focus on daily life shaped by local agriculture, industry, and natural resources.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0011",
+   "subject": "social_studies",
+   "oh": "3.SS.7",
+   "state": "NC",
+   "code": "3.G.1.3",
+   "confidence": "strong",
+   "rationale": "Both address the movement of people, goods, and ideas at the community level; Ohio emphasizes transportation and communication systems while NC emphasizes how geography impacts that movement.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0012",
+   "subject": "social_studies",
+   "oh": "3.SS.8",
+   "state": "NC",
+   "code": "3.B.1.2",
+   "confidence": "strong",
+   "rationale": "Ohio's recognition that communities include diverse cultural groups aligns with NC's comparison of values, beliefs, cultural practices, and traditions of various groups in local and regional communities.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0013",
+   "subject": "social_studies",
+   "oh": "3.SS.8",
+   "state": "NC",
+   "code": "3.B.1.1",
+   "confidence": "moderate",
+   "rationale": "NC extends the same idea of diverse cultural groups by explaining how their values and beliefs contribute to the development of local communities and the state.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0014",
+   "subject": "social_studies",
+   "oh": "3.SS.10",
+   "state": "NC",
+   "code": "3.C&G.1.3",
+   "confidence": "moderate",
+   "rationale": "Both address solving community problems, though Ohio focuses on individual civic action for the common good while NC focuses on how state, local, and tribal governments help solve problems.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0015",
+   "subject": "social_studies",
+   "oh": "3.SS.12",
+   "state": "NC",
+   "code": "3.C&G.1.1",
+   "confidence": "moderate",
+   "rationale": "Ohio's principle that governments have authority to make and enforce laws is part of NC's broader study of the structure and function of state and local government.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0016",
+   "subject": "social_studies",
+   "oh": "3.SS.13",
+   "state": "NC",
+   "code": "3.C&G.1.1",
+   "confidence": "strong",
+   "rationale": "Both compare the structure of local governments; NC explicitly compares the structure and function of state and local government.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0017",
+   "subject": "social_studies",
+   "oh": "3.SS.13",
+   "state": "NC",
+   "code": "3.C&G.1.2",
+   "confidence": "moderate",
+   "rationale": "NC's classification of the roles and responsibilities of state and local government leaders supports Ohio's comparison of differing local government structures.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0018",
+   "subject": "social_studies",
+   "oh": "3.SS.16",
+   "state": "NC",
+   "code": "2.E.1.1",
+   "confidence": "strong",
+   "rationale": "Both are squarely about scarcity forcing economic decisions and trade-offs. NC addresses this at grade 2, one grade below Ohio's grade 3 treatment.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0019",
+   "subject": "social_studies",
+   "oh": "3.SS.16",
+   "state": "NC",
+   "code": "4.E.1.1",
+   "confidence": "strong",
+   "rationale": "Both center on how scarcity drives economic decision-making. NC revisits the concept at grade 4 in a state context, one grade above Ohio's grade 3 treatment.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0020",
+   "subject": "social_studies",
+   "oh": "3.SS.18",
+   "state": "NC",
+   "code": "3.E.1.3",
+   "confidence": "moderate",
+   "rationale": "Ohio defines a market as where buyers and sellers exchange goods and services; NC addresses the related mechanism of supply and demand in local economies.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0021",
+   "subject": "social_studies",
+   "oh": "3.SS.20",
+   "state": "NC",
+   "code": "4.E.2.1",
+   "confidence": "strong",
+   "rationale": "Both address personal financial planning: Ohio's budgeting for present and future decisions matches NC's focus on how spending and saving decisions affect everyday life. NC covers this at grade 4, one grade above Ohio's grade 3.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0022",
+   "subject": "social_studies",
+   "oh": "4.SS.2",
+   "state": "NC",
+   "code": "4.H.1.5",
+   "confidence": "moderate",
+   "rationale": "Both use primary and secondary sources in a state-history context, though Ohio emphasizes creating historical narratives while NC emphasizes comparing multiple perspectives.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0023",
+   "subject": "social_studies",
+   "oh": "4.SS.3",
+   "state": "NC",
+   "code": "4.H.1.2",
+   "confidence": "moderate",
+   "rationale": "Parallel state-history standards on diverse groups over time: Ohio traces American Indians, settlers, and immigrants in Ohio, while NC summarizes the changing roles of women, indigenous populations, and racial groups in North Carolina.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0024",
+   "subject": "social_studies",
+   "oh": "4.SS.3",
+   "state": "NC",
+   "code": "4.B.1.2",
+   "confidence": "moderate",
+   "rationale": "Both address how various indigenous, religious, and racial groups shaped their state's development, though the specific state populations and events differ.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0025",
+   "subject": "social_studies",
+   "oh": "4.SS.4",
+   "state": "NC",
+   "code": "5.H.1.4",
+   "confidence": "strong",
+   "rationale": "Ohio's study of the 13 colonies uniting to fight the American Revolution is core content of NC's standard on the impact of major conflicts on the development of the United States. NC covers this in its grade 5 US history course, one grade above Ohio's grade 4.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0026",
+   "subject": "social_studies",
+   "oh": "4.SS.4",
+   "state": "NC",
+   "code": "5.H.1.3",
+   "confidence": "strong",
+   "rationale": "The American Revolution and the founding of a new nation are central to NC's standard on how revolution, reform, and resistance shaped the United States. NC addresses this at grade 5, one grade above Ohio's grade 4.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0027",
+   "subject": "social_studies",
+   "oh": "4.SS.6",
+   "state": "NC",
+   "code": "4.H.1.4",
+   "confidence": "moderate",
+   "rationale": "Parallel state-role-in-national-conflict standards: Ohio covers frontier conflicts leading to the War of 1812, while NC summarizes North Carolina's role in major conflicts in American history; the specific state events differ.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0028",
+   "subject": "social_studies",
+   "oh": "4.SS.7",
+   "state": "NC",
+   "code": "4.H.1.3",
+   "confidence": "moderate",
+   "rationale": "Ohio's coverage of the anti-slavery movement and Underground Railroad parallels NC's standard on how revolution, reform, and resistance shaped the state, though the state-specific events differ.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0029",
+   "subject": "social_studies",
+   "oh": "4.SS.8",
+   "state": "NC",
+   "code": "4.H.1.1",
+   "confidence": "moderate",
+   "rationale": "Both connect people's achievements to change and innovation in the state, though Ohio focuses on technological innovations while NC emphasizes contributions of minorities and marginalized groups.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0030",
+   "subject": "social_studies",
+   "oh": "4.SS.9",
+   "state": "NC",
+   "code": "4.G.1.1",
+   "confidence": "moderate",
+   "rationale": "Both apply geographic tools at the state level, though Ohio focuses on map scale and directions for relative location while NC uses tools to compare the development of regions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0031",
+   "subject": "social_studies",
+   "oh": "4.SS.10",
+   "state": "NC",
+   "code": "4.E.1.2",
+   "confidence": "strong",
+   "rationale": "Both address how agriculture, industry, and natural resources drive the state's economic development; NC frames it as factors of growth and decline for its major industries.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0032",
+   "subject": "social_studies",
+   "oh": "4.SS.10",
+   "state": "NC",
+   "code": "4.E.1.3",
+   "confidence": "moderate",
+   "rationale": "NC's focus on how resource availability influences factors of production supports Ohio's link between natural resources and state economic development.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0033",
+   "subject": "social_studies",
+   "oh": "4.SS.11",
+   "state": "NC",
+   "code": "4.G.1.1",
+   "confidence": "moderate",
+   "rationale": "Both address regions developing from their physical environments and economies, though Ohio examines US regions (North, South, West) while NC examines regions within the state.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0034",
+   "subject": "social_studies",
+   "oh": "4.SS.11",
+   "state": "NC",
+   "code": "5.G.1.1",
+   "confidence": "strong",
+   "rationale": "Both explain how physical environment shaped economic and human activity across the United States. NC addresses this at grade 5, one grade above Ohio's grade 4.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0035",
+   "subject": "social_studies",
+   "oh": "4.SS.13",
+   "state": "NC",
+   "code": "4.G.1.3",
+   "confidence": "moderate",
+   "rationale": "Both address changing state population composition through the movement of people, though Ohio emphasizes growing diversity while NC emphasizes reasons for forced and voluntary migration.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0036",
+   "subject": "social_studies",
+   "oh": "4.SS.14",
+   "state": "NC",
+   "code": "4.G.1.2",
+   "confidence": "strong",
+   "rationale": "Both address how the movement of people, goods, and ideas has shaped the state's development; Ohio emphasizes location and transportation systems as the drivers.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0037",
+   "subject": "social_studies",
+   "oh": "4.SS.15",
+   "state": "NC",
+   "code": "4.C&G.1.2",
+   "confidence": "strong",
+   "rationale": "Both address how individuals and groups act in and influence state and local government; NC focuses on the influence of women, indigenous, religious, and racial groups.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0038",
+   "subject": "social_studies",
+   "oh": "4.SS.15",
+   "state": "NC",
+   "code": "4.C&G.1.3",
+   "confidence": "moderate",
+   "rationale": "Ohio's attention to citizens' rights and responsibilities pairs with NC's differentiation of rights and responsibilities in the North Carolina Constitution.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0039",
+   "subject": "social_studies",
+   "oh": "4.SS.17",
+   "state": "NC",
+   "code": "4.C&G.1.3",
+   "confidence": "moderate",
+   "rationale": "Ohio's principle that laws protect rights and assign responsibilities aligns with NC's differentiation between rights and responsibilities, though NC anchors it in the state constitution.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0040",
+   "subject": "social_studies",
+   "oh": "4.SS.18",
+   "state": "NC",
+   "code": "5.C&G.2.2",
+   "confidence": "strong",
+   "rationale": "Both are squarely about how the US Constitution protects citizens' rights, with Ohio highlighting the First Amendment. NC covers this at grade 5, one grade above Ohio's grade 4.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0041",
+   "subject": "social_studies",
+   "oh": "4.SS.19",
+   "state": "NC",
+   "code": "5.C&G.1.1",
+   "confidence": "strong",
+   "rationale": "Both address the constitutional separation of government into three branches and their respective responsibilities. NC covers this at grade 5, one grade above Ohio's grade 4.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0042",
+   "subject": "social_studies",
+   "oh": "4.SS.21",
+   "state": "NC",
+   "code": "3.E.1.1",
+   "confidence": "strong",
+   "rationale": "Both are squarely about entrepreneurship in the local/state economy: Ohio's entrepreneurs organizing resources and taking risks matches NC's focus on how entrepreneurship develops communities. NC covers this at grade 3, one grade below Ohio's grade 4.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0043",
+   "subject": "social_studies",
+   "oh": "4.SS.22",
+   "state": "NC",
+   "code": "4.E.2.1",
+   "confidence": "strong",
+   "rationale": "Both address personal financial decisions about spending and saving and their effect on individual financial well-being and everyday life.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0044",
+   "subject": "social_studies",
+   "oh": "4.SS.22",
+   "state": "NC",
+   "code": "4.E.2.2",
+   "confidence": "moderate",
+   "rationale": "NC's exemplification of positive and negative outcomes of financial decisions supports Ohio's focus on saving and reduced spending improving financial well-being.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0045",
+   "subject": "social_studies",
+   "oh": "5.SS.2",
+   "state": "NC",
+   "code": "6.H.1.2",
+   "confidence": "strong",
+   "rationale": "Ohio's Maya, Inca, Aztec, and Mississippian civilizations are core content of NC's standard on the enduring achievements of ancient civilizations in the Americas. NC covers this in its grade 6 world studies course, one grade above Ohio's grade 5.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0046",
+   "subject": "social_studies",
+   "oh": "5.SS.2",
+   "state": "NC",
+   "code": "6.B.1.1",
+   "confidence": "strong",
+   "rationale": "Both examine how religion, tradition, and cultural practice shaped early civilizations of the Americas; Ohio names the Maya, Inca, Aztec, and Mississippian. NC addresses this at grade 6, one grade above Ohio's grade 5.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0047",
+   "subject": "social_studies",
+   "oh": "5.SS.3",
+   "state": "NC",
+   "code": "5.G.1.2",
+   "confidence": "moderate",
+   "rationale": "Both address the lasting reshaping of the hemisphere/nation by colonial-era movement of people: Ohio via European exploration and colonization, NC via voluntary and forced migration and slavery changing the US landscape.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0048",
+   "subject": "social_studies",
+   "oh": "5.SS.7",
+   "state": "NC",
+   "code": "5.G.1.1",
+   "confidence": "strong",
+   "rationale": "Both address the two-way relationship between physical environment and human activity; Ohio frames it for the Western Hemisphere and NC for the United States.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0049",
+   "subject": "social_studies",
+   "oh": "5.SS.7",
+   "state": "NC",
+   "code": "6.G.1.4",
+   "confidence": "strong",
+   "rationale": "Both are squarely about societies modifying and adapting to their physical environments, including in the Americas. NC covers this at grade 6, one grade above Ohio's grade 5.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0050",
+   "subject": "social_studies",
+   "oh": "5.SS.8",
+   "state": "NC",
+   "code": "5.B.1.2",
+   "confidence": "moderate",
+   "rationale": "Both address indigenous cultures: Ohio classifies American Indian cultural groups by geographic and cultural similarities, while NC explains how indigenous values and beliefs contributed to American identity.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0051",
+   "subject": "social_studies",
+   "oh": "5.SS.9",
+   "state": "NC",
+   "code": "5.G.1.4",
+   "confidence": "strong",
+   "rationale": "Both explain the political, environmental, social, and economic causes of migration; Ohio frames it as movement within the Western Hemisphere and NC as forced and voluntary migration to, from, and within the US.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0052",
+   "subject": "social_studies",
+   "oh": "5.SS.10",
+   "state": "NC",
+   "code": "5.B.1.2",
+   "confidence": "moderate",
+   "rationale": "Both attribute cultural diversity to the influence of many groups and world cultures, though Ohio's scope is the Western Hemisphere while NC's is American identity.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0053",
+   "subject": "social_studies",
+   "oh": "5.SS.12",
+   "state": "NC",
+   "code": "6.C&G.1.1",
+   "confidence": "strong",
+   "rationale": "Both compare categories of government (democracies, dictatorships, monarchies) across societies. NC covers this at grade 6, one grade above Ohio's grade 5.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0054",
+   "subject": "social_studies",
+   "oh": "5.SS.12",
+   "state": "NC",
+   "code": "6.C&G.1.2",
+   "confidence": "strong",
+   "rationale": "Ohio's focus on the relationship between those in power and citizens matches NC's comparison of how different types of government maintain power and authority. NC covers this at grade 6, one grade above Ohio's grade 5.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0055",
+   "subject": "social_studies",
+   "oh": "5.SS.14",
+   "state": "NC",
+   "code": "5.E.1.2",
+   "confidence": "strong",
+   "rationale": "Both evaluate economic choices in terms of their consequences: Ohio's present and future consequences of individual and government choices matches NC's comparison of decisions by benefits and consequences.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0056",
+   "subject": "social_studies",
+   "oh": "5.SS.15",
+   "state": "NC",
+   "code": "5.E.1.3",
+   "confidence": "strong",
+   "rationale": "Both address how productive resources drive specialization and economic growth; NC names production, specialization, technology, and division of labor explicitly.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0057",
+   "subject": "social_studies",
+   "oh": "5.SS.15",
+   "state": "NC",
+   "code": "5.E.1.4",
+   "confidence": "moderate",
+   "rationale": "Ohio's link from specialization to trade connects to NC's summary of the role of trade between the United States and other countries.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0058",
+   "subject": "social_studies",
+   "oh": "5.SS.16",
+   "state": "NC",
+   "code": "5.E.1.3",
+   "confidence": "strong",
+   "rationale": "Both address the impact of productive resources and division of labor on productive capacity and economic growth.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0059",
+   "subject": "social_studies",
+   "oh": "5.SS.17",
+   "state": "NC",
+   "code": "5.E.1.4",
+   "confidence": "strong",
+   "rationale": "Both address interdependence through international/interregional trade driven by specialization; NC summarizes the role of trade between the US and other countries.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0060",
+   "subject": "social_studies",
+   "oh": "6.SS.2",
+   "state": "NC",
+   "code": "6.H.1.2",
+   "confidence": "strong",
+   "rationale": "Both address the enduring impact of ancient civilizations' achievements on the present; Ohio names India, Egypt, China, and Mesopotamia, all within NC's Africa/Asia scope.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0061",
+   "subject": "social_studies",
+   "oh": "6.SS.2",
+   "state": "NC",
+   "code": "6.B.1.1",
+   "confidence": "strong",
+   "rationale": "Both examine how religion and cultural practice shaped early civilizations and societies in Africa and Asia.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0062",
+   "subject": "social_studies",
+   "oh": "6.SS.2",
+   "state": "NC",
+   "code": "6.B.1.3",
+   "confidence": "strong",
+   "rationale": "Ohio's attention to the unique social structures of early civilizations matches NC's comparison of systems of social structure across civilizations over time.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0063",
+   "subject": "social_studies",
+   "oh": "6.SS.6",
+   "state": "NC",
+   "code": "6.G.1.4",
+   "confidence": "strong",
+   "rationale": "Both address how societies modify and adapt to their physical environments; Ohio frames it as the Eastern Hemisphere and NC as societies in Africa, Asia, Europe, and the Americas.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0064",
+   "subject": "social_studies",
+   "oh": "6.SS.6",
+   "state": "NC",
+   "code": "6.G.1.1",
+   "confidence": "moderate",
+   "rationale": "NC's focus on how human and physical characteristics impacted migration and settlement overlaps with Ohio's focus on physical environments influencing human activities.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0065",
+   "subject": "social_studies",
+   "oh": "6.SS.7",
+   "state": "NC",
+   "code": "6.G.1.1",
+   "confidence": "strong",
+   "rationale": "Both explain the factors that cause people to move and settle; Ohio names political, environmental, social, and economic factors while NC names human and physical characteristics of regions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0066",
+   "subject": "social_studies",
+   "oh": "6.SS.7",
+   "state": "NC",
+   "code": "6.G.1.2",
+   "confidence": "strong",
+   "rationale": "Both connect movement and settlement patterns of people, products, and ideas to the development of societies in the Eastern Hemisphere regions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0067",
+   "subject": "social_studies",
+   "oh": "6.SS.8",
+   "state": "NC",
+   "code": "6.G.1.3",
+   "confidence": "strong",
+   "rationale": "Both address the diffusion of technology, goods, and ideas across civilizations; NC frames it through innovation influencing migration and the flow of goods and ideas.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0068",
+   "subject": "social_studies",
+   "oh": "6.SS.8",
+   "state": "NC",
+   "code": "6.B.1.1",
+   "confidence": "strong",
+   "rationale": "Ohio's diffusion of cultural practices and major world religions matches NC's study of how religion, tradition, and cultural practice influenced civilizations in Africa, Asia, and Europe.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0069",
+   "subject": "social_studies",
+   "oh": "6.SS.9",
+   "state": "NC",
+   "code": "6.H.1.3",
+   "confidence": "strong",
+   "rationale": "Both have students obtain and compare multiple perspectives from primary and secondary sources, with attention to examining sources critically.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0070",
+   "subject": "social_studies",
+   "oh": "6.SS.10",
+   "state": "NC",
+   "code": "6.C&G.1.1",
+   "confidence": "strong",
+   "rationale": "Both compare categories and structures of government (monarchies, theocracies, dictatorships, democracies) across civilizations and societies.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0071",
+   "subject": "social_studies",
+   "oh": "6.SS.10",
+   "state": "NC",
+   "code": "6.C&G.1.2",
+   "confidence": "strong",
+   "rationale": "Ohio's focus on how limits on governmental authority shape citizens' liberties matches NC's comparison of how different types of government maintain power and authority.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0072",
+   "subject": "social_studies",
+   "oh": "6.SS.10",
+   "state": "NC",
+   "code": "6.C&G.1.3",
+   "confidence": "moderate",
+   "rationale": "NC's comparison of citizenship requirements across civilizations supports Ohio's attention to the varying liberties and responsibilities of citizens under different governments.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0073",
+   "subject": "social_studies",
+   "oh": "6.SS.12",
+   "state": "NC",
+   "code": "5.E.1.2",
+   "confidence": "strong",
+   "rationale": "Both evaluate economic choices in terms of benefits and consequences for individuals and societies. NC covers this at grade 5, one grade below Ohio's grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0074",
+   "subject": "social_studies",
+   "oh": "6.SS.14",
+   "state": "NC",
+   "code": "6.E.1.1",
+   "confidence": "strong",
+   "rationale": "Both connect regional specialization and trade to broader economic networks; NC frames it as trade routes and economic networks contributing to the development of civilizations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0075",
+   "subject": "social_studies",
+   "oh": "7.SS.1",
+   "state": "NC",
+   "code": "6.H.1.3",
+   "confidence": "strong",
+   "rationale": "Both center on perspective in historical analysis: Ohio describes events from the viewpoints of people living at the time, and NC compares multiple perspectives of events using primary and secondary sources. NC addresses this at grade 6, one grade below Ohio's grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0076",
+   "subject": "social_studies",
+   "oh": "7.SS.2",
+   "state": "NC",
+   "code": "6.H.1.2",
+   "confidence": "strong",
+   "rationale": "Ohio's enduring legacy of Greece and Rome (governance, law, engineering, art) is core content of NC's standard on the lasting achievements of ancient civilizations in Europe. NC covers this at grade 6, one grade below Ohio's grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0077",
+   "subject": "social_studies",
+   "oh": "7.SS.3",
+   "state": "NC",
+   "code": "6.C&G.1.6",
+   "confidence": "strong",
+   "rationale": "Both explain the reasons for the fall of empires and the governments that followed; Ohio's collapse of Rome and rise of feudalism sits squarely in NC's rise-and-fall standard. NC covers this at grade 6, one grade below Ohio's grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0078",
+   "subject": "social_studies",
+   "oh": "7.SS.3",
+   "state": "NC",
+   "code": "6.H.1.1",
+   "confidence": "strong",
+   "rationale": "Both address the rise, fall, and transformation of societies; Ohio's fall of Rome and emergence of new empires is within NC's pre-1400 European scope. NC covers this at grade 6, one grade below Ohio's grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0079",
+   "subject": "social_studies",
+   "oh": "7.SS.4",
+   "state": "NC",
+   "code": "6.H.1.1",
+   "confidence": "strong",
+   "rationale": "The Mongol conquests and their transformation of states in China, Korea, and Japan are core content of NC's standard on the rise, fall, and transformation of societies in Asia before 1400. NC covers this at grade 6, one grade below Ohio's grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0080",
+   "subject": "social_studies",
+   "oh": "7.SS.5",
+   "state": "NC",
+   "code": "6.H.1.2",
+   "confidence": "strong",
+   "rationale": "Islamic civilization's achievements in medicine, science, mathematics, and geography are core content of NC's standard on the enduring achievements of civilizations in Africa and Asia. NC covers this at grade 6, one grade below Ohio's grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0081",
+   "subject": "social_studies",
+   "oh": "7.SS.6",
+   "state": "NC",
+   "code": "7.H.1.1",
+   "confidence": "strong",
+   "rationale": "The decline of feudalism, rise of nation-states, and the Renaissance are canonical turning points at the start of NC's modern world history span (1400 forward), matching Ohio's focus on revolutionary change.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0082",
+   "subject": "social_studies",
+   "oh": "7.SS.6",
+   "state": "NC",
+   "code": "7.C&G.1.4",
+   "confidence": "moderate",
+   "rationale": "NC's summary of new ideas that changed political thought captures the political dimension of Ohio's Renaissance-era cultural, scientific, and social changes.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0083",
+   "subject": "social_studies",
+   "oh": "7.SS.7",
+   "state": "NC",
+   "code": "7.C&G.1.2",
+   "confidence": "strong",
+   "rationale": "The Reformation's challenge to the Catholic Church's political power is core content of NC's standard on conflict between religious and secular thought contributing to change in government.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0084",
+   "subject": "social_studies",
+   "oh": "7.SS.7",
+   "state": "NC",
+   "code": "7.H.1.1",
+   "confidence": "moderate",
+   "rationale": "The Reformation is a major turning point of the early modern era within NC's standard on turning points of modern world history and their lasting impact.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0085",
+   "subject": "social_studies",
+   "oh": "7.SS.8",
+   "state": "NC",
+   "code": "6.E.1.1",
+   "confidence": "strong",
+   "rationale": "Both address African and Asian empires growing as commercial centers along trade routes; NC frames it as trade routes and economic networks contributing to the development of civilizations. NC covers this at grade 6, one grade below Ohio's grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0086",
+   "subject": "social_studies",
+   "oh": "7.SS.9",
+   "state": "NC",
+   "code": "7.H.1.5",
+   "confidence": "strong",
+   "rationale": "Ohio's effects of the trans-Saharan slave trade on African and receiving societies aligns with NC's standard on how slavery has affected individuals and groups in modern world history.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0087",
+   "subject": "social_studies",
+   "oh": "7.SS.10",
+   "state": "NC",
+   "code": "7.H.1.1",
+   "confidence": "strong",
+   "rationale": "European exploration, conquest, and colonization are canonical turning points of NC's modern world history course (1400 forward), matching Ohio's First Global Age content.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0088",
+   "subject": "social_studies",
+   "oh": "7.SS.10",
+   "state": "NC",
+   "code": "7.E.1.5",
+   "confidence": "strong",
+   "rationale": "Ohio's dramatic increase in European economic influence through conquest and colonization matches NC's standard on economic systems transforming regions and indigenous ways of life.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0089",
+   "subject": "social_studies",
+   "oh": "7.SS.11",
+   "state": "NC",
+   "code": "7.H.1.1",
+   "confidence": "strong",
+   "rationale": "The Columbian exchange is a canonical turning point with lasting impact in NC's modern world history course, directly matching Ohio's standard on its society-reshaping effects.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0090",
+   "subject": "social_studies",
+   "oh": "7.SS.12",
+   "state": "NC",
+   "code": "7.G.1.3",
+   "confidence": "moderate",
+   "rationale": "Both use geographic tools and data to examine changes in human settlement and population, though Ohio focuses on tracing settlement over time and NC on demographic shifts.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0091",
+   "subject": "social_studies",
+   "oh": "7.SS.13",
+   "state": "NC",
+   "code": "7.G.1.1",
+   "confidence": "strong",
+   "rationale": "Both explain the factors that drive or impede human movement; Ohio's geographic factors promoting or impeding movement matches NC's push-pull factors of forced and voluntary migration.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0092",
+   "subject": "social_studies",
+   "oh": "7.SS.13",
+   "state": "NC",
+   "code": "6.G.1.1",
+   "confidence": "strong",
+   "rationale": "Both address how physical and human characteristics of places promote or impede migration and settlement. NC covers this at grade 6, one grade below Ohio's grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0093",
+   "subject": "social_studies",
+   "oh": "7.SS.14",
+   "state": "NC",
+   "code": "6.E.1.1",
+   "confidence": "strong",
+   "rationale": "Both address trade routes connecting Africa, Europe, and Asia as engines of development and exchange. NC covers this at grade 6, one grade below Ohio's grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0094",
+   "subject": "social_studies",
+   "oh": "7.SS.14",
+   "state": "NC",
+   "code": "6.G.1.3",
+   "confidence": "strong",
+   "rationale": "Both address the flow of goods, technology, and ideas along routes connecting the hemispheres' regions; NC frames it through innovation influencing that flow. NC covers this at grade 6, one grade below Ohio's grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0095",
+   "subject": "social_studies",
+   "oh": "7.SS.15",
+   "state": "NC",
+   "code": "6.G.1.3",
+   "confidence": "strong",
+   "rationale": "Both address how improvements in transportation and technology facilitated the movement of people, goods, and ideas across civilizations. NC covers this at grade 6, one grade below Ohio's grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0096",
+   "subject": "social_studies",
+   "oh": "7.SS.17",
+   "state": "NC",
+   "code": "6.C&G.1.1",
+   "confidence": "strong",
+   "rationale": "Ohio's contrast of Greek democracy and the Roman Republic with monarchy and theocracy is a direct case of NC's comparison of governmental structures across ancient civilizations. NC covers this at grade 6, one grade below Ohio's grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0097",
+   "subject": "social_studies",
+   "oh": "7.SS.17",
+   "state": "NC",
+   "code": "6.H.1.2",
+   "confidence": "strong",
+   "rationale": "The influence of Greek and Roman government on modern democracies is an enduring achievement of ancient civilizations, NC's core framing. NC covers this at grade 6, one grade below Ohio's grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0098",
+   "subject": "social_studies",
+   "oh": "7.SS.18",
+   "state": "NC",
+   "code": "7.C&G.1.1",
+   "confidence": "moderate",
+   "rationale": "Ohio's consolidation of power into nation-states after feudalism relates to NC's analysis of how the power and authority of governments created conflict leading to change.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0099",
+   "subject": "social_studies",
+   "oh": "7.SS.20",
+   "state": "NC",
+   "code": "7.E.1.2",
+   "confidence": "moderate",
+   "rationale": "Both address economic interdependence among regions, though Ohio derives it from the distribution of productive resources while NC focuses on national and international economic decisions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0100",
+   "subject": "social_studies",
+   "oh": "7.SS.20",
+   "state": "NC",
+   "code": "7.E.1.4",
+   "confidence": "moderate",
+   "rationale": "Both connect the distribution of and competition for resources to economic relationships and trade among regions and nations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0101",
+   "subject": "social_studies",
+   "oh": "7.SS.21",
+   "state": "NC",
+   "code": "6.E.1.1",
+   "confidence": "strong",
+   "rationale": "Both address markets and economic networks growing with cities and empires and fostering specialization and exchange. NC covers this at grade 6, one grade below Ohio's grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0102",
+   "subject": "social_studies",
+   "oh": "8.SS.2",
+   "state": "NC",
+   "code": "8.G.1.4",
+   "confidence": "strong",
+   "rationale": "European colonists migrating to North America for economic and religious reasons is core content of NC's standard on the reasons for and effects of voluntary and forced migration on the nation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0103",
+   "subject": "social_studies",
+   "oh": "8.SS.3",
+   "state": "NC",
+   "code": "8.H.1.1",
+   "confidence": "strong",
+   "rationale": "Colonial-era conflicts among colonizing powers over territory and resources sit squarely in NC's standard on the causes and effects of conflict in the nation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0104",
+   "subject": "social_studies",
+   "oh": "8.SS.4",
+   "state": "NC",
+   "code": "8.H.1.3",
+   "confidence": "strong",
+   "rationale": "Both directly address race-based slavery as a system used to exploit Africans and its role in colonial economic development.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0105",
+   "subject": "social_studies",
+   "oh": "8.SS.4",
+   "state": "NC",
+   "code": "8.G.1.4",
+   "confidence": "strong",
+   "rationale": "The forced migration of Africans to the American colonies is core content of NC's standard on the reasons for and effects of forced migration on various groups.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0106",
+   "subject": "social_studies",
+   "oh": "8.SS.4",
+   "state": "NC",
+   "code": "8.H.2.3",
+   "confidence": "moderate",
+   "rationale": "Ohio's recognition that enslaved Africans' knowledge, skills, and traditions were essential to colonial development pairs with NC's standard on marginalized groups' contributions to the nation's development.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0107",
+   "subject": "social_studies",
+   "oh": "8.SS.5",
+   "state": "NC",
+   "code": "8.C&G.1.1",
+   "confidence": "strong",
+   "rationale": "Both address Enlightenment-derived democratic ideals expressed in founding documents; Ohio centers the Declaration of Independence, which NC's standard covers directly.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0108",
+   "subject": "social_studies",
+   "oh": "8.SS.5",
+   "state": "NC",
+   "code": "8.H.1.1",
+   "confidence": "strong",
+   "rationale": "The causes of the American Revolution — Enlightenment ideas and dissatisfaction with colonial rule — sit squarely in NC's standard on the causes and effects of conflict in the nation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0109",
+   "subject": "social_studies",
+   "oh": "8.SS.5",
+   "state": "NC",
+   "code": "7.C&G.1.4",
+   "confidence": "strong",
+   "rationale": "The Enlightenment ideas behind the Declaration of Independence are core content of NC's standard on new ideas that changed political thought. NC covers this in its grade 7 world studies course, one grade below Ohio's grade 8.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0110",
+   "subject": "social_studies",
+   "oh": "8.SS.6",
+   "state": "NC",
+   "code": "8.H.1.1",
+   "confidence": "strong",
+   "rationale": "The course and outcome of the American Revolution is core content of NC's standard on the causes and effects of conflict in the nation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0111",
+   "subject": "social_studies",
+   "oh": "8.SS.6",
+   "state": "NC",
+   "code": "8.H.2.2",
+   "confidence": "moderate",
+   "rationale": "Ohio's significant figures influencing the Revolution pairs with NC's standard on the influence of individuals and groups during times of change.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0112",
+   "subject": "social_studies",
+   "oh": "8.SS.7",
+   "state": "NC",
+   "code": "8.H.1.1",
+   "confidence": "strong",
+   "rationale": "The outcome of the American Revolution — independence and new political, social, and economic relationships — is a direct case of NC's standard on the effects of conflict in the nation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0113",
+   "subject": "social_studies",
+   "oh": "8.SS.8",
+   "state": "NC",
+   "code": "8.C&G.1.1",
+   "confidence": "strong",
+   "rationale": "The debate over adopting the US Constitution is core content of NC's standard on democratic ideals outlined in the nation's founding documents.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0114",
+   "subject": "social_studies",
+   "oh": "8.SS.8",
+   "state": "NC",
+   "code": "8.H.1.2",
+   "confidence": "strong",
+   "rationale": "The constitutional debates and compromises resolving the Articles of Confederation's problems sit squarely in NC's standard on debate, negotiation, compromise, and cooperation in the nation's history.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0115",
+   "subject": "social_studies",
+   "oh": "8.SS.10",
+   "state": "NC",
+   "code": "8.G.1.5",
+   "confidence": "strong",
+   "rationale": "US territorial acquisition through treaties and purchases is core content of NC's standard on how geographic expansion impacted the development of the nation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0116",
+   "subject": "social_studies",
+   "oh": "8.SS.11",
+   "state": "NC",
+   "code": "8.G.1.5",
+   "confidence": "strong",
+   "rationale": "Westward expansion's contribution to economic and industrial development is a direct case of NC's standard on geographic expansion impacting the nation's development.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0117",
+   "subject": "social_studies",
+   "oh": "8.SS.11",
+   "state": "NC",
+   "code": "8.G.1.4",
+   "confidence": "strong",
+   "rationale": "The displacement of American Indians during westward expansion is core content of NC's standard on the reasons for and effects of forced migration on various groups.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0118",
+   "subject": "social_studies",
+   "oh": "8.SS.12",
+   "state": "NC",
+   "code": "8.H.1.1",
+   "confidence": "strong",
+   "rationale": "The sectional and federalism disputes leading to the Civil War sit squarely in NC's standard on the causes and effects of conflict in the nation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0119",
+   "subject": "social_studies",
+   "oh": "8.SS.12",
+   "state": "NC",
+   "code": "8.H.1.3",
+   "confidence": "moderate",
+   "rationale": "Slavery as the central sectional issue leading to the Civil War connects to NC's standard on how slavery was used to suppress and exploit groups over time.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0120",
+   "subject": "social_studies",
+   "oh": "8.SS.13",
+   "state": "NC",
+   "code": "8.H.1.1",
+   "confidence": "strong",
+   "rationale": "The course and outcome of the Civil War is core content of NC's standard on the causes and effects of conflict in the nation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0121",
+   "subject": "social_studies",
+   "oh": "8.SS.14",
+   "state": "NC",
+   "code": "8.C&G.2.1",
+   "confidence": "strong",
+   "rationale": "Reconstruction's constitutional amendments and affirmation of federal authority are core reforms within NC's standard on strategies and societal reforms used to address discrimination and oppression.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0122",
+   "subject": "social_studies",
+   "oh": "8.SS.14",
+   "state": "NC",
+   "code": "8.C&G.2.2",
+   "confidence": "moderate",
+   "rationale": "Ohio's attention to Reconstruction's lingering social and political differences pairs with NC's assessment of the effectiveness of reforms on individuals, policies, and institutions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0123",
+   "subject": "social_studies",
+   "oh": "8.SS.15",
+   "state": "NC",
+   "code": "8.G.1.2",
+   "confidence": "moderate",
+   "rationale": "Both address how geography shaped historical development of the nation, though Ohio emphasizes the map-analysis skill while NC emphasizes the influence of location and resources.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0124",
+   "subject": "social_studies",
+   "oh": "8.SS.16",
+   "state": "NC",
+   "code": "8.G.1.2",
+   "confidence": "strong",
+   "rationale": "Both address how the availability of natural resources and location influenced the geographic and economic development of the nation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0125",
+   "subject": "social_studies",
+   "oh": "8.SS.17",
+   "state": "NC",
+   "code": "8.G.1.3",
+   "confidence": "strong",
+   "rationale": "Both address how the movement of people, goods, and ideas shaped settlement patterns and the political and economic development of the nation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0126",
+   "subject": "social_studies",
+   "oh": "8.SS.18",
+   "state": "NC",
+   "code": "8.H.1.3",
+   "confidence": "strong",
+   "rationale": "Both address how prejudice and discriminatory practices were used against minority groups with social, political, and economic consequences.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0127",
+   "subject": "social_studies",
+   "oh": "8.SS.18",
+   "state": "NC",
+   "code": "8.H.1.4",
+   "confidence": "strong",
+   "rationale": "NC's standard on recovery, resistance, and resilience to discrimination, prejudice, and bias directly addresses the consequences of the cultural biases Ohio examines.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0128",
+   "subject": "social_studies",
+   "oh": "8.SS.19",
+   "state": "NC",
+   "code": "8.B.1.1",
+   "confidence": "strong",
+   "rationale": "Both address how relationships among diverse regional, social, ethnic, and racial groups shaped an emerging national identity and the nation's development.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0129",
+   "subject": "social_studies",
+   "oh": "8.SS.19",
+   "state": "NC",
+   "code": "8.B.1.2",
+   "confidence": "moderate",
+   "rationale": "NC's focus on cultural values and interactions of various groups influencing the nation's development supports Ohio's standard on a national identity forming among diverse populations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0130",
+   "subject": "social_studies",
+   "oh": "8.SS.22",
+   "state": "NC",
+   "code": "8.C&G.1.1",
+   "confidence": "strong",
+   "rationale": "The Constitution's federal republic with separation of powers and checks and balances is core content of NC's standard on democratic ideals outlined in the nation's founding documents.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0131",
+   "subject": "social_studies",
+   "oh": "8.SS.23",
+   "state": "NC",
+   "code": "8.C&G.1.1",
+   "confidence": "moderate",
+   "rationale": "Ohio's principle of the Constitution protecting rights through limited government falls within NC's broader standard on democratic ideals in the founding documents.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0132",
+   "subject": "social_studies",
+   "oh": "8.SS.24",
+   "state": "NC",
+   "code": "8.E.1.4",
+   "confidence": "moderate",
+   "rationale": "Both address the consequences of economic decision-making, though Ohio spans individuals, businesses, and governments while NC focuses on personal financial decisions influencing the economy.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0133",
+   "subject": "social_studies",
+   "oh": "8.SS.25",
+   "state": "NC",
+   "code": "8.H.2.1",
+   "confidence": "strong",
+   "rationale": "The Industrial Revolution's technological transformation of production is core content of NC's standard on how innovation and technology contributed to change in the nation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-nc-0134",
+   "subject": "social_studies",
+   "oh": "8.SS.25",
+   "state": "NC",
+   "code": "8.E.1.2",
+   "confidence": "strong",
+   "rationale": "Both address industrialization's impact on the economy; NC frames it as how industry and trade impact the economy and people of the nation.",
+   "source": "ai_draft"
   }
  ]
 }
