@@ -16,12 +16,12 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608032237';   // replaced with the deploy stamp
+const APP_BUILD = '202608142135';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
-const STATES = ['OH', 'GA', 'TX', 'FL'];
-const STATE_NAMES = { OH: 'Ohio', GA: 'Georgia', TX: 'Texas', FL: 'Florida', ALL: 'All States' };
+const STATES = ['OH', 'GA', 'TX', 'FL', 'NC'];
+const STATE_NAMES = { OH: 'Ohio', GA: 'Georgia', TX: 'Texas', FL: 'Florida', NC: 'North Carolina', ALL: 'All States' };
 const SUBJECT_NAMES = { social_studies: 'Social Studies', science: 'Science', ela: 'ELAR' };
 function otherStates(st) { return STATES.filter(s => s !== st); }
 
@@ -686,10 +686,14 @@ function expandElements(list) {
     if (s.elements && s.elements.length) {
       s.elements.forEach(e2 => {
         const m = e2.match(/^([A-Za-z])\.\s*([\s\S]*)$/);
+        // North Carolina prints each objective's FULL code inline ("PS.2.1.1 Carry out…") —
+        // adopt it as the element code so numbered objectives don't collapse onto the parent.
+        const f = !m && e2.match(/^(\S+)\s+([\s\S]*)$/);
+        const full = f && f[1].startsWith(s.code + '.') ? f : null;
         out.push({
           ...s,
-          code: s.code + (m ? m[1] : ''),
-          description: m ? m[2] : e2,
+          code: m ? s.code + m[1] : full ? full[1] : s.code,
+          description: m ? m[2] : full ? full[2] : e2,
           stem: s.description,
           parent: s.code,
           elements: undefined,
@@ -708,6 +712,7 @@ const DATA_FILES = [
   'data/georgia_science.json', 'data/georgia_social_studies.json', 'data/georgia_ela.json',
   'data/texas_science.json', 'data/texas_social_studies.json', 'data/texas_ela.json',
   'data/florida_science.json', 'data/florida_social_studies.json', 'data/florida_ela.json',
+  'data/north_carolina_science.json', 'data/north_carolina_social_studies.json', 'data/north_carolina_ela.json',
   'data/universal_ela.json', // state:"ALL" — domains that apply everywhere, shown for every state
 ];
 
