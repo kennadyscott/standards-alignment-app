@@ -1,0 +1,974 @@
+[
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "2",
+    "code": "2-PS1-1",
+    "strand": "Physical Science",
+    "topic": "Matter and Its Interactions (PS1)",
+    "description": "Plan and conduct an investigation to describe and classify different kinds of materials by their observable properties."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "2",
+    "code": "2-PS1-2",
+    "strand": "Physical Science",
+    "topic": "Matter and its Interactions (PS1)",
+    "description": "Analyze data obtained from tests to determine which materials have the best properties for an intended purpose."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "2",
+    "code": "2-PS1-3",
+    "strand": "Physical Science",
+    "topic": "Matter and its Interactions (PS1)",
+    "description": "Make observations to construct an evidence-based account of how an object made of a small set of pieces can be disassembled and made into a new object."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "2",
+    "code": "2-PS1-4",
+    "strand": "Physical Science",
+    "topic": "Matter and its Interactions (PS1)",
+    "description": "Construct an argument with evidence that some changes caused by heating or cooling can be reversed and some cannot."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "2",
+    "code": "2-LS2-1",
+    "strand": "Life Science",
+    "topic": "Ecosystems: Interactions, Energy, and Dynamics (LS2)",
+    "description": "Plan and conduct an investigation to determine what plants need to grow."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "2",
+    "code": "2-LS2-2",
+    "strand": "Life Science",
+    "topic": "Ecosystems: Interactions, Energy, and Dynamics (LS2)",
+    "description": "Develop a simple model that mimics the function of an animal in dispersing seeds or pollinating plants."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "2",
+    "code": "2-LS4-1",
+    "strand": "Life Science",
+    "topic": "Biological Evolution: Unity and Diversity (LS4)",
+    "description": "Make observations of plants and animals to compare patterns of diversity within different habitats."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "2",
+    "code": "2-ESS1-1",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Place in the Universe (ESS1)",
+    "description": "Use information from several sources to provide evidence that Earth events can occur rapidly or slowly."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "2",
+    "code": "2-ESS2-1",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Systems (ESS2)",
+    "description": "Compare multiple solutions designed to slow or prevent wind or water from changing the shape of the land."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "2",
+    "code": "2-ESS2-2",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Systems (ESS2)",
+    "description": "Develop a model to represent the shapes and kinds of land and bodies of water in an area."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "2",
+    "code": "2-ESS2-3",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Systems (ESS2)",
+    "description": "Obtain information to identify where water is found on Earth and that it can be solid or liquid."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "2",
+    "code": "2-ESS3-1",
+    "strand": "Earth and Space Science",
+    "topic": "Earth and Human Activity (ESS3)",
+    "description": "Design solutions to address human impacts on natural resources in the local environment."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "3",
+    "code": "3-PS2-1",
+    "strand": "Physical Science",
+    "topic": "Motion and Stability: Forces and interactions (PS2)",
+    "description": "Plan and conduct an investigation to provide evidence of the effects of balanced and unbalanced forces on the motion of an object."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "3",
+    "code": "3-PS2-2",
+    "strand": "Physical Science",
+    "topic": "Motion and Stability: Forces and interactions (PS2)",
+    "description": "Make observations and measurements of an object’s motion to provide evidence that a pattern can be used to predict future motion."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "3",
+    "code": "3-PS2-3",
+    "strand": "Physical Science",
+    "topic": "Motion and Stability: Forces and interactions (PS2)",
+    "description": "Ask questions to determine cause-and-effect relationships of electric interactions and magnetic interactions between two objects not in contact with each other."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "3",
+    "code": "3-PS2-4",
+    "strand": "Physical Science",
+    "topic": "Motion and Stability: Forces and interactions (PS2)",
+    "description": "Develop possible solutions to a simple design problem by applying scientific ideas about magnets."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "3",
+    "code": "3-LS1-1",
+    "strand": "Life Science",
+    "topic": "From Molecules to Organisms: Structures and Processes (LS1)",
+    "description": "Develop and use models to describe how organisms change in predictable patterns during their unique and diverse life cycles."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "3",
+    "code": "3-LS2-1",
+    "strand": "Life Science",
+    "topic": "Ecosystems: Interactions, Energy, and Dynamics (LS2)",
+    "description": "Construct an argument that some animals form groups that help members survive."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "3",
+    "code": "3-LS3-1",
+    "strand": "Life Science",
+    "topic": "Heredity: Inheritance and Variation of Traits (LS3)",
+    "description": "Analyze and interpret data to provide evidence that plants and animals have inherited traits that vary within a group of similar organisms."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "3",
+    "code": "3-LS3-2",
+    "strand": "Life Science",
+    "topic": "Heredity: Inheritance and Variation of Traits (LS3)",
+    "description": "Use evidence to support the explanation that traits can be influenced by the environment."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "3",
+    "code": "3-LS4-1",
+    "strand": "Life Science",
+    "topic": "Biological Evolution: Unity and Diversity (LS4)",
+    "description": "Analyze and interpret data from fossils to provide evidence of organisms and the environments in which they lived long ago."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "3",
+    "code": "3-LS4-2",
+    "strand": "Life Science",
+    "topic": "Biological Evolution: Unity and Diversity (LS4)",
+    "description": "Use evidence to construct an explanation for how the variations in traits among individuals of the same species may provide advantages in surviving and producing offspring."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "3",
+    "code": "3-LS4-3",
+    "strand": "Life Science",
+    "topic": "Biological Evolution: Unity and Diversity (LS4)",
+    "description": "Construct an argument with evidence that in a particular habitat some organisms can thrive, struggle to survive, or fail to survive."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "3",
+    "code": "3-LS4-4",
+    "strand": "Life Science",
+    "topic": "Biological Evolution: Unity and Diversity (LS4)",
+    "description": "Make a claim about the effectiveness of a solution to a problem caused when the environment changes and affects organisms living there."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "3",
+    "code": "3-ESS2-1",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Systems (ESS2)",
+    "description": "Represent data in tables and graphical displays of typical weather conditions during a particular season to identify patterns and make predictions."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "3",
+    "code": "3-ESS2-2",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Systems (ESS2)",
+    "description": "Obtain and combine information to describe climate patterns in different regions of the world."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "3",
+    "code": "3-ESS3-1",
+    "strand": "Earth and Space Science",
+    "topic": "Earth and Human Activity (ESS3)",
+    "description": "Make a claim about the effectiveness of a design solution that reduces the impacts of a weather related hazard."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "4",
+    "code": "4-PS3-1",
+    "strand": "Physical Science",
+    "topic": "Energy (PS3)",
+    "description": "Use evidence to construct an explanation relating the speed of an object to the energy of that object."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "4",
+    "code": "4-PS3-2",
+    "strand": "Physical Science",
+    "topic": "Energy (PS3)",
+    "description": "Make observations to provide evidence that energy can be transferred from place to place by sound, light, heat, and electric currents."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "4",
+    "code": "4-PS3-3",
+    "strand": "Physical Science",
+    "topic": "Energy (PS3)",
+    "description": "Ask questions and predict outcomes about the changes in energy that occur when objects collide."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "4",
+    "code": "4-PS3-4",
+    "strand": "Physical Science",
+    "topic": "Energy (PS3)",
+    "description": "Apply scientific ideas to design, test, and refine a device that converts energy from one form to another."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "4",
+    "code": "4-PS4-1",
+    "strand": "Physical Science",
+    "topic": "Waves and their Applications in Technologies for Information Transfer (PS4)",
+    "description": "Develop a model of waves to describe patterns in terms of amplitude and wavelength and that waves can cause objects to move."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "4",
+    "code": "4-PS4-2",
+    "strand": "Physical Science",
+    "topic": "Waves and their Applications in Technologies for Information Transfer (PS4)",
+    "description": "Develop a model to describe that light reflecting from objects and entering the eye allows objects to be seen."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "4",
+    "code": "4-PS4-3",
+    "strand": "Physical Science",
+    "topic": "Waves and their Applications in Technologies for Information Transfer (PS4)",
+    "description": "Generate and compare multiple solutions that use patterns to transmit information."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "4",
+    "code": "4-LS1-1",
+    "strand": "Life Science",
+    "topic": "From Molecules to Organisms: Structures and Processes (LS1)",
+    "description": "Construct an argument that plants and animals have internal and external structures that function together in a system to support survival, growth, behavior, and reproduction."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "4",
+    "code": "4-LS1-2",
+    "strand": "Life Science",
+    "topic": "From Molecules to Organisms: Structures and Processes (LS1)",
+    "description": "Use a model to describe that animals receive different types of information through their senses, process the information in their brain, and respond to the information in different ways."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "4",
+    "code": "4-ESS1-1",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Place in the Universe (ESS1)",
+    "description": "Identify evidence from patterns in rock formations and fossils in rock layers to support an explanation for changes in a landscape over time."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "4",
+    "code": "4-ESS2-1",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Systems (ESS2)",
+    "description": "Make observations and/or measurements to provide evidence of the effects of weathering or the rate of erosion by water, ice, wind, or vegetation."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "4",
+    "code": "4-ESS2-2",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Systems (ESS2)",
+    "description": "Analyze and interpret data from maps to describe patterns of Earth’s features."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "4",
+    "code": "4-ESS3-1",
+    "strand": "Earth and Space Science",
+    "topic": "Earth and Human Activity (ESS3)",
+    "description": "Obtain and combine information to describe that energy and fuels are derived from natural resources and how their uses affect the environment."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "4",
+    "code": "4-ESS3-2",
+    "strand": "Earth and Space Science",
+    "topic": "Earth and Human Activity (ESS3)",
+    "description": "Generate and compare multiple solutions to reduce the impacts of natural Earth processes on humans."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "5",
+    "code": "5-PS1-1",
+    "strand": "Physical Science",
+    "topic": "Matter and Its Interactions (PS1)",
+    "description": "Develop a model to describe that matter is made of particles too small to be seen."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "5",
+    "code": "5-PS1-2",
+    "strand": "Physical Science",
+    "topic": "Matter and Its Interactions (PS1)",
+    "description": "Measure and graph quantities to provide evidence that regardless of the type of change that occurs when heating, cooling, or mixing substances, the total weight of matter is conserved."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "5",
+    "code": "5-PS1-3",
+    "strand": "Physical Science",
+    "topic": "Matter and Its Interactions (PS1)",
+    "description": "Make observations and measurements to identify materials based on their properties."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "5",
+    "code": "5-PS1-4",
+    "strand": "Physical Science",
+    "topic": "Matter and Its Interactions (PS1)",
+    "description": "Conduct an investigation to determine whether the mixing of two or more substances results in new substances."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "5",
+    "code": "5-PS2-1",
+    "strand": "Physical Science",
+    "topic": "Motion and Stability: Forces and Interactions (PS2)",
+    "description": "Support an argument that the gravitational force exerted by Earth on objects is directed down."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "5",
+    "code": "5-PS3-1",
+    "strand": "Physical Science",
+    "topic": "Energy (PS3)",
+    "description": "Use models to describe that energy in animals’ food (used for body repair, growth, motion, and to maintain body warmth) was once energy from the sun."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "5",
+    "code": "5-LS1-1",
+    "strand": "Life Science",
+    "topic": "From Molecules to Organisms: Structures and Processes (LS1)",
+    "description": "Support an argument with evidence that plants obtain materials they need for growth mainly from air and water."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "5",
+    "code": "5-LS2-1",
+    "strand": "Life Science",
+    "topic": "Ecosystems: Interactions, Energy, and Dynamics (LS2)",
+    "description": "Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "5",
+    "code": "5-ESS1-1",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Place in the Universe (ESS1)",
+    "description": "Support an argument with evidence that the apparent brightness of the sun compared to other stars is due to their relative distances from Earth."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "5",
+    "code": "5-ESS1-2",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Place in the Universe (ESS1)",
+    "description": "Represent data in graphical displays to reveal patterns of daily changes in length and direction of shadows, day and night, and the seasonal appearance of some stars in the night sky."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "5",
+    "code": "5-ESS2-1",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Systems (ESS2)",
+    "description": "Develop a model using an example to describe ways the geosphere, biosphere, hydrosphere, and/or atmosphere interact."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "5",
+    "code": "5-ESS2-2",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Systems (ESS2)",
+    "description": "Describe and graph the amounts of saltwater and fresh water in various reservoirs to provide evidence about the distribution of water on Earth."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "5",
+    "code": "5-ESS3-1",
+    "strand": "Earth and Space Science",
+    "topic": "Earth and Human Activity (ESS3)",
+    "description": "Evaluate potential solutions to problems that individual communities face in protecting the Earth’s resources and environment."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "6",
+    "code": "6-PS1-4",
+    "strand": "Physical Science",
+    "topic": "Matter and Its Interactions (PS1)",
+    "description": "Develop and use a model that predicts and describes changes in particle motion, temperature, and state of a pure substance when thermal energy is added or removed."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "6",
+    "code": "6-PS3-3",
+    "strand": "Physical Science",
+    "topic": "Energy (PS3)",
+    "description": "Apply scientific principles to design, construct, and test a device that either minimizes or maximizes thermal energy transfer."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "6",
+    "code": "6-PS3-4",
+    "strand": "Physical Science",
+    "topic": "Energy (PS3)",
+    "description": "Plan an investigation to determine the relationships among the energy transferred, the type of matter, the mass, and the change in the average kinetic energy of the particles as measured by the temperature of the sample."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "6",
+    "code": "6-PS4-2",
+    "strand": "Physical Science",
+    "topic": "Waves and Their Applications in Technologies for Information Transfer (PS4)",
+    "description": "Develop and use a model to describe that waves are reflected, absorbed, or transmitted through various materials."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "6",
+    "code": "6-LS1-1",
+    "strand": "Life Science",
+    "topic": "From Molecules to Organisms: Structures and Processes (LS1)",
+    "description": "Conduct an investigation to provide evidence that living things are made of cells; either one cell or many different numbers and types of cells."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "6",
+    "code": "6-LS1-2",
+    "strand": "Life Science",
+    "topic": "From Molecules to Organisms: Structures and Processes (LS1)",
+    "description": "Develop and use a model to describe the function of a cell as a whole and ways the parts of cells contribute to the function."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "6",
+    "code": "6-LS1-3",
+    "strand": "Life Science",
+    "topic": "From Molecules to Organisms: Structures and Processes (LS1)",
+    "description": "Use argument supported by evidence for how the body is a system of interacting subsystems composed of groups of cells."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "6",
+    "code": "6-LS1-8",
+    "strand": "Life Science",
+    "topic": "From Molecules to Organisms: Structures and Processes (LS1)",
+    "description": "Gather and synthesize information that sensory receptors respond to stimuli by sending messages to the brain for immediate behavior or storage as memories."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "6",
+    "code": "6-ESS1-4",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Place in the Universe (ESS1)",
+    "description": "Construct a scientific explanation based on evidence from rock strata for how the geologic time scale is used to organize Earth’s 4.6-billion-year-old history."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "6",
+    "code": "6-ESS2-1",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Systems (ESS2)",
+    "description": "Develop a model to describe the cycling of Earth’s materials and the flow of energy that drives this process."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "6",
+    "code": "6-ESS2-2",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Systems (ESS2)",
+    "description": "Construct an explanation based on evidence for how geoscience processes have changed Earth’s surface at varying time and spatial scales."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "6",
+    "code": "6-ESS2-3",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Systems (ESS2)",
+    "description": "Analyze and interpret data on the distribution of fossils and rocks, continental shapes, and seafloor structures to provide evidence of the past plate motions."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "6",
+    "code": "6-ESS2-4",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Systems (ESS2)",
+    "description": "Develop a model to describe the cycling of water through Earth’s systems driven by energy from the sun and the force of gravity."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "6",
+    "code": "6-ESS2-5",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Systems (ESS2)",
+    "description": "Analyze and interpret data to provide evidence for how the motions and complex interactions of air masses result in changes in weather conditions."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "6",
+    "code": "6-ESS2-6",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Systems (ESS2)",
+    "description": "Develop and use models to describe how unequal heating and rotation of the Earth cause patterns of atmospheric and oceanic circulation that determine regional climates."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "6",
+    "code": "6-ESS3-2",
+    "strand": "Earth and Space Science",
+    "topic": "Earth and Human Activity (ESS3)",
+    "description": "Analyze and interpret data on natural hazards to identify patterns, which help forecast future catastrophic events and inform the development of technologies to mitigate their effects."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-PS1-1",
+    "strand": "Physical Science",
+    "topic": "Matter and Its Interactions (PS1)",
+    "description": "Develop models to describe the atomic composition of simple molecules and extended structures."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-PS1-2",
+    "strand": "Physical Science",
+    "topic": "Matter and Its Interactions (PS1)",
+    "description": "Analyze and interpret data on the properties of substances before and after the substances interact to determine if a chemical reaction has occurred."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-PS1-3",
+    "strand": "Physical Science",
+    "topic": "Matter and Its Interactions (PS1)",
+    "description": "Gather and make sense of information to describe that synthetic materials come from natural resources and impact society."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-PS1-5",
+    "strand": "Physical Science",
+    "topic": "Matter and Its Interactions (PS1)",
+    "description": "Develop and use a model to describe how the total number of atoms does not change in a chemical reaction and thus mass is conserved."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-PS1-6",
+    "strand": "Physical Science",
+    "topic": "Matter and Its Interactions (PS1)",
+    "description": "Undertake a design project to construct, test, and modify a device that either releases or absorbs thermal energy by chemical processes."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-PS3-1",
+    "strand": "Physical Science",
+    "topic": "Energy (PS3)",
+    "description": "Construct and interpret graphical displays of data to describe the proportional relationships of kinetic energy to the mass of an object and to the speed of an object."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-PS3-2",
+    "strand": "Physical Science",
+    "topic": "Energy (PS3)",
+    "description": "Develop a model to describe that when the arrangement of objects interacting at a distance changes, different amounts of potential energy are stored in the system."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-PS3-5",
+    "strand": "Physical Science",
+    "topic": "Energy (PS3)",
+    "description": "Construct, use, and present arguments to support the claim that when the kinetic energy of an object changes, energy is transferred to or from the object."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-LS1-6",
+    "strand": "Life Science",
+    "topic": "From Molecules to Organisms: Structures and Processes (LS1)",
+    "description": "Construct a scientific explanation based on evidence for the role of photosynthesis in the cycling of matter and flow of energy into and out of organisms."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-LS1-7",
+    "strand": "Life Science",
+    "topic": "From Molecules to Organisms: Structures and Processes (LS1)",
+    "description": "Develop a model to describe how food molecules in plants and animals are rearranged through chemical reactions forming new molecules that support growth and/or release energy as this matter moves through an organism."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-LS2-1",
+    "strand": "Life Science",
+    "topic": "Ecosystems: Interactions, Energy, and Dynamics (LS2)",
+    "description": "Analyze and interpret data to provide evidence for the effects of resource availability on organisms and populations of organisms in an ecosystem."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-LS2-2",
+    "strand": "Life Science",
+    "topic": "Ecosystems: Interactions, Energy, and Dynamics (LS2)",
+    "description": "Construct an explanation that predicts patterns of interactions among organisms across multiple ecosystems."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-LS2-3",
+    "strand": "Life Science",
+    "topic": "Ecosystems: Interactions, Energy, and Dynamics (LS2)",
+    "description": "Develop a model to describe the cycling of matter and flow of energy among living and nonliving parts of an ecosystem."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-LS2-4",
+    "strand": "Life Science",
+    "topic": "Ecosystems: Interactions, Energy, and Dynamics (LS2)",
+    "description": "Construct an argument supported by empirical evidence that changes to physical or biological components of an ecosystem affect populations."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-LS2-5",
+    "strand": "Life Science",
+    "topic": "Ecosystems: Interactions, Energy, and Dynamics (LS2)",
+    "description": "Evaluate competing design solutions for maintaining biodiversity and ecosystem services."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-ESS3-1",
+    "strand": "Earth and Space Science",
+    "topic": "Earth and Human Activity (ESS3)",
+    "description": "Construct a scientific explanation based on evidence for how the uneven distributions of Earth’s mineral, energy, and groundwater resources are the result of past and current geoscience processes."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-ESS3-3",
+    "strand": "Earth and Space Science",
+    "topic": "Earth and Human Activity (ESS3)",
+    "description": "Apply scientific principles to design a method for monitoring and minimizing a human impact on the environment."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-ESS3-4",
+    "strand": "Earth and Space Science",
+    "topic": "Earth and Human Activity (ESS3)",
+    "description": "Construct an argument supported by evidence for how increases in human population and per-capita consumption of natural resources impact Earth’s systems."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "7",
+    "code": "7-ESS3-5",
+    "strand": "Earth and Space Science",
+    "topic": "Earth and Human Activity (ESS3)",
+    "description": "Ask questions to clarify evidence of the factors that have impacted global temperatures over the past century."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-PS2-1",
+    "strand": "Physical Science",
+    "topic": "Motion and Stability: Forces and Interactions (PS2)",
+    "description": "Apply Newton’s third law to design a solution to a problem involving the motion of two colliding objects."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-PS2-2",
+    "strand": "Physical Science",
+    "topic": "Motion and Stability: Forces and Interactions (PS2)",
+    "description": "Plan an investigation to provide evidence that the change in an object’s motion depends on the sum of the forces on the object and the mass of the object."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-PS2-3",
+    "strand": "Physical Science",
+    "topic": "Motion and Stability: Forces and Interactions (PS2)",
+    "description": "Analyze and interpret data to determine the factors that affect the strength of electric and magnetic forces."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-PS2-4",
+    "strand": "Physical Science",
+    "topic": "Motion and Stability: Forces and Interactions (PS2)",
+    "description": "Construct and present arguments using evidence to support the claim that gravitational interactions are attractive and depend on the masses of interacting objects and the distance between them."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-PS2-5",
+    "strand": "Physical Science",
+    "topic": "Motion and Stability: Forces and Interactions (PS2)",
+    "description": "Conduct an investigation and evaluate the experimental design to provide evidence that fields exist between objects exerting forces on each other even though the objects are not in contact."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-PS4-1",
+    "strand": "Physical Science",
+    "topic": "Waves and Their Applications in Technologies for Information Transfer (PS4)",
+    "description": "Using mathematical representations, describe a simple model for waves that includes how the amplitude of a wave is related to the energy in a wave."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-PS4-3",
+    "strand": "Physical Science",
+    "topic": "Waves and Their Applications in Technologies for Information Transfer (PS4)",
+    "description": "Communicate information to support the claim that digital devices are used to improve our understanding of how waves transmit information."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-LS1-4",
+    "strand": "Life Science",
+    "topic": "From Molecules to Organisms: Structures and Processes (LS1)",
+    "description": "Use arguments, based on empirical evidence and scientific reasoning, to support an explanation for how characteristic animal behaviors and specialized plant structures affect the probability of successful reproduction of animals and plants respectively."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-LS1-5",
+    "strand": "Life Science",
+    "topic": "From Molecules to Organisms: Structures and Processes (LS1)",
+    "description": "Construct a scientific explanation based on evidence for how environmental and genetic factors influence the growth of organisms."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-LS3-1",
+    "strand": "Life Science",
+    "topic": "Heredity: Inheritance and Variation of Traits (LS3)",
+    "description": "Develop and use a model to describe why structural changes to genes (mutations) located on chromosomes may affect proteins and may result in harmful, beneficial, or neutral effects to the structure and function of the organism."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-LS3-2",
+    "strand": "Life Science",
+    "topic": "Heredity: Inheritance and Variation of Traits (LS3)",
+    "description": "Develop and use a model to describe why asexual reproduction results in offspring with identical genetic information and sexual reproduction results in offspring with genetic variation."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-LS4-1",
+    "strand": "Life Science",
+    "topic": "Biological Evolution: Unity and Diversity (LS4)",
+    "description": "Analyze and interpret data for patterns in the fossil record that document the existence, diversity, extinction, and change of life forms throughout the history of life on Earth under the assumption that natural laws operated in the past as they do today."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-LS4-2",
+    "strand": "Life Science",
+    "topic": "Biological Evolution: Unity and Diversity (LS4)",
+    "description": "Apply scientific ideas to construct an explanation for the anatomical similarities and differences among modern organisms and between modern and fossil organisms to infer their ancestral relationships."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-LS4-4",
+    "strand": "Life Science",
+    "topic": "Biological Evolution: Unity and Diversity (LS4)",
+    "description": "Construct an explanation based on evidence that describes how genetic variations of traits in a population increase some individual’s probability of surviving and reproducing in a specific environment. Clarification statement: In a specific environment impacted by different factors, some traits provide advantages that make it more probable that an organism will be able to survive and reproduce there. State Assessment boundary: Assessment is limited to using simple probability statements and proportional reasoning to construct explanations."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-LS4-5",
+    "strand": "Life Science",
+    "topic": "Biological Evolution: Unity and Diversity (LS4)",
+    "description": "Gather and synthesize information about technologies that have changed the way humans influence the inheritance of desired traits in organisms."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-LS4-6",
+    "strand": "Life Science",
+    "topic": "Biological Evolution: Unity and Diversity (LS4)",
+    "description": "Use mathematical representations to support explanations of how natural selection may lead to increases and decreases of specific traits in populations over time."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-ESS1-1",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Place in the Universe (ESS1)",
+    "description": "Develop and use a model of the Earth-sun-moon system to describe the cyclic patterns of lunar phases, eclipses of the sun and moon, tides, and seasons."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-ESS1-2",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Place in the Universe (ESS1)",
+    "description": "Develop and use a model to describe the role of gravity in the motions within galaxies and the solar system."
+  },
+  {
+    "state": "SC",
+    "subject": "science",
+    "grade": "8",
+    "code": "8-ESS1-3",
+    "strand": "Earth and Space Science",
+    "topic": "Earth’s Place in the Universe (ESS1)",
+    "description": "Evaluate information to determine scale properties of objects in the solar system."
+  }
+]

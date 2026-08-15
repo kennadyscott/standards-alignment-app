@@ -16,14 +16,19 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608142142';   // replaced with the deploy stamp
+const APP_BUILD = '202608150208';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
-const STATES = ['OH', 'GA', 'TX', 'FL', 'NC'];
-const STATE_NAMES = { OH: 'Ohio', GA: 'Georgia', TX: 'Texas', FL: 'Florida', NC: 'North Carolina', ALL: 'All States' };
+const STATES = ['OH', 'GA', 'TX', 'FL', 'NC', 'SC'];
+const STATE_NAMES = { OH: 'Ohio', GA: 'Georgia', TX: 'Texas', FL: 'Florida', NC: 'North Carolina', SC: 'South Carolina', ALL: 'All States' };
 const SUBJECT_NAMES = { social_studies: 'Social Studies', science: 'Science', ela: 'ELAR' };
 function otherStates(st) { return STATES.filter(s => s !== st); }
+// The subtitle derives from STATES so the roster can grow without HTML edits.
+{
+  const sub = document.querySelector('.brand-sub');
+  if (sub) sub.textContent = `${STATES.length} states, Ohio-anchored — ELAR, Science & Social Studies`;
+}
 
 /* Standards are keyed state:subject:code. The subject is load-bearing, not decorative:
    Texas numbers items per TAC chapter, so TX:1.10A is both a science standard and an
@@ -713,6 +718,7 @@ const DATA_FILES = [
   'data/texas_science.json', 'data/texas_social_studies.json', 'data/texas_ela.json',
   'data/florida_science.json', 'data/florida_social_studies.json', 'data/florida_ela.json',
   'data/north_carolina_science.json', 'data/north_carolina_social_studies.json', 'data/north_carolina_ela.json',
+  'data/south_carolina_science.json', 'data/south_carolina_social_studies.json', 'data/south_carolina_ela.json',
   'data/universal_ela.json', // state:"ALL" — domains that apply everywhere, shown for every state
 ];
 

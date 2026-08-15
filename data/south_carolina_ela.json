@@ -1,0 +1,1672 @@
+[
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.AOR.1.1",
+    "strand": "Applications of Reading",
+    "description": "Describe the main story elements and sequence the important events."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.AOR.1.2",
+    "strand": "Applications of Reading",
+    "description": "Identify and explain the purpose of forms of figurative language to include similes, personification, and idioms."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.AOR.2.1",
+    "strand": "Applications of Reading",
+    "description": "Identify and explain an explicit theme in a literary text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.AOR.2.2",
+    "strand": "Applications of Reading",
+    "description": "Identify and explain a central idea and supporting details in an informational text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.AOR.3.1",
+    "strand": "Applications of Reading",
+    "description": "Identify different characters’ perspectives in a literary text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.AOR.4.1",
+    "strand": "Applications of Reading",
+    "description": "Identify and explain an author’s purpose in a text, including what the author wants to answer, explain, or describe."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.AOR.5.1",
+    "strand": "Applications of Reading",
+    "description": "Describe the basic structure of a literary text (e.g., narrative, drama, and poem)."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.AOR.5.2",
+    "strand": "Applications of Reading",
+    "description": "Explain how text features contribute to meaning in an informational text; identify the text structure of sequence."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.AOR.5.3",
+    "strand": "Applications of Reading",
+    "description": "Identify when an author expresses an opinion and uses reasons to support that opinion in an informational text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.AOR.6.1",
+    "strand": "Applications of Reading",
+    "description": "Retell a text to enhance comprehension:",
+    "elements": [
+      "a. include main story elements in a logical sequence for a literary text; and",
+      "b. include a central idea and supporting details for an informational text."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.AOR.7.1",
+    "strand": "Applications of Reading",
+    "description": "Determine the meaning of known and unknown words and phrases, choosing from an array of strategies:",
+    "elements": [
+      "a. use sentence-level context clues (e.g., definitions, examples) to determine the meaning of a word or phrase;",
+      "b. use reference materials to build and integrate background knowledge;",
+      "c. use glossaries and dictionaries to determine the meaning of words and phrases; and",
+      "d. use words and phrases acquired through conversations, reading, and responding to texts."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.AOR.8.1",
+    "strand": "Applications of Reading",
+    "description": "Determine the effectiveness of an author’s use of words and phrases in literary, informational, and multimedia texts:",
+    "elements": [
+      "a. ask and answer questions about words and phrases to determine their meaning; and",
+      "b. distinguish nuances of meaning between closely related verbs (e.g., throw, toss) and adjectives (e.g., small, tiny)."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.AOR.9.1",
+    "strand": "Applications of Reading",
+    "description": "Identify and use phonic patterns and inflectional morphemes that change the spelling of a base word, and identify grade-appropriate prefixes to determine the meaning of words in grade-level content."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.AOR.10.1",
+    "strand": "Applications of Reading",
+    "description": "Identify and explain how information gained from visuals (e.g., illustrations, photographs, maps) contributes to an understanding of a print or non-print text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.R.1.1",
+    "strand": "Research",
+    "description": "Ask and answer questions about print and non-print sources to narrow or broaden thinking."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.R.1.2",
+    "strand": "Research",
+    "description": "Sequence information from a provided print or non-print source."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.C.1.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write opinion pieces about a topic. When writing:",
+    "elements": [
+      "a. introduce an opinion and include reasons with details to support the opinion;",
+      "b. use grade-appropriate transitions; and",
+      "c. provide a concluding statement."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.C.2.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write informative/explanatory pieces to establish a topic and provide information about the topic. When writing:",
+    "elements": [
+      "a. introduce a topic;",
+      "b. use facts and details to develop the topic; and",
+      "c. provide a concluding statement."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.C.3.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write narratives to develop real or imagined experiences. When writing:",
+    "elements": [
+      "a. establish and describe character(s) and setting;",
+      "b. sequence events and use temporal words to signal event order (e.g., before, after); and",
+      "c. provide a sense of ending."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.C.4.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write and expand grammatically correct sentences (e.g., simple, compound, declarative, imperative, interrogative, and exclamatory). When writing:",
+    "elements": [
+      "a. capitalize proper nouns (holidays, product names, and geographic names);",
+      "b. use periods to punctuate initials and titles of people;",
+      "c. use commas in addresses, after greetings and closings (letters and emails), and inside quotation marks;",
+      "d. use quotation marks to set off direct quotations and dialogue;",
+      "e. use apostrophes to form possessives;",
+      "f. identify and use nouns (abstract), verbs (linking), adjectives (articles, comparative, and superlative), adverbs, and conjunctions (coordinating and subordinating);",
+      "g. identify and use a subject, predicate, and direct object in a sentence; and",
+      "h. form and use compound sentences."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.C.5.1",
+    "strand": "Written and Oral Communications",
+    "description": "Improve writing by planning, revising, editing, and building on personal ideas and the ideas of others to strengthen writing."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "2",
+    "code": "ELA.2.C.6.1",
+    "strand": "Written and Oral Communications",
+    "description": "Print all uppercase and lowercase letters and use appropriate spacing for letters, words, and sentences."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.AOR.1.1",
+    "strand": "Applications of Reading",
+    "description": "Explain how one or more characters develop throughout the plot."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.AOR.1.2",
+    "strand": "Applications of Reading",
+    "description": "Identify and explain the purpose of forms of figurative language to include metaphor, hyperbole, and idioms."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.AOR.2.1",
+    "strand": "Applications of Reading",
+    "description": "Identify and explain an explicit theme in a literary text and how it is developed by key details."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.AOR.2.2",
+    "strand": "Applications of Reading",
+    "description": "Determine and explain a stated central idea and supporting details in an informational text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.AOR.3.1",
+    "strand": "Applications of Reading",
+    "description": "Determine and explain the differences between the perspectives of the characters and/or between the characters and the reader."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.AOR.4.1",
+    "strand": "Applications of Reading",
+    "description": "Determine and explain an author’s purpose (e.g., what an author wants to answer, explain, or describe); identify an author’s perspective on a topic."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.AOR.5.1",
+    "strand": "Applications of Reading",
+    "description": "Explain how sections of literary text (e.g., paragraphs, chapters, scenes, and stanzas) build on one another and contribute to the overall structure."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.AOR.5.2",
+    "strand": "Applications of Reading",
+    "description": "Explain how basic text features contribute to meaning in an informational text; identify the text structures of description/list and/or cause and effect."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.AOR.5.3",
+    "strand": "Applications of Reading",
+    "description": "Identify an author’s claim, and explain how an author uses reasons to support that claim in an informational text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.AOR.6.1",
+    "strand": "Applications of Reading",
+    "description": "Summarize a text to enhance comprehension:",
+    "elements": [
+      "a. include plot, theme, and key details for a literary text; and",
+      "b. include a central idea and supporting details for an informational text."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.AOR.7.1",
+    "strand": "Applications of Reading",
+    "description": "Determine or clarify the meaning of known and unknown words and phrases, choosing from an array of strategies:",
+    "elements": [
+      "a. use sentence-level context clues (e.g., definitions, examples) to determine the meaning of a word or phrase;",
+      "b. consult print and digital reference materials to build and integrate background knowledge; and",
+      "c. consult print and digital reference materials to find the pronunciation, part of speech, and to determine or clarify the precise meaning of words and phrases."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.AOR.8.1",
+    "strand": "Applications of Reading",
+    "description": "Determine an author’s use of words and phrases in grade-level literary, informational, and multimedia texts:",
+    "elements": [
+      "a. distinguish between literal and nonliteral meanings of words and phrases (e.g., take steps);",
+      "b. identify real-life connections between words and their use (e.g., describe people who are helpful); and",
+      "c. determine relationships between words (e.g., synonyms and antonyms) to better understand each of the words."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.AOR.9.1",
+    "strand": "Applications of Reading",
+    "description": "Identify and use derivational morphemes, prefixes, suffixes, and phonic patterns to determine the meaning of words in grade-level content."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.AOR.10.1",
+    "strand": "Applications of Reading",
+    "description": "Identify and explain how information gained from visuals (e.g., illustrations, photographs, graphs, maps) contributes to the meaning of a print or non-print text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.R.1.1",
+    "strand": "Research",
+    "description": "Ask and answer questions about print and non-print sources to narrow or broaden thinking about a topic for inquiry."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.R.1.2",
+    "strand": "Research",
+    "description": "Group findings from a provided print or non-print source."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.C.1.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write opinion pieces about a topic. When writing:",
+    "elements": [
+      "a. introduce a topic; include an opinion statement;",
+      "b. include reasons supported by details from a provided source;",
+      "c. use grade-appropriate transitions to link ideas;",
+      "d. organize information; and",
+      "e. provide a concluding statement."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.C.2.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write informative/explanatory pieces to examine a topic and provide information. When writing:",
+    "elements": [
+      "a. introduce a topic;",
+      "b. develop the topic with facts, definitions, and/or details related to the topic;",
+      "c. group information and use grade-appropriate transitions to link ideas;",
+      "d. use precise language and vocabulary to inform or explain about the topic;",
+      "e. use and explain information from a provided source; and",
+      "f. provide a concluding statement or section."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.C.3.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write narratives to develop real or imagined experiences. When writing:",
+    "elements": [
+      "a. establish a setting and introduce a narrator or characters;",
+      "b. use temporal words and phrases to sequence a plot structure;",
+      "c. use descriptions of actions, thoughts, and feelings to develop characters; and",
+      "d. provide an ending."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.C.4.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write and expand grammatically correct sentences (e.g., simple, compound, and complex) and paragraphs. When writing:",
+    "elements": [
+      "a. capitalize nouns (organizations, monuments, and landmarks) and appropriate words in titles and dialogue;",
+      "b. use periods to punctuate abbreviations and within quotation marks;",
+      "c. use commas and quotation marks to indicate direct speech and quotations from a text; use commas to separate items in a series and phrases and clauses;",
+      "d. use apostrophes to create contractions;",
+      "e. distinguish between and use interrogative and demonstrative pronouns;",
+      "f. distinguish between and use comparative and superlative adverbs;",
+      "g. identify and use prepositional phrases;",
+      "h. use frequently occurring nouns, verbs (regular and irregular), and simple verb tenses;",
+      "i. explain the function of adjectives and adverbs in simple, compound, and complex sentences;",
+      "j. distinguish between and use coordinating and subordinating conjunctions and independent and dependent clauses;",
+      "k. identify and revise sentence fragments and run-on sentences; and",
+      "l. consult print and multimedia sources to check and correct spelling."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.C.5.1",
+    "strand": "Written and Oral Communications",
+    "description": "Improve writing by planning, revising, editing, and building on personal ideas and the ideas of others to strengthen writing."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "3",
+    "code": "ELA.3.C.6.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write in cursive all uppercase and lowercase letters."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.AOR.1.1",
+    "strand": "Applications of Reading",
+    "description": "Explain how setting and conflict cause characters to change and how conflict(s) contributes to plot development."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.AOR.1.2",
+    "strand": "Applications of Reading",
+    "description": "Determine and explain how figurative language impacts meaning and contributes to the reader’s experience."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.AOR.2.1",
+    "strand": "Applications of Reading",
+    "description": "Identify and explain an explicit or implied theme and how it is developed by key details in a literary text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.AOR.2.2",
+    "strand": "Applications of Reading",
+    "description": "Identify and explain a stated or implied central idea and how it is developed by supporting details in an informational text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.AOR.3.1",
+    "strand": "Applications of Reading",
+    "description": "",
+    "elements": [
+      "a. Compare and contrast the point of view from which different stories are narrated, including the difference between first person and third person; and",
+      "b. explain how different characters’ perspectives impact a literary text."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.AOR.4.1",
+    "strand": "Applications of Reading",
+    "description": "Determine and explain how an author’s purpose (e.g., what an author wants to answer, explain, or describe) is conveyed through the author’s perspective."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.AOR.5.1",
+    "strand": "Applications of Reading",
+    "description": "Compare and contrast the structural elements of literary texts (e.g., narratives, dramas, and poems)."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.AOR.5.2",
+    "strand": "Applications of Reading",
+    "description": "Explain how basic text features contribute to meaning in an informational text; identify the text structures of problem and solution, chronological, and/or compare and contrast."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.AOR.5.3",
+    "strand": "Applications of Reading",
+    "description": "Explain an author’s use of reasons and evidence to support a claim(s) in an informational text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.AOR.6.1",
+    "strand": "Applications of Reading",
+    "description": "Summarize a text to enhance comprehension:",
+    "elements": [
+      "a. include plot, theme, and relevant key details for a literary text; and",
+      "b. include a central idea and relevant supporting details for an informational text."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.AOR.7.1",
+    "strand": "Applications of Reading",
+    "description": "Determine or clarify the meaning of known, unknown, and multiple-meaning words and phrases, choosing from an array of strategies:",
+    "elements": [
+      "a. use context clues (e.g., definitions, examples, restatements) to determine the meaning of a word or phrase;",
+      "b. consult print and digital reference materials to build and integrate background knowledge; and",
+      "c. consult print and digital reference materials to find the pronunciation, part of speech, and to determine or clarify the precise meaning of words and phrases."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.AOR.8.1",
+    "strand": "Applications of Reading",
+    "description": "Determine an author’s use of words and phrases in grade-level literary, informational, and multimedia texts:",
+    "elements": [
+      "a. distinguish between literal and nonliteral meanings of words and phrases (e.g., take steps);",
+      "b. explain the meaning of commonly occurring similes, metaphors, and idioms; and",
+      "c. demonstrate knowledge of relationships between words (e.g., synonyms and antonyms) to better understand each of the words."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.AOR.9.1",
+    "strand": "Applications of Reading",
+    "description": "Identify and use common Greek and Latin roots, base words, and affixes to determine the meaning of words in grade-appropriate content."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.AOR.10.1",
+    "strand": "Applications of Reading",
+    "description": "Determine and explain how visuals (e.g., illustrations, photographs, maps) and/or multimedia elements (e.g., video, audio) contribute to the meaning of a print or non-print text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.R.1.1",
+    "strand": "Research",
+    "description": "Conduct short research for inquiry by:",
+    "elements": [
+      "a. generating a question about a topic; and",
+      "b. examining a provided source."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.R.1.2",
+    "strand": "Research",
+    "description": "Determine the credibility of a provided source."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.R.1.3",
+    "strand": "Research",
+    "description": "Determine which information is relevant to the topic."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.R.1.4",
+    "strand": "Research",
+    "description": "Group related findings."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.R.1.5",
+    "strand": "Research",
+    "description": "Cite sources to avoid plagiarism."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.C.1.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write arguments to make a claim about a topic. When writing:",
+    "elements": [
+      "a. introduce a topic and state an opinion about the topic;",
+      "b. provide reasons supported by facts from a credible source(s); and",
+      "c. group ideas logically using transitional words and phrases; and",
+      "d. provide a concluding statement or section."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.C.2.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write informative/explanatory texts to examine a topic and provide information. When writing:",
+    "elements": [
+      "a. introduce a topic clearly;",
+      "b. develop the topic with facts, definitions, details, and/or quotes related to the topic;",
+      "c. group related information into paragraphs and/or sections using transitional words and phrases to link ideas;",
+      "d. use precise language and vocabulary to inform or explain about the topic;",
+      "e. use and explain information from a provided source(s); and",
+      "f. provide a concluding statement or section."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.C.3.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write narratives developing real or imagined experiences. When writing:",
+    "elements": [
+      "a. establish a situation and setting;",
+      "b. introduce a narrator and/or characters;",
+      "c. organize a plot structure;",
+      "d. use narrative techniques such as dialogue, descriptive language, and sensory details to develop events, setting, and characters;",
+      "e. use a variety of transitional words and phrases to sequence events; and",
+      "f. provide an ending that follows from the narrated experiences or events."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.C.4.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write grammatically correct single and multi-paragraph compositions using a variety of sentence types and phrasing. When writing:",
+    "elements": [
+      "a. capitalize nouns (historic periods, nationalities, languages) and proper adjectives;",
+      "b. use a comma before a coordinating conjunction in a compound sentence and with dependent clauses;",
+      "c. use frequently occurring nouns (compound); distinguish between and use frequently occurring pronouns (relative), adverbs (relative), verbs (helping and linking), and proper adjectives;",
+      "d. identify and use simple appositive phrases;",
+      "e. order adjectives within sentences according to conventional patterns;",
+      "f. use prepositional phrases;",
+      "g. distinguish between frequently confused words (e.g., to, too, two; there, their, they’re);",
+      "h. identify and revise sentence fragments and run-on sentences; and",
+      "i. consult print and multimedia sources to check and correct spelling."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.C.5.1",
+    "strand": "Written and Oral Communications",
+    "description": "Improve writing by planning, revising, editing, and building on personal ideas and the ideas of others to strengthen writing."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "4",
+    "code": "ELA.4.C.6.1",
+    "strand": "Written and Oral Communications",
+    "description": "Demonstrate fluent and legible cursive writing skills."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.AOR.1.1",
+    "strand": "Applications of Reading",
+    "description": "Analyze how setting, characters, and conflict impact plot development."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.AOR.1.2",
+    "strand": "Applications of Reading",
+    "description": "Analyze how figurative language impacts meaning and contributes to the reader’s experience."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.AOR.2.1",
+    "strand": "Applications of Reading",
+    "description": "Explain the development of an explicit or implied theme over the course of a literary text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.AOR.2.2",
+    "strand": "Applications of Reading",
+    "description": "Explain the development of a stated or implied central idea over the course of an informational text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.AOR.3.1",
+    "strand": "Applications of Reading",
+    "description": "",
+    "elements": [
+      "a. Explain how the point of view from which a story is narrated influences how events are described; and",
+      "b. explain how an author reveals one or more characters’ perspectives in a literary text."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.AOR.4.1",
+    "strand": "Applications of Reading",
+    "description": "Compare and contrast a primary account and a secondary account of the same event or topic, while identifying how the different perspectives impact the content of the text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.AOR.5.1",
+    "strand": "Applications of Reading",
+    "description": "Explain how a sequence of paragraphs, chapters, scenes, or stanzas fit together to provide the overall structure of a narrative, drama, or poem."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.AOR.5.2",
+    "strand": "Applications of Reading",
+    "description": "Compare and contrast how text features and/or structures contribute to the overall meaning in two or more informational texts."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.AOR.5.3",
+    "strand": "Applications of Reading",
+    "description": "Determine an author’s argument and trace its development while identifying claims, supporting reasons, and evidence in an informational text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.AOR.6.1",
+    "strand": "Applications of Reading",
+    "description": "Summarize a text to enhance comprehension:",
+    "elements": [
+      "a. include plot, theme, and relevant key details for a literary text; and",
+      "b. include a central idea and relevant supporting details for an informational text."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.AOR.7.1",
+    "strand": "Applications of Reading",
+    "description": "Determine or clarify the meaning of known, unknown, and multiple-meaning words and phrases, choosing from an array of strategies:",
+    "elements": [
+      "a. use context clues (e.g., definitions, examples, restatements) to determine the meaning of words and phrases;",
+      "b. consult print and digital reference materials to build and integrate background knowledge; and",
+      "c. consult print and digital reference materials to find the pronunciation, part of speech, and to determine or clarify the precise meaning of words and phrases."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.AOR.8.1",
+    "strand": "Applications of Reading",
+    "description": "Determine an author’s use of figurative and technical language in literary, informational, and multimedia texts:",
+    "elements": [
+      "a. recognize and explain the meaning of figurative language, including similes and metaphors, in context; and",
+      "b. demonstrate knowledge of relationships between particular words (e.g., synonyms, antonyms, homographs) to better understand each of the words."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.AOR.9.1",
+    "strand": "Applications of Reading",
+    "description": "Identify and use knowledge of affixes and Greek and Latin roots to determine new and/or clarify precise meanings of words and phrases in grade-appropriate content."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.AOR.10.1",
+    "strand": "Applications of Reading",
+    "description": "Compare and contrast a print format of a text (e.g., literary, informational) to a non-print format (e.g., film, image, performance), explaining each media’s portrayal of the subject."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.R.1.1",
+    "strand": "Research",
+    "description": "Conduct short research for inquiry by:",
+    "elements": [
+      "a. generating a question(s) about a topic; and",
+      "b. consulting a variety of print and multimedia sources."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.R.1.2",
+    "strand": "Research",
+    "description": "Determine the credibility of the source(s) consulted and use the most credible source(s)."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.R.1.3",
+    "strand": "Research",
+    "description": "Determine which information is relevant to the topic."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.R.1.4",
+    "strand": "Research",
+    "description": "Logically group related findings."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.R.1.5",
+    "strand": "Research",
+    "description": "Cite sources to avoid plagiarism."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.C.1.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write arguments to make a claim about a topic. When writing:",
+    "elements": [
+      "a. introduce a topic and make a claim about the topic;",
+      "b. include reasons that are supported by facts from a credible source(s);",
+      "c. develop an organizational structure in which ideas are grouped logically;",
+      "d. use transitions to link and structure ideas; and",
+      "e. provide a concluding statement or section."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.C.2.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write informative texts to examine a topic and convey ideas and information clearly. When writing:",
+    "elements": [
+      "a. introduce a topic and develop the topic with facts, definitions, details, and/or quotes related to the topic;",
+      "b. group related information into paragraphs and/or sections using transitional words and phrases to link ideas and develop structure;",
+      "c. use precise language and vocabulary to explain the topic;",
+      "d. use and explain information from a provided source(s); and",
+      "e. provide a concluding statement or section."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.C.3.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write narratives to develop real or imagined experiences. When writing:",
+    "elements": [
+      "a. establish a situation and setting;",
+      "b. introduce a narrator and characters;",
+      "c. establish a plot structure;",
+      "d. use narrative techniques such as dialogue, precise words, descriptive language, and sensory details to develop events, setting, and characters;",
+      "e. use a variety of transitional words and phrases to sequence the events; and",
+      "f. provide an ending that follows logically from the narrated experiences or events."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.C.4.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write grammatically correct single and multi-paragraph compositions using a variety of sentence types and phrasing. When writing:",
+    "elements": [
+      "a. apply knowledge of rules for capitalization;",
+      "b. use underlining, quotation marks, or italics to indicate titles of works;",
+      "c. use a comma to separate an introductory element from the rest of a sentence, to separate clauses, to set off a question tag, and to indicate direct address;",
+      "d. use a colon to introduce a list and after a salutation in a business letter or email;",
+      "e. explain the function of and use frequently occurring interjections, verb tenses (progressive perfect), and correlative conjunctions;",
+      "f. distinguish between and use types of pronouns (indefinite) and pronouns as adjectives (possessive and demonstrative);",
+      "g. use prepositional phrases in different positions within a sentence;",
+      "h. use correct subject-verb and pronoun-antecedent agreement;",
+      "i. identify and revise sentence fragments, run-on sentences, and inappropriate shifts in verb tense; and",
+      "j. consult print and multimedia sources to check and correct spelling."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.C.5.1",
+    "strand": "Written and Oral Communications",
+    "description": "Improve writing by planning, revising, editing, and building on personal ideas and the ideas of others to strengthen writing."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "5",
+    "code": "ELA.5.C.6.1",
+    "strand": "Written and Oral Communications",
+    "description": "Demonstrate fluent and legible cursive writing skills."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.AOR.1.1",
+    "strand": "Applications of Reading",
+    "description": "Analyze how specific events and descriptive details develop the plot, reveal aspects of the characters, and/or create meaning."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.AOR.1.2",
+    "strand": "Applications of Reading",
+    "description": "Explain how figurative language impacts mood, tone, and meaning."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.AOR.2.1",
+    "strand": "Applications of Reading",
+    "description": "Analyze how key details contribute to the development of a theme(s) over the course of a literary text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.AOR.2.2",
+    "strand": "Applications of Reading",
+    "description": "Analyze how supporting details contribute to the development of a central idea(s) over the course of an informational text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.AOR.3.1",
+    "strand": "Applications of Reading",
+    "description": "Determine and explain the impact of multiple narrators or shifts in points of view and/or perspective."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.AOR.4.1",
+    "strand": "Applications of Reading",
+    "description": "Analyze a primary and secondary account of the same event or topic and how the different perspectives impact the content and style of a text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.AOR.5.1",
+    "strand": "Applications of Reading",
+    "description": "Analyze how a particular sentence, paragraph, chapter, scene, or stanza fits into the overall structure of a text and contributes to the development of theme, setting, or plot."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.AOR.5.2",
+    "strand": "Applications of Reading",
+    "description": "Analyze how individual text sections (e.g., a particular sentence, paragraph, chapter, or section) fit into the overall structure of an informational text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.AOR.5.3",
+    "strand": "Applications of Reading",
+    "description": "Trace the development of an author’s argument while identifying the types of reasoning used and/or the rhetorical appeal of ethos, pathos, or logos in an informational text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.AOR.6.1",
+    "strand": "Applications of Reading",
+    "description": "Summarize and/or paraphrase content from grade-level text to enhance comprehension."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.AOR.7.1",
+    "strand": "Applications of Reading",
+    "description": "Determine or clarify the meaning of known, unknown, and multiple-meaning words and phrases, choosing from an array of strategies.",
+    "elements": [
+      "a. use context (e.g., the overall meaning of a sentence, paragraph, or text; a word’s position or function in a sentence) to determine the meaning of words and phrases;",
+      "b. use background or prior knowledge to determine or clarify the meanings of words and phrases; and",
+      "c. consult reference materials to determine or clarify the precise meanings, pronunciations, or parts of speech of words and phrases."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.AOR.8.1",
+    "strand": "Applications of Reading",
+    "description": "Interpret an author’s use of figurative, connotative, and technical language in literary, informational, and multimedia texts:",
+    "elements": [
+      "a. interpret figures of speech (e.g., metaphor) in context and analyze how they function within a text;",
+      "b. determine the relationship between words; and",
+      "c. distinguish between the connotations of words with similar denotations (e.g., economical, thrifty)."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.AOR.9.1",
+    "strand": "Applications of Reading",
+    "description": "Apply knowledge of affixes and Greek and Latin roots to determine new and/or clarify precise meanings of words and phrases in grade-level content."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.AOR.10.1",
+    "strand": "Applications of Reading",
+    "description": "Analyze a text or subject presented through multimedia formats (e.g., reading a print version of a speech and listening to an audio recording of a speech) and explain how each media’s portrayal of the text or subject impacts the audience."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.1.1",
+    "strand": "Research",
+    "description": "Conduct short and more sustained research for inquiry by:",
+    "elements": [
+      "a. generating a question(s) about a topic; and",
+      "b. using a variety of print and multimedia sources to refine the scope of inquiry as relevant to the topic."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.1.2",
+    "strand": "Research",
+    "description": "Determine the credibility of one or more sources consulted and use the most credible source(s)."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.1.3",
+    "strand": "Research",
+    "description": "Determine which source(s) and/or information is relevant to the topic."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.1.4",
+    "strand": "Research",
+    "description": "Logically organize findings."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.R.1.5",
+    "strand": "Research",
+    "description": "Cite sources to avoid plagiarism."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.C.1.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write arguments to support a claim with clear reasons and relevant evidence. When writing:",
+    "elements": [
+      "a. introduce a claim and organize the reasons and evidence clearly;",
+      "b. support a claim using logical reasoning supported by facts and/or data as evidence from a credible source(s);",
+      "c. acknowledge an alternative perspective;",
+      "d. use an organizational structure appropriate to the purpose and task;",
+      "e. use transitions to clarify the relationship(s) between claim and reasons;",
+      "f. provide a concluding statement or section that follows from the argument presented."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.C.2.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write informative texts to examine a topic and analyze information from one or more sources. When writing:",
+    "elements": [
+      "a. introduce a topic clearly and organize information logically;",
+      "b. develop the topic with relevant facts, definitions, details, quotes, or other information and examples;",
+      "c. use appropriate transitions to clarify the relationships among ideas and concepts;",
+      "d. use precise language and vocabulary to inform or to explain the topic; and",
+      "e. provide a concluding statement or section."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.C.3.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write narratives to develop real or imagined experiences, memories, or ideas, using effective techniques, relevant descriptive details, and well-structured event sequences. When writing:",
+    "elements": [
+      "a. produce clear and coherent writing appropriate to the task and audience;",
+      "b. establish context and introduce a narrator and/or characters;",
+      "c. organize a logical plot structure;",
+      "d. use narrative techniques such as dialogue and description to develop experiences, events, setting, and/or characters;",
+      "e. use precise words and phrases, relevant descriptive details, and figurative language to convey experiences and events; and",
+      "f. provide an ending that follows logically from the narrated experiences or events."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.C.4.1",
+    "strand": "Written and Oral Communications",
+    "description": "Use the rules of and make intentional decisions about standard English grammar and conventions to write single and multi-paragraph compositions with varied sentence structure. When writing:",
+    "elements": [
+      "a. apply knowledge of rules for capitalization;",
+      "b. use punctuation (commas, parentheses, dashes) to set off nonrestrictive clauses;",
+      "c. use a colon to introduce a quotation; use a hyphen in a compound adjective with numbers (e.g., two-hour movie, 30-minute class);",
+      "d. determine and correct pronouns with unclear or ambiguous antecedents;",
+      "e. explain the function of definite and indefinite articles;",
+      "f. distinguish between and use simple, compound, complex, and compound-complex sentences to add variety;",
+      "g. distinguish between and use different types of phrases (prepositional and appositive);",
+      "h. identify and revise sentence fragments, run-on sentences, pronoun-antecedent agreement, and inappropriate shifts in verb tense; and",
+      "i. consult print and multimedia sources to check and correct spelling."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "6",
+    "code": "ELA.6.C.5.1",
+    "strand": "Written and Oral Communications",
+    "description": "Improve writing by planning, editing, and considering feedback from adults and peers and revising for clarity of content."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.AOR.1.1",
+    "strand": "Applications of Reading",
+    "description": "Analyze how lines of dialogue, specific events, or descriptive details develop the plot, reveal aspects of the characters, and/or create meaning."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.AOR.1.2",
+    "strand": "Applications of Reading",
+    "description": "Analyze how figurative language impacts mood, tone, and meaning."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.AOR.2.1",
+    "strand": "Applications of Reading",
+    "description": "Compare two or more themes within a literary text(s) and how each is developed over the course of a text(s)."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.AOR.2.2",
+    "strand": "Applications of Reading",
+    "description": "Compare two or more central ideas within an informational text(s) and how each is developed over the course of a text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.AOR.3.1",
+    "strand": "Applications of Reading",
+    "description": "",
+    "elements": [
+      "a. Explain the influence of a narrator(s), including an unreliable narrator(s), and/or narrative shifts in point of view; and",
+      "b. analyze how an author uses point(s) of view to develop and contrast the perspectives of different characters."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.AOR.4.1",
+    "strand": "Applications of Reading",
+    "description": "Determine an author’s perspective or purpose in a text and determine how an author uses rhetoric to advance that perspective or purpose."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.AOR.5.1",
+    "strand": "Applications of Reading",
+    "description": "Analyze how the structure of a literary text (e.g., narrative, drama, poem) contributes to its meaning."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.AOR.5.2",
+    "strand": "Applications of Reading",
+    "description": "Explain how the structure of individual text sections (e.g., a particular sentence, paragraph, chapter, or section) and/or text features convey an author’s purpose in an informational text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.AOR.5.3",
+    "strand": "Applications of Reading",
+    "description": "Trace the development of an author’s argument while explaining the types of reasoning and/or the rhetorical appeal of ethos, pathos, or logos in an informational text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.AOR.6.1",
+    "strand": "Applications of Reading",
+    "description": "Summarize and/or paraphrase content from grade-level text to enhance comprehension."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.AOR.7.1",
+    "strand": "Applications of Reading",
+    "description": "Determine or clarify the meaning of known, unknown, and multiple-meaning words and phrases, choosing from an array of strategies:",
+    "elements": [
+      "a. use context (e.g., the overall meaning of a sentence, paragraph, or text; a word’s position or function in a sentence) to determine the meaning of words and phrases;",
+      "b. use background or prior knowledge to determine or clarify the meanings of words; and",
+      "c. consult reference materials to determine or clarify the precise meanings, pronunciations, or parts of speech of words and phrases."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.AOR.8.1",
+    "strand": "Applications of Reading",
+    "description": "Interpret an author’s use of figurative, connotative, and technical language in literary, informational, and multimedia texts:",
+    "elements": [
+      "a. interpret figures of speech (e.g., metaphor) in context and analyze how they function within the text;",
+      "b. determine the relationship between words; and",
+      "c. distinguish between the connotations of words with similar denotations (e.g., polite, diplomatic)."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.AOR.9.1",
+    "strand": "Applications of Reading",
+    "description": "Apply knowledge of affixes and Greek and Latin roots to determine new and/or clarify precise meanings of words and phrases in grade-level content."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.AOR.10.1",
+    "strand": "Applications of Reading",
+    "description": "Evaluate a text or subject presented through multimedia formats (e.g., reading a print version of a speech and listening to an audio recording of a speech) and analyze how each media’s portrayal of the text or subject impacts the audience."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.1.1",
+    "strand": "Research",
+    "description": "Conduct short and more sustained research by:",
+    "elements": [
+      "a. generating a question(s) about a topic; and",
+      "b. using a variety of print and multimedia sources to refine the scope of inquiry as relevant to the topic and the purpose."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.1.2",
+    "strand": "Research",
+    "description": "Determine the credibility of one or more sources consulted and use the most credible source(s)."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.1.3",
+    "strand": "Research",
+    "description": "Determine which source(s) and/or information is relevant to the topic."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.1.4",
+    "strand": "Research",
+    "description": "Logically organize findings."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.R.1.5",
+    "strand": "Research",
+    "description": "Cite sources to avoid plagiarism."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.C.1.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write arguments to support a claim with clear reasons and relevant evidence. When writing:",
+    "elements": [
+      "a. introduce a claim and organize the reasons and evidence clearly;",
+      "b. support a claim using logical reasoning supported by facts, data, and/or statistics as evidence from a credible source(s);",
+      "c. acknowledge a counterclaim;",
+      "d. use an organizational structure appropriate to the purpose and task;",
+      "e. use transitions to clarify the relationships between claims and reasons;",
+      "f. provide a concluding statement or section that supports the argument presented."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.C.2.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write informative texts to examine a topic and analyze information from one or more sources. When writing:",
+    "elements": [
+      "a. introduce a topic and organize ideas, concepts, and information using structures such as definition, compare and contrast, and/or cause and effect;",
+      "b. develop the topic with relevant facts, definitions, details, and/or quotes;",
+      "c. use appropriate transitions to clarify the relationships between ideas and concepts;",
+      "d. use precise language and thoughtful elaboration to inform or to explain the topic;",
+      "e. establish a tone appropriate to the task and audience; and",
+      "f. provide a concluding statement or section that supports the information presented."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.C.3.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write narratives to develop real or imagined experiences, memories, or ideas, using effective techniques, relevant descriptive details, and well-structured event sequences. When writing:",
+    "elements": [
+      "a. produce clear and coherent writing in which the development, organization, and style are appropriate to task, purpose, and audience;",
+      "b. engage the reader by establishing context and point of view and introducing a narrator and/or characters;",
+      "c. organize a logical plot structure and use a variety of transitional words and phrases to convey sequence and signal time shifts;",
+      "d. use narrative techniques such as dialogue, pacing, and description to develop experiences, events, setting, and/or characters;",
+      "e. use precise words, relevant descriptive details, and figurative language to convey the action, experiences, and events; and",
+      "f. provide an ending that follows logically from the narrated experiences or events."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.C.4.1",
+    "strand": "Written and Oral Communications",
+    "description": "Use the rules of and make intentional decisions about standard English grammar and conventions to write single and multi-paragraph compositions with varied sentence structure. When writing:",
+    "elements": [
+      "a. apply knowledge of rules for capitalization;",
+      "b. use a comma to separate coordinate adjectives;",
+      "c. use hyphenated compound words (e.g., mother-in-law);",
+      "d. use phrases and clauses (noun, relative, adverbial) within a sentence, recognizing and correcting misplaced and dangling modifiers;",
+      "e. identify and revise sentence fragments, run-on sentences, pronoun-antecedent agreement, and inappropriate shifts in verb tense; and",
+      "f. use print and multimedia resources to edit for grammar, usage, mechanics, and format in order to finalize drafts for a variety of publication media."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "7",
+    "code": "ELA.7.C.5.1",
+    "strand": "Written and Oral Communications",
+    "description": "Improve writing by planning, editing, and considering feedback from adults and peers and revising for clarity of content."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.AOR.1.1",
+    "strand": "Applications of Reading",
+    "description": "Analyze how key elements contribute to the meaning of the text as a whole."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.AOR.1.2",
+    "strand": "Applications of Reading",
+    "description": "Analyze how figurative language impacts mood, tone, and meaning in a text(s); explain an author’s use of symbolism."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.AOR.2.1",
+    "strand": "Applications of Reading",
+    "description": "Analyze how key details contribute to the development of two or more themes within and across literary texts."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.AOR.2.2",
+    "strand": "Applications of Reading",
+    "description": "Analyze how supporting details contribute to the development of two or more central ideas within and across informational texts."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.AOR.3.1",
+    "strand": "Applications of Reading",
+    "description": "Analyze how points of view and/or perspectives create effects to include suspense and dramatic irony."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.AOR.4.1",
+    "strand": "Applications of Reading",
+    "description": "Analyze an author’s perspective or purpose in a text and analyze how an author uses rhetoric to advance that perspective or purpose."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.AOR.5.1",
+    "strand": "Applications of Reading",
+    "description": "Determine and explain how an author’s choices in structuring a text, including the manipulation of time (e.g., flashback and foreshadowing), create effects such as mystery or suspense."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.AOR.5.2",
+    "strand": "Applications of Reading",
+    "description": "Analyze how the structure of individual text sections (e.g., a particular sentence, paragraph, chapter, or section) and/or text features convey an author’s purpose in an informational text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.AOR.5.3",
+    "strand": "Applications of Reading",
+    "description": "Trace the development of an author’s argument while analyzing the types of reasoning and/or rhetorical appeals used in an informational text."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.AOR.6.1",
+    "strand": "Applications of Reading",
+    "description": "Summarize and/or paraphrase content from grade-level text to enhance comprehension."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.AOR.7.1",
+    "strand": "Applications of Reading",
+    "description": "Determine or clarify the meaning of known, unknown, and multiple-meaning words and phrases, choosing from an array of strategies:",
+    "elements": [
+      "a. use context (e.g., the overall meaning of a sentence, paragraph, or text; a word’s position or function in a sentence) to determine the meaning of words and phrases;",
+      "b. use background or prior knowledge to determine or clarify the meanings of words; and",
+      "c. consult reference materials to determine or clarify the precise meanings, pronunciations, parts of speech, etymology, or standard usage of words."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.AOR.8.1",
+    "strand": "Applications of Reading",
+    "description": "Interpret an author’s use of figurative, connotative, and technical language in literary, informational, and multimedia texts:",
+    "elements": [
+      "a. interpret figures of speech (e.g., oxymoron) in context and analyze how they function within a text;",
+      "b. determine the relationship between particular words to better understand each of the words; and",
+      "c. distinguish between the connotations of words with similar denotations (e.g., willful, resolute)."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.AOR.9.1",
+    "strand": "Applications of Reading",
+    "description": "Apply knowledge of affixes and Greek and Latin roots to determine new and/or clarify precise meanings of words and phrases in grade-level content."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.AOR.10.1",
+    "strand": "Applications of Reading",
+    "description": "Evaluate a text or subject presented through multimedia formats (e.g., reading a print version of a scene in a play and watching a performance of a scene in a play), and analyze how each media’s portrayal of the text or subject impacts the audience."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.1.1",
+    "strand": "Research",
+    "description": "Conduct short and more sustained research by:",
+    "elements": [
+      "a. generating and answering a research question(s) about a topic; and",
+      "b. using a variety of print and multimedia sources to refine the scope of inquiry as relevant to the topic and purpose."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.1.2",
+    "strand": "Research",
+    "description": "Analyze the credibility and relevance of sources using only those that are credible and relevant to the topic and the purpose of inquiry."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.1.3",
+    "strand": "Research",
+    "description": "Analyze findings to determine relevance to the topic."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.1.4",
+    "strand": "Research",
+    "description": "Logically organize findings as relevant to the purpose."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.R.1.5",
+    "strand": "Research",
+    "description": "Cite sources to avoid plagiarism."
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.C.1.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write arguments to support a claim(s) with clear reasons and relevant evidence. When writing:",
+    "elements": [
+      "a. introduce a claim(s) and support a claim(s) with logical reasoning and relevant evidence (e.g., facts, data, statistics) using accurate and credible sources;",
+      "b. acknowledge and refute a counterclaim with relevant evidence; create an organizational structure that establishes relationships between reasons and evidence;",
+      "c. use transitions to create cohesion and clarify the relationships between claim(s), a counterclaim, reasons, and evidence;",
+      "d. establish and maintain a tone appropriate to the task and audience; and",
+      "e. provide a concluding statement or section that supports the argument presented."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.C.2.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write informative texts to examine a topic and analyze information from multiple sources. When writing:",
+    "elements": [
+      "a. introduce a topic clearly and organize ideas, concepts, and information, using a structure such as definition, compare and contrast, and/or cause and effect;",
+      "b. develop the topic with relevant facts, definitions, details, and/or quotes;",
+      "c. use varied transitions to clarify the relationships between ideas and concepts;",
+      "d. use precise language and thoughtful elaboration to inform or to explain the topic;",
+      "e. establish a tone appropriate to the task and audience; and",
+      "f. provide a concluding statement or section that supports the information presented."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.C.3.1",
+    "strand": "Written and Oral Communications",
+    "description": "Write narratives to develop real or imagined experiences, memories, or ideas, using effective techniques, relevant descriptive details, and logically structured event sequences. When writing:",
+    "elements": [
+      "a. produce clear and coherent writing in which the development, organization, and style are appropriate to the task, purpose, and audience;",
+      "b. engage the reader by establishing a situation, a clear point of view, and by introducing a narrator and/or characters;",
+      "c. organize a logical plot structure and use a variety of transitional words and phrases to convey sequence and signal time shifts;",
+      "d. use narrative techniques such as dialogue, pacing, and description to develop experiences, events, setting, and/or characters;",
+      "e. use precise words and phrases, details, and figurative language to develop the experiences, events, setting, and/or characters; and",
+      "f. provide an ending that connects to the intended purpose of the writing."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.C.4.1",
+    "strand": "Written and Oral Communications",
+    "description": "Use the rules of and make intentional decisions about standard English grammar and conventions to write compositions with varied sentence structures. When writing:",
+    "elements": [
+      "a. apply knowledge of rules for capitalization;",
+      "b. use a comma or dash to indicate a pause or break and an ellipsis to indicate an omission;",
+      "c. use different types of verbals in sentences (gerunds, participles, infinitives);",
+      "d. distinguish between and use active and passive voice and types of grammatical mood (indicative, subjunctive, conditional, imperative);",
+      "e. use appropriate parallel structure in words, phrases, and clauses;",
+      "f. identify and revise sentence fragments, run-on sentences, and inappropriate shifts in verb tense, number, voice, and mood; and",
+      "g. use print and multimedia resources to edit for grammar, usage, mechanics, and format in order to finalize drafts for a variety of publication media."
+    ]
+  },
+  {
+    "state": "SC",
+    "subject": "ela",
+    "grade": "8",
+    "code": "ELA.8.C.5.1",
+    "strand": "Written and Oral Communications",
+    "description": "Improve writing by planning, editing, and considering feedback from adults and peers and revising for clarity and cohesiveness."
+  }
+]
