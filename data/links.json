@@ -13458,7 +13458,7 @@
    "subject": "ela",
    "oh": "L.2.5",
    "state": "NC",
-   "code": "L.2.5",
+   "code": "L.2.5a",
    "confidence": "moderate",
    "rationale": "Overlaps on distinguishing shades of meaning among closely related verbs and adjectives, but NC dropped Ohio's word-relationships framing and its real-life-connections element.",
    "source": "ai_draft"
@@ -13678,9 +13678,9 @@
    "subject": "ela",
    "oh": "L.3.5",
    "state": "NC",
-   "code": "L.3.5",
+   "code": "L.3.5a",
    "confidence": "strong",
-   "rationale": "Elements match on literal/nonliteral meanings and shades of meaning for states of mind; NC drops Ohio's real-life-connections element and word-relationships framing.",
+   "rationale": "Ohio's lead element, distinguishing literal from nonliteral meanings of words and phrases in context, is stated by NC element a; Ohio's real-life-connections and shades-of-meaning elements fall outside it.",
    "source": "ai_draft"
   },
   {
@@ -13898,9 +13898,9 @@
    "subject": "ela",
    "oh": "L.4.5",
    "state": "NC",
-   "code": "L.4.5",
+   "code": "L.4.5a",
    "confidence": "strong",
-   "rationale": "Elements match on similes/metaphors and idioms/adages/proverbs; NC drops Ohio's antonym/synonym element and the word-relationships framing.",
+   "rationale": "Ohio's lead element, explaining simple similes and metaphors in context, is restated by NC element a; Ohio's idiom/adage and synonym/antonym elements fall outside it.",
    "source": "ai_draft"
   },
   {
@@ -14118,9 +14118,9 @@
    "subject": "ela",
    "oh": "L.5.5",
    "state": "NC",
-   "code": "L.5.5",
+   "code": "L.5.5a",
    "confidence": "strong",
-   "rationale": "Elements match on interpreting figurative language (similes, metaphors) and idioms/adages/proverbs; NC drops Ohio's synonym/antonym/homograph element and the word-relationships framing.",
+   "rationale": "Ohio's lead element, interpreting figurative language including similes and metaphors in context, matches NC element a nearly verbatim; Ohio's idiom and word-relationship elements fall outside it.",
    "source": "ai_draft"
   },
   {
@@ -14338,9 +14338,9 @@
    "subject": "ela",
    "oh": "L.6.5",
    "state": "NC",
-   "code": "L.6.5",
+   "code": "L.6.5a",
    "confidence": "strong",
-   "rationale": "Elements match on interpreting figures of speech and distinguishing connotations of words with similar denotations; NC drops Ohio's word-relationships element (cause/effect, part/whole, item/category).",
+   "rationale": "Ohio's lead element, interpreting figures of speech in context, matches NC element a; Ohio's word-relationship and connotation elements fall outside it.",
    "source": "ai_draft"
   },
   {
@@ -14558,9 +14558,9 @@
    "subject": "ela",
    "oh": "L.7.5",
    "state": "NC",
-   "code": "L.7.5",
+   "code": "L.7.5a",
    "confidence": "strong",
-   "rationale": "Elements match on interpreting figures of speech and distinguishing connotations of words with similar denotations; NC drops Ohio's word-relationships element (synonym/antonym, analogy).",
+   "rationale": "Ohio's lead element, interpreting figures of speech in context, matches NC element a; Ohio's word-relationship and connotation elements fall outside it.",
    "source": "ai_draft"
   },
   {
@@ -14778,9 +14778,9 @@
    "subject": "ela",
    "oh": "L.8.5",
    "state": "NC",
-   "code": "L.8.5",
+   "code": "L.8.5a",
    "confidence": "strong",
-   "rationale": "Elements match on interpreting figures of speech and distinguishing connotations of words with similar denotations; NC drops Ohio's word-relationships element.",
+   "rationale": "Ohio's lead element, interpreting figures of speech in context, matches NC element a; Ohio's word-relationship and connotation elements fall outside it.",
    "source": "ai_draft"
   },
   {
@@ -16928,9 +16928,9 @@
    "subject": "ela",
    "oh": "RL.2.1",
    "state": "SC",
-   "code": "ELA.2.AOR.6.1",
+   "code": "ELA.2.AOR.6.1a",
    "confidence": "moderate",
-   "rationale": "Both require showing understanding of a literary text's key details; SC frames the demonstration as retelling story elements in sequence rather than answering who/what/where/when/why/how questions, and SC 2024 has no standalone textual-evidence benchmark.",
+   "rationale": "Both require showing understanding of a literary text's key details; SC element a frames it as retelling main story elements in a logical sequence rather than answering who/what/where/when/why/how questions.",
    "source": "ai_draft"
   },
   {
@@ -16948,7 +16948,7 @@
    "subject": "ela",
    "oh": "RL.2.2",
    "state": "SC",
-   "code": "ELA.2.AOR.6.1",
+   "code": "ELA.2.AOR.6.1a",
    "confidence": "strong",
    "rationale": "Ohio's retell-stories component matches SC's retell including main story elements in a logical sequence; Ohio specifies fables and folktales from diverse cultures, SC does not name genres.",
    "source": "ai_draft"
@@ -16968,9 +16968,9 @@
    "subject": "ela",
    "oh": "RL.2.4",
    "state": "SC",
-   "code": "ELA.2.AOR.8.1",
+   "code": "ELA.2.AOR.8.1a",
    "confidence": "moderate",
-   "rationale": "Both examine the effect of an author's word and phrase choices in a text; SC covers word meaning and nuance but omits Ohio's focus on sound devices (beats, alliteration, rhyme) and rhythm.",
+   "rationale": "Both examine the effect of an author's words and phrases in a text; SC element a asks and answers questions about words and phrases to determine meaning and omits Ohio's sound devices (beats, alliteration, rhyme) and rhythm.",
    "source": "ai_draft"
   },
   {
@@ -17008,7 +17008,7 @@
    "subject": "ela",
    "oh": "RI.2.1",
    "state": "SC",
-   "code": "ELA.2.AOR.6.1",
+   "code": "ELA.2.AOR.6.1b",
    "confidence": "moderate",
    "rationale": "Both require demonstrating understanding of an informational text's key details; SC frames it as retelling a central idea with supporting details rather than answering questions about key details.",
    "source": "ai_draft"
@@ -17038,9 +17038,9 @@
    "subject": "ela",
    "oh": "RI.2.4",
    "state": "SC",
-   "code": "ELA.2.AOR.7.1",
+   "code": "ELA.2.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine the meaning of words and phrases encountered in grade-level text; SC additionally lists the strategies (context clues, glossaries, dictionaries) students choose among.",
+   "rationale": "Both determine the meaning of words and phrases in grade-level text; SC element a supplies the sentence-level context-clue strategy Ohio leaves unspecified.",
    "source": "ai_draft"
   },
   {
@@ -17088,9 +17088,9 @@
    "subject": "ela",
    "oh": "L.2.4",
    "state": "SC",
-   "code": "ELA.2.AOR.7.1",
+   "code": "ELA.2.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine the meaning of unknown words and phrases by choosing from an array of strategies, including sentence-level context clues and glossaries/dictionaries.",
+   "rationale": "SC element a is the sentence-level context-clue strategy that opens Ohio's list of strategies; Ohio adds prefixes, roots, compound words, and glossaries.",
    "source": "ai_draft"
   },
   {
@@ -17108,9 +17108,9 @@
    "subject": "ela",
    "oh": "L.2.5",
    "state": "SC",
-   "code": "ELA.2.AOR.8.1",
+   "code": "ELA.2.AOR.8.1b",
    "confidence": "strong",
-   "rationale": "Both target nuances in word meaning, using the same example set of closely related verbs (throw/toss) and adjectives; SC situates the work inside reading rather than a separate language strand.",
+   "rationale": "Ohio's shades-of-meaning element matches SC element b, which uses the same closely related verbs (throw, toss) and adjectives; SC situates the work inside reading rather than a separate language strand.",
    "source": "ai_draft"
   },
   {
@@ -17118,7 +17118,7 @@
    "subject": "ela",
    "oh": "L.2.6",
    "state": "SC",
-   "code": "ELA.2.AOR.7.1",
+   "code": "ELA.2.AOR.7.1d",
    "confidence": "strong",
    "rationale": "SC element d ('use words and phrases acquired through conversations, reading, and responding to texts') states Ohio's requirement almost verbatim; Ohio adds using adjectives and adverbs to describe.",
    "source": "ai_draft"
@@ -17128,7 +17128,7 @@
    "subject": "ela",
    "oh": "RL.3.1",
    "state": "SC",
-   "code": "ELA.3.AOR.6.1",
+   "code": "ELA.3.AOR.6.1a",
    "confidence": "moderate",
    "rationale": "Both require grounding understanding of a literary text in its key details; SC frames it as summarizing plot, theme, and key details rather than answering questions with explicit reference to the text.",
    "source": "ai_draft"
@@ -17148,7 +17148,7 @@
    "subject": "ela",
    "oh": "RL.3.2",
    "state": "SC",
-   "code": "ELA.3.AOR.6.1",
+   "code": "ELA.3.AOR.6.1a",
    "confidence": "strong",
    "rationale": "Ohio's retell-stories component matches SC's summarize a literary text including plot, theme, and key details; Ohio names fables, folktales, and myths, SC does not specify genres.",
    "source": "ai_draft"
@@ -17168,9 +17168,9 @@
    "subject": "ela",
    "oh": "RL.3.4",
    "state": "SC",
-   "code": "ELA.3.AOR.7.1",
+   "code": "ELA.3.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine the meaning of words and phrases as used in a text; SC enumerates the strategies (context clues, print and digital reference materials).",
+   "rationale": "Both determine the meaning of words and phrases as used in a text; SC element a supplies the sentence-level context-clue strategy, while Ohio adds the literal/nonliteral distinction.",
    "source": "ai_draft"
   },
   {
@@ -17178,7 +17178,7 @@
    "subject": "ela",
    "oh": "RL.3.4",
    "state": "SC",
-   "code": "ELA.3.AOR.8.1",
+   "code": "ELA.3.AOR.8.1a",
    "confidence": "strong",
    "rationale": "Ohio's literal-versus-nonliteral distinction matches SC element a almost verbatim, including the 'take steps' example.",
    "source": "ai_draft"
@@ -17218,7 +17218,7 @@
    "subject": "ela",
    "oh": "RI.3.1",
    "state": "SC",
-   "code": "ELA.3.AOR.6.1",
+   "code": "ELA.3.AOR.6.1b",
    "confidence": "moderate",
    "rationale": "Both require understanding of an informational text grounded in its details; SC frames it as summarizing central idea and supporting details rather than answering questions with explicit textual reference.",
    "source": "ai_draft"
@@ -17238,7 +17238,7 @@
    "subject": "ela",
    "oh": "RI.3.2",
    "state": "SC",
-   "code": "ELA.3.AOR.6.1",
+   "code": "ELA.3.AOR.6.1b",
    "confidence": "strong",
    "rationale": "Ohio's retell-the-key-details component matches SC's summarize an informational text with a central idea and supporting details.",
    "source": "ai_draft"
@@ -17258,9 +17258,9 @@
    "subject": "ela",
    "oh": "RI.3.4",
    "state": "SC",
-   "code": "ELA.3.AOR.7.1",
+   "code": "ELA.3.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine the meaning of words and phrases in grade-level text; Ohio specifies general academic and domain-specific vocabulary, SC specifies the strategies used.",
+   "rationale": "Both determine the meaning of words and phrases in grade-level text; Ohio names general academic and domain-specific vocabulary, SC element a names sentence-level context clues as the strategy.",
    "source": "ai_draft"
   },
   {
@@ -17308,9 +17308,9 @@
    "subject": "ela",
    "oh": "L.3.4",
    "state": "SC",
-   "code": "ELA.3.AOR.7.1",
+   "code": "ELA.3.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine or clarify the meaning of unknown and multiple-meaning words using a range of strategies, including sentence-level context and print/digital reference materials.",
+   "rationale": "SC element a is the sentence-level context-clue strategy that opens Ohio's range of strategies; Ohio adds affixes, roots, and glossaries.",
    "source": "ai_draft"
   },
   {
@@ -17328,9 +17328,9 @@
    "subject": "ela",
    "oh": "L.3.5",
    "state": "SC",
-   "code": "ELA.3.AOR.8.1",
+   "code": "ELA.3.AOR.8.1a",
    "confidence": "strong",
-   "rationale": "SC's three elements (literal/nonliteral, real-life connections, word relationships) restate Ohio's elements almost verbatim; SC adds synonyms/antonyms where Ohio names shades of meaning among states of mind.",
+   "rationale": "Ohio's lead element, distinguishing literal from nonliteral meanings in context, restates SC element a, sharing the 'take steps' example.",
    "source": "ai_draft"
   },
   {
@@ -17338,9 +17338,9 @@
    "subject": "ela",
    "oh": "L.3.6",
    "state": "SC",
-   "code": "ELA.3.AOR.7.1",
+   "code": "ELA.3.AOR.7.1b",
    "confidence": "moderate",
-   "rationale": "SC's vocabulary benchmark covers building and integrating word knowledge through reference materials, but it is framed as determining meaning rather than Ohio's acquiring and accurately using academic and domain-specific vocabulary.",
+   "rationale": "SC element b builds and integrates background knowledge through print and digital reference materials, which supports but does not require Ohio's accurate acquisition and use of academic and domain-specific vocabulary.",
    "source": "ai_draft"
   },
   {
@@ -17348,7 +17348,7 @@
    "subject": "ela",
    "oh": "RL.4.1",
    "state": "SC",
-   "code": "ELA.4.AOR.6.1",
+   "code": "ELA.4.AOR.6.1a",
    "confidence": "moderate",
    "rationale": "Both require accounting for what a literary text says using its details; SC frames this as summarizing plot, theme, and relevant key details and has no standalone benchmark for citing details or drawing inferences.",
    "source": "ai_draft"
@@ -17368,7 +17368,7 @@
    "subject": "ela",
    "oh": "RL.4.2",
    "state": "SC",
-   "code": "ELA.4.AOR.6.1",
+   "code": "ELA.4.AOR.6.1a",
    "confidence": "strong",
    "rationale": "Ohio's summarize-incorporating-a-theme component matches SC's summary of a literary text including plot, theme, and relevant key details.",
    "source": "ai_draft"
@@ -17388,9 +17388,9 @@
    "subject": "ela",
    "oh": "RL.4.4",
    "state": "SC",
-   "code": "ELA.4.AOR.7.1",
+   "code": "ELA.4.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine the meaning of words and phrases as they are used in a text; Ohio adds words alluding to mythological characters, which SC does not name.",
+   "rationale": "Both determine the meaning of words and phrases as used in a text; SC element a names context clues as the strategy, while Ohio adds words alluding to mythological characters.",
    "source": "ai_draft"
   },
   {
@@ -17398,9 +17398,9 @@
    "subject": "ela",
    "oh": "RL.4.4",
    "state": "SC",
-   "code": "ELA.4.AOR.8.1",
+   "code": "ELA.4.AOR.8.1b",
    "confidence": "moderate",
-   "rationale": "SC covers an author's use of words and phrases (nonliteral meanings, similes, metaphors, idioms), which overlaps Ohio's in-text word meaning work but not its mythological-allusion focus.",
+   "rationale": "Ohio's mythological allusions (e.g., Herculean) are figurative word meanings, which SC element b covers as explaining commonly occurring similes, metaphors, and idioms.",
    "source": "ai_draft"
   },
   {
@@ -17448,7 +17448,7 @@
    "subject": "ela",
    "oh": "RI.4.1",
    "state": "SC",
-   "code": "ELA.4.AOR.6.1",
+   "code": "ELA.4.AOR.6.1b",
    "confidence": "moderate",
    "rationale": "Both require accounting for what an informational text says using its details; SC frames this as summarizing central idea and relevant supporting details rather than referring to details and drawing inferences.",
    "source": "ai_draft"
@@ -17468,7 +17468,7 @@
    "subject": "ela",
    "oh": "RI.4.2",
    "state": "SC",
-   "code": "ELA.4.AOR.6.1",
+   "code": "ELA.4.AOR.6.1b",
    "confidence": "strong",
    "rationale": "Ohio's summary component matches SC's summary of an informational text including a central idea and relevant supporting details.",
    "source": "ai_draft"
@@ -17488,9 +17488,9 @@
    "subject": "ela",
    "oh": "RI.4.4",
    "state": "SC",
-   "code": "ELA.4.AOR.7.1",
+   "code": "ELA.4.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine the meaning of words and phrases in grade-level text; Ohio names general academic and domain-specific vocabulary, SC names the strategies used.",
+   "rationale": "Both determine the meaning of words and phrases in grade-level text; Ohio names general academic and domain-specific vocabulary, SC element a names context clues as the strategy.",
    "source": "ai_draft"
   },
   {
@@ -17528,9 +17528,9 @@
    "subject": "ela",
    "oh": "L.4.4",
    "state": "SC",
-   "code": "ELA.4.AOR.7.1",
+   "code": "ELA.4.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine or clarify the meaning of unknown and multiple-meaning words using context clues and print/digital reference materials, including pronunciation and precise meaning.",
+   "rationale": "SC element a restates Ohio's leading context-clue strategy (definitions, examples, restatements) nearly verbatim; Ohio adds Greek and Latin affixes and roots.",
    "source": "ai_draft"
   },
   {
@@ -17548,9 +17548,9 @@
    "subject": "ela",
    "oh": "L.4.5",
    "state": "SC",
-   "code": "ELA.4.AOR.8.1",
+   "code": "ELA.4.AOR.8.1b",
    "confidence": "strong",
-   "rationale": "SC's elements (similes, metaphors, idioms; synonym and antonym relationships) restate Ohio's elements; SC adds literal versus nonliteral meaning and Ohio adds adages and proverbs.",
+   "rationale": "Ohio's lead element, explaining simple similes and metaphors in context, matches SC element b, which also covers idioms; Ohio adds adages and proverbs.",
    "source": "ai_draft"
   },
   {
@@ -17568,9 +17568,9 @@
    "subject": "ela",
    "oh": "L.4.6",
    "state": "SC",
-   "code": "ELA.4.AOR.7.1",
+   "code": "ELA.4.AOR.7.1b",
    "confidence": "moderate",
-   "rationale": "SC's vocabulary benchmark covers building and integrating word knowledge from reference materials, but frames the work as determining meaning rather than Ohio's acquiring and accurately using academic and domain-specific vocabulary.",
+   "rationale": "SC element b builds and integrates background knowledge from print and digital reference materials, which supports but does not require Ohio's accurate acquisition and use of academic and domain-specific vocabulary.",
    "source": "ai_draft"
   },
   {
@@ -17578,7 +17578,7 @@
    "subject": "ela",
    "oh": "RL.5.1",
    "state": "SC",
-   "code": "ELA.5.AOR.6.1",
+   "code": "ELA.5.AOR.6.1a",
    "confidence": "moderate",
    "rationale": "Both require accounting for what a literary text says based on its details; SC frames this as summarizing and has no standalone benchmark for quoting accurately or drawing inferences.",
    "source": "ai_draft"
@@ -17598,7 +17598,7 @@
    "subject": "ela",
    "oh": "RL.5.2",
    "state": "SC",
-   "code": "ELA.5.AOR.6.1",
+   "code": "ELA.5.AOR.6.1a",
    "confidence": "strong",
    "rationale": "Ohio's summarize-incorporating-a-theme component matches SC's summary of a literary text including plot, theme, and relevant key details.",
    "source": "ai_draft"
@@ -17618,9 +17618,9 @@
    "subject": "ela",
    "oh": "RL.5.4",
    "state": "SC",
-   "code": "ELA.5.AOR.7.1",
+   "code": "ELA.5.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine the meaning of words and phrases as they are used in a text, choosing among strategies.",
+   "rationale": "Both determine the meaning of words and phrases as used in a text; SC element a names context clues as the strategy, while Ohio adds figurative language.",
    "source": "ai_draft"
   },
   {
@@ -17628,7 +17628,7 @@
    "subject": "ela",
    "oh": "RL.5.4",
    "state": "SC",
-   "code": "ELA.5.AOR.8.1",
+   "code": "ELA.5.AOR.8.1a",
    "confidence": "strong",
    "rationale": "Ohio's figurative-language clause matches SC's recognize and explain the meaning of figurative language, including similes and metaphors, in context; Ohio also names idioms.",
    "source": "ai_draft"
@@ -17678,7 +17678,7 @@
    "subject": "ela",
    "oh": "RI.5.1",
    "state": "SC",
-   "code": "ELA.5.AOR.6.1",
+   "code": "ELA.5.AOR.6.1b",
    "confidence": "moderate",
    "rationale": "Both require accounting for what an informational text says based on its details; SC frames this as summarizing central idea and relevant supporting details rather than quoting accurately and inferring.",
    "source": "ai_draft"
@@ -17698,7 +17698,7 @@
    "subject": "ela",
    "oh": "RI.5.2",
    "state": "SC",
-   "code": "ELA.5.AOR.6.1",
+   "code": "ELA.5.AOR.6.1b",
    "confidence": "strong",
    "rationale": "Ohio's summary component matches SC's summary of an informational text including a central idea and relevant supporting details.",
    "source": "ai_draft"
@@ -17718,9 +17718,9 @@
    "subject": "ela",
    "oh": "RI.5.4",
    "state": "SC",
-   "code": "ELA.5.AOR.7.1",
+   "code": "ELA.5.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine the meaning of words and phrases in grade-level text; Ohio names general academic and domain-specific vocabulary, SC names the strategies used.",
+   "rationale": "Both determine the meaning of words and phrases in grade-level text; Ohio names general academic and domain-specific vocabulary, SC element a names context clues as the strategy.",
    "source": "ai_draft"
   },
   {
@@ -17748,9 +17748,9 @@
    "subject": "ela",
    "oh": "RI.5.7",
    "state": "SC",
-   "code": "ELA.5.R.1.1",
+   "code": "ELA.5.R.1.1b",
    "confidence": "moderate",
-   "rationale": "Both draw on multiple print and digital/multimedia sources to answer a question; SC places this in the research strand as consulting a variety of sources for inquiry rather than locating an answer efficiently.",
+   "rationale": "Both draw on multiple print and digital/multimedia sources; SC element b frames this as consulting a variety of sources for inquiry rather than locating an answer quickly.",
    "source": "ai_draft"
   },
   {
@@ -17788,9 +17788,9 @@
    "subject": "ela",
    "oh": "L.5.4",
    "state": "SC",
-   "code": "ELA.5.AOR.7.1",
+   "code": "ELA.5.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine or clarify the meaning of unknown and multiple-meaning words using context clues and print/digital reference materials for pronunciation and precise meaning.",
+   "rationale": "SC element a restates Ohio's leading context-clue strategy for unknown and multiple-meaning words; Ohio adds Greek and Latin affixes and roots.",
    "source": "ai_draft"
   },
   {
@@ -17808,9 +17808,9 @@
    "subject": "ela",
    "oh": "L.5.5",
    "state": "SC",
-   "code": "ELA.5.AOR.8.1",
+   "code": "ELA.5.AOR.8.1a",
    "confidence": "strong",
-   "rationale": "SC's elements (figurative language including similes and metaphors; relationships among synonyms, antonyms, homographs) restate Ohio's elements; Ohio also names idioms, adages, and proverbs.",
+   "rationale": "Ohio's lead element, interpreting figurative language including similes and metaphors in context, matches SC element a nearly verbatim; Ohio also names idioms, adages, and proverbs.",
    "source": "ai_draft"
   },
   {
@@ -17828,9 +17828,9 @@
    "subject": "ela",
    "oh": "L.5.6",
    "state": "SC",
-   "code": "ELA.5.AOR.7.1",
+   "code": "ELA.5.AOR.7.1b",
    "confidence": "moderate",
-   "rationale": "SC's vocabulary benchmark covers building and integrating word knowledge from reference materials, but frames the work as determining meaning rather than Ohio's acquiring and accurately using academic and domain-specific vocabulary.",
+   "rationale": "SC element b builds and integrates background knowledge from print and digital reference materials, which supports but does not require Ohio's accurate acquisition and use of academic and domain-specific vocabulary.",
    "source": "ai_draft"
   },
   {
@@ -17878,9 +17878,9 @@
    "subject": "ela",
    "oh": "RL.6.4",
    "state": "SC",
-   "code": "ELA.6.AOR.8.1",
+   "code": "ELA.6.AOR.8.1a",
    "confidence": "strong",
-   "rationale": "Both interpret an author's figurative and connotative language in context, including distinguishing connotations of words with similar denotations.",
+   "rationale": "Both interpret an author's figurative language in context; SC element a adds analyzing how figures of speech function within the text, while Ohio adds the impact of sensory language on meaning and tone.",
    "source": "ai_draft"
   },
   {
@@ -17968,9 +17968,9 @@
    "subject": "ela",
    "oh": "RI.6.4",
    "state": "SC",
-   "code": "ELA.6.AOR.7.1",
+   "code": "ELA.6.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine the meaning of words and phrases as used in a text, using context, background knowledge, and reference materials.",
+   "rationale": "Both determine the meaning of words and phrases as used in a text; SC element a supplies the context strategy — the overall meaning of a sentence, paragraph, or text and a word's position or function.",
    "source": "ai_draft"
   },
   {
@@ -17978,9 +17978,9 @@
    "subject": "ela",
    "oh": "RI.6.4",
    "state": "SC",
-   "code": "ELA.6.AOR.8.1",
+   "code": "ELA.6.AOR.8.1a",
    "confidence": "strong",
-   "rationale": "Near-verbatim match on figurative, connotative, and technical meanings of language in informational text.",
+   "rationale": "Ohio's figurative-meaning clause matches SC element a, interpreting figures of speech in context and analyzing how they function within a text.",
    "source": "ai_draft"
   },
   {
@@ -18038,9 +18038,9 @@
    "subject": "ela",
    "oh": "L.6.4",
    "state": "SC",
-   "code": "ELA.6.AOR.7.1",
+   "code": "ELA.6.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine or clarify the meaning of unknown and multiple-meaning words using sentence/paragraph context, a word's position or function, and reference materials for meaning and part of speech.",
+   "rationale": "SC element a restates Ohio's leading context strategy — the overall meaning of a sentence or paragraph and a word's position or function — nearly verbatim; Ohio adds affixes, roots, and verification.",
    "source": "ai_draft"
   },
   {
@@ -18058,9 +18058,9 @@
    "subject": "ela",
    "oh": "L.6.5",
    "state": "SC",
-   "code": "ELA.6.AOR.8.1",
+   "code": "ELA.6.AOR.8.1a",
    "confidence": "strong",
-   "rationale": "SC's three elements (figures of speech in context, relationships between words, connotations of words with similar denotations) restate Ohio's elements, sharing the economical/thrifty example.",
+   "rationale": "Ohio's lead element, interpreting figures of speech in context, matches SC element a, which adds analysis of how they function within the text.",
    "source": "ai_draft"
   },
   {
@@ -18068,9 +18068,9 @@
    "subject": "ela",
    "oh": "L.6.6",
    "state": "SC",
-   "code": "ELA.6.AOR.7.1",
+   "code": "ELA.6.AOR.7.1b",
    "confidence": "moderate",
-   "rationale": "Ohio's 'gather vocabulary knowledge when considering a word important to comprehension' aligns with SC's use of background knowledge and reference materials, but SC omits Ohio's acquire-and-use-accurately requirement.",
+   "rationale": "SC element b uses background or prior knowledge to clarify word meanings, aligning with Ohio's gathering of vocabulary knowledge but omitting its acquire-and-use-accurately requirement.",
    "source": "ai_draft"
   },
   {
@@ -18118,9 +18118,9 @@
    "subject": "ela",
    "oh": "RL.7.4",
    "state": "SC",
-   "code": "ELA.7.AOR.8.1",
+   "code": "ELA.7.AOR.8.1a",
    "confidence": "strong",
-   "rationale": "Both determine figurative and connotative meanings of language in context; SC adds technical language, Ohio adds sound repetition such as rhyme and alliteration, which SC does not cover.",
+   "rationale": "Both interpret figurative language in context; SC element a adds how figures of speech function within the text, while Ohio adds sound repetition such as rhyme and alliteration, which SC does not cover.",
    "source": "ai_draft"
   },
   {
@@ -18208,9 +18208,9 @@
    "subject": "ela",
    "oh": "RI.7.4",
    "state": "SC",
-   "code": "ELA.7.AOR.7.1",
+   "code": "ELA.7.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine the meaning of words and phrases as used in a text, using context, background knowledge, and reference materials.",
+   "rationale": "Both determine the meaning of words and phrases as used in a text; SC element a supplies the context strategy — the overall meaning of a sentence, paragraph, or text and a word's position or function.",
    "source": "ai_draft"
   },
   {
@@ -18218,9 +18218,9 @@
    "subject": "ela",
    "oh": "RI.7.4",
    "state": "SC",
-   "code": "ELA.7.AOR.8.1",
+   "code": "ELA.7.AOR.8.1a",
    "confidence": "strong",
-   "rationale": "Near-verbatim match on interpreting figurative, connotative, and technical language and its function in the text.",
+   "rationale": "Ohio's figurative-meaning clause matches SC element a, interpreting figures of speech in context and analyzing how they function within the text.",
    "source": "ai_draft"
   },
   {
@@ -18268,9 +18268,9 @@
    "subject": "ela",
    "oh": "L.7.4",
    "state": "SC",
-   "code": "ELA.7.AOR.7.1",
+   "code": "ELA.7.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine or clarify the meaning of unknown and multiple-meaning words using sentence/paragraph context, a word's position or function, and reference materials for meaning and part of speech.",
+   "rationale": "SC element a restates Ohio's leading context strategy — the overall meaning of a sentence or paragraph and a word's position or function — nearly verbatim; Ohio adds affixes, roots, and verification.",
    "source": "ai_draft"
   },
   {
@@ -18288,9 +18288,9 @@
    "subject": "ela",
    "oh": "L.7.5",
    "state": "SC",
-   "code": "ELA.7.AOR.8.1",
+   "code": "ELA.7.AOR.8.1a",
    "confidence": "strong",
-   "rationale": "SC's three elements (figures of speech in context, relationships between words, connotations of words with similar denotations) restate Ohio's elements, sharing the polite/diplomatic example.",
+   "rationale": "Ohio's lead element, interpreting figures of speech in context, matches SC element a, which adds analysis of how they function within the text.",
    "source": "ai_draft"
   },
   {
@@ -18298,9 +18298,9 @@
    "subject": "ela",
    "oh": "L.7.6",
    "state": "SC",
-   "code": "ELA.7.AOR.7.1",
+   "code": "ELA.7.AOR.7.1b",
    "confidence": "moderate",
-   "rationale": "Ohio's 'gather vocabulary knowledge when considering a word important to comprehension' aligns with SC's use of background knowledge and reference materials, but SC omits Ohio's acquire-and-use-accurately requirement.",
+   "rationale": "SC element b uses background or prior knowledge to clarify word meanings, aligning with Ohio's gathering of vocabulary knowledge but omitting its acquire-and-use-accurately requirement.",
    "source": "ai_draft"
   },
   {
@@ -18348,9 +18348,9 @@
    "subject": "ela",
    "oh": "RL.8.4",
    "state": "SC",
-   "code": "ELA.8.AOR.8.1",
+   "code": "ELA.8.AOR.8.1a",
    "confidence": "strong",
-   "rationale": "Both interpret figurative and connotative language in context and distinguish connotations of words with similar denotations, sharing the willful/resolute example.",
+   "rationale": "Both interpret figurative language in context; SC element a adds analyzing how figures of speech function within a text, while Ohio adds the impact of word choices on meaning, mood, and tone.",
    "source": "ai_draft"
   },
   {
@@ -18428,9 +18428,9 @@
    "subject": "ela",
    "oh": "RI.8.4",
    "state": "SC",
-   "code": "ELA.8.AOR.7.1",
+   "code": "ELA.8.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine the meaning of words and phrases as used in a text, using context, background knowledge, and reference materials.",
+   "rationale": "Both determine the meaning of words and phrases as used in a text; SC element a supplies the context strategy — the overall meaning of a sentence, paragraph, or text and a word's position or function.",
    "source": "ai_draft"
   },
   {
@@ -18438,9 +18438,9 @@
    "subject": "ela",
    "oh": "RI.8.4",
    "state": "SC",
-   "code": "ELA.8.AOR.8.1",
+   "code": "ELA.8.AOR.8.1a",
    "confidence": "strong",
-   "rationale": "Near-verbatim match on interpreting figurative, connotative, and technical language and analyzing how it functions in a text.",
+   "rationale": "Ohio's figurative-meaning clause matches SC element a, interpreting figures of speech in context and analyzing how they function within a text.",
    "source": "ai_draft"
   },
   {
@@ -18498,9 +18498,9 @@
    "subject": "ela",
    "oh": "L.8.4",
    "state": "SC",
-   "code": "ELA.8.AOR.7.1",
+   "code": "ELA.8.AOR.7.1a",
    "confidence": "strong",
-   "rationale": "Both determine or clarify the meaning of unknown and multiple-meaning words using sentence/paragraph context, a word's position or function, and reference materials for meaning and part of speech; SC adds etymology and standard usage.",
+   "rationale": "SC element a restates Ohio's leading context strategy — the overall meaning of a sentence or paragraph and a word's position or function — nearly verbatim; Ohio adds affixes, roots, and verification.",
    "source": "ai_draft"
   },
   {
@@ -18518,9 +18518,9 @@
    "subject": "ela",
    "oh": "L.8.5",
    "state": "SC",
-   "code": "ELA.8.AOR.8.1",
+   "code": "ELA.8.AOR.8.1a",
    "confidence": "strong",
-   "rationale": "SC's three elements (figures of speech in context, relationships between particular words, connotations of words with similar denotations) restate Ohio's elements, sharing the willful/resolute example.",
+   "rationale": "Ohio's lead element, interpreting figures of speech in context, matches SC element a, which adds analysis of how they function within the text.",
    "source": "ai_draft"
   },
   {
@@ -18528,9 +18528,9 @@
    "subject": "ela",
    "oh": "L.8.6",
    "state": "SC",
-   "code": "ELA.8.AOR.7.1",
+   "code": "ELA.8.AOR.7.1b",
    "confidence": "moderate",
-   "rationale": "Ohio's 'gather vocabulary knowledge when considering a word important to comprehension' aligns with SC's use of background knowledge and reference materials, but SC omits Ohio's acquire-and-use-accurately requirement.",
+   "rationale": "SC element b uses background or prior knowledge to clarify word meanings, aligning with Ohio's gathering of vocabulary knowledge but omitting its acquire-and-use-accurately requirement.",
    "source": "ai_draft"
   },
   {
