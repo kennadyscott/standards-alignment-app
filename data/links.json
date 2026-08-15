@@ -16922,6 +16922,3186 @@
    "confidence": "strong",
    "rationale": "Both address industrialization's impact on the economy; NC frames it as how industry and trade impact the economy and people of the nation.",
    "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0001",
+   "subject": "ela",
+   "oh": "RL.2.1",
+   "state": "SC",
+   "code": "ELA.2.AOR.6.1",
+   "confidence": "moderate",
+   "rationale": "Both require showing understanding of a literary text's key details; SC frames the demonstration as retelling story elements in sequence rather than answering who/what/where/when/why/how questions, and SC 2024 has no standalone textual-evidence benchmark.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0002",
+   "subject": "ela",
+   "oh": "RL.2.2",
+   "state": "SC",
+   "code": "ELA.2.AOR.2.1",
+   "confidence": "strong",
+   "rationale": "Ohio's 'determine the lesson or moral' matches SC's identify-and-explain an explicit theme in a literary text; SC uses the term theme where Ohio says lesson/moral.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0003",
+   "subject": "ela",
+   "oh": "RL.2.2",
+   "state": "SC",
+   "code": "ELA.2.AOR.6.1",
+   "confidence": "strong",
+   "rationale": "Ohio's retell-stories component matches SC's retell including main story elements in a logical sequence; Ohio specifies fables and folktales from diverse cultures, SC does not name genres.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0004",
+   "subject": "ela",
+   "oh": "RL.2.3",
+   "state": "SC",
+   "code": "ELA.2.AOR.1.1",
+   "confidence": "moderate",
+   "rationale": "Both work with characters and the story's important events; Ohio asks specifically how characters respond to events and challenges, while SC asks students to describe story elements and sequence events.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0005",
+   "subject": "ela",
+   "oh": "RL.2.4",
+   "state": "SC",
+   "code": "ELA.2.AOR.8.1",
+   "confidence": "moderate",
+   "rationale": "Both examine the effect of an author's word and phrase choices in a text; SC covers word meaning and nuance but omits Ohio's focus on sound devices (beats, alliteration, rhyme) and rhythm.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0006",
+   "subject": "ela",
+   "oh": "RL.2.5",
+   "state": "SC",
+   "code": "ELA.2.AOR.5.1",
+   "confidence": "strong",
+   "rationale": "Both address the overall structure of a literary text; Ohio specifies beginning and ending, SC names the basic structure of narrative, drama, and poem.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0007",
+   "subject": "ela",
+   "oh": "RL.2.6",
+   "state": "SC",
+   "code": "ELA.2.AOR.3.1",
+   "confidence": "strong",
+   "rationale": "Both distinguish among the points of view/perspectives held in a literary text; Ohio adds recognizing when the narrator is a character, which SC does not state.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0008",
+   "subject": "ela",
+   "oh": "RL.2.7",
+   "state": "SC",
+   "code": "ELA.2.AOR.10.1",
+   "confidence": "strong",
+   "rationale": "Both use information from illustrations/visuals together with the words to build understanding of a print or digital text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0009",
+   "subject": "ela",
+   "oh": "RI.2.1",
+   "state": "SC",
+   "code": "ELA.2.AOR.6.1",
+   "confidence": "moderate",
+   "rationale": "Both require demonstrating understanding of an informational text's key details; SC frames it as retelling a central idea with supporting details rather than answering questions about key details.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0010",
+   "subject": "ela",
+   "oh": "RI.2.2",
+   "state": "SC",
+   "code": "ELA.2.AOR.2.2",
+   "confidence": "strong",
+   "rationale": "Ohio's main topic plus focus of specific paragraphs matches SC's central idea and supporting details in an informational text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0011",
+   "subject": "ela",
+   "oh": "RI.2.3",
+   "state": "SC",
+   "code": "ELA.2.AOR.5.2",
+   "confidence": "moderate",
+   "rationale": "Ohio's connection among a series of events, ideas, or steps corresponds to SC's grade 2 text structure of sequence; SC frames this as identifying the structure rather than describing the content connection.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0012",
+   "subject": "ela",
+   "oh": "RI.2.4",
+   "state": "SC",
+   "code": "ELA.2.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine the meaning of words and phrases encountered in grade-level text; SC additionally lists the strategies (context clues, glossaries, dictionaries) students choose among.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0013",
+   "subject": "ela",
+   "oh": "RI.2.5",
+   "state": "SC",
+   "code": "ELA.2.AOR.5.2",
+   "confidence": "moderate",
+   "rationale": "Both concern informational text features; Ohio's purpose is locating key facts efficiently, while SC asks students to explain how the features contribute to meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0014",
+   "subject": "ela",
+   "oh": "RI.2.6",
+   "state": "SC",
+   "code": "ELA.2.AOR.4.1",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match: both identify the author's purpose, including what the author wants to answer, explain, or describe.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0015",
+   "subject": "ela",
+   "oh": "RI.2.7",
+   "state": "SC",
+   "code": "ELA.2.AOR.10.1",
+   "confidence": "strong",
+   "rationale": "Both explain how images/visuals contribute to and clarify an informational text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0016",
+   "subject": "ela",
+   "oh": "RI.2.8",
+   "state": "SC",
+   "code": "ELA.2.AOR.5.3",
+   "confidence": "strong",
+   "rationale": "Both address the points an author makes and the reasons offered in support; SC frames the point as an author's opinion.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0017",
+   "subject": "ela",
+   "oh": "L.2.4",
+   "state": "SC",
+   "code": "ELA.2.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine the meaning of unknown words and phrases by choosing from an array of strategies, including sentence-level context clues and glossaries/dictionaries.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0018",
+   "subject": "ela",
+   "oh": "L.2.4",
+   "state": "SC",
+   "code": "ELA.2.AOR.9.1",
+   "confidence": "strong",
+   "rationale": "Ohio's prefix, root, and compound-word elements match SC's use of inflectional morphemes and grade-appropriate prefixes to determine word meaning; SC also carries phonics/spelling patterns Ohio does not.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0019",
+   "subject": "ela",
+   "oh": "L.2.5",
+   "state": "SC",
+   "code": "ELA.2.AOR.8.1",
+   "confidence": "strong",
+   "rationale": "Both target nuances in word meaning, using the same example set of closely related verbs (throw/toss) and adjectives; SC situates the work inside reading rather than a separate language strand.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0020",
+   "subject": "ela",
+   "oh": "L.2.6",
+   "state": "SC",
+   "code": "ELA.2.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "SC element d ('use words and phrases acquired through conversations, reading, and responding to texts') states Ohio's requirement almost verbatim; Ohio adds using adjectives and adverbs to describe.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0021",
+   "subject": "ela",
+   "oh": "RL.3.1",
+   "state": "SC",
+   "code": "ELA.3.AOR.6.1",
+   "confidence": "moderate",
+   "rationale": "Both require grounding understanding of a literary text in its key details; SC frames it as summarizing plot, theme, and key details rather than answering questions with explicit reference to the text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0022",
+   "subject": "ela",
+   "oh": "RL.3.2",
+   "state": "SC",
+   "code": "ELA.3.AOR.2.1",
+   "confidence": "strong",
+   "rationale": "Both determine a theme and explain how key details convey/develop it in a literary text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0023",
+   "subject": "ela",
+   "oh": "RL.3.2",
+   "state": "SC",
+   "code": "ELA.3.AOR.6.1",
+   "confidence": "strong",
+   "rationale": "Ohio's retell-stories component matches SC's summarize a literary text including plot, theme, and key details; Ohio names fables, folktales, and myths, SC does not specify genres.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0024",
+   "subject": "ela",
+   "oh": "RL.3.3",
+   "state": "SC",
+   "code": "ELA.3.AOR.1.1",
+   "confidence": "strong",
+   "rationale": "Both describe characters and explain how their actions/development shape the sequence of events or plot.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0025",
+   "subject": "ela",
+   "oh": "RL.3.4",
+   "state": "SC",
+   "code": "ELA.3.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine the meaning of words and phrases as used in a text; SC enumerates the strategies (context clues, print and digital reference materials).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0026",
+   "subject": "ela",
+   "oh": "RL.3.4",
+   "state": "SC",
+   "code": "ELA.3.AOR.8.1",
+   "confidence": "strong",
+   "rationale": "Ohio's literal-versus-nonliteral distinction matches SC element a almost verbatim, including the 'take steps' example.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0027",
+   "subject": "ela",
+   "oh": "RL.3.5",
+   "state": "SC",
+   "code": "ELA.3.AOR.5.1",
+   "confidence": "strong",
+   "rationale": "Both use the parts of literary texts (chapters, scenes, stanzas) and explain how each successive section builds on earlier ones to form the overall structure.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0028",
+   "subject": "ela",
+   "oh": "RL.3.6",
+   "state": "SC",
+   "code": "ELA.3.AOR.3.1",
+   "confidence": "strong",
+   "rationale": "Both distinguish differing points of view/perspectives in a literary text; Ohio names first- and third-person narration where SC contrasts characters' perspectives with each other and with the reader's.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0029",
+   "subject": "ela",
+   "oh": "RL.3.7",
+   "state": "SC",
+   "code": "ELA.3.AOR.10.1",
+   "confidence": "strong",
+   "rationale": "Both explain how a text's illustrations/visuals contribute to what the words convey.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0030",
+   "subject": "ela",
+   "oh": "RI.3.1",
+   "state": "SC",
+   "code": "ELA.3.AOR.6.1",
+   "confidence": "moderate",
+   "rationale": "Both require understanding of an informational text grounded in its details; SC frames it as summarizing central idea and supporting details rather than answering questions with explicit textual reference.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0031",
+   "subject": "ela",
+   "oh": "RI.3.2",
+   "state": "SC",
+   "code": "ELA.3.AOR.2.2",
+   "confidence": "strong",
+   "rationale": "Both determine the main/central idea of an informational text and explain the supporting key details.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0032",
+   "subject": "ela",
+   "oh": "RI.3.2",
+   "state": "SC",
+   "code": "ELA.3.AOR.6.1",
+   "confidence": "strong",
+   "rationale": "Ohio's retell-the-key-details component matches SC's summarize an informational text with a central idea and supporting details.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0033",
+   "subject": "ela",
+   "oh": "RI.3.3",
+   "state": "SC",
+   "code": "ELA.3.AOR.5.2",
+   "confidence": "strong",
+   "rationale": "Ohio's time/sequence and cause-effect relationships among events, ideas, or steps match SC's grade 3 text structures of description/list and cause and effect.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0034",
+   "subject": "ela",
+   "oh": "RI.3.4",
+   "state": "SC",
+   "code": "ELA.3.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine the meaning of words and phrases in grade-level text; Ohio specifies general academic and domain-specific vocabulary, SC specifies the strategies used.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0035",
+   "subject": "ela",
+   "oh": "RI.3.5",
+   "state": "SC",
+   "code": "ELA.3.AOR.5.2",
+   "confidence": "moderate",
+   "rationale": "Both concern informational text features; Ohio's purpose is locating relevant information (and includes digital search tools), while SC asks how the features contribute to meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0036",
+   "subject": "ela",
+   "oh": "RI.3.6",
+   "state": "SC",
+   "code": "ELA.3.AOR.4.1",
+   "confidence": "strong",
+   "rationale": "Both attend to the author's perspective on a topic; Ohio requires distinguishing the reader's own perspective from the author's, which SC leaves implicit.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0037",
+   "subject": "ela",
+   "oh": "RI.3.7",
+   "state": "SC",
+   "code": "ELA.3.AOR.10.1",
+   "confidence": "strong",
+   "rationale": "Both use information from illustrations, maps, and photographs together with the words to understand a text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0038",
+   "subject": "ela",
+   "oh": "RI.3.8",
+   "state": "SC",
+   "code": "ELA.3.AOR.5.3",
+   "confidence": "strong",
+   "rationale": "Both describe the relationship between an author's points/claim and the reasons or evidence given in support.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0039",
+   "subject": "ela",
+   "oh": "L.3.4",
+   "state": "SC",
+   "code": "ELA.3.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine or clarify the meaning of unknown and multiple-meaning words using a range of strategies, including sentence-level context and print/digital reference materials.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0040",
+   "subject": "ela",
+   "oh": "L.3.4",
+   "state": "SC",
+   "code": "ELA.3.AOR.9.1",
+   "confidence": "strong",
+   "rationale": "Ohio's known-affix and known-root elements match SC's use of derivational morphemes, prefixes, and suffixes to determine word meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0041",
+   "subject": "ela",
+   "oh": "L.3.5",
+   "state": "SC",
+   "code": "ELA.3.AOR.8.1",
+   "confidence": "strong",
+   "rationale": "SC's three elements (literal/nonliteral, real-life connections, word relationships) restate Ohio's elements almost verbatim; SC adds synonyms/antonyms where Ohio names shades of meaning among states of mind.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0042",
+   "subject": "ela",
+   "oh": "L.3.6",
+   "state": "SC",
+   "code": "ELA.3.AOR.7.1",
+   "confidence": "moderate",
+   "rationale": "SC's vocabulary benchmark covers building and integrating word knowledge through reference materials, but it is framed as determining meaning rather than Ohio's acquiring and accurately using academic and domain-specific vocabulary.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0043",
+   "subject": "ela",
+   "oh": "RL.4.1",
+   "state": "SC",
+   "code": "ELA.4.AOR.6.1",
+   "confidence": "moderate",
+   "rationale": "Both require accounting for what a literary text says using its details; SC frames this as summarizing plot, theme, and relevant key details and has no standalone benchmark for citing details or drawing inferences.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0044",
+   "subject": "ela",
+   "oh": "RL.4.2",
+   "state": "SC",
+   "code": "ELA.4.AOR.2.1",
+   "confidence": "strong",
+   "rationale": "Both determine a theme of a literary text from details; SC explicitly includes implied themes as well as explicit ones.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0045",
+   "subject": "ela",
+   "oh": "RL.4.2",
+   "state": "SC",
+   "code": "ELA.4.AOR.6.1",
+   "confidence": "strong",
+   "rationale": "Ohio's summarize-incorporating-a-theme component matches SC's summary of a literary text including plot, theme, and relevant key details.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0046",
+   "subject": "ela",
+   "oh": "RL.4.3",
+   "state": "SC",
+   "code": "ELA.4.AOR.1.1",
+   "confidence": "strong",
+   "rationale": "Both analyze character, setting, and event in depth; SC specifies the causal frame (setting and conflict cause characters to change, conflict drives plot) that Ohio leaves open.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0047",
+   "subject": "ela",
+   "oh": "RL.4.4",
+   "state": "SC",
+   "code": "ELA.4.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine the meaning of words and phrases as they are used in a text; Ohio adds words alluding to mythological characters, which SC does not name.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0048",
+   "subject": "ela",
+   "oh": "RL.4.4",
+   "state": "SC",
+   "code": "ELA.4.AOR.8.1",
+   "confidence": "moderate",
+   "rationale": "SC covers an author's use of words and phrases (nonliteral meanings, similes, metaphors, idioms), which overlaps Ohio's in-text word meaning work but not its mythological-allusion focus.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0049",
+   "subject": "ela",
+   "oh": "RL.4.5",
+   "state": "SC",
+   "code": "ELA.4.AOR.5.1",
+   "confidence": "strong",
+   "rationale": "Both compare the structural elements of poems, drama, and prose/narrative; Ohio additionally lists the specific structural terms students must use when writing or speaking.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0050",
+   "subject": "ela",
+   "oh": "RL.4.6",
+   "state": "SC",
+   "code": "ELA.4.AOR.3.1a",
+   "confidence": "strong",
+   "rationale": "Ohio's 'explain the differences in the point(s) of view in a text' matches SC's compare and contrast of narration point of view, including first versus third person.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0051",
+   "subject": "ela",
+   "oh": "RL.4.6",
+   "state": "SC",
+   "code": "ELA.4.AOR.3.1b",
+   "confidence": "strong",
+   "rationale": "Ohio's 'different perspectives of the characters' matches SC's explanation of how different characters' perspectives impact a literary text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0052",
+   "subject": "ela",
+   "oh": "RL.4.7",
+   "state": "SC",
+   "code": "ELA.4.AOR.10.1",
+   "confidence": "moderate",
+   "rationale": "Both relate visual/multimedia elements to a text's meaning; Ohio requires connecting a story to a visual or oral presentation of that same text, while SC stops at explaining how visuals and multimedia contribute to meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0053",
+   "subject": "ela",
+   "oh": "RI.4.1",
+   "state": "SC",
+   "code": "ELA.4.AOR.6.1",
+   "confidence": "moderate",
+   "rationale": "Both require accounting for what an informational text says using its details; SC frames this as summarizing central idea and relevant supporting details rather than referring to details and drawing inferences.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0054",
+   "subject": "ela",
+   "oh": "RI.4.2",
+   "state": "SC",
+   "code": "ELA.4.AOR.2.2",
+   "confidence": "strong",
+   "rationale": "Both determine the main/central idea of an informational text and explain how supporting details develop it; SC explicitly includes implied central ideas.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0055",
+   "subject": "ela",
+   "oh": "RI.4.2",
+   "state": "SC",
+   "code": "ELA.4.AOR.6.1",
+   "confidence": "strong",
+   "rationale": "Ohio's summary component matches SC's summary of an informational text including a central idea and relevant supporting details.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0056",
+   "subject": "ela",
+   "oh": "RI.4.3",
+   "state": "SC",
+   "code": "ELA.4.AOR.5.2",
+   "confidence": "moderate",
+   "rationale": "Ohio's 'what happened and why' in a historical, scientific, or technical text overlaps SC's grade 4 text structures (chronological, problem and solution); SC frames the task as identifying structure rather than explaining the content itself.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0057",
+   "subject": "ela",
+   "oh": "RI.4.4",
+   "state": "SC",
+   "code": "ELA.4.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine the meaning of words and phrases in grade-level text; Ohio names general academic and domain-specific vocabulary, SC names the strategies used.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0058",
+   "subject": "ela",
+   "oh": "RI.4.5",
+   "state": "SC",
+   "code": "ELA.4.AOR.5.2",
+   "confidence": "strong",
+   "rationale": "Both describe the overall structure of an informational text; SC's named structures (problem and solution, chronological, compare and contrast) largely mirror Ohio's list.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0059",
+   "subject": "ela",
+   "oh": "RI.4.7",
+   "state": "SC",
+   "code": "ELA.4.AOR.10.1",
+   "confidence": "strong",
+   "rationale": "Both interpret information presented visually or through multimedia and explain how it contributes to understanding the text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0060",
+   "subject": "ela",
+   "oh": "RI.4.8",
+   "state": "SC",
+   "code": "ELA.4.AOR.5.3",
+   "confidence": "strong",
+   "rationale": "Both explain how an author uses evidence (and, in SC, reasons) to support particular points or claims in an informational text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0061",
+   "subject": "ela",
+   "oh": "L.4.4",
+   "state": "SC",
+   "code": "ELA.4.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine or clarify the meaning of unknown and multiple-meaning words using context clues and print/digital reference materials, including pronunciation and precise meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0062",
+   "subject": "ela",
+   "oh": "L.4.4",
+   "state": "SC",
+   "code": "ELA.4.AOR.9.1",
+   "confidence": "strong",
+   "rationale": "Ohio's Greek and Latin affixes and roots element matches SC's use of common Greek and Latin roots, base words, and affixes to determine word meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0063",
+   "subject": "ela",
+   "oh": "L.4.5",
+   "state": "SC",
+   "code": "ELA.4.AOR.8.1",
+   "confidence": "strong",
+   "rationale": "SC's elements (similes, metaphors, idioms; synonym and antonym relationships) restate Ohio's elements; SC adds literal versus nonliteral meaning and Ohio adds adages and proverbs.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0064",
+   "subject": "ela",
+   "oh": "L.4.5",
+   "state": "SC",
+   "code": "ELA.4.AOR.1.2",
+   "confidence": "moderate",
+   "rationale": "Both work with figurative language; SC asks how it impacts meaning and the reader's experience in literary text, where Ohio asks students to explain the meaning of specific figures of speech.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0065",
+   "subject": "ela",
+   "oh": "L.4.6",
+   "state": "SC",
+   "code": "ELA.4.AOR.7.1",
+   "confidence": "moderate",
+   "rationale": "SC's vocabulary benchmark covers building and integrating word knowledge from reference materials, but frames the work as determining meaning rather than Ohio's acquiring and accurately using academic and domain-specific vocabulary.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0066",
+   "subject": "ela",
+   "oh": "RL.5.1",
+   "state": "SC",
+   "code": "ELA.5.AOR.6.1",
+   "confidence": "moderate",
+   "rationale": "Both require accounting for what a literary text says based on its details; SC frames this as summarizing and has no standalone benchmark for quoting accurately or drawing inferences.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0067",
+   "subject": "ela",
+   "oh": "RL.5.2",
+   "state": "SC",
+   "code": "ELA.5.AOR.2.1",
+   "confidence": "strong",
+   "rationale": "Both determine a theme and trace how details develop it across a literary text; SC explicitly includes implied themes, Ohio names characters' responses and a speaker's reflection as the evidence sources.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0068",
+   "subject": "ela",
+   "oh": "RL.5.2",
+   "state": "SC",
+   "code": "ELA.5.AOR.6.1",
+   "confidence": "strong",
+   "rationale": "Ohio's summarize-incorporating-a-theme component matches SC's summary of a literary text including plot, theme, and relevant key details.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0069",
+   "subject": "ela",
+   "oh": "RL.5.3",
+   "state": "SC",
+   "code": "ELA.5.AOR.1.1",
+   "confidence": "moderate",
+   "rationale": "Both analyze characters, setting, and events using specific details; Ohio requires comparing and contrasting two or more of them, while SC asks how they impact plot development.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0070",
+   "subject": "ela",
+   "oh": "RL.5.4",
+   "state": "SC",
+   "code": "ELA.5.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine the meaning of words and phrases as they are used in a text, choosing among strategies.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0071",
+   "subject": "ela",
+   "oh": "RL.5.4",
+   "state": "SC",
+   "code": "ELA.5.AOR.8.1",
+   "confidence": "strong",
+   "rationale": "Ohio's figurative-language clause matches SC's recognize and explain the meaning of figurative language, including similes and metaphors, in context; Ohio also names idioms.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0072",
+   "subject": "ela",
+   "oh": "RL.5.5",
+   "state": "SC",
+   "code": "ELA.5.AOR.5.1",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match: both explain how a sequence of chapters, scenes, or stanzas fits together to provide the overall structure of a story, drama, or poem.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0073",
+   "subject": "ela",
+   "oh": "RL.5.6",
+   "state": "SC",
+   "code": "ELA.5.AOR.3.1a",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match: both explain how the point of view from which a story is narrated influences how events are described.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0074",
+   "subject": "ela",
+   "oh": "RL.5.6",
+   "state": "SC",
+   "code": "ELA.5.AOR.3.1b",
+   "confidence": "moderate",
+   "rationale": "Ohio's perspective clause overlaps SC's explanation of how an author reveals characters' perspectives; Ohio centers the narrator or speaker rather than the characters.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0075",
+   "subject": "ela",
+   "oh": "RL.5.7",
+   "state": "SC",
+   "code": "ELA.5.AOR.10.1",
+   "confidence": "moderate",
+   "rationale": "Both analyze how visual and multimedia elements shape a text; SC requires comparing a print format with a non-print format, where Ohio analyzes contribution to meaning, tone, mood, or appeal within one text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0076",
+   "subject": "ela",
+   "oh": "RI.5.1",
+   "state": "SC",
+   "code": "ELA.5.AOR.6.1",
+   "confidence": "moderate",
+   "rationale": "Both require accounting for what an informational text says based on its details; SC frames this as summarizing central idea and relevant supporting details rather than quoting accurately and inferring.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0077",
+   "subject": "ela",
+   "oh": "RI.5.2",
+   "state": "SC",
+   "code": "ELA.5.AOR.2.2",
+   "confidence": "strong",
+   "rationale": "Both determine central ideas of an informational text and explain how details develop them across the text; SC includes implied central ideas.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0078",
+   "subject": "ela",
+   "oh": "RI.5.2",
+   "state": "SC",
+   "code": "ELA.5.AOR.6.1",
+   "confidence": "strong",
+   "rationale": "Ohio's summary component matches SC's summary of an informational text including a central idea and relevant supporting details.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0079",
+   "subject": "ela",
+   "oh": "RI.5.3",
+   "state": "SC",
+   "code": "ELA.5.AOR.2.2",
+   "confidence": "moderate",
+   "rationale": "Both track how ideas, individuals, and events are developed across an informational text using specific information; Ohio asks explicitly for the relationships or interactions among them, which SC folds into central-idea development.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0080",
+   "subject": "ela",
+   "oh": "RI.5.4",
+   "state": "SC",
+   "code": "ELA.5.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine the meaning of words and phrases in grade-level text; Ohio names general academic and domain-specific vocabulary, SC names the strategies used.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0081",
+   "subject": "ela",
+   "oh": "RI.5.5",
+   "state": "SC",
+   "code": "ELA.5.AOR.5.2",
+   "confidence": "strong",
+   "rationale": "Both compare and contrast the structure of two or more informational texts; SC adds text features alongside structures.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0082",
+   "subject": "ela",
+   "oh": "RI.5.6",
+   "state": "SC",
+   "code": "ELA.5.AOR.4.1",
+   "confidence": "strong",
+   "rationale": "Both analyze multiple accounts of the same event or topic and the differences in the perspectives represented; SC specifies a primary and a secondary account.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0083",
+   "subject": "ela",
+   "oh": "RI.5.7",
+   "state": "SC",
+   "code": "ELA.5.R.1.1",
+   "confidence": "moderate",
+   "rationale": "Both draw on multiple print and digital/multimedia sources to answer a question; SC places this in the research strand as consulting a variety of sources for inquiry rather than locating an answer efficiently.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0084",
+   "subject": "ela",
+   "oh": "RI.5.7",
+   "state": "SC",
+   "code": "ELA.5.R.1.3",
+   "confidence": "moderate",
+   "rationale": "Ohio's efficient location of an answer depends on the same judgment SC names as determining which information is relevant to the topic; SC does not include Ohio's speed/problem-solving framing.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0085",
+   "subject": "ela",
+   "oh": "RI.5.8",
+   "state": "SC",
+   "code": "ELA.5.AOR.5.3",
+   "confidence": "strong",
+   "rationale": "Both identify which evidence supports which point/claim in an informational text; SC frames it as tracing the development of an author's argument.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0086",
+   "subject": "ela",
+   "oh": "RI.5.9",
+   "state": "SC",
+   "code": "ELA.5.R.1.4",
+   "confidence": "moderate",
+   "rationale": "Ohio's integration of information from several texts on one topic corresponds to SC's logically grouping related findings from a variety of sources; SC does not require writing or speaking knowledgeably from that integration.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0087",
+   "subject": "ela",
+   "oh": "L.5.4",
+   "state": "SC",
+   "code": "ELA.5.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine or clarify the meaning of unknown and multiple-meaning words using context clues and print/digital reference materials for pronunciation and precise meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0088",
+   "subject": "ela",
+   "oh": "L.5.4",
+   "state": "SC",
+   "code": "ELA.5.AOR.9.1",
+   "confidence": "strong",
+   "rationale": "Ohio's Greek and Latin affixes and roots element matches SC's use of affixes and Greek and Latin roots to determine or clarify precise word meanings.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0089",
+   "subject": "ela",
+   "oh": "L.5.5",
+   "state": "SC",
+   "code": "ELA.5.AOR.8.1",
+   "confidence": "strong",
+   "rationale": "SC's elements (figurative language including similes and metaphors; relationships among synonyms, antonyms, homographs) restate Ohio's elements; Ohio also names idioms, adages, and proverbs.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0090",
+   "subject": "ela",
+   "oh": "L.5.5",
+   "state": "SC",
+   "code": "ELA.5.AOR.1.2",
+   "confidence": "moderate",
+   "rationale": "Both work with figurative language; SC analyzes how it impacts meaning and the reader's experience, where Ohio asks students to interpret specific figures of speech.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0091",
+   "subject": "ela",
+   "oh": "L.5.6",
+   "state": "SC",
+   "code": "ELA.5.AOR.7.1",
+   "confidence": "moderate",
+   "rationale": "SC's vocabulary benchmark covers building and integrating word knowledge from reference materials, but frames the work as determining meaning rather than Ohio's acquiring and accurately using academic and domain-specific vocabulary.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0092",
+   "subject": "ela",
+   "oh": "RL.6.1",
+   "state": "SC",
+   "code": "ELA.6.AOR.6.1",
+   "confidence": "moderate",
+   "rationale": "Both require an accurate account of what a literary text says; SC frames it as summarizing or paraphrasing to enhance comprehension and has no standalone cite-textual-evidence benchmark.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0093",
+   "subject": "ela",
+   "oh": "RL.6.2",
+   "state": "SC",
+   "code": "ELA.6.AOR.2.1",
+   "confidence": "strong",
+   "rationale": "Both determine a theme and analyze how particular details convey and develop it over the course of a literary text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0094",
+   "subject": "ela",
+   "oh": "RL.6.2",
+   "state": "SC",
+   "code": "ELA.6.AOR.6.1",
+   "confidence": "strong",
+   "rationale": "Ohio's objective-summary component matches SC's summarize and/or paraphrase grade-level text; SC does not specify that the summary must incorporate theme and story details.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0095",
+   "subject": "ela",
+   "oh": "RL.6.3",
+   "state": "SC",
+   "code": "ELA.6.AOR.1.1",
+   "confidence": "strong",
+   "rationale": "Both analyze how specific events and details drive plot development and reveal how characters respond or change.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0096",
+   "subject": "ela",
+   "oh": "RL.6.4",
+   "state": "SC",
+   "code": "ELA.6.AOR.8.1",
+   "confidence": "strong",
+   "rationale": "Both interpret an author's figurative and connotative language in context, including distinguishing connotations of words with similar denotations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0097",
+   "subject": "ela",
+   "oh": "RL.6.4",
+   "state": "SC",
+   "code": "ELA.6.AOR.1.2",
+   "confidence": "strong",
+   "rationale": "Ohio's analysis of the impact of word choices on meaning and tone matches SC's explanation of how figurative language impacts mood, tone, and meaning; Ohio adds sensory language.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0098",
+   "subject": "ela",
+   "oh": "RL.6.5",
+   "state": "SC",
+   "code": "ELA.6.AOR.5.1",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match: both analyze how a particular sentence, chapter, scene, or stanza fits into the overall structure and contributes to the development of theme, setting, or plot.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0099",
+   "subject": "ela",
+   "oh": "RL.6.6",
+   "state": "SC",
+   "code": "ELA.6.AOR.3.1",
+   "confidence": "strong",
+   "rationale": "Both explain how point of view develops the perspective of a narrator or speaker; SC frames it through multiple narrators or shifts in point of view.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0100",
+   "subject": "ela",
+   "oh": "RL.6.7",
+   "state": "SC",
+   "code": "ELA.6.AOR.10.1",
+   "confidence": "strong",
+   "rationale": "Both compare a text with an audio, video, or live version of the same text and analyze how each medium's portrayal differs; SC frames the difference in terms of impact on the audience.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0101",
+   "subject": "ela",
+   "oh": "RI.6.1",
+   "state": "SC",
+   "code": "ELA.6.AOR.6.1",
+   "confidence": "moderate",
+   "rationale": "Both require an accurate account of what an informational text says; SC frames it as summarizing or paraphrasing rather than citing textual evidence and drawing inferences.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0102",
+   "subject": "ela",
+   "oh": "RI.6.2",
+   "state": "SC",
+   "code": "ELA.6.AOR.2.2",
+   "confidence": "strong",
+   "rationale": "Both determine a central idea and analyze how supporting details convey and develop it over the course of an informational text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0103",
+   "subject": "ela",
+   "oh": "RI.6.2",
+   "state": "SC",
+   "code": "ELA.6.AOR.6.1",
+   "confidence": "strong",
+   "rationale": "Ohio's objective-summary component matches SC's summarize and/or paraphrase grade-level text; SC does not require that the summary include the central idea and relevant details.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0104",
+   "subject": "ela",
+   "oh": "RI.6.3",
+   "state": "SC",
+   "code": "ELA.6.AOR.2.2",
+   "confidence": "moderate",
+   "rationale": "Both track how an idea, individual, or event is elaborated across an informational text through supporting details; SC frames the target as the development of a central idea rather than a key individual, event, or idea.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0105",
+   "subject": "ela",
+   "oh": "RI.6.4",
+   "state": "SC",
+   "code": "ELA.6.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine the meaning of words and phrases as used in a text, using context, background knowledge, and reference materials.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0106",
+   "subject": "ela",
+   "oh": "RI.6.4",
+   "state": "SC",
+   "code": "ELA.6.AOR.8.1",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match on figurative, connotative, and technical meanings of language in informational text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0107",
+   "subject": "ela",
+   "oh": "RI.6.5",
+   "state": "SC",
+   "code": "ELA.6.AOR.5.2",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match: both analyze how an individual sentence, paragraph, chapter, or section fits into the overall structure of an informational text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0108",
+   "subject": "ela",
+   "oh": "RI.6.6",
+   "state": "SC",
+   "code": "ELA.6.AOR.4.1",
+   "confidence": "moderate",
+   "rationale": "Both address how an author's perspective shapes a text; SC's grade 6 benchmark reaches perspective only through comparing a primary and secondary account, and has no single-text author's-purpose benchmark.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0109",
+   "subject": "ela",
+   "oh": "RI.6.7",
+   "state": "SC",
+   "code": "ELA.6.AOR.10.1",
+   "confidence": "strong",
+   "rationale": "Both work across media and formats presenting the same topic; Ohio integrates them into a coherent understanding while SC analyzes how each medium's portrayal impacts the audience.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0110",
+   "subject": "ela",
+   "oh": "RI.6.8",
+   "state": "SC",
+   "code": "ELA.6.AOR.5.3",
+   "confidence": "strong",
+   "rationale": "Both trace and evaluate an author's argument and claims; SC names types of reasoning and the appeals of ethos, pathos, and logos where Ohio names supported versus unsupported claims.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0111",
+   "subject": "ela",
+   "oh": "RI.6.9",
+   "state": "SC",
+   "code": "ELA.6.AOR.4.1",
+   "confidence": "strong",
+   "rationale": "Ohio's comparison of one author's presentation of events with another's (e.g., memoir versus biography) matches SC's analysis of a primary and a secondary account of the same event and how perspective affects content and style.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0112",
+   "subject": "ela",
+   "oh": "L.6.4",
+   "state": "SC",
+   "code": "ELA.6.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine or clarify the meaning of unknown and multiple-meaning words using sentence/paragraph context, a word's position or function, and reference materials for meaning and part of speech.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0113",
+   "subject": "ela",
+   "oh": "L.6.4",
+   "state": "SC",
+   "code": "ELA.6.AOR.9.1",
+   "confidence": "strong",
+   "rationale": "Ohio's Greek or Latin affixes and roots element matches SC's application of affix and Greek/Latin root knowledge to clarify precise word meanings.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0114",
+   "subject": "ela",
+   "oh": "L.6.5",
+   "state": "SC",
+   "code": "ELA.6.AOR.8.1",
+   "confidence": "strong",
+   "rationale": "SC's three elements (figures of speech in context, relationships between words, connotations of words with similar denotations) restate Ohio's elements, sharing the economical/thrifty example.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0115",
+   "subject": "ela",
+   "oh": "L.6.6",
+   "state": "SC",
+   "code": "ELA.6.AOR.7.1",
+   "confidence": "moderate",
+   "rationale": "Ohio's 'gather vocabulary knowledge when considering a word important to comprehension' aligns with SC's use of background knowledge and reference materials, but SC omits Ohio's acquire-and-use-accurately requirement.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0116",
+   "subject": "ela",
+   "oh": "RL.7.1",
+   "state": "SC",
+   "code": "ELA.7.AOR.6.1",
+   "confidence": "moderate",
+   "rationale": "Both require an accurate account of what a literary text says; SC frames it as summarizing or paraphrasing and has no standalone cite-textual-evidence benchmark.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0117",
+   "subject": "ela",
+   "oh": "RL.7.2",
+   "state": "SC",
+   "code": "ELA.7.AOR.2.1",
+   "confidence": "strong",
+   "rationale": "Both analyze how a theme develops over the course of a literary text; SC raises the demand by requiring comparison of two or more themes.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0118",
+   "subject": "ela",
+   "oh": "RL.7.2",
+   "state": "SC",
+   "code": "ELA.7.AOR.6.1",
+   "confidence": "strong",
+   "rationale": "Ohio's objective-summary component matches SC's summarize and/or paraphrase grade-level text; SC does not require the summary to carry theme development.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0119",
+   "subject": "ela",
+   "oh": "RL.7.3",
+   "state": "SC",
+   "code": "ELA.7.AOR.1.1",
+   "confidence": "strong",
+   "rationale": "Both analyze how elements of a story or drama interact to develop plot, characters, and meaning; SC names dialogue, events, and descriptive details as the elements.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0120",
+   "subject": "ela",
+   "oh": "RL.7.4",
+   "state": "SC",
+   "code": "ELA.7.AOR.8.1",
+   "confidence": "strong",
+   "rationale": "Both determine figurative and connotative meanings of language in context; SC adds technical language, Ohio adds sound repetition such as rhyme and alliteration, which SC does not cover.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0121",
+   "subject": "ela",
+   "oh": "RL.7.4",
+   "state": "SC",
+   "code": "ELA.7.AOR.1.2",
+   "confidence": "strong",
+   "rationale": "Ohio's analysis of the impact of specific language choices on meaning and tone matches SC's analysis of how figurative language impacts mood, tone, and meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0122",
+   "subject": "ela",
+   "oh": "RL.7.5",
+   "state": "SC",
+   "code": "ELA.7.AOR.5.1",
+   "confidence": "strong",
+   "rationale": "Both analyze how the form or structure of a literary text (drama, poem, narrative) contributes to its meaning.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0123",
+   "subject": "ela",
+   "oh": "RL.7.6",
+   "state": "SC",
+   "code": "ELA.7.AOR.3.1b",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match: both analyze how an author uses point of view to develop and contrast the perspectives of different characters.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0124",
+   "subject": "ela",
+   "oh": "RL.7.6",
+   "state": "SC",
+   "code": "ELA.7.AOR.3.1a",
+   "confidence": "strong",
+   "rationale": "Ohio's narrator clause matches SC's explanation of the influence of a narrator and narrative shifts in point of view; SC adds the unreliable narrator.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0125",
+   "subject": "ela",
+   "oh": "RL.7.7",
+   "state": "SC",
+   "code": "ELA.7.AOR.10.1",
+   "confidence": "strong",
+   "rationale": "Both compare a written text with an audio, filmed, staged, or multimedia version and analyze the effects specific to each medium.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0126",
+   "subject": "ela",
+   "oh": "RI.7.1",
+   "state": "SC",
+   "code": "ELA.7.AOR.6.1",
+   "confidence": "moderate",
+   "rationale": "Both require an accurate account of what an informational text says; SC frames it as summarizing or paraphrasing rather than citing several pieces of evidence and inferring.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0127",
+   "subject": "ela",
+   "oh": "RI.7.2",
+   "state": "SC",
+   "code": "ELA.7.AOR.2.2",
+   "confidence": "strong",
+   "rationale": "Both determine two or more central ideas in an informational text and analyze their development over the course of the text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0128",
+   "subject": "ela",
+   "oh": "RI.7.2",
+   "state": "SC",
+   "code": "ELA.7.AOR.6.1",
+   "confidence": "strong",
+   "rationale": "Ohio's objective-summary component matches SC's summarize and/or paraphrase grade-level text; SC does not require the summary to include central-idea development.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0129",
+   "subject": "ela",
+   "oh": "RI.7.4",
+   "state": "SC",
+   "code": "ELA.7.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine the meaning of words and phrases as used in a text, using context, background knowledge, and reference materials.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0130",
+   "subject": "ela",
+   "oh": "RI.7.4",
+   "state": "SC",
+   "code": "ELA.7.AOR.8.1",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match on interpreting figurative, connotative, and technical language and its function in the text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0131",
+   "subject": "ela",
+   "oh": "RI.7.5",
+   "state": "SC",
+   "code": "ELA.7.AOR.5.2",
+   "confidence": "strong",
+   "rationale": "Both analyze how the structure of an informational text's sections contributes to the whole; SC ties that structure to conveying the author's purpose where Ohio ties it to the development of ideas.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0132",
+   "subject": "ela",
+   "oh": "RI.7.6",
+   "state": "SC",
+   "code": "ELA.7.AOR.4.1",
+   "confidence": "strong",
+   "rationale": "Both determine an author's perspective or purpose and analyze how the author advances it; SC specifies rhetoric where Ohio specifies distinguishing the author's position from that of others.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0133",
+   "subject": "ela",
+   "oh": "RI.7.7",
+   "state": "SC",
+   "code": "ELA.7.AOR.10.1",
+   "confidence": "strong",
+   "rationale": "Both compare a text with an audio, video, or multimedia version and analyze each medium's portrayal of the subject.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0134",
+   "subject": "ela",
+   "oh": "RI.7.8",
+   "state": "SC",
+   "code": "ELA.7.AOR.5.3",
+   "confidence": "strong",
+   "rationale": "Both trace an author's argument and specific claims; SC focuses on types of reasoning and rhetorical appeals, Ohio on whether reasoning is sound and evidence relevant and sufficient.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0135",
+   "subject": "ela",
+   "oh": "L.7.4",
+   "state": "SC",
+   "code": "ELA.7.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine or clarify the meaning of unknown and multiple-meaning words using sentence/paragraph context, a word's position or function, and reference materials for meaning and part of speech.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0136",
+   "subject": "ela",
+   "oh": "L.7.4",
+   "state": "SC",
+   "code": "ELA.7.AOR.9.1",
+   "confidence": "strong",
+   "rationale": "Ohio's Greek or Latin affixes and roots element matches SC's application of affix and Greek/Latin root knowledge to clarify precise word meanings.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0137",
+   "subject": "ela",
+   "oh": "L.7.5",
+   "state": "SC",
+   "code": "ELA.7.AOR.8.1",
+   "confidence": "strong",
+   "rationale": "SC's three elements (figures of speech in context, relationships between words, connotations of words with similar denotations) restate Ohio's elements, sharing the polite/diplomatic example.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0138",
+   "subject": "ela",
+   "oh": "L.7.6",
+   "state": "SC",
+   "code": "ELA.7.AOR.7.1",
+   "confidence": "moderate",
+   "rationale": "Ohio's 'gather vocabulary knowledge when considering a word important to comprehension' aligns with SC's use of background knowledge and reference materials, but SC omits Ohio's acquire-and-use-accurately requirement.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0139",
+   "subject": "ela",
+   "oh": "RL.8.1",
+   "state": "SC",
+   "code": "ELA.8.AOR.6.1",
+   "confidence": "moderate",
+   "rationale": "Both require an accurate account of what a literary text says; SC frames it as summarizing or paraphrasing and has no standalone cite-strongest-evidence benchmark.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0140",
+   "subject": "ela",
+   "oh": "RL.8.2",
+   "state": "SC",
+   "code": "ELA.8.AOR.2.1",
+   "confidence": "strong",
+   "rationale": "Both analyze how key details develop a theme across a literary text; SC requires two or more themes and extends across texts, where Ohio ties theme to characters, setting, and plot.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0141",
+   "subject": "ela",
+   "oh": "RL.8.2",
+   "state": "SC",
+   "code": "ELA.8.AOR.6.1",
+   "confidence": "strong",
+   "rationale": "Ohio's objective-summary component matches SC's summarize and/or paraphrase grade-level text; SC does not require the summary to carry theme and its relationship to story elements.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0142",
+   "subject": "ela",
+   "oh": "RL.8.3",
+   "state": "SC",
+   "code": "ELA.8.AOR.1.1",
+   "confidence": "strong",
+   "rationale": "Both analyze how key story elements shape the text's meaning; Ohio specifies lines of dialogue and incidents that propel action or reveal character, while SC states the skill generally.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0143",
+   "subject": "ela",
+   "oh": "RL.8.4",
+   "state": "SC",
+   "code": "ELA.8.AOR.8.1",
+   "confidence": "strong",
+   "rationale": "Both interpret figurative and connotative language in context and distinguish connotations of words with similar denotations, sharing the willful/resolute example.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0144",
+   "subject": "ela",
+   "oh": "RL.8.4",
+   "state": "SC",
+   "code": "ELA.8.AOR.1.2",
+   "confidence": "strong",
+   "rationale": "Ohio's analysis of word choices' impact on meaning, mood, and tone matches SC's analysis of how figurative language impacts mood, tone, and meaning; SC adds symbolism, Ohio adds analogies and allusions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0145",
+   "subject": "ela",
+   "oh": "RL.8.5",
+   "state": "SC",
+   "code": "ELA.8.AOR.5.1",
+   "confidence": "moderate",
+   "rationale": "Both analyze how an author's structural choices create meaning and effect; Ohio requires comparing the differing structures of two or more texts, while SC stays within a single text and names time manipulation such as flashback.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0146",
+   "subject": "ela",
+   "oh": "RL.8.6",
+   "state": "SC",
+   "code": "ELA.8.AOR.3.1",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match: both analyze how differences in points of view and perspectives create effects such as suspense and dramatic irony.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0147",
+   "subject": "ela",
+   "oh": "RL.8.7",
+   "state": "SC",
+   "code": "ELA.8.AOR.10.1",
+   "confidence": "strong",
+   "rationale": "Both evaluate a filmed or staged production against the written text; SC frames the evaluation around each medium's impact on the audience, Ohio around fidelity to the script and the choices of director and actors.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0148",
+   "subject": "ela",
+   "oh": "RI.8.1",
+   "state": "SC",
+   "code": "ELA.8.AOR.6.1",
+   "confidence": "moderate",
+   "rationale": "Both require an accurate account of what an informational text says; SC frames it as summarizing or paraphrasing rather than citing the strongest evidence and inferring.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0149",
+   "subject": "ela",
+   "oh": "RI.8.2",
+   "state": "SC",
+   "code": "ELA.8.AOR.2.2",
+   "confidence": "strong",
+   "rationale": "Both analyze how supporting details develop a central idea across an informational text; SC requires two or more central ideas and extends across texts.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0150",
+   "subject": "ela",
+   "oh": "RI.8.2",
+   "state": "SC",
+   "code": "ELA.8.AOR.6.1",
+   "confidence": "strong",
+   "rationale": "Ohio's objective-summary component matches SC's summarize and/or paraphrase grade-level text; SC does not require the summary to include central ideas and their relationships.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0151",
+   "subject": "ela",
+   "oh": "RI.8.4",
+   "state": "SC",
+   "code": "ELA.8.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine the meaning of words and phrases as used in a text, using context, background knowledge, and reference materials.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0152",
+   "subject": "ela",
+   "oh": "RI.8.4",
+   "state": "SC",
+   "code": "ELA.8.AOR.8.1",
+   "confidence": "strong",
+   "rationale": "Near-verbatim match on interpreting figurative, connotative, and technical language and analyzing how it functions in a text.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0153",
+   "subject": "ela",
+   "oh": "RI.8.5",
+   "state": "SC",
+   "code": "ELA.8.AOR.5.2",
+   "confidence": "strong",
+   "rationale": "Both analyze the structure of an individual section of an informational text and the role of its sentences; SC ties that analysis to conveying the author's purpose, Ohio to refining a key concept.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0154",
+   "subject": "ela",
+   "oh": "RI.8.6",
+   "state": "SC",
+   "code": "ELA.8.AOR.4.1",
+   "confidence": "strong",
+   "rationale": "Both analyze an author's perspective or purpose and how the author advances it; SC specifies rhetoric where Ohio specifies responding to conflicting evidence or viewpoints.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0155",
+   "subject": "ela",
+   "oh": "RI.8.7",
+   "state": "SC",
+   "code": "ELA.8.AOR.10.1",
+   "confidence": "strong",
+   "rationale": "Both evaluate how different media present the same subject; Ohio asks for the advantages and disadvantages of each medium, SC for how each medium's portrayal impacts the audience.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0156",
+   "subject": "ela",
+   "oh": "RI.8.8",
+   "state": "SC",
+   "code": "ELA.8.AOR.5.3",
+   "confidence": "strong",
+   "rationale": "Both delineate and evaluate an author's argument and claims; SC focuses on types of reasoning and rhetorical appeals, Ohio on sufficiency of evidence and recognizing irrelevant evidence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0157",
+   "subject": "ela",
+   "oh": "RI.8.9",
+   "state": "SC",
+   "code": "ELA.8.AOR.2.2",
+   "confidence": "moderate",
+   "rationale": "SC's benchmark is the only grade 8 AOR standard reaching across informational texts, but it tracks central-idea development rather than Ohio's identification of where two texts conflict on fact or interpretation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0158",
+   "subject": "ela",
+   "oh": "L.8.4",
+   "state": "SC",
+   "code": "ELA.8.AOR.7.1",
+   "confidence": "strong",
+   "rationale": "Both determine or clarify the meaning of unknown and multiple-meaning words using sentence/paragraph context, a word's position or function, and reference materials for meaning and part of speech; SC adds etymology and standard usage.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0159",
+   "subject": "ela",
+   "oh": "L.8.4",
+   "state": "SC",
+   "code": "ELA.8.AOR.9.1",
+   "confidence": "strong",
+   "rationale": "Ohio's Greek or Latin affixes and roots element matches SC's application of affix and Greek/Latin root knowledge to clarify precise word meanings.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0160",
+   "subject": "ela",
+   "oh": "L.8.5",
+   "state": "SC",
+   "code": "ELA.8.AOR.8.1",
+   "confidence": "strong",
+   "rationale": "SC's three elements (figures of speech in context, relationships between particular words, connotations of words with similar denotations) restate Ohio's elements, sharing the willful/resolute example.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ela-sc-0161",
+   "subject": "ela",
+   "oh": "L.8.6",
+   "state": "SC",
+   "code": "ELA.8.AOR.7.1",
+   "confidence": "moderate",
+   "rationale": "Ohio's 'gather vocabulary knowledge when considering a word important to comprehension' aligns with SC's use of background knowledge and reference materials, but SC omits Ohio's acquire-and-use-accurately requirement.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0001",
+   "subject": "science",
+   "oh": "2.ESS.2",
+   "state": "SC",
+   "code": "2-ESS2-3",
+   "confidence": "moderate",
+   "rationale": "Both address water existing in more than one state within Earth's systems. Ohio focuses on water vapor, condensation and evaporation in the atmosphere, while SC focuses on where water is found and that it can be solid or liquid, so the overlap is partial.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0002",
+   "subject": "science",
+   "oh": "2.ESS.3",
+   "state": "SC",
+   "code": "3-ESS2-1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 3). Both concern how weather conditions - temperature, precipitation and wind - vary over short and long (seasonal) time frames and can be described and predicted.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0003",
+   "subject": "science",
+   "oh": "2.PS.1",
+   "state": "SC",
+   "code": "3-PS2-1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 3). Both address how forces change an object's motion, including that the resulting change depends on the forces applied (balanced vs. unbalanced in SC, size of force in Ohio).",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0004",
+   "subject": "science",
+   "oh": "2.PS.1",
+   "state": "SC",
+   "code": "3-PS2-3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 3). Ohio's statement that some forces act without touching, such as a magnet moving an object, is the same content as SC's electric and magnetic interactions between objects not in contact.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0005",
+   "subject": "science",
+   "oh": "2.LS.1",
+   "state": "SC",
+   "code": "2-ESS3-1",
+   "confidence": "moderate",
+   "rationale": "Ohio covers living things changing the environments where they live; SC addresses one case of that idea, human impacts on local natural resources, and adds a design-solution focus Ohio does not have.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0006",
+   "subject": "science",
+   "oh": "2.LS.2",
+   "state": "SC",
+   "code": "3-LS4-1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 3). Both use fossil evidence of organisms that lived long ago to establish that some kinds of organisms from the past are no longer present today.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0007",
+   "subject": "science",
+   "oh": "3.ESS.2",
+   "state": "SC",
+   "code": "4-ESS3-1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 4). Both cover energy resources derived from Earth's natural resources and the distinction in how those resources are supplied and used.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0008",
+   "subject": "science",
+   "oh": "3.ESS.3",
+   "state": "SC",
+   "code": "2-ESS3-1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 2). Both address human overuse and contamination of natural resources and actions or solutions that conserve them.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0009",
+   "subject": "science",
+   "oh": "3.PS.2",
+   "state": "SC",
+   "code": "2-PS1-4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 2). Both center on heating and cooling as the cause of changes in matter; Ohio names the resulting change of state, SC asks whether such changes can be reversed.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0010",
+   "subject": "science",
+   "oh": "3.PS.3",
+   "state": "SC",
+   "code": "4-PS3-2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 4). The forms of energy Ohio names - heat, light, sound and electrical energy - are the same set SC uses for evidence that energy is transferred from place to place.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0011",
+   "subject": "science",
+   "oh": "3.LS.1",
+   "state": "SC",
+   "code": "3-LS3-1",
+   "confidence": "strong",
+   "rationale": "Both establish that offspring inherit traits from their parents and that those inherited traits vary among similar organisms.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0012",
+   "subject": "science",
+   "oh": "3.LS.1",
+   "state": "SC",
+   "code": "3-LS3-2",
+   "confidence": "strong",
+   "rationale": "Ohio's point that some behavioral traits are learned through interaction with the environment rather than inherited is the same content as SC's traits being influenced by the environment.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0013",
+   "subject": "science",
+   "oh": "3.LS.2",
+   "state": "SC",
+   "code": "3-LS4-2",
+   "confidence": "strong",
+   "rationale": "Both state that variation in inherited traits among individuals of the same kind of organism can give some individuals an advantage in surviving and reproducing.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0014",
+   "subject": "science",
+   "oh": "3.LS.2",
+   "state": "SC",
+   "code": "3-LS4-3",
+   "confidence": "moderate",
+   "rationale": "Both connect an organism's characteristics to its chances of surviving in a particular environment, though Ohio explicitly keeps the focus on the individual and excludes adaptation, which is closer to SC's framing.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0015",
+   "subject": "science",
+   "oh": "3.LS.3",
+   "state": "SC",
+   "code": "3-LS1-1",
+   "confidence": "strong",
+   "rationale": "Both cover life cycles as predictable but varied patterns of growth, reproduction and death across different organisms.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0016",
+   "subject": "science",
+   "oh": "4.ESS.1",
+   "state": "SC",
+   "code": "4-ESS2-2",
+   "confidence": "strong",
+   "rationale": "Both cover identifying the characteristic features and landforms of Earth's surface and the patterns in how they are distributed.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0017",
+   "subject": "science",
+   "oh": "4.ESS.1",
+   "state": "SC",
+   "code": "5-ESS2-2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 5). Ohio's content that about 70 percent of Earth's surface is water with only a small portion fresh water in rivers, lakes, groundwater and glaciers is the same distribution-of-water content SC graphs across reservoirs.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0018",
+   "subject": "science",
+   "oh": "4.ESS.2",
+   "state": "SC",
+   "code": "4-ESS2-1",
+   "confidence": "strong",
+   "rationale": "Both address weathering of rock by water, ice, wind and plant growth as a cause of change to Earth's surface.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0019",
+   "subject": "science",
+   "oh": "4.ESS.3",
+   "state": "SC",
+   "code": "4-ESS2-1",
+   "confidence": "strong",
+   "rationale": "Both cover erosion by liquid water, wind and ice as a process that removes and moves rock, soil and sediment, including the rate at which it occurs.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0020",
+   "subject": "science",
+   "oh": "4.PS.1",
+   "state": "SC",
+   "code": "5-PS1-2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 5). Both state that the total amount of matter is conserved when substances are heated, cooled, dissolved or mixed, or change state.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0021",
+   "subject": "science",
+   "oh": "4.PS.2",
+   "state": "SC",
+   "code": "4-PS3-2",
+   "confidence": "strong",
+   "rationale": "Both cover energy transfer from place to place by heat, light, sound and electric currents.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0022",
+   "subject": "science",
+   "oh": "4.PS.2",
+   "state": "SC",
+   "code": "4-PS3-4",
+   "confidence": "strong",
+   "rationale": "Ohio's content that electrical energy in circuits can be transformed into light, heat, sound and motion is the same energy-conversion content SC has students design a device around.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0023",
+   "subject": "science",
+   "oh": "4.LS.1",
+   "state": "SC",
+   "code": "3-LS4-3",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 3). Both state that in a given environment some organisms survive and thrive while others struggle or fail to survive.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0024",
+   "subject": "science",
+   "oh": "4.LS.1",
+   "state": "SC",
+   "code": "3-LS4-4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 3). Both address what happens to the plants and animals living in an ecosystem when that environment changes, beneficially or harmfully.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0025",
+   "subject": "science",
+   "oh": "4.LS.2",
+   "state": "SC",
+   "code": "3-LS4-1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 3). Both use fossils as a record of the types of organisms and environments that existed long ago, compared against organisms living now.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0026",
+   "subject": "science",
+   "oh": "4.LS.2",
+   "state": "SC",
+   "code": "4-ESS1-1",
+   "confidence": "moderate",
+   "rationale": "Both treat fossils in rock layers as evidence of the deep past, but Ohio's target is comparing fossil and present-day organisms and biodiversity while SC's is change in a landscape over time.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0027",
+   "subject": "science",
+   "oh": "5.ESS.2",
+   "state": "SC",
+   "code": "5-ESS1-1",
+   "confidence": "strong",
+   "rationale": "Both state that the sun is one star among many and that it appears brightest or largest only because it is the closest star to Earth.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0028",
+   "subject": "science",
+   "oh": "5.ESS.3",
+   "state": "SC",
+   "code": "5-ESS1-2",
+   "confidence": "strong",
+   "rationale": "Both cover the predictable patterns produced by Earth's rotation and revolution - day and night and the apparent change in position of the sun and stars.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0029",
+   "subject": "science",
+   "oh": "5.PS.2",
+   "state": "SC",
+   "code": "4-PS4-2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 4). Both cover light traveling from a source, reflecting off objects, and the observable consequences of that behavior.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0030",
+   "subject": "science",
+   "oh": "5.PS.2",
+   "state": "SC",
+   "code": "6-PS4-2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 6). Ohio's content that light can be reflected, refracted or absorbed when it meets an object or a new medium is the same phenomenon as SC's reflection, absorption and transmission through materials.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0031",
+   "subject": "science",
+   "oh": "5.LS.1",
+   "state": "SC",
+   "code": "5-LS2-1",
+   "confidence": "strong",
+   "rationale": "Both organize an ecosystem by the roles of producers, consumers and decomposers and trace matter moving among them and the environment.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0032",
+   "subject": "science",
+   "oh": "5.LS.2",
+   "state": "SC",
+   "code": "5-PS3-1",
+   "confidence": "strong",
+   "rationale": "Both establish that the energy organisms use for life processes originated as energy from the sun and was passed along through food.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0033",
+   "subject": "science",
+   "oh": "5.LS.2",
+   "state": "SC",
+   "code": "5-LS1-1",
+   "confidence": "strong",
+   "rationale": "Both address photosynthesis at this grade's depth: producers build their own food from air and water using light energy rather than taking it in from other organisms.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0034",
+   "subject": "science",
+   "oh": "6.ESS.2",
+   "state": "SC",
+   "code": "6-ESS2-1",
+   "confidence": "moderate",
+   "rationale": "Both concern rock formation, breakdown and transport as part of the cycling of Earth's materials, but Ohio's emphasis is identifying and classifying the three rock types, which SC does not require.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0035",
+   "subject": "science",
+   "oh": "6.ESS.3",
+   "state": "SC",
+   "code": "6-ESS2-1",
+   "confidence": "strong",
+   "rationale": "Both describe how igneous, metamorphic and sedimentary rocks form through cooling, heat and pressure, and weathering with lithification, driven by the flow of energy through Earth's materials.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0036",
+   "subject": "science",
+   "oh": "6.PS.1",
+   "state": "SC",
+   "code": "5-PS1-1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 5). Both establish that matter is composed of particles too small to see, which Ohio names as atoms.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0037",
+   "subject": "science",
+   "oh": "6.PS.1",
+   "state": "SC",
+   "code": "7-PS1-1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 7). Both cover atoms as the units of matter and molecules as two or more atoms joined together in simple and extended structures.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0038",
+   "subject": "science",
+   "oh": "6.PS.2",
+   "state": "SC",
+   "code": "6-PS1-4",
+   "confidence": "strong",
+   "rationale": "Both explain changes of state with a particle model in which adding or removing thermal energy changes particle motion and temperature.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0039",
+   "subject": "science",
+   "oh": "6.PS.2",
+   "state": "SC",
+   "code": "6-PS3-4",
+   "confidence": "strong",
+   "rationale": "Both treat temperature as a measure of the average motion of particles and heat as a transfer of energy that changes temperature or produces a phase change.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0040",
+   "subject": "science",
+   "oh": "6.PS.3",
+   "state": "SC",
+   "code": "7-PS3-1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 7). Both cover kinetic energy as the energy of objects in motion and its dependence on the mass and speed of the object.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0041",
+   "subject": "science",
+   "oh": "6.PS.3",
+   "state": "SC",
+   "code": "7-PS3-2",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 7). Both cover potential energy as energy stored because of position or arrangement; SC's interacting-at-a-distance framing matches Ohio's exclusion of chemical and elastic potential energy at this grade.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0042",
+   "subject": "science",
+   "oh": "6.LS.1",
+   "state": "SC",
+   "code": "6-LS1-1",
+   "confidence": "strong",
+   "rationale": "Both establish the cell as the fundamental unit of life and that all living things are made of one cell or many cells of different kinds.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0043",
+   "subject": "science",
+   "oh": "6.LS.3",
+   "state": "SC",
+   "code": "6-LS1-2",
+   "confidence": "strong",
+   "rationale": "Both cover the specialized parts of a cell - membrane, transport, energy capture and release, protein building, waste disposal - and how they contribute to the functioning of the cell as a whole.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0044",
+   "subject": "science",
+   "oh": "6.LS.4",
+   "state": "SC",
+   "code": "6-LS1-3",
+   "confidence": "strong",
+   "rationale": "Both cover levels of organization in which groups of cells form tissues, organs and organ systems that work together as a whole organism.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0045",
+   "subject": "science",
+   "oh": "7.ESS.1",
+   "state": "SC",
+   "code": "6-ESS2-4",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 6). Both describe the water cycle as water changing state and moving among Earth's systems, driven by energy from the sun and by gravity.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0046",
+   "subject": "science",
+   "oh": "7.ESS.2",
+   "state": "SC",
+   "code": "6-ESS2-6",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 6). Both attribute atmospheric and oceanic currents to unequal heating plus Earth's rotation and connect those circulation patterns to regional and global climate.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0047",
+   "subject": "science",
+   "oh": "7.ESS.3",
+   "state": "SC",
+   "code": "7-LS2-3",
+   "confidence": "moderate",
+   "rationale": "Overlap is limited to Ohio's biogeochemical-cycle content, the movement of elements such as carbon and nitrogen among living and nonliving parts of Earth's systems; Ohio's main focus on atmospheric layers, composition and properties has no SC counterpart.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0048",
+   "subject": "science",
+   "oh": "7.ESS.4",
+   "state": "SC",
+   "code": "8-ESS1-1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 8). Both cover the Earth-moon-sun system as the cause of moon phases, solar and lunar eclipses, and tides.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0049",
+   "subject": "science",
+   "oh": "7.ESS.5",
+   "state": "SC",
+   "code": "8-ESS1-1",
+   "confidence": "strong",
+   "rationale": "Cross-grade (SC grade 8). Both explain seasons as a cyclic pattern arising from Earth's tilt and its revolution around the sun, which changes the sunlight a location receives.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0050",
+   "subject": "science",
+   "oh": "7.PS.2",
+   "state": "SC",
+   "code": "7-PS1-5",
+   "confidence": "strong",
+   "rationale": "Both state that in a closed system the number and types of atoms remain constant when substances interact, so mass is conserved.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0051",
+   "subject": "science",
+   "oh": "7.PS.2",
+   "state": "SC",
+   "code": "7-PS1-2",
+   "confidence": "strong",
+   "rationale": "Both address that when substances interact and form new substances, the properties of the products can differ markedly from those of the starting substances.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0052",
+   "subject": "science",
+   "oh": "7.PS.3",
+   "state": "SC",
+   "code": "7-PS3-5",
+   "confidence": "strong",
+   "rationale": "Both cover conservation of energy in transfer: the energy an object or system gains equals the energy transferred to it, so the total quantity of energy is unchanged.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0053",
+   "subject": "science",
+   "oh": "7.PS.4",
+   "state": "SC",
+   "code": "7-PS3-5",
+   "confidence": "moderate",
+   "rationale": "Both concern energy being transferred to or from an object through interaction, but Ohio's statement enumerates modes of transfer - mechanical, wave, thermal and electrical - that SC's kinetic-energy claim does not cover.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0054",
+   "subject": "science",
+   "oh": "7.LS.1",
+   "state": "SC",
+   "code": "7-LS1-6",
+   "confidence": "strong",
+   "rationale": "Both cover photosynthesis as the process by which plants use light energy with carbon dioxide and water, placing it in the cycling of matter and flow of energy through organisms.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0055",
+   "subject": "science",
+   "oh": "7.LS.1",
+   "state": "SC",
+   "code": "7-LS1-7",
+   "confidence": "strong",
+   "rationale": "Both describe food molecules being broken down and rearranged in organisms to release energy and build the materials needed for growth and survival.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0056",
+   "subject": "science",
+   "oh": "7.LS.1",
+   "state": "SC",
+   "code": "7-LS2-3",
+   "confidence": "strong",
+   "rationale": "Both trace matter and energy moving continuously from organism to organism and between organisms and their physical environment, with the total conserved as form and location change.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0057",
+   "subject": "science",
+   "oh": "7.LS.2",
+   "state": "SC",
+   "code": "7-LS2-1",
+   "confidence": "strong",
+   "rationale": "Both state that the number, growth and survival of organisms and populations in an ecosystem depend on the availability of resources and other conditions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0058",
+   "subject": "science",
+   "oh": "7.LS.2",
+   "state": "SC",
+   "code": "7-LS2-4",
+   "confidence": "strong",
+   "rationale": "Both address how disruptions or changes to the physical (abiotic) or biological (biotic) components of an ecosystem alter its populations and composition.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0059",
+   "subject": "science",
+   "oh": "8.PS.1",
+   "state": "SC",
+   "code": "8-PS2-5",
+   "confidence": "strong",
+   "rationale": "Both establish that objects can exert forces on each other through fields without being in contact.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0060",
+   "subject": "science",
+   "oh": "8.PS.1",
+   "state": "SC",
+   "code": "8-PS2-3",
+   "confidence": "strong",
+   "rationale": "Both cover magnetic and electrostatic forces acting at a distance, with SC adding the factors that determine their strength.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0061",
+   "subject": "science",
+   "oh": "8.PS.1",
+   "state": "SC",
+   "code": "8-PS2-4",
+   "confidence": "strong",
+   "rationale": "Both cover gravitational force as a field force acting at a distance; SC specifies that it is attractive and depends on mass and separation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0062",
+   "subject": "science",
+   "oh": "8.PS.2",
+   "state": "SC",
+   "code": "8-PS2-2",
+   "confidence": "strong",
+   "rationale": "Both state that the change in an object's motion depends on the sum of the forces acting on it and on the object's mass.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0063",
+   "subject": "science",
+   "oh": "8.PS.2",
+   "state": "SC",
+   "code": "8-PS2-1",
+   "confidence": "moderate",
+   "rationale": "Both involve forces changing the motion of interacting objects, but SC's target is Newton's third law applied to a collision design problem while Ohio's is net force, reference points, friction and drag.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0064",
+   "subject": "science",
+   "oh": "8.LS.1",
+   "state": "SC",
+   "code": "8-LS4-1",
+   "confidence": "strong",
+   "rationale": "Both use patterns in the fossil record as evidence for the existence, diversity, change and extinction of species over Earth's history.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0065",
+   "subject": "science",
+   "oh": "8.LS.1",
+   "state": "SC",
+   "code": "8-LS4-4",
+   "confidence": "strong",
+   "rationale": "Both state that whether a trait is beneficial depends on environmental conditions, and that traits affecting survival and reproduction shape which organisms persist in that environment.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0066",
+   "subject": "science",
+   "oh": "8.LS.1",
+   "state": "SC",
+   "code": "8-LS4-6",
+   "confidence": "strong",
+   "rationale": "Both cover diversity of species arising over many generations as variations of traits become more or less common in populations through natural selection.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0067",
+   "subject": "science",
+   "oh": "8.LS.2",
+   "state": "SC",
+   "code": "8-LS3-2",
+   "confidence": "strong",
+   "rationale": "Both cover reproduction as the transfer of genetic information to the next generation and contrast sexual reproduction, mixing genes from two individuals, with asexual reproduction from one.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0068",
+   "subject": "science",
+   "oh": "8.LS.3",
+   "state": "SC",
+   "code": "8-LS3-1",
+   "confidence": "strong",
+   "rationale": "Both link an organism's characteristics to its genes, including that changes in genes can produce harmful, beneficial or neutral effects on the organism's structure and function.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0069",
+   "subject": "science",
+   "oh": "8.LS.3",
+   "state": "SC",
+   "code": "8-LS3-2",
+   "confidence": "strong",
+   "rationale": "Both cover DNA being transmitted from parent to offspring, with both parents contributing in sexual reproduction and a lone parent in asexual reproduction.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-sci-sc-0070",
+   "subject": "science",
+   "oh": "8.LS.3",
+   "state": "SC",
+   "code": "8-LS1-5",
+   "confidence": "strong",
+   "rationale": "Both state that the expression of traits and the growth of an organism are determined by genetic factors and environmental factors together.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0001",
+   "subject": "social_studies",
+   "oh": "2.SS.1",
+   "state": "SC",
+   "code": "2.H.3",
+   "confidence": "moderate",
+   "rationale": "Both treat timelines as a tool for showing events over time; SC embeds timelines in a broader set of sources used to analyze continuity and change, while Ohio isolates calendars and timelines as the skill.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0002",
+   "subject": "social_studies",
+   "oh": "2.SS.2",
+   "state": "SC",
+   "code": "2.H.3",
+   "confidence": "strong",
+   "rationale": "Nearly identical skill: Ohio uses artifacts, maps, and photographs to show change over time, and SC analyzes patterns of continuity and change using maps, photographs/images, texts, and timelines.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0003",
+   "subject": "social_studies",
+   "oh": "2.SS.4",
+   "state": "SC",
+   "code": "2.CG.2",
+   "confidence": "strong",
+   "rationale": "Both study an individual's actions as a model: Ohio uses biographies to show how people's actions shaped the world, and SC researches a national figure who demonstrated civic dispositions using primary and secondary sources.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0004",
+   "subject": "social_studies",
+   "oh": "2.SS.5",
+   "state": "SC",
+   "code": "2.G.1",
+   "confidence": "moderate",
+   "rationale": "Both are second-grade map-location work; Ohio focuses on map symbols and cardinal directions to locate places, while SC applies location skills specifically to placing the U.S. relative to the rest of the world.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0005",
+   "subject": "social_studies",
+   "oh": "2.SS.6",
+   "state": "SC",
+   "code": "2.G.3",
+   "confidence": "strong",
+   "rationale": "Both connect the human and physical characteristics of a place to the economic activity there: Ohio says work is shaped by human and physical characteristics, and SC explains how the distribution of human features, physical features, and natural resources impacts economic activity.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0006",
+   "subject": "social_studies",
+   "oh": "2.SS.7",
+   "state": "SC",
+   "code": "3.2.2.ER",
+   "confidence": "strong",
+   "rationale": "Both are human-environment interaction: Ohio's positive and negative alteration of the physical environment matches SC's analysis of the ways people interact with the physical environment. Cross-grade: Ohio grade 2 to SC grade 3, where SC places human-environment interaction inside its world geography course.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0007",
+   "subject": "social_studies",
+   "oh": "2.SS.8",
+   "state": "SC",
+   "code": "2.CG.1",
+   "confidence": "moderate",
+   "rationale": "Both examine the characteristics of distinct cultural groups; Ohio adds the causal claim that the physical environment shapes how cultures develop, which SC's identification of U.S. cultural and ethnic groups does not carry.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0008",
+   "subject": "social_studies",
+   "oh": "2.SS.9",
+   "state": "SC",
+   "code": "2.CG.1",
+   "confidence": "moderate",
+   "rationale": "Both address interaction across cultural groups: Ohio has cultures sharing ways of life through interaction, and SC has civic dispositions building relationships between groups in a diverse society.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0009",
+   "subject": "social_studies",
+   "oh": "2.SS.13",
+   "state": "SC",
+   "code": "2.E.4",
+   "confidence": "moderate",
+   "rationale": "Both are data-interpretation in an economics context; Ohio names bar graphs as the display used to compare quantities, while SC interprets data to reach conclusions about economic decision-making.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0010",
+   "subject": "social_studies",
+   "oh": "2.SS.14",
+   "state": "SC",
+   "code": "2.E.4",
+   "confidence": "moderate",
+   "rationale": "Both link available resources to economic choices: Ohio notes resources can be used in various ways, and SC has students show how available resources affect economic decision-making.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0011",
+   "subject": "social_studies",
+   "oh": "2.SS.16",
+   "state": "SC",
+   "code": "2.E.1",
+   "confidence": "strong",
+   "rationale": "Both teach the purpose of money: Ohio has people using money to buy and sell goods and services, and SC examines the purpose of currency alongside spending.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0012",
+   "subject": "social_studies",
+   "oh": "2.SS.17",
+   "state": "SC",
+   "code": "2.E.3",
+   "confidence": "moderate",
+   "rationale": "Both use income as a core economic term; Ohio establishes that people earn income by working, and SC has students build a budget and articulate priorities using income, expenses, and savings.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0013",
+   "subject": "social_studies",
+   "oh": "3.SS.2",
+   "state": "SC",
+   "code": "2.H.3",
+   "confidence": "strong",
+   "rationale": "Both use primary and secondary sources to show change over time; SC's indicator names sources explicitly for analyzing continuity and change. Cross-grade: Ohio grade 3 to SC grade 2, where SC front-loads this source skill in its U.S. history course.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0014",
+   "subject": "social_studies",
+   "oh": "3.SS.4",
+   "state": "SC",
+   "code": "3.1.1.AG",
+   "confidence": "strong",
+   "rationale": "Both teach alphanumeric grid use to locate places on a map; Ohio applies it to maps generally and SC applies it to the continents and oceans.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0015",
+   "subject": "social_studies",
+   "oh": "3.SS.4",
+   "state": "SC",
+   "code": "3.1.3.PR",
+   "confidence": "strong",
+   "rationale": "Both distinguish physical from political map features; Ohio contrasts the characteristics and purposes of physical and political maps, and SC has students identify the spatial hierarchy of political and physical geographic features.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0016",
+   "subject": "social_studies",
+   "oh": "3.SS.5",
+   "state": "SC",
+   "code": "3.4.2.HS",
+   "confidence": "strong",
+   "rationale": "Both examine how agriculture, industry, and land or resource use define a place: Ohio ties daily life to local agriculture, industry, and natural resources, and SC investigates the economic and land use characteristics of places and regions.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0017",
+   "subject": "social_studies",
+   "oh": "3.SS.6",
+   "state": "SC",
+   "code": "3.2.2.ER",
+   "confidence": "strong",
+   "rationale": "Both center human modification of the environment; Ohio observes positive and negative modification in the local community, and SC analyzes the ways people interact with the physical environment at state, national, and world scales.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0018",
+   "subject": "social_studies",
+   "oh": "3.SS.8",
+   "state": "SC",
+   "code": "3.4.1.PR",
+   "confidence": "moderate",
+   "rationale": "Both look at the cultural makeup of places; Ohio's focus is diverse cultural groups within a local community, while SC investigates cultural characteristics of places and regions around the world.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0019",
+   "subject": "social_studies",
+   "oh": "3.SS.10",
+   "state": "SC",
+   "code": "2.CG.4",
+   "confidence": "strong",
+   "rationale": "Both are civic action standards: Ohio has individuals take action to solve problems for the common good, and SC has students propose and communicate a resolution to an issue using evidence. Cross-grade: Ohio grade 3 to SC grade 2, and SC frames the problem at the national rather than local scale.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0020",
+   "subject": "social_studies",
+   "oh": "3.SS.20",
+   "state": "SC",
+   "code": "2.E.3",
+   "confidence": "strong",
+   "rationale": "Both build a budget as a personal financial plan; SC has students create a simple budget and justify priorities, matching Ohio's budget as a plan for present and future economic decisions. Cross-grade: Ohio grade 3 to SC grade 2, where SC's personal finance strand sits a year earlier.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0021",
+   "subject": "social_studies",
+   "oh": "3.SS.20",
+   "state": "SC",
+   "code": "2.E.1",
+   "confidence": "strong",
+   "rationale": "Both define a budget in terms of income, spending, and saving. Cross-grade: Ohio grade 3 to SC grade 2, where SC teaches budgeting components a year earlier than Ohio.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0022",
+   "subject": "social_studies",
+   "oh": "4.SS.3",
+   "state": "SC",
+   "code": "4.1.CO",
+   "confidence": "strong",
+   "rationale": "Both examine interaction among the cultural groups present during settlement, including cooperation and conflict: Ohio names American Indians, settlers, and immigrants in Ohio, and SC compares interactions among cultural groups resulting from European colonization.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0023",
+   "subject": "social_studies",
+   "oh": "4.SS.3",
+   "state": "SC",
+   "code": "4.1.CX",
+   "confidence": "moderate",
+   "rationale": "Structurally parallel home-state standards: Ohio contextualizes the groups who lived in Ohio, and SC contextualizes the experience of Africans, Europeans, and Native Americans in South Carolina. The historical content is state-specific on each side.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0024",
+   "subject": "social_studies",
+   "oh": "4.SS.4",
+   "state": "SC",
+   "code": "4.2.CE",
+   "confidence": "strong",
+   "rationale": "Both cover why the colonies united to break from Great Britain; Ohio's common cause of liberty and justice matches SC's economic and political motivations for declaring independence.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0025",
+   "subject": "social_studies",
+   "oh": "4.SS.4",
+   "state": "SC",
+   "code": "4.2.P",
+   "confidence": "strong",
+   "rationale": "Both trace the colonies' path from revolution to forming a new nation, which SC states as the sequence of events establishing the U.S. as a democratic republic.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0026",
+   "subject": "social_studies",
+   "oh": "4.SS.5",
+   "state": "SC",
+   "code": "4.3.CE",
+   "confidence": "moderate",
+   "rationale": "Both address federal policy governing new territory; Ohio's Northwest Ordinance sets the process for territories to become states, while SC analyzes government policies promoting territorial expansion westward.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0027",
+   "subject": "social_studies",
+   "oh": "4.SS.6",
+   "state": "SC",
+   "code": "4.3.CC",
+   "confidence": "moderate",
+   "rationale": "Both cover frontier conflict with American Indians during U.S. expansion; Ohio ties it to the Ohio frontier and the War of 1812, while SC tracks continuity and change in Native American experiences as the country expanded west.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0028",
+   "subject": "social_studies",
+   "oh": "4.SS.7",
+   "state": "SC",
+   "code": "4.4.P",
+   "confidence": "moderate",
+   "rationale": "Both treat antislavery activism as civic action leading to emancipation; Ohio names the antislavery movement and the Underground Railroad, and SC explains emancipation as achieved through civic participation.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0029",
+   "subject": "social_studies",
+   "oh": "4.SS.8",
+   "state": "SC",
+   "code": "4.3.P",
+   "confidence": "moderate",
+   "rationale": "Both examine technology's role in nineteenth-century national development; Ohio credits innovations originating in Ohio, and SC analyzes the role of technology during Westward Expansion.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0030",
+   "subject": "social_studies",
+   "oh": "4.SS.11",
+   "state": "SC",
+   "code": "4.4.CO",
+   "confidence": "moderate",
+   "rationale": "Both connect distinct regional economies to sectional division; Ohio describes the North, South, and West developing from their environments and economies, and SC compares the economic and political causes of the Civil War.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0031",
+   "subject": "social_studies",
+   "oh": "4.SS.12",
+   "state": "SC",
+   "code": "4.3.P",
+   "confidence": "moderate",
+   "rationale": "Both address environmental consequences of human activity during national expansion; Ohio states the general principle of positive and negative modification, while SC ties environmental impact specifically to Westward Expansion.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0032",
+   "subject": "social_studies",
+   "oh": "4.SS.13",
+   "state": "SC",
+   "code": "5.1.CE",
+   "confidence": "strong",
+   "rationale": "Both explain how immigration reshaped the composition of the U.S. population; SC examines push and pull factors of immigration on urban and rural populations. Cross-grade: Ohio grade 4 to SC grade 5, since SC places the major immigration waves in its post-Reconstruction course.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0033",
+   "subject": "social_studies",
+   "oh": "4.SS.14",
+   "state": "SC",
+   "code": "5.1.CO",
+   "confidence": "strong",
+   "rationale": "Both connect transportation systems to the movement and distribution of people and goods; SC compares the U.S. landscape and demographics before and after the Transcontinental Railroad. Cross-grade: Ohio grade 4 to SC grade 5, where SC's rail-era content sits.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0034",
+   "subject": "social_studies",
+   "oh": "4.SS.18",
+   "state": "SC",
+   "code": "4.2.CC",
+   "confidence": "strong",
+   "rationale": "Both cover the constitutional protection of individual rights; Ohio names the U.S. Constitution's limits on government and the First Amendment, and SC traces natural rights through to the creation of the Bill of Rights.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0035",
+   "subject": "social_studies",
+   "oh": "4.SS.19",
+   "state": "SC",
+   "code": "4.2.P",
+   "confidence": "moderate",
+   "rationale": "Both address the framework of the new national government; Ohio describes a written constitution with three branches, while SC summarizes the sequence establishing the U.S. as a democratic republic without naming the branches.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0036",
+   "subject": "social_studies",
+   "oh": "5.SS.3",
+   "state": "SC",
+   "code": "6.3.CO",
+   "confidence": "strong",
+   "rationale": "Both cover European motives for exploration and settlement in the 1400s-1600s. Cross-grade: Ohio grade 5 to SC grade 6, where exploration sits in SC's world civilizations course.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0037",
+   "subject": "social_studies",
+   "oh": "5.SS.3",
+   "state": "SC",
+   "code": "4.1.CO",
+   "confidence": "strong",
+   "rationale": "Both examine the lasting effects of European colonization on the groups who encountered one another in the Americas. Cross-grade: Ohio grade 5 to SC grade 4, where SC places colonization.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0038",
+   "subject": "social_studies",
+   "oh": "5.SS.9",
+   "state": "SC",
+   "code": "5.1.CE",
+   "confidence": "strong",
+   "rationale": "Both explain movement of people as driven by political, economic, and social factors; SC states this as push and pull factors of immigration and expansion on urban and rural populations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0039",
+   "subject": "social_studies",
+   "oh": "5.SS.10",
+   "state": "SC",
+   "code": "5.1.CC",
+   "confidence": "moderate",
+   "rationale": "Both connect the mixing of many cultures to a diverse hemispheric or national identity; SC frames it as how expansion and immigration shaped American cultural identities, a narrower scope than Ohio's whole Western Hemisphere.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0040",
+   "subject": "social_studies",
+   "oh": "5.SS.12",
+   "state": "SC",
+   "code": "6.2.CO",
+   "confidence": "strong",
+   "rationale": "Both classify and compare forms of government across societies; Ohio names democracies, dictatorships, and monarchies, and SC compares the political systems within world civilizations. Cross-grade: Ohio grade 5 to SC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0041",
+   "subject": "social_studies",
+   "oh": "5.SS.15",
+   "state": "SC",
+   "code": "5.1.CX",
+   "confidence": "moderate",
+   "rationale": "Both link the availability of productive resources to specialization and trade; SC applies it concretely to the Second Industrial Revolution's demand for raw materials and resulting economic expansion.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0042",
+   "subject": "social_studies",
+   "oh": "5.SS.17",
+   "state": "SC",
+   "code": "5.5.E",
+   "confidence": "moderate",
+   "rationale": "Both address economic interdependence among countries; Ohio teaches it as the concept of specialization and trade, while SC examines the effects of global interdependence after 1980 through sources.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0043",
+   "subject": "social_studies",
+   "oh": "6.SS.2",
+   "state": "SC",
+   "code": "6.1.CO",
+   "confidence": "strong",
+   "rationale": "Both study the early river valley civilizations and their social and governmental systems; Ohio names India, Egypt, China, and Mesopotamia, and SC compares the development of social systems among early river valley civilizations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0044",
+   "subject": "social_studies",
+   "oh": "6.SS.2",
+   "state": "SC",
+   "code": "6.1.CC",
+   "confidence": "strong",
+   "rationale": "Both cover the organization, technology, and agricultural practices of early civilizations, which SC states as changes and continuities in the organization and technological advancements of early and classical civilizations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0045",
+   "subject": "social_studies",
+   "oh": "6.SS.5",
+   "state": "SC",
+   "code": "7.1.1.PR",
+   "confidence": "strong",
+   "rationale": "Both classify regions by their physical systems and human characteristics; SC applies this to Africa, one of the Eastern Hemisphere regions Ohio's course covers. Cross-grade: Ohio grade 6 to SC grade 7, where SC organizes regional geography continent by continent.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0046",
+   "subject": "social_studies",
+   "oh": "6.SS.5",
+   "state": "SC",
+   "code": "7.2.1.PR",
+   "confidence": "strong",
+   "rationale": "Both classify regions by physical systems and human characteristics, here applied by SC to Asia. Cross-grade: Ohio grade 6 to SC grade 7; SC repeats this indicator for each continent.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0047",
+   "subject": "social_studies",
+   "oh": "6.SS.6",
+   "state": "SC",
+   "code": "7.1.2.ER",
+   "confidence": "strong",
+   "rationale": "Both connect climate, vegetation, and resource distribution to human activity, applied by SC to Africa. Cross-grade: Ohio grade 6 to SC grade 7, where SC's regional geography course sits.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0048",
+   "subject": "social_studies",
+   "oh": "6.SS.6",
+   "state": "SC",
+   "code": "7.2.2.ER",
+   "confidence": "strong",
+   "rationale": "Both connect climate, vegetation, and resource distribution to human activity, applied by SC to Asia. Cross-grade: Ohio grade 6 to SC grade 7; SC repeats this indicator for each continent.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0049",
+   "subject": "social_studies",
+   "oh": "6.SS.7",
+   "state": "SC",
+   "code": "7.1.3.HS",
+   "confidence": "strong",
+   "rationale": "Both explain what drives people to move and how that shapes population patterns, applied by SC to Africa. Cross-grade: Ohio grade 6 to SC grade 7.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0050",
+   "subject": "social_studies",
+   "oh": "6.SS.7",
+   "state": "SC",
+   "code": "7.2.3.HS",
+   "confidence": "strong",
+   "rationale": "Both explain the conditions driving migration and the resulting population distributions, applied by SC to Asia. Cross-grade: Ohio grade 6 to SC grade 7; SC repeats this indicator for each continent.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0051",
+   "subject": "social_studies",
+   "oh": "6.SS.8",
+   "state": "SC",
+   "code": "6.1.CX",
+   "confidence": "strong",
+   "rationale": "Both cover the spread of the major world religions and their lasting influence across the Eastern Hemisphere.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0052",
+   "subject": "social_studies",
+   "oh": "6.SS.8",
+   "state": "SC",
+   "code": "6.2.CE",
+   "confidence": "strong",
+   "rationale": "Both address diffusion of goods, technology, and cultural practices through contact between societies, which SC states as the impact of global exchanges among world civilizations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0053",
+   "subject": "social_studies",
+   "oh": "6.SS.10",
+   "state": "SC",
+   "code": "6.2.CO",
+   "confidence": "strong",
+   "rationale": "Both categorize and compare governments across societies, including how power is held; SC compares the political systems within world civilizations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0054",
+   "subject": "social_studies",
+   "oh": "6.SS.14",
+   "state": "SC",
+   "code": "6.2.CE",
+   "confidence": "moderate",
+   "rationale": "Both connect regional specialization to trade between societies; Ohio states the economic principle while SC treats it historically as global exchange among world civilizations.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0055",
+   "subject": "social_studies",
+   "oh": "7.SS.2",
+   "state": "SC",
+   "code": "6.1.P",
+   "confidence": "strong",
+   "rationale": "Both cover the enduring contributions of the classical civilizations, which for Ohio are Greece and Rome. Cross-grade: Ohio grade 7 to SC grade 6, where SC's classical-world content sits.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0056",
+   "subject": "social_studies",
+   "oh": "7.SS.4",
+   "state": "SC",
+   "code": "6.2.CX",
+   "confidence": "strong",
+   "rationale": "Both cover Mongol conquest and its effects across Asia and Europe; SC pairs the Mongols with the Turks. Cross-grade: Ohio grade 7 to SC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0057",
+   "subject": "social_studies",
+   "oh": "7.SS.5",
+   "state": "SC",
+   "code": "6.2.P",
+   "confidence": "strong",
+   "rationale": "Both use the Crusades and related contact as the channel through which knowledge and goods moved into Western Europe. Cross-grade: Ohio grade 7 to SC grade 6, and SC does not name the Islamic scientific achievements Ohio specifies.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0058",
+   "subject": "social_studies",
+   "oh": "7.SS.6",
+   "state": "SC",
+   "code": "6.3.CC",
+   "confidence": "strong",
+   "rationale": "Both trace the Renaissance-era shift in ideas toward the individual; SC runs the line from Humanism to the Enlightenment. Cross-grade: Ohio grade 7 to SC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0059",
+   "subject": "social_studies",
+   "oh": "7.SS.8",
+   "state": "SC",
+   "code": "6.2.CE",
+   "confidence": "strong",
+   "rationale": "Both cover trade-route contact building commercial and cultural centers across societies, which SC states as the impact of global exchanges among world civilizations. Cross-grade: Ohio grade 7 to SC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0060",
+   "subject": "social_studies",
+   "oh": "7.SS.10",
+   "state": "SC",
+   "code": "6.3.CO",
+   "confidence": "strong",
+   "rationale": "Both examine European motivations for exploration, conquest, and settlement. Cross-grade: Ohio grade 7 to SC grade 6, where SC places the development of the Atlantic World.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0061",
+   "subject": "social_studies",
+   "oh": "7.SS.10",
+   "state": "SC",
+   "code": "6.3.CX",
+   "confidence": "strong",
+   "rationale": "Both address the effect of European expansion on the peoples encountered; SC contextualizes the experience of indigenous peoples and the conflict that arose. Cross-grade: Ohio grade 7 to SC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0062",
+   "subject": "social_studies",
+   "oh": "7.SS.11",
+   "state": "SC",
+   "code": "6.3.CE",
+   "confidence": "strong",
+   "rationale": "Both cover the Columbian exchange as the transfer that reshaped societies on both sides of the Atlantic, which SC states as the impact of increased global exchanges on the Atlantic World. Cross-grade: Ohio grade 7 to SC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0063",
+   "subject": "social_studies",
+   "oh": "7.SS.13",
+   "state": "SC",
+   "code": "7.1.3.HS",
+   "confidence": "moderate",
+   "rationale": "Both connect geographic conditions to whether people move; Ohio states the general principle and SC applies it to Africa. SC repeats this indicator for each continent, so this is one of several possible pairings.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0064",
+   "subject": "social_studies",
+   "oh": "7.SS.13",
+   "state": "SC",
+   "code": "7.2.3.HS",
+   "confidence": "moderate",
+   "rationale": "Both connect geographic conditions to migration and settlement patterns, here applied by SC to Asia. SC repeats this indicator for each continent.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0065",
+   "subject": "social_studies",
+   "oh": "7.SS.14",
+   "state": "SC",
+   "code": "6.1.CX",
+   "confidence": "strong",
+   "rationale": "Both cover the spread of the major world religions along routes of contact and their enduring influence. Cross-grade: Ohio grade 7 to SC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0066",
+   "subject": "social_studies",
+   "oh": "7.SS.17",
+   "state": "SC",
+   "code": "6.1.P",
+   "confidence": "strong",
+   "rationale": "Both identify governance as an enduring contribution of the classical world; Ohio names Greek democracy and the Roman Republic. Cross-grade: Ohio grade 7 to SC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0067",
+   "subject": "social_studies",
+   "oh": "7.SS.17",
+   "state": "SC",
+   "code": "6.2.CO",
+   "confidence": "strong",
+   "rationale": "Both compare forms of rule across civilizations, contrasting republican and democratic systems with monarchy and theocracy. Cross-grade: Ohio grade 7 to SC grade 6.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0068",
+   "subject": "social_studies",
+   "oh": "7.SS.20",
+   "state": "SC",
+   "code": "7.3.5.HS",
+   "confidence": "moderate",
+   "rationale": "Both address resource relationships between world regions; Ohio states the concept of uneven resource distribution driving specialization and interdependence, and SC's indicator explains resource relationships between Australia, Oceania, and Antarctica and other continents.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0069",
+   "subject": "social_studies",
+   "oh": "8.SS.2",
+   "state": "SC",
+   "code": "8.1.CC",
+   "confidence": "strong",
+   "rationale": "Both cover American Indians as the original inhabitants and the effect of European exploration and colonization on them, which SC states as changes and continuities in Native Americans' experiences prior to and as a result of colonization.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0070",
+   "subject": "social_studies",
+   "oh": "8.SS.4",
+   "state": "SC",
+   "code": "8.1.CO",
+   "confidence": "strong",
+   "rationale": "Both tie enslaved African labor to colonial economic development; SC compares the three British North American colonial regions economically and in regard to labor development.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0071",
+   "subject": "social_studies",
+   "oh": "8.SS.4",
+   "state": "SC",
+   "code": "8.1.CE",
+   "confidence": "moderate",
+   "rationale": "Both connect the colonial labor system to economic development and its effects on different populations; SC's version is specific to South Carolina's colonial economy.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0072",
+   "subject": "social_studies",
+   "oh": "8.SS.5",
+   "state": "SC",
+   "code": "8.2.CE",
+   "confidence": "strong",
+   "rationale": "Both explain the economic, political, and social factors that produced the American Revolution and the break from colonial rule.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0073",
+   "subject": "social_studies",
+   "oh": "8.SS.6",
+   "state": "SC",
+   "code": "8.2.CO",
+   "confidence": "moderate",
+   "rationale": "Both examine the people who shaped the Revolution; Ohio focuses on key events and significant figures, while SC compares the motives and demographics of loyalists and patriots.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0074",
+   "subject": "social_studies",
+   "oh": "8.SS.8",
+   "state": "SC",
+   "code": "8.2.P",
+   "confidence": "strong",
+   "rationale": "Both cover the debate that produced the U.S. Constitution and the federal system it created, which SC states as the founding principles leading to the development of federalism.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0075",
+   "subject": "social_studies",
+   "oh": "8.SS.11",
+   "state": "SC",
+   "code": "8.3.CC",
+   "confidence": "moderate",
+   "rationale": "Both cover the expansion and sectionalism period; Ohio names economic development, sectional debates, war with Mexico, and Indian displacement, while SC narrows to efforts to recognize the natural rights of marginalized groups in that period.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0076",
+   "subject": "social_studies",
+   "oh": "8.SS.12",
+   "state": "SC",
+   "code": "8.3.CO",
+   "confidence": "strong",
+   "rationale": "Both identify disputes over federalism, the Constitution, and slavery as the sectional causes of the Civil War.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0077",
+   "subject": "social_studies",
+   "oh": "8.SS.13",
+   "state": "SC",
+   "code": "8.3.CE",
+   "confidence": "moderate",
+   "rationale": "Both cover the conduct and outcome of the Civil War; Ohio emphasizes key events and figures while SC examines the consequences of major military strategies.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0078",
+   "subject": "social_studies",
+   "oh": "8.SS.14",
+   "state": "SC",
+   "code": "8.3.P",
+   "confidence": "strong",
+   "rationale": "Both treat the Reconstruction amendments as the constitutional turning point of the era; SC names the 13th, 14th, and 15th Amendments explicitly.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0079",
+   "subject": "social_studies",
+   "oh": "8.SS.14",
+   "state": "SC",
+   "code": "8.4.CC",
+   "confidence": "moderate",
+   "rationale": "Both address the social and political differences that persisted after Reconstruction; SC traces the African American experience from Reconstruction into the Jim Crow era, with South Carolina as the setting.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0080",
+   "subject": "social_studies",
+   "oh": "8.SS.16",
+   "state": "SC",
+   "code": "8.3.CX",
+   "confidence": "moderate",
+   "rationale": "Both connect natural resources and agriculture to economic development at national scale; SC evaluates the economic significance of agriculture on South Carolina, the U.S., and the world, without Ohio's environmental-consequences emphasis.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0081",
+   "subject": "social_studies",
+   "oh": "8.SS.17",
+   "state": "SC",
+   "code": "8.2.CC",
+   "confidence": "moderate",
+   "rationale": "Both examine immigration and internal migration producing new settlement patterns; SC frames the movement within and into South Carolina.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0082",
+   "subject": "social_studies",
+   "oh": "8.SS.18",
+   "state": "SC",
+   "code": "8.4.CC",
+   "confidence": "moderate",
+   "rationale": "Both address the consequences of racial prejudice for minority groups; SC examines the African American experience across Reconstruction and Jim Crow.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0083",
+   "subject": "social_studies",
+   "oh": "8.SS.19",
+   "state": "SC",
+   "code": "8.2.E",
+   "confidence": "moderate",
+   "rationale": "Both examine the formation of a national identity around democratic ideals; SC frames it as multiple perspectives on the development of democracy in South Carolina and the United States.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0084",
+   "subject": "social_studies",
+   "oh": "8.SS.20",
+   "state": "SC",
+   "code": "8.5.CC",
+   "confidence": "moderate",
+   "rationale": "Both connect civic participation by individuals and groups to achieved public outcomes; SC's indicator is set in twentieth-century South Carolina rather than stated as a general principle.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0085",
+   "subject": "social_studies",
+   "oh": "8.SS.22",
+   "state": "SC",
+   "code": "8.2.P",
+   "confidence": "strong",
+   "rationale": "Both cover the constitutional framework of the federal republic; SC states it as the founding principles that led to the development of federalism in South Carolina and the United States.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0086",
+   "subject": "social_studies",
+   "oh": "8.SS.23",
+   "state": "SC",
+   "code": "8.3.CO",
+   "confidence": "moderate",
+   "rationale": "Both concern constitutional limits on government power; SC approaches it through the debates between South Carolina and the federal government over federalism and the Constitution.",
+   "source": "ai_draft"
+  },
+  {
+   "id": "lnk-ss-sc-0087",
+   "subject": "social_studies",
+   "oh": "8.SS.25",
+   "state": "SC",
+   "code": "8.4.P",
+   "confidence": "moderate",
+   "rationale": "Both cover industrialization changing the means of production; SC summarizes the economic changes that emerged in South Carolina and the U.S., set in the post-Civil War period rather than Ohio's earlier Industrial Revolution.",
+   "source": "ai_draft"
   }
  ]
 }
