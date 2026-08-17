@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608172118';   // replaced with the deploy stamp
+const APP_BUILD = '202608172121';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2496,7 +2496,7 @@ function renderInputDetail(row, st, grade) {
   const stId = (state.setStateId || {})[k];
   const flagBtn = isFlagged
     ? `<button class="act-btn reject" data-iact="unflag|${esc(k)}">⚑ Resolve flag</button>`
-    : `<button class="act-btn" data-iact="flag|${esc(k)}" title="Pull this set out of the queue for Kennady to review">⚑ Flag for review</button>`;
+    : `<button class="act-btn" data-iact="flag|${esc(k)}" title="Pull this set out of the queue for review">⚑ Flag for review</button>`;
   const stIdBtn = `<button class="act-btn" data-iact="stateid|${esc(k)}" title="ID used when this set enters the ${STATE_NAMES[st]} CMS at this grade (cross-grade pushes get their own ID)">${stId ? `✎ ${st} ID` : `＋ ${st} ID`}</button>`;
   const flagBanner = isFlagged
     ? `<div class="align-mini" style="border-left-color:var(--red, #c0392b); margin:10px 0 0">
@@ -2785,21 +2785,21 @@ function renderInput() {
 
 /* ---------- the State Lists pipeline ----------
    A passage set walks four stages into a state's CMS (five in Georgia):
-     1. Needs Approval        — confirm the set really aligns into this state (Kennady)
-     2. Needs Standards       — tag each question with this state's standard (Kennady)
-     2b. Needs Peer Task      — Georgia only: author the peer revision task (Kennady)
-     3. To Be Entered         — tag the ECR set in CMS (Kayli · Han)
+     1. Needs Approval        — confirm the set really aligns into this state
+     2. Needs Standards       — tag each question with this state's standard
+     2b. Needs Peer Task      — Georgia only: author the peer revision task
+     3. To Be Entered         — tag the ECR set in CMS
      4. Entered in CMS        — done; leaves the working queue, lives under its own filter. */
 function inputStages(st) {
   const stages = [
-    { key: 'approval', label: 'Needs Approval', short: 'need approval', hint: 'confirm the alignment — Kennady' },
-    { key: 'standards', label: 'Needs Standards', short: 'need standards', hint: `tag each question's standard — Kennady` },
+    { key: 'approval', label: 'Needs Approval', short: 'need approval', hint: 'confirm the alignment' },
+    { key: 'standards', label: 'Needs Standards', short: 'need standards', hint: `tag each question's standard` },
   ];
-  if (st === 'GA') stages.push({ key: 'peer', label: 'Needs Peer Task', short: 'need peer task', hint: 'create the peer revision task — Kennady' });
+  if (st === 'GA') stages.push({ key: 'peer', label: 'Needs Peer Task', short: 'need peer task', hint: 'create the peer revision task' });
   stages.push(
-    { key: 'enter', label: 'To Be Entered', short: 'to be entered', hint: 'tag the ECR set in CMS — Kayli · Han' },
+    { key: 'enter', label: 'To Be Entered', short: 'to be entered', hint: 'tag the ECR set in CMS' },
     { key: 'entered', label: 'Entered in CMS', short: 'entered', hint: 'done' },
-    { key: 'flagged', label: '⚑ Flagged', short: 'flagged', hint: 'pulled out of the queue for Kennady to review' });
+    { key: 'flagged', label: '⚑ Flagged', short: 'flagged', hint: 'pulled out of the queue for review' });
   return stages;
 }
 
@@ -2834,7 +2834,7 @@ function handleInputAction(spec) {
   if (act === 'override') { state.ui.overrideKey = key; renderInput(); return; }
   if (act === 'canceloverride') { state.ui.overrideKey = null; renderInput(); return; }
   if (act === 'flag') {
-    const note = prompt('Flag this set for Kennady to review.\nWhat looks wrong? (optional note)', '');
+    const note = prompt('Flag this set for review.\nWhat looks wrong? (optional note)', '');
     if (note === null) return;
     setFlagValue(key, note.trim());
     pushState(); renderInput(); toast('⚑ Flagged — moved to the Flagged list');
