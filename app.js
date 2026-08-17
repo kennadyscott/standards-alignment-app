@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608150208';   // replaced with the deploy stamp
+const APP_BUILD = '202608172118';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2786,18 +2786,18 @@ function renderInput() {
 /* ---------- the State Lists pipeline ----------
    A passage set walks four stages into a state's CMS (five in Georgia):
      1. Needs Approval        — confirm the set really aligns into this state (Kennady)
-     2. Needs Standards       — tag each question with this state's standard (Kennady · Erin)
-     2b. Needs Peer Task      — Georgia only: author the peer revision task (Kennady · Erin)
-     3. To Be Entered         — tag the ECR set in CMS (Kayli · Han · Sophie)
+     2. Needs Standards       — tag each question with this state's standard (Kennady)
+     2b. Needs Peer Task      — Georgia only: author the peer revision task (Kennady)
+     3. To Be Entered         — tag the ECR set in CMS (Kayli · Han)
      4. Entered in CMS        — done; leaves the working queue, lives under its own filter. */
 function inputStages(st) {
   const stages = [
     { key: 'approval', label: 'Needs Approval', short: 'need approval', hint: 'confirm the alignment — Kennady' },
-    { key: 'standards', label: 'Needs Standards', short: 'need standards', hint: `tag each question's standard — Kennady · Erin` },
+    { key: 'standards', label: 'Needs Standards', short: 'need standards', hint: `tag each question's standard — Kennady` },
   ];
-  if (st === 'GA') stages.push({ key: 'peer', label: 'Needs Peer Task', short: 'need peer task', hint: 'create the peer revision task — Kennady · Erin' });
+  if (st === 'GA') stages.push({ key: 'peer', label: 'Needs Peer Task', short: 'need peer task', hint: 'create the peer revision task — Kennady' });
   stages.push(
-    { key: 'enter', label: 'To Be Entered', short: 'to be entered', hint: 'tag the ECR set in CMS — Kayli · Han · Sophie' },
+    { key: 'enter', label: 'To Be Entered', short: 'to be entered', hint: 'tag the ECR set in CMS — Kayli · Han' },
     { key: 'entered', label: 'Entered in CMS', short: 'entered', hint: 'done' },
     { key: 'flagged', label: '⚑ Flagged', short: 'flagged', hint: 'pulled out of the queue for Kennady to review' });
   return stages;
