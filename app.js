@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608182230';   // replaced with the deploy stamp
+const APP_BUILD = '202608182234';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2413,6 +2413,10 @@ Because there are two passages, that budget is SHARED — each passage should be
 Questions to write: ${cfg.questionCount}
 Writing prompt mode: ${cfg.itemSetType === 'opinion' ? (String(cfg.grade) >= '6' ? 'argumentative' : 'opinion') : 'informational/explanatory'}
 ${cfg.topic ? `Topic the passage should cover: ${cfg.topic}` : 'Choose an appropriate topic yourself.'}
+${(cfg.avoid && cfg.avoid.length) ? `
+THESE SETS ALREADY EXIST FOR THIS SAME STANDARD — yours must be a genuinely DIFFERENT text, not a re-telling:
+${cfg.avoid.map(t => `- ${t}`).join('\n')}
+Pick a different angle, subject matter and set of details. A reader should not be able to mistake yours for any of the above.` : ''}
 
 TAG EACH QUESTION with a ${STATE_NAMES[cfg.state]} ELA comprehension code from this list ONLY (the questions assess reading comprehension of the passage, not the anchor subject):
 ${pool.join('\n')}
@@ -2434,6 +2438,11 @@ YOUR PREVIOUS ATTEMPT BROKE THE LENGTH RULE: ${detail}, but the whole set must t
 
 async function handleGenerateSet(cfg, opts) {
   if (!ensureAiKey()) return false;
+  // Also steer away from sets already in the library for this same anchor standard.
+  const existing = state.sets
+    .filter(s => s.standard && s.standard.code === cfg.code && String(s.gaGrade) === String(cfg.grade))
+    .map(s => s.title).filter(Boolean);
+  cfg = { ...cfg, avoid: [...new Set([...(cfg.avoid || []), ...existing])].slice(0, 8) };
   state.ui.genBusy = true;
   if (state.ui.genModal) renderGenModal(); else renderSetEditor();
   try {
@@ -2667,7 +2676,10 @@ function wireGeneratorForm(panel) {
     state.ui.genTarget = n;
     for (let i = 0; i < n; i++) {
       state.ui.genProgress = n > 1 ? `⏳ Generating ${i + 1} of ${n}…` : '⏳ Generating…';
-      const ok = await handleGenerateSet(cfg, { keepModal: n > 1 && i < n - 1 });
+      // Same anchor + same prompt twice running produced two near-identical passages,
+      // so each build is told what the batch has already written.
+      const avoid = (state.ui.genResults || []).filter(r => r.ok).map(r => r.title);
+      const ok = await handleGenerateSet({ ...cfg, avoid }, { keepModal: n > 1 && i < n - 1 });
       if (!ok) break;   // stop the batch on a failure rather than burning more calls
     }
   });
