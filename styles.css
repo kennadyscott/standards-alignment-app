@@ -883,3 +883,20 @@ body {
 }
 .dash-wrap { grid-auto-rows: max-content; }
 .dash-card { overflow: visible; }
+
+/* ---------- Generator popup (launched from a Dashboard gap) ---------- */
+.dash-cell-click { cursor: pointer; }
+.dash-cell-click:hover { outline: 2px solid var(--accent); outline-offset: -2px; }
+.modal-backdrop {
+  position: fixed; inset: 0; z-index: 60;
+  background: rgba(20, 26, 45, .45);
+  display: flex; align-items: flex-start; justify-content: center;
+  padding: 48px 20px; overflow-y: auto;
+}
+.modal-card {
+  background: var(--panel); border-radius: 14px; width: 100%; max-width: 640px;
+  box-shadow: 0 24px 70px rgba(15, 20, 40, .28);
+  padding: 18px 22px 22px;
+}
+.modal-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
+.modal-title { font-size: 16px; font-weight: 800; color: var(--ink); }

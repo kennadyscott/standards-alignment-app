@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608182148';   // replaced with the deploy stamp
+const APP_BUILD = '202608182155';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -161,10 +161,10 @@ const state = {
     dashOpen: {}, dashState: 'OH',                     // Dashboard: expanded grades + which state's lists
     setFilterStatus: 'all', setFilterGrade: 'all',     // Master list filters
     currentSetId: null, openPicker: null,
-    genOpen: false, genBusy: false,
+    genOpen: false, genBusy: false, genModal: null,
     gen: { state: 'OH', subject: 'ela', grade: '4', code: '', genre: 'informational',
            subtopic: 'Science', itemSetType: 'informative', passageCount: 1,
-           questionCount: 4, words: 225, topic: '' },
+           questionCount: 4, words: 225, topic: '', setCount: 1 },
   },
 };
 
@@ -2359,8 +2359,11 @@ async function callSetBuilder(userText) {
 // before accepting. A set that is still out of band is kept but flagged, never discarded.
 async function generatePassageSet(cfg) {
   const band = wordBand(cfg.grade);
+  // The QUESTIONS are always reading-comprehension items, so they tag to this state's
+  // ELA standards even when the passage anchors to a science/social-studies standard —
+  // that is how every one of the 670 imported sets is built.
   const pool = state.standards
-    .filter(x => x.state === cfg.state && x.subject === cfg.subject && gradeMatches(x.grade, cfg.grade))
+    .filter(x => (x.state === cfg.state || x.state === 'ALL') && x.subject === 'ela' && gradeMatches(x.grade, cfg.grade))
     .map(x => `${x.code} — ${x.description}`);
   const anchor = state.byKey.get(`${cfg.state}:${cfg.subject}:${cfg.code}`);
   const base = `State: ${STATE_NAMES[cfg.state]} · Subject: ${SUBJECT_NAMES[cfg.subject]} · Grade: ${cfg.grade}
@@ -2375,7 +2378,7 @@ Questions to write: ${cfg.questionCount}
 Writing prompt mode: ${cfg.itemSetType === 'opinion' ? (String(cfg.grade) >= '6' ? 'argumentative' : 'opinion') : 'informational/explanatory'}
 ${cfg.topic ? `Topic the passage should cover: ${cfg.topic}` : 'Choose an appropriate topic yourself.'}
 
-TAG EACH QUESTION with a code from this list ONLY:
+TAG EACH QUESTION with a ${STATE_NAMES[cfg.state]} ELA comprehension code from this list ONLY (the questions assess reading comprehension of the passage, not the anchor subject):
 ${pool.join('\n')}
 
 Write the passage set now.`;
@@ -2391,15 +2394,17 @@ YOUR PREVIOUS ATTEMPT BROKE THE LENGTH RULE: ${detail}. Every passage must be be
   return out;
 }
 
-async function handleGenerateSet(cfg) {
-  if (!ensureAiKey()) return;
+async function handleGenerateSet(cfg, opts) {
+  if (!ensureAiKey()) return false;
   state.ui.genBusy = true;
-  renderSetEditor();
+  if (state.ui.genModal) renderGenModal(); else renderSetEditor();
   try {
     const out = await generatePassageSet(cfg);
     const band = wordBand(cfg.grade);
-    const valid = new Set(state.standards
-      .filter(x => x.state === cfg.state && x.subject === cfg.subject).map(x => x.code));
+    // Questions validate against ELA; the set-level anchor keeps cfg.subject.
+    const validQ = new Map(state.standards
+      .filter(x => (x.state === cfg.state || x.state === 'ALL') && x.subject === 'ela')
+      .map(x => [x.code, x.state]));
     const s = {
       id: 'ps-gen-' + Date.now(),
       title: out.title || 'Untitled set',
@@ -2415,7 +2420,7 @@ async function handleGenerateSet(cfg) {
       questions: (out.questions || []).map(q => ({
         text: q.text || '',
         type: GEN_QTYPES.includes(q.type) ? q.type : null,
-        standard: valid.has(q.code) ? { state: cfg.state, subject: cfg.subject, code: q.code } : null,
+        standard: validQ.has(q.code) ? { state: validQ.get(q.code), subject: 'ela', code: q.code } : null,
       })),
       peerRevision: [{ text: '', standard: null, type: null }],
       writingPrompt: {
@@ -2426,10 +2431,11 @@ async function handleGenerateSet(cfg) {
     if (!s.passages.length) s.passages = [{ title: '', text: '' }];
     if (!s.questions.length) s.questions = [{ text: '', standard: null, type: null }];
     state.sets.unshift(s);
-    state.ui.genOpen = false;
     state.ui.currentSetId = s.id;
+    if (!(opts && opts.keepModal) && !state.ui.genModal) state.ui.genOpen = false;
     saveSets();
     renderPassages();
+    renderDash();   // the gap that launched this just got smaller
     // Report what the rules caught rather than hiding it — the reviewer decides.
     const counts = s.passages.map(p => wordCount(p.text));
     const off = counts.filter(n => n < band.min || n > band.max);
@@ -2440,7 +2446,9 @@ async function handleGenerateSet(cfg) {
     toast(notes.length
       ? `Draft created — ${notes.join(' · ')}`
       : `✓ Draft created — ${counts.join(' + ')} words, ${s.questions.length} questions, all tagged`);
+    state.ui.genOk = true;
   } catch (e) {
+    state.ui.genOk = false;
     if (String(e.message).includes('401')) {
       aiKey = '';
       localStorage.removeItem(LS_AI_KEY);
@@ -2450,11 +2458,14 @@ async function handleGenerateSet(cfg) {
     }
   }
   state.ui.genBusy = false;
-  renderSetEditor();
+  state.ui.genProgress = '';
+  if (state.ui.genModal) renderGenModal(); else renderSetEditor();
+  return state.ui.genOk;
 }
 
 // The generator form lives in the editor panel (no set selected), so it needs no modal.
-function generatorFormHtml() {
+function generatorFormHtml(opts) {
+  const modal = !!(opts && opts.modal);
   const g = state.ui.gen;
   const band = wordBand(g.grade);
   const stds = state.standards
@@ -2464,22 +2475,23 @@ function generatorFormHtml() {
   const busy = state.ui.genBusy;
   return `
     <div class="ps-section">
-      <div class="ps-section-title">⚡ Generate a passage set with AI
-        <span class="ps-hint">the passage is written to make the chosen standard assessable</span></div>
+      ${modal ? '' : `<div class="ps-section-title">⚡ Generate a passage set with AI
+        <span class="ps-hint">the passage is written to make the chosen standard assessable</span></div>`}
 
-      <div class="ps-field"><label>State</label>
-        <select class="ps-input" data-gen="state">${stateOptionsHtml(false)}</select></div>
+      ${modal ? '' : `<div class="ps-field"><label>State</label>
+        <select class="ps-input" data-gen="state">${stateOptionsHtml(false)}</select></div>`}
 
-      <div class="ps-field"><label>Subject</label>
+      ${modal ? `<div class="ps-hint" style="margin-bottom:10px">Anchor standard comes from <b>${esc(SUBJECT_NAMES[g.subject])}</b>; questions are tagged to ${esc(STATE_NAMES[g.state])} ELA comprehension standards.</div>`
+        : `<div class="ps-field"><label>Subject</label>
         <select class="ps-input" data-gen="subject">
           ${Object.entries(SUBJECT_NAMES).map(([k, v]) =>
             `<option value="${k}" ${g.subject === k ? 'selected' : ''}>${v}</option>`).join('')}
-        </select></div>
+        </select></div>`}
 
-      <div class="ps-field"><label>Grade</label>
+      ${modal ? '' : `<div class="ps-field"><label>Grade</label>
         <select class="ps-input" data-gen="grade">
           ${GRADES.map(x => `<option value="${x}" ${String(g.grade) === x ? 'selected' : ''}>Grade ${x}</option>`).join('')}
-        </select></div>
+        </select></div>`}
 
       <div class="ps-field"><label>Anchor standard <span class="ps-hint">${stds.length} in ${STATE_NAMES[g.state]} ${SUBJECT_NAMES[g.subject]} G${g.grade}</span></label>
         <select class="ps-input" data-gen="code">
@@ -2487,7 +2499,7 @@ function generatorFormHtml() {
           ${stds.map(x => `<option value="${esc(x.code)}" ${g.code === x.code ? 'selected' : ''}>${esc(x.code)} — ${esc(x.description.slice(0, 110))}${x.description.length > 110 ? '…' : ''}</option>`).join('')}
         </select></div>
 
-      <div class="ps-field"><label>Genre</label>
+      ${modal ? '' : `<div class="ps-field"><label>Genre</label>
         <select class="ps-input" data-gen="genre">
           ${GENRES.map(x => `<option value="${x.key}" ${g.genre === x.key ? 'selected' : ''}>${x.label}</option>`).join('')}
         </select></div>
@@ -2501,12 +2513,19 @@ function generatorFormHtml() {
       <div class="ps-field"><label>Item set type</label>
         <select class="ps-input" data-gen="itemSetType">
           ${ITEM_SET_TYPES.map(x => `<option value="${x.key}" ${g.itemSetType === x.key ? 'selected' : ''}>${x.label}</option>`).join('')}
+        </select></div>`}
+
+      <div class="ps-field"><label>Passages per set</label>
+        <select class="ps-input" data-gen="passageCount">
+          <option value="1" ${+g.passageCount === 1 ? 'selected' : ''}>Single passage</option>
+          <option value="2" ${+g.passageCount === 2 ? 'selected' : ''}>Multiple (paired texts)</option>
         </select></div>
 
-      <div class="ps-field"><label>Passages</label>
-        <select class="ps-input" data-gen="passageCount">
-          ${[1, 2].map(n => `<option value="${n}" ${+g.passageCount === n ? 'selected' : ''}>${n} passage${n > 1 ? 's (paired)' : ''}</option>`).join('')}
-        </select></div>
+      ${modal ? `<div class="ps-field"><label>How many sets to build
+          <span class="ps-hint">goal is ${DASH_GOAL} per type</span></label>
+        <select class="ps-input" data-gen="setCount">
+          ${[1, 2, 3, 4].map(n => `<option value="${n}" ${+g.setCount === n ? 'selected' : ''}>${n} set${n > 1 ? 's' : ''}</option>`).join('')}
+        </select></div>` : ''}
 
       <div class="ps-field"><label>Questions</label>
         <select class="ps-input" data-gen="questionCount">
@@ -2522,8 +2541,8 @@ function generatorFormHtml() {
 
       <div class="detail-actions" style="margin-top:12px">
         <button class="act-btn approve" id="genRun" ${busy || !g.code ? 'disabled' : ''}>
-          ${busy ? '⏳ Generating…' : '⚡ Generate draft set'}</button>
-        <button class="act-btn reset" id="genCancel" ${busy ? 'disabled' : ''}>Cancel</button>
+          ${busy ? (state.ui.genProgress || '⏳ Generating…') : `⚡ Generate ${modal && +g.setCount > 1 ? g.setCount + ' draft sets' : 'draft set'}`}</button>
+        <button class="act-btn reset" id="genCancel" ${busy ? 'disabled' : ''}>${modal ? 'Close' : 'Cancel'}</button>
       </div>
       ${!g.code ? '<div class="ps-hint" style="margin-top:6px">Choose an anchor standard to enable generation.</div>' : ''}
       ${busy ? '<div class="ps-hint" style="margin-top:6px">Writing the passage, questions, and prompt — this takes about a minute. Leave this page open.</div>' : ''}
@@ -2546,17 +2565,96 @@ function wireGeneratorForm(panel) {
         const subs = gaSubtopicsFor(String(state.ui.gen.grade), state.ui.gen.genre);
         if (!subs.includes(state.ui.gen.subtopic)) state.ui.gen.subtopic = subs[0] || '';
       }
-      renderSetEditor();
+      if (state.ui.genModal) renderGenModal(); else renderSetEditor();
     });
   });
   const run = panel.querySelector('#genRun');
-  if (run) run.addEventListener('click', () => {
+  if (run) run.addEventListener('click', async () => {
     const g = state.ui.gen;
-    handleGenerateSet({ ...g, grade: String(g.grade), words: +g.words || wordBand(g.grade).target,
-                        passageCount: +g.passageCount, questionCount: +g.questionCount });
+    const cfg = { ...g, grade: String(g.grade), words: +g.words || wordBand(g.grade).target,
+                  passageCount: +g.passageCount, questionCount: +g.questionCount };
+    // A dashboard gap usually needs several sets; build them one at a time so a failure
+    // costs one set, not the batch, and so each is saved as soon as it lands.
+    const n = state.ui.genModal ? Math.max(1, +g.setCount || 1) : 1;
+    for (let i = 0; i < n; i++) {
+      state.ui.genProgress = n > 1 ? `⏳ Generating ${i + 1} of ${n}…` : '⏳ Generating…';
+      const ok = await handleGenerateSet(cfg, { keepModal: n > 1 && i < n - 1 });
+      if (!ok) break;   // stop the batch on a failure rather than burning more calls
+    }
   });
   const cancel = panel.querySelector('#genCancel');
-  if (cancel) cancel.addEventListener('click', () => { state.ui.genOpen = false; renderSetEditor(); });
+  if (cancel) cancel.addEventListener('click', () => {
+    if (state.ui.genModal) { closeGenModal(); return; }
+    state.ui.genOpen = false; renderSetEditor();
+  });
+}
+
+/* ---------- Dashboard → generator popup ----------
+   A gap on the Dashboard IS the work order: click the count and the builder opens
+   already knowing the state, grade, sub-domain and item-set type that cell stands for.
+   Same generator, same rules — only the launch point differs. */
+
+// The sub-domain a Dashboard row represents tells us which subject the ANCHOR standard
+// comes from. Questions are always ELA (see generatePassageSet).
+const SUBDOMAIN_SUBJECT = {
+  'Science': 'science', 'Earth Science': 'science', 'Life Science': 'science',
+  'Physical Science': 'science',
+  'Social Studies': 'social_studies', 'History': 'social_studies',
+  'Geography': 'social_studies', 'Government': 'social_studies',
+  'Economics': 'social_studies',
+};
+function subdomainSubject(sub) { return SUBDOMAIN_SUBJECT[sub] || 'ela'; }
+function subdomainGenre(sub) {
+  if (SUBDOMAIN_SUBJECT[sub]) return 'informational';
+  return ['Biographies', 'True Narratives'].includes(sub) ? 'literary_nonfiction' : 'literary';
+}
+
+function openGenModal(cfg) {
+  const grade = String(cfg.grade);
+  Object.assign(state.ui.gen, {
+    state: cfg.state,
+    subject: subdomainSubject(cfg.subtopic),
+    grade,
+    code: '',
+    genre: subdomainGenre(cfg.subtopic),
+    subtopic: cfg.subtopic,
+    itemSetType: cfg.itemSetType,
+    words: wordBand(grade).target,
+    setCount: Math.max(1, Math.min(DASH_GOAL - (cfg.have || 0), DASH_GOAL)),
+  });
+  state.ui.genModal = { have: cfg.have || 0 };
+  renderGenModal();
+}
+function closeGenModal() {
+  state.ui.genModal = null;
+  const n = document.getElementById('genModal');
+  if (n) n.remove();
+}
+function renderGenModal() {
+  const m = state.ui.genModal;
+  document.getElementById('genModal')?.remove();
+  if (!m) return;
+  const g = state.ui.gen;
+  const node = el(`
+    <div class="modal-backdrop" id="genModal">
+      <div class="modal-card">
+        <div class="modal-head">
+          <div>
+            <div class="modal-title">Build for ${esc(STATE_NAMES[g.state])} · Grade ${esc(g.grade)}</div>
+            <div class="ps-hint">${esc(g.subtopic)} · ${esc((ITEM_SET_TYPES.find(t => t.key === g.itemSetType) || {}).label || '')}
+              — ${m.have} of ${DASH_GOAL} built</div>
+          </div>
+          <button class="q-remove" id="genModalX" title="Close">✕</button>
+        </div>
+        <div id="genModalBody"></div>
+      </div>
+    </div>`);
+  document.body.appendChild(node);
+  const body = node.querySelector('#genModalBody');
+  body.innerHTML = generatorFormHtml({ modal: true });
+  wireGeneratorForm(body);
+  node.querySelector('#genModalX').addEventListener('click', closeGenModal);
+  node.addEventListener('click', e => { if (e.target === node && !state.ui.genBusy) closeGenModal(); });
 }
 
 /* ---------- AI builder: Georgia Peer Revision Task ----------
@@ -3245,9 +3343,12 @@ function dashSubdomain(s, grade) {
   return dom;
 }
 
-function dashCell(n) {
+function dashCell(n, ctx) {
   const cls = n >= DASH_GOAL ? 'goal-met' : n > 0 ? 'goal-partial' : 'goal-missing';
-  return `<td class="dash-cell ${cls}">${n}</td>`;
+  // Every cell is a work order: clicking opens the builder already scoped to it.
+  const d = ctx ? ` data-gencell="${esc(ctx.state)}|${esc(ctx.grade)}|${esc(ctx.subtopic)}|${esc(ctx.itemSetType)}|${n}"` : '';
+  const title = ctx ? ` title="Build ${esc(ctx.subtopic)} · ${ctx.itemSetType === 'informative' ? 'Informational' : 'Opinion'} for Grade ${esc(ctx.grade)} — ${n} of ${DASH_GOAL}"` : '';
+  return `<td class="dash-cell ${cls}${ctx ? ' dash-cell-click' : ''}"${d}${title}>${n}</td>`;
 }
 
 function renderDash() {
@@ -3308,7 +3409,8 @@ function renderDash() {
               <tr class="dash-group-row"><td colspan="3">${esc(label)}</td></tr>
               ${doms.map(d => {
                 const t = tally.get(d);
-                return `<tr><td>${esc(d)}</td>${dashCell(t.informative)}${dashCell(t.opinion)}</tr>`;
+                const cx = { state: dst, grade: g, subtopic: d };
+                return `<tr><td>${esc(d)}</td>${dashCell(t.informative, { ...cx, itemSetType: 'informative' })}${dashCell(t.opinion, { ...cx, itemSetType: 'opinion' })}</tr>`;
               }).join('')}`).join('')}
           </tbody>
           <tfoot><tr><td>Goal: ${DASH_GOAL} per type</td>
@@ -3316,6 +3418,13 @@ function renderDash() {
             <td>${expect.reduce((a, d) => a + tally.get(d).opinion, 0)}</td></tr></tfoot>
         </table>
       </div>`));
+  });
+
+  wrap.addEventListener('click', e => {
+    const cell = e.target.closest('[data-gencell]');
+    if (!cell) return;
+    const [st, grade, subtopic, itemSetType, have] = cell.dataset.gencell.split('|');
+    openGenModal({ state: st, grade, subtopic, itemSetType, have: +have });
   });
 }
 
