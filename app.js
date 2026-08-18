@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608182248';   // replaced with the deploy stamp
+const APP_BUILD = '202608182353';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2404,11 +2404,15 @@ async function generatePassageSet(cfg) {
   const pool = state.standards
     .filter(x => (x.state === cfg.state || x.state === 'ALL') && x.subject === 'ela' && gradeMatches(x.grade, cfg.grade))
     .map(x => `${x.code} — ${x.description}`);
-  const anchor = state.byKey.get(`${cfg.state}:${cfg.subject}:${cfg.code}`);
+  const uni = isUniversalGenre(cfg.genre);
+  const anchor = state.byKey.get(uni ? `ALL:ela:${cfg.code}` : `${cfg.state}:${cfg.subject}:${cfg.code}`);
   const base = `State: ${STATE_NAMES[cfg.state]} · Subject: ${SUBJECT_NAMES[cfg.subject]} · Grade: ${cfg.grade}
 
-ANCHOR STANDARD (the passage must make this assessable):
-${anchor.code} — ${anchor.description}${anchor.stem ? `\n(part of ${anchor.parent}: ${anchor.stem})` : ''}
+${uni ? `SUB-GENRE THE PASSAGE MUST BE WRITTEN IN:
+${anchor.code} — ${anchor.description}
+Write a passage that is unmistakably this sub-genre; its conventions ARE the requirement.`
+      : `ANCHOR STANDARD (the passage must make this assessable):
+${anchor.code} — ${anchor.description}${anchor.stem ? `\n(part of ${anchor.parent}: ${anchor.stem})` : ''}`}
 
 Genre: ${cfg.genre} · Sub-domain: ${cfg.subtopic || '(none)'} · Item set type: ${cfg.itemSetType}
 Passages to write: ${cfg.passageCount}
@@ -2445,6 +2449,7 @@ async function handleGenerateSet(cfg, opts) {
   // Also steer away from sets already in the library for this same anchor standard.
   const existing = state.sets
     .filter(s => s.standard && s.standard.code === cfg.code && String(s.gaGrade) === String(cfg.grade))
+    .concat([])
     .map(s => s.title).filter(Boolean);
   cfg = { ...cfg, avoid: [...new Set([...(cfg.avoid || []), ...existing])].slice(0, 8) };
   state.ui.genBusy = true;
@@ -2466,7 +2471,7 @@ async function handleGenerateSet(cfg, opts) {
       gaGrade: String(cfg.grade),
       gaSubtopic: cfg.subtopic || null,
       primaryState: cfg.state,
-      standard: { state: cfg.state, subject: cfg.subject, code: cfg.code },
+      standard: anchorTag(cfg),
       passages: (out.passages || []).map(p => ({ title: p.title || '', text: p.text || '' })),
       questions: (out.questions || []).map(q => ({
         text: q.text || '',
@@ -2526,9 +2531,8 @@ function generatorFormHtml(opts) {
   const modal = !!(opts && opts.modal);
   const g = state.ui.gen;
   const band = wordBand(g.grade, g.passageCount);
-  const stds = state.standards
-    .filter(x => x.state === g.state && x.subject === g.subject && gradeMatches(x.grade, g.grade))
-    .sort((a, b) => a.code.localeCompare(b.code));
+  const stds = anchorPool(g);
+  const uni = isUniversalGenre(g.genre);
   const subs = gaSubtopicsFor(String(g.grade), g.genre);
   const busy = state.ui.genBusy;
   return `
@@ -2539,7 +2543,9 @@ function generatorFormHtml(opts) {
       ${modal ? '' : `<div class="ps-field"><label>State</label>
         <select class="ps-input" data-gen="state">${stateOptionsHtml(false)}</select></div>`}
 
-      ${modal ? `<div class="ps-hint" style="margin-bottom:10px">Anchor standard comes from <b>${esc(SUBJECT_NAMES[g.subject])}</b>; questions are tagged to ${esc(STATE_NAMES[g.state])} ELA comprehension standards.</div>`
+      ${modal ? `<div class="ps-hint" style="margin-bottom:10px">${uni
+            ? `Literary sets anchor to a <b>sub-genre</b>, not a state standard (the same options apply in every state)`
+            : `Anchor standard comes from <b>${esc(SUBJECT_NAMES[g.subject])}</b>`}; questions are tagged to ${esc(STATE_NAMES[g.state])} ELA comprehension standards.</div>`
         : `<div class="ps-field"><label>Subject</label>
         <select class="ps-input" data-gen="subject">
           ${Object.entries(SUBJECT_NAMES).map(([k, v]) =>
@@ -2551,9 +2557,11 @@ function generatorFormHtml(opts) {
           ${GRADES.map(x => `<option value="${x}" ${String(g.grade) === x ? 'selected' : ''}>Grade ${x}</option>`).join('')}
         </select></div>`}
 
-      <div class="ps-field"><label>Anchor standard <span class="ps-hint">${stds.length} in ${STATE_NAMES[g.state]} ${SUBJECT_NAMES[g.subject]} G${g.grade}</span></label>
+      <div class="ps-field"><label>${uni ? 'Sub-genre' : 'Anchor standard'}
+          <span class="ps-hint">${uni ? `${stds.length} ${esc(g.subtopic)} options — the same in every state`
+                                     : `${stds.length} in ${STATE_NAMES[g.state]} ${SUBJECT_NAMES[g.subject]} G${g.grade}`}</span></label>
         <select class="ps-input" data-gen="code">
-          <option value="">Choose the standard this passage must assess…</option>
+          <option value="">${uni ? 'Choose the sub-genre this passage must be…' : 'Choose the standard this passage must assess…'}</option>
           ${stds.map(x => `<option value="${esc(x.code)}" ${g.code === x.code ? 'selected' : ''}>${esc(x.code)} — ${esc(x.description.slice(0, 110))}${x.description.length > 110 ? '…' : ''}</option>`).join('')}
         </select></div>
 
@@ -2718,6 +2726,25 @@ const SUBDOMAIN_SUBJECT = {
   'Economics': 'social_studies',
 };
 function subdomainSubject(sub) { return SUBDOMAIN_SUBJECT[sub] || 'ela'; }
+// Literary and Literary Non-Fiction do not anchor to a state standard — the SUB-GENRE
+// is the anchor, and those live in data/universal_ela.json as state:"ALL" with
+// strand === the sub-domain. Same options in every state, by design.
+function isUniversalGenre(genre) { return genre === 'literary' || genre === 'literary_nonfiction'; }
+function anchorPool(g) {
+  if (isUniversalGenre(g.genre)) {
+    return state.standards
+      .filter(x => x.state === 'ALL' && x.subject === 'ela' && x.strand === g.subtopic)
+      .sort((a, b) => a.code.localeCompare(b.code));
+  }
+  return state.standards
+    .filter(x => x.state === g.state && x.subject === g.subject && gradeMatches(x.grade, g.grade))
+    .sort((a, b) => a.code.localeCompare(b.code));
+}
+function anchorTag(g) {
+  return isUniversalGenre(g.genre)
+    ? { state: 'ALL', subject: 'ela', code: g.code }
+    : { state: g.state, subject: g.subject, code: g.code };
+}
 // The Dashboard splits science into Earth/Life/Physical (it derives those from the
 // tagged standard's strand), but the Classification hierarchy only has "Science".
 // Store the hierarchy value on the set; the Dashboard still files it under the finer
