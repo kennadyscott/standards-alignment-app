@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608182200';   // replaced with the deploy stamp
+const APP_BUILD = '202608182204';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -150,7 +150,8 @@ const state = {
   setStateStd: {},          // `${setId}|${state}:${grade}` -> code (the standard this passage is assigned to in that state — overrides the auto-aligned one)
   setCms: {},               // `${setId}|${state}:${grade}` -> true (developed in the CMS for that grade)
   setDismiss: {},           // `${setId}|${state}:${grade}` -> true (this passage doesn't belong in that grade)
-  sets: [],                 // passage sets
+  sets: [],
+  setDeleted: {},                 // passage sets
   ui: {
     view: 'explorer',
     expState: 'OH', expSubject: 'social_studies', expGrade: '4',
@@ -187,6 +188,7 @@ const LS_DECISIONSAT = 'sa_decisionsat_v1';
 const LS_SETFLAG = 'sa_setflag_v1';
 const LS_SETFLAGAT = 'sa_setflagat_v1';
 const LS_SETSTATEID = 'sa_setstateid_v1';
+const LS_SETDELETED = 'sa_setdeleted_v1';
 
 const readLS = (k, fallback) => {
   try { return JSON.parse(localStorage.getItem(k)) || fallback; } catch { return fallback; }
@@ -207,6 +209,7 @@ function loadLocal() {
   state.setFlag = readLS(LS_SETFLAG, {});
   state.setFlagAt = readLS(LS_SETFLAGAT, {});
   state.setStateId = readLS(LS_SETSTATEID, {});
+  state.setDeleted = readLS(LS_SETDELETED, {});
 }
 function mirrorLocal() {
   // localStorage is only a FALLBACK mirror — the cloud file is the source of truth.
@@ -230,6 +233,7 @@ function mirrorLocal() {
   put(LS_SETFLAG, JSON.stringify(state.setFlag || {}));
   put(LS_SETFLAGAT, JSON.stringify(state.setFlagAt || {}));
   put(LS_SETSTATEID, JSON.stringify(state.setStateId || {}));
+  put(LS_SETDELETED, JSON.stringify(state.setDeleted || {}));
   if (!put(LS_SETS, JSON.stringify(state.sets))) {
     try { localStorage.removeItem(LS_SETS); } catch { /* nothing left to free */ }
   }
@@ -253,6 +257,7 @@ function stateBody() {
     setFlag: state.setFlag || {},
     setFlagAt: state.setFlagAt || {},
     setStateId: state.setStateId || {},
+    setDeleted: state.setDeleted || {},
     sets: state.sets,
     savedAt: new Date().toISOString(),
   });
@@ -346,6 +351,7 @@ function mergeForSave(server) {
   state.setCms = { ...S('setCms'), ...state.setCms };
   state.setDismiss = { ...S('setDismiss'), ...state.setDismiss };
   state.setStateId = { ...S('setStateId'), ...(state.setStateId || {}) };
+  state.setDeleted = { ...S('setDeleted'), ...(state.setDeleted || {}) };
   {
     // Flags are raised AND resolved — same both-directions story as decisions,
     // so they get the same newest-wins timestamped merge.
@@ -356,6 +362,7 @@ function mergeForSave(server) {
 
   const byId = new Map(state.sets.map(x => [x.id, x]));
   (server.sets || []).forEach(sv => {
+    if ((state.setDeleted || {})[sv.id]) return;  // deleted here — a tombstone outranks it
     const loc = byId.get(sv.id);
     if (!loc) { state.sets.push(sv); return; }   // exists only server-side — keep it
     // Reviewer progress is monotonic in this workflow — adopt it from the server copy.
@@ -581,6 +588,7 @@ function mergeServerState(s) {
       setCms: { ...state.setCms, ...(s.setCms || {}) },
       setDismiss: { ...state.setDismiss, ...(s.setDismiss || {}) },
       setStateId: { ...(state.setStateId || {}), ...(s.setStateId || {}) },
+      setDeleted: { ...(state.setDeleted || {}), ...(s.setDeleted || {}) },
       setFlagM: mergeDecisions(s.setFlag || {}, s.setFlagAt || {}, state.setFlag || {}, state.setFlagAt || {}, 'server'),
       // Server copies win on CONTENT (freshest deck text), but LOCAL reviewer progress
       // is grafted on so a clobbered/older server copy can never revert this browser's
@@ -609,9 +617,10 @@ function mergeServerState(s) {
     state.setCms = merged.setCms;
     state.setDismiss = merged.setDismiss;
     state.setStateId = merged.setStateId;
+    state.setDeleted = merged.setDeleted;
     state.setFlag = merged.setFlagM.decisions;
     state.setFlagAt = merged.setFlagM.decisionsAt;
-    state.sets = merged.sets;
+    state.sets = merged.sets.filter(x => !state.setDeleted[x.id]);
     normalizeSets();
     mergeImportedDrafts();   // re-add any imported draft the server copy doesn't have
     mirrorLocal();
@@ -746,6 +755,7 @@ async function loadData() {
 function mergeImportedDrafts() {
   const have = new Map(state.sets.map(s => [s.id, s]));
   (state.importedDrafts || []).forEach(d => {
+    if ((state.setDeleted || {})[d.id]) return;   // deleted by a reviewer — stay deleted
     const e = have.get(d.id);
     // Deep-copy on first merge: a shallow copy would alias passages/questions/prompt
     // between the live set and the read-only importedDrafts source.
@@ -1633,6 +1643,10 @@ function renderSetList() {
     item.addEventListener('click', e => {
       if (e.target.dataset.delSet) {
         if (confirm(`Delete "${s.title || 'Untitled set'}"? This cannot be undone.`)) {
+          // Tombstone FIRST: without it the pre-save pull re-adds this set from the
+          // server (server-only sets are carried along by design) and the delete undoes
+          // itself on the next save.
+          (state.setDeleted = state.setDeleted || {})[s.id] = Date.now();
           state.sets = state.sets.filter(x => x.id !== s.id);
           if (state.ui.currentSetId === s.id) state.ui.currentSetId = null;
           saveSets();
