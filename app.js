@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608182155';   // replaced with the deploy stamp
+const APP_BUILD = '202608182158';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2295,6 +2295,8 @@ const SET_SCHEMA = {
     title: { type: 'string', description: 'Title of the passage SET' },
     passages: {
       type: 'array',
+      minItems: 1,
+      maxItems: 2,
       items: {
         type: 'object',
         properties: {
@@ -2357,6 +2359,14 @@ async function callSetBuilder(userText) {
 
 // Generate, then enforce the length rule: one corrective retry naming the actual counts
 // before accepting. A set that is still out of band is kept but flagged, never discarded.
+// The model sometimes pads the passages array with an empty object; an empty passage
+// would fail the length rule and ship a blank editor block. Drop blanks and keep only
+// as many as were asked for.
+function tidyPassages(out, want) {
+  const kept = (out.passages || []).filter(p => wordCount(p && p.text) > 0);
+  out.passages = kept.slice(0, Math.max(1, want || 1));
+}
+
 async function generatePassageSet(cfg) {
   const band = wordBand(cfg.grade);
   // The QUESTIONS are always reading-comprehension items, so they tag to this state's
@@ -2383,13 +2393,15 @@ ${pool.join('\n')}
 
 Write the passage set now.`;
   let out = await callSetBuilder(base);
+  tidyPassages(out, cfg.passageCount);
   const bad = (out.passages || []).map((p, i) => ({ i, n: wordCount(p.text) }))
     .filter(x => x.n < band.min || x.n > band.max);
   if (bad.length) {
     const detail = bad.map(x => `passage ${x.i + 1} was ${x.n} words`).join('; ');
     out = await callSetBuilder(`${base}
 
-YOUR PREVIOUS ATTEMPT BROKE THE LENGTH RULE: ${detail}. Every passage must be between ${band.min} and ${band.max} words. Rewrite the set, keeping the same topic and question structure, with each passage inside that range.`);
+YOUR PREVIOUS ATTEMPT BROKE THE LENGTH RULE: ${detail}. Every passage must be between ${band.min} and ${band.max} words. Return exactly ${cfg.passageCount} passage(s) — no empty ones. Rewrite the set, keeping the same topic and question structure, with each passage inside that range.`);
+    tidyPassages(out, cfg.passageCount);
   }
   return out;
 }
