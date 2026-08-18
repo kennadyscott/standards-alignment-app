@@ -900,3 +900,27 @@ body {
 }
 .modal-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
 .modal-title { font-size: 16px; font-weight: 800; color: var(--ink); }
+
+/* Builder status — stays on screen so "is it done?" is answerable at a glance */
+.gen-status { margin-top: 14px; border-radius: 10px; padding: 12px 14px; border: 1px solid var(--line); }
+.gen-status-head { font-weight: 800; font-size: 14px; margin-bottom: 2px; }
+.gen-status-busy { background: var(--amber-soft); border-color: var(--amber); }
+.gen-status-busy .gen-status-head { color: var(--amber); }
+.gen-status-done { background: var(--green-soft); border-color: var(--green); }
+.gen-status-done .gen-status-head { color: var(--green); }
+.gen-status-warn { background: var(--amber-soft); border-color: var(--amber); }
+.gen-status-warn .gen-status-head { color: var(--amber); }
+.gen-row {
+  display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+  padding: 7px 10px; margin-top: 6px; font-size: 12.5px;
+}
+.gen-row-n {
+  min-width: 18px; height: 18px; border-radius: 50%;
+  background: var(--green); color: #fff; font-size: 11px; font-weight: 700;
+  display: grid; place-items: center;
+}
+.gen-row-bad .gen-row-n { background: var(--red); }
+.gen-row-title { font-weight: 700; color: var(--ink); }
+.gen-row-meta { color: var(--ink-soft); }
+.gen-row-warn { flex-basis: 100%; color: var(--amber); font-weight: 600; }

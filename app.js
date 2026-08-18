@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608182218';   // replaced with the deploy stamp
+const APP_BUILD = '202608182230';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -166,6 +166,7 @@ const state = {
     gen: { state: 'OH', subject: 'ela', grade: '4', code: '', genre: 'informational',
            subtopic: 'Science', itemSetType: 'informative', passageCount: 1,
            questionCount: 4, words: 225, topic: '', setCount: 1 },
+    genResults: [],   // persistent per-batch outcome, shown in the builder itself
   },
 };
 
@@ -2482,12 +2483,17 @@ async function handleGenerateSet(cfg, opts) {
       notes.push(`⚠ set totals ${total} words, outside ${band.min}–${band.max}${counts.length > 1 ? ` (${counts.join(' + ')})` : ''}`);
     }
     if (untagged) notes.push(`⚠ ${untagged} question(s) need a standard`);
-    toast(notes.length
-      ? `Draft created — ${notes.join(' · ')}`
-      : `✓ Draft created — ${counts.length > 1 ? `${counts.join(' + ')} = ${total}` : total} words, ${s.questions.length} questions, all tagged`);
+    (state.ui.genResults = state.ui.genResults || []).push({
+      ok: true, id: s.id, title: s.title,
+      words: counts.length > 1 ? `${counts.join(' + ')} = ${total}` : String(total),
+      questions: s.questions.length, notes,
+    });
     state.ui.genOk = true;
   } catch (e) {
     state.ui.genOk = false;
+    (state.ui.genResults = state.ui.genResults || []).push({
+      ok: false, error: String(e.message).slice(0, 110),
+    });
     if (String(e.message).includes('401')) {
       aiKey = '';
       localStorage.removeItem(LS_AI_KEY);
@@ -2584,7 +2590,46 @@ function generatorFormHtml(opts) {
         <button class="act-btn reset" id="genCancel" ${busy ? 'disabled' : ''}>${modal ? 'Close' : 'Cancel'}</button>
       </div>
       ${!g.code ? '<div class="ps-hint" style="margin-top:6px">Choose an anchor standard to enable generation.</div>' : ''}
-      ${busy ? '<div class="ps-hint" style="margin-top:6px">Writing the passage, questions, and prompt — this takes about a minute. Leave this page open.</div>' : ''}
+      ${genStatusHtml()}
+    </div>`;
+}
+
+/* The build takes about a minute per set, so "did it finish?" has to be answerable at a
+   glance long after a toast would have slid away. This panel stays put: a loud in-progress
+   banner while running, and a persistent green (or red) summary of exactly what was built. */
+function genStatusHtml() {
+  const res = state.ui.genResults || [];
+  const busy = state.ui.genBusy;
+  const target = state.ui.genTarget || 1;
+  if (!busy && !res.length) return '';
+  const done = res.filter(r => r.ok).length;
+  const rows = res.map((r, i) => r.ok
+    ? `<div class="gen-row">
+         <span class="gen-row-n">${i + 1}</span>
+         <span class="gen-row-title">${esc(r.title)}</span>
+         <span class="gen-row-meta">${esc(r.words)} words · ${r.questions} questions</span>
+         ${r.notes && r.notes.length ? `<div class="gen-row-warn">${r.notes.map(esc).join(' · ')}</div>` : ''}
+       </div>`
+    : `<div class="gen-row gen-row-bad">
+         <span class="gen-row-n">${i + 1}</span>
+         <span class="gen-row-title">Failed</span>
+         <span class="gen-row-meta">${esc(r.error || '')}</span>
+       </div>`).join('');
+  if (busy) {
+    return `<div class="gen-status gen-status-busy">
+        <div class="gen-status-head">⏳ Building set ${done + 1} of ${target}…</div>
+        <div class="ps-hint">About a minute each. Leave this open — the list below fills in as each one lands.</div>
+        ${rows}
+      </div>`;
+  }
+  const allOk = res.every(r => r.ok);
+  return `<div class="gen-status ${allOk ? 'gen-status-done' : 'gen-status-warn'}">
+      <div class="gen-status-head">${allOk ? '✓' : '⚠'} Done — ${done} of ${target} set${target > 1 ? 's' : ''} built${allOk ? '' : ' (see below)'}</div>
+      <div class="ps-hint">Saved as drafts in the Master Passage List${state.ui.genModal ? ', and this Dashboard cell is updated' : ''}.</div>
+      ${rows}
+      <div class="detail-actions" style="margin-top:10px">
+        <button class="act-btn" id="genOpenList">Open in Master Passage List</button>
+      </div>
     </div>`;
 }
 
@@ -2618,11 +2663,22 @@ function wireGeneratorForm(panel) {
     // A dashboard gap usually needs several sets; build them one at a time so a failure
     // costs one set, not the batch, and so each is saved as soon as it lands.
     const n = state.ui.genModal ? Math.max(1, +g.setCount || 1) : 1;
+    state.ui.genResults = [];
+    state.ui.genTarget = n;
     for (let i = 0; i < n; i++) {
       state.ui.genProgress = n > 1 ? `⏳ Generating ${i + 1} of ${n}…` : '⏳ Generating…';
       const ok = await handleGenerateSet(cfg, { keepModal: n > 1 && i < n - 1 });
       if (!ok) break;   // stop the batch on a failure rather than burning more calls
     }
+  });
+  const open = panel.querySelector('#genOpenList');
+  if (open) open.addEventListener('click', () => {
+    const first = (state.ui.genResults || []).find(r => r.ok);
+    if (first) state.ui.currentSetId = first.id;
+    closeGenModal();
+    state.ui.genOpen = false;
+    document.querySelector('#navTabs .tab[data-view="passages"]').click();
+    renderPassages();
   });
   const cancel = panel.querySelector('#genCancel');
   if (cancel) cancel.addEventListener('click', () => {
@@ -2664,6 +2720,7 @@ function openGenModal(cfg) {
     words: wordBand(grade, state.ui.gen.passageCount).target,
     setCount: Math.max(1, Math.min(DASH_GOAL - (cfg.have || 0), DASH_GOAL)),
   });
+  state.ui.genResults = [];
   state.ui.genModal = { have: cfg.have || 0 };
   renderGenModal();
 }
@@ -3497,6 +3554,7 @@ function init() {
   document.getElementById('genSetBtn').addEventListener('click', () => {
     state.ui.currentSetId = null;
     state.ui.genOpen = true;
+    state.ui.genResults = [];
     state.ui.gen.words = wordBand(state.ui.gen.grade, state.ui.gen.passageCount).target;
     renderPassages();
   });
