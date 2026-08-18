@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608172121';   // replaced with the deploy stamp
+const APP_BUILD = '202608182148';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -161,6 +161,10 @@ const state = {
     dashOpen: {}, dashState: 'OH',                     // Dashboard: expanded grades + which state's lists
     setFilterStatus: 'all', setFilterGrade: 'all',     // Master list filters
     currentSetId: null, openPicker: null,
+    genOpen: false, genBusy: false,
+    gen: { state: 'OH', subject: 'ela', grade: '4', code: '', genre: 'informational',
+           subtopic: 'Science', itemSetType: 'informative', passageCount: 1,
+           questionCount: 4, words: 225, topic: '' },
   },
 };
 
@@ -1647,6 +1651,11 @@ function renderSetList() {
 function renderSetEditor() {
   const panel = document.getElementById('setEditor');
   const s = currentSet();
+  if (state.ui.genOpen) {
+    panel.innerHTML = generatorFormHtml();
+    wireGeneratorForm(panel);
+    return;
+  }
   if (!s) {
     panel.innerHTML = `
       <div class="empty-state">
@@ -2238,6 +2247,316 @@ function detailQuestionHtml(q, i, s, st, grade) {
 function qstateScope(grade) {
   return std => std.subject === 'ela' &&
     gradeMatches(std.grade, grade);
+}
+
+/* ---------- AI builder: whole passage set ----------
+   Generate a complete, standard-anchored passage set (passage(s) + questions +
+   writing prompt) from the Master Passage List. Same browser-direct Anthropic call
+   and stored key as the peer-revision builder. Everything lands as a DRAFT for human
+   review — nothing skips the normal approval path. */
+
+// Backend rule: per-grade passage length. These are the p25–p75 bands measured from
+// the 670 imported ECR sets (data/imported_sets.json), i.e. this library's own house
+// norms rather than invented targets. Applied PER PASSAGE — the measurement was too.
+const PASSAGE_WORDS = {
+  '2': { min: 140, target: 170, max: 230 },
+  '3': { min: 160, target: 190, max: 300 },
+  '4': { min: 185, target: 225, max: 375 },
+  '5': { min: 220, target: 250, max: 380 },
+  '6': { min: 345, target: 395, max: 595 },
+  '7': { min: 360, target: 430, max: 565 },
+  '8': { min: 360, target: 435, max: 565 },
+};
+function wordCount(t) { return (String(t || '').trim().match(/\S+/g) || []).length; }
+function wordBand(grade) { return PASSAGE_WORDS[String(grade)] || { min: 150, target: 250, max: 500 }; }
+
+// The library never uses text_entry in the reading question set — match it.
+const GEN_QTYPES = ['multiple_choice', 'cloze', 'multi_select'];
+
+const SET_SYSTEM = `You write reading passage sets for state assessment practice (grades 2–8), in the style of released state test items.
+
+You are given ONE anchor standard. The passage must be written so that the anchor standard can genuinely be assessed from it, and every question must be answerable from the passage alone.
+
+Hard requirements:
+- PASSAGE LENGTH IS A HARD RULE. Each passage must fall inside the word range you are given. Count words as whitespace-separated tokens. Being outside the range makes the set unusable.
+- Write ORIGINAL content. Never reproduce or closely paraphrase an existing published text, and do not use real copyrighted characters or story text.
+- Content must be factually accurate (for informational/science/social-studies passages) and age-appropriate in topic and vocabulary for the target grade.
+- Questions: write exactly the number requested. Use only these types: multiple_choice, cloze (inline drop-down written as [option1 / option2 / option3]), multi_select ("Select TWO…"). Never text_entry.
+- Each question's full text must include its answer options, each on its own line, lettered a. b. c. d. for multiple_choice/multi_select, and end with a final line "Answer: …".
+- Each question must be tagged to ONE standard code from the provided list, chosen because the question actually assesses it.
+- The writing prompt is an extended-response prompt that responds to the passage(s) in the requested mode, phrased the way state prompts are ("Write a multi-paragraph response in which you…").
+- When two passages are requested, they must be genuinely different texts on a related topic so students can compare them, each independently inside the word range.
+
+Style: grade-appropriate sentence length and vocabulary; passages read like real published student-facing text with a natural title, not like a worksheet.`;
+
+const SET_SCHEMA = {
+  type: 'object',
+  properties: {
+    title: { type: 'string', description: 'Title of the passage SET' },
+    passages: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          title: { type: 'string' },
+          text: { type: 'string', description: 'The full passage text, inside the required word range' },
+        },
+        required: ['title', 'text'],
+        additionalProperties: false,
+      },
+    },
+    questions: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          text: { type: 'string', description: 'Complete question: stem, lettered options on their own lines, final "Answer: ..." line' },
+          type: { type: 'string', enum: GEN_QTYPES },
+          code: { type: 'string', description: 'One standard code from the provided list, exactly as given' },
+          rationale: { type: 'string', description: 'One sentence: why this question assesses that standard' },
+        },
+        required: ['text', 'type', 'code', 'rationale'],
+        additionalProperties: false,
+      },
+    },
+    writingPrompt: { type: 'string' },
+  },
+  required: ['title', 'passages', 'questions', 'writingPrompt'],
+  additionalProperties: false,
+};
+
+async function callSetBuilder(userText) {
+  const r = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+      'x-api-key': aiKey,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true',
+    },
+    body: JSON.stringify({
+      model: 'claude-opus-4-8',
+      max_tokens: 16000,
+      thinking: { type: 'adaptive' },
+      system: SET_SYSTEM,
+      output_config: { format: { type: 'json_schema', schema: SET_SCHEMA } },
+      messages: [{ role: 'user', content: userText }],
+    }),
+  });
+  if (!r.ok) {
+    let msg = `HTTP ${r.status}`;
+    try { const e = await r.json(); msg += ' — ' + ((e.error || {}).message || '').slice(0, 140); } catch { /* bare status */ }
+    throw new Error(msg);
+  }
+  const data = await r.json();
+  if (data.stop_reason === 'refusal') throw new Error('the model declined this request');
+  const txt = (data.content || []).find(b => b.type === 'text');
+  if (!txt) throw new Error('no output returned');
+  return JSON.parse(txt.text);
+}
+
+// Generate, then enforce the length rule: one corrective retry naming the actual counts
+// before accepting. A set that is still out of band is kept but flagged, never discarded.
+async function generatePassageSet(cfg) {
+  const band = wordBand(cfg.grade);
+  const pool = state.standards
+    .filter(x => x.state === cfg.state && x.subject === cfg.subject && gradeMatches(x.grade, cfg.grade))
+    .map(x => `${x.code} — ${x.description}`);
+  const anchor = state.byKey.get(`${cfg.state}:${cfg.subject}:${cfg.code}`);
+  const base = `State: ${STATE_NAMES[cfg.state]} · Subject: ${SUBJECT_NAMES[cfg.subject]} · Grade: ${cfg.grade}
+
+ANCHOR STANDARD (the passage must make this assessable):
+${anchor.code} — ${anchor.description}${anchor.stem ? `\n(part of ${anchor.parent}: ${anchor.stem})` : ''}
+
+Genre: ${cfg.genre} · Sub-domain: ${cfg.subtopic || '(none)'} · Item set type: ${cfg.itemSetType}
+Passages to write: ${cfg.passageCount}
+WORD RANGE FOR EACH PASSAGE: ${band.min}–${band.max} words (aim for about ${cfg.words}).
+Questions to write: ${cfg.questionCount}
+Writing prompt mode: ${cfg.itemSetType === 'opinion' ? (String(cfg.grade) >= '6' ? 'argumentative' : 'opinion') : 'informational/explanatory'}
+${cfg.topic ? `Topic the passage should cover: ${cfg.topic}` : 'Choose an appropriate topic yourself.'}
+
+TAG EACH QUESTION with a code from this list ONLY:
+${pool.join('\n')}
+
+Write the passage set now.`;
+  let out = await callSetBuilder(base);
+  const bad = (out.passages || []).map((p, i) => ({ i, n: wordCount(p.text) }))
+    .filter(x => x.n < band.min || x.n > band.max);
+  if (bad.length) {
+    const detail = bad.map(x => `passage ${x.i + 1} was ${x.n} words`).join('; ');
+    out = await callSetBuilder(`${base}
+
+YOUR PREVIOUS ATTEMPT BROKE THE LENGTH RULE: ${detail}. Every passage must be between ${band.min} and ${band.max} words. Rewrite the set, keeping the same topic and question structure, with each passage inside that range.`);
+  }
+  return out;
+}
+
+async function handleGenerateSet(cfg) {
+  if (!ensureAiKey()) return;
+  state.ui.genBusy = true;
+  renderSetEditor();
+  try {
+    const out = await generatePassageSet(cfg);
+    const band = wordBand(cfg.grade);
+    const valid = new Set(state.standards
+      .filter(x => x.state === cfg.state && x.subject === cfg.subject).map(x => x.code));
+    const s = {
+      id: 'ps-gen-' + Date.now(),
+      title: out.title || 'Untitled set',
+      passageId: '',
+      status: 'draft',
+      itemSetType: cfg.itemSetType,
+      genre: cfg.genre,
+      gaGrade: String(cfg.grade),
+      gaSubtopic: cfg.subtopic || null,
+      primaryState: cfg.state,
+      standard: { state: cfg.state, subject: cfg.subject, code: cfg.code },
+      passages: (out.passages || []).map(p => ({ title: p.title || '', text: p.text || '' })),
+      questions: (out.questions || []).map(q => ({
+        text: q.text || '',
+        type: GEN_QTYPES.includes(q.type) ? q.type : null,
+        standard: valid.has(q.code) ? { state: cfg.state, subject: cfg.subject, code: q.code } : null,
+      })),
+      peerRevision: [{ text: '', standard: null, type: null }],
+      writingPrompt: {
+        type: cfg.itemSetType === 'opinion' ? (String(cfg.grade) >= '6' ? 'argumentative' : 'opinion') : 'informational',
+        text: out.writingPrompt || '',
+      },
+    };
+    if (!s.passages.length) s.passages = [{ title: '', text: '' }];
+    if (!s.questions.length) s.questions = [{ text: '', standard: null, type: null }];
+    state.sets.unshift(s);
+    state.ui.genOpen = false;
+    state.ui.currentSetId = s.id;
+    saveSets();
+    renderPassages();
+    // Report what the rules caught rather than hiding it — the reviewer decides.
+    const counts = s.passages.map(p => wordCount(p.text));
+    const off = counts.filter(n => n < band.min || n > band.max);
+    const untagged = s.questions.filter(q => !q.standard).length;
+    const notes = [];
+    if (off.length) notes.push(`⚠ ${off.length} passage(s) outside ${band.min}–${band.max} words (${counts.join(', ')})`);
+    if (untagged) notes.push(`⚠ ${untagged} question(s) need a standard`);
+    toast(notes.length
+      ? `Draft created — ${notes.join(' · ')}`
+      : `✓ Draft created — ${counts.join(' + ')} words, ${s.questions.length} questions, all tagged`);
+  } catch (e) {
+    if (String(e.message).includes('401')) {
+      aiKey = '';
+      localStorage.removeItem(LS_AI_KEY);
+      toast('⚠ API key rejected — click Generate again to re-enter it');
+    } else {
+      toast('⚠ Generation failed: ' + String(e.message).slice(0, 90));
+    }
+  }
+  state.ui.genBusy = false;
+  renderSetEditor();
+}
+
+// The generator form lives in the editor panel (no set selected), so it needs no modal.
+function generatorFormHtml() {
+  const g = state.ui.gen;
+  const band = wordBand(g.grade);
+  const stds = state.standards
+    .filter(x => x.state === g.state && x.subject === g.subject && gradeMatches(x.grade, g.grade))
+    .sort((a, b) => a.code.localeCompare(b.code));
+  const subs = gaSubtopicsFor(String(g.grade), g.genre);
+  const busy = state.ui.genBusy;
+  return `
+    <div class="ps-section">
+      <div class="ps-section-title">⚡ Generate a passage set with AI
+        <span class="ps-hint">the passage is written to make the chosen standard assessable</span></div>
+
+      <div class="ps-field"><label>State</label>
+        <select class="ps-input" data-gen="state">${stateOptionsHtml(false)}</select></div>
+
+      <div class="ps-field"><label>Subject</label>
+        <select class="ps-input" data-gen="subject">
+          ${Object.entries(SUBJECT_NAMES).map(([k, v]) =>
+            `<option value="${k}" ${g.subject === k ? 'selected' : ''}>${v}</option>`).join('')}
+        </select></div>
+
+      <div class="ps-field"><label>Grade</label>
+        <select class="ps-input" data-gen="grade">
+          ${GRADES.map(x => `<option value="${x}" ${String(g.grade) === x ? 'selected' : ''}>Grade ${x}</option>`).join('')}
+        </select></div>
+
+      <div class="ps-field"><label>Anchor standard <span class="ps-hint">${stds.length} in ${STATE_NAMES[g.state]} ${SUBJECT_NAMES[g.subject]} G${g.grade}</span></label>
+        <select class="ps-input" data-gen="code">
+          <option value="">Choose the standard this passage must assess…</option>
+          ${stds.map(x => `<option value="${esc(x.code)}" ${g.code === x.code ? 'selected' : ''}>${esc(x.code)} — ${esc(x.description.slice(0, 110))}${x.description.length > 110 ? '…' : ''}</option>`).join('')}
+        </select></div>
+
+      <div class="ps-field"><label>Genre</label>
+        <select class="ps-input" data-gen="genre">
+          ${GENRES.map(x => `<option value="${x.key}" ${g.genre === x.key ? 'selected' : ''}>${x.label}</option>`).join('')}
+        </select></div>
+
+      <div class="ps-field"><label>Sub-domain (hierarchy)</label>
+        <select class="ps-input" data-gen="subtopic">
+          <option value="">—</option>
+          ${subs.map(x => `<option value="${esc(x)}" ${g.subtopic === x ? 'selected' : ''}>${esc(x)}</option>`).join('')}
+        </select></div>
+
+      <div class="ps-field"><label>Item set type</label>
+        <select class="ps-input" data-gen="itemSetType">
+          ${ITEM_SET_TYPES.map(x => `<option value="${x.key}" ${g.itemSetType === x.key ? 'selected' : ''}>${x.label}</option>`).join('')}
+        </select></div>
+
+      <div class="ps-field"><label>Passages</label>
+        <select class="ps-input" data-gen="passageCount">
+          ${[1, 2].map(n => `<option value="${n}" ${+g.passageCount === n ? 'selected' : ''}>${n} passage${n > 1 ? 's (paired)' : ''}</option>`).join('')}
+        </select></div>
+
+      <div class="ps-field"><label>Questions</label>
+        <select class="ps-input" data-gen="questionCount">
+          ${[3, 4].map(n => `<option value="${n}" ${+g.questionCount === n ? 'selected' : ''}>${n} questions</option>`).join('')}
+        </select></div>
+
+      <div class="ps-field"><label>Words per passage
+          <span class="ps-hint">grade ${g.grade} library range ${band.min}–${band.max}</span></label>
+        <input class="ps-input" type="number" data-gen="words" value="${g.words}" min="${band.min}" max="${band.max}"></div>
+
+      <div class="ps-field"><label>Topic <span class="ps-hint">optional — leave blank to let the model choose</span></label>
+        <input class="ps-input" data-gen="topic" value="${esc(g.topic || '')}" placeholder="e.g. how bees pollinate crops"></div>
+
+      <div class="detail-actions" style="margin-top:12px">
+        <button class="act-btn approve" id="genRun" ${busy || !g.code ? 'disabled' : ''}>
+          ${busy ? '⏳ Generating…' : '⚡ Generate draft set'}</button>
+        <button class="act-btn reset" id="genCancel" ${busy ? 'disabled' : ''}>Cancel</button>
+      </div>
+      ${!g.code ? '<div class="ps-hint" style="margin-top:6px">Choose an anchor standard to enable generation.</div>' : ''}
+      ${busy ? '<div class="ps-hint" style="margin-top:6px">Writing the passage, questions, and prompt — this takes about a minute. Leave this page open.</div>' : ''}
+    </div>`;
+}
+
+function wireGeneratorForm(panel) {
+  // stateOptionsHtml() emits no selected attribute — set the value directly.
+  const stSel = panel.querySelector('[data-gen="state"]');
+  if (stSel) stSel.value = state.ui.gen.state;
+  panel.querySelectorAll('[data-gen]').forEach(el => {
+    const key = el.dataset.gen;
+    const ev = (el.tagName === 'INPUT' && el.type !== 'number') ? 'change' : 'change';
+    el.addEventListener(ev, e => {
+      state.ui.gen[key] = e.target.value;
+      // Changing what the standard list depends on invalidates the chosen standard.
+      if (key === 'state' || key === 'subject' || key === 'grade') state.ui.gen.code = '';
+      if (key === 'grade') state.ui.gen.words = wordBand(e.target.value).target;
+      if (key === 'genre' || key === 'grade') {
+        const subs = gaSubtopicsFor(String(state.ui.gen.grade), state.ui.gen.genre);
+        if (!subs.includes(state.ui.gen.subtopic)) state.ui.gen.subtopic = subs[0] || '';
+      }
+      renderSetEditor();
+    });
+  });
+  const run = panel.querySelector('#genRun');
+  if (run) run.addEventListener('click', () => {
+    const g = state.ui.gen;
+    handleGenerateSet({ ...g, grade: String(g.grade), words: +g.words || wordBand(g.grade).target,
+                        passageCount: +g.passageCount, questionCount: +g.questionCount });
+  });
+  const cancel = panel.querySelector('#genCancel');
+  if (cancel) cancel.addEventListener('click', () => { state.ui.genOpen = false; renderSetEditor(); });
 }
 
 /* ---------- AI builder: Georgia Peer Revision Task ----------
@@ -3024,6 +3343,12 @@ function init() {
   bindStateSelect('dashStateSeg', false, state.ui.dashState, v => { state.ui.dashState = v; renderDash(); });
 
   document.getElementById('newSetBtn').addEventListener('click', newPassageSet);
+  document.getElementById('genSetBtn').addEventListener('click', () => {
+    state.ui.currentSetId = null;
+    state.ui.genOpen = true;
+    state.ui.gen.words = wordBand(state.ui.gen.grade).target;
+    renderPassages();
+  });
 
   // Master list filters: status + grade (grade options come from GRADES)
   const fgSel = document.getElementById('setFilterGrade');
