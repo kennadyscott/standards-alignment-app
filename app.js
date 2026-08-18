@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608182234';   // replaced with the deploy stamp
+const APP_BUILD = '202608182248';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1810,8 +1810,12 @@ function tagTarget(s, section, i) {
 function dropOutOfScopePrimary(s) {
   const scope = primaryScope(s);
   if (!s.standard || !scope) return;
-  const std = state.byKey.get(`${s.standard.state}:${s.standard.code}`);
-  if (!std || !scope(std)) s.standard = null;
+  // tagStd() builds the real state:subject:code key. This used to look up
+  // `state:code`, which never matches, so EVERY hierarchy change silently wiped the
+  // primary standard — the "clicking a subtopic removes the standard" bug.
+  const std = tagStd(s.standard);
+  if (!std) return;                    // can't resolve it — leave the tag alone
+  if (!scope(std)) s.standard = null;  // genuinely out of scope now
 }
 
 // The state whose standards feed the set's pickers: explicit dropdown choice,
@@ -2714,6 +2718,17 @@ const SUBDOMAIN_SUBJECT = {
   'Economics': 'social_studies',
 };
 function subdomainSubject(sub) { return SUBDOMAIN_SUBJECT[sub] || 'ela'; }
+// The Dashboard splits science into Earth/Life/Physical (it derives those from the
+// tagged standard's strand), but the Classification hierarchy only has "Science".
+// Store the hierarchy value on the set; the Dashboard still files it under the finer
+// row because setSubdomain() re-derives that from the standard.
+function hierarchySubtopic(sub, grade) {
+  if (/(Earth|Life|Physical) Science/.test(sub)) return 'Science';
+  if (String(grade) === '2' && ['History', 'Geography', 'Government', 'Economics'].includes(sub)) {
+    return 'Social Studies';           // grade 2's hierarchy is the coarse pair
+  }
+  return sub;
+}
 function subdomainGenre(sub) {
   if (SUBDOMAIN_SUBJECT[sub]) return 'informational';
   return ['Biographies', 'True Narratives'].includes(sub) ? 'literary_nonfiction' : 'literary';
@@ -2727,7 +2742,7 @@ function openGenModal(cfg) {
     grade,
     code: '',
     genre: subdomainGenre(cfg.subtopic),
-    subtopic: cfg.subtopic,
+    subtopic: hierarchySubtopic(cfg.subtopic, grade),
     itemSetType: cfg.itemSetType,
     words: wordBand(grade, state.ui.gen.passageCount).target,
     setCount: Math.max(1, Math.min(DASH_GOAL - (cfg.have || 0), DASH_GOAL)),
