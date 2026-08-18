@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608182204';   // replaced with the deploy stamp
+const APP_BUILD = '202608182218';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2273,16 +2273,27 @@ function qstateScope(grade) {
 // the 670 imported ECR sets (data/imported_sets.json), i.e. this library's own house
 // norms rather than invented targets. Applied PER PASSAGE — the measurement was too.
 const PASSAGE_WORDS = {
-  '2': { min: 140, target: 170, max: 230 },
-  '3': { min: 160, target: 190, max: 300 },
-  '4': { min: 185, target: 225, max: 375 },
-  '5': { min: 220, target: 250, max: 380 },
-  '6': { min: 345, target: 395, max: 595 },
-  '7': { min: 360, target: 430, max: 565 },
-  '8': { min: 360, target: 435, max: 565 },
+  // p25 / median / p75 of TOTAL words per set in the 670 imported sets, measured
+  // SEPARATELY for single- and two-passage sets. Measuring them together (the first
+  // cut of this table) averaged a ~260-word single G2 passage with the ~152-word halves
+  // of a paired set and produced a band that made every single-passage set far too short.
+  '2': { single: { min: 226, target: 260, max: 297 }, paired: { min: 276, target: 306, max: 337 } },
+  '3': { single: { min: 298, target: 336, max: 365 }, paired: { min: 323, target: 355, max: 376 } },
+  '4': { single: { min: 376, target: 411, max: 490 }, paired: { min: 360, target: 407, max: 447 } },
+  '5': { single: { min: 378, target: 445, max: 514 }, paired: { min: 429, target: 470, max: 521 } },
+  '6': { single: { min: 583, target: 642, max: 672 }, paired: { min: 652, target: 728, max: 778 } },
+  '7': { single: { min: 534, target: 682, max: 746 }, paired: { min: 684, target: 822, max: 855 } },
+  '8': { single: { min: 537, target: 656, max: 747 }, paired: { min: 689, target: 794, max: 869 } },
 };
 function wordCount(t) { return (String(t || '').trim().match(/\S+/g) || []).length; }
-function wordBand(grade) { return PASSAGE_WORDS[String(grade)] || { min: 150, target: 250, max: 500 }; }
+// The band is on the SET TOTAL, not per passage — a paired set must not be two
+// full-length passages. Pass the passage count to get the right shape's band.
+function wordBand(grade, passageCount) {
+  const row = PASSAGE_WORDS[String(grade)];
+  if (!row) return { min: 150, target: 250, max: 900 };
+  return (+passageCount === 2) ? row.paired : row.single;
+}
+function totalWords(passages) { return (passages || []).reduce((a, p) => a + wordCount(p && p.text), 0); }
 
 // The library never uses text_entry in the reading question set — match it.
 const GEN_QTYPES = ['multiple_choice', 'cloze', 'multi_select'];
@@ -2381,7 +2392,7 @@ function tidyPassages(out, want) {
 }
 
 async function generatePassageSet(cfg) {
-  const band = wordBand(cfg.grade);
+  const band = wordBand(cfg.grade, cfg.passageCount);
   // The QUESTIONS are always reading-comprehension items, so they tag to this state's
   // ELA standards even when the passage anchors to a science/social-studies standard —
   // that is how every one of the 670 imported sets is built.
@@ -2396,7 +2407,8 @@ ${anchor.code} — ${anchor.description}${anchor.stem ? `\n(part of ${anchor.par
 
 Genre: ${cfg.genre} · Sub-domain: ${cfg.subtopic || '(none)'} · Item set type: ${cfg.itemSetType}
 Passages to write: ${cfg.passageCount}
-WORD RANGE FOR EACH PASSAGE: ${band.min}–${band.max} words (aim for about ${cfg.words}).
+WORD BUDGET FOR THE WHOLE SET: ${band.min}–${band.max} words TOTAL (aim for about ${cfg.words}).${cfg.passageCount === 2 ? `
+Because there are two passages, that budget is SHARED — each passage should be roughly ${Math.round(cfg.words / 2)} words so the pair together lands inside the total. Two full-length passages would be twice as much reading as this grade should get.` : ''}
 Questions to write: ${cfg.questionCount}
 Writing prompt mode: ${cfg.itemSetType === 'opinion' ? (String(cfg.grade) >= '6' ? 'argumentative' : 'opinion') : 'informational/explanatory'}
 ${cfg.topic ? `Topic the passage should cover: ${cfg.topic}` : 'Choose an appropriate topic yourself.'}
@@ -2407,13 +2419,13 @@ ${pool.join('\n')}
 Write the passage set now.`;
   let out = await callSetBuilder(base);
   tidyPassages(out, cfg.passageCount);
-  const bad = (out.passages || []).map((p, i) => ({ i, n: wordCount(p.text) }))
-    .filter(x => x.n < band.min || x.n > band.max);
-  if (bad.length) {
-    const detail = bad.map(x => `passage ${x.i + 1} was ${x.n} words`).join('; ');
+  const total = totalWords(out.passages);
+  if (total < band.min || total > band.max) {
+    const parts = (out.passages || []).map(p => wordCount(p.text));
+    const detail = `the set totalled ${total} words (${parts.join(' + ')})`;
     out = await callSetBuilder(`${base}
 
-YOUR PREVIOUS ATTEMPT BROKE THE LENGTH RULE: ${detail}. Every passage must be between ${band.min} and ${band.max} words. Return exactly ${cfg.passageCount} passage(s) — no empty ones. Rewrite the set, keeping the same topic and question structure, with each passage inside that range.`);
+YOUR PREVIOUS ATTEMPT BROKE THE LENGTH RULE: ${detail}, but the whole set must total between ${band.min} and ${band.max} words${cfg.passageCount === 2 ? ' ACROSS BOTH PASSAGES COMBINED' : ''}. Return exactly ${cfg.passageCount} passage(s) — no empty ones. Rewrite the set, keeping the same topic and question structure, so the combined total lands inside that range.`);
     tidyPassages(out, cfg.passageCount);
   }
   return out;
@@ -2425,7 +2437,7 @@ async function handleGenerateSet(cfg, opts) {
   if (state.ui.genModal) renderGenModal(); else renderSetEditor();
   try {
     const out = await generatePassageSet(cfg);
-    const band = wordBand(cfg.grade);
+    const band = wordBand(cfg.grade, cfg.passageCount);
     // Questions validate against ELA; the set-level anchor keeps cfg.subject.
     const validQ = new Map(state.standards
       .filter(x => (x.state === cfg.state || x.state === 'ALL') && x.subject === 'ela')
@@ -2463,14 +2475,16 @@ async function handleGenerateSet(cfg, opts) {
     renderDash();   // the gap that launched this just got smaller
     // Report what the rules caught rather than hiding it — the reviewer decides.
     const counts = s.passages.map(p => wordCount(p.text));
-    const off = counts.filter(n => n < band.min || n > band.max);
+    const total = counts.reduce((a, n) => a + n, 0);
     const untagged = s.questions.filter(q => !q.standard).length;
     const notes = [];
-    if (off.length) notes.push(`⚠ ${off.length} passage(s) outside ${band.min}–${band.max} words (${counts.join(', ')})`);
+    if (total < band.min || total > band.max) {
+      notes.push(`⚠ set totals ${total} words, outside ${band.min}–${band.max}${counts.length > 1 ? ` (${counts.join(' + ')})` : ''}`);
+    }
     if (untagged) notes.push(`⚠ ${untagged} question(s) need a standard`);
     toast(notes.length
       ? `Draft created — ${notes.join(' · ')}`
-      : `✓ Draft created — ${counts.join(' + ')} words, ${s.questions.length} questions, all tagged`);
+      : `✓ Draft created — ${counts.length > 1 ? `${counts.join(' + ')} = ${total}` : total} words, ${s.questions.length} questions, all tagged`);
     state.ui.genOk = true;
   } catch (e) {
     state.ui.genOk = false;
@@ -2492,7 +2506,7 @@ async function handleGenerateSet(cfg, opts) {
 function generatorFormHtml(opts) {
   const modal = !!(opts && opts.modal);
   const g = state.ui.gen;
-  const band = wordBand(g.grade);
+  const band = wordBand(g.grade, g.passageCount);
   const stds = state.standards
     .filter(x => x.state === g.state && x.subject === g.subject && gradeMatches(x.grade, g.grade))
     .sort((a, b) => a.code.localeCompare(b.code));
@@ -2557,8 +2571,8 @@ function generatorFormHtml(opts) {
           ${[3, 4].map(n => `<option value="${n}" ${+g.questionCount === n ? 'selected' : ''}>${n} questions</option>`).join('')}
         </select></div>
 
-      <div class="ps-field"><label>Words per passage
-          <span class="ps-hint">grade ${g.grade} library range ${band.min}–${band.max}</span></label>
+      <div class="ps-field"><label>Total words for the set
+          <span class="ps-hint">grade ${g.grade} ${+g.passageCount === 2 ? 'paired' : 'single'} range ${band.min}–${band.max}${+g.passageCount === 2 ? ` · about ${Math.round(g.words / 2)} each` : ''}</span></label>
         <input class="ps-input" type="number" data-gen="words" value="${g.words}" min="${band.min}" max="${band.max}"></div>
 
       <div class="ps-field"><label>Topic <span class="ps-hint">optional — leave blank to let the model choose</span></label>
@@ -2585,7 +2599,10 @@ function wireGeneratorForm(panel) {
       state.ui.gen[key] = e.target.value;
       // Changing what the standard list depends on invalidates the chosen standard.
       if (key === 'state' || key === 'subject' || key === 'grade') state.ui.gen.code = '';
-      if (key === 'grade') state.ui.gen.words = wordBand(e.target.value).target;
+      // grade OR passage count changes which band applies — re-target the budget.
+      if (key === 'grade' || key === 'passageCount') {
+        state.ui.gen.words = wordBand(state.ui.gen.grade, state.ui.gen.passageCount).target;
+      }
       if (key === 'genre' || key === 'grade') {
         const subs = gaSubtopicsFor(String(state.ui.gen.grade), state.ui.gen.genre);
         if (!subs.includes(state.ui.gen.subtopic)) state.ui.gen.subtopic = subs[0] || '';
@@ -2596,7 +2613,7 @@ function wireGeneratorForm(panel) {
   const run = panel.querySelector('#genRun');
   if (run) run.addEventListener('click', async () => {
     const g = state.ui.gen;
-    const cfg = { ...g, grade: String(g.grade), words: +g.words || wordBand(g.grade).target,
+    const cfg = { ...g, grade: String(g.grade), words: +g.words || wordBand(g.grade, g.passageCount).target,
                   passageCount: +g.passageCount, questionCount: +g.questionCount };
     // A dashboard gap usually needs several sets; build them one at a time so a failure
     // costs one set, not the batch, and so each is saved as soon as it lands.
@@ -2644,7 +2661,7 @@ function openGenModal(cfg) {
     genre: subdomainGenre(cfg.subtopic),
     subtopic: cfg.subtopic,
     itemSetType: cfg.itemSetType,
-    words: wordBand(grade).target,
+    words: wordBand(grade, state.ui.gen.passageCount).target,
     setCount: Math.max(1, Math.min(DASH_GOAL - (cfg.have || 0), DASH_GOAL)),
   });
   state.ui.genModal = { have: cfg.have || 0 };
@@ -3480,7 +3497,7 @@ function init() {
   document.getElementById('genSetBtn').addEventListener('click', () => {
     state.ui.currentSetId = null;
     state.ui.genOpen = true;
-    state.ui.gen.words = wordBand(state.ui.gen.grade).target;
+    state.ui.gen.words = wordBand(state.ui.gen.grade, state.ui.gen.passageCount).target;
     renderPassages();
   });
 
