@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608192203';   // replaced with the deploy stamp
+const APP_BUILD = '202608192211';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -485,6 +485,12 @@ async function ghSave(attempt = 0) {
   updateSaveBadge();
 }
 
+// A refused token is the one failure the user can actually fix, so the badge stops
+// offering "retry" (which can only fail again) and offers to replace the token instead.
+function tokenRefused() {
+  return syncTrouble && /\b40[13]\b|no repo access|Bad credentials/i.test(syncError || '');
+}
+
 function updateSaveBadge() {
   const b = document.getElementById('saveBadge');
   if (!b) return;
@@ -493,11 +499,13 @@ function updateSaveBadge() {
   // Honest status: green only when a pull has actually SUCCEEDED — a token alone
   // once showed green while the browser was silently siloed.
   const t = ghToken
-    ? (syncTrouble
-        ? '⚠ Sync issue — click to retry'
-        : lastSyncAt
-          ? `● Synced ${lastSyncAt.toTimeString().slice(0, 5)}`
-          : '◌ Connecting…')
+    ? (tokenRefused()
+        ? '⚠ Sign in again — click to paste a new token'
+        : syncTrouble
+          ? '⚠ Sync issue — click to retry'
+          : lastSyncAt
+            ? `● Synced ${lastSyncAt.toTimeString().slice(0, 5)}`
+            : '◌ Connecting…')
     : '○ Connect cloud saving';
   b.textContent = t;
   b.title = (syncTrouble && syncError ? `Last error: ${syncError}\n` : '')
@@ -3733,7 +3741,7 @@ function init() {
   });
 
   document.getElementById('saveBadge').addEventListener('click', async (ev) => {
-    if (ghToken && !ev.shiftKey) {
+    if (ghToken && !ev.shiftKey && !tokenRefused()) {
       toast('↻ Syncing…');
       const ok = await syncFromServer();
       if (ok) { toast('✓ Up to date'); return; }
@@ -3749,10 +3757,14 @@ function init() {
       toast(`⚠ Sync failed: ${syncError || 'unknown'} — ${hint}`);
       return;
     }
-    const t = prompt('Paste your GitHub access token to connect to the SHARED team dashboard.\n\nYour work (approvals, IDs, tags) saves to the team’s central GitHub file that everyone shares. Only the token itself stays private in this browser — it’s your key, not your data.', ghToken || '');
+    const why = tokenRefused()
+      ? `GitHub refused this browser's access token (${syncError}).\n\nTokens expire — GitHub's default is 30 days. Make a new CLASSIC token at github.com/settings/tokens/new with the "repo" box checked, then paste it below.\n\nNothing you have done is lost; it uploads as soon as the new token is accepted.\n\n`
+      : '';
+    const t = prompt(why + 'Paste your GitHub access token to connect to the SHARED team dashboard.\n\nYour work (approvals, IDs, tags) saves to the team’s central GitHub file that everyone shares. Only the token itself stays private in this browser — it’s your key, not your data.', ghToken || '');
     if (t === null) return;
     ghToken = t.trim();
     localStorage.setItem(LS_GH_TOKEN, ghToken);
+    syncTrouble = false; syncError = '';   // give the new token a clean slate
     updateSaveBadge();
     if (ghToken) {
       try {
