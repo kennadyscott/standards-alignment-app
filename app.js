@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608190006';   // replaced with the deploy stamp
+const APP_BUILD = '202608192150';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -240,6 +240,70 @@ function mirrorLocal() {
   }
 }
 
+
+/* ---------- state file slimming ----------
+   The shared state file crossed 8 MB and every save is a full pull+merge+push, so a
+   save became a ~22 MB round trip — 10+ seconds each, colliding constantly across five
+   people. 74% of that file was the CONTENT of the 669 imported sets, which is already
+   served read-only from data/imported_sets.json and re-merged on every load.
+
+   So: slim on WRITE, hydrate on READ. An imported set whose content still matches the
+   data file is persisted as reviewer-owned fields only; anything edited away from the
+   source is stored in full, so a hand-edited set can never be silently reverted. */
+const IMPORT_OWNED = ['title', 'passages', 'questions', 'writingPrompt'];
+const REVIEWER_OWNED = ['id', 'passageId', 'status', 'itemSetType', 'genre', 'gaGrade',
+                        'gaSubtopic', 'primaryState', 'standard', 'peerRevision', 'peerDraft'];
+
+function contentSig(s) {
+  return JSON.stringify([
+    s.title || '',
+    s.passages || [],
+    (s.questions || []).map(q => [q.text || '', q.type || null, q.standard || null]),
+    (s.writingPrompt || {}).text || '',
+  ]);
+}
+
+function slimSetForSave(s, sourceById) {
+  const src = sourceById.get(s.id);
+  if (!src || contentSig(s) !== contentSig(src)) return s;   // not imported, or edited — keep everything
+  const out = {};
+  REVIEWER_OWNED.forEach(k => { if (s[k] !== undefined) out[k] = s[k]; });
+  // per-state question tags are the reviewer's, and they ride on the question objects
+  const tags = (s.questions || []).map(q => (q && q.stateStandards) ? { stateStandards: q.stateStandards } : null);
+  if (tags.some(Boolean)) out.qTags = tags;
+  out.fromImport = true;                                     // marks it for hydration on read
+  return out;
+}
+
+// Put the deck content back on any set that was persisted slim. Runs after every path
+// that can bring server sets into memory, so the rest of the app never sees a slim set.
+function hydrateImportedSets() {
+  const byId = new Map((state.importedDrafts || []).map(d => [d.id, d]));
+  if (!byId.size) return 0;
+  let n = 0;
+  state.sets.forEach((s, i) => {
+    if (!s || !s.fromImport) return;
+    const src = byId.get(s.id);
+    if (!src) return;                                        // data file missing it — leave as-is
+    // Build from the CONTENT fields only. Copying the whole source record would drag
+    // its reviewer fields along — and since approval is stored as the ABSENCE of
+    // `status`, that silently re-flagged every approved set as a draft.
+    const full = {};
+    IMPORT_OWNED.forEach(k => { if (src[k] !== undefined) full[k] = JSON.parse(JSON.stringify(src[k])); });
+    REVIEWER_OWNED.forEach(k => { if (s[k] !== undefined) full[k] = s[k]; });
+    full.id = s.id;
+    (s.qTags || []).forEach((t, qi) => {
+      if (t && t.stateStandards && full.questions && full.questions[qi]) {
+        full.questions[qi].stateStandards = t.stateStandards;
+      }
+    });
+    delete full.fromImport; delete full.qTags;
+    state.sets[i] = full;
+    n++;
+  });
+  return n;
+}
+
 function stateBody() {
   return JSON.stringify({
     // Link ids reuse the original pair ids (ss4-01…), so these ARE the reviewer's
@@ -259,7 +323,10 @@ function stateBody() {
     setFlagAt: state.setFlagAt || {},
     setStateId: state.setStateId || {},
     setDeleted: state.setDeleted || {},
-    sets: state.sets,
+    sets: (() => {
+      const byId = new Map((state.importedDrafts || []).map(d => [d.id, d]));
+      return byId.size ? state.sets.map(s => slimSetForSave(s, byId)) : state.sets;
+    })(),
     savedAt: new Date().toISOString(),
   });
 }
@@ -369,6 +436,7 @@ function mergeForSave(server) {
     // Reviewer progress is monotonic in this workflow — adopt it from the server copy.
     graftProgress(loc, sv);
   });
+  hydrateImportedSets();
   normalizeSets();
 }
 
@@ -622,6 +690,7 @@ function mergeServerState(s) {
     state.setFlag = merged.setFlagM.decisions;
     state.setFlagAt = merged.setFlagM.decisionsAt;
     state.sets = merged.sets.filter(x => !state.setDeleted[x.id]);
+    hydrateImportedSets();   // put deck content back on sets persisted in slim form
     normalizeSets();
     mergeImportedDrafts();   // re-add any imported draft the server copy doesn't have
     mirrorLocal();
@@ -754,6 +823,7 @@ async function loadData() {
 }
 
 function mergeImportedDrafts() {
+  hydrateImportedSets();
   const have = new Map(state.sets.map(s => [s.id, s]));
   (state.importedDrafts || []).forEach(d => {
     if ((state.setDeleted || {})[d.id]) return;   // deleted by a reviewer — stay deleted
