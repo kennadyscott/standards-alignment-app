@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608182353';   // replaced with the deploy stamp
+const APP_BUILD = '202608190006';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3459,13 +3459,40 @@ function renderAll() {
 // Finest sub-domain we can name for a set: literary genres use the hierarchy subtopic;
 // content-area sets use their tagged standard's strand (Earth/Life/Physical Science,
 // History, Geography, …), falling back to the subtopic when no standard is tagged.
+/* Every state names its strands differently — Ohio says "History" and "Government",
+   Florida "American History" and "Civics and Government", Georgia "Historical
+   Understandings", Texas "Citizenship", South Carolina uses era and continent names.
+   The Dashboard rows are Ohio's vocabulary, so a strand has to be normalised before it
+   can be filed, or the set lands in a row that is never rendered and the count silently
+   never moves. */
+function canonSubdomain(strand, subject) {
+  const s = (strand || '').toLowerCase();
+  if (!s) return null;
+  if (subject === 'science') {
+    if (/earth|space|universe/.test(s)) return 'Earth Science';
+    if (/life|organism|molecul|ecosystem|hered|evolution|biolog/.test(s)) return 'Life Science';
+    if (/physical|matter|energy|motion|force|wave/.test(s)) return 'Physical Science';
+    return null;                       // practice/inquiry strands have no content row
+  }
+  if (subject === 'social_studies') {
+    if (/econom|financial literacy/.test(s)) return 'Economics';
+    if (/civic|government|citizenship/.test(s)) return 'Government';
+    // whole-strand continent names (SC's regional geography) — anchored so that
+    // "African American History" is NOT read as "Africa".
+    if (/^(africa|asia|europe|north america|south america|australia[\w, ]*)$/.test(s)) return 'Geography';
+    if (/geograph|map skills|environment and people/.test(s)) return 'Geography';
+    if (/histor|coloniz|revolution|nation|civiliz|holocaust|communism|expansion|rebuilding|settlement|crossroad|progress|global|atlantic|migration|modern america|social changes|compromis|world leader|divided|interdepend/.test(s)) return 'History';
+    return null;
+  }
+  return null;
+}
+
 function setSubdomain(s) {
   if (s.genre === 'literary' || s.genre === 'literary_nonfiction') return s.gaSubtopic || 'Untagged';
   const std = tagStd(s.standard);
-  const strand = std && std.strand;
-  if (strand === 'Earth and Space Science') return 'Earth Science';
-  if (strand) return strand;
-  return s.gaSubtopic || 'Untagged';
+  // The reviewer's own hierarchy tag is the fallback — a strand we cannot normalise is
+  // not a reason to lose the set off the board.
+  return canonSubdomain(std && std.strand, std && std.subject) || s.gaSubtopic || 'Untagged';
 }
 
 // The sub-domains a grade is EXPECTED to cover (the hierarchy), grouped by genre —
@@ -3490,8 +3517,14 @@ const DASH_GOAL = 4;   // sets per sub-domain per item-set type
 function dashSubdomain(s, grade) {
   let dom = setSubdomain(s);
   if (grade === '2') {   // fold fine strands back to G2's coarse hierarchy
-    if (['Earth Science', 'Life Science', 'Physical Science'].includes(dom)) dom = 'Science';
-    if (['History', 'Geography', 'Government', 'Economics'].includes(dom)) dom = 'Social Studies';
+    if (['Earth Science', 'Life Science', 'Physical Science', 'Science'].includes(dom)) dom = 'Science';
+    if (['History', 'Geography', 'Government', 'Economics', 'Social Studies'].includes(dom)) dom = 'Social Studies';
+  } else if (dom === 'Science' || dom === 'Social Studies') {
+    // A grade 3-8 set classified only at G2's coarse level still has to land somewhere
+    // the board renders; use the anchor's strand, else the first row of that group.
+    const std = tagStd(s.standard);
+    dom = canonSubdomain(std && std.strand, std && std.subject)
+      || (dom === 'Science' ? 'Earth Science' : 'History');
   }
   return dom;
 }
