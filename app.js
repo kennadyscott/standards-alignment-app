@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608192150';   // replaced with the deploy stamp
+const APP_BUILD = '202608192203';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -500,7 +500,9 @@ function updateSaveBadge() {
           : '◌ Connecting…')
     : '○ Connect cloud saving';
   b.textContent = t;
-  b.title = `Click to sync now · Shift-click to change the access token · build ${typeof APP_BUILD !== 'undefined' ? APP_BUILD : '?'}`;
+  b.title = (syncTrouble && syncError ? `Last error: ${syncError}\n` : '')
+    + `Click to sync now · Shift-click to change the access token · build ${typeof APP_BUILD !== 'undefined' ? APP_BUILD : '?'}`
+    + ` · ${state.sets.length} sets loaded`;
   b.classList.toggle('badge-ok', !!ghToken && !syncTrouble && !!lastSyncAt);
 }
 
@@ -530,6 +532,7 @@ function userIsTyping() {
 let syncPulling = false;
 let lastSyncAt = null;   // Date of last successful pull/save
 let syncTrouble = false; // last attempt failed — badge shows it
+let syncError = '';      // why it failed, surfaced in the badge tooltip and retry toast
 let dirtyLocal = false;  // local work not yet committed to the server — sync retries it
 async function syncFromServer() {
   // Note: runs even when serverAvailable is false — a failed INITIAL load must not
@@ -550,8 +553,12 @@ async function syncFromServer() {
     ok = true;
     lastSyncAt = new Date();
     syncTrouble = false;
-  } catch {
+    syncError = '';
+  } catch (e) {
     syncTrouble = true;
+    // The reason used to be swallowed, which made "Sync issue" undiagnosable from the
+    // outside — the app knew what went wrong and threw it away.
+    syncError = String((e && e.message) || e || 'unknown error');
   }
   syncPulling = false;
   // A save that was skipped (no connection yet) or failed leaves local-only work behind.
@@ -628,10 +635,11 @@ async function loadPersisted() {
       serverAvailable = true;
       lastSyncAt = new Date();
       syncTrouble = false;
-    } catch {
+    } catch (e) {
       syncTrouble = true;
       updateSaveBadge();
-      toast('⚠ Could not load the team state — retrying automatically');
+      syncError = String((e && e.message) || e || 'unknown error');
+      toast(`⚠ Could not load the team state (${syncError}) — click the badge to retry`);
       return;   // syncFromServer's interval keeps retrying and will connect
     }
   }
@@ -3728,7 +3736,17 @@ function init() {
     if (ghToken && !ev.shiftKey) {
       toast('↻ Syncing…');
       const ok = await syncFromServer();
-      toast(ok ? '✓ Up to date' : '⚠ Sync failed — will keep retrying');
+      if (ok) { toast('✓ Up to date'); return; }
+      const hint = /40[13]/.test(syncError)
+        ? 'your access token is being refused — shift-click this badge to paste a fresh one'
+        : /rate limit|403/i.test(syncError)
+          ? 'GitHub is rate-limiting this token — it clears within the hour'
+          : /incomplete|truncat/i.test(syncError)
+            ? 'the download was cut short — usually a slow or dropping connection'
+            : /Failed to fetch|NetworkError|load failed/i.test(syncError)
+              ? 'the browser could not reach GitHub — check the network or a VPN/firewall'
+              : 'see the details below';
+      toast(`⚠ Sync failed: ${syncError || 'unknown'} — ${hint}`);
       return;
     }
     const t = prompt('Paste your GitHub access token to connect to the SHARED team dashboard.\n\nYour work (approvals, IDs, tags) saves to the team’s central GitHub file that everyone shares. Only the token itself stays private in this browser — it’s your key, not your data.', ghToken || '');
