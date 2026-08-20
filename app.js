@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608200316';   // replaced with the deploy stamp
+const APP_BUILD = '202608201238';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -160,7 +160,7 @@ const state = {
     inState: 'OH', inGrade: '4', overrideKey: null,
     inStage: 'all', inSelected: null,                  // State Lists: stage filter + selected set
     dashOpen: {}, dashState: 'OH',                     // Dashboard: expanded grades + which state's lists
-    setFilterStatus: 'all', setFilterGrade: 'all',     // Master list filters
+    setFilterStatus: 'all', setFilterGrade: 'all', setFilterState: 'all',   // Master list filters
     currentSetId: null, openPicker: null,
     genOpen: false, genBusy: false, genModal: null,
     gen: { state: 'OH', subject: 'ela', grade: '4', code: '', genre: 'informational',
@@ -1697,10 +1697,21 @@ function renderSetList() {
     return;
   }
   // Filters: work the drafts grade by grade (add IDs, approve) without wading through 300 sets.
-  const fs = state.ui.setFilterStatus, fg = state.ui.setFilterGrade;
+  const fs = state.ui.setFilterStatus, fg = state.ui.setFilterGrade, fst = state.ui.setFilterState;
+  // Primary state: the explicit dropdown choice, else the tagged standard's state.
+  // Literary/Literary Non-Fiction anchor to a universal sub-genre (state "ALL") and so
+  // serve every state — they match any specific state as well as their own option.
+  const matchesState = s => {
+    if (fst === 'all') return true;
+    const ps = primaryStateOf(s) || ((s.standard || {}).state) || null;
+    if (fst === 'ALL') return ps === 'ALL';
+    if (fst === 'none') return !ps;
+    return ps === fst || ps === 'ALL';
+  };
   const list = state.sets.filter(s =>
     (fs === 'all' || (fs === 'draft') === isDraft(s)) &&
-    (fg === 'all' || String(s.gaGrade) === fg));
+    (fg === 'all' || String(s.gaGrade) === fg) &&
+    matchesState(s));
   const countEl = document.getElementById('setFilterCount');
   if (countEl) countEl.textContent = list.length === state.sets.length
     ? `${state.sets.length} sets`
@@ -3762,6 +3773,22 @@ function init() {
   });
 
   // Master list filters: status + grade (grade options come from GRADES)
+  const fstSel = document.getElementById('setFilterState');
+  if (fstSel) {
+    const counts = {};
+    state.sets.forEach(s => {
+      const ps = primaryStateOf(s) || ((s.standard || {}).state) || 'none';
+      counts[ps] = (counts[ps] || 0) + 1;
+    });
+    const sorted = [...STATES].sort((a, b) => STATE_NAMES[a].localeCompare(STATE_NAMES[b]));
+    fstSel.innerHTML = `<option value="all">All primary states</option>`
+      + sorted.map(s => `<option value="${s}">${STATE_NAMES[s]}${counts[s] ? ` (${counts[s]})` : ''}</option>`).join('')
+      + (counts.ALL ? `<option value="ALL">Universal — all states (${counts.ALL})</option>` : '')
+      + (counts.none ? `<option value="none">No primary state (${counts.none})</option>` : '');
+    fstSel.value = state.ui.setFilterState;
+    fstSel.addEventListener('change', e => { state.ui.setFilterState = e.target.value; renderSetList(); });
+  }
+
   const fgSel = document.getElementById('setFilterGrade');
   fgSel.innerHTML = `<option value="all">All grades</option>` + GRADES.map(g => `<option value="${g}">Grade ${g}</option>`).join('');
   fgSel.addEventListener('change', e => { state.ui.setFilterGrade = e.target.value; renderSetList(); });
