@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608192211';   // replaced with the deploy stamp
+const APP_BUILD = '202608200316';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3600,6 +3600,22 @@ const DASH_GROUPS = {
 };
 const DASH_GOAL = 4;   // sets per sub-domain per item-set type
 
+/* Not every state teaches all three sciences every year — Georgia's middle school runs
+   one discipline per grade (6 Earth, 7 Life, 8 Physical), so showing empty Life and
+   Physical rows there reads as a coverage gap when it is simply not part of that grade.
+   Rows are therefore derived from the state's own standards.
+
+   Science only, deliberately: discipline names are unambiguous in every state's science
+   file, whereas South Carolina's social studies strands are era and continent names
+   ("Colonization", "Africa") that hide the economics and civics genuinely taught inside
+   them — absence there cannot be proven from a strand name, so those rows always stay. */
+const DASH_SCIENCE_ROWS = ['Earth Science', 'Life Science', 'Physical Science'];
+function stateTeachesSubdomain(st, grade, sub) {
+  return state.standards.some(x =>
+    x.state === st && x.subject === 'science' && gradeMatches(x.grade, grade) &&
+    canonSubdomain(x.strand, 'science') === sub);
+}
+
 function dashSubdomain(s, grade) {
   let dom = setSubdomain(s);
   if (grade === '2') {   // fold fine strands back to G2's coarse hierarchy
@@ -3644,11 +3660,12 @@ function renderDash() {
 
   GRADES.forEach(g => {
     const sets = servingSets(g);
-    const groups = DASH_GROUPS[g === '2' ? '2' : '3-8'];
-    const expect = groups.flatMap(([, doms]) => doms);
+    const allGroups = DASH_GROUPS[g === '2' ? '2' : '3-8'];
+    const allExpect = allGroups.flatMap(([, doms]) => doms);
 
-    // sub-domain -> {informative, opinion}
-    const tally = new Map(expect.map(d => [d, { informative: 0, opinion: 0 }]));
+    // sub-domain -> {informative, opinion}. Tally across EVERY possible row first, so a
+    // row that holds work is never hidden underneath us.
+    const tally = new Map(allExpect.map(d => [d, { informative: 0, opinion: 0 }]));
     sets.forEach(s => {
       const dom = dashSubdomain(s, g);
       const t = tally.get(dom) || { informative: 0, opinion: 0 };
@@ -3656,7 +3673,19 @@ function renderDash() {
       tally.set(dom, t);
     });
 
-    // summary: how many (sub-domain × type) cells hit the goal / are partial / missing
+    // Drop a science row only when this state has no standards for it at this grade AND
+    // nothing is filed there.
+    const keep = d => {
+      if (!DASH_SCIENCE_ROWS.includes(d)) return true;
+      const t = tally.get(d) || { informative: 0, opinion: 0 };
+      if (t.informative || t.opinion) return true;
+      return stateTeachesSubdomain(dst, g, d);
+    };
+    const groups = allGroups.map(([label, doms]) => [label, doms.filter(keep)])
+                            .filter(([, doms]) => doms.length);
+    const expect = groups.flatMap(([, doms]) => doms);
+
+    // summary: how many (sub-domain x type) cells hit the goal / are partial / missing
     let met = 0, partial = 0, missing = 0;
     expect.forEach(d => {
       const t = tally.get(d);
