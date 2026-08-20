@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608202202';   // replaced with the deploy stamp
+const APP_BUILD = '202608202206';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -160,7 +160,7 @@ const state = {
     inState: 'OH', inGrade: '4', overrideKey: null,
     inStage: 'all', inSelected: null,                  // State Lists: stage filter + selected set
     dashOpen: {}, dashState: 'OH',                     // Dashboard: expanded grades + which state's lists
-    setFilterStatus: 'all', setFilterGrade: 'all', setFilterState: 'all',   // Master list filters
+    setFilterStatus: 'all', setFilterGrade: 'all', setFilterState: 'all', setSearch: '',   // Master list filters
     currentSetId: null, openPicker: null,
     genOpen: false, genBusy: false, genModal: null,
     gen: { state: 'OH', subject: 'ela', grade: '4', code: '', genre: 'informational',
@@ -1732,10 +1732,21 @@ function renderSetList() {
     if (fst === 'none') return !ps;
     return ps === fst || ps === 'ALL';
   };
+  // At 1,200+ sets an alphabetical list is unusable without search: a set you just made
+  // lands wherever its title falls, which is why "it built but I can't see it".
+  const q = (state.ui.setSearch || '').toLowerCase().trim();
+  const matchesSearch = s => {
+    if (!q) return true;
+    return (s.title || '').toLowerCase().includes(q)
+      || (s.passageId || '').toLowerCase().includes(q)
+      || ((s.standard || {}).code || '').toLowerCase().includes(q)
+      || (s.passages || []).some(p => (p.title || '').toLowerCase().includes(q)
+                                   || (p.text || '').toLowerCase().includes(q));
+  };
   const list = state.sets.filter(s =>
     (fs === 'all' || (fs === 'draft') === isDraft(s)) &&
     (fg === 'all' || String(s.gaGrade) === fg) &&
-    matchesState(s));
+    matchesState(s) && matchesSearch(s));
   const countEl = document.getElementById('setFilterCount');
   if (countEl) countEl.textContent = list.length === state.sets.length
     ? `${state.sets.length} sets`
@@ -1749,6 +1760,7 @@ function renderSetList() {
     ((isDraft(b) ? 1 : 0) - (isDraft(a) ? 1 : 0))
     || ((+a.gaGrade || 99) - (+b.gaGrade || 99))
     || (a.title || '').localeCompare(b.title || ''));
+  let selectedNode = null;
   sorted.forEach(s => {
     const tags = [...s.questions, ...s.peerRevision].filter(q => q.standard).length;
     const item = el(`
@@ -1780,8 +1792,16 @@ function renderSetList() {
       state.ui.openPicker = null;
       renderPassages();
     });
+    if (s.id === state.ui.currentSetId) selectedNode = item;
     box.appendChild(item);
   });
+  // A freshly generated set IS selected, but selection is invisible when it sits 900
+  // rows down an alphabetical list — bring it on screen.
+  if (selectedNode) {
+    requestAnimationFrame(() => {
+      try { selectedNode.scrollIntoView({ block: 'nearest' }); } catch { /* older browsers */ }
+    });
+  }
 }
 
 function renderSetEditor() {
@@ -3811,6 +3831,9 @@ function init() {
   // Master list filters: status + grade (grade options come from GRADES)
   const fstSel = document.getElementById('setFilterState');
   if (fstSel) fstSel.addEventListener('change', e => { state.ui.setFilterState = e.target.value; renderSetList(); });
+
+  const searchEl = document.getElementById('setSearch');
+  if (searchEl) searchEl.addEventListener('input', e => { state.ui.setSearch = e.target.value; renderSetList(); });
 
   const fgSel = document.getElementById('setFilterGrade');
   fgSel.innerHTML = `<option value="all">All grades</option>` + GRADES.map(g => `<option value="${g}">Grade ${g}</option>`).join('');
