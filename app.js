@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608201238';   // replaced with the deploy stamp
+const APP_BUILD = '202608201241';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1689,6 +1689,29 @@ function questionBlockHtml(q, section, i, label, ctx) {
     </div>`;
 }
 
+/* Options carry live counts, so this is rebuilt on every render — building it once in
+   init() left every count at zero, because the cloud state had not arrived yet. */
+function buildPrimaryStateFilter() {
+  const sel = document.getElementById('setFilterState');
+  if (!sel) return;
+  const counts = {};
+  state.sets.forEach(s => {
+    const ps = primaryStateOf(s) || ((s.standard || {}).state) || 'none';
+    counts[ps] = (counts[ps] || 0) + 1;
+  });
+  const sorted = [...STATES].sort((a, b) => STATE_NAMES[a].localeCompare(STATE_NAMES[b]));
+  const html = `<option value="all">All primary states</option>`
+    + sorted.map(s => `<option value="${s}">${STATE_NAMES[s]}${counts[s] ? ` (${counts[s]})` : ''}</option>`).join('')
+    + (counts.ALL ? `<option value="ALL">Universal — all states (${counts.ALL})</option>` : '')
+    + (counts.none ? `<option value="none">No primary state (${counts.none})</option>` : '');
+  if (sel.innerHTML !== html) sel.innerHTML = html;   // don't stomp an open dropdown needlessly
+  if (state.ui.setFilterState && [...sel.options].some(o => o.value === state.ui.setFilterState)) {
+    sel.value = state.ui.setFilterState;
+  } else {
+    state.ui.setFilterState = 'all'; sel.value = 'all';
+  }
+}
+
 function renderSetList() {
   const box = document.getElementById('setList');
   box.innerHTML = '';
@@ -1696,6 +1719,7 @@ function renderSetList() {
     box.appendChild(el(`<div class="review-empty">No passage sets yet.<br>Create one to get started.</div>`));
     return;
   }
+  buildPrimaryStateFilter();
   // Filters: work the drafts grade by grade (add IDs, approve) without wading through 300 sets.
   const fs = state.ui.setFilterStatus, fg = state.ui.setFilterGrade, fst = state.ui.setFilterState;
   // Primary state: the explicit dropdown choice, else the tagged standard's state.
@@ -3774,20 +3798,7 @@ function init() {
 
   // Master list filters: status + grade (grade options come from GRADES)
   const fstSel = document.getElementById('setFilterState');
-  if (fstSel) {
-    const counts = {};
-    state.sets.forEach(s => {
-      const ps = primaryStateOf(s) || ((s.standard || {}).state) || 'none';
-      counts[ps] = (counts[ps] || 0) + 1;
-    });
-    const sorted = [...STATES].sort((a, b) => STATE_NAMES[a].localeCompare(STATE_NAMES[b]));
-    fstSel.innerHTML = `<option value="all">All primary states</option>`
-      + sorted.map(s => `<option value="${s}">${STATE_NAMES[s]}${counts[s] ? ` (${counts[s]})` : ''}</option>`).join('')
-      + (counts.ALL ? `<option value="ALL">Universal — all states (${counts.ALL})</option>` : '')
-      + (counts.none ? `<option value="none">No primary state (${counts.none})</option>` : '');
-    fstSel.value = state.ui.setFilterState;
-    fstSel.addEventListener('change', e => { state.ui.setFilterState = e.target.value; renderSetList(); });
-  }
+  if (fstSel) fstSel.addEventListener('change', e => { state.ui.setFilterState = e.target.value; renderSetList(); });
 
   const fgSel = document.getElementById('setFilterGrade');
   fgSel.innerHTML = `<option value="all">All grades</option>` + GRADES.map(g => `<option value="${g}">Grade ${g}</option>`).join('');
