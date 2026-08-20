@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608201241';   // replaced with the deploy stamp
+const APP_BUILD = '202608202202';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3608,12 +3608,24 @@ function canonSubdomain(strand, subject) {
   return null;
 }
 
+// The two COARSE hierarchy tags. Everything else is already a Dashboard row.
+const COARSE_SUBTOPICS = ['Science', 'Social Studies'];
+
 function setSubdomain(s) {
   if (s.genre === 'literary' || s.genre === 'literary_nonfiction') return s.gaSubtopic || 'Untagged';
+  const sub = s.gaSubtopic;
+  /* The reviewer's own classification WINS. Deriving the row from the anchor standard's
+     strand was overriding it, and South Carolina makes that plainly wrong: its grade-4
+     strands are era names ("Colonization", "A New Nation"), so a set deliberately built
+     as Economics filed itself under History and the Economics cell never moved. It cut
+     both ways — an SC grade-3 set tagged History filed under Economics because its
+     strand reads "Culture and Economy".
+
+     Strand derivation exists for one job only: splitting the coarse "Science" tag into
+     Earth/Life/Physical, which the hierarchy itself cannot express. */
+  if (sub && !COARSE_SUBTOPICS.includes(sub)) return sub;
   const std = tagStd(s.standard);
-  // The reviewer's own hierarchy tag is the fallback — a strand we cannot normalise is
-  // not a reason to lose the set off the board.
-  return canonSubdomain(std && std.strand, std && std.subject) || s.gaSubtopic || 'Untagged';
+  return canonSubdomain(std && std.strand, std && std.subject) || sub || 'Untagged';
 }
 
 // The sub-domains a grade is EXPECTED to cover (the hierarchy), grouped by genre —
