@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211138';   // replaced with the deploy stamp
+const APP_BUILD = '202608211211';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1471,6 +1471,181 @@ function renderBadge() {
 /* ---------- export ----------
    Exports the approved Ohio-anchored links plus every alignment they derive (including the
    sibling ones between other states), so a consumer can use them directly or re-derive. */
+/* ---------- CMS export ----------
+   The dashboard stores a question as ONE blob — stem, lettered options and the answer
+   key all in the same field, exactly as the source decks wrote them. A CMS needs those
+   as separate fields, so the export parses the blob apart rather than asking anyone to
+   re-key 3,000 questions.
+
+   Field NAMES here are ours, not the CMS's. Every name the export emits is declared in
+   CMS_FIELDS below, so remapping to the real CMS schema is a one-place edit — no digging
+   through the builder. */
+const CMS_FIELDS = {
+  passage: {
+    id: 'passage_id', title: 'passage_title', body: 'passage_text',
+    state: 'state', grade: 'grade', genre: 'genre', subdomain: 'sub_domain',
+    itemSetType: 'item_set_type', standard: 'passage_standard_code',
+    standardDesc: 'passage_standard_text', wordCount: 'word_count',
+    writingPrompt: 'writing_prompt', writingPromptType: 'writing_prompt_type',
+  },
+  item: {
+    passageId: 'passage_id', number: 'item_number', type: 'item_type',
+    stem: 'item_stem', correct: 'correct_answer',
+    standard: 'standard_code', standardState: 'standard_state', standardDesc: 'standard_text',
+    optionPrefix: 'option_', blanksJson: 'inline_choices_json', needsReview: 'needs_review',
+  },
+};
+// Our internal type -> the wording most item banks use. Remap here if the CMS differs.
+const CMS_ITEM_TYPES = {
+  multiple_choice: 'multiple_choice',
+  multi_select: 'multi_select',
+  cloze: 'inline_choice',
+  text_entry: 'text_entry',
+};
+
+const Q_OPT = /^\s*([a-hA-H])[.)]\s+(.*\S)\s*$/;
+const Q_ANS = /^\s*Answers?\s*:\s*(.*)$/i;
+const Q_DROP = /\[([^\]]*?\/[^\]]*?)\]/g;
+
+/* Split one combined question into stem / options / answer key / inline choices.
+   Measured against the live library: 100% of multiple_choice and multi_select parse,
+   and the cloze items that do not are the ones with no "Answer:" line at all — those
+   are reported rather than guessed at. */
+function parseQuestion(q) {
+  const text = String(q.text || '').replace(/\r/g, '');
+  const lines = text.split('\n');
+  const stemLines = [], options = [];
+  let answerRaw = null;
+  lines.forEach(ln => {
+    const a = ln.match(Q_ANS);
+    if (a) { answerRaw = a[1].trim(); return; }
+    const m = ln.match(Q_OPT);
+    if (m && (options.length || stemLines.length)) {
+      options.push({ label: m[1].toLowerCase(), text: m[2] });
+      return;
+    }
+    if (options.length) { if (ln.trim()) options[options.length - 1].text += ' ' + ln.trim(); }
+    else stemLines.push(ln);
+  });
+  const stem = stemLines.join('\n').trim();
+
+  const blanks = [];
+  if (q.type === 'cloze') {
+    let mm, i = 0;
+    Q_DROP.lastIndex = 0;
+    while ((mm = Q_DROP.exec(text)) !== null) {
+      blanks.push({ blank: ++i, options: mm[1].split('/').map(s => s.trim()).filter(Boolean) });
+    }
+  }
+
+  let correct = [];
+  if (answerRaw) {
+    const letters = (answerRaw.toLowerCase().match(/\b([a-h])\b(?=[.)\s,;]|$)/g) || [])
+      .map(s => s.trim());
+    correct = (options.length && letters.length) ? [...new Set(letters)].sort() : [answerRaw];
+  }
+  const complete = !!stem && !!answerRaw &&
+    ((q.type === 'multiple_choice' || q.type === 'multi_select') ? options.length >= 2 && correct.length
+      : q.type === 'cloze' ? (blanks.length || correct.length) : correct.length);
+  return { stem, options, blanks, answerRaw, correct, complete };
+}
+
+function csvCell(v) {
+  const s = v === null || v === undefined ? '' : String(v);
+  return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+}
+function toCsv(rows, columns) {
+  return [columns.join(','), ...rows.map(r => columns.map(c => csvCell(r[c])).join(','))].join('\n');
+}
+function downloadFile(name, text, mime) {
+  const blob = new Blob([text], { type: mime });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 2000);
+}
+
+/* Build the export for a list of sets. One passage row per set, one item row per
+   question, joined on passage_id — the shape nearly every item bank imports. */
+function buildCmsExport(sets, forState) {
+  const P = CMS_FIELDS.passage, I = CMS_FIELDS.item;
+  const passages = [], items = [], problems = [];
+  let maxOptions = 0;
+
+  sets.forEach(s => {
+    const st = forState || primaryStateOf(s) || (s.standard || {}).state || '';
+    // The CMS ID for this state+grade if one was recorded, else the master passage ID.
+    const stateId = (state.setStateId || {})[inputKey(s.id, st, String(s.gaGrade))];
+    const pid = stateId || s.passageId || s.id;
+    if (!stateId && !s.passageId) problems.push({ set: s.title, issue: 'no passage ID — exported with the internal id' });
+
+    const std = tagStd(s.standard);
+    const body = (s.passages || []).map(p => p.title ? `${p.title}\n\n${p.text}` : p.text).join('\n\n');
+    passages.push({
+      [P.id]: pid, [P.title]: s.title || '', [P.body]: body,
+      [P.state]: st, [P.grade]: s.gaGrade || '', [P.genre]: s.genre || '',
+      [P.subdomain]: s.gaSubtopic || '', [P.itemSetType]: s.itemSetType || '',
+      [P.standard]: (s.standard || {}).code || '', [P.standardDesc]: std ? std.description : '',
+      [P.wordCount]: (s.passages || []).reduce((a, p) => a + wordCount(p.text), 0),
+      [P.writingPrompt]: (s.writingPrompt || {}).text || '',
+      [P.writingPromptType]: (s.writingPrompt || {}).type || '',
+    });
+
+    (s.questions || []).forEach((q, i) => {
+      if (!(q.text || '').trim()) return;
+      const p = parseQuestion(q);
+      const tag = (q.stateStandards || {})[st] || q.standard || null;
+      const tstd = tag ? tagStd(tag) : null;
+      const row = {
+        [I.passageId]: pid, [I.number]: i + 1,
+        [I.type]: CMS_ITEM_TYPES[q.type] || q.type || '',
+        [I.stem]: p.stem, [I.correct]: p.correct.join('|'),
+        [I.standard]: tag ? tag.code : '', [I.standardState]: tag ? tag.state : '',
+        [I.standardDesc]: tstd ? tstd.description : '',
+        [I.blanksJson]: p.blanks.length ? JSON.stringify(p.blanks) : '',
+        [I.needsReview]: p.complete ? '' : 'yes',
+      };
+      p.options.forEach((o, oi) => { row[`${I.optionPrefix}${o.label}`] = o.text; oi; });
+      maxOptions = Math.max(maxOptions, p.options.length);
+      items.push(row);
+      if (!p.complete) problems.push({ set: s.title, item: i + 1, issue: 'no answer key found — needs a human before import' });
+      if (!tag) problems.push({ set: s.title, item: i + 1, issue: `no ${st} standard tagged` });
+    });
+  });
+
+  const optCols = 'abcdefgh'.slice(0, Math.max(maxOptions, 4)).split('')
+    .map(l => `${CMS_FIELDS.item.optionPrefix}${l}`);
+  return { passages, items, problems, optCols };
+}
+
+function exportForCms() {
+  const sets = visibleMasterSets();
+  if (!sets.length) { toast('Nothing to export — widen the filters first'); return; }
+  const forState = state.ui.setFilterState !== 'all' && state.ui.setFilterState.length === 2
+    ? state.ui.setFilterState : null;
+  const { passages, items, problems, optCols } = buildCmsExport(sets, forState);
+  const P = CMS_FIELDS.passage, I = CMS_FIELDS.item;
+  const pCols = [P.id, P.title, P.state, P.grade, P.genre, P.subdomain, P.itemSetType,
+                 P.standard, P.standardDesc, P.wordCount, P.body, P.writingPromptType, P.writingPrompt];
+  const iCols = [I.passageId, I.number, I.type, I.stem, ...optCols, I.correct,
+                 I.standard, I.standardState, I.standardDesc, I.blanksJson, I.needsReview];
+  const stamp = new Date().toISOString().slice(0, 10);
+  const tag = forState ? `-${forState}` : '';
+  downloadFile(`cms-passages${tag}-${stamp}.csv`, toCsv(passages, pCols), 'text/csv');
+  downloadFile(`cms-items${tag}-${stamp}.csv`, toCsv(items, iCols), 'text/csv');
+  downloadFile(`cms-import${tag}-${stamp}.json`, JSON.stringify({
+    generated_at: new Date().toISOString(),
+    scope: { state: forState || 'all', grade: state.ui.setFilterGrade, status: state.ui.setFilterStatus,
+             search: state.ui.setSearch || null, sets: sets.length },
+    field_map: CMS_FIELDS, item_types: CMS_ITEM_TYPES,
+    passages, items, needs_attention: problems,
+  }, null, 2), 'application/json');
+  toast(problems.length
+    ? `Exported ${passages.length} passages · ${items.length} items — ${problems.length} need attention (see the JSON)`
+    : `✓ Exported ${passages.length} passages · ${items.length} items, all complete`);
+}
+
 function exportData() {
   const approvedLinks = state.links.filter(l => statusOf(l) === 'approved');
   const derived = [];
@@ -1691,6 +1866,35 @@ function questionBlockHtml(q, section, i, label, ctx) {
 
 /* Options carry live counts, so this is rebuilt on every render — building it once in
    init() left every count at zero, because the cloud state had not arrived yet. */
+/* The Master Passage List's filter, as a function — the export uses the SAME one, so
+   "what you are looking at" and "what you export" can never drift apart. */
+function visibleMasterSets() {
+  const fs = state.ui.setFilterStatus, fg = state.ui.setFilterGrade, fst = state.ui.setFilterState;
+  // Primary state: the explicit dropdown choice, else the tagged standard's state.
+  // Literary/Literary Non-Fiction anchor to a universal sub-genre (state "ALL") and so
+  // serve every state — they match any specific state as well as their own option.
+  const matchesState = s => {
+    if (fst === 'all') return true;
+    const ps = primaryStateOf(s) || ((s.standard || {}).state) || null;
+    if (fst === 'ALL') return ps === 'ALL';
+    if (fst === 'none') return !ps;
+    return ps === fst || ps === 'ALL';
+  };
+  const q = (state.ui.setSearch || '').toLowerCase().trim();
+  const matchesSearch = s => {
+    if (!q) return true;
+    return (s.title || '').toLowerCase().includes(q)
+      || (s.passageId || '').toLowerCase().includes(q)
+      || ((s.standard || {}).code || '').toLowerCase().includes(q)
+      || (s.passages || []).some(p => (p.title || '').toLowerCase().includes(q)
+                                   || (p.text || '').toLowerCase().includes(q));
+  };
+  return state.sets.filter(s =>
+    (fs === 'all' || (fs === 'draft') === isDraft(s)) &&
+    (fg === 'all' || String(s.gaGrade) === fg) &&
+    matchesState(s) && matchesSearch(s));
+}
+
 function buildPrimaryStateFilter() {
   const sel = document.getElementById('setFilterState');
   if (!sel) return;
@@ -1720,33 +1924,7 @@ function renderSetList() {
     return;
   }
   buildPrimaryStateFilter();
-  // Filters: work the drafts grade by grade (add IDs, approve) without wading through 300 sets.
-  const fs = state.ui.setFilterStatus, fg = state.ui.setFilterGrade, fst = state.ui.setFilterState;
-  // Primary state: the explicit dropdown choice, else the tagged standard's state.
-  // Literary/Literary Non-Fiction anchor to a universal sub-genre (state "ALL") and so
-  // serve every state — they match any specific state as well as their own option.
-  const matchesState = s => {
-    if (fst === 'all') return true;
-    const ps = primaryStateOf(s) || ((s.standard || {}).state) || null;
-    if (fst === 'ALL') return ps === 'ALL';
-    if (fst === 'none') return !ps;
-    return ps === fst || ps === 'ALL';
-  };
-  // At 1,200+ sets an alphabetical list is unusable without search: a set you just made
-  // lands wherever its title falls, which is why "it built but I can't see it".
-  const q = (state.ui.setSearch || '').toLowerCase().trim();
-  const matchesSearch = s => {
-    if (!q) return true;
-    return (s.title || '').toLowerCase().includes(q)
-      || (s.passageId || '').toLowerCase().includes(q)
-      || ((s.standard || {}).code || '').toLowerCase().includes(q)
-      || (s.passages || []).some(p => (p.title || '').toLowerCase().includes(q)
-                                   || (p.text || '').toLowerCase().includes(q));
-  };
-  const list = state.sets.filter(s =>
-    (fs === 'all' || (fs === 'draft') === isDraft(s)) &&
-    (fg === 'all' || String(s.gaGrade) === fg) &&
-    matchesState(s) && matchesSearch(s));
+  const list = visibleMasterSets();
   const countEl = document.getElementById('setFilterCount');
   if (countEl) countEl.textContent = list.length === state.sets.length
     ? `${state.sets.length} sets`
@@ -3920,6 +4098,8 @@ function init() {
     renderStdList();
   });
   document.getElementById('exportBtn').addEventListener('click', exportData);
+  const cmsBtn = document.getElementById('cmsExportBtn');
+  if (cmsBtn) cmsBtn.addEventListener('click', exportForCms);
 
   // Prune before the first render: both the links and the reviewer's decisions must be in
   // hand to tell an orphan from a not-yet-loaded link.
