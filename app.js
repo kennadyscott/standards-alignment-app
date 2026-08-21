@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211218';   // replaced with the deploy stamp
+const APP_BUILD = '202608211220';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1495,11 +1495,41 @@ function renderBadge() {
    Passage/Question fields are rich-text editors, so text is emitted as simple HTML
    paragraphs as well as plain text — the importer can take whichever it wants. */
 const CMS_ITEM_TYPES = {
-  multiple_choice: 'multiple_choice',
-  multi_select: 'multi_select',
-  cloze: 'inline_choice',
-  text_entry: 'text_entry',
+  multiple_choice: 'Multiple Choice',
+  multi_select: 'Multi-Select',
+  cloze: 'Cloze',
+  text_entry: 'Text Entry',
 };
+
+/* Cloze is shaped differently from every other type in the CMS. The Question tab is
+   fixed boilerplate; the SENTENCE lives in the Answer tab with a "Dropdown Response"
+   placeholder where the menu goes; the choices become a Response group with the correct
+   one selected. Our items carry the sentence and its "[a / b / c]" menu inline, so the
+   export has to take them apart into those three pieces. */
+const CLOZE_QUESTION_TEXT = 'Use the drop-down menu to complete the statement.';
+const CLOZE_PLACEHOLDER = 'Dropdown Response';
+
+function buildClozeItem(parsed, rawText) {
+  // The sentence is everything except the answer key line, with each inline menu
+  // swapped for the placeholder the CMS shows.
+  let sentence = String(rawText || '').split('\n')
+    .filter(l => !/^\s*Answers?\s*:/i.test(l)).join('\n').trim();
+  sentence = sentence.replace(/\[([^\]]*?\/[^\]]*?)\]/g, CLOZE_PLACEHOLDER);
+
+  const key = (parsed.answerRaw || '').trim().toLowerCase().replace(/\.$/, '');
+  const responses = parsed.blanks.map(b => {
+    // One blank is the norm (678 of 686); with several, the key can only be matched to
+    // the blank that actually offers it.
+    const options = b.options.map(o => {
+      const t = o.trim();
+      const lo = t.toLowerCase().replace(/\.$/, '');
+      return { text: t, correct: !!key && (lo === key || lo.includes(key) || key.includes(lo)) };
+    });
+    return { response: b.blank, options };
+  });
+  const matched = responses.some(r => r.options.some(o => o.correct));
+  return { sentence, responses, answer_matched: matched };
+}
 
 const Q_OPT = /^\s*([a-hA-H])[.)]\s+(.*\S)\s*$/;
 const Q_ANS = /^\s*Answers?\s*:\s*(.*)$/i;
@@ -1603,8 +1633,14 @@ function cmsItemSet(s, problems) {
     // The CMS keeps the stem+choices in the Question tab and the key in the Answer tab,
     // so that is the primary split; the parsed choices are supplied too in case the
     // importer wants them individually.
-    const questionBody = [p.stem, ...p.options.map(o => `${o.label}. ${o.text}`)]
-      .filter(Boolean).join('\n');
+    const isCloze = q.type === 'cloze';
+    const cloze = isCloze ? buildClozeItem(p, q.text) : null;
+    // Cloze: the Question tab is boilerplate and the sentence belongs in the Answer tab.
+    // Everything else: stem + lettered choices in the Question tab, key in the Answer tab.
+    const questionBody = isCloze
+      ? CLOZE_QUESTION_TEXT
+      : [p.stem, ...p.options.map(o => `${o.label}. ${o.text}`)].filter(Boolean).join('\n');
+    const answerBody = isCloze ? cloze.sentence : (p.answerRaw || '');
     const perState = {};
     subTopics.forEach(r => {
       const tag = (q.stateStandards || {})[r.state]
@@ -1612,19 +1648,24 @@ function cmsItemSet(s, problems) {
       if (tag) perState[r.state] = tag.code;
     });
     if (!Object.keys(perState).length) problems.push({ set: s.title, item: i + 1, issue: 'no state standard tagged — the Question tab requires one' });
-    if (!p.complete) problems.push({ set: s.title, item: i + 1, issue: 'no answer key found in the question text — Answer tab would be blank' });
+    if (isCloze && !cloze.answer_matched) {
+      problems.push({ set: s.title, item: i + 1,
+        issue: 'cloze answer does not match any drop-down choice — no Response can be marked correct' });
+    } else if (!isCloze && !p.complete) {
+      problems.push({ set: s.title, item: i + 1, issue: 'no answer key found in the question text — Answer tab would be blank' });
+    }
     return {
       number: i + 1,
       question_type: CMS_ITEM_TYPES[q.type] || q.type || '',
       question_text: questionBody,
       question_html: toHtml(questionBody),
-      answer_text: p.answerRaw || '',
-      answer_html: toHtml(p.answerRaw || ''),
-      correct_choices: p.correct,
-      choices: p.options,
-      inline_choices: p.blanks,
+      answer_text: answerBody,
+      answer_html: toHtml(answerBody),
+      correct_choices: isCloze ? [] : p.correct,
+      choices: isCloze ? [] : p.options,
+      cloze_responses: isCloze ? cloze.responses : [],
       state_standards: perState,
-      needs_review: !p.complete || !Object.keys(perState).length,
+      needs_review: (isCloze ? !cloze.answer_matched : !p.complete) || !Object.keys(perState).length,
     };
   }).filter(Boolean);
 
