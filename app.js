@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211702';   // replaced with the deploy stamp
+const APP_BUILD = '202608211707';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4277,6 +4277,28 @@ const STATE_SUBDOMAINS = {
           'earth and space': 'Earth and Space',
           'organisms and environments': 'Organisms and Environments',
           'science, technology, and society': 'Science Technology and Society',
+        },
+      },
+      '8': {
+        /* Unique again: Health carries only TWO subtopics (no Physical Health and
+           Hygiene), Physical Education says "Health, Physical Activity, and Fitness"
+           where every other grade says "Health and Fitness", the commas are back in
+           "Science, Technology, and Society", and there is no Technology Applications. */
+        groups: [
+          ['Science', ['Matter and Energy', 'Force, Motion, and Energy', 'Earth and Space', 'Organisms and Environments']],
+          ['Social Studies', ['History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture', 'Science, Technology, and Society']],
+          ['Health', ['Mental Health and Wellness', 'Healthy Eating and Physical Activity']],
+          ['Personal Financial Literacy', ['Personal Financial Literacy']],
+          ['Physical Education', ['Health, Physical Activity, and Fitness', 'Social and Emotional Health']],
+          ['Fine Arts', ['Historical and Cultural Relevance']],
+        ],
+        strandMap: {
+          'matter and energy': 'Matter and Energy',
+          'matter and its properties': 'Matter and Energy',
+          'force, motion, and energy': 'Force, Motion, and Energy',
+          'earth and space': 'Earth and Space',
+          'organisms and environments': 'Organisms and Environments',
+          'science, technology, and society': 'Science, Technology, and Society',
         },
       },
       '5': {
