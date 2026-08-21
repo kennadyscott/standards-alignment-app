@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211311';   // replaced with the deploy stamp
+const APP_BUILD = '202608211535';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1660,7 +1660,7 @@ function cmsSubTopics(s) {
     rows.push({
       state: v.state, state_name: STATE_NAMES[v.state] || v.state,
       grade: String(v.grade),
-      sub_topic: dashSubdomain(s, String(v.grade)),
+      sub_topic: dashSubdomain(s, String(v.grade), v.state),
     });
   });
   return rows;
@@ -3338,6 +3338,11 @@ const SUBDOMAIN_SUBJECT = {
   'Social Studies': 'social_studies', 'History': 'social_studies',
   'Geography': 'social_studies', 'Government': 'social_studies',
   'Economics': 'social_studies',
+  // Texas's own subtopic names, so a click on a Texas cell scopes correctly
+  'Matter': 'science', 'Force, Motion, and Energy': 'science',
+  'Earth and Space': 'science', 'Organisms and Environment': 'science',
+  'Citizenship': 'social_studies', 'Culture': 'social_studies',
+  'Science Technology and Society': 'social_studies',
 };
 function subdomainSubject(sub) { return SUBDOMAIN_SUBJECT[sub] || 'ela'; }
 // Literary and Literary Non-Fiction do not anchor to a state standard — the SUB-GENRE
@@ -3364,6 +3369,14 @@ function anchorTag(g) {
 // Store the hierarchy value on the set; the Dashboard still files it under the finer
 // row because setSubdomain() re-derives that from the standard.
 function hierarchySubtopic(sub, grade) {
+  // Texas rows are its own; the SET still stores a value the Classification UI offers.
+  const TX_TO_HIERARCHY = {
+    'Matter': 'Science', 'Force, Motion, and Energy': 'Science',
+    'Earth and Space': 'Science', 'Organisms and Environment': 'Science',
+    'Citizenship': 'Government', 'Culture': 'History',
+    'Science Technology and Society': 'Science',
+  };
+  if (TX_TO_HIERARCHY[sub]) sub = TX_TO_HIERARCHY[sub];
   if (/(Earth|Life|Physical) Science/.test(sub)) return 'Science';
   if (String(grade) === '2' && ['History', 'Geography', 'Government', 'Economics'].includes(sub)) {
     return 'Social Studies';           // grade 2's hierarchy is the coarse pair
@@ -4096,9 +4109,14 @@ function renderAll() {
    The Dashboard rows are Ohio's vocabulary, so a strand has to be normalised before it
    can be filed, or the set lands in a row that is never rendered and the count silently
    never moves. */
-function canonSubdomain(strand, subject) {
-  const s = (strand || '').toLowerCase();
+function canonSubdomain(strand, subject, st) {
+  const s = (strand || '').toLowerCase().trim();
   if (!s) return null;
+  // A state with its own published taxonomy wins — its strand names ARE its subtopics.
+  const own = stateSubdomains(st);
+  if (own) {
+    if (Object.prototype.hasOwnProperty.call(own.strandMap, s)) return own.strandMap[s];
+  }
   if (subject === 'science') {
     if (/earth|space|universe/.test(s)) return 'Earth Science';
     if (/life|organism|molecul|ecosystem|hered|evolution|biolog/.test(s)) return 'Life Science';
@@ -4121,9 +4139,16 @@ function canonSubdomain(strand, subject) {
 // The two COARSE hierarchy tags. Everything else is already a Dashboard row.
 const COARSE_SUBTOPICS = ['Science', 'Social Studies'];
 
-function setSubdomain(s) {
+function setSubdomain(s, st) {
   if (s.genre === 'literary' || s.genre === 'literary_nonfiction') return s.gaSubtopic || 'Untagged';
   const sub = s.gaSubtopic;
+  // Under a state with its own taxonomy, only ITS row names count as already-filed.
+  const own = stateSubdomains(st);
+  if (own && sub && !own.informational.includes(sub)) {
+    const std0 = tagStd(s.standard);
+    const mapped = canonSubdomain(std0 && std0.strand, std0 && std0.subject, st);
+    if (mapped) return mapped;
+  }
   /* The reviewer's own classification WINS. Deriving the row from the anchor standard's
      strand was overriding it, and South Carolina makes that plainly wrong: its grade-4
      strands are era names ("Colonization", "A New Nation"), so a set deliberately built
@@ -4135,7 +4160,7 @@ function setSubdomain(s) {
      Earth/Life/Physical, which the hierarchy itself cannot express. */
   if (sub && !COARSE_SUBTOPICS.includes(sub)) return sub;
   const std = tagStd(s.standard);
-  return canonSubdomain(std && std.strand, std && std.subject) || sub || 'Untagged';
+  return canonSubdomain(std && std.strand, std && std.subject, st) || sub || 'Untagged';
 }
 
 // The sub-domains a grade is EXPECTED to cover (the hierarchy), grouped by genre —
@@ -4167,14 +4192,54 @@ const DASH_GOAL = 4;   // sets per sub-domain per item-set type
    ("Colonization", "Africa") that hide the economics and civics genuinely taught inside
    them — absence there cannot be proven from a strand name, so those rows always stay. */
 const DASH_SCIENCE_ROWS = ['Earth Science', 'Life Science', 'Physical Science'];
+
+/* Texas names its own topics and subtopics in the CMS, and they are not the generic
+   ones — its TEKS strands ARE the subtopic list. Mirroring them means the Texas board
+   reads the same as the screen someone will be filling in.
+
+   Only Science and Social Studies appear here. The CMS also lists Health, Personal
+   Financial Literacy, Physical Education and Technology Applications for Texas, but no
+   standards for those subjects are loaded, so those rows could only ever show zero —
+   the same phantom-gap problem as Georgia's middle-school science. They are left out
+   until their standards exist. */
+const STATE_SUBDOMAINS = {
+  TX: {
+    informational: [
+      'Matter', 'Force, Motion, and Energy', 'Earth and Space', 'Organisms and Environment',
+      'History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture',
+      'Science Technology and Society',
+    ],
+    // TEKS strand -> the CMS's subtopic name
+    strandMap: {
+      'matter and its properties': 'Matter',
+      'matter and energy': 'Matter',
+      'force, motion, and energy': 'Force, Motion, and Energy',
+      'earth and space': 'Earth and Space',
+      'organisms and environments': 'Organisms and Environment',
+      'history': 'History',
+      'geography': 'Geography',
+      'government': 'Government',
+      'economics': 'Economics',
+      'citizenship': 'Citizenship',
+      'culture': 'Culture',
+      'science, technology, and society': 'Science Technology and Society',
+      // practices and skills strands carry no content subtopic
+      'scientific and engineering practices': null,
+      'recurring themes and concepts': null,
+      'social studies skills': null,
+    },
+  },
+};
+function stateSubdomains(st) { return STATE_SUBDOMAINS[st] || null; }
 function stateTeachesSubdomain(st, grade, sub) {
   return state.standards.some(x =>
     x.state === st && x.subject === 'science' && gradeMatches(x.grade, grade) &&
     canonSubdomain(x.strand, 'science') === sub);
 }
 
-function dashSubdomain(s, grade) {
-  let dom = setSubdomain(s);
+function dashSubdomain(s, grade, st) {
+  let dom = setSubdomain(s, st);
+  if (stateSubdomains(st)) return dom;   // state's own taxonomy — no coarse folding
   if (grade === '2') {   // fold fine strands back to G2's coarse hierarchy
     if (['Earth Science', 'Life Science', 'Physical Science', 'Science'].includes(dom)) dom = 'Science';
     if (['History', 'Geography', 'Government', 'Economics', 'Social Studies'].includes(dom)) dom = 'Social Studies';
@@ -4182,7 +4247,7 @@ function dashSubdomain(s, grade) {
     // A grade 3-8 set classified only at G2's coarse level still has to land somewhere
     // the board renders; use the anchor's strand, else the first row of that group.
     const std = tagStd(s.standard);
-    dom = canonSubdomain(std && std.strand, std && std.subject)
+    dom = canonSubdomain(std && std.strand, std && std.subject, st)
       || (dom === 'Science' ? 'Earth Science' : 'History');
   }
   return dom;
@@ -4217,14 +4282,20 @@ function renderDash() {
 
   GRADES.forEach(g => {
     const sets = servingSets(g);
-    const allGroups = DASH_GROUPS[g === '2' ? '2' : '3-8'];
+    const own = stateSubdomains(dst);
+    const baseGroups = DASH_GROUPS[g === '2' ? '2' : '3-8'];
+    // A state with its own published taxonomy replaces the Informational rows with its
+    // own; Literary and Literary Non-Fiction are universal and stay as they are.
+    const allGroups = own
+      ? baseGroups.map(([label, doms]) => label === 'Informational' ? [label, own.informational] : [label, doms])
+      : baseGroups;
     const allExpect = allGroups.flatMap(([, doms]) => doms);
 
     // sub-domain -> {informative, opinion}. Tally across EVERY possible row first, so a
     // row that holds work is never hidden underneath us.
     const tally = new Map(allExpect.map(d => [d, { informative: 0, opinion: 0 }]));
     sets.forEach(s => {
-      const dom = dashSubdomain(s, g);
+      const dom = dashSubdomain(s, g, dst);
       const t = tally.get(dom) || { informative: 0, opinion: 0 };
       t[s.itemSetType === 'informative' ? 'informative' : 'opinion']++;
       tally.set(dom, t);
@@ -4233,6 +4304,7 @@ function renderDash() {
     // Drop a science row only when this state has no standards for it at this grade AND
     // nothing is filed there.
     const keep = d => {
+      if (own) return true;                       // the state published this list; show it all
       if (!DASH_SCIENCE_ROWS.includes(d)) return true;
       const t = tally.get(d) || { informative: 0, opinion: 0 };
       if (t.informative || t.opinion) return true;
