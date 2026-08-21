@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211229';   // replaced with the deploy stamp
+const APP_BUILD = '202608211251';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -152,6 +152,7 @@ const state = {
   setDismiss: {},           // `${setId}|${state}:${grade}` -> true (this passage doesn't belong in that grade)
   sets: [],
   setDeleted: {},                 // passage sets
+  setExported: {},                // setId -> when it was last sent to the CMS
   ui: {
     view: 'explorer',
     expState: 'OH', expSubject: 'social_studies', expGrade: '4',
@@ -190,6 +191,7 @@ const LS_SETFLAG = 'sa_setflag_v1';
 const LS_SETFLAGAT = 'sa_setflagat_v1';
 const LS_SETSTATEID = 'sa_setstateid_v1';
 const LS_SETDELETED = 'sa_setdeleted_v1';
+const LS_SETEXPORTED = 'sa_setexported_v1';
 
 const readLS = (k, fallback) => {
   try { return JSON.parse(localStorage.getItem(k)) || fallback; } catch { return fallback; }
@@ -211,6 +213,7 @@ function loadLocal() {
   state.setFlagAt = readLS(LS_SETFLAGAT, {});
   state.setStateId = readLS(LS_SETSTATEID, {});
   state.setDeleted = readLS(LS_SETDELETED, {});
+  state.setExported = readLS(LS_SETEXPORTED, {});
 }
 function mirrorLocal() {
   // localStorage is only a FALLBACK mirror — the cloud file is the source of truth.
@@ -235,6 +238,7 @@ function mirrorLocal() {
   put(LS_SETFLAGAT, JSON.stringify(state.setFlagAt || {}));
   put(LS_SETSTATEID, JSON.stringify(state.setStateId || {}));
   put(LS_SETDELETED, JSON.stringify(state.setDeleted || {}));
+  put(LS_SETEXPORTED, JSON.stringify(state.setExported || {}));
   if (!put(LS_SETS, JSON.stringify(state.sets))) {
     try { localStorage.removeItem(LS_SETS); } catch { /* nothing left to free */ }
   }
@@ -323,6 +327,7 @@ function stateBody() {
     setFlagAt: state.setFlagAt || {},
     setStateId: state.setStateId || {},
     setDeleted: state.setDeleted || {},
+    setExported: state.setExported || {},
     sets: (() => {
       const byId = new Map((state.importedDrafts || []).map(d => [d.id, d]));
       return byId.size ? state.sets.map(s => slimSetForSave(s, byId)) : state.sets;
@@ -420,6 +425,7 @@ function mergeForSave(server) {
   state.setDismiss = { ...S('setDismiss'), ...state.setDismiss };
   state.setStateId = { ...S('setStateId'), ...(state.setStateId || {}) };
   state.setDeleted = { ...S('setDeleted'), ...(state.setDeleted || {}) };
+  state.setExported = { ...S('setExported'), ...(state.setExported || {}) };
   {
     // Flags are raised AND resolved — same both-directions story as decisions,
     // so they get the same newest-wins timestamped merge.
@@ -674,6 +680,7 @@ function mergeServerState(s) {
       setDismiss: { ...state.setDismiss, ...(s.setDismiss || {}) },
       setStateId: { ...(state.setStateId || {}), ...(s.setStateId || {}) },
       setDeleted: { ...(state.setDeleted || {}), ...(s.setDeleted || {}) },
+      setExported: { ...(state.setExported || {}), ...(s.setExported || {}) },
       setFlagM: mergeDecisions(s.setFlag || {}, s.setFlagAt || {}, state.setFlag || {}, state.setFlagAt || {}, 'server'),
       // Server copies win on CONTENT (freshest deck text), but LOCAL reviewer progress
       // is grafted on so a clobbered/older server copy can never revert this browser's
@@ -703,6 +710,7 @@ function mergeServerState(s) {
     state.setDismiss = merged.setDismiss;
     state.setStateId = merged.setStateId;
     state.setDeleted = merged.setDeleted;
+    state.setExported = merged.setExported;
     state.setFlag = merged.setFlagM.decisions;
     state.setFlagAt = merged.setFlagM.decisionsAt;
     state.sets = merged.sets.filter(x => !state.setDeleted[x.id]);
@@ -1749,6 +1757,49 @@ function buildCmsExport(sets) {
    broad scope has to be confirmed rather than happening by accident. */
 const CMS_BATCH_ADVICE = 'Recommended batch: one state × one grade (about 60–85 sets).';
 
+/* Export readiness is NOT approval. Approval happens after the CMS hands back a set ID,
+   so the export gate has to sit earlier: a set is ready when it is complete enough to
+   send, and it stops being "to send" once its CMS ID has been recorded.
+
+   Lifecycle:  not ready  ->  ready to export  ->  awaiting CMS ID  ->  has ID  ->  approved
+   Readiness reuses the export's own parser, so the filter can never disagree with what
+   the export would actually produce. */
+function cmsPassageIdFor(s) {
+  const st = primaryStateOf(s) || (s.standard || {}).state || '';
+  return (state.setStateId || {})[inputKey(s.id, st, String(s.gaGrade))] || s.passageId || '';
+}
+
+function exportReadiness(s) {
+  const reasons = [];
+  const passages = (s.passages || []).filter(p => (p.text || '').trim());
+  if (!passages.length) reasons.push('no passage text');
+  if (!(s.title || '').trim()) reasons.push('no title');
+  if (!s.gaGrade) reasons.push('no grade');
+  if (!s.itemSetType) reasons.push('no item set type');
+  if (!s.standard) reasons.push('no primary standard');
+  if (!((s.writingPrompt || {}).text || '').trim()) reasons.push('no writing prompt');
+
+  const qs = (s.questions || []).filter(q => (q.text || '').trim());
+  if (!qs.length) reasons.push('no questions');
+  let noKey = 0, noStd = 0;
+  qs.forEach(q => {
+    const p = parseQuestion(q);
+    const ok = q.type === 'cloze' ? buildClozeItem(p, q.text).answer_matched : p.complete;
+    if (!ok) noKey++;
+    const tagged = (q.standard && q.standard.state) || Object.keys(q.stateStandards || {}).length;
+    if (!tagged) noStd++;
+  });
+  if (noKey) reasons.push(`${noKey} question${noKey > 1 ? 's' : ''} with no answer key`);
+  if (noStd) reasons.push(`${noStd} question${noStd > 1 ? 's' : ''} with no standard`);
+
+  const hasId = !!cmsPassageIdFor(s);
+  const exportedAt = (state.setExported || {})[s.id] || null;
+  return {
+    ready: !reasons.length, reasons, hasId, exportedAt,
+    stage: reasons.length ? 'not-ready' : hasId ? 'has-id' : exportedAt ? 'awaiting-id' : 'ready',
+  };
+}
+
 function exportForCms() {
   const sets = visibleMasterSets();
   if (!sets.length) { toast('Nothing to export — widen the filters first'); return; }
@@ -1804,6 +1855,13 @@ function exportForCms() {
     ['external_id','title','grade','item_number','question_type','question_text','answer_text','correct','standards','needs_review']), 'text/csv');
   downloadFile(`cms-subtopics${tag}-${stamp}.csv`, toCsv(stRows,
     ['external_id','title','state','grade','sub_topic']), 'text/csv');
+
+  // Remember what has been sent, so the next batch can exclude it and the list can show
+  // which sets are waiting on a CMS ID.
+  const now = Date.now();
+  state.setExported = state.setExported || {};
+  sets.forEach(s => { state.setExported[s.id] = now; });
+  pushState(); renderSetList();
 
   toast(problems.length
     ? `Exported ${itemSets.length} item sets · ${qRows.length} questions — ${problems.length} need attention (see the JSON)`
@@ -2053,8 +2111,23 @@ function visibleMasterSets() {
       || (s.passages || []).some(p => (p.title || '').toLowerCase().includes(q)
                                    || (p.text || '').toLowerCase().includes(q));
   };
+  // Status now spans the export lifecycle as well as draft/approved, because approval
+  // happens AFTER the CMS returns a set ID — it cannot be the gate for sending.
+  const matchesStatus = s => {
+    switch (fs) {
+      case 'all':       return true;
+      case 'draft':     return isDraft(s);
+      case 'approved':  return !isDraft(s);
+      case 'ready':     return exportReadiness(s).stage === 'ready';
+      case 'not-ready': return exportReadiness(s).stage === 'not-ready';
+      case 'no-key':    return exportReadiness(s).reasons.some(r => r.includes('answer key'));
+      case 'awaiting':  return exportReadiness(s).stage === 'awaiting-id';
+      case 'has-id':    return exportReadiness(s).stage === 'has-id';
+      default:          return true;
+    }
+  };
   return state.sets.filter(s =>
-    (fs === 'all' || (fs === 'draft') === isDraft(s)) &&
+    matchesStatus(s) &&
     (fg === 'all' || String(s.gaGrade) === fg) &&
     matchesState(s) && matchesSearch(s));
 }
@@ -2078,6 +2151,25 @@ function buildPrimaryStateFilter() {
   } else {
     state.ui.setFilterState = 'all'; sel.value = 'all';
   }
+}
+
+/* A row has to say why a set cannot be sent — "not ready" alone sends someone hunting.
+   The missing answer key is called out by name because it is the single biggest blocker
+   in the library. */
+function readinessChipHtml(s) {
+  const r = exportReadiness(s);
+  if (r.stage === 'has-id') {
+    return `<div class="ready-chip in-cms">✓ In CMS · ${esc(cmsPassageIdFor(s))}</div>`;
+  }
+  if (r.stage === 'awaiting-id') {
+    return `<div class="ready-chip awaiting">↑ Exported — awaiting CMS ID</div>`;
+  }
+  if (r.stage === 'ready') {
+    return `<div class="ready-chip ready">● Ready for export</div>`;
+  }
+  const keyReason = r.reasons.find(x => x.includes('answer key'));
+  const label = keyReason ? `⚠ ${keyReason}` : `⚠ ${r.reasons[0]}${r.reasons.length > 1 ? ` +${r.reasons.length - 1}` : ''}`;
+  return `<div class="ready-chip blocked" title="${esc(r.reasons.join(' · '))}">${esc(label)}</div>`;
 }
 
 function renderSetList() {
@@ -2112,6 +2204,7 @@ function renderSetList() {
           <button class="q-remove" data-del-set="${s.id}" title="Delete set">✕</button>
         </div>
         <div class="std-desc">${s.gaGrade ? `G${esc(s.gaGrade)} · ` : ''}${esc(s.passageId ? 'ID: ' + s.passageId : 'No passage ID')} · ${s.passages.length} passage${s.passages.length !== 1 ? 's' : ''} · ${tags} tagged</div>
+        ${readinessChipHtml(s)}
         ${s.passages.some(p => p.title)
           ? `<div class="std-desc set-passage-titles">${s.passages.filter(p => p.title).map(p => esc(p.title)).join(' · ')}</div>`
           : ''}
