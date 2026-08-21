@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211211';   // replaced with the deploy stamp
+const APP_BUILD = '202608211218';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1480,22 +1480,20 @@ function renderBadge() {
    Field NAMES here are ours, not the CMS's. Every name the export emits is declared in
    CMS_FIELDS below, so remapping to the real CMS schema is a one-place edit — no digging
    through the builder. */
-const CMS_FIELDS = {
-  passage: {
-    id: 'passage_id', title: 'passage_title', body: 'passage_text',
-    state: 'state', grade: 'grade', genre: 'genre', subdomain: 'sub_domain',
-    itemSetType: 'item_set_type', standard: 'passage_standard_code',
-    standardDesc: 'passage_standard_text', wordCount: 'word_count',
-    writingPrompt: 'writing_prompt', writingPromptType: 'writing_prompt_type',
-  },
-  item: {
-    passageId: 'passage_id', number: 'item_number', type: 'item_type',
-    stem: 'item_stem', correct: 'correct_answer',
-    standard: 'standard_code', standardState: 'standard_state', standardDesc: 'standard_text',
-    optionPrefix: 'option_', blanksJson: 'inline_choices_json', needsReview: 'needs_review',
-  },
-};
-// Our internal type -> the wording most item banks use. Remap here if the CMS differs.
+/* Shaped to the ECR "Static Q Item Set" builder, which is four tabs over one item set:
+
+     sidebar   Grade · Item Set Type · Topic · Title · Approved
+     Passage   Passage Type (Single/Multiple) · Title · Passage (rich text) · Writing Prompt
+     SubTopic  State + SubTopic, REPEATABLE (+ Add) — one row per state the set serves
+     Question  State → State Standard · Question Type · Question tab + ANSWER tab
+     Peer Revision Task
+
+   The Question and Answer tabs being separate is the whole reason this export exists:
+   our questions arrive as one blob with the answer key inside them, so the answer has
+   to be lifted out before anything can be imported.
+
+   Passage/Question fields are rich-text editors, so text is emitted as simple HTML
+   paragraphs as well as plain text — the importer can take whichever it wants. */
 const CMS_ITEM_TYPES = {
   multiple_choice: 'multiple_choice',
   multi_select: 'multi_select',
@@ -1565,85 +1563,144 @@ function downloadFile(name, text, mime) {
   document.body.appendChild(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 2000);
 }
+const htmlEscape = t => String(t || '')
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+// Rich-text fields want markup; keep paragraph breaks, keep our 1./2./3. numbering.
+const toHtml = t => String(t || '').split(/\n\s*\n|\n/).map(p => p.trim()).filter(Boolean)
+  .map(p => `<p>${htmlEscape(p)}</p>`).join('');
 
-/* Build the export for a list of sets. One passage row per set, one item row per
-   question, joined on passage_id — the shape nearly every item bank imports. */
-function buildCmsExport(sets, forState) {
-  const P = CMS_FIELDS.passage, I = CMS_FIELDS.item;
-  const passages = [], items = [], problems = [];
-  let maxOptions = 0;
-
-  sets.forEach(s => {
-    const st = forState || primaryStateOf(s) || (s.standard || {}).state || '';
-    // The CMS ID for this state+grade if one was recorded, else the master passage ID.
-    const stateId = (state.setStateId || {})[inputKey(s.id, st, String(s.gaGrade))];
-    const pid = stateId || s.passageId || s.id;
-    if (!stateId && !s.passageId) problems.push({ set: s.title, issue: 'no passage ID — exported with the internal id' });
-
-    const std = tagStd(s.standard);
-    const body = (s.passages || []).map(p => p.title ? `${p.title}\n\n${p.text}` : p.text).join('\n\n');
-    passages.push({
-      [P.id]: pid, [P.title]: s.title || '', [P.body]: body,
-      [P.state]: st, [P.grade]: s.gaGrade || '', [P.genre]: s.genre || '',
-      [P.subdomain]: s.gaSubtopic || '', [P.itemSetType]: s.itemSetType || '',
-      [P.standard]: (s.standard || {}).code || '', [P.standardDesc]: std ? std.description : '',
-      [P.wordCount]: (s.passages || []).reduce((a, p) => a + wordCount(p.text), 0),
-      [P.writingPrompt]: (s.writingPrompt || {}).text || '',
-      [P.writingPromptType]: (s.writingPrompt || {}).type || '',
-    });
-
-    (s.questions || []).forEach((q, i) => {
-      if (!(q.text || '').trim()) return;
-      const p = parseQuestion(q);
-      const tag = (q.stateStandards || {})[st] || q.standard || null;
-      const tstd = tag ? tagStd(tag) : null;
-      const row = {
-        [I.passageId]: pid, [I.number]: i + 1,
-        [I.type]: CMS_ITEM_TYPES[q.type] || q.type || '',
-        [I.stem]: p.stem, [I.correct]: p.correct.join('|'),
-        [I.standard]: tag ? tag.code : '', [I.standardState]: tag ? tag.state : '',
-        [I.standardDesc]: tstd ? tstd.description : '',
-        [I.blanksJson]: p.blanks.length ? JSON.stringify(p.blanks) : '',
-        [I.needsReview]: p.complete ? '' : 'yes',
-      };
-      p.options.forEach((o, oi) => { row[`${I.optionPrefix}${o.label}`] = o.text; oi; });
-      maxOptions = Math.max(maxOptions, p.options.length);
-      items.push(row);
-      if (!p.complete) problems.push({ set: s.title, item: i + 1, issue: 'no answer key found — needs a human before import' });
-      if (!tag) problems.push({ set: s.title, item: i + 1, issue: `no ${st} standard tagged` });
+/* Which states does this set actually serve, and under which sub-topic in each?
+   Feeds the repeatable SubTopic rows. */
+function cmsSubTopics(s) {
+  const rows = [];
+  (setServes(s, true) || []).forEach(v => {
+    if (rows.some(r => r.state === v.state && r.grade === String(v.grade))) return;
+    rows.push({
+      state: v.state, state_name: STATE_NAMES[v.state] || v.state,
+      grade: String(v.grade),
+      sub_topic: dashSubdomain(s, String(v.grade)),
     });
   });
+  return rows;
+}
 
-  const optCols = 'abcdefgh'.slice(0, Math.max(maxOptions, 4)).split('')
-    .map(l => `${CMS_FIELDS.item.optionPrefix}${l}`);
-  return { passages, items, problems, optCols };
+/* One item set, shaped like the builder's tabs. */
+function cmsItemSet(s, problems) {
+  const subTopics = cmsSubTopics(s);
+  const primary = primaryStateOf(s) || (s.standard || {}).state || '';
+  const grade = String(s.gaGrade || '');
+  const stateId = (state.setStateId || {})[inputKey(s.id, primary, grade)];
+  const externalId = stateId || s.passageId || '';
+  if (!externalId) problems.push({ set: s.title, issue: 'no CMS passage ID recorded — importer will need to create one' });
+
+  const passages = (s.passages || []).map(p => ({
+    title: p.title || '', text: p.text || '', html: toHtml(p.text), word_count: wordCount(p.text),
+  }));
+
+  const questions = (s.questions || []).map((q, i) => {
+    if (!(q.text || '').trim()) return null;
+    const p = parseQuestion(q);
+    // The CMS keeps the stem+choices in the Question tab and the key in the Answer tab,
+    // so that is the primary split; the parsed choices are supplied too in case the
+    // importer wants them individually.
+    const questionBody = [p.stem, ...p.options.map(o => `${o.label}. ${o.text}`)]
+      .filter(Boolean).join('\n');
+    const perState = {};
+    subTopics.forEach(r => {
+      const tag = (q.stateStandards || {})[r.state]
+        || (q.standard && q.standard.state === r.state ? q.standard : null);
+      if (tag) perState[r.state] = tag.code;
+    });
+    if (!Object.keys(perState).length) problems.push({ set: s.title, item: i + 1, issue: 'no state standard tagged — the Question tab requires one' });
+    if (!p.complete) problems.push({ set: s.title, item: i + 1, issue: 'no answer key found in the question text — Answer tab would be blank' });
+    return {
+      number: i + 1,
+      question_type: CMS_ITEM_TYPES[q.type] || q.type || '',
+      question_text: questionBody,
+      question_html: toHtml(questionBody),
+      answer_text: p.answerRaw || '',
+      answer_html: toHtml(p.answerRaw || ''),
+      correct_choices: p.correct,
+      choices: p.options,
+      inline_choices: p.blanks,
+      state_standards: perState,
+      needs_review: !p.complete || !Object.keys(perState).length,
+    };
+  }).filter(Boolean);
+
+  const peer = (s.peerRevision || []).filter(t => (t.text || '').trim()).map((t, i) => ({
+    number: i + 1, task_text: t.text, task_html: toHtml(t.text),
+    question_type: CMS_ITEM_TYPES[t.type] || t.type || '',
+    standard: t.standard ? t.standard.code : '',
+  }));
+
+  return {
+    external_id: externalId, source_id: s.id,
+    grade, item_set_type: s.itemSetType || '', topic: s.genre || '',
+    title: s.title || '', approved: !isDraft(s),
+    passage: {
+      passage_type: passages.length > 1 ? 'Multiple' : 'Single',
+      passages,
+      writing_prompt: (s.writingPrompt || {}).text || '',
+      writing_prompt_type: (s.writingPrompt || {}).type || '',
+    },
+    sub_topics: subTopics,
+    questions,
+    peer_revision_tasks: peer,
+  };
+}
+
+function buildCmsExport(sets) {
+  const problems = [];
+  const itemSets = sets.map(s => cmsItemSet(s, problems));
+  return { itemSets, problems };
 }
 
 function exportForCms() {
   const sets = visibleMasterSets();
   if (!sets.length) { toast('Nothing to export — widen the filters first'); return; }
-  const forState = state.ui.setFilterState !== 'all' && state.ui.setFilterState.length === 2
-    ? state.ui.setFilterState : null;
-  const { passages, items, problems, optCols } = buildCmsExport(sets, forState);
-  const P = CMS_FIELDS.passage, I = CMS_FIELDS.item;
-  const pCols = [P.id, P.title, P.state, P.grade, P.genre, P.subdomain, P.itemSetType,
-                 P.standard, P.standardDesc, P.wordCount, P.body, P.writingPromptType, P.writingPrompt];
-  const iCols = [I.passageId, I.number, I.type, I.stem, ...optCols, I.correct,
-                 I.standard, I.standardState, I.standardDesc, I.blanksJson, I.needsReview];
+  const { itemSets, problems } = buildCmsExport(sets);
   const stamp = new Date().toISOString().slice(0, 10);
-  const tag = forState ? `-${forState}` : '';
-  downloadFile(`cms-passages${tag}-${stamp}.csv`, toCsv(passages, pCols), 'text/csv');
-  downloadFile(`cms-items${tag}-${stamp}.csv`, toCsv(items, iCols), 'text/csv');
+  const scopeState = state.ui.setFilterState !== 'all' ? state.ui.setFilterState : 'all';
+  const tag = scopeState === 'all' ? '' : `-${scopeState}`;
+
   downloadFile(`cms-import${tag}-${stamp}.json`, JSON.stringify({
     generated_at: new Date().toISOString(),
-    scope: { state: forState || 'all', grade: state.ui.setFilterGrade, status: state.ui.setFilterStatus,
-             search: state.ui.setSearch || null, sets: sets.length },
-    field_map: CMS_FIELDS, item_types: CMS_ITEM_TYPES,
-    passages, items, needs_attention: problems,
+    target: 'ECR / Item Sets / Static Q Item Set',
+    scope: { primary_state: scopeState, grade: state.ui.setFilterGrade,
+             status: state.ui.setFilterStatus, search: state.ui.setSearch || null },
+    counts: { item_sets: itemSets.length,
+              questions: itemSets.reduce((a, x) => a + x.questions.length, 0),
+              peer_tasks: itemSets.reduce((a, x) => a + x.peer_revision_tasks.length, 0) },
+    item_types: CMS_ITEM_TYPES,
+    item_sets: itemSets,
+    needs_attention: problems,
   }, null, 2), 'application/json');
+
+  // Flat views for eyeballing in a spreadsheet before the importer runs.
+  const qRows = [], stRows = [];
+  itemSets.forEach(is => {
+    is.questions.forEach(q => qRows.push({
+      external_id: is.external_id, title: is.title, grade: is.grade,
+      item_number: q.number, question_type: q.question_type,
+      question_text: q.question_text, answer_text: q.answer_text,
+      correct: q.correct_choices.join('|'),
+      standards: Object.entries(q.state_standards).map(([k, v]) => `${k}:${v}`).join(' | '),
+      needs_review: q.needs_review ? 'yes' : '',
+    }));
+    is.sub_topics.forEach(r => stRows.push({
+      external_id: is.external_id, title: is.title,
+      state: r.state_name, grade: r.grade, sub_topic: r.sub_topic,
+    }));
+  });
+  downloadFile(`cms-questions${tag}-${stamp}.csv`, toCsv(qRows,
+    ['external_id','title','grade','item_number','question_type','question_text','answer_text','correct','standards','needs_review']), 'text/csv');
+  downloadFile(`cms-subtopics${tag}-${stamp}.csv`, toCsv(stRows,
+    ['external_id','title','state','grade','sub_topic']), 'text/csv');
+
   toast(problems.length
-    ? `Exported ${passages.length} passages · ${items.length} items — ${problems.length} need attention (see the JSON)`
-    : `✓ Exported ${passages.length} passages · ${items.length} items, all complete`);
+    ? `Exported ${itemSets.length} item sets · ${qRows.length} questions — ${problems.length} need attention (see the JSON)`
+    : `✓ Exported ${itemSets.length} item sets · ${qRows.length} questions, all complete`);
 }
 
 function exportData() {
