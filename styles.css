@@ -934,3 +934,16 @@ body {
 .ready-chip.blocked  { background: var(--amber-soft); color: var(--amber); }
 .ready-chip.awaiting { background: var(--accent-soft); color: var(--accent-ink); }
 .ready-chip.in-cms   { background: var(--bg); color: var(--ink-soft); }
+
+/* "this question has no answer key", shown in the editor where it gets fixed */
+.key-warn {
+  background: var(--amber-soft); color: #7a5410;
+  border: 1px solid var(--amber); border-radius: 8px;
+  padding: 7px 10px; margin-bottom: 8px; font-size: 12.5px; line-height: 1.45;
+}
+.key-warn b { color: var(--amber); }
+.key-eg {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: var(--panel); border: 1px solid var(--line);
+  border-radius: 4px; padding: 0 5px; white-space: nowrap;
+}

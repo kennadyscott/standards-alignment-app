@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211251';   // replaced with the deploy stamp
+const APP_BUILD = '202608211302';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2055,6 +2055,23 @@ function pickerHtml(section, index, restrictState, scope, scopeNote) {
     </div>`;
 }
 
+/* The set-level chip says "3 questions with no answer key"; this says WHICH one, right
+   above the box you would type it into, and states the two accepted formats so nobody
+   has to guess at the syntax the exporter reads. */
+function answerKeyWarningHtml(q, section) {
+  if (section === 'peer') return '';                 // peer tasks carry their own answer inline
+  if (!(q.text || '').trim()) return '';
+  const p = parseQuestion(q);
+  const ok = q.type === 'cloze' ? buildClozeItem(p, q.text).answer_matched : p.complete;
+  if (ok) return '';
+  return `<div class="key-warn">
+      <b>⚠ No answer key</b> — this question can't be exported to the CMS yet.
+      Mark the answer either way:
+      <span class="key-eg">Answer: b</span> on its own line, or a
+      <span class="key-eg">✓</span> at the end of the correct choice.
+    </div>`;
+}
+
 function questionBlockHtml(q, section, i, label, ctx) {
   // setId disambiguates pickers when many sets render at once (State Lists cards);
   // the master editor never sets it, so null === null keeps its behavior unchanged.
@@ -2080,6 +2097,7 @@ function questionBlockHtml(q, section, i, label, ctx) {
             data-qtype="${section}:${i}:${t.key}">${t.label}</button>`).join('')}
         </div>
       </div>
+      ${answerKeyWarningHtml(q, section)}
       <textarea class="ps-textarea q-text" data-q="${section}:${i}" rows="5"
         placeholder="Paste the entire question here, including all answer choices.">${esc(q.text)}</textarea>
       <div class="q-tag-area">${area}</div>
