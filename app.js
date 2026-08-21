@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211539';   // replaced with the deploy stamp
+const APP_BUILD = '202608211608';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4109,13 +4109,14 @@ function renderAll() {
    The Dashboard rows are Ohio's vocabulary, so a strand has to be normalised before it
    can be filed, or the set lands in a row that is never rendered and the count silently
    never moves. */
-function canonSubdomain(strand, subject, st) {
+function canonSubdomain(strand, subject, st, gradeHint) {
   const s = (strand || '').toLowerCase().trim();
   if (!s) return null;
   // A state with its own published taxonomy wins — its strand names ARE its subtopics.
-  // The strand map itself is grade-independent; the ROW LIST is what varies by grade.
-  const entry = STATE_SUBDOMAINS[st];
-  if (entry && Object.prototype.hasOwnProperty.call(entry.strandMap, s)) return entry.strandMap[s];
+  // Both the row list AND the target wording vary by grade, so the caller's grade
+  // decides which map applies.
+  const own = stateSubdomains(st, gradeHint);
+  if (own && Object.prototype.hasOwnProperty.call(own.strandMap, s)) return own.strandMap[s];
   if (subject === 'science') {
     if (/earth|space|universe/.test(s)) return 'Earth Science';
     if (/life|organism|molecul|ecosystem|hered|evolution|biolog/.test(s)) return 'Life Science';
@@ -4145,7 +4146,7 @@ function setSubdomain(s, st) {
   const own = stateSubdomains(st, s.gaGrade);
   if (own && sub && !own.informational.includes(sub)) {
     const std0 = tagStd(s.standard);
-    const mapped = canonSubdomain(std0 && std0.strand, std0 && std0.subject, st);
+    const mapped = canonSubdomain(std0 && std0.strand, std0 && std0.subject, st, s.gaGrade);
     if (mapped) return mapped;
   }
   /* The reviewer's own classification WINS. Deriving the row from the anchor standard's
@@ -4159,7 +4160,7 @@ function setSubdomain(s, st) {
      Earth/Life/Physical, which the hierarchy itself cannot express. */
   if (sub && !COARSE_SUBTOPICS.includes(sub)) return sub;
   const std = tagStd(s.standard);
-  return canonSubdomain(std && std.strand, std && std.subject, st) || sub || 'Untagged';
+  return canonSubdomain(std && std.strand, std && std.subject, st, s.gaGrade) || sub || 'Untagged';
 }
 
 // The sub-domains a grade is EXPECTED to cover (the hierarchy), grouped by genre —
@@ -4203,48 +4204,70 @@ const DASH_SCIENCE_ROWS = ['Earth Science', 'Life Science', 'Physical Science'];
    until their standards exist. */
 const STATE_SUBDOMAINS = {
   TX: {
-    /* PER GRADE, because the CMS publishes its Topics/Subtopics per grade and only the
-       grade 2 list has been seen. Applying it to 3-8 would be a guess — a grade whose
-       list is not recorded here keeps the generic rows until its own is supplied. */
+    /* PER GRADE, because the CMS publishes Topics/Subtopics per grade and the wording
+       genuinely shifts between them — grade 2 says "Matter" and "Organisms and
+       Environment", grade 3 says "Matter and Energy" and "Organisms and Environments",
+       and grade 3 punctuates "Science, Technology, and Society" where grade 2 does not.
+       These strings are copied from the CMS verbatim so the export can use them as-is.
+       A grade with no entry here keeps the generic rows rather than inheriting a guess.
+
+       Health, Personal Financial Literacy, Physical Education, Fine Arts and Technology
+       Applications appear in the CMS for both grades but have no standards loaded, so
+       their rows would read zero forever; they are left out until those standards exist. */
     byGrade: {
-      '2': [
-        'Matter', 'Force, Motion, and Energy', 'Earth and Space', 'Organisms and Environment',
-        'History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture',
-        'Science Technology and Society',
-      ],
+      '2': {
+        rows: [
+          'Matter', 'Force, Motion, and Energy', 'Earth and Space', 'Organisms and Environment',
+          'History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture',
+          'Science Technology and Society',
+        ],
+        strandMap: {
+          'matter and its properties': 'Matter',
+          'matter and energy': 'Matter',
+          'force, motion, and energy': 'Force, Motion, and Energy',
+          'earth and space': 'Earth and Space',
+          'organisms and environments': 'Organisms and Environment',
+          'science, technology, and society': 'Science Technology and Society',
+        },
+      },
+      '3': {
+        rows: [
+          'Matter and Energy', 'Force, Motion, and Energy', 'Earth and Space', 'Organisms and Environments',
+          'History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture',
+          'Science, Technology, and Society',
+        ],
+        strandMap: {
+          'matter and energy': 'Matter and Energy',
+          'matter and its properties': 'Matter and Energy',
+          'force, motion, and energy': 'Force, Motion, and Energy',
+          'earth and space': 'Earth and Space',
+          'organisms and environments': 'Organisms and Environments',
+          'science, technology, and society': 'Science, Technology, and Society',
+        },
+      },
     },
-    // TEKS strand -> the CMS's subtopic name
-    strandMap: {
-      'matter and its properties': 'Matter',
-      'matter and energy': 'Matter',
-      'force, motion, and energy': 'Force, Motion, and Energy',
-      'earth and space': 'Earth and Space',
-      'organisms and environments': 'Organisms and Environment',
-      'history': 'History',
-      'geography': 'Geography',
-      'government': 'Government',
-      'economics': 'Economics',
-      'citizenship': 'Citizenship',
-      'culture': 'Culture',
-      'science, technology, and society': 'Science Technology and Society',
-      // practices and skills strands carry no content subtopic
+    // True at every grade: these strand names match their subtopic 1:1, and the
+    // skills/practice strands carry no content subtopic at all.
+    common: {
+      'history': 'History', 'geography': 'Geography', 'government': 'Government',
+      'economics': 'Economics', 'citizenship': 'Citizenship', 'culture': 'Culture',
       'scientific and engineering practices': null,
       'recurring themes and concepts': null,
       'social studies skills': null,
     },
   },
 };
+
 function stateSubdomains(st, grade) {
   const entry = STATE_SUBDOMAINS[st];
-  if (!entry) return null;
-  const rows = entry.byGrade && entry.byGrade[String(grade)];
-  if (!rows) return null;                       // no published list for this grade — generic rows
-  return { informational: rows, strandMap: entry.strandMap };
+  const g = entry && entry.byGrade && entry.byGrade[String(grade)];
+  if (!g) return null;                          // no published list for this grade — generic rows
+  return { informational: g.rows, strandMap: { ...entry.common, ...g.strandMap } };
 }
 function stateTeachesSubdomain(st, grade, sub) {
   return state.standards.some(x =>
     x.state === st && x.subject === 'science' && gradeMatches(x.grade, grade) &&
-    canonSubdomain(x.strand, 'science') === sub);
+    canonSubdomain(x.strand, 'science', st, grade) === sub);
 }
 
 function dashSubdomain(s, grade, st) {
@@ -4257,7 +4280,7 @@ function dashSubdomain(s, grade, st) {
     // A grade 3-8 set classified only at G2's coarse level still has to land somewhere
     // the board renders; use the anchor's strand, else the first row of that group.
     const std = tagStd(s.standard);
-    dom = canonSubdomain(std && std.strand, std && std.subject, st)
+    dom = canonSubdomain(std && std.strand, std && std.subject, st, grade)
       || (dom === 'Science' ? 'Earth Science' : 'History');
   }
   return dom;
