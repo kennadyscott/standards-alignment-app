@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211535';   // replaced with the deploy stamp
+const APP_BUILD = '202608211539';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4113,10 +4113,9 @@ function canonSubdomain(strand, subject, st) {
   const s = (strand || '').toLowerCase().trim();
   if (!s) return null;
   // A state with its own published taxonomy wins — its strand names ARE its subtopics.
-  const own = stateSubdomains(st);
-  if (own) {
-    if (Object.prototype.hasOwnProperty.call(own.strandMap, s)) return own.strandMap[s];
-  }
+  // The strand map itself is grade-independent; the ROW LIST is what varies by grade.
+  const entry = STATE_SUBDOMAINS[st];
+  if (entry && Object.prototype.hasOwnProperty.call(entry.strandMap, s)) return entry.strandMap[s];
   if (subject === 'science') {
     if (/earth|space|universe/.test(s)) return 'Earth Science';
     if (/life|organism|molecul|ecosystem|hered|evolution|biolog/.test(s)) return 'Life Science';
@@ -4143,7 +4142,7 @@ function setSubdomain(s, st) {
   if (s.genre === 'literary' || s.genre === 'literary_nonfiction') return s.gaSubtopic || 'Untagged';
   const sub = s.gaSubtopic;
   // Under a state with its own taxonomy, only ITS row names count as already-filed.
-  const own = stateSubdomains(st);
+  const own = stateSubdomains(st, s.gaGrade);
   if (own && sub && !own.informational.includes(sub)) {
     const std0 = tagStd(s.standard);
     const mapped = canonSubdomain(std0 && std0.strand, std0 && std0.subject, st);
@@ -4204,11 +4203,16 @@ const DASH_SCIENCE_ROWS = ['Earth Science', 'Life Science', 'Physical Science'];
    until their standards exist. */
 const STATE_SUBDOMAINS = {
   TX: {
-    informational: [
-      'Matter', 'Force, Motion, and Energy', 'Earth and Space', 'Organisms and Environment',
-      'History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture',
-      'Science Technology and Society',
-    ],
+    /* PER GRADE, because the CMS publishes its Topics/Subtopics per grade and only the
+       grade 2 list has been seen. Applying it to 3-8 would be a guess — a grade whose
+       list is not recorded here keeps the generic rows until its own is supplied. */
+    byGrade: {
+      '2': [
+        'Matter', 'Force, Motion, and Energy', 'Earth and Space', 'Organisms and Environment',
+        'History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture',
+        'Science Technology and Society',
+      ],
+    },
     // TEKS strand -> the CMS's subtopic name
     strandMap: {
       'matter and its properties': 'Matter',
@@ -4230,7 +4234,13 @@ const STATE_SUBDOMAINS = {
     },
   },
 };
-function stateSubdomains(st) { return STATE_SUBDOMAINS[st] || null; }
+function stateSubdomains(st, grade) {
+  const entry = STATE_SUBDOMAINS[st];
+  if (!entry) return null;
+  const rows = entry.byGrade && entry.byGrade[String(grade)];
+  if (!rows) return null;                       // no published list for this grade — generic rows
+  return { informational: rows, strandMap: entry.strandMap };
+}
 function stateTeachesSubdomain(st, grade, sub) {
   return state.standards.some(x =>
     x.state === st && x.subject === 'science' && gradeMatches(x.grade, grade) &&
@@ -4239,7 +4249,7 @@ function stateTeachesSubdomain(st, grade, sub) {
 
 function dashSubdomain(s, grade, st) {
   let dom = setSubdomain(s, st);
-  if (stateSubdomains(st)) return dom;   // state's own taxonomy — no coarse folding
+  if (stateSubdomains(st, grade)) return dom;   // state's own taxonomy — no coarse folding
   if (grade === '2') {   // fold fine strands back to G2's coarse hierarchy
     if (['Earth Science', 'Life Science', 'Physical Science', 'Science'].includes(dom)) dom = 'Science';
     if (['History', 'Geography', 'Government', 'Economics', 'Social Studies'].includes(dom)) dom = 'Social Studies';
@@ -4282,7 +4292,7 @@ function renderDash() {
 
   GRADES.forEach(g => {
     const sets = servingSets(g);
-    const own = stateSubdomains(dst);
+    const own = stateSubdomains(dst, g);
     const baseGroups = DASH_GROUPS[g === '2' ? '2' : '3-8'];
     // A state with its own published taxonomy replaces the Informational rows with its
     // own; Literary and Literary Non-Fiction are universal and stay as they are.
