@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608202206';   // replaced with the deploy stamp
+const APP_BUILD = '202608211138';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2431,7 +2431,23 @@ const PASSAGE_WORDS = {
   '7': { single: { min: 534, target: 682, max: 746 }, paired: { min: 684, target: 822, max: 855 } },
   '8': { single: { min: 537, target: 656, max: 747 }, paired: { min: 689, target: 794, max: 869 } },
 };
-function wordCount(t) { return (String(t || '').trim().match(/\S+/g) || []).length; }
+/* Assessment passages number their paragraphs so items can say "in paragraph 3". The
+   imported decks do it (in two styles, "1." and "(1)"), so generated passages match the
+   dominant one. Applied in code rather than trusted to the prompt: numbering must be
+   exact and gap-free for a question that references a paragraph to be answerable. */
+const PARA_MARKER = /^\s*(?:\(\d+\)|\d+[.)])\s+/;
+function numberParagraphs(text) {
+  const paras = String(text || '')
+    .split(/\n\s*\n|\n/)                       // blank-line OR single-newline separated
+    .map(p => p.replace(PARA_MARKER, '').trim())  // drop any numbering already present
+    .filter(Boolean);
+  return paras.map((p, i) => `${i + 1}. ${p}`).join('\n\n');
+}
+// Paragraph markers are formatting, not prose — they must not inflate the word budget.
+function wordCount(t) {
+  const body = String(t || '').split(/\n/).map(l => l.replace(PARA_MARKER, '')).join('\n');
+  return (body.trim().match(/\S+/g) || []).length;
+}
 // The band is on the SET TOTAL, not per passage — a paired set must not be two
 // full-length passages. Pass the passage count to get the right shape's band.
 function wordBand(grade, passageCount) {
@@ -2451,6 +2467,7 @@ You are given ONE anchor standard. The passage must be written so that the ancho
 Hard requirements:
 - PASSAGE LENGTH IS A HARD RULE. Each passage must fall inside the word range you are given. Count words as whitespace-separated tokens. Being outside the range makes the set unusable.
 - Write ORIGINAL content. Never reproduce or closely paraphrase an existing published text, and do not use real copyrighted characters or story text.
+- Break each passage into clear, self-contained paragraphs — the app numbers them 1., 2., 3. so questions can reference a paragraph by number. Do not number them yourself.
 - Content must be factually accurate (for informational/science/social-studies passages) and age-appropriate in topic and vocabulary for the target grade.
 - Questions: write exactly the number requested. Use only these types: multiple_choice, cloze (inline drop-down written as [option1 / option2 / option3]), multi_select ("Select TWO…"). Never text_entry.
 - Each question's full text must include its answer options, each on its own line, lettered a. b. c. d. for multiple_choice/multi_select, and end with a final line "Answer: …".
@@ -2613,7 +2630,7 @@ async function handleGenerateSet(cfg, opts) {
       gaSubtopic: cfg.subtopic || null,
       primaryState: cfg.state,
       standard: anchorTag(cfg),
-      passages: (out.passages || []).map(p => ({ title: p.title || '', text: p.text || '' })),
+      passages: (out.passages || []).map(p => ({ title: p.title || '', text: numberParagraphs(p.text) })),
       questions: (out.questions || []).map(q => ({
         text: q.text || '',
         type: GEN_QTYPES.includes(q.type) ? q.type : null,
