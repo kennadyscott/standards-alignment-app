@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211612';   // replaced with the deploy stamp
+const APP_BUILD = '202608211620';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4236,6 +4236,27 @@ const STATE_SUBDOMAINS = {
       // added here — grade 2 already proved the wording is not uniform.
       '3': 'TX_G3_G4',
       '4': 'TX_G3_G4',
+      '5': {
+        // Grade 5 is its own shape twice over: Science gains a fifth subtopic, and
+        // "Science Technology and Society" drops the commas that grades 3-4 use — back
+        // to grade 2's spelling. Copied verbatim; do not tidy the punctuation.
+        rows: [
+          'Scientific Investigation and Reasoning', 'Matter and Energy', 'Force, Motion, and Energy',
+          'Earth and Space', 'Organisms and Environments',
+          'History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture',
+          'Science Technology and Society',
+        ],
+        strandMap: {
+          // the 2021 TEKS renamed this strand; grade 5's CMS still uses the older wording
+          'scientific and engineering practices': 'Scientific Investigation and Reasoning',
+          'matter and energy': 'Matter and Energy',
+          'matter and its properties': 'Matter and Energy',
+          'force, motion, and energy': 'Force, Motion, and Energy',
+          'earth and space': 'Earth and Space',
+          'organisms and environments': 'Organisms and Environments',
+          'science, technology, and society': 'Science Technology and Society',
+        },
+      },
     },
     named: {
       TX_G3_G4: {
