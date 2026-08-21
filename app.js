@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211223';   // replaced with the deploy stamp
+const APP_BUILD = '202608211225';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1562,7 +1562,13 @@ function buildClozeItem(parsed, rawText) {
   return { sentence, responses, answer_matched: matched };
 }
 
-const Q_OPT = /^\s*([a-hA-H])[.)]\s+(.*\S)\s*$/;
+/* Two option conventions live in the library:
+     generated -> "a. text"           with a trailing "Answer: b" line
+     imported  -> "A  text ✓"         letter, two spaces, and a check mark for the key
+   The two-space requirement matters: a single space would swallow ordinary sentences
+   that happen to begin "A busy bee…". */
+const Q_OPT = /^\s*([a-hA-H])(?:[.)]\s+|\s{2,})(.*\S)\s*$/;
+const Q_CHECK = /\s*[✓✔√]\s*$/;
 const Q_ANS = /^\s*Answers?\s*:\s*(.*)$/i;
 const Q_DROP = /\[([^\]]*?\/[^\]]*?)\]/g;
 
@@ -1580,7 +1586,8 @@ function parseQuestion(q) {
     if (a) { answerRaw = a[1].trim(); return; }
     const m = ln.match(Q_OPT);
     if (m && (options.length || stemLines.length)) {
-      options.push({ label: m[1].toLowerCase(), text: m[2] });
+      const checked = Q_CHECK.test(m[2]);
+      options.push({ label: m[1].toLowerCase(), text: m[2].replace(Q_CHECK, '').trim(), checked });
       return;
     }
     if (options.length) { if (ln.trim()) options[options.length - 1].text += ' ' + ln.trim(); }
@@ -1598,7 +1605,13 @@ function parseQuestion(q) {
   }
 
   let correct = [];
-  if (answerRaw) {
+  // A checked option IS the answer key — the imported decks mark it that way and carry
+  // no "Answer:" line at all.
+  const checkedLabels = options.filter(o => o.checked).map(o => o.label);
+  if (checkedLabels.length) {
+    correct = checkedLabels.sort();
+    if (!answerRaw) answerRaw = correct.join(', ');
+  } else if (answerRaw) {
     const letters = (answerRaw.toLowerCase().match(/\b([a-h])\b(?=[.)\s,;]|$)/g) || [])
       .map(s => s.trim());
     correct = (options.length && letters.length) ? [...new Set(letters)].sort() : [answerRaw];
