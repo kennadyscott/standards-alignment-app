@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211634';   // replaced with the deploy stamp
+const APP_BUILD = '202608211657';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4204,22 +4204,24 @@ const DASH_SCIENCE_ROWS = ['Earth Science', 'Life Science', 'Physical Science'];
    until their standards exist. */
 const STATE_SUBDOMAINS = {
   TX: {
-    /* PER GRADE, because the CMS publishes Topics/Subtopics per grade and the wording
-       genuinely shifts between them — grade 2 says "Matter" and "Organisms and
-       Environment", grade 3 says "Matter and Energy" and "Organisms and Environments",
-       and grade 3 punctuates "Science, Technology, and Society" where grade 2 does not.
-       These strings are copied from the CMS verbatim so the export can use them as-is.
-       A grade with no entry here keeps the generic rows rather than inheriting a guess.
+    /* The CMS's Topics/Subtopics for Texas, copied VERBATIM per grade — punctuation and
+       singular/plural included, because the wording genuinely differs between grades and
+       the export has to write the exact strings the CMS expects.
 
-       Health, Personal Financial Literacy, Physical Education, Fine Arts and Technology
-       Applications appear in the CMS for both grades but have no standards loaded, so
-       their rows would read zero forever; they are left out until those standards exist. */
+       Topics are grouped as the CMS groups them, not by our genre buckets, so the board
+       reads like the screen someone is filling in. Health, Physical Education, Personal
+       Financial Literacy, Fine Arts and Technology Applications have NO standards loaded
+       in this app, so their rows show the coverage gap honestly at 0 rather than being
+       hidden — the work is real even if the standards are not loaded yet. */
     byGrade: {
       '2': {
-        rows: [
-          'Matter', 'Force, Motion, and Energy', 'Earth and Space', 'Organisms and Environment',
-          'History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture',
-          'Science Technology and Society',
+        groups: [
+          ['Science', ['Matter', 'Force, Motion, and Energy', 'Earth and Space', 'Organisms and Environment']],
+          ['Social Studies', ['History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture', 'Science Technology and Society']],
+          ['Health', ['Physical Health and Hygiene', 'Mental Health and Wellness', 'Healthy Eating and Physical Activity']],
+          ['Personal Financial Literacy', ['Personal Financial Literacy']],
+          ['Physical Education', ['Health and Fitness', 'Social and Emotional Health']],
+          ['Technology Applications', ['Creativity and Innovation', 'Digital Citizenship']],
         ],
         strandMap: {
           'matter and its properties': 'Matter',
@@ -4230,42 +4232,60 @@ const STATE_SUBDOMAINS = {
           'science, technology, and society': 'Science Technology and Society',
         },
       },
-      // Grades 3, 4 and 6 were each checked against the CMS separately and their Science
-      // and Social Studies lists are identical, so they share one definition rather than
-      // copies that could drift. Grade 5 sits between them and is NOT the same, which is
-      // why every grade is verified before being added rather than inferred from its
-      // neighbours.
       '3': 'TX_SHARED_A',
       '4': 'TX_SHARED_A',
-      '6': 'TX_SHARED_A',   // verified separately; identical to 3-4, including the commas
-      '5': {
-        // Grade 5 is its own shape twice over: Science gains a fifth subtopic, and
-        // "Science Technology and Society" drops the commas that grades 3-4 use — back
-        // to grade 2's spelling. Copied verbatim; do not tidy the punctuation.
-        rows: [
-          'Scientific Investigation and Reasoning', 'Matter and Energy', 'Force, Motion, and Energy',
-          'Earth and Space', 'Organisms and Environments',
-          'History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture',
-          'Science Technology and Society',
+      '6': {
+        // Same Science/Social Studies list as 3-4, but Fine Arts is named differently.
+        groups: [
+          ['Science', ['Matter and Energy', 'Force, Motion, and Energy', 'Earth and Space', 'Organisms and Environments']],
+          ['Social Studies', ['History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture', 'Science, Technology, and Society']],
+          ['Health', ['Physical Health and Hygiene', 'Mental Health and Wellness', 'Healthy Eating and Physical Activity']],
+          ['Personal Financial Literacy', ['Personal Financial Literacy']],
+          ['Physical Education', ['Health and Fitness', 'Social and Emotional Health']],
+          ['Fine Arts', ['Historical and Cultural Relevance']],
+          ['Technology Applications', ['Creativity and Innovation', 'Digital Citizenship']],
         ],
         strandMap: {
-          // the 2021 TEKS renamed this strand; grade 5's CMS still uses the older wording
+          'matter and energy': 'Matter and Energy',
+          'matter and its properties': 'Matter and Energy',
+          'force, motion, and energy': 'Force, Motion, and Energy',
+          'earth and space': 'Earth and Space',
+          'organisms and environments': 'Organisms and Environments',
+          'science, technology, and society': 'Science, Technology, and Society',
+        },
+      },
+      '5': {
+        // Grade 5 adds a fifth Science subtopic, drops the commas in Science Technology
+        // and Society, and lists no Personal Financial Literacy.
+        groups: [
+          ['Science', ['Scientific Investigation and Reasoning', 'Matter and Energy', 'Force, Motion, and Energy', 'Earth and Space', 'Organisms and Environments']],
+          ['Social Studies', ['History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture', 'Science Technology and Society']],
+          ['Health', ['Physical Health and Hygiene', 'Mental Health and Wellness', 'Healthy Eating and Physical Activity']],
+          ['Physical Education', ['Health and Fitness', 'Social and Emotional Health']],
+          ['Fine Arts', ['Fine Arts']],
+          ['Technology Applications', ['Creativity and Innovation', 'Digital Citizenship']],
+        ],
+        strandMap: {
           'scientific and engineering practices': 'Scientific Investigation and Reasoning',
           'matter and energy': 'Matter and Energy',
           'matter and its properties': 'Matter and Energy',
           'force, motion, and energy': 'Force, Motion, and Energy',
           'earth and space': 'Earth and Space',
           'organisms and environments': 'Organisms and Environments',
-          'science, technology, and society': 'Science Technology and Society',
+          'science, technology, and society': 'Science, Technology, and Society',
         },
       },
     },
     named: {
       TX_SHARED_A: {
-        rows: [
-          'Matter and Energy', 'Force, Motion, and Energy', 'Earth and Space', 'Organisms and Environments',
-          'History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture',
-          'Science, Technology, and Society',
+        groups: [
+          ['Science', ['Matter and Energy', 'Force, Motion, and Energy', 'Earth and Space', 'Organisms and Environments']],
+          ['Social Studies', ['History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture', 'Science, Technology, and Society']],
+          ['Health', ['Physical Health and Hygiene', 'Mental Health and Wellness', 'Healthy Eating and Physical Activity']],
+          ['Personal Financial Literacy', ['Personal Financial Literacy']],
+          ['Physical Education', ['Health and Fitness', 'Social and Emotional Health']],
+          ['Fine Arts', ['Fine Arts']],
+          ['Technology Applications', ['Creativity and Innovation', 'Digital Citizenship']],
         ],
         strandMap: {
           'matter and energy': 'Matter and Energy',
@@ -4277,14 +4297,12 @@ const STATE_SUBDOMAINS = {
         },
       },
     },
-    // True at every grade: these strand names match their subtopic 1:1, and the
-    // skills/practice strands carry no content subtopic at all.
     common: {
       'history': 'History', 'geography': 'Geography', 'government': 'Government',
       'economics': 'Economics', 'citizenship': 'Citizenship', 'culture': 'Culture',
-      'scientific and engineering practices': null,
       'recurring themes and concepts': null,
       'social studies skills': null,
+      'scientific and engineering practices': null,
     },
   },
 };
@@ -4294,7 +4312,11 @@ function stateSubdomains(st, grade) {
   let g = entry && entry.byGrade && entry.byGrade[String(grade)];
   if (typeof g === 'string') g = entry.named[g];   // grades that share one published list
   if (!g) return null;                             // no list for this grade — generic rows
-  return { informational: g.rows, strandMap: { ...entry.common, ...g.strandMap } };
+  return {
+    groups: g.groups,
+    informational: g.groups.flatMap(([, subs]) => subs),
+    strandMap: { ...entry.common, ...g.strandMap },
+  };
 }
 function stateTeachesSubdomain(st, grade, sub) {
   return state.standards.some(x =>
@@ -4352,7 +4374,9 @@ function renderDash() {
     // A state with its own published taxonomy replaces the Informational rows with its
     // own; Literary and Literary Non-Fiction are universal and stay as they are.
     const allGroups = own
-      ? baseGroups.map(([label, doms]) => label === 'Informational' ? [label, own.informational] : [label, doms])
+      // Replace the single "Informational" bucket with the CMS's own topic headings, and
+      // keep the universal literary groups after them.
+      ? [...own.groups, ...baseGroups.filter(([label]) => label !== 'Informational')]
       : baseGroups;
     const allExpect = allGroups.flatMap(([, doms]) => doms);
 
