@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211220';   // replaced with the deploy stamp
+const APP_BUILD = '202608211223';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1509,21 +1509,52 @@ const CMS_ITEM_TYPES = {
 const CLOZE_QUESTION_TEXT = 'Use the drop-down menu to complete the statement.';
 const CLOZE_PLACEHOLDER = 'Dropdown Response';
 
+// The imported decks write cloze a second way: a "[ ▾ ]" placeholder in the sentence
+// with the choices listed on the lines beneath it and the correct one carrying a check
+// mark. That is already the CMS's own shape, so it maps across almost untouched.
+const CLOZE_MENU_GLYPH = /\[\s*[▾▼]\s*\]/g;
+const CLOZE_CHECK = /\s*[✓✔√]\s*$/;
+
+function buildClozeFromCheckedList(rawText) {
+  const lines = String(rawText || '').split('\n').map(l => l.trim()).filter(Boolean);
+  if (!lines.length) return null;
+  // Options are the trailing short lines; the sentence is everything before them.
+  let firstOpt = -1;
+  for (let i = lines.length - 1; i >= 1; i--) {
+    const isOpt = CLOZE_CHECK.test(lines[i]) || (lines[i].split(/\s+/).length <= 8 && !/[.?!]$/.test(lines[i]));
+    if (isOpt) firstOpt = i; else break;
+  }
+  if (firstOpt < 1) return null;
+  const optionLines = lines.slice(firstOpt);
+  if (optionLines.length < 2) return null;
+  const sentence = lines.slice(0, firstOpt).join('\n').replace(CLOZE_MENU_GLYPH, CLOZE_PLACEHOLDER);
+  const options = optionLines.map(l => ({
+    text: l.replace(CLOZE_CHECK, '').trim(),
+    correct: CLOZE_CHECK.test(l),
+  }));
+  if (!options.some(o => o.correct)) return null;   // no key marked — let the caller report it
+  return { sentence, responses: [{ response: 1, options }], answer_matched: true };
+}
+
 function buildClozeItem(parsed, rawText) {
+  const checked = buildClozeFromCheckedList(rawText);
+  if (checked) return checked;
   // The sentence is everything except the answer key line, with each inline menu
   // swapped for the placeholder the CMS shows.
   let sentence = String(rawText || '').split('\n')
     .filter(l => !/^\s*Answers?\s*:/i.test(l)).join('\n').trim();
-  sentence = sentence.replace(/\[([^\]]*?\/[^\]]*?)\]/g, CLOZE_PLACEHOLDER);
+  sentence = sentence.replace(/\[([^\]]*?\/[^\]]*?)\]/g, CLOZE_PLACEHOLDER)
+                     .replace(CLOZE_MENU_GLYPH, CLOZE_PLACEHOLDER);
 
   const key = (parsed.answerRaw || '').trim().toLowerCase().replace(/\.$/, '');
   const responses = parsed.blanks.map(b => {
     // One blank is the norm (678 of 686); with several, the key can only be matched to
     // the blank that actually offers it.
     const options = b.options.map(o => {
-      const t = o.trim();
+      const marked = CLOZE_CHECK.test(o);
+      const t = o.replace(CLOZE_CHECK, '').trim();
       const lo = t.toLowerCase().replace(/\.$/, '');
-      return { text: t, correct: !!key && (lo === key || lo.includes(key) || key.includes(lo)) };
+      return { text: t, correct: marked || (!!key && (lo === key || lo.includes(key) || key.includes(lo))) };
     });
     return { response: b.blank, options };
   });
