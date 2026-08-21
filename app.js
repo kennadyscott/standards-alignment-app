@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211707';   // replaced with the deploy stamp
+const APP_BUILD = '202608212022';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1645,6 +1645,76 @@ function downloadFile(name, text, mime) {
   document.body.appendChild(a); a.click(); a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 2000);
 }
+/* One export = ONE download. Firing three saves in a row makes the browser treat the
+   page as doing "multiple automatic downloads": it silently drops everything after the
+   first unless the user notices and approves a prompt. That cost a real export — five of
+   six files never landed — so the three files ship inside a single store-only zip we
+   build here (no compression, no library, ~60 lines). */
+function crc32(bytes) {
+  let table = crc32.table;
+  if (!table) {
+    table = crc32.table = new Uint32Array(256);
+    for (let n = 0; n < 256; n++) {
+      let c = n;
+      for (let k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+      table[n] = c >>> 0;
+    }
+  }
+  let crc = 0xFFFFFFFF;
+  for (let i = 0; i < bytes.length; i++) crc = (crc >>> 8) ^ table[(crc ^ bytes[i]) & 0xFF];
+  return (crc ^ 0xFFFFFFFF) >>> 0;
+}
+function zipStore(files) {
+  const enc = new TextEncoder();
+  const parts = [], central = [];
+  let offset = 0;
+  files.forEach(f => {
+    const name = enc.encode(f.name), data = enc.encode(f.text), crc = crc32(data);
+    const local = new Uint8Array(30 + name.length), lv = new DataView(local.buffer);
+    lv.setUint32(0, 0x04034b50, true);
+    lv.setUint16(4, 20, true);
+    lv.setUint16(6, 0x0800, true);   // UTF-8 names
+    lv.setUint16(8, 0, true);        // stored, not deflated
+    lv.setUint16(12, 0x21, true);    // DOS date 1980-01-01; a zero date is out of range
+    lv.setUint32(14, crc, true);
+    lv.setUint32(18, data.length, true);
+    lv.setUint32(22, data.length, true);
+    lv.setUint16(26, name.length, true);
+    local.set(name, 30);
+    parts.push(local, data);
+
+    const dir = new Uint8Array(46 + name.length), dv = new DataView(dir.buffer);
+    dv.setUint32(0, 0x02014b50, true);
+    dv.setUint16(4, 20, true);
+    dv.setUint16(6, 20, true);
+    dv.setUint16(8, 0x0800, true);
+    dv.setUint16(10, 0, true);
+    dv.setUint16(14, 0x21, true);
+    dv.setUint32(16, crc, true);
+    dv.setUint32(20, data.length, true);
+    dv.setUint32(24, data.length, true);
+    dv.setUint16(28, name.length, true);
+    dv.setUint32(42, offset, true);
+    dir.set(name, 46);
+    central.push(dir);
+    offset += local.length + data.length;
+  });
+  const dirSize = central.reduce((a, c) => a + c.length, 0);
+  const end = new Uint8Array(22), ev = new DataView(end.buffer);
+  ev.setUint32(0, 0x06054b50, true);
+  ev.setUint16(8, files.length, true);
+  ev.setUint16(10, files.length, true);
+  ev.setUint32(12, dirSize, true);
+  ev.setUint32(16, offset, true);
+  return new Blob([...parts, ...central, end], { type: 'application/zip' });
+}
+function downloadBlob(name, blob) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = name;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 2000);
+}
 const htmlEscape = t => String(t || '')
   .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 // Rich-text fields want markup; keep paragraph breaks, keep our 1./2./3. numbering.
@@ -1821,7 +1891,7 @@ function exportForCms() {
   const scopeState = st !== 'all' ? st : 'all';
   const tag = `-${scopeState}${gr === 'all' ? '' : `-g${gr}`}`;
 
-  downloadFile(`cms-import${tag}-${stamp}.json`, JSON.stringify({
+  const importJson = JSON.stringify({
     generated_at: new Date().toISOString(),
     target: 'ECR / Item Sets / Static Q Item Set',
     scope: { primary_state: scopeState, grade: gr, status: state.ui.setFilterStatus,
@@ -1833,7 +1903,7 @@ function exportForCms() {
     item_types: CMS_ITEM_TYPES,
     item_sets: itemSets,
     needs_attention: problems,
-  }, null, 2), 'application/json');
+  }, null, 2);
 
   // Flat views for eyeballing in a spreadsheet before the importer runs.
   const qRows = [], stRows = [];
@@ -1851,10 +1921,16 @@ function exportForCms() {
       state: r.state_name, grade: r.grade, sub_topic: r.sub_topic,
     }));
   });
-  downloadFile(`cms-questions${tag}-${stamp}.csv`, toCsv(qRows,
-    ['external_id','title','grade','item_number','question_type','question_text','answer_text','correct','standards','needs_review']), 'text/csv');
-  downloadFile(`cms-subtopics${tag}-${stamp}.csv`, toCsv(stRows,
-    ['external_id','title','state','grade','sub_topic']), 'text/csv');
+  // One zip, one download — see zipStore(). Three separate saves get blocked by the
+  // browser as "multiple automatic downloads" and vanish without an error.
+  const base = `cms-export${tag}-${stamp}`;
+  downloadBlob(`${base}.zip`, zipStore([
+    { name: `cms-import${tag}-${stamp}.json`, text: importJson },
+    { name: `cms-questions${tag}-${stamp}.csv`, text: toCsv(qRows,
+        ['external_id','title','grade','item_number','question_type','question_text','answer_text','correct','standards','needs_review']) },
+    { name: `cms-subtopics${tag}-${stamp}.csv`, text: toCsv(stRows,
+        ['external_id','title','state','grade','sub_topic']) },
+  ]));
 
   // Remember what has been sent, so the next batch can exclude it and the list can show
   // which sets are waiting on a CMS ID.
@@ -1864,8 +1940,8 @@ function exportForCms() {
   pushState(); renderSetList();
 
   toast(problems.length
-    ? `Exported ${itemSets.length} item sets · ${qRows.length} questions — ${problems.length} need attention (see the JSON)`
-    : `✓ Exported ${itemSets.length} item sets · ${qRows.length} questions, all complete`);
+    ? `Saved ${base}.zip — ${itemSets.length} sets · ${qRows.length} questions, ${problems.length} need attention (see the JSON)`
+    : `✓ Saved ${base}.zip — ${itemSets.length} sets · ${qRows.length} questions, all complete`);
 }
 
 function exportData() {
