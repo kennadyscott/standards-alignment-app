@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211608';   // replaced with the deploy stamp
+const APP_BUILD = '202608211612';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4230,7 +4230,15 @@ const STATE_SUBDOMAINS = {
           'science, technology, and society': 'Science Technology and Society',
         },
       },
-      '3': {
+      // Grades 3 and 4 were checked against the CMS separately and their Science and
+      // Social Studies lists are identical, so they share one definition rather than a
+      // copy that could drift. Each new grade still has to be verified before being
+      // added here — grade 2 already proved the wording is not uniform.
+      '3': 'TX_G3_G4',
+      '4': 'TX_G3_G4',
+    },
+    named: {
+      TX_G3_G4: {
         rows: [
           'Matter and Energy', 'Force, Motion, and Energy', 'Earth and Space', 'Organisms and Environments',
           'History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture',
@@ -4260,8 +4268,9 @@ const STATE_SUBDOMAINS = {
 
 function stateSubdomains(st, grade) {
   const entry = STATE_SUBDOMAINS[st];
-  const g = entry && entry.byGrade && entry.byGrade[String(grade)];
-  if (!g) return null;                          // no published list for this grade — generic rows
+  let g = entry && entry.byGrade && entry.byGrade[String(grade)];
+  if (typeof g === 'string') g = entry.named[g];   // grades that share one published list
+  if (!g) return null;                             // no list for this grade — generic rows
   return { informational: g.rows, strandMap: { ...entry.common, ...g.strandMap } };
 }
 function stateTeachesSubdomain(st, grade, sub) {
