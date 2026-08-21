@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211225';   // replaced with the deploy stamp
+const APP_BUILD = '202608211229';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1741,19 +1741,41 @@ function buildCmsExport(sets) {
   return { itemSets, problems };
 }
 
+/* The recommended batch is ONE STATE x ONE GRADE — 60-85 item sets, ~1-1.7 MB. That is
+   small enough to review before importing and to re-run cleanly if the importer stops
+   half way, and it matches how the work is actually organised (the State Lists pipeline
+   and the CMS's own Grade + per-state SubTopic). Exporting the whole library is 1,450
+   sets / 5,555 questions / ~20 MB in one file, which is a bad unit of recovery, so a
+   broad scope has to be confirmed rather than happening by accident. */
+const CMS_BATCH_ADVICE = 'Recommended batch: one state × one grade (about 60–85 sets).';
+
 function exportForCms() {
   const sets = visibleMasterSets();
   if (!sets.length) { toast('Nothing to export — widen the filters first'); return; }
+  const st = state.ui.setFilterState, gr = state.ui.setFilterGrade;
+  const scopeText = [
+    st === 'all' ? 'ALL states' : (STATE_NAMES[st] || st),
+    gr === 'all' ? 'ALL grades' : `Grade ${gr}`,
+    state.ui.setFilterStatus === 'all' ? 'all statuses' : state.ui.setFilterStatus,
+  ].join(' · ');
+  const broad = st === 'all' || gr === 'all';
+  const qCount = sets.reduce((a, s) => a + (s.questions || []).filter(q => (q.text || '').trim()).length, 0);
+  if (broad && !confirm(
+      `Export ${sets.length} item sets (${qCount} questions)?\n\nScope: ${scopeText}\n\n`
+      + `${CMS_BATCH_ADVICE}\nNarrow the State and Grade filters first if you want a smaller batch.`)) {
+    return;
+  }
   const { itemSets, problems } = buildCmsExport(sets);
   const stamp = new Date().toISOString().slice(0, 10);
-  const scopeState = state.ui.setFilterState !== 'all' ? state.ui.setFilterState : 'all';
-  const tag = scopeState === 'all' ? '' : `-${scopeState}`;
+  const scopeState = st !== 'all' ? st : 'all';
+  const tag = `-${scopeState}${gr === 'all' ? '' : `-g${gr}`}`;
 
   downloadFile(`cms-import${tag}-${stamp}.json`, JSON.stringify({
     generated_at: new Date().toISOString(),
     target: 'ECR / Item Sets / Static Q Item Set',
-    scope: { primary_state: scopeState, grade: state.ui.setFilterGrade,
-             status: state.ui.setFilterStatus, search: state.ui.setSearch || null },
+    scope: { primary_state: scopeState, grade: gr, status: state.ui.setFilterStatus,
+             search: state.ui.setSearch || null, label: scopeText },
+    batch_advice: CMS_BATCH_ADVICE,
     counts: { item_sets: itemSets.length,
               questions: itemSets.reduce((a, x) => a + x.questions.length, 0),
               peer_tasks: itemSets.reduce((a, x) => a + x.peer_revision_tasks.length, 0) },
