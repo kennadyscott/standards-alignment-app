@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211620';   // replaced with the deploy stamp
+const APP_BUILD = '202608211634';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4230,12 +4230,14 @@ const STATE_SUBDOMAINS = {
           'science, technology, and society': 'Science Technology and Society',
         },
       },
-      // Grades 3 and 4 were checked against the CMS separately and their Science and
-      // Social Studies lists are identical, so they share one definition rather than a
-      // copy that could drift. Each new grade still has to be verified before being
-      // added here — grade 2 already proved the wording is not uniform.
-      '3': 'TX_G3_G4',
-      '4': 'TX_G3_G4',
+      // Grades 3, 4 and 6 were each checked against the CMS separately and their Science
+      // and Social Studies lists are identical, so they share one definition rather than
+      // copies that could drift. Grade 5 sits between them and is NOT the same, which is
+      // why every grade is verified before being added rather than inferred from its
+      // neighbours.
+      '3': 'TX_SHARED_A',
+      '4': 'TX_SHARED_A',
+      '6': 'TX_SHARED_A',   // verified separately; identical to 3-4, including the commas
       '5': {
         // Grade 5 is its own shape twice over: Science gains a fifth subtopic, and
         // "Science Technology and Society" drops the commas that grades 3-4 use — back
@@ -4259,7 +4261,7 @@ const STATE_SUBDOMAINS = {
       },
     },
     named: {
-      TX_G3_G4: {
+      TX_SHARED_A: {
         rows: [
           'Matter and Energy', 'Force, Motion, and Energy', 'Earth and Space', 'Organisms and Environments',
           'History', 'Geography', 'Government', 'Economics', 'Citizenship', 'Culture',
