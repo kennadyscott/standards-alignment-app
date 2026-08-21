@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608211302';   // replaced with the deploy stamp
+const APP_BUILD = '202608211311';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3124,9 +3124,12 @@ async function handleGenerateSet(cfg, opts) {
       ok: false, error: String(e.message).slice(0, 110),
     });
     if (String(e.message).includes('401')) {
+      const why = aiKeyDiagnosis(aiKey);
       aiKey = '';
       localStorage.removeItem(LS_AI_KEY);
-      toast('⚠ API key rejected — click Generate again to re-enter it');
+      toast(`⚠ API key rejected — ${why}. Click Generate to paste a new one.`);
+      state.ui.genResults = state.ui.genResults || [];
+      state.ui.genResults.push({ ok: false, error: `Anthropic rejected the key — ${why}` });
     } else {
       toast('⚠ Generation failed: ' + String(e.message).slice(0, 90));
     }
@@ -3429,9 +3432,25 @@ function renderGenModal() {
 const LS_AI_KEY = 'sa_anthropic_key';
 let aiKey = localStorage.getItem(LS_AI_KEY) || '';
 
+/* A 401 from Anthropic is nearly always one of three things, and the key's own prefix
+   says which — pasting a key from a different provider looks identical to an expired one
+   unless we check. */
+function aiKeyDiagnosis(k) {
+  const key = (k || '').trim();
+  if (!key) return 'no key is stored in this browser';
+  if (key.startsWith('xai-'))        return 'that is an xAI / Grok key. This builder calls Anthropic, so it needs a key beginning sk-ant-';
+  if (key.startsWith('gsk_'))        return 'that is a Groq key. This builder calls Anthropic, so it needs a key beginning sk-ant-';
+  if (key.startsWith('sk-proj-'))    return 'that is an OpenAI key. This builder calls Anthropic, so it needs a key beginning sk-ant-';
+  if (!key.startsWith('sk-ant-'))    return `that key starts "${key.slice(0, 7)}…". This builder calls Anthropic, so it needs a key beginning sk-ant-`;
+  return 'the key is the right type but Anthropic refused it — it may have been revoked, or copied incompletely';
+}
+
 function ensureAiKey() {
   if (aiKey) return true;
-  const t = prompt('Paste your Anthropic API key to enable the AI builder (stored only in this browser):', '');
+  const t = prompt('Paste your ANTHROPIC API key to enable the AI builder.\n\n'
+    + 'It starts with "sk-ant-" and comes from console.anthropic.com → API Keys. '
+    + 'Keys from other providers (xAI/Grok, OpenAI, Groq) will not work here.\n\n'
+    + 'It is stored only in this browser.', '');
   if (t === null) return false;
   aiKey = t.trim();
   if (aiKey) localStorage.setItem(LS_AI_KEY, aiKey);
@@ -3574,9 +3593,10 @@ async function handleBuildPeer(s, grade) {
     toast(`✓ Built ${s.peerRevision.length} peer revision tasks — set moved to To Be Entered, questions below`);
   } catch (e) {
     if (String(e.message).includes('401')) {
+      const why = aiKeyDiagnosis(aiKey);
       aiKey = '';
       localStorage.removeItem(LS_AI_KEY);
-      toast('⚠ API key rejected — click Build again to re-enter it');
+      toast(`⚠ API key rejected — ${why}. Click Build to paste a new one.`);
     } else {
       toast('⚠ AI build failed: ' + String(e.message).slice(0, 90));
     }
