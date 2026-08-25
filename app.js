@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608251339';   // replaced with the deploy stamp
+const APP_BUILD = '202608251415';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -449,6 +449,7 @@ function mergeForSave(server) {
   // Record what changed in THIS browser before looking at the server copy, otherwise a
   // local edit made since the last sync is indistinguishable from a stale copy.
   stampContentChanges();
+  let serverBehind = false;
   const S = k => server[k] || {};
   {
     const m = mergeDecisions(S('decisions'), S('decisionsAt'), state.decisions, state.decisionsAt || {}, 'local');
@@ -494,6 +495,13 @@ function mergeForSave(server) {
     if (sAt > lAt && !sv.fromImport) {
       IMPORT_OWNED.forEach(k => { if (sv[k] !== undefined) loc[k] = JSON.parse(JSON.stringify(sv[k])); });
       state.setContentAt[sv.id] = sAt;
+    } else if (lAt > sAt && !sv.fromImport && contentSig(sv) !== contentSig(loc)) {
+      // We hold a NEWER edit than the server's copy of this set. That is what an older
+      // build overwriting the file looks like from here (it does not write setContentAt
+      // at all, so every server stamp reads 0). Keeping our copy in memory is not enough
+      // — nothing would push it back — so flag the document as needing a re-save and let
+      // the normal sync tick repair the shared state.
+      serverBehind = true;
     }
     // Reviewer progress is monotonic in this workflow — adopt it from the server copy.
     graftProgress(loc, sv);
@@ -504,6 +512,7 @@ function mergeForSave(server) {
   // Everything in memory now matches what the server will hold once this save lands, so
   // the next stamp pass only sees genuinely new local edits.
   refreshContentSnap();
+  if (serverBehind) dirtyLocal = true;   // re-push on the next tick; see the branch above
 }
 
 // Copy monotonic reviewer progress from `source` onto `target` (approval, passage ID,
