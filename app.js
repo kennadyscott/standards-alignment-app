@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608212022';   // replaced with the deploy stamp
+const APP_BUILD = '202608251339';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -153,6 +153,10 @@ const state = {
   sets: [],
   setDeleted: {},                 // passage sets
   setExported: {},                // setId -> when it was last sent to the CMS
+  setContentAt: {},               // setId -> when THIS browser last changed the set's content.
+                                  // Without it, every browser held all ~1,670 sets in memory and
+                                  // wrote its own copy of the text back on any save, so one stale
+                                  // tab silently reverted everyone else's edits. See mergeForSave.
   ui: {
     view: 'explorer',
     expState: 'OH', expSubject: 'social_studies', expGrade: '4',
@@ -267,6 +271,37 @@ function contentSig(s) {
   ]);
 }
 
+/* Per-set content timestamps.
+   Every browser keeps the whole set list in memory, so a save used to write this
+   browser's copy of the TEXT back over everyone else's — a tab left open since morning
+   would quietly revert a colleague's afternoon of answer-key fixes, twice in one day.
+   Content now merges newest-wins per set, the same way decisions and flags already do.
+   `contentSnap` is what we last knew the server to hold; anything that drifts from it
+   is a local edit and gets stamped. */
+let contentSnap = new Map();
+function stampContentChanges() {
+  state.setContentAt = state.setContentAt || {};
+  const now = Date.now();
+  (state.sets || []).forEach(s => {
+    if (!s || !s.id) return;
+    const sig = contentSig(s);
+    const prev = contentSnap.get(s.id);
+    // prev === undefined means this set is new to this browser (first merge of the
+    // session, or it just arrived from the server) — that is not a local edit.
+    if (prev !== undefined && prev !== sig) state.setContentAt[s.id] = now;
+    contentSnap.set(s.id, sig);
+  });
+}
+function refreshContentSnap() {
+  contentSnap = new Map();
+  (state.sets || []).forEach(s => { if (s && s.id) contentSnap.set(s.id, contentSig(s)); });
+}
+function maxMerge(a, b) {
+  const out = { ...(a || {}) };
+  Object.entries(b || {}).forEach(([k, v]) => { if (!(out[k] > v)) out[k] = v; });
+  return out;
+}
+
 function slimSetForSave(s, sourceById) {
   const src = sourceById.get(s.id);
   if (!src || contentSig(s) !== contentSig(src)) return s;   // not imported, or edited — keep everything
@@ -328,6 +363,7 @@ function stateBody() {
     setStateId: state.setStateId || {},
     setDeleted: state.setDeleted || {},
     setExported: state.setExported || {},
+    setContentAt: state.setContentAt || {},
     sets: (() => {
       const byId = new Map((state.importedDrafts || []).map(d => [d.id, d]));
       return byId.size ? state.sets.map(s => slimSetForSave(s, byId)) : state.sets;
@@ -410,6 +446,9 @@ async function ghLoad() {
    open editors keep their object references — no re-render, no lost keystrokes. */
 function mergeForSave(server) {
   if (!server || typeof server !== 'object') return;
+  // Record what changed in THIS browser before looking at the server copy, otherwise a
+  // local edit made since the last sync is indistinguishable from a stale copy.
+  stampContentChanges();
   const S = k => server[k] || {};
   {
     const m = mergeDecisions(S('decisions'), S('decisionsAt'), state.decisions, state.decisionsAt || {}, 'local');
@@ -426,6 +465,10 @@ function mergeForSave(server) {
   state.setStateId = { ...S('setStateId'), ...(state.setStateId || {}) };
   state.setDeleted = { ...S('setDeleted'), ...(state.setDeleted || {}) };
   state.setExported = { ...S('setExported'), ...(state.setExported || {}) };
+  // NOTE: the timestamp maps are merged AFTER the set loop below. Merging them here
+  // would raise every local stamp to the server's before the comparison runs, so local
+  // would always tie and the server's newer content would never be adopted.
+  const localAt = { ...(state.setContentAt || {}) };
   {
     // Flags are raised AND resolved — same both-directions story as decisions,
     // so they get the same newest-wins timestamped merge.
@@ -434,16 +477,33 @@ function mergeForSave(server) {
   }
   state.manual = dedupeById([...state.manual, ...(server.manual || [])]);
 
+  const serverAt = S('setContentAt');
   const byId = new Map(state.sets.map(x => [x.id, x]));
   (server.sets || []).forEach(sv => {
     if ((state.setDeleted || {})[sv.id]) return;  // deleted here — a tombstone outranks it
     const loc = byId.get(sv.id);
     if (!loc) { state.sets.push(sv); return; }   // exists only server-side — keep it
+    // CONTENT: newest edit wins, per set. Local content is NOT automatically
+    // authoritative — that is what let an untouched stale tab revert other people's
+    // work. A set nobody here has edited has no local stamp at all (0), so any stamped
+    // server edit beats it, which is the case that was losing data.
+    // A slim server record (fromImport) carries no text of its own; hydration will
+    // restore it from the deck, so there is nothing to adopt.
+    const sAt = serverAt[sv.id] || 0;
+    const lAt = localAt[sv.id] || 0;
+    if (sAt > lAt && !sv.fromImport) {
+      IMPORT_OWNED.forEach(k => { if (sv[k] !== undefined) loc[k] = JSON.parse(JSON.stringify(sv[k])); });
+      state.setContentAt[sv.id] = sAt;
+    }
     // Reviewer progress is monotonic in this workflow — adopt it from the server copy.
     graftProgress(loc, sv);
   });
+  state.setContentAt = maxMerge(serverAt, localAt);
   hydrateImportedSets();
   normalizeSets();
+  // Everything in memory now matches what the server will hold once this save lands, so
+  // the next stamp pass only sees genuinely new local edits.
+  refreshContentSnap();
 }
 
 // Copy monotonic reviewer progress from `source` onto `target` (approval, passage ID,
@@ -681,16 +741,26 @@ function mergeServerState(s) {
       setStateId: { ...(state.setStateId || {}), ...(s.setStateId || {}) },
       setDeleted: { ...(state.setDeleted || {}), ...(s.setDeleted || {}) },
       setExported: { ...(state.setExported || {}), ...(s.setExported || {}) },
+      setContentAt: maxMerge(state.setContentAt || {}, s.setContentAt || {}),
       setFlagM: mergeDecisions(s.setFlag || {}, s.setFlagAt || {}, state.setFlag || {}, state.setFlagAt || {}, 'server'),
-      // Server copies win on CONTENT (freshest deck text), but LOCAL reviewer progress
-      // is grafted on so a clobbered/older server copy can never revert this browser's
-      // own approvals at load time (that's how a stale server state once "infected"
-      // healthy browsers on reload).
+      // CONTENT goes to whichever side edited it last (setContentAt), not to the server
+      // unconditionally — an unstamped server copy is just the deck original and must not
+      // overwrite a local edit this browser has not managed to push yet. LOCAL reviewer
+      // progress is grafted on either way, so a clobbered/older copy can never revert
+      // this browser's own approvals at load time.
       sets: dedupeById((() => {
         const localById = new Map(state.sets.map(x => [x.id, x]));
+        const lAtAll = state.setContentAt || {}, sAtAll = s.setContentAt || {};
         const out = (s.sets || []).map(sv => {
           const loc = localById.get(sv.id);
-          if (loc) { graftProgress(sv, loc); localById.delete(sv.id); }
+          if (!loc) return sv;
+          localById.delete(sv.id);
+          const keepLocalContent = (lAtAll[sv.id] || 0) > (sAtAll[sv.id] || 0);
+          if (keepLocalContent && !loc.fromImport) {
+            IMPORT_OWNED.forEach(k => { if (loc[k] !== undefined) sv[k] = loc[k]; });
+            delete sv.fromImport;
+          }
+          graftProgress(sv, loc);
           return sv;
         });
         localById.forEach(loc => out.push(loc));
