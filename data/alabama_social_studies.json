@@ -1,0 +1,1349 @@
+[
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS24.2.1",
+    "strand": "Civics",
+    "description": "Explain how rights and responsibilities for citizens are part of the American system of government.",
+    "elements": [
+      "a. Describe the reasons for the settlement of the American colonies.",
+      "b. Identify American principles found within the Declaration of Independence and the Constitution of the United States."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS24.2.10",
+    "strand": "Geography",
+    "description": "Identify cardinal and intermediate directions.",
+    "elements": [
+      "a. Utilize gridlines to find locations on a map."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS24.2.11",
+    "strand": "History",
+    "description": "Describe segments of time, including year, decade, and century."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS24.2.12",
+    "strand": "History",
+    "description": "Describe historical events and celebrations within the state and nation using primary and secondary sources."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS24.2.13",
+    "strand": "History",
+    "description": "Explain how national historical figures and celebrations relate to fundamental democratic principles.",
+    "elements": [
+      "a. Research and explain the importance of individual founders and significant figures who shaped the nation.",
+      "b. Describe the purpose and significance of commonly observed holidays, commemorations, and celebrations.",
+      "c. Describe the Alabama connections to national holidays, including Veterans Day and Martin Luther King, Jr. Day.",
+      "d. Explain the history and significance of American symbols and monuments."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS24.2.14",
+    "strand": "History",
+    "description": "Explain how and why people have moved into and within the United States.",
+    "elements": [
+      "a. Describe the experiences of groups that have migrated to and within the United States throughout history."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS24.2.15",
+    "strand": "History",
+    "description": "Identify and summarize legends, stories, and songs that contributed to the cultural fabric of the United States."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS24.2.2",
+    "strand": "Civics",
+    "description": "Identify the three branches of government and describe their roles.",
+    "elements": [
+      "a. Compare the state and national governments in respect to their powers, roles, and leaders."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS24.2.3",
+    "strand": "Civics",
+    "description": "Explain the voting process."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS24.2.4",
+    "strand": "Economics",
+    "description": "Explain the economic processes of production and distribution, including the roles of producers, consumers, goods, and services.",
+    "elements": [
+      "a. Identify examples of imported and exported goods, including those produced within Alabama."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS24.2.5",
+    "strand": "Economics",
+    "description": "Explain how scarcity influences supply and demand."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS24.2.6",
+    "strand": "Economics",
+    "description": "Explain how Alabama’s natural resources are utilized in its economy."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS24.2.7",
+    "strand": "Geography",
+    "description": "Identify the seven continents, the five oceans, and the Equator shown on maps, globes, and satellite and digital images."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS24.2.8",
+    "strand": "Geography",
+    "description": "Differentiate between the features of a physical map and a political map, and explain how these features contribute to the map’s purpose."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "2",
+    "code": "SS24.2.9",
+    "strand": "Geography",
+    "description": "Compare the physical characteristics of regions throughout the United States, including landforms.",
+    "elements": [
+      "a. Describe regions of the state and nation, using vocabulary associated with geographical features of Earth, including bay, hill, island, mountain range, peninsula, plateau, and valley."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS24.3.1",
+    "strand": "Geography",
+    "description": "Locate map features, using geographic terminology to describe them.",
+    "elements": [
+      "a. Identify the Equator, International Date Line, Prime Meridian, Tropic of Capricorn, and Tropic of Cancer, using cardinal and intermediate directions.",
+      "b. Locate points on a grid using latitude and longitude coordinates.",
+      "c. Use the map scale to calculate the distance between two locations."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS24.3.10",
+    "strand": "Early Colonization",
+    "description": "Explain why interactions and conflicts occurred between Europeans and Indigenous peoples in the Southeast from 1519 to the early 1700s, including differing beliefs regarding culture, land use and ownership, religion, and trade."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS24.3.11",
+    "strand": "Early Colonization",
+    "description": "Describe French expeditions and colonization of Alabama, including the efforts of the LeMoyne brothers (Iberville and Bienville), establishment of forts, relationships with Indigenous peoples, and fur trade.",
+    "elements": [
+      "a. Locate on maps the French settlements in early Alabama, including Mobile (1702), Fort Toulouse (1717), and Fort Condé (1723), and describe their significance."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS24.3.2",
+    "strand": "Geography",
+    "description": "Explain how geographic features, including land regions and river systems, connect Alabama to other states.",
+    "elements": [
+      "a. Interpret thematic maps to compare and contrast Alabama to other states.",
+      "b. Describe the geographic features and natural resources of Alabama regions, including the Alabama Ridge and Valley, Black Belt, Cumberland Plateau, Highland Rim, Lower Coastal Plain, Piedmont, and Upper Coastal Plain.",
+      "c. Identify major river systems of Alabama and their points of origin, including the Alabama, Black Warrior, Cahaba, Chattahoochee, Coosa, Mobile, Perdido, Tallapoosa, Tennessee, and Tombigbee Rivers."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS24.3.3",
+    "strand": "Geography",
+    "description": "Research and share information on the development of the state and national park systems and the benefits parks provide.",
+    "elements": [
+      "a. Locate state and national parks within Alabama and explain their historical and economic significance."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS24.3.4",
+    "strand": "Geography",
+    "description": "Locate and describe the significance of state and national symbols, landmarks, and monuments."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS24.3.5",
+    "strand": "People and the Environment",
+    "description": "Explain the economic, geographic, and social impact of natural disasters over time."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS24.3.6",
+    "strand": "People and the Environment",
+    "description": "Describe how Alabama’s environment has been positively and negatively affected by human activity over time."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS24.3.7",
+    "strand": "Indigenous Alabama and European Exploration",
+    "description": "Compare and contrast the roles of anthropologists, archaeologists, and paleontologists."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS24.3.8",
+    "strand": "Indigenous Alabama and European Exploration",
+    "description": "Describe Indigenous cultures, governments, and economies in the Southeast prior to European colonization.",
+    "elements": [
+      "a. Identify changes that took place in prehistoric/pre-contact cultures in the Southeast between the Paleo, Archaic, Woodland, and Mississippian periods.",
+      "b. Describe key characteristics of different tribes in Alabama in the Mississippian Period, contrasting social customs, political organization, and religious practices."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "3",
+    "code": "SS24.3.9",
+    "strand": "Indigenous Alabama and European Exploration",
+    "description": "Explain reasons for European expeditions and the establishment of early settlements and colonies in North America during the sixteenth and seventeenth centuries.",
+    "elements": [
+      "a. Trace and compare routes of early explorers of North and South America.",
+      "b. Describe key parts of Hernando de Soto’s expedition through Alabama and explain its effects on Alabama’s Indigenous peoples."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.1",
+    "strand": "Colonial Regions",
+    "description": "Describe cooperation and conflict between the English, French, and Spanish colonists and Indigenous people over the fur trade, slave trade, and land claims.",
+    "elements": [
+      "a. Map the locations of significant European settlements and major Indigenous nations in North America and Alabama."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.10",
+    "strand": "Early Westward Expansion",
+    "description": "Explain how “Alabama fever” influenced Alabama's settlement, economic growth, and political development, leading to statehood and the 1819 constitution.",
+    "elements": [
+      "a. Identify contributions of Alabama’s early political leaders, including William Wyatt Bibb, Thomas Bibb, Israel Pickens, William Rufus King, and John W. Walker.",
+      "b. Outline political and geographic reasons for changing the location of Alabama’s state capital."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.11",
+    "strand": "Early Westward Expansion",
+    "description": "Describe events and factors that led to the United States' expansion prior to the Civil War, including conflicts, technological developments, trails, and the Gold Rush of 1849.",
+    "elements": [
+      "a. Locate states admitted to the United States between 1812 and 1860 and categorize these states as either “free” or “slave” states."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.12",
+    "strand": "Early Westward Expansion",
+    "description": "Explain how the growth of the United States from 1812 to 1860 changed economic and social life in Alabama.",
+    "elements": [
+      "a. Identify different trades and occupations of Alabamians in the period from 1812 to 1860.",
+      "b. Describe the living and working conditions and the cultural practices of enslaved persons engaged in skilled trades, domestic roles, and agricultural production, including effects of the domestic slave trade on their lives.",
+      "c. Explain how the Indian Removal Act (1830), Second Creek War (1836) and economic policies affected the lives, rights, and territories of the Muscogee Creek, Cherokee, Choctaw, Chickasaw, and Seminole tribes.",
+      "d. Describe the development of educational institutions in Alabama from statehood through 1860."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.13",
+    "strand": "Civil War and Reconstruction",
+    "description": "Describe how slavery contributed to sectional disagreements, divisions over states’ rights, and economic disputes resulting in the Civil War.",
+    "elements": [
+      "a. Identify and describe how key events from the Missouri Compromise (1820) to the election of Abraham Lincoln (1860) contributed to growing sectional divisions.",
+      "b. Describe the influence of abolitionists, including enslaved persons and self-liberated Black Americans, on efforts to end slavery in the United States.",
+      "c. Describe the significance of the Clotilda’s delivery of kidnapped people to Mobile Bay as an effort to expand slavery.",
+      "d. Summarize Alabama’s role in the formation of the Confederate States of America, including the pivotal events that took place in Montgomery and the division over secession in the northern part of the state."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.14",
+    "strand": "Civil War and Reconstruction",
+    "description": "Evaluate how key figures contributed to events that shaped the United States’ victory in the Civil War.",
+    "elements": [
+      "a. Identify Alabama’s economic and military contributions to the Civil War, including weapons manufacturing, soldiers, and the use of and resistance to conscripted enslaved labor.",
+      "b. Locate and describe the impact of significant Civil War battles, including those affecting Alabama, and identify the location of Confederate states, states remaining loyal to the United States, and capital cities of the Confederacy and United States.",
+      "c. Describe how the Civil War affected the people of Alabama, including the end of slavery, destruction of transportation systems, collapse of the economy, and the role of women on the home front.",
+      "d. Summarize events that marked the conclusion of the Civil War, including the assassination of President Lincoln, the surrender of Confederate armies, the spread of emancipation, and Emancipation and Juneteenth celebrations in Alabama and other states."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.15",
+    "strand": "Civil War and Reconstruction",
+    "description": "Identify major events of Reconstruction and evaluate the outcomes of Reconstruction policies.",
+    "elements": [
+      "a. Explain political changes in Alabama during Reconstruction, including new state constitutions, Black Codes, changes in political parties, voting rights, and citizenship rights for Black Americans.",
+      "b. Describe the effects of Reconstruction on education and social institutions in Alabama.",
+      "c. Explain how Africatown was established, describing the challenges its founders overcame and the ways they built community.",
+      "d. Recount the contributions of Alabamians who helped shape their state during Reconstruction."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.16",
+    "strand": "Post-Civil War Westward Expansion",
+    "description": "Describe how political and social changes of the late 1870s to 1900 affected Black and white Alabamians, including the introduction of Jim Crow laws, sharecropping, voting restrictions, and violence.",
+    "elements": [
+      "a. Describe how industry, trade, farming, and the rise of Populism changed Alabama after the Civil War and shaped its economy and communities in the late 1800s."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.17",
+    "strand": "Post-Civil War Westward Expansion",
+    "description": "Describe the social, political, and economic impacts of the conflicts, legislation, and treaties that led to the United States acquiring additional territory after the Civil War.",
+    "elements": [
+      "a. Explain how territorial expansion and the construction of the transcontinental railroad affected immigrants and Native Americans, including how it led to the loss of land in Indian Territory where Alabama tribes had been relocated.",
+      "b. Locate states admitted to and territories acquired by the United States between 1865 and 1900, and describe how these additional territories were acquired."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.2",
+    "strand": "Colonial Regions",
+    "description": "Compare and contrast the physical geography of the Northern, Middle, and Southern colonies, including geographic features and differences in climate, and explain how geography impacted settlement."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.3",
+    "strand": "Colonial Regions",
+    "description": "Explain the reasons for the establishment of the labor systems used in colonial America, including apprenticeship, indentured servitude, and slavery, and describe the differences among them.",
+    "elements": [
+      "a. Describe the triangular trade system, including the Middle Passage of the transatlantic slave trade, and describe the experiences of West Africans before and after being kidnapped and forced into slavery."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.4",
+    "strand": "Colonial Regions",
+    "description": "Describe how the contributions of various groups living in colonial North America helped colonies develop, including artisans, farmers, large landowners, tradespeople, women, children, Indigenous peoples, enslaved people, and indentured servants.",
+    "elements": [
+      "a. Describe the contributions of key individuals who established and developed early American colonies."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.5",
+    "strand": "American Revolution and Early Republic",
+    "description": "Summarize the causes of the French and Indian War and describe how its outcomes increased tensions that led to the American Revolution.",
+    "elements": [
+      "a. Explain how the French and Indian War affected power, trade, and claims to lands in Alabama for both Native Americans and European nations.",
+      "b. Describe key events that caused tension and led American colonists to protest against Great Britain, including the Sugar Act, Stamp Act, Townshend Acts, Boston Massacre, Tea Act, Boston Tea Party, and Intolerable Acts."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.6",
+    "strand": "American Revolution and Early Republic",
+    "description": "Identify and describe key events of the American Revolution, including the Battles of Lexington and Concord, Saratoga, and Yorktown.",
+    "elements": [
+      "a. Summarize the contributions of different groups and individuals to the American Revolution.",
+      "b. Describe events that took place in Alabama during the Revolution, including the Spanish seizure of Mobile and the Battle of Fort Charlotte, and explain the involvement of Native Americans.",
+      "c. Summarize the principles of the Declaration of Independence.",
+      "d. Explain how the Treaty of Paris (1783) and Pinckney’s Treaty helped set the boundaries of the United States, including the area that would become Alabama."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.7",
+    "strand": "American Revolution and Early Republic",
+    "description": "Summarize the key factors leading to the ratification of the Constitution, including the weaknesses of the Articles of Confederation, Shays’ Rebellion, and the Constitutional Convention with its compromises.",
+    "elements": [
+      "a. Describe the system of government established by the Constitution, including the three branches of government and their functions.",
+      "b. Explain why the Bill of Rights was added to the Constitution and how the amendment process allows changes to protect or expand rights."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.8",
+    "strand": "Early Westward Expansion",
+    "description": "Explain how the Louisiana Purchase and the actions of the Corps of Discovery accelerated westward expansion of the United States.",
+    "elements": [
+      "a. Summarize how the Federal Road increased access to Creek Territory for settlers and enslaved persons, and explain how their arrival affected Native Americans."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "4",
+    "code": "SS24.4.9",
+    "strand": "Early Westward Expansion",
+    "description": "Outline the major causes and events of the War of 1812.",
+    "elements": [
+      "a. Describe the causes of the Creek War within the context of the War of 1812 and explain the social, political, and economic effects on Alabama and the nation.",
+      "b. Identify significant battles and leaders of the Creek War."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.1",
+    "strand": "Progressive Era and World War I",
+    "description": "Explain how industry and agriculture expanded during the early twentieth century.",
+    "elements": [
+      "a. Summarize how important entrepreneurs and inventors shaped American society, and identify Alabamians who contributed to these innovations.",
+      "b. Describe the emergence of new forms of economic activity in Alabama at the turn of the twentieth century, including the iron, steel, textile, and timber industries.",
+      "c. Outline reasons for the growth of urban areas at the turn of the twentieth century, including Birmingham."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.10",
+    "strand": "World War II",
+    "description": "Describe how Alabamians contributed to the war effort during World War II.",
+    "elements": [
+      "a. Explain Alabama’s contributions to military production during World War II.",
+      "b. Locate military installations in Alabama during World War II on a map, including Redstone Arsenal, Camp Rucker (Fort Novosel), Fort McClellan, Craig Army Air Base, Brookley Field, Tuskegee Army Air Field, and major POW camps in Alabama.",
+      "c. Explain how women and Black Alabamians sought and received new employment opportunities during World War II that were not previously available."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.11",
+    "strand": "Mid-Twentieth Century, National Effects of World War II",
+    "description": "Describe how the United States’ economy grew and American culture changed after World War II.",
+    "elements": [
+      "a. Identify Alabamians who contributed to the growth of American culture post-World War II into the 1970s.",
+      "b. Describe the decline of farming and the growth of urban areas in Alabama after World War II."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.12",
+    "strand": "Mid-Twentieth Century, National Effects of World War II",
+    "description": "Outline key events and campaigns of the Civil Rights Movement and identify significant organizations and their contributions within the Movement.",
+    "elements": [
+      "a. Describe ways in which the Civil Rights Movement sought to create change.",
+      "b. Trace the chronology of civil rights events in Alabama and across the nation, and summarize how they impacted one another.",
+      "c. Describe the contributions of Alabama leaders and foot soldiers of the Civil Rights Movement as well as other Alabamian supporters who aided their efforts.",
+      "d. Summarize how opponents of the Civil Rights Movement in Alabama sought to limit its success.",
+      "e. Identify Alabamians who contributed to concurrent civil rights movements in the United States during the decades following World War II."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.13",
+    "strand": "Mid-Twentieth Century, International Effects of World War II",
+    "description": "Summarize why the United States sought to contain communism during the Cold War, and locate major communist countries from the Cold War era on a map."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.14",
+    "strand": "Mid-Twentieth Century, International Effects of World War II",
+    "description": "Describe how the United States’ involvement in the Cold War influenced domestic and international events.",
+    "elements": [
+      "a. Explain reasons for the United States’ involvement in the Korean War and Vietnam War and describe the involvement of Alabamians in these conflicts.",
+      "b. Describe how technological innovations boosted space exploration during the Space Race, including the role of Redstone Arsenal and the Marshall Space Flight Center."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.15",
+    "strand": "1970s to Today",
+    "description": "Trace the United States’ military involvement in international conflicts since 1980, including those following the September 11 attacks."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.16",
+    "strand": "1970s to Today",
+    "description": "Research and report on Alabama’s economic contributions and participation in global markets from the mid-twentieth through twenty-first centuries."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.17",
+    "strand": "1970s to Today",
+    "description": "State and defend a position regarding the benefits and drawbacks of technological advancements in the late twentieth and early twenty-first centuries."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.18",
+    "strand": "1970s to Today",
+    "description": "Identify political achievements and legislation nationally and within Alabama that have furthered the modern civil rights movement since 1970."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.2",
+    "strand": "Progressive Era and World War I",
+    "description": "Describe Progressive Era political reforms in both the United States and Alabama.",
+    "elements": [
+      "a. Summarize how women in Alabama participated in the suffrage movement prior to the ratification of the Nineteenth Amendment.",
+      "b. Describe how the Populist Movement influenced the creation of the 1901 Alabama Constitution and explain the effects of its adoption, including disenfranchisement of voters through literacy tests and poll taxes that affected both Black and white male small farmers and laborers.",
+      "c. Identify and describe examples of prison reform, including the abolition of the convict-lease system and leadership of Julia Tutwiler."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.3",
+    "strand": "Progressive Era and World War I",
+    "description": "Describe Progressive Era social reforms in both the United States and Alabama.",
+    "elements": [
+      "a. Explain how legislation, individuals, and groups extended educational opportunities in Alabama.",
+      "b. Summarize the role of labor unions and reformers in changing laws governing working conditions.",
+      "c. Summarize Helen Keller’s life and her contributions to disability rights."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.4",
+    "strand": "Progressive Era and World War I",
+    "description": "Analyze the reasons for increased immigration to, and migration within, the United States and Alabama in the early twentieth century.",
+    "elements": [
+      "a. Compare the experiences of immigrants who entered the United States through various ports of entry, including Ellis Island, Angel Island, and the southern border.",
+      "b. Identify the economic and social conditions that led to the start of the Great Migration."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.5",
+    "strand": "Progressive Era and World War I",
+    "description": "Summarize the primary causes and consequences of World War I.",
+    "elements": [
+      "a. Identify and explain international events that led to the United States’ entry into World War I.",
+      "b. Identify the countries of the Triple Entente and Central Powers during World War I and locate them on a map.",
+      "c. Describe the roles and contributions of Alabamians, including the 167th Infantry Regiment (4th Alabama), to the war effort during World War I.",
+      "d. Locate Alabama military training camps, ammunition depots, and the Port of Mobile on a map and explain their role in World War I efforts."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.6",
+    "strand": "Roaring Twenties, Great Depression, and New Deal",
+    "description": "Identify the contributions of Alabamians to sports, film, and the arts during the early twentieth century, the Harlem Renaissance, and the Jazz Age.",
+    "elements": [
+      "a. Explain how overcropping, the boll weevil, and low cotton prices affected farmers in Alabama."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.7",
+    "strand": "Roaring Twenties, Great Depression, and New Deal",
+    "description": "Describe the economic developments in the United States during the Roaring Twenties that caused the 1929 stock market crash.",
+    "elements": [
+      "a. Explain how the Great Depression impacted Alabamians and the nation, including increased labor tensions.",
+      "b. Identify key characteristics of the Dust Bowl and the regions affected by it."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.8",
+    "strand": "Roaring Twenties, Great Depression, and New Deal",
+    "description": "Analyze how the government-funded New Deal programs of President Franklin D. Roosevelt impacted American society.",
+    "elements": [
+      "a. Identify the contributions of reformers during the New Deal, including Alabama political and civic leaders.",
+      "b. Identify and describe New Deal projects that helped bring relief to Alabama."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "5",
+    "code": "SS24.5.9",
+    "strand": "World War II",
+    "description": "Describe the reasons for the United States’ entry into World War II and identify its contributions toward the defeat of the Axis powers.",
+    "elements": [
+      "a. Compare totalitarianism and democracy as represented in the Axis and Allied powers prior to war in Europe.",
+      "b. Explain the military contributions of Americans during World War II, including the achievements of the Tuskegee Airmen and Alabama Medal of Honor recipients",
+      "c. Explain the significance of major events in the war, including Pearl Harbor, internment of Japanese-Americans, D-Day, the Holocaust, Victory in Europe (VE) Day, the development and use of the atomic bomb, and Victory over Japan (VJ) Day."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.1",
+    "strand": "Colonization of North America",
+    "description": "Describe major Indigenous societies in North America prior to European contact.",
+    "elements": [
+      "a. Compare the political and social structures of Southeastern Woodland Indigenous peoples and those of another region of North America."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.10",
+    "strand": "Creating a Government",
+    "description": "Explain how events and issues of the Critical Period (1783-1789) exposed limitations of the Articles of Confederation and contributed to calls for a stronger national government.",
+    "elements": [
+      "a. Compare and contrast the division of power among levels of government in unitary, federal, and confederate styles of governance.",
+      "b. Describe how the Northwest Land Ordinances of 1785 and 1787 established a foundation for future territorial growth of the United States and restricted the growth of slavery.",
+      "c. Identify innovative ideas for democratic governance and the expansion of citizen rights that were included in state constitutions during the Critical Period."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.11",
+    "strand": "Creating a Government",
+    "description": "Analyze how collaboration and compromise were employed to address key issues during the Constitutional Convention, including representation in Congress (Great Compromise and bicameral legislature), balance of power between national and state governments (establishment of the system of federalism), limiting government power (establishment of the three branches), and slavery (Three-Fifths Compromise).",
+    "elements": [
+      "a. Describe the role of Founding Fathers at the Constitutional Convention and explain how they contributed to the development of the Constitution.",
+      "b. Summarize the arguments favoring and opposing ratification of the Constitution of the United States.",
+      "c. Assess the arguments made by groups and individuals seeking greater inclusion and advancement of fundamental values in the late 1700s, including women and Black Americans, who were excluded from early American political participation."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.12",
+    "strand": "Foundations of American Government",
+    "description": "Explain how forms of governments established prior to the founding of the United States influenced the formation of the new nation’s system of government.",
+    "elements": [
+      "a. Describe how the Magna Carta, Petition of Right, and English Bill of Rights contributed to the development of limited government.",
+      "b. Compare and contrast how Enlightenment thinkers interpreted the purpose of government and the relationship between government and citizens.",
+      "c. Develop an argument supporting the idea that the Iroquois Confederacy’s form of representative government influenced attempts of the colonies to unite as one nation."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.13",
+    "strand": "Foundations of American Government",
+    "description": "Describe major ideas, concepts, and limitations of the Constitution of the United States.",
+    "elements": [
+      "a. Explain how a written constitution aids in establishing limited government and the rule of law.",
+      "b. Describe how the authors of the Constitution viewed the primary functions of government, based on the wording of the Preamble.",
+      "c. Analyze key elements of the Constitution that deal with citizenship and civic participation, including the path to citizenship and the process for amending the Constitution."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.14",
+    "strand": "Foundations of American Government",
+    "description": "Outline the process of selecting political leaders of the United States as established in the Constitution and its amendments."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.15",
+    "strand": "Foundations of American Government",
+    "description": "Explain how the system of federalism in the United States divides power between national and state governments as well as between state and local governments.",
+    "elements": [
+      "a. Summarize how federalism balances concerns regarding limiting a powerful national government, securing regional interests, and sharing power across the United States."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.16",
+    "strand": "Foundations of American Government",
+    "description": "Compare duties and functions of the legislative, executive, and judicial branches at various levels of government.",
+    "elements": [
+      "a. Illustrate and explain the relationship among the three branches, including checks and balances and separation of powers.",
+      "b. Identify key positions in each branch and describe their responsibilities."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.17",
+    "strand": "Foundations of American Government",
+    "description": "Explain key rights included in the Bill of Rights and provide examples of how citizens exercise these rights in today’s society.",
+    "elements": [
+      "a. Trace the origins of rights contained in the Bill of Rights to issues leading to the American Revolution and the concerns of colonists about unlimited government power.",
+      "b. Explain the significance of Marbury v. Madison (1803) in establishing judicial review by the Supreme Court.",
+      "c. Identify constitutional amendments that expanded political rights for citizens and describe the efforts of citizens to secure these rights."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.18",
+    "strand": "Foundations of American Government",
+    "description": "Analyze how an individual’s civic participation can influence government, politics, and society.",
+    "elements": [
+      "a. Identify and describe ways citizens work together to influence the government and solve problems.",
+      "b. Differentiate between the requirements, responsibilities, and rights for citizenship in the United States.",
+      "c. Explain how an individual becomes a citizen of the United States, including birthright citizenship and naturalization, and identify moments in history in which citizenship has been extended to individuals not previously considered citizens."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.19",
+    "strand": "Government in a New Nation",
+    "description": "Analyze the election and presidency of George Washington for its impact on establishing the role of president in the United States, including the creation of the first Cabinet, establishment of the District of Columbia, commitment to religious freedom (Letter to the Hebrew Congregation at Newport), and the two-term precedent.",
+    "elements": [
+      "a. Formulate and defend a position on the use of federal authority by Washington and his administration in response to the Whiskey Rebellion.",
+      "b. Summarize the views Washington expressed in his Farewell Address regarding political factions, international relations, and civic virtue."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.2",
+    "strand": "Colonization of North America",
+    "description": "Compare and contrast the reasons for British, French, and Spanish colonization in North America as well as why individuals migrated to the colonies, including mercantilism, religious persecution, poverty, oppression, and new opportunities.",
+    "elements": [
+      "a. Summarize how the Crusades, Reformation, and Renaissance influenced European exploration and describe how individuals contributed to these movements.",
+      "b. Trace the routes of key European expeditions in North America and describe their effects on colonization in the New World.",
+      "c. Locate on a map of North America the areas of European colonization, including colonies of England, France, Russia, and Spain."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.20",
+    "strand": "Government in a New Nation",
+    "description": "Trace the development of the Federalist and Democratic-Republican political parties in the 1790s, and describe the role of political parties in the American political system.",
+    "elements": [
+      "a. Describe Alexander Hamilton’s economic plan for the new United States and explain how this became the foundation of capitalism in the country.",
+      "b. Compare the arguments for and against the establishment of the National Bank as represented by differing interpretations of the Constitution.",
+      "c. Compare Alexander Hamilton’s vision for an industrial United States to Thomas Jefferson’s agricultural vision.",
+      "d. Describe the significance of the Election of 1800 as setting the precedent for a peaceful transition of power and the electoral reform the election produced."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.3",
+    "strand": "Colonization of North America",
+    "description": "Describe the effects of European expeditions and colonization on the economic, geographic, and social conditions of Indigenous peoples during the fifteenth through eighteenth centuries in North America.",
+    "elements": [
+      "a. Summarize how interactions between colonists and Indigenous peoples resulted in both conflict and cooperation, including economic and military alliances."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.4",
+    "strand": "Colonization of North America",
+    "description": "Compare and contrast the key characteristics, including political structures, of the New England, Middle, Chesapeake, and Southern colonies.",
+    "elements": [
+      "a. Explain how climate and geography shaped the economic identities of the colonial regions.",
+      "b. Differentiate among the various forms of colonial governments and identify examples of self-government in the colonies, including the Mayflower Compact, New England town meetings, and the Virginia House of Burgesses.",
+      "c. Identify individuals in colonial America who sought change for their communities, and describe how their efforts led to shifts in society."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.5",
+    "strand": "Colonization of North America",
+    "description": "Explain how the desire for religious freedom served as a motivation for establishing colonies.",
+    "elements": [
+      "a. Summarize efforts to limit religious freedom in the colonies.",
+      "b. Describe the contributions of colonists in bringing about religious change in colonial society.",
+      "c. Explain the influence of the Great Awakening on colonial society, including how it shaped the political beliefs of colonists."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.6",
+    "strand": "Colonization of North America",
+    "description": "Trace the economic and cultural interactions across continents and the colonies resulting from the triangular trade routes, including the forced migration of Africans through the transatlantic slave trade and experiences of the Middle Passage.",
+    "elements": [
+      "a. Compare and contrast the institution of slavery in different colonial regions.",
+      "b. Summarize the purpose of slave codes in colonial society and explain how they demonstrated that laws can be discriminatory and unfair.",
+      "c. Describe how enslaved people and abolitionists sought to oppose slavery in colonial America."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.7",
+    "strand": "The American Revolution",
+    "description": "Identify causes and events leading to the War for Independence, including salutary neglect, the Stamp Act, the Boston Massacre, the Boston Tea Party, the Intolerable Acts, Virginia Convention (1775), and the Declaration of Independence, and describe how these events escalated tension between the colonies and Great Britain.",
+    "elements": [
+      "a. Develop an argument defending the belief that the French and Indian War served as a defining event in the relationship between the American colonies and British government.",
+      "b. Compare and contrast methods of colonial activism and protest against British policies, including boycotts, craftwork, letters, petitions, poems, public oration, and speeches.",
+      "c. Describe the positive and negative effects of taxation and trade on the economic livelihood of American colonies in the 1760s and 1770s and explain how this issue violated colonists’ expectations of representative government.",
+      "d. Summarize the arguments put forth by Patriots and Loyalists regarding the question of independence from Great Britain, and describe efforts to compromise.",
+      "e. Define the key principles contained in the Declaration of Independence, including inalienable rights, equality, and social contract, and explain how they have been presented in significant statements of belief throughout United States history to the present."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.8",
+    "strand": "The American Revolution",
+    "description": "Differentiate among the outcomes of major events and campaigns of the War for Independence, including the northern, middle, southern, and western theaters.",
+    "elements": [
+      "a. Explain how the War for Independence created hardship and required sacrifice by colonists on the home front as well as by soldiers.",
+      "b. Research and report on the contributions to victory in the War for Independence from women, Black Americans, and supporters from other countries.",
+      "c. Explain the involvement of Indigenous peoples in the War for Independence and the effects of the war on Indigenous societies.",
+      "d. Explain why Loyalists and other colonists sided with the British during the War for Independence and how Great Britain’s defeat and withdrawal impacted their lives."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "6",
+    "code": "SS24.6.9",
+    "strand": "The American Revolution",
+    "description": "Summarize the reasons for the colonies’ victory in the War for Independence.",
+    "elements": [
+      "a. Evaluate the political and military contributions to the American Revolution of Founding Fathers, including their efforts to mobilize support, develop military strategy, and conduct foreign diplomacy.",
+      "b. Analyze how the Treaty of Paris of 1783 affected the development of the United States, including the establishment of its boundaries."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS24.7.1",
+    "strand": "Five Themes of Geography and Map Skills",
+    "description": "Describe the world in spatial terms, using maps and other geographic representations, tools, and geospatial technologies.",
+    "elements": [
+      "a. Explain and demonstrate the use of map essentials, including direction, distance, legend, latitude, longitude, map type, projection, scale, and symbols.",
+      "b. Use physical, political, and special-purpose maps to identify the distribution of people, location of places, and classification of physical features.",
+      "c. Utilize maps to explain relationships among people and places, including governmental alliances, immigration patterns, and trade patterns.",
+      "d. Describe how geographic features and political entities are organized and labeled, including continents, countries, and oceans."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS24.7.10",
+    "strand": "Ancient Civilizations in the Americas and Africa",
+    "description": "Describe cultural and economic characteristics of early Indigenous peoples in North and South America, including civilizations in Mesoamerica, the Andes, and the Mississippi River Valley.",
+    "elements": [
+      "a. Identify locations and migration patterns of early Indigenous peoples on a map, including the Olmec and Woodland Period civilizations.",
+      "b. Compare and contrast the development of agriculture in the Americas with agricultural practices in other early civilizations.",
+      "c. Describe how religion, architecture, and politics intersected in early Indigenous civilizations, including the Maya civilization."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS24.7.11",
+    "strand": "Ancient and Classical Civilizations in Asia",
+    "description": "Trace the development and growth of societies in Southwest Asia, including the Assyrians, Phoenicians, and Persian Empire."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS24.7.12",
+    "strand": "Ancient and Classical Civilizations in Asia",
+    "description": "Analyze the development of civilization in South Asia from the settling of the Indus River Valley to the beginning of the Gupta Empire.",
+    "elements": [
+      "a. Summarize how Hinduism as well as a caste system emerged from different religious beliefs and schools of philosophy.",
+      "b. Describe how geographic conditions in South Asia, including monsoons, and trade with neighboring regions contributed to the growth of civilization in the region.",
+      "c. Trace the development of Buddhism, including the contributions of Emperor Ashoka, and explain how Buddhism influenced society in Classical India."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS24.7.13",
+    "strand": "Ancient and Classical Civilizations in Asia",
+    "description": "Explain the emergence and consolidation of China from the Xia Dynasty along the Huang He River Valley through the fall of the Han Dynasty.",
+    "elements": [
+      "a. Compare and contrast the philosophies of Confucianism, Daoism, and Legalism and explain how they influenced dynastic cycles, politics, and society in China.",
+      "b. Trace the reunification of China from the Warring States period and the Qin Dynasty which led to China’s Golden Age under the Han Dynasty.",
+      "c. Describe the significance of Chinese technological advancements, including paper, gunpowder, the compass, and the seismograph.",
+      "d. Analyze how the establishment of the Silk Road fostered economic and cultural development across multiple continents."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS24.7.14",
+    "strand": "Classical Greece and Rome",
+    "description": "Summarize cultural contributions and legacies of Classical Greece, including architecture, arts, intellectual life, literature, politics, and science.",
+    "elements": [
+      "a. Explain the development of the polis and analyze how geography affected the process, including Athens and Sparta.",
+      "b. Trace the development of Greek city-states' political systems, including democracy, that influenced the governments of modern nations.",
+      "c. Explain the influence of philosophers on Greek society, culture, and politics as well as their influence on modern thought.",
+      "d. Analyze the internal and external conflicts that played a role in Classical Greek society.",
+      "e. Describe the influence of Alexander the Great’s empire, including the establishment of Hellenistic kingdoms, the diffusion of Greek culture, and its role in shaping Rome."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS24.7.15",
+    "strand": "Classical Greece and Rome",
+    "description": "Outline the key geographic, political, economic, and cultural elements of the Roman Republic.",
+    "elements": [
+      "a. Trace the growth of the Roman Republic, using a variety of thematic and political maps.",
+      "b. Explain the social and cultural outcomes of economic activities within the Mediterranean region, including the establishment of colonies that influenced each other culturally.",
+      "c. Analyze the social, political, and economic effects of the Punic Wars.",
+      "d. Summarize the influence of Roman legal and political systems on later societies.",
+      "e. Describe the internal and external factors that led to the eventual collapse of the Roman Republic."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS24.7.16",
+    "strand": "Classical Greece and Rome",
+    "description": "Trace the development of the Roman Empire, including the actions of Julius Caesar and the reigns of Augustus Caesar and the Five Good Emperors.",
+    "elements": [
+      "a. Explain Rome’s shift from Republic to Empire, including economic, political, and geographic causes.",
+      "b. Describe the founding and development of Christianity, including the roles of Jesus of Nazareth and Paul of Tarsus, and how its spread was directly and indirectly influenced by the Roman Empire.",
+      "c. Summarize the economic, political, and social factors that led to the split and eventual fall of the Western Roman Empire."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS24.7.2",
+    "strand": "Five Themes of Geography and Map Skills",
+    "description": "Analyze how human interaction with the environment, location, movement, place, and region affect cultural, economic, and social conditions for those living in a geographic area."
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS24.7.3",
+    "strand": "Pre-History and the Neolithic Revolution",
+    "description": "Analyze how historians organize human history and events, including the use of calendars.",
+    "elements": [
+      "a. Describe multiple methods for organizing and labeling periods of time, including differentiating between the BC/AD and BCE/CE notations."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS24.7.4",
+    "strand": "Pre-History and the Neolithic Revolution",
+    "description": "Explain how artifacts and other archaeological findings provide evidence of the nature and movement of prehistoric groups of people.",
+    "elements": [
+      "a. Differentiate among primary, secondary, and tertiary sources in how they are used to study both history and geography.",
+      "b. Use maps to identify how climate and weather patterns, including the Ice Ages, affect the ways humans adapt within different geographic locations.",
+      "c. Predict causes and consequences of human migration, including push and pull factors."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS24.7.5",
+    "strand": "Pre-History and the Neolithic Revolution",
+    "description": "Explain common patterns that emerged in the shift from hunter-gatherer societies to permanent settlements in different regions of the world, including types and sizes of settlements.",
+    "elements": [
+      "a. Analyze the influence of physical geography on the locations of the early agrarian societies, including the early river valleys settlements.",
+      "b. Describe the settlement patterns, shift in gender roles, and job specialization associated with the development of agrarian societies.",
+      "c. Describe the agricultural innovations that developed as a result of the Neolithic Revolution, including the domestication of plants and animals."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS24.7.6",
+    "strand": "Ancient Civilizations in the Greater Mediterranean",
+    "description": "Explain how technological innovations and the geographic features of the Tigris and Euphrates Rivers contributed to the development of civilization in the Fertile Crescent.",
+    "elements": [
+      "a. Describe how agriculture, domestication of animals, inventions, irrigation, metalsmithing, and mining contributed to the settlement and growth of Mesopotamian civilizations.",
+      "b. Analyze how advancements in agriculture in Sumer led to economic growth, expansion of trade and transportation, and the emergence of independent city-states.",
+      "c. Summarize the cultural and political innovations of Mesopotamia, including The Epic of Gilgamesh and Hammurabi's Code."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS24.7.7",
+    "strand": "Ancient Civilizations in the Greater Mediterranean",
+    "description": "Analyze the economic, political, and social structures of ancient Egypt.",
+    "elements": [
+      "a. Describe the role of the Nile River and Mediterranean Sea in supporting the economic and cultural growth of ancient Egypt.",
+      "b. Identify major technological and artistic achievements of ancient Egypt.",
+      "c. Summarize the social structure and religious beliefs of ancient Egypt.",
+      "d. Describe the achievement of key leaders of ancient Egypt and how these achievements helped grow the kingdom."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS24.7.8",
+    "strand": "Ancient Civilizations in the Greater Mediterranean",
+    "description": "Explain the geographic and cultural development of ancient Israel.",
+    "elements": [
+      "a. Identify the central tenets of Judaism, and compare Judaism to the polytheistic religions of other Mediterranean ancient civilizations.",
+      "b. Describe the establishment of a unified Israel under Kings Saul, David, and Solomon.",
+      "c. Outline the multiple exiles of the Jewish people and their return to Israel, from the establishment of the nation through the Roman destruction of Jerusalem in 70 AD/CE."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "7",
+    "code": "SS24.7.9",
+    "strand": "Ancient Civilizations in the Americas and Africa",
+    "description": "Compare and contrast the economic and cultural structures of early African societies.",
+    "elements": [
+      "a. Explain how physical geography, including natural resources, contributed to the economic and cultural practices of early African societies.",
+      "b. Describe common tenets of indigenous religion practiced in Africa, including the beliefs of the Ashanti, Dogon, and Igbo religious traditions.",
+      "c. Describe how trade, including silent barter, facilitated exchange of economic practices, language, and culture across Africa from prehistory through the Iron Age."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.1",
+    "strand": "Effects of the Fall of Rome",
+    "description": "Analyze the economic, political, and social consequences of the collapse of the Western Roman Empire.",
+    "elements": [
+      "a. Trace the spread of Christianity in Europe and the wider Mediterranean region and outline the organizational structure of the early Catholic Church, including the roles of the Bishop of Rome and Councils of Carthage.",
+      "b. Explain the rise of Germanic kingdoms, the migration of their peoples, and the effect on political boundaries in Europe."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.10",
+    "strand": "Renaissance and Reformation",
+    "description": "Analyze the factors that contributed to the Reformation and explain how it affected the religious and political unity of Europe.",
+    "elements": [
+      "b. Describe the political, religious, and social contributions of reformers in Europe, including Martin Luther and John Calvin.",
+      "c. Summarize responses to the Reformation, including the Counter-Reformation, English Reformation, and religious conflicts, and cite the roles of central figures in these events."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.11",
+    "strand": "Age of Exploration and Colonization in the Americas",
+    "description": "Explain the motivations for exploration by European nations.",
+    "elements": [
+      "a. Summarize how expanding knowledge of geographical features and the development of navigational technology contributed to global exploration by Europeans.",
+      "b. Explain the economic, political, and religious factors that fostered exploration, including mercantilism.",
+      "c. Analyze the consequences of initial contact between Europeans and Indigenous peoples in the Americas.",
+      "d. Describe the Columbian Exchange and its contributions to cultural, demographic, economic, and environmental changes around the globe."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.12",
+    "strand": "Age of Exploration and Colonization in the Americas",
+    "description": "Trace the cultural, economic, and political effects of European colonization on the populations of Africa, the Americas, and Europe.",
+    "elements": [
+      "a. Explain how the desire for cheap labor led to the enslavement and decline of the Indigenous populations in the Americas."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.13",
+    "strand": "Age of Exploration and Colonization in the Americas",
+    "description": "Analyze the economic, political, and social effects of the transatlantic slave trade on African societies and American colonies.",
+    "elements": [
+      "a. Describe the conditions and treatment of enslaved Africans during the Middle Passage and in the Americas."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.14",
+    "strand": "Rise of Absolutism",
+    "description": "Summarize the rise of absolutism and explain how absolute monarchy differed from governing practices in Europe before the seventeenth century.",
+    "elements": [
+      "a. Explain how the Thirty Years’ War and the Peace of Westphalia led to the rise of absolutism.",
+      "b. Analyze the rise of absolutism in France under Louis XIV, including the divine right of kings.",
+      "c. Describe how the development of absolutism affected governments in Russia and Prussia under the reigns of Peter the Great, Frederick the Great, and Catherine the Great.",
+      "d. Summarize the influence of the Ottoman Empire on the political landscape of European monarchies."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.15",
+    "strand": "Rise of Absolutism",
+    "description": "Analyze the development of parliamentary and constitutional government in England.",
+    "elements": [
+      "a. Compare and contrast the political philosophies of Thomas Hobbes and John Locke.",
+      "b. Summarize how major provisions in the Petition of Right and the English Bill of Rights influenced early forms of constitutional government."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.16",
+    "strand": "Rise of Absolutism",
+    "description": "Describe the governing policies in East Asia during the sixteenth, seventeenth, and eighteenth centuries, including those of China and Japan.",
+    "elements": [
+      "a. Trace the rise of militarism in Japan and explain how it led to the invasion of Korea.",
+      "b. Explain the effects of religion on Japanese society and politics.",
+      "c. Compare the policies of absolutism and social structures of the Tokugawa Shogunate in Japan to European monarchies.",
+      "d. Describe how political changes in China led to the decline of imperial power from the Ming Dynasty to the end of the Qing Dynasty."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.17",
+    "strand": "Enlightenment and the Scientific Revolution",
+    "description": "Analyze the influence of the Scientific Revolution on European religion and society, including the astronomical theories of Nicolaus Copernicus and Galileo Galilei.",
+    "elements": [
+      "a. Explain the significance of the development of the scientific method and its implications for new discoveries and ideas."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.18",
+    "strand": "Enlightenment and the Scientific Revolution",
+    "description": "Summarize the main ideas of the Enlightenment and describe their emergence in European society.",
+    "elements": [
+      "a. Trace the origins of Enlightenment ideas to earlier eras and movements, including Classical Greece and Rome, Christianity, the Renaissance, the Reformation, and the Scientific Revolution."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.2",
+    "strand": "Effects of the Fall of Rome",
+    "description": "Describe the Byzantine Empire, its institutions, and its legacy.",
+    "elements": [
+      "a. Identify factors leading to the separation of Eastern Orthodoxy and Western Christianity and explain how the Orthodox Church influenced society and culture in Eastern Europe and Central Asia.",
+      "b. Evaluate the cultural contributions of the Byzantines to art, religion, and architecture.",
+      "c. Analyze the influence of the Code of Justinian on modern legal codes."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.3",
+    "strand": "Medieval Societies",
+    "description": "Trace and analyze the spread of Islam through the Mediterranean region under the caliphs from 632 to 1258, including the consolidation of the Qur’an.",
+    "elements": [
+      "a. Outline the founding and development of Islam under Muhammad.",
+      "b. Differentiate among the Islamic sects that developed after the death of Muhammad.",
+      "c. Analyze the influence of Islamic cultural, economic, and political systems in Africa, Arabia, and Europe."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.4",
+    "strand": "Medieval Societies",
+    "description": "Compare and contrast the cultural, economic, geographic, and political structures of the civilizations of medieval Asia, including China, India, Japan, and Korea",
+    "elements": [
+      "a. Explain China’s influence on other civilizations in Asia.",
+      "b. Describe how the Mongols influenced the cultural, economic, and social landscape of Asia.",
+      "c. Analyze the evolution of religion in Asia, including the growth of Buddhism, Hinduism, Jainism, and Sikhism.",
+      "d. Trace the development of the feudal structure of medieval Japan, including the establishment of the Shogunate by Minamoto no Yoritomo."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.5",
+    "strand": "Medieval Societies",
+    "description": "Compare the African kingdoms of Ghana, Mali, and Songhai, including cultures, economic systems, geography, religions, and slave trade.",
+    "elements": [
+      "a. Describe how physical geography shaped the growth of medieval African kingdoms and trade with neighboring regions.",
+      "b. Trace the spread of culture, language, and religion among African civilizations.",
+      "c. Evaluate the economic and cultural contributions of key leaders and trade centers in African kingdoms, including Mansa Musa and the city of Timbuktu."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.6",
+    "strand": "Medieval Societies",
+    "description": "Describe key aspects and figures of Indigenous societies during the Postclassic Period in Mesoamerica and the Andean region and the Mississippian Period in North America, including the Maya, Aztec, and Inca civilizations.",
+    "elements": [
+      "a. Analyze how geographic and environmental factors led to the location and growth of Indigenous societies.",
+      "b. Describe technological and engineering achievements of Indigenous societies.",
+      "c. Explain how religious beliefs and practices shaped culture in Indigenous societies."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.7",
+    "strand": "Medieval Societies",
+    "description": "Outline the social, cultural, economic, and religious developments of early medieval Europe.",
+    "elements": [
+      "a. Compare and contrast the growth of medieval societies in different geographic regions of Europe.",
+      "b. Analyze the relationship of the Catholic Church to economic, political, and social systems and rulers in medieval Europe.",
+      "c. Explain the significant economic, political, and social aspects of European feudalism.",
+      "d. Analyze the effects of political events in Europe during the Middle Ages, including the coronation of Charlemagne, the Norman Conquest, and the Hundred Years’ War.",
+      "e. Summarize the significance of the issuing of the Magna Carta in limiting royal power and establishing the rule of law."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.8",
+    "strand": "Medieval Societies",
+    "description": "Analyze the social, political, and economic changes leading up to the Renaissance and Reformation in later medieval Europe and surrounding regions.",
+    "elements": [
+      "a. Explain the political and cultural consequences of the Crusades, the Reconquista, the Spanish Inquisition, and the establishment of the Ottoman Empire.",
+      "b. Trace the spread of the bubonic plague from Asia to Europe and describe the resulting changes that occurred in Europe, including the rise of the middle class.",
+      "c. Describe the role of women in society and politics in medieval Europe, citing the contributions of significant women of the time."
+    ]
+  },
+  {
+    "state": "AL",
+    "subject": "social_studies",
+    "grade": "8",
+    "code": "SS24.8.9",
+    "strand": "Renaissance and Reformation",
+    "description": "Describe cultural and economic developments in Italy and Northern Europe during the Renaissance, including the influence of the Medici family.",
+    "elements": [
+      "a. Analyze humanism and the contributions of philosophers and artists during the Renaissance.",
+      "b. Summarize major scientific and technological advancements in the Renaissance, including the printing press, and evaluate their effects on society."
+    ]
+  }
+]

@@ -16,12 +16,12 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608251415';   // replaced with the deploy stamp
+const APP_BUILD = '202608261604';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
-const STATES = ['OH', 'GA', 'TX', 'FL', 'NC', 'SC'];
-const STATE_NAMES = { OH: 'Ohio', GA: 'Georgia', TX: 'Texas', FL: 'Florida', NC: 'North Carolina', SC: 'South Carolina', ALL: 'All States' };
+const STATES = ['OH', 'GA', 'TX', 'FL', 'NC', 'SC', 'AL'];
+const STATE_NAMES = { OH: 'Ohio', GA: 'Georgia', TX: 'Texas', FL: 'Florida', NC: 'North Carolina', SC: 'South Carolina', AL: 'Alabama', ALL: 'All States' };
 const SUBJECT_NAMES = { social_studies: 'Social Studies', science: 'Science', ela: 'ELAR' };
 function otherStates(st) { return STATES.filter(s => s !== st); }
 // The subtitle derives from STATES so the roster can grow without HTML edits.
@@ -905,6 +905,10 @@ const DATA_FILES = [
   'data/florida_science.json', 'data/florida_social_studies.json', 'data/florida_ela.json',
   'data/north_carolina_science.json', 'data/north_carolina_social_studies.json', 'data/north_carolina_ela.json',
   'data/south_carolina_science.json', 'data/south_carolina_social_studies.json', 'data/south_carolina_ela.json',
+  // Alabama runs three different adoptions at once: ELA 2021, Science 2023 (required from
+  // 2025-26), and Social Studies 2024 — which takes effect THIS school year, 2026-27, and
+  // replaces a set that had stood since 2010.
+  'data/alabama_science.json', 'data/alabama_social_studies.json', 'data/alabama_ela.json',
   'data/universal_ela.json', // state:"ALL" — domains that apply everywhere, shown for every state
 ];
 
