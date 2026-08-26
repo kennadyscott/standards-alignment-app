@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608261735';   // replaced with the deploy stamp
+const APP_BUILD = '202608262140';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1585,6 +1585,11 @@ function handleAction(act, id) {
     setDecision(id, act);
     saveDecisions();
     toast(act === 'approved' ? 'Alignment approved ✓' : 'Alignment rejected');
+    // Approving a card changes the queue and the counts — nothing else. renderAll()
+    // also rebuilds the Dashboard, the Master list and State Lists, which is most of the
+    // cost of a click and none of the benefit when you are working through the queue.
+    renderReview(); renderBadge(); renderStdList(); renderDetail();
+    return;
   }
   renderAll();
 }

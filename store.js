@@ -205,6 +205,18 @@ async function sbSaveDirty(state) {
 }
 
 /* ---------- live updates ---------- */
+/* Re-rendering once per changed row is what made the app crawl: saving a batch of 20
+   sets produced 20 realtime events and 20 full re-renders, and most of them were the
+   echo of this browser's own write. Two guards below:
+     1. a row identical to our snapshot is OUR echo -- ignore it entirely;
+     2. anything left is coalesced, so a burst of rows costs one render. */
+let sbRenderTimer = null;
+function sbNotify(kind, id) {
+  if (!SB.onChange) return;
+  clearTimeout(sbRenderTimer);
+  sbRenderTimer = setTimeout(() => SB.onChange(kind, id), 120);
+}
+
 function sbSubscribe(state, onChange) {
   const c = sbInit();
   if (!c) return;
@@ -214,25 +226,31 @@ function sbSubscribe(state, onChange) {
     .on('postgres_changes', { event: '*', schema: 'public', table: 'sets' }, p => {
       const r = p.new;
       if (!r || !r.id) return;
+      const sig = JSON.stringify(rowCompare(r));
+      // Our own write coming back. Nothing changed for us; re-rendering would be pure cost.
+      if (!r.deleted_at && SB.snapSets.get(r.id) === sig) return;
       const i = (state.sets || []).findIndex(x => x.id === r.id);
       if (r.deleted_at) {
-        if (i >= 0) state.sets.splice(i, 1);
+        if (i < 0) return;
+        state.sets.splice(i, 1);
         SB.snapSets.delete(r.id);
       } else {
         const s = setFromRow(r);
         if (i >= 0) state.sets[i] = s; else state.sets.push(s);
         // Record what the server holds, so this arrival is not echoed straight back.
-        SB.snapSets.set(r.id, JSON.stringify(rowCompare(r)));
+        SB.snapSets.set(r.id, sig);
       }
-      if (SB.onChange) SB.onChange('sets', r.id);
+      sbNotify('sets', r.id);
     })
     .on('postgres_changes', { event: '*', schema: 'public', table: 'state_kv' }, p => {
       const r = p.new;
       if (!r || !r.ns) return;
+      const v = JSON.stringify(r.value);
+      if (SB.snapKv.get(kvKey(r.ns, r.key)) === v) return;   // our own echo
       state[r.ns] = state[r.ns] || {};
       state[r.ns][r.key] = r.value;
-      SB.snapKv.set(kvKey(r.ns, r.key), JSON.stringify(r.value));
-      if (SB.onChange) SB.onChange('kv', r.ns);
+      SB.snapKv.set(kvKey(r.ns, r.key), v);
+      sbNotify('kv', r.ns);
     })
     .subscribe();
 }
