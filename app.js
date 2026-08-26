@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608261621';   // replaced with the deploy stamp
+const APP_BUILD = '202608261710';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -381,6 +381,7 @@ const GH_DATA_REPO = 'kennadyscott/standards-alignment';
 const GH_STATE_URL = `https://api.github.com/repos/${GH_DATA_REPO}/contents/state/appstate2.json`;
 const LS_GH_TOKEN = 'sa_gh_token';
 let ghMode = false;
+let sbMode = false;   // Supabase: per-row writes and live updates
 let ghToken = localStorage.getItem(LS_GH_TOKEN) || '';
 let ghSha = null;
 
@@ -566,9 +567,68 @@ function tokenRefused() {
   return syncTrouble && /\b40[13]\b|no repo access|Bad credentials/i.test(syncError || '');
 }
 
+/* Sign-in. Replaces pasting a GitHub token that expired every 30 days and took the
+   whole team offline on the same afternoon. A magic link is sent to the address; the
+   session then refreshes itself and survives reloads. */
+function renderSignIn() {
+  if (document.getElementById('signInOverlay')) return;
+  const ov = el(`<div class="modal-backdrop" id="signInOverlay">
+    <div class="signin-card">
+      <div class="signin-title">Standards Alignment</div>
+      <p class="signin-sub">Sign in with the email and password Kennady set up for you.</p>
+      <input type="email" id="signInEmail" class="ps-input" placeholder="you@cleark12.com"
+             autocomplete="username" spellcheck="false">
+      <input type="password" id="signInPass" class="ps-input" placeholder="Password"
+             autocomplete="current-password">
+      <button class="btn btn-primary" id="signInBtn">Sign in</button>
+      <div class="signin-msg" id="signInMsg"></div>
+    </div>
+  </div>`);
+  document.body.appendChild(ov);
+  const go = async () => {
+    const email = document.getElementById('signInEmail').value.trim();
+    const pass = document.getElementById('signInPass').value;
+    const msg = document.getElementById('signInMsg');
+    if (!email || email.indexOf('@') < 0) { msg.textContent = 'Enter your email address.'; msg.className = 'signin-msg bad'; return; }
+    if (!pass) { msg.textContent = 'Enter your password.'; msg.className = 'signin-msg bad'; return; }
+    const btn = document.getElementById('signInBtn');
+    btn.disabled = true; btn.textContent = 'Signing in…';
+    const { error } = await sbSignIn(email, pass);
+    btn.disabled = false; btn.textContent = 'Sign in';
+    if (!error) {
+      const ov = document.getElementById('signInOverlay');
+      if (ov) ov.remove();
+      msg.textContent = '';
+      loadPersisted().then(() => { pruneOrphanDecisions(); mergeImportedDrafts(); renderAll(); });
+      return;
+    }
+    // Supabase says "Invalid login credentials" for a wrong password AND for an address
+    // that has no account at all. Say both, rather than send someone hunting for a typo
+    // in a password they were never given.
+    msg.textContent = /invalid login/i.test(error)
+      ? 'Wrong password — or there is no account for that address yet. Ask Kennady.'
+      : error;
+    msg.className = 'signin-msg bad';
+  };
+  document.getElementById('signInBtn').addEventListener('click', go);
+  ['signInEmail', 'signInPass'].forEach(id => {
+    document.getElementById(id).addEventListener('keydown', e => { if (e.key === 'Enter') go(); });
+  });
+  document.getElementById('signInEmail').focus();
+}
+
 function updateSaveBadge() {
   const b = document.getElementById('saveBadge');
   if (!b) return;
+  if (sbMode) {
+    b.classList.remove('hidden');
+    if (!SB.user) { b.textContent = 'Sign in'; b.className = 'btn btn-ghost badge-warn'; return; }
+    b.textContent = syncTrouble ? '⚠ ' + (syncError || 'save problem')
+                                : '● ' + SB.user.email;
+    b.className = 'btn btn-ghost ' + (syncTrouble ? 'badge-warn' : 'badge-ok');
+    b.title = syncTrouble ? syncError : 'Saving live. Click to sign out.';
+    return;
+  }
   if (!ghMode) { b.classList.add('hidden'); return; }
   b.classList.remove('hidden');
   // Honest status: green only when a pull has actually SUCCEEDED — a token alone
@@ -651,12 +711,26 @@ async function syncFromServer() {
   updateSaveBadge();
   return ok;
 }
-setInterval(syncFromServer, 60000);
+setInterval(() => { if (!sbMode) syncFromServer(); }, 60000);
 window.addEventListener('focus', syncFromServer);
 
 let syncTimer;
 let serverAvailable = false;
 function postState(onDone) {
+  if (sbMode) {
+    sbSaveDirty(state).then(r => {
+      if (r.error) {
+        syncTrouble = true; syncError = r.error;
+        toast('⚠ Save failed: ' + r.error);
+        if (onDone) onDone(false);
+      } else {
+        dirtyLocal = false; lastSyncAt = new Date(); syncTrouble = false; syncError = '';
+        if (onDone) onDone(true);
+      }
+      updateSaveBadge();
+    });
+    return;
+  }
   if (ghMode) {
     if (!ghToken) { if (onDone) onDone(false); return; }
     ghSaveSerialized()
@@ -677,7 +751,7 @@ function pushState() {
   // GitHub saves merge-before-write, so they're safe even before the first pull lands.
   // Only the raw /api/state path (dev server) must wait for the connection — it would
   // otherwise overwrite the server with a not-yet-merged local state.
-  if (ghMode ? !ghToken : !serverAvailable) return;
+  if (sbMode ? !SB.user : ghMode ? !ghToken : !serverAvailable) return;
   clearTimeout(syncTimer);
   // Batched (every save is a versioned commit on the live server). The jitter spreads
   // teammates' save moments apart — five browsers on a fixed delay collide far more.
@@ -708,6 +782,29 @@ async function loadPersisted() {
       s = (await r.json()) || {};
     }
   } catch { /* no same-origin API — static hosting */ }
+  // Supabase: per-row persistence. Preferred over every other path when configured.
+  if (typeof SUPABASE_URL !== 'undefined' && SUPABASE_URL) {
+    sbMode = true;
+    await sbCurrentUser();
+    updateSaveBadge();
+    if (!SB.user) { renderSignIn(); return; }   // nothing loads until you are signed in
+    try {
+      const { sets, maps } = await sbLoadAll();
+      state.sets = sets;
+      KV_MAPS.forEach(ns => { state[ns] = maps[ns] || {}; });
+      serverAvailable = true;
+      lastSyncAt = new Date();
+      syncTrouble = false;
+      sbSubscribe(state, () => { normalizeSets(); renderAll(); });
+    } catch (e) {
+      syncTrouble = true;
+      syncError = String((e && e.message) || e);
+      toast('⚠ Could not load: ' + syncError);
+    }
+    updateSaveBadge();
+    normalizeSets();
+    return;
+  }
   if (s === null) {
     // Static hosting (GitHub Pages): talk to GitHub directly.
     ghMode = true;
@@ -4717,6 +4814,13 @@ function init() {
   });
 
   document.getElementById('saveBadge').addEventListener('click', async (ev) => {
+    if (sbMode) {
+      if (!SB.user) { renderSignIn(); return; }
+      if (!confirm('Sign out of ' + SB.user.email + '?')) return;
+      await sbSignOut();
+      location.reload();
+      return;
+    }
     if (ghToken && !ev.shiftKey && !tokenRefused()) {
       toast('↻ Syncing…');
       const ok = await syncFromServer();

@@ -967,3 +967,16 @@ body {
   background: var(--accent); color: #fff;
   font-size: 11.5px; font-weight: 600; letter-spacing: .01em;
 }
+
+/* Sign-in. Replaces the pasted GitHub token. */
+.signin-card {
+  background: var(--panel); border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 28px; width: min(420px, 92vw); display: flex; flex-direction: column; gap: 12px;
+}
+.signin-title { font-size: 19px; font-weight: 700; color: var(--ink); }
+.signin-sub { font-size: 13px; color: var(--ink-soft); line-height: 1.5; }
+.signin-msg { font-size: 12.5px; min-height: 18px; }
+.signin-msg.good { color: var(--green); }
+.signin-msg.bad { color: var(--red); }
+.badge-ok { color: var(--green); border-color: var(--green); }
+.badge-warn { color: var(--amber); border-color: var(--amber); }
