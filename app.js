@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608261604';   // replaced with the deploy stamp
+const APP_BUILD = '202608261608';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3849,6 +3849,7 @@ function renderInputDetail(row, st, grade) {
         <button class="act-btn approve" data-buildpeer="1" ${building ? 'disabled' : ''}>
           ${building ? '⏳ Generating…' : hasPeerContent ? '⚡ Rebuild with AI' : '⚡ Build with AI'}</button>
       </div>
+      ${botNoteHtml(STAGE_BOTS.peer)}
       ${s.peerDraft ? `
         <div class="ps-field" style="margin-bottom:12px">
           <label>Student draft — the flawed response students revise</label>
@@ -4109,6 +4110,9 @@ function renderInput() {
 
   const box = document.getElementById('inputList');
   box.innerHTML = '';
+  // Whose queue this is. Only on the stage's own tab — on "All to-dos" the rows are
+  // mixed, so a single owner would be wrong.
+  if (STAGE_BOTS[state.ui.inStage]) box.appendChild(el(botNoteHtml(STAGE_BOTS[state.ui.inStage])));
   if (!rows.length) {
     box.appendChild(el(`<div class="review-empty">
       No passages serve ${STATE_NAMES[st]} Grade ${grade} yet.<br>
@@ -4163,6 +4167,18 @@ function renderInput() {
      2b. Needs Peer Task      — Georgia only: author the peer revision task
      3. To Be Entered         — tag the ECR set in CMS
      4. Entered in CMS        — done; leaves the working queue, lives under its own filter. */
+/* Which Grokbot owns each hand-off. Named per Kennady 2026-08-26 so the team can see
+   at a glance who fills a queue before a person touches it. */
+const STAGE_BOTS = {
+  approval:  { bot: 'Adam',    does: 'confirms these alignments' },
+  standards: { bot: 'Stanley', does: "tags each question's standard" },
+  peer:      { bot: 'Georgia', does: 'develops the Peer Revision task' },
+};
+const DASH_BOT = { bot: 'Herman', does: 'fills in passage sets' };
+function botNoteHtml(entry) {
+  return `<div class="bot-note"><span class="bot-badge">Grokbot ${esc(entry.bot)}</span>${esc(entry.does)}</div>`;
+}
+
 function inputStages(st) {
   const stages = [
     { key: 'approval', label: 'Needs Approval', short: 'need approval', hint: 'confirm the alignment' },
@@ -4558,6 +4574,7 @@ function renderDash() {
   const wrap = document.getElementById('dashWrap');
   if (!wrap) return;
   wrap.innerHTML = '';
+  wrap.appendChild(el(botNoteHtml(DASH_BOT)));
   if (!state.sets.length) {
     wrap.appendChild(el(`<div class="review-empty">No passage sets yet.</div>`));
     return;
