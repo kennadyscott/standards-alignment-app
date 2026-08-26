@@ -4,7 +4,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.1",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Oral Language",
     "description": "Participate in conversations and discussions with groups and peers utilizing agreed-upon rules."
   },
   {
@@ -12,7 +12,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.10",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Phonics",
     "description": "Apply knowledge of phoneme-grapheme correspondences, multisyllabic word construction, and syllable division principles to decode and encode (spell) words accurately in isolation and in context.",
     "elements": [
       "2.LF.10.a Decode multisyllabic words with common syllable patterns, including open/closed, vowel-r, vowel-consonant-e, vowel teams, consonant-le, and schwa syllables.",
@@ -37,7 +37,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.11",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Fluency",
     "description": "Apply previously-taught phoneme-grapheme correspondences to multisyllabic words with accuracy and automaticity, in and out of context."
   },
   {
@@ -45,7 +45,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.12",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Fluency",
     "description": "Read and reread grade-appropriate text accurately, automatically, and with meaningful expression at a rate which supports comprehension."
   },
   {
@@ -53,7 +53,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.13",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Fluency",
     "description": "Read grade-appropriate poetry, noticing phrasing, rhythm, and rhyme."
   },
   {
@@ -61,7 +61,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.14",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Fluency",
     "description": "Read high-frequency words commonly found in grade-appropriate text."
   },
   {
@@ -69,7 +69,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.15",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Vocabulary",
     "description": "Utilize new academic, content-specific, grade-level vocabulary, making connections to previously learned words and relating new words to background knowledge.",
     "elements": [
       "2.LF.15.a Make connections to a word's structure using knowledge of phonology, morphology, and orthography of the word to aid learning."
@@ -80,7 +80,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.16",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Vocabulary",
     "description": "Describe word relationships and nuances in word meanings, including relating them to their opposites and distinguishing shades of meaning in similar or related words.",
     "elements": [
       "2.LF.16.a Use knowledge of antonyms and synonyms.",
@@ -94,7 +94,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.17",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Vocabulary",
     "description": "Analyze meaningful parts of words and phrases in discussions and/or text.",
     "elements": [
       "2.LF.17.a Identify possessives and plurals and use them as clues to the meaning of text.",
@@ -106,7 +106,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.18",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Vocabulary",
     "description": "Use dictionary definitions and information found within the text to help determine meaning of unfamiliar or multi-meaning words."
   },
   {
@@ -114,7 +114,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.19",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Vocabulary",
     "description": "Identify new vocabulary and the use of word meanings in text to establish real-life connections."
   },
   {
@@ -122,7 +122,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.2",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Oral Language",
     "description": "Present information orally using complete sentences, appropriate volume, and clear pronunciation.",
     "elements": [
       "2.LF.2.a Use oral language for different purposes: to inform, to entertain, to persuade, to clarify, and to respond.",
@@ -135,7 +135,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.20",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Vocabulary",
     "description": "Use grade-level academic and domain-specific vocabulary to gain meaning from text."
   },
   {
@@ -143,7 +143,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.21",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Vocabulary",
     "description": "Use grade-level academic and domain-specific vocabulary in writing."
   },
   {
@@ -151,7 +151,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.22",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Use content knowledge built during read-alouds and independent reading of informational and literary texts by participating in content-specific discussions with peers and/or through writing."
   },
   {
@@ -159,7 +159,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.23",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Identify the main story elements in a literary text.",
     "elements": [
       "2.LF.23.a Explain the plot of a narrative, using textual evidence to list the major events in sequence.",
@@ -174,7 +174,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.24",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Identify the main idea and supporting details of literary and informational texts.",
     "elements": [
       "2.LF.24.a Explain how the supporting details contribute to the main idea.",
@@ -186,7 +186,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.25",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Identify and use various text features to locate ideas, facts, or supporting details in both written and digital formats.",
     "elements": [
       "2.LF.25.a Identify and locate captions, bold print, subheadings, indexes, graphs, maps, glossaries, and illustrations.",
@@ -198,7 +198,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.26",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Compare and contrast important details presented by two texts on the same topic or theme.",
     "elements": [
       "2.LF.26.a Compare and contrast different versions of the same story by different authors, from different cultures, or from different points of view.",
@@ -210,7 +210,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.27",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Identify the text structures within literary and informational texts, including cause and effect, problem and solution, and sequence of events."
   },
   {
@@ -218,7 +218,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.28",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Establish a purpose before reading literary and informational texts to enhance comprehension."
   },
   {
@@ -226,7 +226,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.29",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "With prompting and support, identify and interpret various cohesive devices that help link words and sentences to one another within the text as a scaffold to help build comprehension at the sentence and paragraph level."
   },
   {
@@ -234,7 +234,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.3",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Oral Language",
     "description": "Demonstrate oral literacy skills by participating in a variety of oral language activities."
   },
   {
@@ -242,7 +242,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.30",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Read and comprehend literary and informational texts.",
     "elements": [
       "2.LF.30.a State and confirm predictions about a text.",
@@ -255,7 +255,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.31",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Use information from a text to determine the author's purpose in different forms of informational and literary texts."
   },
   {
@@ -263,7 +263,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.32",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Identify rhyme schemes in poems or songs."
   },
   {
@@ -271,7 +271,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.33",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Read and identify types of poems, including free verse, rhymed verse, haiku, and limerick."
   },
   {
@@ -279,7 +279,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.34",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Differentiate between fact and opinion in a text.",
     "elements": [
       "2.LF.34.a Use prior knowledge and information gathered from research to evaluate opinions in texts.",
@@ -291,7 +291,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.35",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Demonstrate listening skills and build background knowledge by asking and answering questions about texts read aloud."
   },
   {
@@ -299,7 +299,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.36",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Manipulate words and/or phrases to create simple and compound sentences, including coordinating conjunctions for, and, nor, but, or, yet, and so, to help build syntactic awareness and comprehension at the sentence level."
   },
   {
@@ -307,7 +307,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.37",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Write legibly.",
     "elements": [
       "2.LF.37.a Write words and sentences fluently using correctly-formed manuscript letters with appropriate size and spacing.",
@@ -320,7 +320,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.38",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Apply knowledge of grade-appropriate phoneme-grapheme correspondences, multisyllabic word construction, syllable division principles, and spelling rules (or generalizations) to encode words accurately.",
     "elements": [
       "2.LF.38.a Encode grade-appropriate multisyllabic words using knowledge of syllable types, including open, closed, vowel-consonant-e, vowel teams, vowel-r, and consonant-le.",
@@ -347,7 +347,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.39",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Organize a list of words into alphabetical order according to first, second, and third letters."
   },
   {
@@ -355,7 +355,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.4",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Oral Language",
     "description": "Orally answer who, what, when, where, why, and how questions about a text or conversation, using complete sentences to provide key ideas and details."
   },
   {
@@ -363,7 +363,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.40",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Write a personal or fictional narrative using a logical sequence of events, including details to describe actions, thoughts, and feelings and providing a sense of closure."
   },
   {
@@ -371,7 +371,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.41",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Write informative or explanatory texts, introducing the topic, providing facts and relevant details to develop points, and providing a conclusion."
   },
   {
@@ -379,7 +379,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.42",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Write an opinion piece about a topic or text with details to support the opinion, using transitional words and providing a sense of closure."
   },
   {
@@ -387,7 +387,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.43",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Write complete sentences demonstrating knowledge of punctuation conventions.",
     "elements": [
       "2.LF.43.a Utilize commas with words in a series in a sentence.",
@@ -401,7 +401,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.44",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "With prompting and support, compose and develop a well-organized paragraph with a topic sentence, details to support, and a concluding sentence."
   },
   {
@@ -409,7 +409,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.45",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Demonstrate understanding of standard English language conventions when writing.",
     "elements": [
       "2.LF.45.a Identify the role of a noun, verb, adjective, and adverb within a sentence and explain the type of the information it conveys.",
@@ -425,7 +425,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.46",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Gather and use research to answer questions to complete a research product.",
     "elements": [
       "2.LF.46.a Create topics of interest for a research project.",
@@ -439,7 +439,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.5",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Oral Language",
     "description": "Create recordings of stories or poems."
   },
   {
@@ -447,7 +447,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.6",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Oral Language",
     "description": "Use visual aids and technology in oral presentations to present key ideas and details about a text or conversation, and add drawings or other visual displays to stories or recounts of experiences when appropriate to clarify thoughts, feelings, and ideas."
   },
   {
@@ -455,7 +455,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.7",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Oral Language",
     "description": "Demonstrate standard English usage when speaking.",
     "elements": [
       "2.LF.7.a Use collective nouns.",
@@ -471,7 +471,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.8",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Phonological Awareness/Phonemic Awareness",
     "description": "Apply knowledge of voiced and unvoiced sounds and manner of articulation to distinguish between commonly-confused vowel sounds and commonly-confused cognate consonant sounds."
   },
   {
@@ -479,7 +479,7 @@
     "subject": "ela",
     "grade": "2",
     "code": "2.LF.9",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Phonological Awareness/Phonemic Awareness",
     "description": "Demonstrate advanced phonemic awareness skills in spoken words.",
     "elements": [
       "2.LF.9.a Add, delete, and substitute phonemes at the beginning, end, or middle of a spoken word made up of up to six phonemes and produce the resulting word.",
@@ -534,7 +534,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.1",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Oral Language",
     "description": "Contribute meaningful ideas to discussions with groups and peers utilizing agreed upon rules.",
     "elements": [
       "3.LF.1.a Elaborate on responses in conversations and discussions."
@@ -545,7 +545,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.10",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Fluency",
     "description": "Read and reread grade-appropriate text accurately, automatically, and with meaningful expression at a rate which supports comprehension."
   },
   {
@@ -553,7 +553,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.11",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Fluency",
     "description": "Read and reread grade-appropriate poetry, practicing phrasing, rhythm, rhyme, and meaningful expression."
   },
   {
@@ -561,7 +561,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.12",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Fluency",
     "description": "Read high-frequency words commonly found in grade-appropriate text accurately and automatically."
   },
   {
@@ -569,7 +569,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.13",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Vocabulary",
     "description": "Utilize new academic, content-specific, grade-level vocabulary to make connections to previously learned words and relate new words to background knowledge.",
     "elements": [
       "3.LF.13.a Make connections to a word's structure using knowledge of phonology, morphology, and orthography of the word to aid learning."
@@ -580,7 +580,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.14",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Vocabulary",
     "description": "Describe word relationships and nuances in word meanings, including relating them to their opposites and distinguishing shades of meaning in similar or related words, including nouns, verbs, and adjectives.",
     "elements": [
       "3.LF.14.a Determine meaning of words using synonyms in context.",
@@ -596,7 +596,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.15",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Vocabulary",
     "description": "Analyze meaningful parts (morphemes) of words and phrases in discussions and/or text.",
     "elements": [
       "3.LF.15.a Identify meaningful parts of words (morphemes) and use them as clues to the meaning of unfamiliar words, including base words, roots, and frequently occurring affixes and inflections.",
@@ -611,7 +611,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.16",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Vocabulary",
     "description": "Use knowledge of grade-level academic and domain-specific vocabulary to gain meaning from text."
   },
   {
@@ -619,7 +619,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.17",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Vocabulary",
     "description": "Use grade-level academic and domain-specific vocabulary in writing."
   },
   {
@@ -627,7 +627,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.18",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Demonstrate content knowledge built during independent reading of informational and literary texts by participating in content-specific discussions with peers and/or through writing."
   },
   {
@@ -635,7 +635,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.19",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Determine the explicit or implied main idea and supporting details of a text.",
     "elements": [
       "3.LF.19.a Explain how supporting details contribute to the main idea, using textual evidence.",
@@ -647,7 +647,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.2",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Oral Language",
     "description": "Present information orally using complex sentence structures, appropriate volume, and clear pronunciation.",
     "elements": [
       "3.LF.2.a Use oral language for different purposes: to inform, to entertain, to persuade, to clarify, and to respond."
@@ -658,7 +658,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.20",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Establish a purpose before reading literary and informational texts to enhance comprehension, including identifying background knowledge and generating questions about the topic or characters."
   },
   {
@@ -666,7 +666,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.21",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Identify and interpret various cohesive devices that link words and sentences to one another within the text."
   },
   {
@@ -674,7 +674,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.22",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Describe literary elements within a story, including setting, plot, characters, and themes.",
     "elements": [
       "3.LF.22.a Describe in detail the characters' behavior, emotions, and traits and explain how their actions influence events in the story.",
@@ -688,7 +688,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.23",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Identify and use text features in informational passages to locate information.",
     "elements": [
       "3.LF.23.a Explain how text features support details in the text.",
@@ -701,7 +701,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.24",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Identify the text structures within literary and informational texts.",
     "elements": [
       "3.LF.24.a Explain how the structures, including comparison and contrast, sequence of events, problem and solution, and cause and effect, contribute to the meaning of the text, using textual evidence."
@@ -712,7 +712,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.25",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Identify statements in informational texts as facts or opinions.",
     "elements": [
       "3.LF.25.a Use prior knowledge and/or details from the text to distinguish fact from opinion.",
@@ -724,7 +724,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.26",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Use text comparisons (text to text, text to self, and text to world) to make meaning.",
     "elements": [
       "3.LF.26.a Use prior knowledge to determine similarities between texts they are reading and texts they have previously read.",
@@ -736,7 +736,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.27",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Read prose, poetry, and dramas, identifying the literary devices used by the author to convey meaning."
   },
   {
@@ -744,7 +744,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.28",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Identify the narration of a literary text as first person or third person."
   },
   {
@@ -752,7 +752,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.29",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Determine the main idea of a text read aloud or information presented in an audible format."
   },
   {
@@ -760,7 +760,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.3",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Oral Language",
     "description": "Apply oral literacy skills by participating in a variety of oral language activities."
   },
   {
@@ -768,7 +768,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.30",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Comprehension",
     "description": "Manipulate words and/or phrases to create compound sentences, including coordinating conjunctions for, and, nor, but, or, yet, or so, and complex sentences to help build syntactic awareness and comprehension at the sentence level."
   },
   {
@@ -776,7 +776,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.31",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Write legibly in cursive with connected, correctly-formed letters and appropriate spacing between words."
   },
   {
@@ -784,7 +784,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.32",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Apply knowledge of grade-appropriate phoneme-grapheme correspondences, multisyllabic word construction, syllable division rules, and spelling rules (or generalizations) to encode words accurately.",
     "elements": [
       "3.LF.32.a Apply knowledge of multisyllabic word construction and syllable division principles to encode multisyllabic words.",
@@ -799,7 +799,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.33",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Write personal or fictional narratives with a logical plot (sequence of events), characters, transitions, and a sense of closure."
   },
   {
@@ -807,7 +807,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.34",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Write informative or explanatory texts about a topic using sources, including an introduction, facts, relevant details with elaboration, and a conclusion."
   },
   {
@@ -815,7 +815,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.35",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Write an argument to convince the reader to take an action or adopt a position, using an introduction, logical reasoning supported by evidence from various sources, and a conclusion."
   },
   {
@@ -823,7 +823,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.36",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Demonstrate knowledge of the rules of standard English grammar including punctuation, capitalization, sentence formation, and spelling appropriate for third grade.",
     "elements": [
       "3.LF.36.a Use articles a, an, and the correctly.",
@@ -837,7 +837,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.37",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Compose simple, compound, and complex sentences with correct subject-verb agreement.",
     "elements": [
       "3.LF.37.a Identify and correct sentence fragments and run-on sentences.",
@@ -849,7 +849,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.38",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Compose and develop a well-organized paragraph with a topic sentence, details to support, and a concluding sentence."
   },
   {
@@ -857,7 +857,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.39",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Gather and evaluate information about a topic from a variety of sources, including digital sources, and utilize it to create a project, report, or presentation.",
     "elements": [
       "3.LF.39.a Avoid plagiarism by using their own words and utilizing digital sources ethically."
@@ -868,7 +868,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.4",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Oral Language",
     "description": "Ask and answer questions using complete sentences and grade-level vocabulary."
   },
   {
@@ -876,7 +876,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.40",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Use grade-level and domain-appropriate vocabulary in writing.",
     "elements": [
       "3.LF.40.a Use specific vocabulary to develop a story.",
@@ -888,7 +888,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.41",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Use words and phrases in writing for effect and elaboration.",
     "elements": [
       "3.LF.41.a Use transition words and phrases for sentence variety."
@@ -899,7 +899,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.42",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Writing",
     "description": "Write poetry or prose in response to visual images to interpret their meanings."
   },
   {
@@ -907,7 +907,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.5",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Oral Language",
     "description": "Express ideas, opinions, and feelings orally in a logical sequence clearly, accurately, and precisely, using appropriate volume, clear pronunciation, and standard English grammar."
   },
   {
@@ -915,7 +915,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.6",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Oral Language",
     "description": "Use digital tools to enhance oral presentations, working collaboratively."
   },
   {
@@ -923,7 +923,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.7",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Phonological Awareness/Phonemic Awareness",
     "description": "Demonstrate advanced phonemic awareness skills in spoken words.",
     "elements": [
       "3.LF.7.a Delete phonemes in initial and final blends of a spoken word.",
@@ -938,7 +938,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.8",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Phonics",
     "description": "Apply knowledge of phoneme-grapheme correspondences, multisyllabic word construction, and syllable division principles to decode and encode (spell) words accurately in isolation and in context.",
     "elements": [
       "3.LF.8.a Decode multisyllabic words with common syllable patterns, including open/closed, vowel-r, vowel-consonant-e, vowel teams, consonant-le, and odd or schwa syllables.",
@@ -958,7 +958,7 @@
     "subject": "ela",
     "grade": "3",
     "code": "3.LF.9",
-    "strand": "Literacy Foundations K-3",
+    "strand": "Fluency",
     "description": "Apply previously-taught phoneme-grapheme correspondences to multisyllabic words with accuracy and automaticity, in and out of context."
   },
   {
@@ -966,7 +966,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.1",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Phonics",
     "description": "Apply knowledge of grade-appropriate phoneme-grapheme correspondences, syllable types, and morphological structure to read unfamiliar multisyllabic words accurately, both in context and in isolation."
   },
   {
@@ -974,7 +974,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.10",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Vocabulary",
     "description": "Interpret words and phrases, including figurative language, as they are used in a text.",
     "elements": [
       "4.LF.10.a Explain how specific word choices shape meaning or tone.",
@@ -987,7 +987,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.11",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Vocabulary",
     "description": "Use commonly misused words correctly in writing."
   },
   {
@@ -995,7 +995,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.12",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Vocabulary",
     "description": "Consult reference materials to find the pronunciation of unknown words and phrases."
   },
   {
@@ -1003,7 +1003,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.13",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Vocabulary",
     "description": "Use grade-appropriate general academic and domain-specific words and phrases in presentations and discussions."
   },
   {
@@ -1011,7 +1011,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.14",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Demonstrate comprehension of literary and informational text by utilizing its content when discussing or writing in response to the text."
   },
   {
@@ -1019,7 +1019,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.15",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Analyze in depth a character, setting, or event in a story or drama, drawing on specific details in the text.",
     "elements": [
       "4.LF.15.a Identify and explain attitudes and influences of multiple characters within a text.",
@@ -1032,7 +1032,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.16",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Describe how authors use literary devices and text features to convey meaning in prose, poetry, and drama.",
     "elements": [
       "4.LF.16.a Identify clues in the text to recognize implicit meanings.",
@@ -1045,7 +1045,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.17",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Identify the narrator's point of view in a literary text and explain how it differs from a character's perspective.",
     "elements": [
       "4.LF.17.a Explain the difference between first person and third person narration, including omniscient and third person limited.",
@@ -1057,7 +1057,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.18",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Identify the point of view in a narrative and describe how the narrative would be different if told from the perspective of a different character or narrator.",
     "elements": [
       "4.LF.18.a Compare and contrast firsthand and secondhand accounts of the same event or topic, describing the differences in focus and the information provided.",
@@ -1069,7 +1069,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.19",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Compare and contrast the treatment of similar themes in stories, myths, and traditional literature from different cultures.",
     "elements": [
       "4.LF.19.a Determine and state an implied theme, explicit theme, or life lesson from a myth, story, or other traditional literature.",
@@ -1081,7 +1081,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.2",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Phonics",
     "description": "Determine and use the correct syllable type(s) to decode unfamiliar multisyllabic words, including open, closed, vowel-consonant-e, r-controlled, vowel team (including diphthongs), consonant-le, and \"leftovers\" including odd and schwa syllables."
   },
   {
@@ -1089,7 +1089,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.20",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Use details and examples from a text to indicate what the text explicitly states.",
     "elements": [
       "4.LF.20.a Interpret facts from an informational article, using details and examples from the text to explain the interpretation.",
@@ -1103,7 +1103,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.21",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Explain how relevant details support the implied or explicit main idea of a text.",
     "elements": [
       "4.LF.21.a Determine the central idea or theme of a text.",
@@ -1116,7 +1116,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.22",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Analyze events, procedures, ideas, or concepts in informational texts, including what happened and why, based on specific information in the text.",
     "elements": [
       "4.LF.22.a Cite evidence to explain the author's perspective toward a topic in an informational text."
@@ -1127,7 +1127,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.23",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Evaluate how text features and structures contribute to the meaning of an informational text.",
     "elements": [
       "4.LF.23.a Identify and describe the structures within a text, including description, comparison and contrast, sequence, problem and solution, and cause and effect.",
@@ -1139,7 +1139,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.24",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Explain how an author uses reasons and evidence to support particular points and claims in an informational text or argument.",
     "elements": [
       "4.LF.24.a Make text-based inferences to determine possible reasons for an author's stance."
@@ -1150,7 +1150,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.25",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Explain how the form of a poem contributes to its meaning."
   },
   {
@@ -1158,7 +1158,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.26",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Analyze how rhythm and rhyme in poetry contribute to meaning."
   },
   {
@@ -1166,7 +1166,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.27",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Identify the reasons and evidence a speaker provides to support particular points."
   },
   {
@@ -1174,7 +1174,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.28",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Write clear and coherent responses to texts, using explicit or implicit evidence that supports a particular point."
   },
   {
@@ -1182,7 +1182,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.29",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Add audio recordings to presentations, when appropriate, to enhance the development of main ideas or themes."
   },
   {
@@ -1190,7 +1190,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.3",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Phonics",
     "description": "Apply knowledge of roots, prefixes, and suffixes to decode unfamiliar multisyllabic words."
   },
   {
@@ -1198,7 +1198,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.30",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Synthesize information on a topic in order to write or speak knowledgeably about the subject.",
     "elements": [
       "4.LF.30.a Make complex inferences within and across texts to determine the importance of information.",
@@ -1210,7 +1210,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.31",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Orally paraphrase portions of a text or information presented in diverse media when collaborating and/or presenting."
   },
   {
@@ -1218,7 +1218,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.32",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Respond in writing to literature and informational text, including stories, dramas, poetry, and cross-curricular texts, both independently and with support, demonstrating grade-level proficiency."
   },
   {
@@ -1226,7 +1226,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.33",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Use research to produce clear and coherent writing in which the development and organization are appropriate to task, purpose, and audience.",
     "elements": [
       "4.LF.33.a Introduce a research topic clearly and group related ideas.",
@@ -1239,7 +1239,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.34",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Write fluently and legibly in cursive, using correctly formed letters with appropriate spacing."
   },
   {
@@ -1247,7 +1247,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.35",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Write personal or fictional narratives using a logical plot, transitional words and phrases, sensory details, and dialogue, and providing a sense of closure."
   },
   {
@@ -1255,7 +1255,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.36",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Write informative or explanatory text about a topic using sources, incorporating academic vocabulary, and including an introduction, facts, details with elaboration, and a conclusion."
   },
   {
@@ -1263,7 +1263,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.37",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Write an argument to persuade the reader to take an action or adopt a position, using an introduction, logical reasoning supported by evidence from relevant sources, and linking words to connect their argument to the evidence."
   },
   {
@@ -1271,7 +1271,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.38",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Compose complete sentences with correct subject-verb agreement, punctuation, and usage.",
     "elements": [
       "4.LF.38.a Order adjectives within sentences according to conventional patterns.",
@@ -1287,7 +1287,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.39",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Demonstrate command of the conventions of standard English grammar and usage.",
     "elements": [
       "4.LF.39.a Use relative pronouns who, whose, which, and that, relative adverbs where, when, and how, and irregular possessive nouns.",
@@ -1300,7 +1300,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.4",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Phonics",
     "description": "Apply knowledge of roots, prefixes, and suffixes to encode unfamiliar multisyllabic words."
   },
   {
@@ -1308,7 +1308,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.40",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Compose friendly and formal letters using appropriate elements, including date, greeting, body, and a signature.",
     "elements": [
       "4.LF.40.a Write return address and mailing address in the proper locations on an envelope."
@@ -1319,7 +1319,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.41",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Present an opinion orally, sequencing ideas logically and using relevant facts.",
     "elements": [
       "4.LF.41.a Express appropriate and meaningful responses to questions posed by others."
@@ -1330,7 +1330,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.42",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Report on a topic or text, tell a story, or recount an experience in an organized manner, using appropriate facts and relevant, descriptive details to support main ideas or themes, and speaking clearly with adequate volume, appropriate pacing, and clear pronunciation.",
     "elements": [
       "4.LF.42.a Articulate ideas, claims, and perspectives in a logical sequence, presenting information, findings, and credible evidence from multiple sources and modalities to enhance listeners' understanding."
@@ -1341,7 +1341,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.5",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Fluency",
     "description": "Demonstrate fluency when reading grade-level text and when responding through writing or speaking."
   },
   {
@@ -1349,7 +1349,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.6",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Fluency",
     "description": "Read grade-level text orally with appropriate pauses, phrasing, stress, intonation, rate, and integration to support comprehension."
   },
   {
@@ -1357,7 +1357,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.7",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Fluency",
     "description": "Read words with irregular and regular spelling patterns accurately and automatically."
   },
   {
@@ -1365,7 +1365,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.8",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Fluency",
     "description": "Write routinely and independently in response to text."
   },
   {
@@ -1373,7 +1373,7 @@
     "subject": "ela",
     "grade": "4",
     "code": "4.LF.9",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Vocabulary",
     "description": "Accurately interpret general academic and domain-specific words and phrases."
   },
   {
@@ -1429,7 +1429,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.1",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Phonics",
     "description": "Apply phonics and word analysis skills to encode and decode words in grade-level texts."
   },
   {
@@ -1437,7 +1437,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.10",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Fluency",
     "description": "Respond directly to specific information shared by others in classroom discussion, using facts to support the ideas being discussed.",
     "elements": [
       "5.LF.10.a Review the key ideas expressed and draw conclusions in light of information and knowledge gained from discussion."
@@ -1448,7 +1448,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.11",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Vocabulary",
     "description": "Acquire and use grade-level vocabulary, clarifying the meaning of unknown and multiple-meaning words and phrases in text, choosing flexibly from a range of strategies."
   },
   {
@@ -1456,7 +1456,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.12",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Vocabulary",
     "description": "Interpret the meaning of words, phrases, and patterns as they are used in texts, including domain-specific and academic vocabulary and figurative language.",
     "elements": [
       "5.LF.12.a Locate similes, metaphors, personification, hyperbole, imagery, alliteration, onomatopoeia, and idioms and interpret their meanings in context.",
@@ -1471,7 +1471,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.13",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Vocabulary",
     "description": "Determine or clarify the meaning of unknown and multiple-meaning words and phrases."
   },
   {
@@ -1479,7 +1479,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.14",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Vocabulary",
     "description": "Write using grade-appropriate general academic and domain-specific words and phrases accurately, including those that signal contrasting ideas, additional information, and other logical relationships."
   },
   {
@@ -1487,7 +1487,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.15",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Vocabulary",
     "description": "Use grade-appropriate general academic and domain-specific words and phrases during presentations and discussion."
   },
   {
@@ -1495,7 +1495,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.16",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Demonstrate comprehension of varied literary and informational texts by utilizing its content when discussing or writing in response to the text."
   },
   {
@@ -1503,7 +1503,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.17",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Demonstrate comprehension of text by asking and responding to questions about literary elements used in the text."
   },
   {
@@ -1511,7 +1511,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.18",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Explain the relationships among events, people, or concepts in informational texts, supported by textual evidence."
   },
   {
@@ -1519,7 +1519,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.19",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Interpret how authors use literary elements throughout a text, including character, setting, conflict, dialogue, and point of view."
   },
   {
@@ -1527,7 +1527,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.2",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Phonics",
     "description": "Use combined knowledge of letter-sound correspondences, appropriate blending, syllabication patterns, morphology, and word attack skills to read unfamiliar multisyllabic, grade-level words accurately in context and in isolation."
   },
   {
@@ -1535,7 +1535,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.20",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Explain how the author's use of character types throughout a narrative helps drive its plot."
   },
   {
@@ -1543,7 +1543,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.21",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Compare and contrast characters, points of view, or events in two or more literary texts."
   },
   {
@@ -1551,7 +1551,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.22",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Determine the implied and/or explicit main idea in literary and informational texts."
   },
   {
@@ -1559,7 +1559,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.23",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Determine and analyze themes of various culturally-diverse literary texts, supporting analysis with textual evidence.",
     "elements": [
       "5.LF.23.a Analyze common themes of diverse texts with support from textual evidence.",
@@ -1571,7 +1571,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.24",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Determine and evaluate the effectiveness of digital and print text features and structures, including comparison and contrast, problem and solution, and cause and effect.",
     "elements": [
       "5.LF.24.a Identify various text features used in diverse forms of text.",
@@ -1583,7 +1583,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.25",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Determine credibility and appropriateness of a research source by distinguishing between fact and the author's opinion in informational text."
   },
   {
@@ -1591,7 +1591,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.26",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Analyze how two or more texts address similar topics in diverse media and formats, including graphics, live and/or recorded performances, and written works.",
     "elements": [
       "5.LF.26.a Explain how visual and multimedia elements contribute to the overall meaning and tone of a text.",
@@ -1606,7 +1606,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.27",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Review the key ideas expressed in a text and draw conclusions, using facts to support them."
   },
   {
@@ -1614,7 +1614,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.28",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Use audio and/or visual sources of information to obtain the answer to a question."
   },
   {
@@ -1622,7 +1622,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.29",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Summarize in writing a variety of texts, stating their implied and/or explicit main ideas.",
     "elements": [
       "5.LF.29.a Use textual evidence to support summarization.",
@@ -1634,7 +1634,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.3",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Phonics",
     "description": "Determine or clarify the meaning of unknown and multiple-meaning words and phrases, choosing flexibly from a range of strategies."
   },
   {
@@ -1642,7 +1642,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.30",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Quote literary and informational texts accurately to support conclusions and inferences drawn from them."
   },
   {
@@ -1650,7 +1650,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.31",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Comprehension",
     "description": "Include multimedia components and visual displays in presentations to enhance the development of main ideas or themes when appropriate."
   },
   {
@@ -1658,7 +1658,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.32",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Respond in writing to literature and informational text, including stories, dramas, poetry, and cross-curricular texts, independently and with grade-level proficiency."
   },
   {
@@ -1666,7 +1666,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.33",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Write fluently and legibly in cursive, using correctly formed letters with appropriate spacing and placing text elements correctly on the page."
   },
   {
@@ -1674,7 +1674,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.34",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Write personal or fictional narratives incorporating literary elements (characters, plot, setting, conflict), dialogue, strong voice, and clear event sequences."
   },
   {
@@ -1682,7 +1682,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.35",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Write informative or explanatory texts using multiple sources to examine a topic, conveying ideas and information clearly and incorporating a strong organizational structure, relevant details, and elaboration."
   },
   {
@@ -1690,7 +1690,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.36",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Write an argument to persuade the reader to take an action or adopt a position, stating a claim, supporting the claim with relevant evidence from sources, using connectives to link ideas, and presenting a strong conclusion."
   },
   {
@@ -1698,7 +1698,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.37",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Write about research findings independently over short and/or extended periods of time."
   },
   {
@@ -1706,7 +1706,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.38",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Gather information on a topic or question, and share the results through various modes of writing, including projects and presentations.",
     "elements": [
       "5.LF.38.a Locate information in print and digital sources.",
@@ -1719,7 +1719,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.39",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Demonstrate command of the conventions of standard English grammar and usage in writing.",
     "elements": [
       "5.LF.39.a Evaluate the usage of pronouns for the proper case.",
@@ -1737,7 +1737,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.4",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Phonics",
     "description": "Write familiar and unfamiliar multisyllabic, grade-level appropriate words accurately in context and in isolation."
   },
   {
@@ -1745,7 +1745,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.40",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Demonstrate command of the conventions of standard English capitalization, punctuation, and spelling when writing.",
     "elements": [
       "5.LF.40.a Use commas to separate items in a series, separate introductory elements from the rest of a sentence, set off tag questions, and indicate direct address.",
@@ -1758,7 +1758,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.41",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Write using grade-appropriate general academic and domain-specific words and phrases accurately, including those that signal contrasting ideas, additional information, and other logical relationships."
   },
   {
@@ -1766,7 +1766,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.42",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Writing",
     "description": "Consult print and digital reference materials to find the pronunciation and to determine or clarify the precise meaning of key words and phrases."
   },
   {
@@ -1774,7 +1774,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.5",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Fluency",
     "description": "Demonstrate fluency when independently reading, writing, and speaking in response to grade-level literary and informational text, including stories, dramas, poetry, and cross-curricular texts."
   },
   {
@@ -1782,7 +1782,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.6",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Fluency",
     "description": "Read grade-level text orally with accuracy, automaticity, appropriate prosody or expression, purpose, and understanding, self-correcting and rereading as necessary."
   },
   {
@@ -1790,7 +1790,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.8",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Fluency",
     "description": "Orally present information and original ideas clearly."
   },
   {
@@ -1798,7 +1798,7 @@
     "subject": "ela",
     "grade": "5",
     "code": "5.LF.9",
-    "strand": "Literacy Foundations 4-5",
+    "strand": "Fluency",
     "description": "Express ideas clearly and effectively to diverse partners or groups.",
     "elements": [
       "5.LF.9.a Pose and respond to explicit questions in ways that contribute to the discussion and elaborate on the remarks of others.",
