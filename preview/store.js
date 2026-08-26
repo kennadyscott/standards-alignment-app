@@ -59,13 +59,19 @@ async function sbAsBot(name, fn) {
 }
 
 /* ---------- auth ---------- */
-async function sbSignIn(email) {
+/* Email + password rather than a magic link. Supabase's built-in mail sender is capped
+   at roughly two messages an hour, which throttles SIGN-IN links as well as invites --
+   with a team of six that means people queueing to log in. Passwords need no mail at
+   all. Kennady creates each account in the Supabase dashboard; there is no self-signup
+   and no reset-by-email flow here, because that would depend on the same capped sender. */
+async function sbSignIn(email, password) {
   const c = sbInit();
   if (!c) return { error: SB.lastError };
-  const { error } = await c.auth.signInWithOtp({
+  const { data, error } = await c.auth.signInWithPassword({
     email: String(email || '').trim(),
-    options: { emailRedirectTo: window.location.href.split('#')[0] },
+    password: String(password || ''),
   });
+  if (!error && data && data.user) SB.user = data.user;
   return { error: error ? error.message : null };
 }
 async function sbSignOut() {

@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = 'preview-202608261653';   // replaced with the deploy stamp
+const APP_BUILD = 'preview-202608261704';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -575,35 +575,44 @@ function renderSignIn() {
   const ov = el(`<div class="modal-backdrop" id="signInOverlay">
     <div class="signin-card">
       <div class="signin-title">Standards Alignment</div>
-      <p class="signin-sub">Sign in with your work email. We send you a link — there is
-        no password to remember and nothing to paste.</p>
+      <p class="signin-sub">Sign in with the email and password Kennady set up for you.</p>
       <input type="email" id="signInEmail" class="ps-input" placeholder="you@cleark12.com"
-             autocomplete="email" spellcheck="false">
-      <button class="btn btn-primary" id="signInBtn">Email me a sign-in link</button>
+             autocomplete="username" spellcheck="false">
+      <input type="password" id="signInPass" class="ps-input" placeholder="Password"
+             autocomplete="current-password">
+      <button class="btn btn-primary" id="signInBtn">Sign in</button>
       <div class="signin-msg" id="signInMsg"></div>
     </div>
   </div>`);
   document.body.appendChild(ov);
   const go = async () => {
     const email = document.getElementById('signInEmail').value.trim();
+    const pass = document.getElementById('signInPass').value;
     const msg = document.getElementById('signInMsg');
-    if (!email || email.indexOf('@') < 0) { msg.textContent = 'Enter your email address.'; return; }
+    if (!email || email.indexOf('@') < 0) { msg.textContent = 'Enter your email address.'; msg.className = 'signin-msg bad'; return; }
+    if (!pass) { msg.textContent = 'Enter your password.'; msg.className = 'signin-msg bad'; return; }
     const btn = document.getElementById('signInBtn');
-    btn.disabled = true; btn.textContent = 'Sending…';
-    const { error } = await sbSignIn(email);
-    btn.disabled = false; btn.textContent = 'Email me a sign-in link';
-    // An address that was never invited is the likeliest failure, so say so plainly
-    // rather than showing the provider's wording.
-    msg.textContent = error
-      ? (/not allowed|signups? not allowed|invalid/i.test(error)
-          ? 'That address has not been invited to this project yet.'
-          : error)
-      : 'Check your email — the link signs you straight in. You can close this tab.';
-    msg.className = 'signin-msg ' + (error ? 'bad' : 'good');
+    btn.disabled = true; btn.textContent = 'Signing in…';
+    const { error } = await sbSignIn(email, pass);
+    btn.disabled = false; btn.textContent = 'Sign in';
+    if (!error) {
+      const ov = document.getElementById('signInOverlay');
+      if (ov) ov.remove();
+      msg.textContent = '';
+      loadPersisted().then(() => { pruneOrphanDecisions(); mergeImportedDrafts(); renderAll(); });
+      return;
+    }
+    // Supabase says "Invalid login credentials" for a wrong password AND for an address
+    // that has no account at all. Say both, rather than send someone hunting for a typo
+    // in a password they were never given.
+    msg.textContent = /invalid login/i.test(error)
+      ? 'Wrong password — or there is no account for that address yet. Ask Kennady.'
+      : error;
+    msg.className = 'signin-msg bad';
   };
   document.getElementById('signInBtn').addEventListener('click', go);
-  document.getElementById('signInEmail').addEventListener('keydown', e => {
-    if (e.key === 'Enter') go();
+  ['signInEmail', 'signInPass'].forEach(id => {
+    document.getElementById(id).addEventListener('keydown', e => { if (e.key === 'Enter') go(); });
   });
   document.getElementById('signInEmail').focus();
 }
