@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Standards Alignment — PREVIEW (live saving)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=202608261653">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">SA</div>
+    <div>
+      <div class="brand-name">Standards Alignment</div>
+      <div class="brand-sub">Ohio · Georgia · Texas · Florida · North Carolina · South Carolina · Alabama — ELAR, Science &amp; Social Studies</div>
+    </div>
+  </div>
+  <nav class="tabs" id="navTabs">
+    <button class="tab active" data-view="explorer">Explorer</button>
+    <button class="tab" data-view="review">Review Queue <span class="badge" id="pendingBadge">0</span></button>
+    <button class="tab" data-view="passages">Master Passage List</button>
+    <button class="tab" data-view="input">State Lists</button>
+    <button class="tab" data-view="dash">Dashboard</button>
+  </nav>
+  <div class="topbar-actions">
+    <button class="btn btn-ghost hidden" id="saveBadge" title="Cloud saving status — click to connect or update the access token"></button>
+    <button class="btn btn-ghost" id="exportBtn" title="Download approved alignments as JSON">Export</button>
+  </div>
+</header>
+
+<main id="explorerView" class="view">
+  <aside class="picker-panel">
+    <div class="picker-group">
+      <label>State</label>
+      <select id="stateSeg" class="ps-input"></select>
+    </div>
+    <div class="picker-group">
+      <label>Subject</label>
+      <div class="seg" id="subjectSeg">
+        <button class="seg-btn active" data-val="social_studies">Social Studies</button>
+        <button class="seg-btn" data-val="science">Science</button>
+        <button class="seg-btn" data-val="ela">ELAR</button>
+      </div>
+    </div>
+    <div class="picker-group">
+      <label>Grade</label>
+      <div class="grade-row" id="gradeRow"></div>
+    </div>
+    <div class="picker-group">
+      <label>Standards <span class="count-pill" id="stdCount"></span></label>
+      <input type="search" id="stdSearch" placeholder="Filter standards…">
+      <div class="std-list" id="stdList"></div>
+    </div>
+  </aside>
+
+  <section class="detail-panel" id="detailPanel">
+    <div class="empty-state" id="emptyDetail">
+      <div class="empty-icon">⇄</div>
+      <h2>Select a standard</h2>
+      <p>Pick a state, subject, grade, and standard on the left to see its aligned standards in the other state.</p>
+    </div>
+    <div id="detailContent" class="hidden"></div>
+  </section>
+</main>
+
+<main id="reviewView" class="view hidden">
+  <div class="review-header">
+    <div class="review-filters">
+      <div class="seg" id="revSubjectSeg">
+        <button class="seg-btn active" data-val="social_studies">Social Studies</button>
+        <button class="seg-btn" data-val="science">Science</button>
+        <button class="seg-btn" data-val="ela">ELAR</button>
+      </div>
+      <div class="grade-row" id="revGradeRow"></div>
+      <select id="revStateSeg" class="ps-input" style="max-width:180px"></select>
+      <div class="seg" id="revStatusSeg">
+        <button class="seg-btn active" data-val="pending">Pending</button>
+        <button class="seg-btn" data-val="approved">Approved</button>
+        <button class="seg-btn" data-val="rejected">Rejected</button>
+        <button class="seg-btn" data-val="all">All</button>
+      </div>
+    </div>
+    <div class="review-progress" id="reviewProgress"></div>
+  </div>
+  <div class="review-list" id="reviewList"></div>
+</main>
+
+<main id="passagesView" class="view hidden">
+  <aside class="sets-panel">
+    <button class="btn btn-primary" id="newSetBtn">+ New Passage Set</button>
+    <button class="btn btn-primary" id="genSetBtn" title="Generate a complete passage set from a state standard">⚡ Generate with AI</button>
+    <div class="set-filters">
+      <input type="search" id="setSearch" class="ps-input" placeholder="Search title, passage text, or ID…">
+      <select id="setFilterStatus" class="ps-input">
+        <option value="all">All statuses</option>
+        <option value="ready">Ready for export</option>
+        <option value="no-key">⚠ Missing answer keys</option>
+        <option value="not-ready">⚠ Not ready (any reason)</option>
+        <option value="awaiting">Exported — awaiting CMS ID</option>
+        <option value="has-id">In CMS (has ID)</option>
+        <option value="draft">Drafts</option>
+        <option value="approved">Approved</option>
+      </select>
+      <select id="setFilterGrade" class="ps-input">
+        <option value="all">All grades</option>
+      </select>
+      <select id="setFilterState" class="ps-input"></select>
+      <div class="ps-hint" id="setFilterCount"></div>
+      <button class="btn btn-ghost" id="cmsExportBtn" title="Export the sets shown below as CMS import files (passages CSV, items CSV, and a JSON with the field map)">⬆ Export for CMS</button>
+    </div>
+    <div class="set-list" id="setList"></div>
+  </aside>
+  <section class="editor-panel" id="setEditor"></section>
+  <aside class="align-side" id="setSidePanel"></aside>
+</main>
+
+<main id="inputView" class="view hidden">
+  <div class="review-header">
+    <div class="review-filters">
+      <label class="in-lbl">State</label>
+      <select id="inState" class="ps-input" style="max-width:160px"></select>
+      <label class="in-lbl">Grade</label>
+      <select id="inGrade" class="ps-input" style="max-width:110px"></select>
+      <div class="seg" id="inStageSeg"></div>
+    </div>
+    <div class="review-progress" id="inputProgress"></div>
+  </div>
+  <div class="input-split">
+    <aside class="input-list-panel" id="inputList"></aside>
+    <section class="input-detail-panel" id="inputDetail"></section>
+  </div>
+</main>
+
+<main id="dashView" class="view hidden">
+  <div class="review-header">
+    <div class="review-filters">
+      <label class="in-lbl">State</label>
+      <select id="dashStateSeg" class="ps-input" style="max-width:180px"></select>
+    </div>
+    <div class="review-progress" id="dashProgress"></div>
+  </div>
+  <div class="dash-wrap" id="dashWrap"></div>
+</main>
+
+<div class="toast" id="toast"></div>
+<script src="vendor/supabase.js"></script>
+<script src="config.js"></script>
+<script src="store.js"></script>
+<script src="app.js?v=202608261653"></script>
+</body>
+</html>

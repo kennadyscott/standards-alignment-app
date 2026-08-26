@@ -1,0 +1,1332 @@
+[
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.B.1.1",
+  "strand": "Behavioral Sciences",
+  "description": "Identify the various values and beliefs of diverse cultures that have shaped American identity.",
+  "standard_code": "2.B.1",
+  "standard_description": "Understand how values and beliefs shape culture in America."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.B.1.2",
+  "strand": "Behavioral Sciences",
+  "description": "Explain how belief systems of various indigenous, religious, and racial groups have influenced or contributed to culture in America.",
+  "standard_code": "2.B.1",
+  "standard_description": "Understand how values and beliefs shape culture in America."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.C&G.1.1",
+  "strand": "Civics and Government",
+  "description": "Explain how principles of democracy have shaped the government of America.",
+  "standard_code": "2.C&G.1",
+  "standard_description": "Understand how freedom, equality, and democracy contribute to the government of America."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.C&G.1.2",
+  "strand": "Civics and Government",
+  "description": "Summarize the role of government in protecting freedom and equality of individuals in America.",
+  "standard_code": "2.C&G.1",
+  "standard_description": "Understand how freedom, equality, and democracy contribute to the government of America."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.C&G.1.3",
+  "strand": "Civics and Government",
+  "description": "Compare the structure and function of the three branches of government at the national level.",
+  "standard_code": "2.C&G.1",
+  "standard_description": "Understand how freedom, equality, and democracy contribute to the government of America."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.C&G.1.4",
+  "strand": "Civics and Government",
+  "description": "Explain how various indigenous, religious, gender, and racial groups advocate for freedom and equality.",
+  "standard_code": "2.C&G.1",
+  "standard_description": "Understand how freedom, equality, and democracy contribute to the government of America."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.E.1.1",
+  "strand": "Economics",
+  "description": "Explain how scarcity affects economic decisions.",
+  "standard_code": "2.E.1",
+  "standard_description": "Understand how the availability of resources impacts economic decisions."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.E.1.2",
+  "strand": "Economics",
+  "description": "Explain how the availability of resources impacts the production of goods.",
+  "standard_code": "2.E.1",
+  "standard_description": "Understand how the availability of resources impacts economic decisions."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.G.1.1",
+  "strand": "Geography",
+  "description": "Recognize absolute and relative location of various settlements, territories, and states in the development of the American nation.",
+  "standard_code": "2.G.1",
+  "standard_description": "Understand how interaction between humans and the physical environment is impacted by movement and settlement."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.G.1.2",
+  "strand": "Geography",
+  "description": "Explain how the environment has impacted settlement across America.",
+  "standard_code": "2.G.1",
+  "standard_description": "Understand how interaction between humans and the physical environment is impacted by movement and settlement."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.G.1.3",
+  "strand": "Geography",
+  "description": "Interpret how the movement of people, goods, and ideas has impacted the regional development of America.",
+  "standard_code": "2.G.1",
+  "standard_description": "Understand how interaction between humans and the physical environment is impacted by movement and settlement."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.H.1.1",
+  "strand": "History",
+  "description": "Summarize contributions of various women, indigenous, religious, racial, and other minority groups that have impacted American history.",
+  "standard_code": "2.H.1",
+  "standard_description": "Understand how various people and events have shaped America."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.H.1.2",
+  "strand": "History",
+  "description": "Explain ways in which various historical events have shaped American history.",
+  "standard_code": "2.H.1",
+  "standard_description": "Understand how various people and events have shaped America."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "2",
+  "code": "2.H.1.3",
+  "strand": "History",
+  "description": "Compare various perspectives of the same time period using primary and secondary sources.",
+  "standard_code": "2.H.1",
+  "standard_description": "Understand how various people and events have shaped America."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.B.1.1",
+  "strand": "Behavioral Sciences",
+  "description": "Explain how the values, beliefs, and cultures of various indigenous, religious, racial and other groups contribute to the development of local communities and the state.",
+  "standard_code": "3.B.1",
+  "standard_description": "Understand how values and beliefs of individuals and groups influence communities."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.B.1.2",
+  "strand": "Behavioral Sciences",
+  "description": "Compare values, beliefs, cultural practices and traditions of various groups living in local and regional communities.",
+  "standard_code": "3.B.1",
+  "standard_description": "Understand how values and beliefs of individuals and groups influence communities."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.C&G.1.1",
+  "strand": "Civics and Government",
+  "description": "Compare the structure and function of both state and local government.",
+  "standard_code": "3.C&G.1",
+  "standard_description": "Understand the structure and function of state and local government."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.C&G.1.2",
+  "strand": "Civics and Government",
+  "description": "Classify the roles and responsibilities of leaders in state and local government.",
+  "standard_code": "3.C&G.1",
+  "standard_description": "Understand the structure and function of state and local government."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.C&G.1.3",
+  "strand": "Civics and Government",
+  "description": "Compare how state, local, and tribal governments help solve problems within communities.",
+  "standard_code": "3.C&G.1",
+  "standard_description": "Understand the structure and function of state and local government."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.E.1.1",
+  "strand": "Economics",
+  "description": "Explain how entrepreneurship develops local communities.",
+  "standard_code": "3.E.1",
+  "standard_description": "Understand how economic decisions and resources affect the local economy."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.E.1.2",
+  "strand": "Economics",
+  "description": "Explain how the natural resources of a region impact the production and consumption of goods in local communities.",
+  "standard_code": "3.E.1",
+  "standard_description": "Understand how economic decisions and resources affect the local economy."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.E.1.3",
+  "strand": "Economics",
+  "description": "Summarize the role supply and demand plays in local economies.",
+  "standard_code": "3.E.1",
+  "standard_description": "Understand how economic decisions and resources affect the local economy."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.G.1.1",
+  "strand": "Geography",
+  "description": "Explain how the absolute and relative location of places impacts the development of communities.",
+  "standard_code": "3.G.1",
+  "standard_description": "Understand how geography impacts the development of regions and communities."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.G.1.2",
+  "strand": "Geography",
+  "description": "Explain how climate and physical characteristics affect the ways in which people live in a place or region.",
+  "standard_code": "3.G.1",
+  "standard_description": "Understand how geography impacts the development of regions and communities."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.G.1.3",
+  "strand": "Geography",
+  "description": "Explain how movement of goods, people, and ideas is impacted by the geography of a place or region.",
+  "standard_code": "3.G.1",
+  "standard_description": "Understand how geography impacts the development of regions and communities."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.H.1.1",
+  "strand": "History",
+  "description": "Explain how the experiences and achievements of women, indigenous, religious, and racial groups have contributed to the development of the local community.",
+  "standard_code": "3.H.1",
+  "standard_description": "Understand how various people and historical events have shaped local communities."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.H.1.2",
+  "strand": "History",
+  "description": "Explain the lasting impact historical events have had on local communities.",
+  "standard_code": "3.H.1",
+  "standard_description": "Understand how various people and historical events have shaped local communities."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "3",
+  "code": "3.H.1.3",
+  "strand": "History",
+  "description": "Use primary and secondary sources to compare multiple interpretations of various historical symbols and events in local communities.",
+  "standard_code": "3.H.1",
+  "standard_description": "Understand how various people and historical events have shaped local communities."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.B.1.1",
+  "strand": "Behavioral Sciences",
+  "description": "Explain how traditions, social structure, and artistic expression have contributed to the unique identity of North Carolina.",
+  "standard_code": "4.B.1",
+  "standard_description": "Understand ways in which values and beliefs have influenced the development of North Carolina’s identity as a state."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.B.1.2",
+  "strand": "Behavioral Sciences",
+  "description": "Explain how the values and beliefs of various indigenous, religious, and racial groups have contributed to the development of North Carolina",
+  "standard_code": "4.B.1",
+  "standard_description": "Understand ways in which values and beliefs have influenced the development of North Carolina’s identity as a state."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.C&G.1.1",
+  "strand": "Civics and Government",
+  "description": "Compare the roles and responsibilities of state elected leaders.",
+  "standard_code": "4.C&G.1",
+  "standard_description": "Understand the role of citizens in local and state government."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.C&G.1.2",
+  "strand": "Civics and Government",
+  "description": "Summarize the ways in which women, indigenous, religious, and racial groups influence local and state government.",
+  "standard_code": "4.C&G.1",
+  "standard_description": "Understand the role of citizens in local and state government."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.C&G.1.3",
+  "strand": "Civics and Government",
+  "description": "Differentiate between rights and responsibilities reflected in the North Carolina Constitution.",
+  "standard_code": "4.C&G.1",
+  "standard_description": "Understand the role of citizens in local and state government."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.E.1.1",
+  "strand": "Economics",
+  "description": "Explain the ways in which scarcity impacts economic decisions in North Carolina.",
+  "standard_code": "4.E.1",
+  "standard_description": "Understand how economic decisions and resources affect the economy of North Carolina."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.E.1.2",
+  "strand": "Economics",
+  "description": "Explain factors that have led to economic growth and decline for North Carolina’s major industries.",
+  "standard_code": "4.E.1",
+  "standard_description": "Understand how economic decisions and resources affect the economy of North Carolina."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.E.1.3",
+  "strand": "Economics",
+  "description": "Explain ways in which factors of production are influenced by the availability of resources in North Carolina.",
+  "standard_code": "4.E.1",
+  "standard_description": "Understand how economic decisions and resources affect the economy of North Carolina."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.E.2.1",
+  "strand": "Economics",
+  "description": "Explain the way in which personal financial decisions such as spending and saving may affect everyday life.",
+  "standard_code": "4.E.2",
+  "standard_description": "Understand the impact of personal financial decisions."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.E.2.2",
+  "strand": "Economics",
+  "description": "Exemplify outcomes of positive and negative financial decisions.",
+  "standard_code": "4.E.2",
+  "standard_description": "Understand the impact of personal financial decisions."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.G.1.1",
+  "strand": "Geography",
+  "description": "Compare the development of various geographic regions in North Carolina using geographic tools and representations.",
+  "standard_code": "4.G.1",
+  "standard_description": "Understand the role geography has played in the development of North Carolina."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.G.1.2",
+  "strand": "Geography",
+  "description": "Exemplify the ways in which movement of people, goods and ideas has impacted the development of North Carolina using maps and other geographic tools.",
+  "standard_code": "4.G.1",
+  "standard_description": "Understand the role geography has played in the development of North Carolina."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.G.1.3",
+  "strand": "Geography",
+  "description": "Summarize the reasons for forced and voluntary migration to, from, and within North Carolina",
+  "standard_code": "4.G.1",
+  "standard_description": "Understand the role geography has played in the development of North Carolina."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.H.1.1",
+  "strand": "History",
+  "description": "Explain how the experiences and achievements of minorities, indigenous groups, and marginalized people have contributed to change and innovation in North Carolina.",
+  "standard_code": "4.H.1",
+  "standard_description": "Understand the role of various people, events, and ideas in shaping North Carolina."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.H.1.2",
+  "strand": "History",
+  "description": "Summarize the changing roles of women, indigenous populations and racial groups throughout the history of North Carolina.",
+  "standard_code": "4.H.1",
+  "standard_description": "Understand the role of various people, events, and ideas in shaping North Carolina."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.H.1.3",
+  "strand": "History",
+  "description": "Explain the ways in which revolution, reform, and resistance have shaped North Carolina.",
+  "standard_code": "4.H.1",
+  "standard_description": "Understand the role of various people, events, and ideas in shaping North Carolina."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.H.1.4",
+  "strand": "History",
+  "description": "Summarize the role North Carolina has played in major conflicts and events throughout the history of America.",
+  "standard_code": "4.H.1",
+  "standard_description": "Understand the role of various people, events, and ideas in shaping North Carolina."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.H.1.5",
+  "strand": "History",
+  "description": "Use primary and secondary sources to compare multiple perspectives of various historical events in North Carolina.",
+  "standard_code": "4.H.1",
+  "standard_description": "Understand the role of various people, events, and ideas in shaping North Carolina."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "4",
+  "code": "4.H.1.6",
+  "strand": "History",
+  "description": "Explain the significance of historical symbols in North Carolina from various perspectives.",
+  "standard_code": "4.H.1",
+  "standard_description": "Understand the role of various people, events, and ideas in shaping North Carolina."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.B.1.1",
+  "strand": "Behavioral Sciences",
+  "description": "Explain how traditions, social structure, and artistic expression have contributed to the unique identity of the United States.",
+  "standard_code": "5.B.1",
+  "standard_description": "Understand ways in which values and beliefs have influenced the development of the United States."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.B.1.2",
+  "strand": "Behavioral Sciences",
+  "description": "Explain how the values and beliefs of various indigenous, religious, and racial groups have contributed to the development of American identity.",
+  "standard_code": "5.B.1",
+  "standard_description": "Understand ways in which values and beliefs have influenced the development of the United States."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.C&G.1.1",
+  "strand": "Civics and Government",
+  "description": "Distinguish the roles and responsibilities of the three branches of government in terms of how the branches cooperate.",
+  "standard_code": "5.C&G.1",
+  "standard_description": "Analyze the structure and function of the United States government in terms of cooperation and compromise."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.C&G.1.2",
+  "strand": "Civics and Government",
+  "description": "Explain how the three branches of government work together to protect freedom, equality, and justice.",
+  "standard_code": "5.C&G.1",
+  "standard_description": "Analyze the structure and function of the United States government in terms of cooperation and compromise."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.C&G.2.1",
+  "strand": "Civics and Government",
+  "description": "Summarize the ways in which women, indigenous, religious, and racial groups use civic participation and advocacy to encourage government protection of rights.",
+  "standard_code": "5.C&G.2",
+  "standard_description": "Understand the ways in which the federal government has protected individual rights of citizens."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.C&G.2.2",
+  "strand": "Civics and Government",
+  "description": "Exemplify ways in which rights are protected under the United States Constitution.",
+  "standard_code": "5.C&G.2",
+  "standard_description": "Understand the ways in which the federal government has protected individual rights of citizens."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.E.1.1",
+  "strand": "Economics",
+  "description": "Explain factors that led to economic growth and decline within the United States at various times in history.",
+  "standard_code": "5.E.1",
+  "standard_description": "Understand how economic decisions have impacted the United States in terms of consequence, growth, and trade."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.E.1.2",
+  "strand": "Economics",
+  "description": "Compare economic decisions in terms of benefits and consequences.",
+  "standard_code": "5.E.1",
+  "standard_description": "Understand how economic decisions have impacted the United States in terms of consequence, growth, and trade."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.E.1.3",
+  "strand": "Economics",
+  "description": "Explain the impact of production, specialization, technology, and division of labor on the economic growth of the United States.",
+  "standard_code": "5.E.1",
+  "standard_description": "Understand how economic decisions have impacted the United States in terms of consequence, growth, and trade."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.E.1.4",
+  "strand": "Economics",
+  "description": "Summarize the role of trade between the United States and other countries.",
+  "standard_code": "5.E.1",
+  "standard_description": "Understand how economic decisions have impacted the United States in terms of consequence, growth, and trade."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.E.2.1",
+  "strand": "Economics",
+  "description": "Explain how personal financial decisions affect everyday life.",
+  "standard_code": "5.E.2",
+  "standard_description": "Understand the impact of personal financial decisions."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.E.2.2",
+  "strand": "Economics",
+  "description": "Explain the importance of developing a basic budget for spending and saving.",
+  "standard_code": "5.E.2",
+  "standard_description": "Understand the impact of personal financial decisions."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.E.2.3",
+  "strand": "Economics",
+  "description": "Explain how personal financial decisions impact economic growth and decline in the United States.",
+  "standard_code": "5.E.2",
+  "standard_description": "Understand the impact of personal financial decisions."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.G.1.1",
+  "strand": "Geography",
+  "description": "Explain the relationship between location, physical environment, and human activity in the United States.",
+  "standard_code": "5.G.1",
+  "standard_description": "Understand the ways in which geographic factors and features have influenced development of the United States."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.G.1.2",
+  "strand": "Geography",
+  "description": "Explain ways in which voluntary and forced migration and slavery led to changes in the landscape of the United States, using maps.",
+  "standard_code": "5.G.1",
+  "standard_description": "Understand the ways in which geographic factors and features have influenced development of the United States."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.G.1.3",
+  "strand": "Geography",
+  "description": "Explain how technological innovation has impacted the geography of the United States.",
+  "standard_code": "5.G.1",
+  "standard_description": "Understand the ways in which geographic factors and features have influenced development of the United States."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.G.1.4",
+  "strand": "Geography",
+  "description": "Explain the reasons for forced and voluntary migration to, from, and within the United States.",
+  "standard_code": "5.G.1",
+  "standard_description": "Understand the ways in which geographic factors and features have influenced development of the United States."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.H.1.1",
+  "strand": "History",
+  "description": "Explain how the experiences and achievements of women, minorities, indigenous groups, and marginalized people have contributed to change and innovation in the United States",
+  "standard_code": "5.H.1",
+  "standard_description": "Understand the role of various people, events, and ideas in shaping the United States."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.H.1.2",
+  "strand": "History",
+  "description": "Summarize the changing roles of women, indigenous, racial and other minority groups in the United States.",
+  "standard_code": "5.H.1",
+  "standard_description": "Understand the role of various people, events, and ideas in shaping the United States."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.H.1.3",
+  "strand": "History",
+  "description": "Explain the ways in which revolution, reform, and resistance have shaped the United States.",
+  "standard_code": "5.H.1",
+  "standard_description": "Understand the role of various people, events, and ideas in shaping the United States."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.H.1.4",
+  "strand": "History",
+  "description": "Explain the impact of major conflicts and events on the development of the United States.",
+  "standard_code": "5.H.1",
+  "standard_description": "Understand the role of various people, events, and ideas in shaping the United States."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.H.1.5",
+  "strand": "History",
+  "description": "Compare multiple perspectives of various historical events using primary and secondary sources.",
+  "standard_code": "5.H.1",
+  "standard_description": "Understand the role of various people, events, and ideas in shaping the United States."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "5",
+  "code": "5.H.1.6",
+  "strand": "History",
+  "description": "Explain the significance of national symbols and traditions from various perspectives.",
+  "standard_code": "5.H.1",
+  "standard_description": "Understand the role of various people, events, and ideas in shaping the United States."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.B.1.1",
+  "strand": "Behavioral Sciences",
+  "description": "Explain how religion, tradition, and cultural practice influence the development of civilizations and societies in Africa, Asia, Europe and the Americas.",
+  "standard_code": "6.B.1",
+  "standard_description": "Understand ways in which culture influences civilizations."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.B.1.2",
+  "strand": "Behavioral Sciences",
+  "description": "Explain how artistic expressions reflect the values of civilizations in Africa, Asia, Europe and the Americas.",
+  "standard_code": "6.B.1",
+  "standard_description": "Understand ways in which culture influences civilizations."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.B.1.3",
+  "strand": "Behavioral Sciences",
+  "description": "Compare systems of social structure within various civilizations and societies in Africa, Asia, Europe and the Americas over time.",
+  "standard_code": "6.B.1",
+  "standard_description": "Understand ways in which culture influences civilizations."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.C&G.1.1",
+  "strand": "Civics and Government",
+  "description": "Compare the structures of governmental systems in civilizations and societies in Africa, Asia, Europe and the Americas.",
+  "standard_code": "6.C&G.1",
+  "standard_description": "Understand the purpose of government and authority."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.C&G.1.2",
+  "strand": "Civics and Government",
+  "description": "Compare how different types of government maintain power and authority.",
+  "standard_code": "6.C&G.1",
+  "standard_description": "Understand the purpose of government and authority."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.C&G.1.3",
+  "strand": "Civics and Government",
+  "description": "Compare the requirements for citizenship under various civilizations, empires, and societies.",
+  "standard_code": "6.C&G.1",
+  "standard_description": "Understand the purpose of government and authority."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.C&G.1.4",
+  "strand": "Civics and Government",
+  "description": "Compare the evolution of laws and legal systems in various civilizations, empires, and societies in Africa, Asia, Europe and the Americas .",
+  "standard_code": "6.C&G.1",
+  "standard_description": "Understand the purpose of government and authority."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.C&G.1.5",
+  "strand": "Civics and Government",
+  "description": "Summarize the beliefs and practices that shaped power and authority in various civilizations, empires, and societies in Africa, Asia, Europe and the Americas.",
+  "standard_code": "6.C&G.1",
+  "standard_description": "Understand the purpose of government and authority."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.C&G.1.6",
+  "strand": "Civics and Government",
+  "description": "Explain the reasons for the rise and fall of governments and authority in civilizations and empires of Africa, Asia, Europe, and the Americas.",
+  "standard_code": "6.C&G.1",
+  "standard_description": "Understand the purpose of government and authority."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.E.1.1",
+  "strand": "Economics",
+  "description": "Explain how trade routes and economic networks contribute to the development of civilizations, empires, and classical societies in Africa, Asia, Europe, and the Americas.",
+  "standard_code": "6.E.1",
+  "standard_description": "Understand the economic activities of civilizations prior to 1400."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.E.1.2",
+  "strand": "Economics",
+  "description": "Explain the economic reasons for the rise and fall of civilizations, empires, and societies in Africa, Asia, Europe, and the Americas.",
+  "standard_code": "6.E.1",
+  "standard_description": "Understand the economic activities of civilizations prior to 1400."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.G.1.1",
+  "strand": "Geography",
+  "description": "Explain how human and physical characteristics impacted migration and settlement in various regions in Africa, Asia, Europe and the Americas.",
+  "standard_code": "6.G.1",
+  "standard_description": "Understand the geographical factors that influence human migration and settlement."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.G.1.2",
+  "strand": "Geography",
+  "description": "Explain how movement and settlement patterns affected the development of civilizations, empires, and societies in Africa, Asia, Europe, and the Americas.",
+  "standard_code": "6.G.1",
+  "standard_description": "Understand the geographical factors that influence human migration and settlement."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.G.1.3",
+  "strand": "Geography",
+  "description": "Explain how innovation and technology influenced the migration and settlement of people and the flow of goods and ideas in various civilizations and empires in Africa, Asia, Europe, and the Americas.",
+  "standard_code": "6.G.1",
+  "standard_description": "Understand the geographical factors that influence human migration and settlement."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.G.1.4",
+  "strand": "Geography",
+  "description": "Explain how societies in Africa, Asia, Europe and the Americas modified and adapted to the environment based on topography, climate, bodies of water, and natural resources.",
+  "standard_code": "6.G.1",
+  "standard_description": "Understand the geographical factors that influence human migration and settlement."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.H.1.1",
+  "strand": "History",
+  "description": "Explain the role various events, people, and groups played in the rise, fall, and transformation of societies in Africa, Asia, Europe, and the Americas.",
+  "standard_code": "6.H.1",
+  "standard_description": "Understand the development of civilizations and societies from various perspectives."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.H.1.2",
+  "strand": "History",
+  "description": "Explain the enduring impact of the achievements of ancient civilizations in Africa, Asia, Europe, and the Americas in terms of the relevance of present-day society.",
+  "standard_code": "6.H.1",
+  "standard_description": "Understand the development of civilizations and societies from various perspectives."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "6",
+  "code": "6.H.1.3",
+  "strand": "History",
+  "description": "Compare multiple perspectives of various historical events in civilizations in Africa, Asia, Europe, and the Americas using primary and secondary sources.",
+  "standard_code": "6.H.1",
+  "standard_description": "Understand the development of civilizations and societies from various perspectives."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.B.1.1",
+  "strand": "Behavioral Sciences",
+  "description": "Compare major elements of culture in various modern societies around the world.",
+  "standard_code": "7.B.1",
+  "standard_description": "Understand how individual and group values and beliefs have influenced various cultures."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.B.1.2",
+  "strand": "Behavioral Sciences",
+  "description": "Explain how values and beliefs affect human rights, justice, and equality for different groups of people.",
+  "standard_code": "7.B.1",
+  "standard_description": "Understand how individual and group values and beliefs have influenced various cultures."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.B.1.3",
+  "strand": "Behavioral Sciences",
+  "description": "Compare how individuals and groups respond to stereotypes, oppression, human rights violations, and genocide.",
+  "standard_code": "7.B.1",
+  "standard_description": "Understand how individual and group values and beliefs have influenced various cultures."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.C&G.1.1",
+  "strand": "Civics and Government",
+  "description": "Explain how the power and authority of various types of governments have created conflict that has led to change.",
+  "standard_code": "7.C&G.1",
+  "standard_description": "Analyze modern governmental systems in terms of conflict and change."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.C&G.1.2",
+  "strand": "Civics and Government",
+  "description": "Distinguish how conflict between religious and secular thought and practice has contributed to change in government.",
+  "standard_code": "7.C&G.1",
+  "standard_description": "Analyze modern governmental systems in terms of conflict and change."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.C&G.1.3",
+  "strand": "Civics and Government",
+  "description": "Deconstruct changes of various modern governments in terms of the benefits and costs to its citizens.",
+  "standard_code": "7.C&G.1",
+  "standard_description": "Analyze modern governmental systems in terms of conflict and change."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.C&G.1.4",
+  "strand": "Civics and Government",
+  "description": "Summarize new ideas that changed political thought in various nations, societies and regions.",
+  "standard_code": "7.C&G.1",
+  "standard_description": "Analyze modern governmental systems in terms of conflict and change."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.E.1.1",
+  "strand": "Economics",
+  "description": "Explain the factors and conditions that contribute to the development of economic systems.",
+  "standard_code": "7.E.1",
+  "standard_description": "Understand the economic activities of modern societies and regions."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.E.1.2",
+  "strand": "Economics",
+  "description": "Explain how national and international economic decisions reflect and impact the interdependency of societies.",
+  "standard_code": "7.E.1",
+  "standard_description": "Understand the economic activities of modern societies and regions."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.E.1.3",
+  "strand": "Economics",
+  "description": "Summarize the economic activity fostered by various economic systems.",
+  "standard_code": "7.E.1",
+  "standard_description": "Understand the economic activities of modern societies and regions."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.E.1.4",
+  "strand": "Economics",
+  "description": "Explain how competition for resources affects the economic relationship among nations.",
+  "standard_code": "7.E.1",
+  "standard_description": "Understand the economic activities of modern societies and regions."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.E.1.5",
+  "strand": "Economics",
+  "description": "Explain how economic systems have led to the transformation of various regions around the world and indigenous ways of life.",
+  "standard_code": "7.E.1",
+  "standard_description": "Understand the economic activities of modern societies and regions."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.G.1.1",
+  "strand": "Geography",
+  "description": "Explain how push-pull factors of forced and voluntary migrations have affected societies around the world.",
+  "standard_code": "7.G.1",
+  "standard_description": "Understand ways in which geographical factors influence societies."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.G.1.2",
+  "strand": "Geography",
+  "description": "Explain reasons why societies modify and adapt to the environment.",
+  "standard_code": "7.G.1",
+  "standard_description": "Understand ways in which geographical factors influence societies."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.G.1.3",
+  "strand": "Geography",
+  "description": "Explain the influence of demographic shifts on societies using geographic tools and data.",
+  "standard_code": "7.G.1",
+  "standard_description": "Understand ways in which geographical factors influence societies."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.H.1.1",
+  "strand": "History",
+  "description": "Distinguish specific turning points of modern world history in terms of lasting impact.",
+  "standard_code": "7.H.1",
+  "standard_description": "Evaluate historical and current events from a variety of perspectives."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.H.1.2",
+  "strand": "History",
+  "description": "Summarize the influence women, indigenous, racial, ethnic, political, and religious groups have had on historical events and current global issues.",
+  "standard_code": "7.H.1",
+  "standard_description": "Evaluate historical and current events from a variety of perspectives."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.H.1.3",
+  "strand": "History",
+  "description": "Compare individual and societal responses to globalization in various regions and societies.",
+  "standard_code": "7.H.1",
+  "standard_description": "Evaluate historical and current events from a variety of perspectives."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.H.1.4",
+  "strand": "History",
+  "description": "Critique the effectiveness of cooperative efforts and consensus-building among nations, regions, and groups from various perspectives.",
+  "standard_code": "7.H.1",
+  "standard_description": "Evaluate historical and current events from a variety of perspectives."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "7",
+  "code": "7.H.1.5",
+  "strand": "History",
+  "description": "Explain how slavery, xenophobia, disenfranchisement, ethnocentrism, and intolerance have affected individuals and groups in modern world history.",
+  "standard_code": "7.H.1",
+  "standard_description": "Evaluate historical and current events from a variety of perspectives."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.B.1.1",
+  "strand": "Behavioral Sciences",
+  "description": "Determine how the relationship between different regional, social, ethnic, and racial groups have contributed to the development of North Carolina and the nation.",
+  "standard_code": "8.B.1",
+  "standard_description": "Analyze the impact of group behavior on the development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.B.1.2",
+  "strand": "Behavioral Sciences",
+  "description": "Explain how cultural values, practices and the interactions of various indigenous, religious, and racial groups have influenced the development of North Carolina and the nation.",
+  "standard_code": "8.B.1",
+  "standard_description": "Analyze the impact of group behavior on the development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.C&G.1.1",
+  "strand": "Civics and Government",
+  "description": "Summarize the democratic ideals outlined in the founding documents of the state and national government.",
+  "standard_code": "8.C&G.1",
+  "standard_description": "Understand how democratic principles have influenced the government structure and policies of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.C&G.1.2",
+  "strand": "Civics and Government",
+  "description": "Compare how decisions of state and local government conform and conflict with the democratic ideals of the nation.",
+  "standard_code": "8.C&G.1",
+  "standard_description": "Understand how democratic principles have influenced the government structure and policies of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.C&G.1.3",
+  "strand": "Civics and Government",
+  "description": "Critique the policies, laws, and government structures of North Carolina and the nation in terms of conforming to or conflicting with American democratic ideals.",
+  "standard_code": "8.C&G.1",
+  "standard_description": "Understand how democratic principles have influenced the government structure and policies of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.C&G.1.4",
+  "strand": "Civics and Government",
+  "description": "Compare different perspectives on the role of state, national, and tribal governments.",
+  "standard_code": "8.C&G.1",
+  "standard_description": "Understand how democratic principles have influenced the government structure and policies of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.C&G.1.5",
+  "strand": "Civics and Government",
+  "description": "Compare access to democratic rights and freedoms of various indigenous, religious, racial, gender, ability and identity groups in North Carolina and the nation.",
+  "standard_code": "8.C&G.1",
+  "standard_description": "Understand how democratic principles have influenced the government structure and policies of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.C&G.2.1",
+  "strand": "Civics and Government",
+  "description": "Summarize the strategies and societal reforms used to address discrimination and oppression in North Carolina and the nation.",
+  "standard_code": "8.C&G.2",
+  "standard_description": "Evaluate the effectiveness of societal reforms."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.C&G.2.2",
+  "strand": "Civics and Government",
+  "description": "Assess the effectiveness of reforms in terms of the impact on individuals, policies, and institutions in North Carolina and the nation.",
+  "standard_code": "8.C&G.2",
+  "standard_description": "Evaluate the effectiveness of societal reforms."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.E.1.1",
+  "strand": "Economics",
+  "description": "Explain how economic growth and decline have positively and negatively impacted individuals, groups, communities, and businesses in North Carolina and the nation.",
+  "standard_code": "8.E.1",
+  "standard_description": "Understand the economic development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.E.1.2",
+  "strand": "Economics",
+  "description": "Explain how industry and trade impact the economy and people of North Carolina and the nation.",
+  "standard_code": "8.E.1",
+  "standard_description": "Understand the economic development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.E.1.3",
+  "strand": "Economics",
+  "description": "Distinguish the role women, indingenious groups, and racial minorities have played in contributing to the economic prosperity of North Carolina in terms of equity, equality, and mobility.",
+  "standard_code": "8.E.1",
+  "standard_description": "Understand the economic development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.E.1.4",
+  "strand": "Economics",
+  "description": "Exemplify ways personal financial decision making influences the economy.",
+  "standard_code": "8.E.1",
+  "standard_description": "Understand the economic development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.G.1.1",
+  "strand": "Geography",
+  "description": "Summarize the human and physical characteristics of North Carolina and the nation.",
+  "standard_code": "8.G.1",
+  "standard_description": "Understand geographic factors that influence the development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.G.1.2",
+  "strand": "Geography",
+  "description": "Explain how location, resources, and human geography have influenced the development of North Carolina and the nation.",
+  "standard_code": "8.G.1",
+  "standard_description": "Understand geographic factors that influence the development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.G.1.3",
+  "strand": "Geography",
+  "description": "Explain how location and human geography have presented opportunities and challenges for the movement of people, goods, and ideas in North Carolina and the nation.",
+  "standard_code": "8.G.1",
+  "standard_description": "Understand geographic factors that influence the development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.G.1.4",
+  "strand": "Geography",
+  "description": "Explain the reasons for and effects of forced and voluntary migration on various groups in North Carolina and the nation.",
+  "standard_code": "8.G.1",
+  "standard_description": "Understand geographic factors that influence the development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.G.1.5",
+  "strand": "Geography",
+  "description": "Explain how geographic expansion has impacted the development of North Carolina and the nation.",
+  "standard_code": "8.G.1",
+  "standard_description": "Understand geographic factors that influence the development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.H.1.1",
+  "strand": "History",
+  "description": "Explain the causes and effects of conflict in North Carolina and the nation.",
+  "standard_code": "8.H.1",
+  "standard_description": "Understand the role of conflict and cooperation in the development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.H.1.2",
+  "strand": "History",
+  "description": "Summarize how debate, negotiation, compromise, and cooperation have been used in the history of North Carolina and the nation.",
+  "standard_code": "8.H.1",
+  "standard_description": "Understand the role of conflict and cooperation in the development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.H.1.3",
+  "strand": "History",
+  "description": "Explain how slavery, segregation, voter suppression, reconcentration, and other discriminatory practices have been used to suppress and exploit certain groups within North Carolina and the nation over time.",
+  "standard_code": "8.H.1",
+  "standard_description": "Understand the role of conflict and cooperation in the development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.H.1.4",
+  "strand": "History",
+  "description": "Explain how recovery, resistance, and resilience to inequities, injustices, discrimination, prejudice and bias have shaped the history of North Carolina and the nation.",
+  "standard_code": "8.H.1",
+  "standard_description": "Understand the role of conflict and cooperation in the development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.H.2.1",
+  "strand": "History",
+  "description": "Explain how innovation and technology have contributed to change in North Carolina and the nation.",
+  "standard_code": "8.H.2",
+  "standard_description": "Understand how innovation and change have impacted the development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.H.2.2",
+  "strand": "History",
+  "description": "Explain the influences of individuals and groups during times of innovation and change in North Carolina and the nation.",
+  "standard_code": "8.H.2",
+  "standard_description": "Understand how innovation and change have impacted the development of North Carolina and the nation."
+ },
+ {
+  "state": "NC",
+  "subject": "social_studies",
+  "grade": "8",
+  "code": "8.H.2.3",
+  "strand": "History",
+  "description": "Explain how the experiences and achievements of women, minorities, indigenous, and marginalized groups have contributed to the development of North Carolina and the nation over time.",
+  "standard_code": "8.H.2",
+  "standard_description": "Understand how innovation and change have impacted the development of North Carolina and the nation."
+ }
+]

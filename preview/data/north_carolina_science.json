@@ -1,0 +1,632 @@
+[
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "2",
+    "code": "PS.2.1",
+    "strand": "Matter and its Interactions",
+    "description": "Understand properties of solids and liquids and the changes they undergo.",
+    "elements": [
+      "PS.2.1.1 Carry out investigations to illustrate examples of matter that can change from a solid to a liquid and from a liquid to a solid by heating and cooling.",
+      "PS.2.1.2 Analyze and interpret data to compare the amount (volume and weight) of water in a container before and after freezing.",
+      "PS.2.1.3 Analyze and interpret data to compare the amount (volume and weight) of water left in an open container over time to the water left in a closed container."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "2",
+    "code": "PS.2.2",
+    "strand": "Waves and Their Applications in Technologies for Information Transfer",
+    "description": "Understand the relationship between sound and vibrating objects.",
+    "elements": [
+      "PS.2.2.1 Carry out investigations to illustrate how sound is produced by vibrating objects and columns of air.",
+      "PS.2.2.2 Use models to summarize the relationship between sound and how sounds are produced and detected by parts of the body that vibrate."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "2",
+    "code": "LS.2.1",
+    "strand": "From Molecules to Organisms- Structures and Processes",
+    "description": "Understand animal life cycles.",
+    "elements": [
+      "LS.2.1.1 Use models to summarize the life cycle of animals including: birth, developing into an adult, reproducing, aging and death.",
+      "LS.2.1.2 Obtain, evaluate and communicate information to compare life cycles of different animals."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "2",
+    "code": "LS.2.2",
+    "strand": "Heredity- Inheritance and Variation of Traits",
+    "description": "Understand that organisms differ from or are similar to their parents and other offspring based on characteristics of the organism.",
+    "elements": [
+      "LS.2.2.1 Obtain, evaluate, and communicate information to summarize ways in which animals closely resemble their parents and ways they are different.",
+      "LS.2.2.2 Analyze and interpret data to illustrate variations among offspring of the same parents."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "2",
+    "code": "ESS.2.1",
+    "strand": "Earth’s Systems",
+    "description": "Understand patterns of weather and factors that affect weather.",
+    "elements": [
+      "ESS.2.1.1 Obtain, evaluate, and communicate information to summarize how energy from the sun serves as a source of light and warms the land, air, and water.",
+      "ESS.2.1.2 Use mathematics and computational thinking to summarize weather conditions (temperature, wind direction, wind speed, precipitation).",
+      "ESS.2.1.3 Carry out investigations to collect data and compare weather patterns that occur over time and relate observable patterns to time of day and time of year.",
+      "ESS.2.1.4 Obtain, evaluate and communicate information to recognize the tools scientists use for observing, recording, and predicting weather changes from day to day and during the season."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "3",
+    "code": "PS.3.1",
+    "strand": "Matter and its Interactions",
+    "description": "Understand the structure and properties of matter before and after they undergo a change.",
+    "elements": [
+      "PS.3.1.1 Engage in argument from evidence to infer that air is a substance that surrounds us, takes up space, and has mass.",
+      "PS.3.1.2 Carry out investigations to classify solids, liquids, and gases based on their basic properties.",
+      "PS.3.1.3 Engage in argument from evidence to explain observable changes to the properties of matter when heated or cooled."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "3",
+    "code": "PS.3.2",
+    "strand": "Motion and Stability- Forces and Interactions",
+    "description": "Understand motion and factors that affect motion.",
+    "elements": [
+      "PS.3.2.1 Carry out investigations to infer changes in speed or direction resulting from forces acting on an object.",
+      "PS.3.2.2 Carry out investigations to compare the relative speeds (faster or slower) of objects that travel the same distance in different amounts of time.",
+      "PS.3.2.3 Use models to explain the effect of Earth's gravity on the motion of any object on or near the Earth."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "3",
+    "code": "PS.3.3",
+    "strand": "Energy",
+    "description": "Understand how energy can be transferred from one object to another.",
+    "elements": [
+      "PS.3.3.1 Ask questions to explain how heat is created by friction.",
+      "PS.3.3.2 Carry out investigations to explain how energy can be transferred from a warmer object to a cooler one by contact or at a distance."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "3",
+    "code": "LS.3.1",
+    "strand": "From Molecules to Organisms- Structures and Processes",
+    "description": "Understand human body systems and how they are essential for life: protection, movement, and support.",
+    "elements": [
+      "LS.3.1.1 Use models to infer the functions of the skeletal and muscular systems.",
+      "LS.3.1.2 Obtain, evaluate, and communicate scientific information to explain why skin is necessary for protection and for the body to remain healthy."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "3",
+    "code": "LS.3.2",
+    "strand": "From Molecules to Organisms- Structures and Processes",
+    "description": "Understand how plant structures aid in survival.",
+    "elements": [
+      "LS.3.2.1 Carry out investigations to explain the structures and functions of plants and how they are essential for life.",
+      "LS.3.2.2 Use models to exemplify the distinct stages of the life cycle of seed plants."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "3",
+    "code": "LS.3.3",
+    "strand": "Ecosystems- Interactions, Energy, and Dynamics",
+    "description": "Understand how environmental factors aid in the survival of plants.",
+    "elements": [
+      "LS.3.3.1 Carry out investigations to explain how environmental conditions determine how well plants survive and grow.",
+      "LS.3.3.2 Construct an explanation to infer how the basic properties and components of soil determine its ability to support the growth and survival of many plants."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "3",
+    "code": "ESS.3.1",
+    "strand": "Earth’s Place in the Universe",
+    "description": "Remember the major components and patterns observed in the earth/moon/sun system.",
+    "elements": [
+      "ESS.3.1.1 Use models to recognize that the Earth is part of a system called the solar system that includes the sun (a star), planets, and many moons, and that the Earth is the third planet from the sun.",
+      "ESS.3.1.2 Carry out investigations to recognize that changes in the length and direction of an object's shadow indicate the apparent changing position of the sun during the day.",
+      "ESS.3.1.3 Obtain, evaluate and communicate information to recognize the patterns of the stars (including the sun) stay the same as they appear to move across the sky."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "3",
+    "code": "ESS.3.2",
+    "strand": "Earth’s Systems",
+    "description": "Understand the structures of the Earth’s surface using models.",
+    "elements": [
+      "ESS.3.2.1 Use models to compare Earth's saltwater and freshwater features (including oceans, seas, rivers, lakes, ponds, streams, and glaciers).",
+      "ESS.3.2.2 Use models to compare Earth's land features (including volcanoes, mountains, valleys, canyons, caverns, and islands)."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "4",
+    "code": "PS.4.1",
+    "strand": "Motion and Stability- Forces and Interactions",
+    "description": "Understand how various forces affect the motion of an object.",
+    "elements": [
+      "PS.4.1.1 Ask questions to summarize the relationship of magnetic interactions between two objects not in contact with each other.",
+      "PS.4.1.2 Carry out investigations to explain how electrically charged objects push or pull on other objects to produce motion."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "4",
+    "code": "PS.4.2",
+    "strand": "Energy",
+    "description": "Understand that energy can be transferred from place to place by sound, light, heat, and electric currents.",
+    "elements": [
+      "PS.4.2.1 Ask questions to identify basic forms of energy (light, sound, heat, and electrical) that cause motion or create change.",
+      "PS.4.2.2 Use models to explain a simple electrical circuit and the necessary components.",
+      "PS.4.2.3 Carry out investigations on common materials to classify them as insulators or conductors of electricity."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "4",
+    "code": "PS.4.3",
+    "strand": "Waves and Their Applications in Technologies for Information Transfer",
+    "description": "Understand the nature of light and how light interacts with objects.",
+    "elements": [
+      "PS.4.3.1 Carry out investigations to infer the path light travels from a light source to a mirror and how it is reflected (by the mirror) using different angles.",
+      "PS.4.3.2 Carry out investigations to explain how light is refracted and absorbed."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "4",
+    "code": "LS.4.1",
+    "strand": "From Molecules to Organisms- Structures and Processes",
+    "description": "Understand the effects of environmental changes, adaptations, and behaviors that enable organisms to survive in changing habitats.",
+    "elements": [
+      "LS.4.1.1 Use models to explain that plants and animals have external structures that function to support survival.",
+      "LS.4.1.2 Use models to explain that animals receive different types of information through their senses, process the information, and respond to the information in different ways.",
+      "LS.4.1.3 Engage in argument from evidence to explain how differences among animals of the same population sometimes gives individuals an advantage in surviving and reproducing in changing habitats."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "4",
+    "code": "LS.4.2",
+    "strand": "Biological Evolution- Unity and Diversity",
+    "description": "Understand the use of fossils as evidence of the history of Earth and its changing life forms.",
+    "elements": [
+      "LS.4.2.1 Analyze and interpret data to compare fossils to one another and living organisms.",
+      "LS.4.2.2 Analyze and interpret data to explain how fossils suggest ideas about Earth's early environment."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "4",
+    "code": "ESS.4.1",
+    "strand": "Earth’s Place in the Universe",
+    "description": "Understand the causes of day and night and phases of the moon.",
+    "elements": [
+      "ESS.4.1.1 Use models to explain the cause of day and night based on the rotation of the Earth on its axis.",
+      "ESS.4.1.2 Use models to explain the repeating pattern of the phases of the moon (new, crescent, quarter, gibbous, and full)."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "4",
+    "code": "ESS.4.2",
+    "strand": "Earth’s Systems",
+    "description": "Understand patterns of change in the Earth's surface over time.",
+    "elements": [
+      "ESS.4.2.1 Carry out investigations to classify minerals using tests for the physical properties of hardness, color, luster, cleavage and streak.",
+      "ESS.4.2.2 Carry out investigations to classify rocks as metamorphic, sedimentary, or igneous based on their composition, how they are formed, and the processes that create them.",
+      "ESS.4.2.3 Use models to explain changes in Earth's surface over time (to include slow changes of erosion and weathering, and fast changes of earthquakes, landslides, and volcanic activity)."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "4",
+    "code": "ESS.4.3",
+    "strand": "Earth and Human Activity",
+    "description": "Understand changes caused by human impact on the environment.",
+    "elements": [
+      "ESS.4.3.1 Ask questions to infer whether changes in an organism's environment are beneficial or harmful.",
+      "ESS.4.3.2 Engage in argument from evidence to explain how humans can adapt their behavior to live in changing environments  (e.g. recycling wastes, establishing rain gardens, planting native species to prevent flooding and erosion).",
+      "ESS.4.3.3 Obtain, evaluate and communicate information to compare solutions to environmental problems impacting plants and animals."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "5",
+    "code": "PS.5.1",
+    "strand": "Matter and its Interactions",
+    "description": "Understand the interactions of matter and energy and the changes that occur.",
+    "elements": [
+      "PS.5.1.1 Carry out investigations to compare the weight of objects before and after an interaction.",
+      "PS.5.1.2 Carry out investigations to explain whether the mixing of two or more substances results in new substances.",
+      "PS.5.1.3 Carry out investigations to compare how heating and cooling affect some materials and how this relates to their purpose and practical applications."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "5",
+    "code": "PS.5.2",
+    "strand": "Motion and Stability- Forces and Interactions",
+    "description": "Understand force, motion, and the relationship between them.",
+    "elements": [
+      "PS.5.2.1 Carry out investigations to explain how factors such as gravity, friction, and change in mass affect the motion of objects.",
+      "PS.5.2.2 Use mathematics and computational thinking to infer the motion of an object (including position, direction, and speed)."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "5",
+    "code": "LS.5.1",
+    "strand": "From Molecules to Organisms- Structures and Processes",
+    "description": "Understand how structures and systems of the human body perform functions necessary for life.",
+    "elements": [
+      "LS.5.1.1 Use models to recognize the organizational structure of humans as a multicellular organism (cell, tissue, organ, system, organism).",
+      "LS.5.1.2 Use models to compare the major systems of the human body (digestive, respiratory, circulatory, muscular, skeletal, nervous) as it relates to their functions necessary for life."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "5",
+    "code": "LS.5.2",
+    "strand": "Ecosystems- Interactions, Energy, and Dynamics",
+    "description": "Understand the interdependence of plants and animals within their ecosystem.",
+    "elements": [
+      "LS.5.2.1 Engage in argument from evidence to compare the characteristics of several common ecosystems (including estuaries and salt marshes, oceans, lakes and ponds, rivers and streams, forests, and grasslands) in terms of their ability to support a variety of populations.",
+      "LS.5.2.2 Use models to classify organisms within an ecosystem according to the function they serve: producers, consumers, or decomposers.",
+      "LS.5.2.3 Use models to infer the effects that may result from the interconnected relationships of plants and animals to their ecosystem."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "5",
+    "code": "LS.5.3",
+    "strand": "Heredity- Inheritance and Variation of Traits",
+    "description": "Understand some characteristics of an organism are inherited and other characteristics are acquired.",
+    "elements": [
+      "LS.5.3.1 Ask questions to compare instincts and learned behaviors.",
+      "LS.5.3.2 Ask questions to compare inherited and acquired traits."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "5",
+    "code": "ESS.5.1",
+    "strand": "Earth’s Systems",
+    "description": "Understand how Earth systems (hydrosphere and atmosphere) impact patterns of weather and climate.",
+    "elements": [
+      "ESS.5.1.1 Analyze and interpret data to compare daily and seasonal changes in weather conditions (including wind speed and direction, precipitation, and temperature) and patterns.",
+      "ESS.5.1.2 Analyze and interpret weather data to explain current and upcoming weather conditions (including severe weather such as hurricanes and tornadoes) in a given location.",
+      "ESS.5.1.3 Construct an explanation to summarize the ocean's influences on weather and climate in North Carolina.",
+      "ESS.5.1.4 Use models to explain how the sun’s energy drives the processes of the water cycle (including evaporation, transpiration, condensation, precipitation)."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "6",
+    "code": "PS.6.1",
+    "strand": "Matter and its Interactions",
+    "description": "Understand the structure, states, and physical properties of matter.",
+    "elements": [
+      "PS.6.1.1 Use models to illustrate that matter is made of atoms and elements, and are distinguished from each other by the types of atoms that compose them.",
+      "PS.6.1.2 Use models to explain the relationship between changes in thermal energy in a substance and the motion of its particles (including phase changes).",
+      "PS.6.1.3 Carry out investigations to compare the physical properties of pure substances that are independent of the amount of matter present including density, melting point, boiling point and solubility to properties that are dependent on the amount of matter present to include volume, mass and weight."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "6",
+    "code": "PS.6.2",
+    "strand": "Energy",
+    "description": "Understand characteristics of thermal and electrical energy transfer and interactions of matter and energy.",
+    "elements": [
+      "PS.6.2.1 Use models to compare the directional transfer of heat energy of matter through convection, radiation, and conduction.",
+      "PS.6.2.2 Use models to explain how the transfer of heat and resulting change of temperature impacts the behavior of matter to include expansion, and contraction.",
+      "PS.6.2.3 Carry out investigations to compare the transfer of thermal energy in insulated and non-insulated materials (examples could include insulated box, solar cooker, or styrofoam cup).",
+      "PS.6.2.4 Engage in argument from evidence to classify materials as conductors and insulators of energy (both thermal and electrical).",
+      "PS.6.2.5 Carry out investigations to explain the transfer of electrical energy in electrical circuits, to include how a circuit requires a complete loop through which an electrical current can pass."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "6",
+    "code": "PS.6.3",
+    "strand": "Waves and Their Applications in Technologies for Information Transfer",
+    "description": "Understand the properties of waves and the wavelike property of energy in seismic, electromagnetic (including visible light), and sound waves.",
+    "elements": [
+      "PS.6.3.1 Use models of a simple wave to explain wave properties in seismic, light, and sound waves that include: waves having a repeating pattern with a specific amplitude, frequency, and wavelength, and the amplitude of a wave is related to the energy of the wave.",
+      "PS.6.3.2 Carry out investigations to conclude the relationship between the electromagnetic spectrum (including visible light) and sight.",
+      "PS.6.3.3 Carry out investigations to conclude the relationship between sound waves (including rate of vibration, the medium through which vibrations travel) and hearing.",
+      "PS.6.3.4 Use models to explain that various waves (seismic, sound, electromagnetic, including visible light) are reflected, absorbed or transmitted through various materials."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "6",
+    "code": "LS.6.1",
+    "strand": "From Molecules to Organisms- Structures and Processes",
+    "description": "Understand the structures, processes, and behaviors of plants that enable them to survive and reproduce.",
+    "elements": [
+      "LS.6.1.1 Use models to explain how the processes of photosynthesis, respiration, and transpiration work together to meet the needs of plants.",
+      "LS.6.1.2 Construct an explanation to compare how vascular and nonvascular plants obtain, transport, and use nutrients and water necessary for survival.",
+      "LS.6.1.3 Use models to summarize structural adaptations, processes, and responses that flowering plants use for defense, survival and reproduction."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "6",
+    "code": "LS.6.2",
+    "strand": "Ecosystems- Interactions, Energy, and Dynamics",
+    "description": "Understand the flow of energy through ecosystems and the responses of populations to the biotic and abiotic factors in their environment.",
+    "elements": [
+      "LS.6.2.1 Use models to summarize how energy derived from the sun is used by plants to produce sugars (photosynthesis) and is transferred to consumers and decomposers.",
+      "LS.6.2.2 Analyze and interpret data to predict how the abiotic factors (such as temperature, water, sunlight, and soil quality) and biotic factors affect the ability of organisms to grow and survive in different biomes (freshwater, marine, temperate forest, rainforest, grassland, desert, taiga, tundra)."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "6",
+    "code": "ESS.6.1",
+    "strand": "Earth’s Place in the Universe",
+    "description": "Understand the earth/moon/sun system, and the properties, structures and predictable motions of celestial bodies in the Universe.",
+    "elements": [
+      "ESS.6.1.1 Use models to explain how the relative motion and relative position of the Sun, Earth and moon affect the seasons, tides, phases of the moon, and eclipses.",
+      "ESS.6.1.2 Analyze and interpret data to compare the planets in our solar system in terms of: size and gravitational force relative to Earth, surface and atmospheric features, relative distance from the sun, and ability to support life.",
+      "ESS.6.1.3 Use models to explain how the gravitational forces of the Sun and planets impact the structure of our solar system.",
+      "ESS.6.1.4 Analyze and interpret data from historical and ongoing space exploration to illustrate the size and scale of the components of our solar system, galaxy, and universe."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "6",
+    "code": "ESS.6.2",
+    "strand": "Earth’s Systems",
+    "description": "Understand the lithosphere and how interactions of constructive and destructive forces have resulted in changes in the surface of the earth over time.",
+    "elements": [
+      "ESS.6.2.1 Use models to summarize the structure of the earth, including the layers, the mantle and core based on the relative position, composition and density.",
+      "ESS.6.2.2 Construct an explanation to illustrate how the movement of lithospheric plates can create geologic landforms and cause major geologic events such as earthquakes and volcanic eruptions.",
+      "ESS.6.2.3 Use models to explain the rock cycle and its relationship to the formation of soil (including how different types of soil come from different types of rocks)."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "6",
+    "code": "ESS.6.3",
+    "strand": "Earth and Human Activity",
+    "description": "Understand the reciprocal relationship between the lithosphere and humans.",
+    "elements": [
+      "ESS.6.3.1 Engage in argument from evidence to explain that the good health of humans and the environment requires: monitoring of the lithosphere, maintaining soil quality and stewardship.",
+      "ESS.6.3.2 Obtain, evaluate, and communicate information to compare the implications of sustainable and unsustainable land use practices (including agriculture and deforestation) and the importance of stewardship."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "7",
+    "code": "PS.7.1",
+    "strand": "Motion and Stability- Forces and Interactions",
+    "description": "Understand motion, the effects of forces on motion, and the graphical representations of motion.",
+    "elements": [
+      "PS.7.1.1 Construct an explanation to summarize the motion of an object by its position, direction of motion, and speed in respect to some other object.",
+      "PS.7.1.2 Use models to illustrate the effects of balanced and unbalanced forces acting on an object (including friction, gravity, and magnetism).",
+      "PS.7.1.3 Analyze and interpret graphical data to summarize the motion of an object to show a change in position over a period of time.",
+      "PS.7.1.4 Analyze and interpret graphical data to summarize the motion of an object to show a change in distance over a period of time for constant speed and variable motion."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "7",
+    "code": "PS.7.2",
+    "strand": "Energy",
+    "description": "Understand forms of energy, energy transfer and transformation, and conservation in mechanical systems.",
+    "elements": [
+      "PS.7.2.1 Construct an explanation to summarize how kinetic and potential energy contribute to the mechanical energy of an object.",
+      "PS.7.2.2 Engage in argument from evidence to explain how energy can be transformed from one form to another, specifically potential energy and kinetic energy (models could include roller coasters, pendulums, or cars on ramps as examples).",
+      "PS.7.2.3 Carry out investigations to conclude that energy can be transferred from one system to another when two objects push or pull on each other over a distance (work) in a mechanical system using qualitative data.",
+      "PS.7.2.4 Carry out investigations to compare the efficiency of simple machines in relation to their advantages for particular purposes (to include inclined planes, pulleys, levers and wheel and axles) using qualitative data."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "7",
+    "code": "LS.7.1",
+    "strand": "From Molecules to Organisms- Structures and Processes",
+    "description": "Understand the processes, structures and functions of living organisms that enable them to survive, reproduce and carry out the basic functions of life.",
+    "elements": [
+      "LS.7.1.1 Construct an explanation to conclude how the structures of single-celled organisms carry out all of the basic functions of life including: Euglena, Amoeba, Paramecium, Volvox.",
+      "LS.7.1.2 Use models to explain how the relevant structures within cells (including cell membrane, cell wall, nucleus, mitochondria, chloroplasts, and vacuoles) function to support the life of plant, animal, and bacterial cells.",
+      "LS.7.1.3 Use models to explain how the hierarchical organization of multicellular organisms from cells to tissues to organs to systems to organisms functions to support life.",
+      "LS.7.1.4 Construct an explanation to summarize how the major systems of the human body interact with each other to support life (including digestion, respiration, reproduction, circulation, excretion, nervous)."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "7",
+    "code": "LS.7.2",
+    "strand": "Heredity- Inheritance and Variation of Traits",
+    "description": "Understand the relationship of the mechanisms of reproduction, patterns of inheritance, and potential variation among offspring.",
+    "elements": [
+      "LS.7.2.1 Construct an explanation supported with scientific evidence to summarize the role of genes on chromosomes as inherited cellular structures which contribute to an organism's traits (not to include the structure of DNA).",
+      "LS.7.2.2 Use models to explain how asexual reproduction results in offspring with identical genetic information while sexual reproduction results in offspring with genetic variation (not to include specific phases of mitosis and meiosis).",
+      "LS.7.2.3 Use models (Punnett squares) to infer and predict patterns of the inheritance of single genetic traits from parent to offspring (including dominant and recessive traits)."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "7",
+    "code": "ESS.7.1",
+    "strand": "Earth’s Systems",
+    "description": "Understand the atmosphere and how the cycling of water relates to Earth’s weather and climate.",
+    "elements": [
+      "ESS.7.1.1 Analyze and interpret data to compare the composition, properties and structure of Earth’s atmosphere to include: mixtures of gases and differences in temperature and pressure within layers.",
+      "ESS.7.1.2 Use models to explain how the energy of the Sun and Earth’s gravity drive the cycling of water, including changes of state, as it moves through multiple pathways in Earth’s systems and relates to weather patterns on Earth.",
+      "ESS.7.1.3 Analyze and interpret data to explain the relationship between the movement of air masses, high and low pressure systems, frontal boundaries and weather conditions that may result.",
+      "ESS.7.1.4 Use models to predict weather conditions based on observations (including clouds, air masses, fronts), measurements (wind speed and direction, air temperature, humidity and air pressure), weather maps, satellites and radar.",
+      "ESS.7.1.5 Use models to explain the influence of convection, global winds, and the jet stream on weather and climatic conditions."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "7",
+    "code": "ESS.7.2",
+    "strand": "Earth and Human Activity",
+    "description": "Understand the reciprocal relationship between the atmosphere and humans.",
+    "elements": [
+      "ESS.7.2.1 Engage in argument from evidence to explain that the good health of humans and environment requires: monitoring of the atmosphere, maintaining air quality and stewardship.",
+      "ESS.7.2.2 Analyze and interpret data to explain how changes in the structure and composition of the atmosphere affects the greenhouse effect and global temperatures.",
+      "ESS.7.2.3 Obtain, evaluate, and communicate information to explain the impacts on humans and mitigation strategies of potentially hazardous environmental factors (including air quality index, UV index, Heat Index, Wildfires) and storms (hurricanes, blizzards, tornadoes, severe thunderstorms, floods)."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "8",
+    "code": "PS.8.1",
+    "strand": "Matter and its Interactions",
+    "description": "Understand the properties of matter and changes that occur when matter interacts in open and closed systems.",
+    "elements": [
+      "PS.8.1.1 Construct an explanation to classify matter as elements, compounds, or mixtures based on how the atoms are arranged in various substances.",
+      "PS.8.1.2 Use models to illustrate the structure of atoms in terms of the protons, electrons, and neutrons (using the location, charges and comparative size of these subatomic particles), without consideration of isotopes, ions, and energy levels.",
+      "PS.8.1.3 Analyze and interpret data to explain how the physical properties of elements and their reactivity have been used to produce the current model of the Periodic Table of Elements.",
+      "PS.8.1.4 Construct an explanation to classify changes in matter as physical changes (including changes in size, shape, and state) or chemical changes that are the result of a chemical reaction (including changes in energy, color, formation of a gas or precipitate).",
+      "PS.8.1.5 Use models to illustrate how atoms are rearranged during a chemical reaction so that balanced chemical equations support the Law of Conservation of Mass (in both open and closed systems)."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "8",
+    "code": "LS.8.1",
+    "strand": "From Molecules to Organisms- Structures and Processes",
+    "description": "Understand the hazards caused by agents of diseases that affect living organisms.",
+    "elements": [
+      "LS.8.1.1 Construct an explanation to compare the basic characteristics of viruses, bacteria, fungi and parasites relating to the spread, treatment and prevention of disease.",
+      "LS.8.1.2 Analyze and interpret data to explain the difference between epidemic and pandemic as it relates to the spread, treatment and prevention of disease."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "8",
+    "code": "LS.8.2",
+    "strand": "Ecosystems- Interactions, Energy, and Dynamics",
+    "description": "Understand how organisms interact with and respond to the biotic and abiotic factors in their environment.",
+    "elements": [
+      "LS.8.2.1 Carry out investigations to explain how changing biotic and abiotic factors such as food, water, shelter, and space affect populations in an ecosystem.",
+      "LS.8.2.2 Construct an explanation to summarize the relationships among producers, consumers, and decomposers including the positive and negative consequences of such interactions including: coexistence and cooperation, competition (predator/prey), parasitism, and mutualism.",
+      "LS.8.2.3 Construct an explanation to summarize how food provides the energy and the building materials required for the growth and survival of all organisms (to include plants).",
+      "LS.8.2.4 Use models to explain how the flow of energy within food webs is interconnected with the cycling of matter (water and carbon)."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "8",
+    "code": "LS.8.3",
+    "strand": "Biological Evolution- Unity and Diversity",
+    "description": "Understand the evolution of organisms over time based on evidence and processes.",
+    "elements": [
+      "LS.8.3.1 Analyze and interpret data to infer evolutionary relationships by using evidence drawn from fossils and comparative anatomy.",
+      "LS.8.3.2 Use models to explain the process of natural selection, in which genetic variations in a population affect individuals’ likelihood of surviving and reproducing in its environment."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "8",
+    "code": "ESS.8.1",
+    "strand": "Earth’s Place in the Universe",
+    "description": "Understand the history of Earth and its life forms based on evidence of change recorded in fossil records and landforms.",
+    "elements": [
+      "ESS.8.1.1 Analyze and interpret data to conclude the relative age of Earth and relative age of rocks and fossils from index fossils and ordering of rock layers.",
+      "ESS.8.1.2 Engage in argument from evidence to explain the use of fossils, composition of sedimentary rocks, faults, and igneous rock formations found in rock layers as evidence of the history of the Earth and its life forms."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "8",
+    "code": "ESS.8.2",
+    "strand": "Earth’s Systems",
+    "description": "Understand the hydrosphere including freshwater, estuarine, ocean systems.",
+    "elements": [
+      "ESS.8.2.1 Use models to explain the structure of the hydrosphere including: water distribution on earth, local river basins, estuaries, and water availability.",
+      "ESS.8.2.2 Use models to explain how temperature and salinity drive major ocean currents and how these currents impact climate, ecosystems, and the distribution of nutrients, minerals, dissolved gases, and life forms."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "8",
+    "code": "ESS.8.3",
+    "strand": "Earth and Human Activity",
+    "description": "Understand the reciprocal relationship between the hydrosphere and humans.",
+    "elements": [
+      "ESS.8.3.1 Analyze and interpret data to predict the safety and potability of water supplies in North Carolina based on physical and biological factors, including: temperature, dissolved oxygen, pH, nitrates and phosphates, turbidity, and bio-indicators.",
+      "ESS.8.3.2 Engage in argument from evidence to explain that the good health of humans and the environment requires: monitoring of the hydrosphere, water quality standards, methods of water treatment, maintaining safe water quality, and stewardship."
+    ]
+  },
+  {
+    "state": "NC",
+    "subject": "science",
+    "grade": "8",
+    "code": "ESS.8.4",
+    "strand": "Earth and Human Activity",
+    "description": "Understand the environmental implications associated with the various methods of obtaining, managing, and using energy resources.",
+    "elements": [
+      "ESS.8.4.1 Construct an explanation to classify the primary sources of energy as either renewable (Geothermal, Biomass, Solar, Wind, Hydroelectric) or nonrenewable (Coal, Petroleum, Natural Gas, Nuclear).",
+      "ESS.8.4.2 Engage in argument from evidence to explain the environmental consequences of the various methods of obtaining, transforming, and distributing energy.",
+      "ESS.8.4.3 Analyze and interpret data to illustrate the relationship between human activities and global temperatures since industrialization.",
+      "ESS.8.4.4 Obtain, evaluate, and communicate information to compare the long term implications of the use of renewable and nonrenewable energy resources and the importance of stewardship and conservation."
+    ]
+  }
+]
