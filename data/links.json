@@ -21782,6 +21782,5126 @@
       "confidence": "moderate",
       "rationale": "Cross-grade (Ohio 4). Atoms conserved through a reaction is Ohio's conservation of matter; Georgia anchors its equivalent here.",
       "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-001",
+      "subject": "social_studies",
+      "oh": "8.SS.2",
+      "state": "AL",
+      "code": "SS24.2.1a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Reasons for settling the colonies is Ohio's exploration and colonisation of North America, stated simply.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-002",
+      "subject": "social_studies",
+      "oh": "4.SS.18",
+      "state": "AL",
+      "code": "SS24.2.1b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 4). American principles in the Declaration and Constitution is Ohio's limited government protecting citizens' rights.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-003",
+      "subject": "social_studies",
+      "oh": "4.SS.19",
+      "state": "AL",
+      "code": "SS24.2.2a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 4). Comparing state and national government is Ohio's pairing of the state and federal constitutions as written plans.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-004",
+      "subject": "social_studies",
+      "oh": "3.SS.13",
+      "state": "AL",
+      "code": "SS24.2.2a",
+      "confidence": "partial",
+      "rationale": "Cross-grade (Ohio 3). Ohio's differing structures of local government is the nearest elementary treatment.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-005",
+      "subject": "social_studies",
+      "oh": "4.SS.16",
+      "state": "AL",
+      "code": "SS24.2.3",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 4). Explaining voting is the mechanism of Ohio's informed civic participation.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-006",
+      "subject": "social_studies",
+      "oh": "5.SS.17",
+      "state": "AL",
+      "code": "SS24.2.4a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). Imports and exports are Ohio's specialisation and interdependence between regions.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-007",
+      "subject": "social_studies",
+      "oh": "3.SS.16",
+      "state": "AL",
+      "code": "SS24.2.5",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 3). Scarcity driving choice is Ohio's standard directly; Alabama frames it as supply and demand.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-008",
+      "subject": "social_studies",
+      "oh": "6.SS.15",
+      "state": "AL",
+      "code": "SS24.2.5",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 6). Ohio's supply and demand determining price is the later, fuller treatment.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-009",
+      "subject": "social_studies",
+      "oh": "2.SS.14",
+      "state": "AL",
+      "code": "SS24.2.6",
+      "confidence": "strong",
+      "rationale": "Same grade. Natural resources used in the economy is Ohio's resources being used in various ways.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-010",
+      "subject": "social_studies",
+      "oh": "3.SS.5",
+      "state": "AL",
+      "code": "SS24.2.6",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 3). Ohio ties natural resources to the daily life of a community.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-011",
+      "subject": "social_studies",
+      "oh": "2.SS.5",
+      "state": "AL",
+      "code": "SS24.2.7",
+      "confidence": "strong",
+      "rationale": "Same grade. Reading continents, oceans and the Equator from a map is Ohio's maps and their symbols.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-012",
+      "subject": "social_studies",
+      "oh": "3.SS.4",
+      "state": "AL",
+      "code": "SS24.2.8",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 3). Physical versus political maps is Ohio's standard almost word for word.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-013",
+      "subject": "social_studies",
+      "oh": "5.SS.6",
+      "state": "AL",
+      "code": "SS24.2.9a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). Describing regions of state and nation is Ohio's determining regions from landform and climate.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-014",
+      "subject": "social_studies",
+      "oh": "4.SS.11",
+      "state": "AL",
+      "code": "SS24.2.9a",
+      "confidence": "partial",
+      "rationale": "Cross-grade (Ohio 4). Ohio's North, South and West regions are a worked example of the same idea.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-015",
+      "subject": "social_studies",
+      "oh": "5.SS.5",
+      "state": "AL",
+      "code": "SS24.2.10a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). Gridlines for locating places is Ohio's latitude and longitude, introduced earlier.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-016",
+      "subject": "social_studies",
+      "oh": "4.SS.9",
+      "state": "AL",
+      "code": "SS24.2.10a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 4). Ohio's map scale and directions covers the same map-reading skill.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-017",
+      "subject": "social_studies",
+      "oh": "2.SS.1",
+      "state": "AL",
+      "code": "SS24.2.11",
+      "confidence": "strong",
+      "rationale": "Same grade. Year, decade and century is Ohio's showing time graphically on calendars and timelines.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-018",
+      "subject": "social_studies",
+      "oh": "3.SS.1",
+      "state": "AL",
+      "code": "SS24.2.11",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 3). Ohio's timelines organised by years, decades and centuries names the same segments.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-019",
+      "subject": "social_studies",
+      "oh": "3.SS.2",
+      "state": "AL",
+      "code": "SS24.2.12",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 3). Describing events using primary sources is Ohio's primary and secondary sources showing change over time.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-020",
+      "subject": "social_studies",
+      "oh": "2.SS.2",
+      "state": "AL",
+      "code": "SS24.2.12",
+      "confidence": "moderate",
+      "rationale": "Same grade. Ohio's artifacts, maps and photographs are the elementary form of the same evidence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-021",
+      "subject": "social_studies",
+      "oh": "2.SS.4",
+      "state": "AL",
+      "code": "SS24.2.13a",
+      "confidence": "strong",
+      "rationale": "Same grade. Significant figures who shaped the nation is Ohio's biographies showing how people's actions shaped the world.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-022",
+      "subject": "social_studies",
+      "oh": "2.SS.4",
+      "state": "AL",
+      "code": "SS24.2.13b",
+      "confidence": "moderate",
+      "rationale": "Same grade. Holidays and commemorations mark the people and events Ohio's biography standard covers.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-023",
+      "subject": "social_studies",
+      "oh": "2.SS.4",
+      "state": "AL",
+      "code": "SS24.2.13d",
+      "confidence": "partial",
+      "rationale": "Same grade. American symbols and monuments commemorate the figures Ohio's standard treats.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-024",
+      "subject": "social_studies",
+      "oh": "4.SS.13",
+      "state": "AL",
+      "code": "SS24.2.14a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 4). Groups migrating to and within the United States is Ohio's population becoming more diverse over time.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-025",
+      "subject": "social_studies",
+      "oh": "5.SS.9",
+      "state": "AL",
+      "code": "SS24.2.14a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). Ohio's factors causing people to move is the mechanism behind Alabama's migration.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-026",
+      "subject": "social_studies",
+      "oh": "2.SS.8",
+      "state": "AL",
+      "code": "SS24.2.15",
+      "confidence": "moderate",
+      "rationale": "Same grade. Legends, stories and songs are how the unique cultures of Ohio's standard develop and are transmitted.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-027",
+      "subject": "social_studies",
+      "oh": "5.SS.5",
+      "state": "AL",
+      "code": "SS24.3.1a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 5). Equator, Prime Meridian and the tropics are the reference lines of Ohio's latitude and longitude.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-028",
+      "subject": "social_studies",
+      "oh": "5.SS.5",
+      "state": "AL",
+      "code": "SS24.3.1b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 5). Locating points by coordinates is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-029",
+      "subject": "social_studies",
+      "oh": "4.SS.9",
+      "state": "AL",
+      "code": "SS24.3.1c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 4). Using map scale to calculate distance is Ohio's map scale and directions.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-030",
+      "subject": "social_studies",
+      "oh": "5.SS.4",
+      "state": "AL",
+      "code": "SS24.3.2a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 5). Interpreting thematic maps to compare places is Ohio's geographic tools for gathering and reporting information.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-031",
+      "subject": "social_studies",
+      "oh": "5.SS.6",
+      "state": "AL",
+      "code": "SS24.3.2b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 5). Describing regions by geographic feature and resource is Ohio's regions determined from landform and climate data.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-032",
+      "subject": "social_studies",
+      "oh": "3.SS.5",
+      "state": "AL",
+      "code": "SS24.3.2b",
+      "confidence": "moderate",
+      "rationale": "Same grade. Ohio ties natural resources to the character of a community.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-033",
+      "subject": "social_studies",
+      "oh": "5.SS.4",
+      "state": "AL",
+      "code": "SS24.3.2c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). Identifying river systems and their origins uses Ohio's geographic tools.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-034",
+      "subject": "social_studies",
+      "oh": "3.SS.5",
+      "state": "AL",
+      "code": "SS24.3.3a",
+      "confidence": "moderate",
+      "rationale": "Same grade. The economic significance of parks connects to Ohio's industry and natural resources shaping daily life.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-035",
+      "subject": "social_studies",
+      "oh": "2.SS.4",
+      "state": "AL",
+      "code": "SS24.3.4",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 2). Landmarks and monuments commemorate the people and events of Ohio's biography standard.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-036",
+      "subject": "social_studies",
+      "oh": "5.SS.7",
+      "state": "AL",
+      "code": "SS24.3.5",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). The impact of natural disasters is Ohio's physical environment influencing human activity.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-037",
+      "subject": "social_studies",
+      "oh": "3.SS.6",
+      "state": "AL",
+      "code": "SS24.3.6",
+      "confidence": "strong",
+      "rationale": "Same grade. Positive and negative human effect on the environment is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-038",
+      "subject": "social_studies",
+      "oh": "4.SS.12",
+      "state": "AL",
+      "code": "SS24.3.6",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 4). Ohio's modification of the environment with positive and negative consequences is the same content.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-039",
+      "subject": "social_studies",
+      "oh": "7.SS.1",
+      "state": "AL",
+      "code": "SS24.3.7",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). The roles of archaeologists and anthropologists is Ohio's historians and archaeologists describing events from evidence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-040",
+      "subject": "social_studies",
+      "oh": "5.SS.8",
+      "state": "AL",
+      "code": "SS24.3.8a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 5). Pre-contact cultures of the Southeast is Ohio's American Indians developing unique cultures and ways of life.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-041",
+      "subject": "social_studies",
+      "oh": "5.SS.2",
+      "state": "AL",
+      "code": "SS24.3.8b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 5). Alabama's Mississippian-period tribes are named in Ohio's early Indian civilisations.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-042",
+      "subject": "social_studies",
+      "oh": "5.SS.8",
+      "state": "AL",
+      "code": "SS24.3.8b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 5). Characteristics of different tribes is Ohio's varied American Indian ways of life.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-043",
+      "subject": "social_studies",
+      "oh": "5.SS.3",
+      "state": "AL",
+      "code": "SS24.3.9a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 5). Tracing routes of early explorers is Ohio's European exploration of the 1400s-1600s.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-044",
+      "subject": "social_studies",
+      "oh": "5.SS.3",
+      "state": "AL",
+      "code": "SS24.3.9b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 5). De Soto's expedition is one of the explorations Ohio's standard covers.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-045",
+      "subject": "social_studies",
+      "oh": "8.SS.3",
+      "state": "AL",
+      "code": "SS24.3.10",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Conflict between Europeans and Indigenous peoples is Ohio's competition for territory leading to conflict.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-046",
+      "subject": "social_studies",
+      "oh": "5.SS.3",
+      "state": "AL",
+      "code": "SS24.3.10",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). Ohio's lasting effects of colonisation include these interactions.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-047",
+      "subject": "social_studies",
+      "oh": "5.SS.3",
+      "state": "AL",
+      "code": "SS24.3.11a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). French settlements in early Alabama are instances of Ohio's colonisation.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-048",
+      "subject": "social_studies",
+      "oh": "8.SS.2",
+      "state": "AL",
+      "code": "SS24.4.1a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Mapping European settlements and Indigenous nations is Ohio's colonisation of an already-inhabited North America.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-049",
+      "subject": "social_studies",
+      "oh": "4.SS.11",
+      "state": "AL",
+      "code": "SS24.4.2",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 4). Comparing colonial regions by physical geography parallels Ohio's regions developing differently.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-050",
+      "subject": "social_studies",
+      "oh": "8.SS.4",
+      "state": "AL",
+      "code": "SS24.4.3a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Triangular trade and the Middle Passage is Ohio's race-based slavery and forced migration of Africans.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-051",
+      "subject": "social_studies",
+      "oh": "7.SS.9",
+      "state": "AL",
+      "code": "SS24.4.3a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). Ohio's trans-Saharan and Atlantic slave trade is the wider frame.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-052",
+      "subject": "social_studies",
+      "oh": "8.SS.2",
+      "state": "AL",
+      "code": "SS24.4.4a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Individuals who established the colonies belong to Ohio's colonisation standard.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-053",
+      "subject": "social_studies",
+      "oh": "8.SS.3",
+      "state": "AL",
+      "code": "SS24.4.5a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). The French and Indian War reshaping power and land claims is Ohio's competition for control of territory.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-054",
+      "subject": "social_studies",
+      "oh": "8.SS.5",
+      "state": "AL",
+      "code": "SS24.4.5b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Colonial protest against British policy is Ohio's dissatisfaction with colonial rule.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-055",
+      "subject": "social_studies",
+      "oh": "8.SS.6",
+      "state": "AL",
+      "code": "SS24.4.6a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Contributions of groups and individuals to the Revolution is Ohio's significant figures influencing its course.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-056",
+      "subject": "social_studies",
+      "oh": "8.SS.5",
+      "state": "AL",
+      "code": "SS24.4.6c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). The principles of the Declaration are Ohio's Enlightenment ideas leading to independence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-057",
+      "subject": "social_studies",
+      "oh": "4.SS.4",
+      "state": "AL",
+      "code": "SS24.4.6c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 4). Ohio's colonies uniting around liberty and justice is the elementary treatment.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-058",
+      "subject": "social_studies",
+      "oh": "8.SS.10",
+      "state": "AL",
+      "code": "SS24.4.6d",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). The Treaty of Paris and Pinckney's Treaty setting boundaries is Ohio's territory added by treaty.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-059",
+      "subject": "social_studies",
+      "oh": "8.SS.22",
+      "state": "AL",
+      "code": "SS24.4.7a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). The three branches established by the Constitution is Ohio's federal republic framework.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-060",
+      "subject": "social_studies",
+      "oh": "8.SS.23",
+      "state": "AL",
+      "code": "SS24.4.7b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Why the Bill of Rights was added is Ohio's Constitution protecting rights by limiting government.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-061",
+      "subject": "social_studies",
+      "oh": "8.SS.11",
+      "state": "AL",
+      "code": "SS24.4.8a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). The Federal Road opening territory to settlers is Ohio's westward expansion.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-062",
+      "subject": "social_studies",
+      "oh": "8.SS.11",
+      "state": "AL",
+      "code": "SS24.4.9a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). The Creek War within the War of 1812 belongs to Ohio's frontier conflict and expansion.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-063",
+      "subject": "social_studies",
+      "oh": "8.SS.10",
+      "state": "AL",
+      "code": "SS24.4.11a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). States admitted between 1812 and 1860 is Ohio's territory added through treaties and purchases.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-064",
+      "subject": "social_studies",
+      "oh": "8.SS.11",
+      "state": "AL",
+      "code": "SS24.4.11a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Admission of new states is the political face of Ohio's westward expansion.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-065",
+      "subject": "social_studies",
+      "oh": "8.SS.25",
+      "state": "AL",
+      "code": "SS24.4.12a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Trades and occupations before 1860 reflect Ohio's changing means of production.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-066",
+      "subject": "social_studies",
+      "oh": "8.SS.4",
+      "state": "AL",
+      "code": "SS24.4.12b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). The conditions of enslaved people is Ohio's practice of race-based slavery.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-067",
+      "subject": "social_studies",
+      "oh": "8.SS.11",
+      "state": "AL",
+      "code": "SS24.4.12c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Indian Removal and the Second Creek War are Ohio's westward expansion and its conflicts.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-068",
+      "subject": "social_studies",
+      "oh": "8.SS.12",
+      "state": "AL",
+      "code": "SS24.4.13a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Missouri Compromise to Lincoln's election is Ohio's disputes over federalism and sectionalism.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-069",
+      "subject": "social_studies",
+      "oh": "8.SS.12",
+      "state": "AL",
+      "code": "SS24.4.13b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Abolitionists are central to Ohio's sectional dispute.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-070",
+      "subject": "social_studies",
+      "oh": "8.SS.4",
+      "state": "AL",
+      "code": "SS24.4.13b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Self-liberated people opposing slavery sits inside Ohio's slavery standard.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-071",
+      "subject": "social_studies",
+      "oh": "8.SS.4",
+      "state": "AL",
+      "code": "SS24.4.13c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). The Clotilda is an instance of Ohio's forced migration of Africans, after it was outlawed.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-072",
+      "subject": "social_studies",
+      "oh": "8.SS.12",
+      "state": "AL",
+      "code": "SS24.4.13d",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Formation of the Confederacy is the outcome of Ohio's federalism dispute.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-073",
+      "subject": "social_studies",
+      "oh": "8.SS.13",
+      "state": "AL",
+      "code": "SS24.4.14a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Economic and military contributions to the Civil War is Ohio's key events influencing its course and outcome.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-074",
+      "subject": "social_studies",
+      "oh": "8.SS.13",
+      "state": "AL",
+      "code": "SS24.4.14b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Significant battles are Ohio's key events of the Civil War.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-075",
+      "subject": "social_studies",
+      "oh": "8.SS.13",
+      "state": "AL",
+      "code": "SS24.4.14c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). How the war affected people, including the end of slavery, is Ohio's outcome of the Civil War.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-076",
+      "subject": "social_studies",
+      "oh": "8.SS.13",
+      "state": "AL",
+      "code": "SS24.4.14d",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). The war's conclusion and Lincoln's assassination are Ohio's key events and figures.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-077",
+      "subject": "social_studies",
+      "oh": "8.SS.14",
+      "state": "AL",
+      "code": "SS24.4.15a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Political change during Reconstruction is Ohio's Reconstruction standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-078",
+      "subject": "social_studies",
+      "oh": "8.SS.14",
+      "state": "AL",
+      "code": "SS24.4.15b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Reconstruction's effect on education and social institutions is Ohio's changes of the period.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-079",
+      "subject": "social_studies",
+      "oh": "8.SS.14",
+      "state": "AL",
+      "code": "SS24.4.15d",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Alabamians shaping the state during Reconstruction are the significant figures Ohio names generally.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-080",
+      "subject": "social_studies",
+      "oh": "8.SS.25",
+      "state": "AL",
+      "code": "SS24.4.16a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Industry, trade and farming changing after 1877 is Ohio's Industrial Revolution changing production.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-081",
+      "subject": "social_studies",
+      "oh": "8.SS.11",
+      "state": "AL",
+      "code": "SS24.4.17a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Territorial expansion and the transcontinental railroad is Ohio's westward expansion and industrial development.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-082",
+      "subject": "social_studies",
+      "oh": "8.SS.16",
+      "state": "AL",
+      "code": "SS24.4.17a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Ohio ties expansion to the availability of natural resources.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-083",
+      "subject": "social_studies",
+      "oh": "8.SS.10",
+      "state": "AL",
+      "code": "SS24.4.17b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). States admitted and territories acquired 1865-1900 is Ohio's territory added by treaty and purchase.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-084",
+      "subject": "social_studies",
+      "oh": "4.SS.21",
+      "state": "AL",
+      "code": "SS24.5.1a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 4). Entrepreneurs and inventors shaping society is Ohio's entrepreneurs organising resources and taking risks.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-085",
+      "subject": "social_studies",
+      "oh": "2.SS.3",
+      "state": "AL",
+      "code": "SS24.5.1a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 2). Ohio's science and technology changing daily life is the elementary form.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-086",
+      "subject": "social_studies",
+      "oh": "8.SS.17",
+      "state": "AL",
+      "code": "SS24.5.1c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Urban growth is Ohio's movement of people producing new patterns of settlement.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-087",
+      "subject": "social_studies",
+      "oh": "8.SS.20",
+      "state": "AL",
+      "code": "SS24.5.2a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). The suffrage movement is Ohio's active participation in civic groups attaining collective goals.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-088",
+      "subject": "social_studies",
+      "oh": "4.SS.17",
+      "state": "AL",
+      "code": "SS24.5.3a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 4). Legislation extending educational opportunity is Ohio's laws providing benefits and assigning responsibilities.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-089",
+      "subject": "social_studies",
+      "oh": "8.SS.25",
+      "state": "AL",
+      "code": "SS24.5.3b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Labour unions changing conditions responds to Ohio's Industrial Revolution changing the means of production.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-090",
+      "subject": "social_studies",
+      "oh": "2.SS.4",
+      "state": "AL",
+      "code": "SS24.5.3c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 2). Helen Keller's contribution is Ohio's biographies showing how a person's actions shaped the world.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-091",
+      "subject": "social_studies",
+      "oh": "4.SS.13",
+      "state": "AL",
+      "code": "SS24.5.4a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 4). Immigrant experience is Ohio's population becoming more diverse over time.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-092",
+      "subject": "social_studies",
+      "oh": "5.SS.9",
+      "state": "AL",
+      "code": "SS24.5.4b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 5). The Great Migration is Ohio's political, environmental, social and economic factors causing people to move.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-093",
+      "subject": "social_studies",
+      "oh": "8.SS.17",
+      "state": "AL",
+      "code": "SS24.5.4b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Ohio's new patterns of settlement is the same movement seen from its result.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-094",
+      "subject": "social_studies",
+      "oh": "5.SS.12",
+      "state": "AL",
+      "code": "SS24.5.9a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 5). Totalitarianism versus democracy is Ohio's categories for the relationship between government and citizen.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-095",
+      "subject": "social_studies",
+      "oh": "6.SS.10",
+      "state": "AL",
+      "code": "SS24.5.9a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 6). Ohio's monarchies, theocracies, dictatorships and democracies is the same classification.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-096",
+      "subject": "social_studies",
+      "oh": "4.SS.12",
+      "state": "AL",
+      "code": "SS24.5.7b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 4). The Dust Bowl is Ohio's environmental modification producing negative consequences.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-097",
+      "subject": "social_studies",
+      "oh": "8.SS.26",
+      "state": "AL",
+      "code": "SS24.5.8a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). New Deal reformers acted through Ohio's government impact on markets by spending and regulation.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-098",
+      "subject": "social_studies",
+      "oh": "8.SS.26",
+      "state": "AL",
+      "code": "SS24.5.8b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). New Deal projects are Ohio's government spending shaping a market.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-099",
+      "subject": "social_studies",
+      "oh": "5.SS.14",
+      "state": "AL",
+      "code": "SS24.5.7a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). The Depression's impact is Ohio's choices having present and future consequences.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-100",
+      "subject": "social_studies",
+      "oh": "3.SS.5",
+      "state": "AL",
+      "code": "SS24.5.6a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 3). Boll weevil and cotton prices is Ohio's agriculture shaping daily life in a community.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-101",
+      "subject": "social_studies",
+      "oh": "5.SS.12",
+      "state": "AL",
+      "code": "SS24.5.13",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). Containing communism rests on Ohio's categories of government and their relationship to citizens.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-102",
+      "subject": "social_studies",
+      "oh": "2.SS.3",
+      "state": "AL",
+      "code": "SS24.5.14b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 2). Space-race innovation is Ohio's science and technology changing daily life.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-103",
+      "subject": "social_studies",
+      "oh": "8.SS.20",
+      "state": "AL",
+      "code": "SS24.5.12a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). How the Civil Rights Movement sought change is Ohio's participation in social and civic groups to attain goals.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-104",
+      "subject": "social_studies",
+      "oh": "8.SS.20",
+      "state": "AL",
+      "code": "SS24.5.12b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). The chronology of civil rights events records that collective action.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-105",
+      "subject": "social_studies",
+      "oh": "4.SS.15",
+      "state": "AL",
+      "code": "SS24.5.12a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 4). Ohio's opportunities to act in and influence government is the civic frame.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-106",
+      "subject": "social_studies",
+      "oh": "8.SS.23",
+      "state": "AL",
+      "code": "SS24.5.18",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Legislation expanding rights is Ohio's Constitution protecting citizens by limiting government.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-107",
+      "subject": "social_studies",
+      "oh": "8.SS.17",
+      "state": "AL",
+      "code": "SS24.5.11b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Decline of farming and urban growth is Ohio's new patterns of settlement and land use.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-108",
+      "subject": "social_studies",
+      "oh": "5.SS.17",
+      "state": "AL",
+      "code": "SS24.5.16",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 5). Participation in global markets is Ohio's interdependence through specialisation and trade.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-109",
+      "subject": "social_studies",
+      "oh": "2.SS.3",
+      "state": "AL",
+      "code": "SS24.5.17",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 2). Weighing the benefits and drawbacks of technology is Ohio's technology changing daily life.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-110",
+      "subject": "social_studies",
+      "oh": "5.SS.8",
+      "state": "AL",
+      "code": "SS24.6.1a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 5). Southeastern Woodland political and social structures is Ohio's American Indian cultures and ways of life.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-111",
+      "subject": "social_studies",
+      "oh": "7.SS.6",
+      "state": "AL",
+      "code": "SS24.6.2a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). The Renaissance influencing exploration is Ohio's Renaissance introducing new ways of thinking.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-112",
+      "subject": "social_studies",
+      "oh": "7.SS.7",
+      "state": "AL",
+      "code": "SS24.6.2a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). The Reformation's influence is Ohio's Reformation standard.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-113",
+      "subject": "social_studies",
+      "oh": "7.SS.10",
+      "state": "AL",
+      "code": "SS24.6.2b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Routes of European expeditions is Ohio's exploration, conquest and colonisation.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-114",
+      "subject": "social_studies",
+      "oh": "5.SS.3",
+      "state": "AL",
+      "code": "SS24.6.2b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). Ohio's European exploration of the 1400s-1600s covers the same voyages.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-115",
+      "subject": "social_studies",
+      "oh": "8.SS.2",
+      "state": "AL",
+      "code": "SS24.6.2c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Mapping areas of European colonisation is Ohio's colonisation of North America.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-116",
+      "subject": "social_studies",
+      "oh": "8.SS.3",
+      "state": "AL",
+      "code": "SS24.6.3a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Colonist-Indigenous interaction and conflict is Ohio's competition for territory and resources.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-117",
+      "subject": "social_studies",
+      "oh": "4.SS.11",
+      "state": "AL",
+      "code": "SS24.6.4a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 4). Climate and geography shaping colonial economies parallels Ohio's regions developing differently.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-118",
+      "subject": "social_studies",
+      "oh": "8.SS.16",
+      "state": "AL",
+      "code": "SS24.6.4a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Ohio ties economic identity to available natural resources.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-119",
+      "subject": "social_studies",
+      "oh": "8.SS.2",
+      "state": "AL",
+      "code": "SS24.6.4b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Forms of colonial government belong to Ohio's colonisation standard.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-120",
+      "subject": "social_studies",
+      "oh": "8.SS.6",
+      "state": "AL",
+      "code": "SS24.6.4c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Colonists seeking change are Ohio's significant figures in American history.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-121",
+      "subject": "social_studies",
+      "oh": "8.SS.2",
+      "state": "AL",
+      "code": "SS24.6.5a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Limits on religious freedom in the colonies sits inside Ohio's colonisation.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-122",
+      "subject": "social_studies",
+      "oh": "8.SS.5",
+      "state": "AL",
+      "code": "SS24.6.5c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). The Great Awakening fed the dissatisfaction with colonial rule Ohio describes.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-123",
+      "subject": "social_studies",
+      "oh": "8.SS.4",
+      "state": "AL",
+      "code": "SS24.6.6a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Slavery compared across colonial regions is Ohio's race-based slavery standard.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-124",
+      "subject": "social_studies",
+      "oh": "8.SS.4",
+      "state": "AL",
+      "code": "SS24.6.6b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Slave codes are the legal machinery of Ohio's race-based slavery.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-125",
+      "subject": "social_studies",
+      "oh": "8.SS.4",
+      "state": "AL",
+      "code": "SS24.6.6c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Resistance by enslaved people and abolitionists belongs to Ohio's slavery standard.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-126",
+      "subject": "social_studies",
+      "oh": "8.SS.3",
+      "state": "AL",
+      "code": "SS24.6.7a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). The French and Indian War as catalyst is Ohio's conflict over control of territory.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-127",
+      "subject": "social_studies",
+      "oh": "8.SS.5",
+      "state": "AL",
+      "code": "SS24.6.7b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Colonial activism and protest is Ohio's dissatisfaction with colonial rule.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-128",
+      "subject": "social_studies",
+      "oh": "8.SS.5",
+      "state": "AL",
+      "code": "SS24.6.7c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Taxation and trade effects are the grievances behind Ohio's move to independence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-129",
+      "subject": "social_studies",
+      "oh": "8.SS.5",
+      "state": "AL",
+      "code": "SS24.6.7d",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Patriot and Loyalist arguments are the debate Ohio's standard describes.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-130",
+      "subject": "social_studies",
+      "oh": "8.SS.5",
+      "state": "AL",
+      "code": "SS24.6.7e",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). The principles of the Declaration are Ohio's Enlightenment ideas leading to independence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-131",
+      "subject": "social_studies",
+      "oh": "8.SS.7",
+      "state": "AL",
+      "code": "SS24.6.8a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Hardship and sacrifice during the war belongs to Ohio's course and outcome of the Revolution.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-132",
+      "subject": "social_studies",
+      "oh": "8.SS.6",
+      "state": "AL",
+      "code": "SS24.6.8b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Contributions to victory is Ohio's significant figures influencing the outcome.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-133",
+      "subject": "social_studies",
+      "oh": "8.SS.6",
+      "state": "AL",
+      "code": "SS24.6.8c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Indigenous involvement in the war is part of Ohio's key events and figures.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-134",
+      "subject": "social_studies",
+      "oh": "8.SS.6",
+      "state": "AL",
+      "code": "SS24.6.8d",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Loyalist allegiance belongs to Ohio's account of the Revolution.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-135",
+      "subject": "social_studies",
+      "oh": "8.SS.6",
+      "state": "AL",
+      "code": "SS24.6.9a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Political and military contributions of the Founders is Ohio's significant figures standard.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-136",
+      "subject": "social_studies",
+      "oh": "8.SS.7",
+      "state": "AL",
+      "code": "SS24.6.9b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). The Treaty of Paris is the outcome of Ohio's Revolution: national independence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-137",
+      "subject": "social_studies",
+      "oh": "8.SS.22",
+      "state": "AL",
+      "code": "SS24.6.10a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Unitary, federal and confederal division of power is Ohio's federal republic framework.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-138",
+      "subject": "social_studies",
+      "oh": "4.SS.5",
+      "state": "AL",
+      "code": "SS24.6.10b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 4). The Northwest Land Ordinances is Ohio's Northwest Ordinance incorporating democratic ideals.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-139",
+      "subject": "social_studies",
+      "oh": "8.SS.8",
+      "state": "AL",
+      "code": "SS24.6.11a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). The Constitutional Convention is Ohio's debate over adopting the Constitution.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-140",
+      "subject": "social_studies",
+      "oh": "8.SS.8",
+      "state": "AL",
+      "code": "SS24.6.11b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Ratification arguments are Ohio's debate over adoption.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-141",
+      "subject": "social_studies",
+      "oh": "8.SS.8",
+      "state": "AL",
+      "code": "SS24.6.11c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Groups seeking inclusion belong to Ohio's constitutional debate.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-142",
+      "subject": "social_studies",
+      "oh": "7.SS.18",
+      "state": "AL",
+      "code": "SS24.6.12a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). Magna Carta and the English Bill of Rights sit in Ohio's consolidation of power and emergence of nation-states.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-143",
+      "subject": "social_studies",
+      "oh": "8.SS.5",
+      "state": "AL",
+      "code": "SS24.6.12b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Enlightenment thinkers on the purpose of government is Ohio's Enlightenment ideas.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-144",
+      "subject": "social_studies",
+      "oh": "5.SS.8",
+      "state": "AL",
+      "code": "SS24.6.12c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). The Iroquois Confederacy's representative government is one of Ohio's distinct American Indian ways of life.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-145",
+      "subject": "social_studies",
+      "oh": "4.SS.19",
+      "state": "AL",
+      "code": "SS24.6.13a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 4). A written constitution as a plan for government is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-146",
+      "subject": "social_studies",
+      "oh": "8.SS.23",
+      "state": "AL",
+      "code": "SS24.6.13a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Limited government protecting rights is Ohio's Constitution limiting the powers of government.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-147",
+      "subject": "social_studies",
+      "oh": "8.SS.22",
+      "state": "AL",
+      "code": "SS24.6.13b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). The primary functions of government is Ohio's framework for a national government.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-148",
+      "subject": "social_studies",
+      "oh": "4.SS.16",
+      "state": "AL",
+      "code": "SS24.6.13c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 4). Citizenship and civic participation is Ohio's informed and reasoned civic participation.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-149",
+      "subject": "social_studies",
+      "oh": "8.SS.22",
+      "state": "AL",
+      "code": "SS24.6.14",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Selecting political leaders is set out in Ohio's constitutional framework.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-150",
+      "subject": "social_studies",
+      "oh": "8.SS.22",
+      "state": "AL",
+      "code": "SS24.6.15a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Federalism balancing national and state power is Ohio's federal republic.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-151",
+      "subject": "social_studies",
+      "oh": "8.SS.12",
+      "state": "AL",
+      "code": "SS24.6.15a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Ohio's disputes over the nature of federalism is the same tension, later.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-152",
+      "subject": "social_studies",
+      "oh": "8.SS.22",
+      "state": "AL",
+      "code": "SS24.6.16a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Three branches and checks and balances is Ohio's national government framework.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-153",
+      "subject": "social_studies",
+      "oh": "4.SS.18",
+      "state": "AL",
+      "code": "SS24.6.16a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 4). Ohio's system of limited government is the elementary treatment.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-154",
+      "subject": "social_studies",
+      "oh": "8.SS.22",
+      "state": "AL",
+      "code": "SS24.6.16b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Key positions in each branch are defined by Ohio's constitutional framework.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-155",
+      "subject": "social_studies",
+      "oh": "8.SS.23",
+      "state": "AL",
+      "code": "SS24.6.17a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Origins of the rights in the Bill of Rights is Ohio's Constitution protecting rights by limiting government.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-156",
+      "subject": "social_studies",
+      "oh": "8.SS.9",
+      "state": "AL",
+      "code": "SS24.6.17b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Marbury v. Madison belongs to Ohio's early administrations establishing a strong federal government.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-157",
+      "subject": "social_studies",
+      "oh": "8.SS.23",
+      "state": "AL",
+      "code": "SS24.6.17c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Amendments expanding political rights is Ohio's protection of citizens' rights.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-158",
+      "subject": "social_studies",
+      "oh": "8.SS.14",
+      "state": "AL",
+      "code": "SS24.6.17c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Ohio's Reconstruction amendments are the clearest instance.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-159",
+      "subject": "social_studies",
+      "oh": "8.SS.20",
+      "state": "AL",
+      "code": "SS24.6.18a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Citizens working together to influence government is Ohio's active participation in social and civic groups.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-160",
+      "subject": "social_studies",
+      "oh": "4.SS.16",
+      "state": "AL",
+      "code": "SS24.6.18b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 4). Requirements, responsibilities and rights of citizenship is Ohio's civic participation.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-161",
+      "subject": "social_studies",
+      "oh": "4.SS.16",
+      "state": "AL",
+      "code": "SS24.6.18c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 4). How a person becomes a citizen underpins Ohio's civic participation.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-162",
+      "subject": "social_studies",
+      "oh": "8.SS.9",
+      "state": "AL",
+      "code": "SS24.6.19a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Washington's use of federal authority is Ohio's early administrations establishing a strong federal government.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-163",
+      "subject": "social_studies",
+      "oh": "8.SS.9",
+      "state": "AL",
+      "code": "SS24.6.19b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). The Farewell Address belongs to Ohio's early presidential administrations.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-164",
+      "subject": "social_studies",
+      "oh": "8.SS.9",
+      "state": "AL",
+      "code": "SS24.6.20a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Hamilton's economic plan is Ohio's early administrations providing economic stability.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-165",
+      "subject": "social_studies",
+      "oh": "8.SS.26",
+      "state": "AL",
+      "code": "SS24.6.20b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). The National Bank debate is Ohio's government impact on markets.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-166",
+      "subject": "social_studies",
+      "oh": "8.SS.9",
+      "state": "AL",
+      "code": "SS24.6.20c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Hamilton's and Jefferson's competing visions belong to Ohio's early administrations.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-167",
+      "subject": "social_studies",
+      "oh": "8.SS.9",
+      "state": "AL",
+      "code": "SS24.6.20d",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). The Election of 1800 and peaceful transfer of power is Ohio's early administrations establishing precedent.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-168",
+      "subject": "social_studies",
+      "oh": "6.SS.3",
+      "state": "AL",
+      "code": "SS24.7.1a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). Map essentials is Ohio's geographic tools for gathering and reporting information.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-169",
+      "subject": "social_studies",
+      "oh": "6.SS.3",
+      "state": "AL",
+      "code": "SS24.7.1b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). Physical, political and special-purpose maps is Ohio's geographic tools.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-170",
+      "subject": "social_studies",
+      "oh": "7.SS.12",
+      "state": "AL",
+      "code": "SS24.7.1c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). Using maps to explain relationships among people and places is Ohio's maps tracing human settlement.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-171",
+      "subject": "social_studies",
+      "oh": "6.SS.5",
+      "state": "AL",
+      "code": "SS24.7.1d",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 6). How political entities are organised and labelled is Ohio's classifying and comparing regions.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-172",
+      "subject": "social_studies",
+      "oh": "6.SS.6",
+      "state": "AL",
+      "code": "SS24.7.2",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). Human interaction with the environment is Ohio's physical environments influencing human activity.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-173",
+      "subject": "social_studies",
+      "oh": "6.SS.1",
+      "state": "AL",
+      "code": "SS24.7.3a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). Organising and labelling periods of time is Ohio's multiple-tier timelines.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-174",
+      "subject": "social_studies",
+      "oh": "5.SS.1",
+      "state": "AL",
+      "code": "SS24.7.3a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). Ohio's B.C./A.D. conventions are the same chronological apparatus.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-175",
+      "subject": "social_studies",
+      "oh": "7.SS.1",
+      "state": "AL",
+      "code": "SS24.7.4a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Primary, secondary and tertiary sources is Ohio's historians and archaeologists working from evidence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-176",
+      "subject": "social_studies",
+      "oh": "6.SS.6",
+      "state": "AL",
+      "code": "SS24.7.4b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 6). Climate and the Ice Ages shaping settlement is Ohio's physical environment influencing human activity.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-177",
+      "subject": "social_studies",
+      "oh": "6.SS.7",
+      "state": "AL",
+      "code": "SS24.7.4c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). Push and pull factors in migration is Ohio's factors causing people to move.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-178",
+      "subject": "social_studies",
+      "oh": "7.SS.13",
+      "state": "AL",
+      "code": "SS24.7.4c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Ohio's geographic factors promoting or impeding movement is the same content.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-179",
+      "subject": "social_studies",
+      "oh": "6.SS.2",
+      "state": "AL",
+      "code": "SS24.7.5a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). Physical geography and the location of early agrarian civilisations is Ohio's early civilisations of India, Egypt, China and Mesopotamia.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-180",
+      "subject": "social_studies",
+      "oh": "6.SS.2",
+      "state": "AL",
+      "code": "SS24.7.5b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). Settlement patterns and job specialisation is Ohio's early civilisations and their social structures.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-181",
+      "subject": "social_studies",
+      "oh": "6.SS.8",
+      "state": "AL",
+      "code": "SS24.7.5c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 6). Neolithic agricultural innovation is Ohio's diffusion of agricultural practices and technology.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-182",
+      "subject": "social_studies",
+      "oh": "6.SS.2",
+      "state": "AL",
+      "code": "SS24.7.6a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). Agriculture, irrigation and metallurgy is Ohio's early civilisations standard.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-183",
+      "subject": "social_studies",
+      "oh": "6.SS.2",
+      "state": "AL",
+      "code": "SS24.7.6b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). Sumerian agriculture driving growth is Ohio's early civilisations and their economic systems.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-184",
+      "subject": "social_studies",
+      "oh": "6.SS.2",
+      "state": "AL",
+      "code": "SS24.7.6c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). Mesopotamian cultural and political innovation is Ohio's early civilisations standard.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-185",
+      "subject": "social_studies",
+      "oh": "6.SS.2",
+      "state": "AL",
+      "code": "SS24.7.7a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). The Nile supporting Egypt's economy is Ohio's early civilisation of Egypt.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-186",
+      "subject": "social_studies",
+      "oh": "6.SS.2",
+      "state": "AL",
+      "code": "SS24.7.7b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). Egyptian technological and artistic achievement is Ohio's early civilisations.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-187",
+      "subject": "social_studies",
+      "oh": "6.SS.2",
+      "state": "AL",
+      "code": "SS24.7.7c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). Egyptian social structure and religion is Ohio's early civilisations and their belief systems.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-188",
+      "subject": "social_studies",
+      "oh": "6.SS.2",
+      "state": "AL",
+      "code": "SS24.7.7d",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 6). Egypt's key leaders belong to Ohio's early civilisations.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-189",
+      "subject": "social_studies",
+      "oh": "6.SS.2",
+      "state": "AL",
+      "code": "SS24.7.8a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 6). Judaism compared with polytheistic neighbours sits in Ohio's early civilisations and belief systems.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-190",
+      "subject": "social_studies",
+      "oh": "6.SS.6",
+      "state": "AL",
+      "code": "SS24.7.9a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). African physical geography and resources is Ohio's physical environment influencing human activity.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-191",
+      "subject": "social_studies",
+      "oh": "6.SS.8",
+      "state": "AL",
+      "code": "SS24.7.9b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 6). Indigenous African religion is part of Ohio's diffusion of cultural practices.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-192",
+      "subject": "social_studies",
+      "oh": "7.SS.14",
+      "state": "AL",
+      "code": "SS24.7.9c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Trade and silent barter is Ohio's trade routes fostering the spread of goods and ideas.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-193",
+      "subject": "social_studies",
+      "oh": "5.SS.2",
+      "state": "AL",
+      "code": "SS24.7.10a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 5). Locations and migration of early Indigenous peoples is Ohio's early Indian civilisations of the Western Hemisphere.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-194",
+      "subject": "social_studies",
+      "oh": "5.SS.2",
+      "state": "AL",
+      "code": "SS24.7.10b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). Agriculture in the Americas belongs to Ohio's Maya, Inca, Aztec and Mississippian civilisations.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-195",
+      "subject": "social_studies",
+      "oh": "5.SS.2",
+      "state": "AL",
+      "code": "SS24.7.10c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 5). Religion, architecture and politics intersecting is Ohio's early Indian civilisations.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-196",
+      "subject": "social_studies",
+      "oh": "6.SS.2",
+      "state": "AL",
+      "code": "SS24.7.11",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). Societies of Southwest Asia is Ohio's early civilisations, Mesopotamia among them.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-197",
+      "subject": "social_studies",
+      "oh": "6.SS.2",
+      "state": "AL",
+      "code": "SS24.7.12a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). Hinduism and caste is Ohio's early civilisation of India and its social structure.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-198",
+      "subject": "social_studies",
+      "oh": "6.SS.6",
+      "state": "AL",
+      "code": "SS24.7.12b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). Monsoons and trade shaping South Asia is Ohio's physical environment influencing human activity.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-199",
+      "subject": "social_studies",
+      "oh": "6.SS.2",
+      "state": "AL",
+      "code": "SS24.7.12c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 6). Buddhism's development belongs to Ohio's early civilisation of India.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-200",
+      "subject": "social_studies",
+      "oh": "6.SS.2",
+      "state": "AL",
+      "code": "SS24.7.13a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). Confucianism, Daoism and Legalism is Ohio's early civilisation of China and its governments.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-201",
+      "subject": "social_studies",
+      "oh": "6.SS.2",
+      "state": "AL",
+      "code": "SS24.7.13b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 6). China's reunification is Ohio's early civilisation of China.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-202",
+      "subject": "social_studies",
+      "oh": "6.SS.8",
+      "state": "AL",
+      "code": "SS24.7.13c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 6). Chinese technological advancement is Ohio's diffusion of technology.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-203",
+      "subject": "social_studies",
+      "oh": "7.SS.14",
+      "state": "AL",
+      "code": "SS24.7.13d",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). The Silk Road is Ohio's trade routes connecting Africa, Europe and Asia.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-204",
+      "subject": "social_studies",
+      "oh": "7.SS.2",
+      "state": "AL",
+      "code": "SS24.7.14a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). The polis and its geography is Ohio's civilisations of Greece and Rome.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-205",
+      "subject": "social_studies",
+      "oh": "7.SS.17",
+      "state": "AL",
+      "code": "SS24.7.14b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Greek city-state political systems is Ohio's Greek democracy departing from monarchy.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-206",
+      "subject": "social_studies",
+      "oh": "7.SS.2",
+      "state": "AL",
+      "code": "SS24.7.14c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Greek philosophers is Ohio's enduring impact of Greece on later civilisations.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-207",
+      "subject": "social_studies",
+      "oh": "7.SS.2",
+      "state": "AL",
+      "code": "SS24.7.14d",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). Conflict in Classical Greece belongs to Ohio's Greek civilisation.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-208",
+      "subject": "social_studies",
+      "oh": "7.SS.2",
+      "state": "AL",
+      "code": "SS24.7.14e",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). Alexander's empire spread the Greek influence Ohio describes as enduring.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-209",
+      "subject": "social_studies",
+      "oh": "7.SS.17",
+      "state": "AL",
+      "code": "SS24.7.15a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Growth of the Roman Republic is Ohio's Roman Republic as a departure from monarchy.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-210",
+      "subject": "social_studies",
+      "oh": "7.SS.21",
+      "state": "AL",
+      "code": "SS24.7.15b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Mediterranean economic activity is Ohio's growth of cities and empires fostering markets.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-211",
+      "subject": "social_studies",
+      "oh": "7.SS.2",
+      "state": "AL",
+      "code": "SS24.7.15c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). The Punic Wars belong to Ohio's Roman civilisation.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-212",
+      "subject": "social_studies",
+      "oh": "7.SS.2",
+      "state": "AL",
+      "code": "SS24.7.15d",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Roman legal and political influence on later societies is Ohio's enduring impact standard.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-213",
+      "subject": "social_studies",
+      "oh": "7.SS.3",
+      "state": "AL",
+      "code": "SS24.7.15e",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). The collapse of Rome is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-214",
+      "subject": "social_studies",
+      "oh": "7.SS.17",
+      "state": "AL",
+      "code": "SS24.7.16a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Republic to Empire is Ohio's Roman Republic and its transformation.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-215",
+      "subject": "social_studies",
+      "oh": "7.SS.2",
+      "state": "AL",
+      "code": "SS24.7.16b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). The founding of Christianity belongs to Ohio's Roman civilisation and its enduring impact.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-216",
+      "subject": "social_studies",
+      "oh": "7.SS.3",
+      "state": "AL",
+      "code": "SS24.7.16c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). The split of the Empire is Ohio's collapse of Rome through internal and external factors.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-217",
+      "subject": "social_studies",
+      "oh": "7.SS.3",
+      "state": "AL",
+      "code": "SS24.8.1a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). The spread of Christianity follows Ohio's collapse of the Roman Empire.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-218",
+      "subject": "social_studies",
+      "oh": "7.SS.3",
+      "state": "AL",
+      "code": "SS24.8.1b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Germanic kingdoms arising is the aftermath of Ohio's Roman collapse.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-219",
+      "subject": "social_studies",
+      "oh": "7.SS.3",
+      "state": "AL",
+      "code": "SS24.8.2a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). The East-West split of Christianity follows Ohio's division and collapse of Rome.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-220",
+      "subject": "social_studies",
+      "oh": "7.SS.3",
+      "state": "AL",
+      "code": "SS24.8.2b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). Byzantine contributions continue the Roman world Ohio describes.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-221",
+      "subject": "social_studies",
+      "oh": "7.SS.2",
+      "state": "AL",
+      "code": "SS24.8.2c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). The Code of Justinian is part of Ohio's enduring Roman legal influence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-222",
+      "subject": "social_studies",
+      "oh": "7.SS.5",
+      "state": "AL",
+      "code": "SS24.8.3a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). The founding of Islam is Ohio's Islamic civilisation standard.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-223",
+      "subject": "social_studies",
+      "oh": "7.SS.5",
+      "state": "AL",
+      "code": "SS24.8.3b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). Islamic sects belong to Ohio's Islamic civilisation.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-224",
+      "subject": "social_studies",
+      "oh": "7.SS.5",
+      "state": "AL",
+      "code": "SS24.8.3c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Islamic cultural, economic and political systems is Ohio's Islamic civilisation dominating the Mediterranean.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-225",
+      "subject": "social_studies",
+      "oh": "7.SS.8",
+      "state": "AL",
+      "code": "SS24.8.3c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Its reach into Africa and Asia is Ohio's empires growing as commercial and cultural centres.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-226",
+      "subject": "social_studies",
+      "oh": "7.SS.4",
+      "state": "AL",
+      "code": "SS24.8.4a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). China's influence on Asia sits with Ohio's unified states of China and Korea.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-227",
+      "subject": "social_studies",
+      "oh": "7.SS.4",
+      "state": "AL",
+      "code": "SS24.8.4b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). The Mongols is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-228",
+      "subject": "social_studies",
+      "oh": "7.SS.4",
+      "state": "AL",
+      "code": "SS24.8.4c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). Religion evolving across Asia accompanies Ohio's Mongol conquest and unified states.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-229",
+      "subject": "social_studies",
+      "oh": "7.SS.6",
+      "state": "AL",
+      "code": "SS24.8.4d",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). Medieval Japanese feudalism parallels the feudalism Ohio treats in Europe.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-230",
+      "subject": "social_studies",
+      "oh": "7.SS.8",
+      "state": "AL",
+      "code": "SS24.8.5a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Geography shaping medieval African kingdoms is Ohio's empires growing along trade routes.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-231",
+      "subject": "social_studies",
+      "oh": "7.SS.8",
+      "state": "AL",
+      "code": "SS24.8.5b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Spread of culture, language and religion in Africa is Ohio's commercial and cultural centres.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-232",
+      "subject": "social_studies",
+      "oh": "7.SS.14",
+      "state": "AL",
+      "code": "SS24.8.5c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). African trade centres is Ohio's trade routes fostering the spread of ideas and goods.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-233",
+      "subject": "social_studies",
+      "oh": "5.SS.2",
+      "state": "AL",
+      "code": "SS24.8.6a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). Geographic factors and Indigenous societies is Ohio's early Indian civilisations.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-234",
+      "subject": "social_studies",
+      "oh": "5.SS.2",
+      "state": "AL",
+      "code": "SS24.8.6b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). Indigenous engineering achievement belongs to Ohio's Maya, Inca and Aztec civilisations.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-235",
+      "subject": "social_studies",
+      "oh": "5.SS.2",
+      "state": "AL",
+      "code": "SS24.8.6c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 5). Religion shaping Indigenous culture is part of Ohio's early Indian civilisations.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-236",
+      "subject": "social_studies",
+      "oh": "7.SS.6",
+      "state": "AL",
+      "code": "SS24.8.7a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). Comparing medieval societies sits within Ohio's feudalism and its decline.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-237",
+      "subject": "social_studies",
+      "oh": "7.SS.6",
+      "state": "AL",
+      "code": "SS24.8.7b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). The Catholic Church's role is central to Ohio's feudal Europe.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-238",
+      "subject": "social_studies",
+      "oh": "7.SS.6",
+      "state": "AL",
+      "code": "SS24.8.7c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). European feudalism is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-239",
+      "subject": "social_studies",
+      "oh": "7.SS.18",
+      "state": "AL",
+      "code": "SS24.8.7d",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). Political events of the Middle Ages is Ohio's consolidation of power and emergence of nation-states.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-240",
+      "subject": "social_studies",
+      "oh": "7.SS.18",
+      "state": "AL",
+      "code": "SS24.8.7e",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Magna Carta limiting royal power is Ohio's shift away from absolute monarchy.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-241",
+      "subject": "social_studies",
+      "oh": "7.SS.6",
+      "state": "AL",
+      "code": "SS24.8.8a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). The Crusades and Reconquista contributed to Ohio's decline of feudalism.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-242",
+      "subject": "social_studies",
+      "oh": "7.SS.14",
+      "state": "AL",
+      "code": "SS24.8.8b",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). The plague travelled Ohio's trade routes connecting Africa, Europe and Asia.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-243",
+      "subject": "social_studies",
+      "oh": "7.SS.6",
+      "state": "AL",
+      "code": "SS24.8.9a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Renaissance humanism is Ohio's Renaissance introducing new ways of thinking.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-244",
+      "subject": "social_studies",
+      "oh": "7.SS.6",
+      "state": "AL",
+      "code": "SS24.8.9b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Renaissance science and technology is Ohio's Renaissance standard.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-245",
+      "subject": "social_studies",
+      "oh": "7.SS.7",
+      "state": "AL",
+      "code": "SS24.8.10b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). European reformers is Ohio's Reformation and the emergence of Protestant faiths.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-246",
+      "subject": "social_studies",
+      "oh": "7.SS.7",
+      "state": "AL",
+      "code": "SS24.8.10c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). The Counter-Reformation is the response Ohio's Reformation standard covers.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-247",
+      "subject": "social_studies",
+      "oh": "7.SS.10",
+      "state": "AL",
+      "code": "SS24.8.11a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Navigation and geographic knowledge is Ohio's exploration increasing European influence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-248",
+      "subject": "social_studies",
+      "oh": "7.SS.10",
+      "state": "AL",
+      "code": "SS24.8.11b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Economic, political and religious motives for exploration is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-249",
+      "subject": "social_studies",
+      "oh": "7.SS.11",
+      "state": "AL",
+      "code": "SS24.8.11c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Consequences of initial contact is Ohio's Columbian exchange among previously unconnected populations.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-250",
+      "subject": "social_studies",
+      "oh": "7.SS.11",
+      "state": "AL",
+      "code": "SS24.8.11d",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). The Columbian Exchange is Ohio's standard by name.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-251",
+      "subject": "social_studies",
+      "oh": "7.SS.9",
+      "state": "AL",
+      "code": "SS24.8.12a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Demand for cheap labour driving enslavement is Ohio's slave trade and its effects.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-252",
+      "subject": "social_studies",
+      "oh": "7.SS.9",
+      "state": "AL",
+      "code": "SS24.8.13a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Conditions of the Middle Passage is Ohio's slave trade standard.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-253",
+      "subject": "social_studies",
+      "oh": "8.SS.4",
+      "state": "AL",
+      "code": "SS24.8.13a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Ohio's forced migration of Africans to the American colonies is the same passage from the receiving end.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-254",
+      "subject": "social_studies",
+      "oh": "7.SS.18",
+      "state": "AL",
+      "code": "SS24.8.14a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Westphalia and the rise of nation-states is Ohio's consolidation of power.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-255",
+      "subject": "social_studies",
+      "oh": "7.SS.18",
+      "state": "AL",
+      "code": "SS24.8.14b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Absolutism under Louis XIV is Ohio's consolidation of power into nation-states.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-256",
+      "subject": "social_studies",
+      "oh": "7.SS.18",
+      "state": "AL",
+      "code": "SS24.8.14c",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). Absolutism in Russia and Prussia is Ohio's emergence of centralised nation-states.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-257",
+      "subject": "social_studies",
+      "oh": "7.SS.8",
+      "state": "AL",
+      "code": "SS24.8.14d",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). The Ottoman Empire is one of Ohio's empires growing as a commercial and cultural centre.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-258",
+      "subject": "social_studies",
+      "oh": "7.SS.18",
+      "state": "AL",
+      "code": "SS24.8.15a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). Hobbes and Locke argue about the sovereign power Ohio's nation-states consolidated.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-259",
+      "subject": "social_studies",
+      "oh": "8.SS.5",
+      "state": "AL",
+      "code": "SS24.8.15a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 8). Ohio's Enlightenment ideas are what Hobbes and Locke supply.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-260",
+      "subject": "social_studies",
+      "oh": "7.SS.18",
+      "state": "AL",
+      "code": "SS24.8.15b",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 7). The Petition of Right and English Bill of Rights limit the consolidated power Ohio describes.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-261",
+      "subject": "social_studies",
+      "oh": "7.SS.4",
+      "state": "AL",
+      "code": "SS24.8.16c",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). The Tokugawa Shogunate belongs with Ohio's unified states of Asia.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-262",
+      "subject": "social_studies",
+      "oh": "7.SS.4",
+      "state": "AL",
+      "code": "SS24.8.16d",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). Decline of imperial power in China follows Ohio's unified Chinese state.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-263",
+      "subject": "social_studies",
+      "oh": "7.SS.6",
+      "state": "AL",
+      "code": "SS24.8.17a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). The scientific method is part of Ohio's Renaissance introducing new ways of thinking.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-264",
+      "subject": "social_studies",
+      "oh": "8.SS.5",
+      "state": "AL",
+      "code": "SS24.8.18a",
+      "confidence": "strong",
+      "rationale": "Cross-grade (Ohio 8). Origins of Enlightenment ideas is Ohio's Enlightenment leading colonists to independence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ss-al-265",
+      "subject": "social_studies",
+      "oh": "7.SS.6",
+      "state": "AL",
+      "code": "SS24.8.18a",
+      "confidence": "moderate",
+      "rationale": "Cross-grade (Ohio 7). Ohio traces those ideas to the Renaissance and the decline of feudalism.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-001",
+      "subject": "ela",
+      "oh": "L.2.6",
+      "state": "AL",
+      "code": "2.LF.15.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Using new academic and content-specific vocabulary is Ohio's acquiring and using grade-appropriate academic and domain-specific words.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-002",
+      "subject": "ela",
+      "oh": "L.2.5",
+      "state": "AL",
+      "code": "2.LF.16.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Word relationships and nuances in meaning is Ohio's standard almost word for word.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-003",
+      "subject": "ela",
+      "oh": "L.2.5",
+      "state": "AL",
+      "code": "2.LF.16.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Word relationships and nuances in meaning is Ohio's standard almost word for word.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-004",
+      "subject": "ela",
+      "oh": "L.2.5",
+      "state": "AL",
+      "code": "2.LF.16.c",
+      "confidence": "strong",
+      "rationale": "Same grade. Word relationships and nuances in meaning is Ohio's standard almost word for word.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-005",
+      "subject": "ela",
+      "oh": "L.2.5",
+      "state": "AL",
+      "code": "2.LF.16.d",
+      "confidence": "strong",
+      "rationale": "Same grade. Word relationships and nuances in meaning is Ohio's standard almost word for word.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-006",
+      "subject": "ela",
+      "oh": "L.2.4",
+      "state": "AL",
+      "code": "2.LF.17.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Analysing meaningful parts of words is Ohio's determining meaning using word structure.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-007",
+      "subject": "ela",
+      "oh": "L.2.4",
+      "state": "AL",
+      "code": "2.LF.17.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Analysing meaningful parts of words is Ohio's determining meaning using word structure.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-008",
+      "subject": "ela",
+      "oh": "L.2.4",
+      "state": "AL",
+      "code": "2.LF.18",
+      "confidence": "strong",
+      "rationale": "Same grade. Using dictionaries and textual information to determine meaning is Ohio's clarifying unknown words from available resources.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-009",
+      "subject": "ela",
+      "oh": "RI.2.4",
+      "state": "AL",
+      "code": "2.LF.18",
+      "confidence": "moderate",
+      "rationale": "Same grade. Where the word is met in an informational text, Ohio's determining meaning in context applies.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-010",
+      "subject": "ela",
+      "oh": "RL.2.4",
+      "state": "AL",
+      "code": "2.LF.19",
+      "confidence": "moderate",
+      "rationale": "Same grade. Interpreting new word meanings in a literary text is Ohio's words and phrases as used in a text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-011",
+      "subject": "ela",
+      "oh": "RI.2.4",
+      "state": "AL",
+      "code": "2.LF.19",
+      "confidence": "moderate",
+      "rationale": "Same grade. The informational half is Ohio's determining meaning of words in an informational text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-012",
+      "subject": "ela",
+      "oh": "RI.2.4",
+      "state": "AL",
+      "code": "2.LF.20",
+      "confidence": "strong",
+      "rationale": "Same grade. Using academic and domain-specific vocabulary to gain meaning from text is Ohio's word meaning in an informational text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-013",
+      "subject": "ela",
+      "oh": "L.2.6",
+      "state": "AL",
+      "code": "2.LF.21",
+      "confidence": "strong",
+      "rationale": "Same grade. Using grade-level academic vocabulary in writing is Ohio's acquiring and using such words accurately.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-014",
+      "subject": "ela",
+      "oh": "RI.2.1",
+      "state": "AL",
+      "code": "2.LF.22",
+      "confidence": "moderate",
+      "rationale": "Same grade. Using content knowledge built through reading to discuss and write is Ohio's asking and answering questions to demonstrate understanding.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-015",
+      "subject": "ela",
+      "oh": "RL.2.1",
+      "state": "AL",
+      "code": "2.LF.22",
+      "confidence": "moderate",
+      "rationale": "Same grade. The literary half anchors to Ohio's equivalent for literature.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-016",
+      "subject": "ela",
+      "oh": "RL.2.3",
+      "state": "AL",
+      "code": "2.LF.23.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Identifying main story elements is Ohio's describing characters, setting and plot.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-017",
+      "subject": "ela",
+      "oh": "RL.2.3",
+      "state": "AL",
+      "code": "2.LF.23.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Identifying main story elements is Ohio's describing characters, setting and plot.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-018",
+      "subject": "ela",
+      "oh": "RL.2.3",
+      "state": "AL",
+      "code": "2.LF.23.c",
+      "confidence": "strong",
+      "rationale": "Same grade. Identifying main story elements is Ohio's describing characters, setting and plot.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-019",
+      "subject": "ela",
+      "oh": "RL.2.3",
+      "state": "AL",
+      "code": "2.LF.23.d",
+      "confidence": "strong",
+      "rationale": "Same grade. Identifying main story elements is Ohio's describing characters, setting and plot.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-020",
+      "subject": "ela",
+      "oh": "RL.2.3",
+      "state": "AL",
+      "code": "2.LF.23.e",
+      "confidence": "strong",
+      "rationale": "Same grade. Identifying main story elements is Ohio's describing characters, setting and plot.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-021",
+      "subject": "ela",
+      "oh": "RL.2.5",
+      "state": "AL",
+      "code": "2.LF.23.a",
+      "confidence": "moderate",
+      "rationale": "Same grade. Ohio's overall story structure covers the same elements from the structural side.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-022",
+      "subject": "ela",
+      "oh": "RL.2.5",
+      "state": "AL",
+      "code": "2.LF.23.b",
+      "confidence": "moderate",
+      "rationale": "Same grade. Ohio's overall story structure covers the same elements from the structural side.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-023",
+      "subject": "ela",
+      "oh": "RL.2.5",
+      "state": "AL",
+      "code": "2.LF.23.c",
+      "confidence": "moderate",
+      "rationale": "Same grade. Ohio's overall story structure covers the same elements from the structural side.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-024",
+      "subject": "ela",
+      "oh": "RL.2.5",
+      "state": "AL",
+      "code": "2.LF.23.d",
+      "confidence": "moderate",
+      "rationale": "Same grade. Ohio's overall story structure covers the same elements from the structural side.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-025",
+      "subject": "ela",
+      "oh": "RL.2.5",
+      "state": "AL",
+      "code": "2.LF.23.e",
+      "confidence": "moderate",
+      "rationale": "Same grade. Ohio's overall story structure covers the same elements from the structural side.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-026",
+      "subject": "ela",
+      "oh": "RI.2.2",
+      "state": "AL",
+      "code": "2.LF.24.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Main idea and supporting details is Ohio's identifying the main topic and focus of specific paragraphs.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-027",
+      "subject": "ela",
+      "oh": "RI.2.2",
+      "state": "AL",
+      "code": "2.LF.24.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Main idea and supporting details is Ohio's identifying the main topic and focus of specific paragraphs.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-028",
+      "subject": "ela",
+      "oh": "RL.2.2",
+      "state": "AL",
+      "code": "2.LF.24.a",
+      "confidence": "moderate",
+      "rationale": "Same grade. For literary text, Ohio's recounting and determining the central message applies.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-029",
+      "subject": "ela",
+      "oh": "RL.2.2",
+      "state": "AL",
+      "code": "2.LF.24.b",
+      "confidence": "moderate",
+      "rationale": "Same grade. For literary text, Ohio's recounting and determining the central message applies.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-030",
+      "subject": "ela",
+      "oh": "RI.2.5",
+      "state": "AL",
+      "code": "2.LF.25.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Using text features to locate facts is Ohio's knowing and using text features to locate information.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-031",
+      "subject": "ela",
+      "oh": "RI.2.5",
+      "state": "AL",
+      "code": "2.LF.25.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Using text features to locate facts is Ohio's knowing and using text features to locate information.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-032",
+      "subject": "ela",
+      "oh": "RI.2.9",
+      "state": "AL",
+      "code": "2.LF.26.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Comparing details in two texts on the same topic is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-033",
+      "subject": "ela",
+      "oh": "RI.2.9",
+      "state": "AL",
+      "code": "2.LF.26.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Comparing details in two texts on the same topic is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-034",
+      "subject": "ela",
+      "oh": "RI.2.5",
+      "state": "AL",
+      "code": "2.LF.27",
+      "confidence": "strong",
+      "rationale": "Same grade. Identifying informational text structure is Ohio's text features and structure.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-035",
+      "subject": "ela",
+      "oh": "RL.2.5",
+      "state": "AL",
+      "code": "2.LF.27",
+      "confidence": "strong",
+      "rationale": "Same grade. The literary half is Ohio's overall structure of a story.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-036",
+      "subject": "ela",
+      "oh": "RI.2.5",
+      "state": "AL",
+      "code": "2.LF.29",
+      "confidence": "moderate",
+      "rationale": "Same grade. Cohesive devices that link sentences are part of Ohio's text structure.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-037",
+      "subject": "ela",
+      "oh": "RI.2.6",
+      "state": "AL",
+      "code": "2.LF.31",
+      "confidence": "strong",
+      "rationale": "Same grade. Determining the author's purpose is Ohio's identifying the main purpose of a text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-038",
+      "subject": "ela",
+      "oh": "RL.2.4",
+      "state": "AL",
+      "code": "2.LF.32",
+      "confidence": "strong",
+      "rationale": "Same grade. Rhyme scheme in poems and songs is Ohio's how words and phrases supply rhythm and meaning.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-039",
+      "subject": "ela",
+      "oh": "RL.2.5",
+      "state": "AL",
+      "code": "2.LF.33",
+      "confidence": "moderate",
+      "rationale": "Same grade. Identifying types of poems is Ohio's describing the structure of a literary text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-040",
+      "subject": "ela",
+      "oh": "RI.2.8",
+      "state": "AL",
+      "code": "2.LF.34.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Distinguishing fact from opinion is Ohio's describing how reasons support the points an author makes.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-041",
+      "subject": "ela",
+      "oh": "RI.2.8",
+      "state": "AL",
+      "code": "2.LF.34.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Distinguishing fact from opinion is Ohio's describing how reasons support the points an author makes.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-042",
+      "subject": "ela",
+      "oh": "RL.2.1",
+      "state": "AL",
+      "code": "2.LF.35",
+      "confidence": "moderate",
+      "rationale": "Same grade. Asking and answering questions from listening is Ohio's questioning to demonstrate understanding.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-043",
+      "subject": "ela",
+      "oh": "RI.2.1",
+      "state": "AL",
+      "code": "2.LF.35",
+      "confidence": "moderate",
+      "rationale": "Same grade. The informational half anchors to Ohio's equivalent.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-044",
+      "subject": "ela",
+      "oh": "L.3.6",
+      "state": "AL",
+      "code": "3.LF.13.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Using new academic and content-specific vocabulary is Ohio's acquiring and using such words accurately.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-045",
+      "subject": "ela",
+      "oh": "L.3.5",
+      "state": "AL",
+      "code": "3.LF.14.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Word relationships and nuances is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-046",
+      "subject": "ela",
+      "oh": "L.3.5",
+      "state": "AL",
+      "code": "3.LF.14.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Word relationships and nuances is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-047",
+      "subject": "ela",
+      "oh": "L.3.5",
+      "state": "AL",
+      "code": "3.LF.14.c",
+      "confidence": "strong",
+      "rationale": "Same grade. Word relationships and nuances is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-048",
+      "subject": "ela",
+      "oh": "L.3.5",
+      "state": "AL",
+      "code": "3.LF.14.d",
+      "confidence": "strong",
+      "rationale": "Same grade. Word relationships and nuances is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-049",
+      "subject": "ela",
+      "oh": "L.3.5",
+      "state": "AL",
+      "code": "3.LF.14.e",
+      "confidence": "strong",
+      "rationale": "Same grade. Word relationships and nuances is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-050",
+      "subject": "ela",
+      "oh": "L.3.5",
+      "state": "AL",
+      "code": "3.LF.14.f",
+      "confidence": "strong",
+      "rationale": "Same grade. Word relationships and nuances is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-051",
+      "subject": "ela",
+      "oh": "L.3.4",
+      "state": "AL",
+      "code": "3.LF.15.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Analysing morphemes is Ohio's using word structure to determine meaning.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-052",
+      "subject": "ela",
+      "oh": "L.3.4",
+      "state": "AL",
+      "code": "3.LF.15.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Analysing morphemes is Ohio's using word structure to determine meaning.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-053",
+      "subject": "ela",
+      "oh": "L.3.4",
+      "state": "AL",
+      "code": "3.LF.15.c",
+      "confidence": "strong",
+      "rationale": "Same grade. Analysing morphemes is Ohio's using word structure to determine meaning.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-054",
+      "subject": "ela",
+      "oh": "L.3.4",
+      "state": "AL",
+      "code": "3.LF.15.d",
+      "confidence": "strong",
+      "rationale": "Same grade. Analysing morphemes is Ohio's using word structure to determine meaning.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-055",
+      "subject": "ela",
+      "oh": "L.3.4",
+      "state": "AL",
+      "code": "3.LF.15.e",
+      "confidence": "strong",
+      "rationale": "Same grade. Analysing morphemes is Ohio's using word structure to determine meaning.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-056",
+      "subject": "ela",
+      "oh": "RI.3.4",
+      "state": "AL",
+      "code": "3.LF.16",
+      "confidence": "strong",
+      "rationale": "Same grade. Using vocabulary knowledge to gain meaning from text is Ohio's determining word meaning in an informational text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-057",
+      "subject": "ela",
+      "oh": "L.3.6",
+      "state": "AL",
+      "code": "3.LF.16",
+      "confidence": "moderate",
+      "rationale": "Same grade. Ohio's acquisition of academic vocabulary underlies it.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-058",
+      "subject": "ela",
+      "oh": "L.3.6",
+      "state": "AL",
+      "code": "3.LF.17",
+      "confidence": "strong",
+      "rationale": "Same grade. Using academic vocabulary in writing is Ohio's using such words accurately.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-059",
+      "subject": "ela",
+      "oh": "RI.3.1",
+      "state": "AL",
+      "code": "3.LF.18",
+      "confidence": "moderate",
+      "rationale": "Same grade. Demonstrating content knowledge from independent reading is Ohio's asking and answering questions, referring explicitly to the text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-060",
+      "subject": "ela",
+      "oh": "RI.3.2",
+      "state": "AL",
+      "code": "3.LF.19.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Explicit or implied main idea with supporting details is Ohio's determining the main idea and recounting key details.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-061",
+      "subject": "ela",
+      "oh": "RI.3.2",
+      "state": "AL",
+      "code": "3.LF.19.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Explicit or implied main idea with supporting details is Ohio's determining the main idea and recounting key details.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-062",
+      "subject": "ela",
+      "oh": "RL.3.2",
+      "state": "AL",
+      "code": "3.LF.19.a",
+      "confidence": "moderate",
+      "rationale": "Same grade. For literature, Ohio's recounting and determining the central message applies.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-063",
+      "subject": "ela",
+      "oh": "RL.3.2",
+      "state": "AL",
+      "code": "3.LF.19.b",
+      "confidence": "moderate",
+      "rationale": "Same grade. For literature, Ohio's recounting and determining the central message applies.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-064",
+      "subject": "ela",
+      "oh": "RI.3.5",
+      "state": "AL",
+      "code": "3.LF.21",
+      "confidence": "moderate",
+      "rationale": "Same grade. Cohesive devices linking words and sentences belong to Ohio's text features and search tools.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-065",
+      "subject": "ela",
+      "oh": "RL.3.3",
+      "state": "AL",
+      "code": "3.LF.22.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Setting, plot and characters is Ohio's describing characters and explaining how their actions contribute to events.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-066",
+      "subject": "ela",
+      "oh": "RL.3.3",
+      "state": "AL",
+      "code": "3.LF.22.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Setting, plot and characters is Ohio's describing characters and explaining how their actions contribute to events.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-067",
+      "subject": "ela",
+      "oh": "RL.3.3",
+      "state": "AL",
+      "code": "3.LF.22.c",
+      "confidence": "strong",
+      "rationale": "Same grade. Setting, plot and characters is Ohio's describing characters and explaining how their actions contribute to events.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-068",
+      "subject": "ela",
+      "oh": "RL.3.3",
+      "state": "AL",
+      "code": "3.LF.22.d",
+      "confidence": "strong",
+      "rationale": "Same grade. Setting, plot and characters is Ohio's describing characters and explaining how their actions contribute to events.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-069",
+      "subject": "ela",
+      "oh": "RI.3.5",
+      "state": "AL",
+      "code": "3.LF.23.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Using text features to locate information is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-070",
+      "subject": "ela",
+      "oh": "RI.3.5",
+      "state": "AL",
+      "code": "3.LF.23.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Using text features to locate information is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-071",
+      "subject": "ela",
+      "oh": "RI.3.5",
+      "state": "AL",
+      "code": "3.LF.23.c",
+      "confidence": "strong",
+      "rationale": "Same grade. Using text features to locate information is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-072",
+      "subject": "ela",
+      "oh": "RI.3.5",
+      "state": "AL",
+      "code": "3.LF.24.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Identifying informational text structure is Ohio's text features and structure.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-073",
+      "subject": "ela",
+      "oh": "RL.3.5",
+      "state": "AL",
+      "code": "3.LF.24.a",
+      "confidence": "moderate",
+      "rationale": "Same grade. The literary half is Ohio's parts of a literary text and how they build on each other.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-074",
+      "subject": "ela",
+      "oh": "RI.3.8",
+      "state": "AL",
+      "code": "3.LF.25.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Identifying statements as fact or opinion is Ohio's describing the logical connection between sentences and paragraphs.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-075",
+      "subject": "ela",
+      "oh": "RI.3.8",
+      "state": "AL",
+      "code": "3.LF.25.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Identifying statements as fact or opinion is Ohio's describing the logical connection between sentences and paragraphs.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-076",
+      "subject": "ela",
+      "oh": "RI.3.9",
+      "state": "AL",
+      "code": "3.LF.26.a",
+      "confidence": "moderate",
+      "rationale": "Same grade. Text-to-text comparison is Ohio's comparing key points in two texts on the same topic.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-077",
+      "subject": "ela",
+      "oh": "RI.3.9",
+      "state": "AL",
+      "code": "3.LF.26.b",
+      "confidence": "moderate",
+      "rationale": "Same grade. Text-to-text comparison is Ohio's comparing key points in two texts on the same topic.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-078",
+      "subject": "ela",
+      "oh": "RL.3.9",
+      "state": "AL",
+      "code": "3.LF.26.a",
+      "confidence": "moderate",
+      "rationale": "Same grade. For literature, Ohio's comparing themes and plots applies.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-079",
+      "subject": "ela",
+      "oh": "RL.3.9",
+      "state": "AL",
+      "code": "3.LF.26.b",
+      "confidence": "moderate",
+      "rationale": "Same grade. For literature, Ohio's comparing themes and plots applies.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-080",
+      "subject": "ela",
+      "oh": "RL.3.5",
+      "state": "AL",
+      "code": "3.LF.27",
+      "confidence": "strong",
+      "rationale": "Same grade. Reading prose, poetry and drama and identifying literary devices is Ohio's distinguishing their parts and structures.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-081",
+      "subject": "ela",
+      "oh": "RL.3.4",
+      "state": "AL",
+      "code": "3.LF.27",
+      "confidence": "moderate",
+      "rationale": "Same grade. The device-level work is Ohio's words and phrases distinguishing literal from non-literal language.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-082",
+      "subject": "ela",
+      "oh": "RL.3.6",
+      "state": "AL",
+      "code": "3.LF.28",
+      "confidence": "strong",
+      "rationale": "Same grade. Identifying first- or third-person narration is Ohio's distinguishing the reader's point of view from the narrator's.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-083",
+      "subject": "ela",
+      "oh": "RI.3.7",
+      "state": "AL",
+      "code": "3.LF.29",
+      "confidence": "moderate",
+      "rationale": "Same grade. Determining the main idea of information presented in audio is Ohio's using information from illustrations and words.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-084",
+      "subject": "ela",
+      "oh": "RI.3.2",
+      "state": "AL",
+      "code": "3.LF.29",
+      "confidence": "moderate",
+      "rationale": "Same grade. The main-idea work itself is Ohio's determining the main idea.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-085",
+      "subject": "ela",
+      "oh": "L.4.5",
+      "state": "AL",
+      "code": "4.LF.10.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Interpreting figurative language is Ohio's demonstrating understanding of figurative language and nuance.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-086",
+      "subject": "ela",
+      "oh": "L.4.5",
+      "state": "AL",
+      "code": "4.LF.10.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Interpreting figurative language is Ohio's demonstrating understanding of figurative language and nuance.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-087",
+      "subject": "ela",
+      "oh": "L.4.5",
+      "state": "AL",
+      "code": "4.LF.10.c",
+      "confidence": "strong",
+      "rationale": "Same grade. Interpreting figurative language is Ohio's demonstrating understanding of figurative language and nuance.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-088",
+      "subject": "ela",
+      "oh": "RL.4.4",
+      "state": "AL",
+      "code": "4.LF.10.a",
+      "confidence": "strong",
+      "rationale": "Same grade. In a literary text this is Ohio's meaning of words and phrases, including figurative language.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-089",
+      "subject": "ela",
+      "oh": "RL.4.4",
+      "state": "AL",
+      "code": "4.LF.10.b",
+      "confidence": "strong",
+      "rationale": "Same grade. In a literary text this is Ohio's meaning of words and phrases, including figurative language.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-090",
+      "subject": "ela",
+      "oh": "RL.4.4",
+      "state": "AL",
+      "code": "4.LF.10.c",
+      "confidence": "strong",
+      "rationale": "Same grade. In a literary text this is Ohio's meaning of words and phrases, including figurative language.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-091",
+      "subject": "ela",
+      "oh": "L.4.4",
+      "state": "AL",
+      "code": "4.LF.12",
+      "confidence": "strong",
+      "rationale": "Same grade. Consulting reference materials for pronunciation and meaning is Ohio's clarifying unknown words using reference materials.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-092",
+      "subject": "ela",
+      "oh": "L.4.6",
+      "state": "AL",
+      "code": "4.LF.13",
+      "confidence": "strong",
+      "rationale": "Same grade. Using grade-appropriate academic vocabulary in presentation is Ohio's accurate use of such words.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-093",
+      "subject": "ela",
+      "oh": "RL.4.1",
+      "state": "AL",
+      "code": "4.LF.14",
+      "confidence": "strong",
+      "rationale": "Same grade. Demonstrating comprehension by drawing on text content is Ohio's referring to details and examples when explaining a text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-094",
+      "subject": "ela",
+      "oh": "RI.4.1",
+      "state": "AL",
+      "code": "4.LF.14",
+      "confidence": "strong",
+      "rationale": "Same grade. The informational half is Ohio's equivalent for informational text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-095",
+      "subject": "ela",
+      "oh": "RL.4.3",
+      "state": "AL",
+      "code": "4.LF.15.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Analysing a character, setting or event in depth is Ohio's standard almost word for word.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-096",
+      "subject": "ela",
+      "oh": "RL.4.3",
+      "state": "AL",
+      "code": "4.LF.15.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Analysing a character, setting or event in depth is Ohio's standard almost word for word.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-097",
+      "subject": "ela",
+      "oh": "RL.4.3",
+      "state": "AL",
+      "code": "4.LF.15.c",
+      "confidence": "strong",
+      "rationale": "Same grade. Analysing a character, setting or event in depth is Ohio's standard almost word for word.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-098",
+      "subject": "ela",
+      "oh": "RL.4.5",
+      "state": "AL",
+      "code": "4.LF.16.a",
+      "confidence": "moderate",
+      "rationale": "Same grade. How authors use literary devices and text features is Ohio's structural elements of poems, drama and prose.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-099",
+      "subject": "ela",
+      "oh": "RL.4.5",
+      "state": "AL",
+      "code": "4.LF.16.b",
+      "confidence": "moderate",
+      "rationale": "Same grade. How authors use literary devices and text features is Ohio's structural elements of poems, drama and prose.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-100",
+      "subject": "ela",
+      "oh": "RL.4.5",
+      "state": "AL",
+      "code": "4.LF.16.c",
+      "confidence": "moderate",
+      "rationale": "Same grade. How authors use literary devices and text features is Ohio's structural elements of poems, drama and prose.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-101",
+      "subject": "ela",
+      "oh": "RI.4.5",
+      "state": "AL",
+      "code": "4.LF.16.a",
+      "confidence": "moderate",
+      "rationale": "Same grade. For informational text this is Ohio's overall structure.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-102",
+      "subject": "ela",
+      "oh": "RI.4.5",
+      "state": "AL",
+      "code": "4.LF.16.b",
+      "confidence": "moderate",
+      "rationale": "Same grade. For informational text this is Ohio's overall structure.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-103",
+      "subject": "ela",
+      "oh": "RI.4.5",
+      "state": "AL",
+      "code": "4.LF.16.c",
+      "confidence": "moderate",
+      "rationale": "Same grade. For informational text this is Ohio's overall structure.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-104",
+      "subject": "ela",
+      "oh": "RL.4.6",
+      "state": "AL",
+      "code": "4.LF.17.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Identifying the narrator's point of view is Ohio's explaining differences in point of view.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-105",
+      "subject": "ela",
+      "oh": "RL.4.6",
+      "state": "AL",
+      "code": "4.LF.17.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Identifying the narrator's point of view is Ohio's explaining differences in point of view.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-106",
+      "subject": "ela",
+      "oh": "RL.4.6",
+      "state": "AL",
+      "code": "4.LF.18.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Describing how a narrative would differ told from another point of view is Ohio's differing perspectives of characters.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-107",
+      "subject": "ela",
+      "oh": "RL.4.6",
+      "state": "AL",
+      "code": "4.LF.18.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Describing how a narrative would differ told from another point of view is Ohio's differing perspectives of characters.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-108",
+      "subject": "ela",
+      "oh": "RL.4.9",
+      "state": "AL",
+      "code": "4.LF.19.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Comparing the treatment of similar themes in stories, myths and traditional literature is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-109",
+      "subject": "ela",
+      "oh": "RL.4.9",
+      "state": "AL",
+      "code": "4.LF.19.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Comparing the treatment of similar themes in stories, myths and traditional literature is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-110",
+      "subject": "ela",
+      "oh": "RL.4.1",
+      "state": "AL",
+      "code": "4.LF.20.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Using details to indicate what a text explicitly states is Ohio's referring to details and examples.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-111",
+      "subject": "ela",
+      "oh": "RL.4.1",
+      "state": "AL",
+      "code": "4.LF.20.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Using details to indicate what a text explicitly states is Ohio's referring to details and examples.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-112",
+      "subject": "ela",
+      "oh": "RL.4.1",
+      "state": "AL",
+      "code": "4.LF.20.c",
+      "confidence": "strong",
+      "rationale": "Same grade. Using details to indicate what a text explicitly states is Ohio's referring to details and examples.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-113",
+      "subject": "ela",
+      "oh": "RL.4.1",
+      "state": "AL",
+      "code": "4.LF.20.d",
+      "confidence": "strong",
+      "rationale": "Same grade. Using details to indicate what a text explicitly states is Ohio's referring to details and examples.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-114",
+      "subject": "ela",
+      "oh": "RI.4.1",
+      "state": "AL",
+      "code": "4.LF.20.a",
+      "confidence": "strong",
+      "rationale": "Same grade. The informational half is Ohio's equivalent.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-115",
+      "subject": "ela",
+      "oh": "RI.4.1",
+      "state": "AL",
+      "code": "4.LF.20.b",
+      "confidence": "strong",
+      "rationale": "Same grade. The informational half is Ohio's equivalent.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-116",
+      "subject": "ela",
+      "oh": "RI.4.1",
+      "state": "AL",
+      "code": "4.LF.20.c",
+      "confidence": "strong",
+      "rationale": "Same grade. The informational half is Ohio's equivalent.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-117",
+      "subject": "ela",
+      "oh": "RI.4.1",
+      "state": "AL",
+      "code": "4.LF.20.d",
+      "confidence": "strong",
+      "rationale": "Same grade. The informational half is Ohio's equivalent.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-118",
+      "subject": "ela",
+      "oh": "RI.4.2",
+      "state": "AL",
+      "code": "4.LF.21.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Relevant details supporting the main idea is Ohio's determining the main idea and explaining how details support it.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-119",
+      "subject": "ela",
+      "oh": "RI.4.2",
+      "state": "AL",
+      "code": "4.LF.21.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Relevant details supporting the main idea is Ohio's determining the main idea and explaining how details support it.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-120",
+      "subject": "ela",
+      "oh": "RI.4.2",
+      "state": "AL",
+      "code": "4.LF.21.c",
+      "confidence": "strong",
+      "rationale": "Same grade. Relevant details supporting the main idea is Ohio's determining the main idea and explaining how details support it.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-121",
+      "subject": "ela",
+      "oh": "RI.4.3",
+      "state": "AL",
+      "code": "4.LF.22.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Analysing events, procedures, ideas or concepts in informational text is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-122",
+      "subject": "ela",
+      "oh": "RI.4.5",
+      "state": "AL",
+      "code": "4.LF.23.a",
+      "confidence": "strong",
+      "rationale": "Same grade. How text features and structures contribute to meaning is Ohio's overall structure of a text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-123",
+      "subject": "ela",
+      "oh": "RI.4.5",
+      "state": "AL",
+      "code": "4.LF.23.b",
+      "confidence": "strong",
+      "rationale": "Same grade. How text features and structures contribute to meaning is Ohio's overall structure of a text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-124",
+      "subject": "ela",
+      "oh": "RI.4.8",
+      "state": "AL",
+      "code": "4.LF.24.a",
+      "confidence": "strong",
+      "rationale": "Same grade. How an author uses reasons and evidence to support points is Ohio's standard almost word for word.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-125",
+      "subject": "ela",
+      "oh": "RL.4.5",
+      "state": "AL",
+      "code": "4.LF.25",
+      "confidence": "strong",
+      "rationale": "Same grade. How a poem's form contributes to meaning is Ohio's structural elements of poems.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-126",
+      "subject": "ela",
+      "oh": "RL.4.5",
+      "state": "AL",
+      "code": "4.LF.26",
+      "confidence": "strong",
+      "rationale": "Same grade. Rhythm and rhyme contributing to meaning is Ohio's structural elements of poetry.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-127",
+      "subject": "ela",
+      "oh": "RL.4.4",
+      "state": "AL",
+      "code": "4.LF.26",
+      "confidence": "moderate",
+      "rationale": "Same grade. The word-level effect is Ohio's meaning of words and phrases in a literary text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-128",
+      "subject": "ela",
+      "oh": "RI.4.8",
+      "state": "AL",
+      "code": "4.LF.27",
+      "confidence": "moderate",
+      "rationale": "Same grade. Identifying a speaker's reasons and evidence is Ohio's author's use of evidence, applied to spoken argument.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-129",
+      "subject": "ela",
+      "oh": "RL.4.1",
+      "state": "AL",
+      "code": "4.LF.28",
+      "confidence": "moderate",
+      "rationale": "Same grade. Writing responses using textual evidence rests on Ohio's referring to details and examples.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-130",
+      "subject": "ela",
+      "oh": "RI.4.1",
+      "state": "AL",
+      "code": "4.LF.28",
+      "confidence": "moderate",
+      "rationale": "Same grade. The informational half anchors to Ohio's equivalent.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-131",
+      "subject": "ela",
+      "oh": "RL.4.7",
+      "state": "AL",
+      "code": "4.LF.29",
+      "confidence": "moderate",
+      "rationale": "Same grade. Adding audio to presentations is Ohio's connections between a text and its oral or visual presentation.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-132",
+      "subject": "ela",
+      "oh": "RI.4.9",
+      "state": "AL",
+      "code": "4.LF.30.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Synthesising information on a topic is Ohio's integrating information from two texts on the same topic.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-133",
+      "subject": "ela",
+      "oh": "RI.4.9",
+      "state": "AL",
+      "code": "4.LF.30.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Synthesising information on a topic is Ohio's integrating information from two texts on the same topic.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-134",
+      "subject": "ela",
+      "oh": "RI.4.7",
+      "state": "AL",
+      "code": "4.LF.31",
+      "confidence": "strong",
+      "rationale": "Same grade. Paraphrasing information presented in diverse media is Ohio's interpreting information presented visually, orally or quantitatively.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-135",
+      "subject": "ela",
+      "oh": "L.4.6",
+      "state": "AL",
+      "code": "4.LF.9",
+      "confidence": "strong",
+      "rationale": "Same grade. Interpreting general academic and domain-specific words is Ohio's acquiring and using them accurately.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-136",
+      "subject": "ela",
+      "oh": "RI.4.4",
+      "state": "AL",
+      "code": "4.LF.9",
+      "confidence": "moderate",
+      "rationale": "Same grade. In an informational text, Ohio's determining meaning of academic and domain-specific words applies.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-137",
+      "subject": "ela",
+      "oh": "L.5.4",
+      "state": "AL",
+      "code": "5.LF.11",
+      "confidence": "strong",
+      "rationale": "Same grade. Clarifying the meaning of unknown words is Ohio's determining or clarifying unknown and multiple-meaning words.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-138",
+      "subject": "ela",
+      "oh": "L.5.6",
+      "state": "AL",
+      "code": "5.LF.11",
+      "confidence": "moderate",
+      "rationale": "Same grade. Acquiring and using grade-level vocabulary is Ohio's accurate use of academic words.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-139",
+      "subject": "ela",
+      "oh": "RL.5.4",
+      "state": "AL",
+      "code": "5.LF.12.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Interpreting words and phrases as used in text is Ohio's meaning of words and phrases, including figurative language.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-140",
+      "subject": "ela",
+      "oh": "RL.5.4",
+      "state": "AL",
+      "code": "5.LF.12.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Interpreting words and phrases as used in text is Ohio's meaning of words and phrases, including figurative language.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-141",
+      "subject": "ela",
+      "oh": "RL.5.4",
+      "state": "AL",
+      "code": "5.LF.12.c",
+      "confidence": "strong",
+      "rationale": "Same grade. Interpreting words and phrases as used in text is Ohio's meaning of words and phrases, including figurative language.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-142",
+      "subject": "ela",
+      "oh": "RL.5.4",
+      "state": "AL",
+      "code": "5.LF.12.d",
+      "confidence": "strong",
+      "rationale": "Same grade. Interpreting words and phrases as used in text is Ohio's meaning of words and phrases, including figurative language.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-143",
+      "subject": "ela",
+      "oh": "RL.5.4",
+      "state": "AL",
+      "code": "5.LF.12.e",
+      "confidence": "strong",
+      "rationale": "Same grade. Interpreting words and phrases as used in text is Ohio's meaning of words and phrases, including figurative language.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-144",
+      "subject": "ela",
+      "oh": "RI.5.4",
+      "state": "AL",
+      "code": "5.LF.12.a",
+      "confidence": "strong",
+      "rationale": "Same grade. The informational half is Ohio's equivalent.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-145",
+      "subject": "ela",
+      "oh": "RI.5.4",
+      "state": "AL",
+      "code": "5.LF.12.b",
+      "confidence": "strong",
+      "rationale": "Same grade. The informational half is Ohio's equivalent.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-146",
+      "subject": "ela",
+      "oh": "RI.5.4",
+      "state": "AL",
+      "code": "5.LF.12.c",
+      "confidence": "strong",
+      "rationale": "Same grade. The informational half is Ohio's equivalent.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-147",
+      "subject": "ela",
+      "oh": "RI.5.4",
+      "state": "AL",
+      "code": "5.LF.12.d",
+      "confidence": "strong",
+      "rationale": "Same grade. The informational half is Ohio's equivalent.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-148",
+      "subject": "ela",
+      "oh": "RI.5.4",
+      "state": "AL",
+      "code": "5.LF.12.e",
+      "confidence": "strong",
+      "rationale": "Same grade. The informational half is Ohio's equivalent.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-149",
+      "subject": "ela",
+      "oh": "L.5.4",
+      "state": "AL",
+      "code": "5.LF.13",
+      "confidence": "strong",
+      "rationale": "Same grade. Determining unknown and multiple-meaning words is Ohio's standard word for word.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-150",
+      "subject": "ela",
+      "oh": "L.5.6",
+      "state": "AL",
+      "code": "5.LF.14",
+      "confidence": "strong",
+      "rationale": "Same grade. Writing with academic and domain-specific words is Ohio's accurate use of such words.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-151",
+      "subject": "ela",
+      "oh": "L.5.6",
+      "state": "AL",
+      "code": "5.LF.15",
+      "confidence": "strong",
+      "rationale": "Same grade. Using academic vocabulary in discussion is Ohio's accurate use of such words.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-152",
+      "subject": "ela",
+      "oh": "RL.5.1",
+      "state": "AL",
+      "code": "5.LF.16",
+      "confidence": "strong",
+      "rationale": "Same grade. Demonstrating comprehension by drawing on the text is Ohio's quoting accurately when explaining a text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-153",
+      "subject": "ela",
+      "oh": "RI.5.1",
+      "state": "AL",
+      "code": "5.LF.16",
+      "confidence": "strong",
+      "rationale": "Same grade. The informational half is Ohio's equivalent.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-154",
+      "subject": "ela",
+      "oh": "RL.5.1",
+      "state": "AL",
+      "code": "5.LF.17",
+      "confidence": "strong",
+      "rationale": "Same grade. Asking and responding to questions about a text is Ohio's quoting accurately to explain and infer.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-155",
+      "subject": "ela",
+      "oh": "RI.5.3",
+      "state": "AL",
+      "code": "5.LF.18",
+      "confidence": "strong",
+      "rationale": "Same grade. Explaining relationships among events, people or concepts is Ohio's standard directly.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-156",
+      "subject": "ela",
+      "oh": "RL.5.3",
+      "state": "AL",
+      "code": "5.LF.19",
+      "confidence": "strong",
+      "rationale": "Same grade. How authors use literary elements throughout a text is Ohio's comparing characters, settings and events.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-157",
+      "subject": "ela",
+      "oh": "RL.5.3",
+      "state": "AL",
+      "code": "5.LF.20",
+      "confidence": "strong",
+      "rationale": "Same grade. How character types develop the narrative is Ohio's drawing on specific details about characters.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-158",
+      "subject": "ela",
+      "oh": "RL.5.9",
+      "state": "AL",
+      "code": "5.LF.21",
+      "confidence": "strong",
+      "rationale": "Same grade. Comparing characters, points of view or events across texts is Ohio's comparing stories in the same genre.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-159",
+      "subject": "ela",
+      "oh": "RL.5.6",
+      "state": "AL",
+      "code": "5.LF.21",
+      "confidence": "moderate",
+      "rationale": "Same grade. The point-of-view half is Ohio's how a narrator's point of view influences events.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-160",
+      "subject": "ela",
+      "oh": "RI.5.2",
+      "state": "AL",
+      "code": "5.LF.22",
+      "confidence": "strong",
+      "rationale": "Same grade. Determining the implied or explicit main idea is Ohio's determining two or more main ideas and supporting details.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-161",
+      "subject": "ela",
+      "oh": "RL.5.2",
+      "state": "AL",
+      "code": "5.LF.22",
+      "confidence": "moderate",
+      "rationale": "Same grade. For literature this is Ohio's determining a theme and summarising.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-162",
+      "subject": "ela",
+      "oh": "RL.5.2",
+      "state": "AL",
+      "code": "5.LF.23.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Determining and analysing themes with textual support is Ohio's determining a theme from details.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-163",
+      "subject": "ela",
+      "oh": "RL.5.2",
+      "state": "AL",
+      "code": "5.LF.23.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Determining and analysing themes with textual support is Ohio's determining a theme from details.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-164",
+      "subject": "ela",
+      "oh": "RI.5.5",
+      "state": "AL",
+      "code": "5.LF.24.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Evaluating text features and structure is Ohio's comparing the overall structure of texts.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-165",
+      "subject": "ela",
+      "oh": "RI.5.5",
+      "state": "AL",
+      "code": "5.LF.24.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Evaluating text features and structure is Ohio's comparing the overall structure of texts.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-166",
+      "subject": "ela",
+      "oh": "RI.5.7",
+      "state": "AL",
+      "code": "5.LF.24.a",
+      "confidence": "moderate",
+      "rationale": "Same grade. The digital half is Ohio's drawing on information from multiple print or digital sources.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-167",
+      "subject": "ela",
+      "oh": "RI.5.7",
+      "state": "AL",
+      "code": "5.LF.24.b",
+      "confidence": "moderate",
+      "rationale": "Same grade. The digital half is Ohio's drawing on information from multiple print or digital sources.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-168",
+      "subject": "ela",
+      "oh": "RI.5.8",
+      "state": "AL",
+      "code": "5.LF.25",
+      "confidence": "strong",
+      "rationale": "Same grade. Determining credibility and distinguishing fact from opinion is Ohio's explaining how an author uses reasons and evidence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-169",
+      "subject": "ela",
+      "oh": "RI.5.9",
+      "state": "AL",
+      "code": "5.LF.26.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Addressing similar topics across texts and media is Ohio's integrating information from several texts on the same topic.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-170",
+      "subject": "ela",
+      "oh": "RI.5.9",
+      "state": "AL",
+      "code": "5.LF.26.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Addressing similar topics across texts and media is Ohio's integrating information from several texts on the same topic.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-171",
+      "subject": "ela",
+      "oh": "RI.5.9",
+      "state": "AL",
+      "code": "5.LF.26.c",
+      "confidence": "strong",
+      "rationale": "Same grade. Addressing similar topics across texts and media is Ohio's integrating information from several texts on the same topic.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-172",
+      "subject": "ela",
+      "oh": "RI.5.9",
+      "state": "AL",
+      "code": "5.LF.26.d",
+      "confidence": "strong",
+      "rationale": "Same grade. Addressing similar topics across texts and media is Ohio's integrating information from several texts on the same topic.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-173",
+      "subject": "ela",
+      "oh": "RI.5.9",
+      "state": "AL",
+      "code": "5.LF.26.e",
+      "confidence": "strong",
+      "rationale": "Same grade. Addressing similar topics across texts and media is Ohio's integrating information from several texts on the same topic.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-174",
+      "subject": "ela",
+      "oh": "RI.5.7",
+      "state": "AL",
+      "code": "5.LF.26.a",
+      "confidence": "moderate",
+      "rationale": "Same grade. The media half is Ohio's drawing on multiple sources to answer a question.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-175",
+      "subject": "ela",
+      "oh": "RI.5.7",
+      "state": "AL",
+      "code": "5.LF.26.b",
+      "confidence": "moderate",
+      "rationale": "Same grade. The media half is Ohio's drawing on multiple sources to answer a question.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-176",
+      "subject": "ela",
+      "oh": "RI.5.7",
+      "state": "AL",
+      "code": "5.LF.26.c",
+      "confidence": "moderate",
+      "rationale": "Same grade. The media half is Ohio's drawing on multiple sources to answer a question.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-177",
+      "subject": "ela",
+      "oh": "RI.5.7",
+      "state": "AL",
+      "code": "5.LF.26.d",
+      "confidence": "moderate",
+      "rationale": "Same grade. The media half is Ohio's drawing on multiple sources to answer a question.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-178",
+      "subject": "ela",
+      "oh": "RI.5.7",
+      "state": "AL",
+      "code": "5.LF.26.e",
+      "confidence": "moderate",
+      "rationale": "Same grade. The media half is Ohio's drawing on multiple sources to answer a question.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-179",
+      "subject": "ela",
+      "oh": "RI.5.8",
+      "state": "AL",
+      "code": "5.LF.27",
+      "confidence": "moderate",
+      "rationale": "Same grade. Drawing conclusions using facts is Ohio's identifying which reasons and evidence support which points.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-180",
+      "subject": "ela",
+      "oh": "RI.5.2",
+      "state": "AL",
+      "code": "5.LF.27",
+      "confidence": "moderate",
+      "rationale": "Same grade. Reviewing key ideas is Ohio's determining main ideas and supporting details.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-181",
+      "subject": "ela",
+      "oh": "RI.5.7",
+      "state": "AL",
+      "code": "5.LF.28",
+      "confidence": "strong",
+      "rationale": "Same grade. Using audio and visual sources to answer a question is Ohio's drawing on information from multiple sources.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-182",
+      "subject": "ela",
+      "oh": "RI.5.2",
+      "state": "AL",
+      "code": "5.LF.29.a",
+      "confidence": "strong",
+      "rationale": "Same grade. Summarising a text with its main idea is Ohio's determining main ideas and summarising.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-183",
+      "subject": "ela",
+      "oh": "RI.5.2",
+      "state": "AL",
+      "code": "5.LF.29.b",
+      "confidence": "strong",
+      "rationale": "Same grade. Summarising a text with its main idea is Ohio's determining main ideas and summarising.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-184",
+      "subject": "ela",
+      "oh": "RL.5.2",
+      "state": "AL",
+      "code": "5.LF.29.a",
+      "confidence": "moderate",
+      "rationale": "Same grade. For literature this is Ohio's summarising the text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-185",
+      "subject": "ela",
+      "oh": "RL.5.2",
+      "state": "AL",
+      "code": "5.LF.29.b",
+      "confidence": "moderate",
+      "rationale": "Same grade. For literature this is Ohio's summarising the text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-186",
+      "subject": "ela",
+      "oh": "RL.5.1",
+      "state": "AL",
+      "code": "5.LF.30",
+      "confidence": "strong",
+      "rationale": "Same grade. Quoting accurately to support conclusions is Ohio's standard word for word.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-187",
+      "subject": "ela",
+      "oh": "RI.5.1",
+      "state": "AL",
+      "code": "5.LF.30",
+      "confidence": "strong",
+      "rationale": "Same grade. The informational half is Ohio's equivalent.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-188",
+      "subject": "ela",
+      "oh": "RL.5.7",
+      "state": "AL",
+      "code": "5.LF.31",
+      "confidence": "moderate",
+      "rationale": "Same grade. Multimedia in presentations is Ohio's analysing how visual and multimedia elements contribute to a text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-189",
+      "subject": "ela",
+      "oh": "RI.6.6",
+      "state": "AL",
+      "code": "6.CL.1",
+      "confidence": "strong",
+      "rationale": "Same grade. Explaining an author's rhetorical choices including point of view is Ohio's determining an author's point of view or purpose.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-190",
+      "subject": "ela",
+      "oh": "RI.6.1",
+      "state": "AL",
+      "code": "6.CL.2",
+      "confidence": "strong",
+      "rationale": "Same grade. Drawing logical conclusions from content and structure is Ohio's citing textual evidence to support inference.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-191",
+      "subject": "ela",
+      "oh": "RL.6.1",
+      "state": "AL",
+      "code": "6.CL.2",
+      "confidence": "strong",
+      "rationale": "Same grade. The literary half is Ohio's equivalent for literature.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-192",
+      "subject": "ela",
+      "oh": "RL.6.3",
+      "state": "AL",
+      "code": "6.CL.3",
+      "confidence": "strong",
+      "rationale": "Same grade. How authors use setting, plot, characters, theme and conflict is Ohio's describing how a plot unfolds and characters respond.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-193",
+      "subject": "ela",
+      "oh": "RL.6.4",
+      "state": "AL",
+      "code": "6.CL.4",
+      "confidence": "strong",
+      "rationale": "Same grade. Literary devices in prose and poetry is Ohio's meaning of words and phrases, including figurative and connotative meanings.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-194",
+      "subject": "ela",
+      "oh": "RI.6.2",
+      "state": "AL",
+      "code": "6.CL.5",
+      "confidence": "strong",
+      "rationale": "Same grade. Evaluating development of central and supporting ideas is Ohio's determining a central idea and how it is conveyed through details.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-195",
+      "subject": "ela",
+      "oh": "RI.6.7",
+      "state": "AL",
+      "code": "6.CL.6",
+      "confidence": "moderate",
+      "rationale": "Same grade. Supporting interpretations of live or recorded presentations is Ohio's integrating information presented in different media.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-196",
+      "subject": "ela",
+      "oh": "RI.6.1",
+      "state": "AL",
+      "code": "6.CL.8",
+      "confidence": "moderate",
+      "rationale": "Same grade. Collaborative discussion drawing on a source rests on Ohio's citing textual evidence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-197",
+      "subject": "ela",
+      "oh": "RL.6.4",
+      "state": "AL",
+      "code": "6.CL.9",
+      "confidence": "moderate",
+      "rationale": "Same grade. Discussing literary devices and elements is Ohio's meaning and impact of words and phrases in a literary text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-198",
+      "subject": "ela",
+      "oh": "RI.6.6",
+      "state": "AL",
+      "code": "6.LL.17",
+      "confidence": "strong",
+      "rationale": "Same grade. Assessing a speaker's organisational choices to determine point of view and purpose is Ohio's author's point of view or purpose.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-199",
+      "subject": "ela",
+      "oh": "L.6.6",
+      "state": "AL",
+      "code": "6.LL.20",
+      "confidence": "moderate",
+      "rationale": "Same grade. Choosing language that maintains style and tone is Ohio's accurate use of grade-appropriate academic vocabulary.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-200",
+      "subject": "ela",
+      "oh": "L.6.4",
+      "state": "AL",
+      "code": "6.VL.27",
+      "confidence": "strong",
+      "rationale": "Same grade. Word parts, connotation and denotation is Ohio's determining or clarifying word meaning from structure and context.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-201",
+      "subject": "ela",
+      "oh": "L.6.5",
+      "state": "AL",
+      "code": "6.VL.27",
+      "confidence": "moderate",
+      "rationale": "Same grade. The connotation half is Ohio's nuances in word meanings.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-202",
+      "subject": "ela",
+      "oh": "L.6.4",
+      "state": "AL",
+      "code": "6.VL.28",
+      "confidence": "moderate",
+      "rationale": "Same grade. Discovering word meaning through listening applies Ohio's clarification strategies in a spoken context.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-203",
+      "subject": "ela",
+      "oh": "L.6.6",
+      "state": "AL",
+      "code": "6.VL.29",
+      "confidence": "strong",
+      "rationale": "Same grade. Using academic vocabulary in writing is Ohio's acquiring and using such words accurately.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-204",
+      "subject": "ela",
+      "oh": "L.6.6",
+      "state": "AL",
+      "code": "6.VL.30",
+      "confidence": "strong",
+      "rationale": "Same grade. Choosing vocabulary for effect when speaking is Ohio's accurate use of academic and domain-specific words.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-205",
+      "subject": "ela",
+      "oh": "RI.7.5",
+      "state": "AL",
+      "code": "7.CL.1",
+      "confidence": "strong",
+      "rationale": "Same grade. Evaluating contributions of informational text elements is Ohio's analysing text structure and how it contributes to ideas.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-206",
+      "subject": "ela",
+      "oh": "RI.7.6",
+      "state": "AL",
+      "code": "7.CL.1",
+      "confidence": "moderate",
+      "rationale": "Same grade. The point-of-view element is Ohio's author's point of view or purpose.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-207",
+      "subject": "ela",
+      "oh": "RI.7.5",
+      "state": "AL",
+      "code": "7.CL.2",
+      "confidence": "strong",
+      "rationale": "Same grade. Evaluating how effectively an author uses informational structures is Ohio's analysing structure and its contribution.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-208",
+      "subject": "ela",
+      "oh": "RL.7.3",
+      "state": "AL",
+      "code": "7.CL.3",
+      "confidence": "strong",
+      "rationale": "Same grade. How the author's choice of setting, plot, character and conflict works is Ohio's analysing how elements of a story interact.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-209",
+      "subject": "ela",
+      "oh": "RL.7.4",
+      "state": "AL",
+      "code": "7.CL.4",
+      "confidence": "strong",
+      "rationale": "Same grade. Evaluating literary devices with textual evidence is Ohio's meaning and impact of words and phrases.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-210",
+      "subject": "ela",
+      "oh": "RL.7.1",
+      "state": "AL",
+      "code": "7.CL.4",
+      "confidence": "moderate",
+      "rationale": "Same grade. The evidence requirement is Ohio's citing textual evidence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-211",
+      "subject": "ela",
+      "oh": "RI.7.2",
+      "state": "AL",
+      "code": "7.CL.5",
+      "confidence": "strong",
+      "rationale": "Same grade. Rhetorical strategies developing central and supporting ideas is Ohio's determining a central idea and its development.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-212",
+      "subject": "ela",
+      "oh": "RI.7.8",
+      "state": "AL",
+      "code": "7.CL.5",
+      "confidence": "moderate",
+      "rationale": "Same grade. The argument half is Ohio's tracing and evaluating an argument's reasoning.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-213",
+      "subject": "ela",
+      "oh": "RL.7.4",
+      "state": "AL",
+      "code": "7.CL.6",
+      "confidence": "strong",
+      "rationale": "Same grade. A speaker's hyperbole, tone, symbolism, imagery and irony is Ohio's figurative and connotative meaning and its impact.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-214",
+      "subject": "ela",
+      "oh": "L.7.5",
+      "state": "AL",
+      "code": "7.CL.6",
+      "confidence": "moderate",
+      "rationale": "Same grade. Ohio's figurative language and word nuance covers the same devices.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-215",
+      "subject": "ela",
+      "oh": "RI.7.8",
+      "state": "AL",
+      "code": "7.CL.8",
+      "confidence": "strong",
+      "rationale": "Same grade. Evaluating claims in discussion is Ohio's tracing and evaluating an argument, assessing whether evidence is sound.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-216",
+      "subject": "ela",
+      "oh": "RL.7.1",
+      "state": "AL",
+      "code": "7.CL.9",
+      "confidence": "moderate",
+      "rationale": "Same grade. Discussion of prose and poetry grounded in the text is Ohio's citing textual evidence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-217",
+      "subject": "ela",
+      "oh": "RI.7.6",
+      "state": "AL",
+      "code": "7.LL.19",
+      "confidence": "strong",
+      "rationale": "Same grade. Evaluating a speaker's organisational choices for point of view and purpose is Ohio's author's point of view or purpose.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-218",
+      "subject": "ela",
+      "oh": "L.7.6",
+      "state": "AL",
+      "code": "7.LL.20",
+      "confidence": "moderate",
+      "rationale": "Same grade. Identifying a speaker's formality of language is Ohio's accurate use of grade-appropriate vocabulary.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-219",
+      "subject": "ela",
+      "oh": "L.7.6",
+      "state": "AL",
+      "code": "7.LL.22",
+      "confidence": "strong",
+      "rationale": "Same grade. Choosing language that expresses ideas precisely is Ohio's accurate use of academic and domain-specific words.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-220",
+      "subject": "ela",
+      "oh": "L.7.4",
+      "state": "AL",
+      "code": "7.VL.29",
+      "confidence": "strong",
+      "rationale": "Same grade. Word parts, context clues and connotation is Ohio's determining or clarifying word meaning.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-221",
+      "subject": "ela",
+      "oh": "L.7.5",
+      "state": "AL",
+      "code": "7.VL.29",
+      "confidence": "moderate",
+      "rationale": "Same grade. The connotation half is Ohio's word nuance and relationships.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-222",
+      "subject": "ela",
+      "oh": "RI.7.4",
+      "state": "AL",
+      "code": "7.VL.30",
+      "confidence": "strong",
+      "rationale": "Same grade. Evaluating texts from science and social studies is Ohio's meaning of technical and domain-specific words in an informational text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-223",
+      "subject": "ela",
+      "oh": "L.7.4",
+      "state": "AL",
+      "code": "7.VL.31",
+      "confidence": "moderate",
+      "rationale": "Same grade. Inferring word meaning through listening applies Ohio's clarification strategies in a spoken context.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-224",
+      "subject": "ela",
+      "oh": "L.7.6",
+      "state": "AL",
+      "code": "7.VL.32",
+      "confidence": "strong",
+      "rationale": "Same grade. Applying vocabulary in writing is Ohio's acquiring and using academic words accurately.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-225",
+      "subject": "ela",
+      "oh": "L.7.6",
+      "state": "AL",
+      "code": "7.VL.33",
+      "confidence": "strong",
+      "rationale": "Same grade. Selecting words suitable for purpose and audience is Ohio's accurate use of grade-appropriate vocabulary.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-226",
+      "subject": "ela",
+      "oh": "RI.8.5",
+      "state": "AL",
+      "code": "8.CL.1",
+      "confidence": "strong",
+      "rationale": "Same grade. Analysing informational and graphic text elements is Ohio's analysing the structure of a paragraph and its role in developing ideas.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-227",
+      "subject": "ela",
+      "oh": "RI.8.6",
+      "state": "AL",
+      "code": "8.CL.1",
+      "confidence": "moderate",
+      "rationale": "Same grade. The point-of-view element is Ohio's author's point of view or purpose.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-228",
+      "subject": "ela",
+      "oh": "RL.8.1",
+      "state": "AL",
+      "code": "8.CL.10",
+      "confidence": "moderate",
+      "rationale": "Same grade. Discussion of prose and poetry grounded in the text is Ohio's citing the strongest supporting evidence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-229",
+      "subject": "ela",
+      "oh": "RI.8.1",
+      "state": "AL",
+      "code": "8.CL.2",
+      "confidence": "strong",
+      "rationale": "Same grade. Making complex inferences from structure and content is Ohio's citing textual evidence that most strongly supports an inference.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-230",
+      "subject": "ela",
+      "oh": "RL.8.1",
+      "state": "AL",
+      "code": "8.CL.2",
+      "confidence": "strong",
+      "rationale": "Same grade. The literary half is Ohio's equivalent for literature.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-231",
+      "subject": "ela",
+      "oh": "RL.8.3",
+      "state": "AL",
+      "code": "8.CL.3",
+      "confidence": "strong",
+      "rationale": "Same grade. Analysing key literary elements is Ohio's analysing how dialogue and incidents propel action and reveal character.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-232",
+      "subject": "ela",
+      "oh": "RL.8.4",
+      "state": "AL",
+      "code": "8.CL.4",
+      "confidence": "strong",
+      "rationale": "Same grade. Analysing simile, metaphor and personification is Ohio's figurative and connotative meaning and its impact.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-233",
+      "subject": "ela",
+      "oh": "RL.8.6",
+      "state": "AL",
+      "code": "8.CL.5",
+      "confidence": "strong",
+      "rationale": "Same grade. Comparing perspectives across fiction and nonfiction is Ohio's analysing differences in the points of view of characters and audience.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-234",
+      "subject": "ela",
+      "oh": "RI.8.6",
+      "state": "AL",
+      "code": "8.CL.5",
+      "confidence": "moderate",
+      "rationale": "Same grade. The nonfiction half is Ohio's author's point of view and responses to conflicting evidence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-235",
+      "subject": "ela",
+      "oh": "RI.8.2",
+      "state": "AL",
+      "code": "8.CL.6",
+      "confidence": "strong",
+      "rationale": "Same grade. Evaluating development of central and supporting ideas is Ohio's determining a central idea and analysing its development.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-236",
+      "subject": "ela",
+      "oh": "RL.8.4",
+      "state": "AL",
+      "code": "8.CL.7",
+      "confidence": "strong",
+      "rationale": "Same grade. Critiquing a speaker's hyperbole, tone, symbolism and irony is Ohio's figurative and connotative meaning, including analogy and allusion.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-237",
+      "subject": "ela",
+      "oh": "L.8.5",
+      "state": "AL",
+      "code": "8.CL.7",
+      "confidence": "moderate",
+      "rationale": "Same grade. Ohio's figurative language and word nuance covers the same devices.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-238",
+      "subject": "ela",
+      "oh": "RI.8.8",
+      "state": "AL",
+      "code": "8.CL.9",
+      "confidence": "strong",
+      "rationale": "Same grade. Evaluating claims and reasoning in discussion is Ohio's delineating and evaluating an argument and assessing its evidence.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-239",
+      "subject": "ela",
+      "oh": "L.8.6",
+      "state": "AL",
+      "code": "8.LL.18",
+      "confidence": "moderate",
+      "rationale": "Same grade. Analysing a speaker's formality of language is Ohio's accurate use of grade-appropriate vocabulary.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-240",
+      "subject": "ela",
+      "oh": "RI.8.6",
+      "state": "AL",
+      "code": "8.LL.19",
+      "confidence": "strong",
+      "rationale": "Same grade. Evaluating a speaker's rhetorical and organisational choices is Ohio's determining an author's point of view or purpose.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-241",
+      "subject": "ela",
+      "oh": "L.8.6",
+      "state": "AL",
+      "code": "8.LL.21",
+      "confidence": "strong",
+      "rationale": "Same grade. Choosing language that expresses ideas precisely and concisely is Ohio's accurate use of academic and domain-specific words.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-242",
+      "subject": "ela",
+      "oh": "L.8.4",
+      "state": "AL",
+      "code": "8.VL.28",
+      "confidence": "strong",
+      "rationale": "Same grade. Word parts, context clues and connotation is Ohio's determining or clarifying word meaning.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-243",
+      "subject": "ela",
+      "oh": "L.8.5",
+      "state": "AL",
+      "code": "8.VL.28",
+      "confidence": "moderate",
+      "rationale": "Same grade. The connotation half is Ohio's word nuance and relationships.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-244",
+      "subject": "ela",
+      "oh": "RI.8.4",
+      "state": "AL",
+      "code": "8.VL.29",
+      "confidence": "strong",
+      "rationale": "Same grade. Evaluating texts from science and social studies is Ohio's meaning of technical and domain-specific words in an informational text.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-245",
+      "subject": "ela",
+      "oh": "L.8.4",
+      "state": "AL",
+      "code": "8.VL.30",
+      "confidence": "moderate",
+      "rationale": "Same grade. Connecting word meanings through listening applies Ohio's clarification strategies in a spoken context.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-246",
+      "subject": "ela",
+      "oh": "L.8.6",
+      "state": "AL",
+      "code": "8.VL.31",
+      "confidence": "strong",
+      "rationale": "Same grade. Integrating vocabulary into writing for effect is Ohio's accurate use of academic words.",
+      "source": "ai_draft"
+    },
+    {
+      "id": "lnk-ela-al-247",
+      "subject": "ela",
+      "oh": "L.8.6",
+      "state": "AL",
+      "code": "8.VL.32",
+      "confidence": "moderate",
+      "rationale": "Same grade. Using appropriate vocabulary across settings is Ohio's accurate use of grade-appropriate vocabulary.",
+      "source": "ai_draft"
     }
   ]
 }
