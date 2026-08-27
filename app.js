@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608272256';   // replaced with the deploy stamp
+const APP_BUILD = '202608272304';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -176,6 +176,7 @@ const state = {
     setFilterStatus: 'all', setFilterGrade: 'all', setFilterState: 'all', setSearch: '',   // Master list filters
     currentSetId: null, openPicker: null,
     reviewFocus: null,                  // Review Queue: focused link id (keyboard)
+    editPassages: false,                // Master List: read view vs textarea
     genOpen: false, genBusy: false, genModal: null,
     gen: { state: 'OH', subject: 'ela', grade: '4', code: '', genre: 'informational',
            subtopic: 'Science', itemSetType: 'informative', passageCount: 1,
@@ -1551,6 +1552,56 @@ function toast(msg) {
   toastTimer = setTimeout(() => t.classList.remove('show'), 1800);
 }
 
+function appDialog({ title, body, value, placeholder, ok, cancel, danger, textarea }) {
+  return new Promise(resolve => {
+    document.getElementById('appDialog')?.remove();
+    const hasField = value !== undefined;
+    const ov = el(`<div class="modal-backdrop" id="appDialog">
+      <div class="signin-card">
+        <div class="signin-title">${esc(title)}</div>
+        ${body ? `<p class="signin-sub">${esc(body)}</p>` : ''}
+        ${hasField ? (textarea
+          ? `<textarea id="appDialogVal" class="ps-textarea" rows="4" placeholder="${esc(placeholder || '')}">${esc(value || '')}</textarea>`
+          : `<input id="appDialogVal" class="ps-input" type="text" value="${esc(value || '')}" placeholder="${esc(placeholder || '')}">`)
+          : ''}
+        <div class="detail-actions" style="margin-top:8px;justify-content:flex-end">
+          <button class="btn btn-ghost" id="appDialogNo">${esc(cancel || 'Cancel')}</button>
+          <button class="btn ${danger ? 'btn-danger' : 'btn-primary'}" id="appDialogYes">${esc(ok || 'OK')}</button>
+        </div>
+      </div>
+    </div>`);
+    document.body.appendChild(ov);
+    const field = document.getElementById('appDialogVal');
+    const done = (v) => { ov.remove(); resolve(v); };
+    document.getElementById('appDialogNo').addEventListener('click', () => done(hasField ? null : false));
+    document.getElementById('appDialogYes').addEventListener('click', () => {
+      done(hasField ? (field ? field.value : '') : true);
+    });
+    ov.addEventListener('click', e => { if (e.target === ov) done(hasField ? null : false); });
+    ov.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { e.preventDefault(); done(hasField ? null : false); }
+      if (e.key === 'Enter' && !textarea && e.target !== document.getElementById('appDialogNo')) {
+        e.preventDefault();
+        done(hasField ? (field ? field.value : '') : true);
+      }
+    });
+    (field || document.getElementById('appDialogYes')).focus();
+    if (field && field.select) field.select();
+  });
+}
+function appConfirm(title, body, opts) {
+  return appDialog({ title, body, ok: (opts && opts.ok) || 'OK', cancel: (opts && opts.cancel) || 'Cancel', danger: opts && opts.danger });
+}
+function appPrompt(title, body, def, opts) {
+  return appDialog({
+    title, body, value: def == null ? '' : String(def),
+    placeholder: opts && opts.placeholder,
+    ok: (opts && opts.ok) || 'Save',
+    cancel: (opts && opts.cancel) || 'Cancel',
+    textarea: opts && opts.textarea,
+  });
+}
+
 /* A toast that offers to undo the action for 15 seconds. */
 let undoTimer;
 function toastUndo(msg, undoFn) {
@@ -2213,7 +2264,10 @@ function reviewKeydown(e) {
   if (state.ui.view !== 'review') return;
   if (userIsTyping()) return;
   if (e.metaKey || e.ctrlKey || e.altKey) return;
-  if (document.getElementById('genModal') || document.getElementById('signInOverlay')) return;
+  if (document.getElementById('genModal') || document.getElementById('signInOverlay')
+      || document.getElementById('appDialog')) return;
+  const cmdk = document.getElementById('cmdk');
+  if (cmdk && !cmdk.classList.contains('hidden')) return;
   const key = e.key;
   const nav = key === 'j' || key === 'J' || key === 'k' || key === 'K' || key === 'ArrowDown' || key === 'ArrowUp';
   const act = key === 'a' || key === 'A' || key === 'r' || key === 'R' || key === 'u' || key === 'U' || key === 'n' || key === 'N';
@@ -2657,7 +2711,7 @@ function exportReadiness(s) {
   };
 }
 
-function exportForCms() {
+async function exportForCms() {
   const sets = visibleMasterSets();
   if (!sets.length) { toast('Nothing to export — widen the filters first'); return; }
   const st = state.ui.setFilterState, gr = state.ui.setFilterGrade;
@@ -2668,10 +2722,11 @@ function exportForCms() {
   ].join(' · ');
   const broad = st === 'all' || gr === 'all';
   const qCount = sets.reduce((a, s) => a + (s.questions || []).filter(q => (q.text || '').trim()).length, 0);
-  if (broad && !confirm(
-      `Export ${sets.length} item sets (${qCount} questions)?\n\nScope: ${scopeText}\n\n`
-      + `${CMS_BATCH_ADVICE}\nNarrow the State and Grade filters first if you want a smaller batch.`)) {
-    return;
+  if (broad) {
+    const go = await appConfirm('Export this batch?',
+      `Export ${sets.length} item sets (${qCount} questions)?\n\nScope: ${scopeText}\n\n${CMS_BATCH_ADVICE}\nNarrow the State and Grade filters first if you want a smaller batch.`,
+      { ok: 'Export' });
+    if (!go) return;
   }
   const { itemSets, problems } = buildCmsExport(sets);
   const stamp = new Date().toISOString().slice(0, 10);
@@ -2824,6 +2879,7 @@ function newPassageSet() {
   state.sets.unshift(s);
   state.ui.currentSetId = s.id;
   state.ui.openPicker = null;
+  state.ui.editPassages = true;
   saveSets();
   renderPassages();
   syncHash();
@@ -3084,9 +3140,9 @@ function setListItemEl(s) {
     </div>`);
   const who = actorLabel(s.updatedBy), when = timeAgo(s.updatedAt);
   if (who || when) item.title = who && when ? `Last saved by ${who} · ${when}` : (who ? `Last saved by ${who}` : when);
-  item.addEventListener('click', e => {
+  item.addEventListener('click', async e => {
     if (e.target.closest('[data-del-set]')) {
-      if (confirm(`Delete "${s.title || 'Untitled set'}"? This cannot be undone.`)) {
+      if (await appConfirm('Delete this set?', `Delete "${s.title || 'Untitled set'}"? This cannot be undone.`, { ok: 'Delete', danger: true })) {
         (state.setDeleted = state.setDeleted || {})[s.id] = Date.now();
         state.sets = state.sets.filter(x => x.id !== s.id);
         if (state.ui.currentSetId === s.id) state.ui.currentSetId = null;
@@ -3097,6 +3153,7 @@ function setListItemEl(s) {
     }
     state.ui.currentSetId = s.id;
     state.ui.openPicker = null;
+    state.ui.editPassages = false;
     renderPassages();
     syncHash();
   });
@@ -3273,8 +3330,10 @@ function renderSetEditor() {
     </div>
 
     <div class="ps-section">
-      <div class="ps-section-title">Passages <span class="ps-hint">single or multiple</span></div>
-      ${s.passages.map((p, i) => `
+      <div class="ps-section-title">Passages <span class="ps-hint">single or multiple</span>
+        <button class="act-btn" id="togglePassagesEdit" style="margin-left:auto">${state.ui.editPassages ? 'Done' : 'Edit'}</button>
+      </div>
+      ${s.passages.map((p, i) => state.ui.editPassages ? `
         <div class="q-card">
           <div class="q-head"><span class="q-label">Passage ${i + 1}</span>
             <button class="q-remove" data-remove-p="${i}" title="Remove">${ico('close')}</button></div>
@@ -3282,8 +3341,13 @@ function renderSetEditor() {
             <input type="text" class="ps-input" data-ptitle="${i}" value="${esc(p.title)}"
               placeholder="e.g., The Wright Brothers Take Flight"></div>
           <textarea class="ps-textarea passage-text" data-p="${i}" rows="10" placeholder="Paste the passage text here.">${esc(p.text)}</textarea>
+        </div>` : `
+        <div class="q-card">
+          <div class="q-head"><span class="q-label">Passage ${i + 1}</span></div>
+          ${p.title ? `<div class="detail-ptitle">${esc(p.title)}</div>` : ''}
+          <div class="passage-read">${(p.text || '').trim() ? esc(p.text) : '<span class="ps-hint">No passage text yet — click Edit to add it.</span>'}</div>
         </div>`).join('')}
-      <button class="act-btn" id="addPassage">${ico('plus')} Add passage</button>
+      ${state.ui.editPassages ? `<button class="act-btn" id="addPassage">${ico('plus')} Add passage</button>` : ''}
     </div>
 
     <div class="ps-section">
@@ -3344,9 +3408,13 @@ function primaryStateOf(s) {
 function wireSetEditor(panel, s) {
   const on = (sel, ev, fn) => panel.querySelectorAll(sel).forEach(n => n.addEventListener(ev, fn));
 
+  on('#togglePassagesEdit', 'click', () => {
+    state.ui.editPassages = !state.ui.editPassages;
+    renderPassages();
+  });
   on('#saveSetBtn', 'click', () => flushState());
-  on('#approveSetBtn', 'click', () => {
-    if (!s.passageId && !confirm('This set has no passage ID yet. Approve it anyway?')) return;
+  on('#approveSetBtn', 'click', async () => {
+    if (!s.passageId && !await appConfirm('Approve without an ID?', 'This set has no passage ID yet. Approve it anyway?', { ok: 'Approve anyway' })) return;
     delete s.status;                 // no longer a draft — enters the passage library
     saveSets();
     toast(`Approved "${s.title || 'set'}" — now in the passage library`);
@@ -3787,9 +3855,8 @@ function qstateScope(grade) {
 
 /* ---------- AI builder: whole passage set ----------
    Generate a complete, standard-anchored passage set (passage(s) + questions +
-   writing prompt) from the Master Passage List. Same browser-direct Anthropic call
-   and stored key as the peer-revision builder. Everything lands as a DRAFT for human
-   review — nothing skips the normal approval path. */
+   writing prompt) from the Master Passage List. Calls the org generate proxy (Grok).
+   Everything lands as a DRAFT for human review — nothing skips the normal approval path. */
 
 // Backend rule: per-grade passage length. These are the p25–p75 bands measured from
 // the 670 imported ECR sets (data/imported_sets.json), i.e. this library's own house
@@ -3890,34 +3957,27 @@ const SET_SCHEMA = {
   additionalProperties: false,
 };
 
-async function callSetBuilder(userText) {
-  const r = await fetch('https://api.anthropic.com/v1/messages', {
+async function aiComplete({ system, user, schema, name }) {
+  const session = SB.client && (await SB.client.auth.getSession()).data.session;
+  if (!session) throw new Error('Sign in to generate');
+  const r = await fetch(`${SUPABASE_URL}/functions/v1/generate`, {
     method: 'POST',
     headers: {
-      'content-type': 'application/json',
-      'x-api-key': aiKey,
-      'anthropic-version': '2023-06-01',
-      'anthropic-dangerous-direct-browser-access': 'true',
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + session.access_token,
+      apikey: SUPABASE_ANON_KEY,
     },
-    body: JSON.stringify({
-      model: 'claude-opus-4-8',
-      max_tokens: 16000,
-      thinking: { type: 'adaptive' },
-      system: SET_SYSTEM,
-      output_config: { format: { type: 'json_schema', schema: SET_SCHEMA } },
-      messages: [{ role: 'user', content: userText }],
-    }),
+    body: JSON.stringify({ system, user, schema, name: name || 'result' }),
   });
-  if (!r.ok) {
-    let msg = `HTTP ${r.status}`;
-    try { const e = await r.json(); msg += ' — ' + ((e.error || {}).message || '').slice(0, 140); } catch { /* bare status */ }
-    throw new Error(msg);
-  }
-  const data = await r.json();
-  if (data.stop_reason === 'refusal') throw new Error('the model declined this request');
-  const txt = (data.content || []).find(b => b.type === 'text');
-  if (!txt) throw new Error('no output returned');
-  return JSON.parse(txt.text);
+  let j = {};
+  try { j = await r.json(); } catch { /* empty */ }
+  if (r.status === 404) throw new Error('AI proxy is not deployed yet — set XAI_API_KEY and run tools/deploy_generate.sh');
+  if (!r.ok) throw new Error(j.error || `Generate failed (${r.status})`);
+  if (!j.result) throw new Error('no output returned');
+  return j.result;
+}
+async function callSetBuilder(userText) {
+  return aiComplete({ system: SET_SYSTEM, user: userText, schema: SET_SCHEMA, name: 'passage_set' });
 }
 
 // Generate, then enforce the length rule: one corrective retry naming the actual counts
@@ -3979,7 +4039,6 @@ YOUR PREVIOUS ATTEMPT BROKE THE LENGTH RULE: ${detail}, but the whole set must t
 }
 
 async function handleGenerateSet(cfg, opts) {
-  if (!ensureAiKey()) return false;
   // Also steer away from sets already in the library for this same anchor standard.
   const existing = state.sets
     .filter(s => s.standard && s.standard.code === cfg.code && String(s.gaGrade) === String(cfg.grade))
@@ -4044,18 +4103,9 @@ async function handleGenerateSet(cfg, opts) {
   } catch (e) {
     state.ui.genOk = false;
     (state.ui.genResults = state.ui.genResults || []).push({
-      ok: false, error: String(e.message).slice(0, 110),
+      ok: false, error: String(e.message).slice(0, 160),
     });
-    if (String(e.message).includes('401')) {
-      const why = aiKeyDiagnosis(aiKey);
-      aiKey = '';
-      localStorage.removeItem(LS_AI_KEY);
-      toast(`⚠ API key rejected — ${why}. Click Generate to paste a new one.`);
-      state.ui.genResults = state.ui.genResults || [];
-      state.ui.genResults.push({ ok: false, error: `Anthropic rejected the key — ${why}` });
-    } else {
-      toast('⚠ Generation failed: ' + String(e.message).slice(0, 90));
-    }
+    toast('⚠ Generation failed: ' + String(e.message).slice(0, 120));
   }
   state.ui.genBusy = false;
   state.ui.genProgress = '';
@@ -4367,34 +4417,6 @@ function renderGenModal() {
    the user pastes their API key once; it lives only in this browser's localStorage).
    Claude drafts a flawed student response + 4-5 revision questions, each tagged to a
    Georgia standard — everything lands in the editor as a draft for human review. */
-const LS_AI_KEY = 'sa_anthropic_key';
-let aiKey = localStorage.getItem(LS_AI_KEY) || '';
-
-/* A 401 from Anthropic is nearly always one of three things, and the key's own prefix
-   says which — pasting a key from a different provider looks identical to an expired one
-   unless we check. */
-function aiKeyDiagnosis(k) {
-  const key = (k || '').trim();
-  if (!key) return 'no key is stored in this browser';
-  if (key.startsWith('xai-'))        return 'that is an xAI / Grok key. This builder calls Anthropic, so it needs a key beginning sk-ant-';
-  if (key.startsWith('gsk_'))        return 'that is a Groq key. This builder calls Anthropic, so it needs a key beginning sk-ant-';
-  if (key.startsWith('sk-proj-'))    return 'that is an OpenAI key. This builder calls Anthropic, so it needs a key beginning sk-ant-';
-  if (!key.startsWith('sk-ant-'))    return `that key starts "${key.slice(0, 7)}…". This builder calls Anthropic, so it needs a key beginning sk-ant-`;
-  return 'the key is the right type but Anthropic refused it — it may have been revoked, or copied incompletely';
-}
-
-function ensureAiKey() {
-  if (aiKey) return true;
-  const t = prompt('Paste your ANTHROPIC API key to enable the AI builder.\n\n'
-    + 'It starts with "sk-ant-" and comes from console.anthropic.com → API Keys. '
-    + 'Keys from other providers (xAI/Grok, OpenAI, Groq) will not work here.\n\n'
-    + 'It is stored only in this browser.', '');
-  if (t === null) return false;
-  aiKey = t.trim();
-  if (aiKey) localStorage.setItem(LS_AI_KEY, aiKey);
-  return !!aiKey;
-}
-
 // Generation instructions tuned to the user's model examples ("4th Grade Georgia.pptx",
 // 2026-07-20): Georgia CMS Peer Revision Tasks for GRADES 2-5. Each task is
 // SELF-CONTAINED (scenario + embedded draft excerpt + question), not one big flawed essay.
@@ -4462,23 +4484,11 @@ async function buildPeerTask(s, grade) {
     `PASSAGE ${i + 1}${p.title ? ` — ${p.title}` : ''}\n${p.text}`).join('\n\n');
   const existing = s.questions.map((q, i) => `${i + 1}. ${(q.text || '').split('\n')[0]}`).join('\n');
 
-  const r = await fetch('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: {
-      'content-type': 'application/json',
-      'x-api-key': aiKey,
-      'anthropic-version': '2023-06-01',
-      'anthropic-dangerous-direct-browser-access': 'true',
-    },
-    body: JSON.stringify({
-      model: 'claude-opus-4-8',
-      max_tokens: 16000,
-      thinking: { type: 'adaptive' },
-      system: PEER_SYSTEM,
-      output_config: { format: { type: 'json_schema', schema: PEER_SCHEMA } },
-      messages: [{
-        role: 'user',
-        content: `Grade: ${grade}
+  return aiComplete({
+    system: PEER_SYSTEM,
+    schema: PEER_SCHEMA,
+    name: 'peer_revision',
+    user: `Grade: ${grade}
 Genre: ${s.genre || ''} · Sub-domain: ${s.gaSubtopic || ''}
 Set title: ${s.title}
 
@@ -4494,23 +4504,10 @@ GEORGIA STANDARDS — choose each question's gaCode from this list ONLY:
 ${pool.join('\n')}
 
 Create the peer revision task now.`,
-      }],
-    }),
   });
-  if (!r.ok) {
-    let msg = `HTTP ${r.status}`;
-    try { const e = await r.json(); msg += ' — ' + ((e.error || {}).message || '').slice(0, 140); } catch { /* keep bare status */ }
-    throw new Error(msg);
-  }
-  const data = await r.json();
-  if (data.stop_reason === 'refusal') throw new Error('the model declined this request');
-  const txt = (data.content || []).find(b => b.type === 'text');
-  if (!txt) throw new Error('no output returned');
-  return JSON.parse(txt.text);
 }
 
 async function handleBuildPeer(s, grade) {
-  if (!ensureAiKey()) return;
   state.ui.peerBuilding = s.id;
   renderInput();
   try {
@@ -4530,14 +4527,7 @@ async function handleBuildPeer(s, grade) {
     if (state.ui.inStage === 'peer') state.ui.inStage = 'enter';
     toast(`✓ Built ${s.peerRevision.length} peer revision tasks — set moved to To Be Entered, questions below`);
   } catch (e) {
-    if (String(e.message).includes('401')) {
-      const why = aiKeyDiagnosis(aiKey);
-      aiKey = '';
-      localStorage.removeItem(LS_AI_KEY);
-      toast(`⚠ API key rejected — ${why}. Click Build to paste a new one.`);
-    } else {
-      toast('⚠ AI build failed: ' + String(e.message).slice(0, 90));
-    }
+    toast('⚠ AI build failed: ' + String(e.message).slice(0, 120));
   }
   state.ui.peerBuilding = null;
   renderInput();
@@ -4707,9 +4697,9 @@ function renderInputDetail(row, st, grade) {
 
   // AI builder: generate the Georgia peer revision task (draft + questions) for review.
   const buildBtn = box.querySelector('[data-buildpeer]');
-  if (buildBtn) buildBtn.addEventListener('click', () => {
+  if (buildBtn) buildBtn.addEventListener('click', async () => {
     const hasContent = s.peerRevision.some(t => (t.text || '').trim());
-    if (hasContent && !confirm('Rebuild will replace the current peer revision tasks (and student draft). Continue?')) return;
+    if (hasContent && !await appConfirm('Rebuild peer tasks?', 'Rebuild will replace the current peer revision tasks (and student draft).', { ok: 'Rebuild', danger: true })) return;
     handleBuildPeer(s, grade);
   });
 
@@ -4981,7 +4971,7 @@ function rowStage(row, st, grade) {
 
 // action is "verb|inputKey" (setId|state:grade). approve/dismiss act on every alignment
 // that carries the set into that grade, and carry a 15-second undo.
-function handleInputAction(spec) {
+async function handleInputAction(spec) {
   // key is an inputKey `${setId}|${state}:${grade}`, which itself contains a '|' — split
   // only on the first separator so the key stays intact.
   const cut = spec.indexOf('|');
@@ -4992,7 +4982,7 @@ function handleInputAction(spec) {
   if (act === 'override') { state.ui.overrideKey = key; renderInput(); return; }
   if (act === 'canceloverride') { state.ui.overrideKey = null; renderInput(); return; }
   if (act === 'flag') {
-    const note = prompt('Flag this set for review.\nWhat looks wrong? (optional note)', '');
+    const note = await appPrompt('Flag this set', 'What looks wrong? (optional)', '', { ok: 'Flag', textarea: true });
     if (note === null) return;
     setFlagValue(key, note.trim());
     pushState(); renderInput(); toast('Flagged — moved to the Flagged list');
@@ -5005,7 +4995,7 @@ function handleInputAction(spec) {
   }
   if (act === 'stateid') {
     const cur = (state.setStateId || {})[key] || '';
-    const v = prompt(`${STATE_NAMES[stt]} passage ID for Grade ${grd} (leave blank to remove):`, cur);
+    const v = await appPrompt(`${STATE_NAMES[stt]} passage ID`, `Grade ${grd}. Leave blank to remove.`, cur, { ok: 'Save' });
     if (v === null) return;
     state.setStateId = state.setStateId || {};
     if (v.trim()) state.setStateId[key] = v.trim(); else delete state.setStateId[key];
@@ -5954,6 +5944,112 @@ function renderDash() {
   });
 }
 
+function cmdkItems() {
+  const items = [
+    { id: 'v-explorer', label: 'Explorer', hint: 'View', run: () => showView('explorer', { push: true }) },
+    { id: 'v-review', label: 'Review Queue', hint: 'View', run: () => showView('review', { push: true }) },
+    { id: 'v-passages', label: 'Master Passage List', hint: 'View', run: () => showView('passages', { push: true }) },
+    { id: 'v-input', label: 'State Lists', hint: 'View', run: () => showView('input', { push: true }) },
+    { id: 'v-dash', label: 'Dashboard', hint: 'View', run: () => showView('dash', { push: true }) },
+    { id: 'v-bots', label: 'Morning Board', hint: 'View', run: () => showView('bots', { push: true }) },
+    { id: 'f-ready', label: 'Ready for export', hint: 'Passages filter', run: () => { state.ui.setFilterStatus = 'ready'; showView('passages', { push: true }); applyUiControls(); } },
+    { id: 'f-nokey', label: 'Missing answer keys', hint: 'Passages filter', run: () => { state.ui.setFilterStatus = 'no-key'; showView('passages', { push: true }); applyUiControls(); } },
+    { id: 'f-draft', label: 'Drafts', hint: 'Passages filter', run: () => { state.ui.setFilterStatus = 'draft'; showView('passages', { push: true }); applyUiControls(); } },
+  ];
+  GRADES.forEach(g => {
+    items.push({
+      id: 'rev-' + g,
+      label: `Review · Ohio Grade ${g}`,
+      hint: SUBJECT_NAMES[state.ui.revSubject] || 'Review',
+      run: () => { state.ui.revGrade = g; showView('review', { push: true }); applyUiControls(); },
+    });
+  });
+  STATES.forEach(st => {
+    items.push({
+      id: 'in-' + st,
+      label: `${STATE_NAMES[st]} lists`,
+      hint: 'State Lists',
+      run: () => { state.ui.inState = st; showView('input', { push: true }); applyUiControls(); },
+    });
+    items.push({
+      id: 'dash-' + st,
+      label: `${STATE_NAMES[st]} dashboard`,
+      hint: 'Dashboard',
+      run: () => { state.ui.dashState = st; showView('dash', { push: true }); applyUiControls(); },
+    });
+  });
+  (state.sets || []).forEach(s => {
+    items.push({
+      id: 'set-' + s.id,
+      label: s.title || 'Untitled set',
+      hint: [s.gaGrade ? 'G' + s.gaGrade : '', s.passageId || ''].filter(Boolean).join(' · ') || 'Set',
+      run: () => {
+        state.ui.currentSetId = s.id;
+        state.ui.editPassages = false;
+        showView('passages', { push: true });
+      },
+    });
+  });
+  return items;
+}
+function cmdkFilter(q) {
+  const all = cmdkItems();
+  const n = (q || '').trim().toLowerCase();
+  if (!n) return all.filter(x => x.id.startsWith('v-') || x.id.startsWith('f-')).slice(0, 12);
+  const words = n.split(/\s+/);
+  return all.filter(x => {
+    const hay = (x.label + ' ' + x.hint).toLowerCase();
+    return words.every(w => hay.includes(w));
+  }).slice(0, 12);
+}
+let cmdkSel = 0;
+function openCmdk() {
+  const box = document.getElementById('cmdk');
+  if (!box) return;
+  box.classList.remove('hidden');
+  cmdkSel = 0;
+  renderCmdk('');
+  const inp = document.getElementById('cmdkInput');
+  inp.value = '';
+  inp.focus();
+}
+function closeCmdk() {
+  const box = document.getElementById('cmdk');
+  if (box) box.classList.add('hidden');
+}
+function renderCmdk(q) {
+  const list = cmdkFilter(q);
+  if (cmdkSel >= list.length) cmdkSel = Math.max(0, list.length - 1);
+  const box = document.getElementById('cmdkResults');
+  if (!list.length) { box.innerHTML = '<div class="cmdk-empty">Nothing matches.</div>'; return; }
+  box.innerHTML = list.map((x, i) =>
+    `<button type="button" class="cmdk-row ${i === cmdkSel ? 'is-active' : ''}" data-cmdk="${i}">
+      <span class="cmdk-label">${esc(x.label)}</span>
+      <span class="cmdk-hint">${esc(x.hint)}</span>
+    </button>`).join('');
+  box.querySelectorAll('[data-cmdk]').forEach(btn => {
+    btn.addEventListener('click', () => cmdkGo(list[+btn.dataset.cmdk]));
+  });
+}
+function cmdkGo(item) {
+  closeCmdk();
+  if (item && item.run) item.run();
+}
+function wireCmdk() {
+  const box = document.getElementById('cmdk');
+  const inp = document.getElementById('cmdkInput');
+  if (!box || !inp) return;
+  inp.addEventListener('input', () => { cmdkSel = 0; renderCmdk(inp.value); });
+  inp.addEventListener('keydown', e => {
+    const list = cmdkFilter(inp.value);
+    if (e.key === 'ArrowDown') { e.preventDefault(); cmdkSel = Math.min(list.length - 1, cmdkSel + 1); renderCmdk(inp.value); }
+    if (e.key === 'ArrowUp') { e.preventDefault(); cmdkSel = Math.max(0, cmdkSel - 1); renderCmdk(inp.value); }
+    if (e.key === 'Enter') { e.preventDefault(); cmdkGo(list[cmdkSel]); }
+    if (e.key === 'Escape') { e.preventDefault(); closeCmdk(); }
+  });
+  box.addEventListener('click', e => { if (e.target === box) closeCmdk(); });
+}
+
 function init() {
   applyHash();
   applyViewChrome();
@@ -5964,6 +6060,15 @@ function init() {
   decorate('genSetBtn', 'spark');
   decorate('cmsExportBtn', 'export');
   decorate('newSetBtn', 'plus');
+  wireCmdk();
+  document.addEventListener('keydown', e => {
+    if ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K')) {
+      e.preventDefault();
+      const box = document.getElementById('cmdk');
+      if (box && !box.classList.contains('hidden')) closeCmdk();
+      else openCmdk();
+    }
+  });
 
   const nav = document.getElementById('navTabs');
   nav.addEventListener('click', e => {
@@ -6027,7 +6132,7 @@ function init() {
   document.getElementById('saveBadge').addEventListener('click', async (ev) => {
     if (sbMode) {
       if (!SB.user) { renderSignIn(); return; }
-      if (!confirm('Sign out of ' + SB.user.email + '?')) return;
+      if (!await appConfirm('Sign out?', 'Sign out of ' + SB.user.email + '?', { ok: 'Sign out', danger: true })) return;
       await sbSignOut();
       location.reload();
       return;
@@ -6051,7 +6156,7 @@ function init() {
     const why = tokenRefused()
       ? `GitHub refused this browser's access token (${syncError}).\n\nTokens expire — GitHub's default is 30 days. Make a new CLASSIC token at github.com/settings/tokens/new with the "repo" box checked, then paste it below.\n\nNothing you have done is lost; it uploads as soon as the new token is accepted.\n\n`
       : '';
-    const t = prompt(why + 'Paste your GitHub access token to connect to the SHARED team dashboard.\n\nYour work (approvals, IDs, tags) saves to the team’s central GitHub file that everyone shares. Only the token itself stays private in this browser — it’s your key, not your data.', ghToken || '');
+    const t = await appPrompt('Connect cloud saving', why + 'Paste your GitHub access token (classic, repo scope). Only the token stays in this browser.', ghToken || '', { ok: 'Connect', textarea: true });
     if (t === null) return;
     ghToken = t.trim();
     localStorage.setItem(LS_GH_TOKEN, ghToken);
