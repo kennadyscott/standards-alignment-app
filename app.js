@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608271417';   // replaced with the deploy stamp
+const APP_BUILD = '202608271423';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -987,9 +987,16 @@ function saveNoAlign() { pushState(); }
    serves these with max-age=600, so without it a browser happily shows ten-minute-old
    links — which reads as "my review queue is empty" when it isn't.
    Revalidation is cheap: unchanged files come back 304 with no body. */
+/* Data files carry the build stamp too. `cache: 'no-cache'` only makes the BROWSER
+   revalidate — GitHub Pages' CDN keeps serving its own copy for several minutes, which
+   is how a browser ended up with a cms_counts.json from before topic groupings existed
+   and rendered every row under a single "Informational" heading. A unique URL per build
+   goes past the edge cache as well as the local one. */
 async function fetchJson(path) {
   try {
-    const r = await fetch(path, { cache: 'no-cache' });
+    const url = typeof APP_BUILD === 'string' && !path.includes('?')
+      ? `${path}?v=${APP_BUILD}` : path;
+    const r = await fetch(url, { cache: 'no-cache' });
     if (!r.ok) return null;
     return await r.json();
   } catch { return null; }
