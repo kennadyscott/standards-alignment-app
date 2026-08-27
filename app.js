@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608271325';   // replaced with the deploy stamp
+const APP_BUILD = '202608271329';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4826,18 +4826,17 @@ function cmsCell(bucket, subdomain, ours, footerDomains) {
     ? footerDomains.reduce((a, d) => a + (cmsLookup(bucket, d) || 0), 0)
     : cmsLookup(bucket, subdomain);
   const short = bucket.complete === false;
-  // Green means the CMS agrees with the dashboard exactly. Anything else is a gap worth
-  // seeing: fewer means work not entered yet, MORE means the CMS holds sets this
-  // dashboard does not know about, which is the more surprising of the two.
-  const cls = ours == null ? ''
-    : n === ours ? 'match'
-    : n === 0 ? 'zero'
-    : n < ours ? 'behind'
-    : 'over';
-  const gap = ours == null ? '' :
-    n === ours ? ' — matches the dashboard'
-    : n < ours ? ` — ${ours - n} not in the CMS yet`
-    : ` — ${n - ours} more in the CMS than this dashboard has`;
+  // Green when the CMS has caught up: it matches or exceeds the dashboard, OR it has
+  // reached the goal of DASH_GOAL per type on its own. The second condition matters
+  // because a sub-domain can hold ten drafts here while four is all that is wanted --
+  // the CMS is not behind in that case, the dashboard is simply ahead of the target.
+  const done = ours == null ? false : (n >= ours || n >= DASH_GOAL);
+  const cls = ours == null ? '' : done ? 'match' : n === 0 ? 'zero' : 'behind';
+  const gap = ours == null ? ''
+    : n >= DASH_GOAL && n < ours ? ` — at the goal of ${DASH_GOAL}; the dashboard holds ${ours}`
+    : n === ours ? ' — matches the dashboard'
+    : n > ours ? ` — ${n - ours} more in the CMS than this dashboard has`
+    : ` — ${ours - n} short of the ${ours} here`;
   const tip = (short
     ? `CMS shows ${bucket.total} sets at this grade; ${bucket.captured} were readable (the CMS list pages at 50).`
     : `${bucket.total} sets in the CMS at this grade`) + gap;

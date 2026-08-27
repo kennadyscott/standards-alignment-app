@@ -989,10 +989,10 @@ body {
 .dash-sub-head.cms { color: var(--accent-ink); }
 .dash-cms { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600;
   background: var(--accent-soft); }
-/* Green = the CMS agrees with the dashboard exactly. */
+/* Green = the CMS has caught up: it matches or exceeds the dashboard, or has reached
+   the goal of 4 on its own. */
 .dash-cms.match  { background: var(--green-soft); color: var(--green); }
 .dash-cms.behind { color: var(--amber); }
-.dash-cms.over   { color: var(--accent-ink); }
 .dash-cms.zero   { color: var(--red); }
 .dash-cms.none { color: var(--ink-faint); font-weight: 400; }
 .cms-short { color: var(--amber); font-weight: 700; }
