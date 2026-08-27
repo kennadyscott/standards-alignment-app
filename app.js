@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608271250';   // replaced with the deploy stamp
+const APP_BUILD = '202608271259';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1105,6 +1105,57 @@ function namesOwnState(std) {
   return !!rx && rx.test(std.description || '');
 }
 
+/* A standard built around named people or places cannot align to a broad one.
+   "Identify contributions of William Wyatt Bibb" has no counterpart in Ohio's "biographies
+   show how people's actions shaped the world" — one is a fact about Alabama, the other is
+   a skill. Fires only when the STATE side names something specific and the OHIO side does
+   not; if both are specific (Alabama's fall of Rome against Ohio's Roman collapse) they
+   are talking about the same thing and it is left alone.
+
+   Three qualifications, each one earned by a false positive found while testing against
+   Kennady's own 1,916 decisions:
+
+     * SOCIAL STUDIES ONLY. Her rejections of this pattern are 73 social studies, 2 ELA,
+       0 science. In science a capitalised name is usually a concept (Newton's Laws), not
+       a place.
+     * The shared national and scientific canon does not count as specific. Bill of
+       Rights, Declaration of Independence, Civil War, Renaissance, Silk Road — every
+       state teaches these, and matching on them rejected alignments she had approved.
+     * Anything after "including" or "such as" is ILLUSTRATION, not substance. Texas's
+       "identify contributions of historical figures, including Thurgood Marshall" is a
+       general skill with examples attached; the examples are not what it is about.
+
+   Measured with all three: agrees with 83 of her rejections against 15 approvals — 85%.
+   A wrong auto-rejection is visible and reversible on the card, which is why 85% is an
+   acceptable bar here and would not be for auto-approval. */
+const CANON_RX = /\b(Bill\s+of\s+Rights|Declaration\s+of\s+Independence|Constitution(?:al)?\s+Convention|(?:First|Second|Third|Fourth|Fifth|Thirteenth|Fourteenth|Fifteenth|Nineteenth)\s+Amendment|Supreme\s+Court|Congress|Articles\s+of\s+Confederation|Northwest\s+Ordinance|Civil\s+War|Revolutionary\s+War|World\s+War|Great\s+Depression|New\s+Deal|Industrial\s+Revolution|Columbian\s+Exchange|Middle\s+Passage|Underground\s+Railroad|Laws?\s+of\s+Motion|Newton|Solar\s+System|Milky\s+Way|Louisiana\s+Purchase|Emancipation\s+Proclamation|Magna\s+Carta|Roman\s+(?:Empire|Republic)|Silk\s+Road|Middle\s+Ages|Renaissance|Reformation|Enlightenment|Cold\s+War|Space\s+Race|Missouri\s+Compromise|Treaty\s+of\s+Paris|Great\s+Awakening|French\s+and\s+Indian\s+War|War\s+of\s+1812|Prime\s+Meridian|International\s+Date\s+Line|Equator|Tropic\s+of\s+\w+|Western\s+Hemisphere|Eastern\s+Hemisphere)\b/gi;
+const EXAMPLES_RX = /\b(?:includ\w*|such as|e\.g\.|for example)\b[\s\S]*$/i;
+const ENTITY_RX = /\b([A-Z][a-z]{2,}(?:\s+(?:of|the|de|van|von))?(?:\s+[A-Z][a-z]{2,})+)\b/g;
+const ENTITY_GENERIC = new Set(('A An The In On At By For With From To Of And Or But If When How What Why '
+  + 'Students Student Use Using Describe Explain Identify Analyze Analyse Compare Contrast Summarize '
+  + 'Summarise Evaluate Trace Locate Determine Demonstrate Construct Develop Obtain Communicate '
+  + 'Investigate Examine Recount Outline State Define Predict Apply Create Write Read Ask Plan Carry '
+  + 'Make Provide Support Interpret Integrate Cite Draw Distinguish Refer Discover Acquire Utilize '
+  + 'Utilise Participate Produce Engage Critique Assess Choose Select Review Include Including Both '
+  + 'Each Such American Americans European Europeans Indigenous North South East West Northern Southern '
+  + 'Eastern Western United States English Spanish French British Native Africans African Earth Century').split(' '));
+function namedEntities(text) {
+  let t = String(text || '').replace(EXAMPLES_RX, ' ').replace(CANON_RX, ' ');
+  const out = [];
+  let m;
+  ENTITY_RX.lastIndex = 0;
+  while ((m = ENTITY_RX.exec(t))) {
+    const parts = m[1].split(/\s+/);
+    const caps = parts.filter(w => /^[A-Z]/.test(w));
+    if (caps.every(w => ENTITY_GENERIC.has(w))) continue;
+    // Drop a leading generic word ("Summarize Alabama" -> "Alabama"); the sentence's
+    // opening verb is capitalised but is not the thing being named.
+    while (parts.length > 1 && ENTITY_GENERIC.has(parts[0])) parts.shift();
+    out.push(parts.join(' '));
+  }
+  return out;
+}
+
 function autoRejectReason(l) {
   if (state.decisions[l.id]) return null;      // the reviewer's own call always wins
   if (l.confidence === 'partial') return 'partial confidence';
@@ -1114,9 +1165,18 @@ function autoRejectReason(l) {
     if (l.subject === 'ela') return 'ELAR can’t align across grades';
     if (l.confidence !== 'strong') return `cross-grade but only ${l.confidence || 'unrated'} confidence`;
   }
-  // State-specific content cannot cross state lines.
+  // State-specific content cannot cross state lines. Checked BEFORE the specificity rule
+  // below: when a standard names its own state that is the clearer reason to show, and
+  // both rules would otherwise fire on the same card.
   if (namesOwnState(oh)) return 'the Ohio standard is about Ohio specifically';
   if (namesOwnState(other)) return `the ${STATE_NAMES[other.state] || other.state} standard is about ${STATE_NAMES[other.state] || other.state} specifically`;
+  // A named person or place on the state side, against a broad Ohio standard.
+  if (l.subject === 'social_studies' && oh && other) {
+    const specific = namedEntities(other.description);
+    if (specific.length && !namedEntities(oh.description).length) {
+      return `names ${specific[0]} — too specific for a broad Ohio standard`;
+    }
+  }
   return null;
 }
 /* The mirror of the reject rules: a draft the reviewer would almost certainly approve
