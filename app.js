@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608271340';   // replaced with the deploy stamp
+const APP_BUILD = '202608271343';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4827,15 +4827,36 @@ function cmsBucket(st, kind, grade) {
 function cmsCountsFor(st, grade) {
   return { informative: cmsBucket(st, 'informative', grade), opinion: cmsBucket(st, 'opinion', grade) };
 }
-// The CMS names a few sub-topics differently from the dashboard rows.
-function cmsLookup(bucket, subdomain) {
-  if (!bucket || !bucket.counts) return null;
+/* The CMS names some sub-topics differently from the dashboard rows, and the mismatch is
+   not cosmetic: Georgia grade 6 files five sets under a plain "Science" while the row
+   there is "Earth Science", so a naive lookup showed 0 and quietly lost them.
+   `rowsAtGrade` lets a generic CMS name fall through to the one science row that exists
+   at that grade. Whatever still has nowhere to land is surfaced by cmsUnmatched()
+   rather than dropped, because a count that vanishes is worse than one that looks odd. */
+function cmsSubtopicToRow(cmsName, rowsAtGrade) {
   const alias = (CMS_COUNTS && CMS_COUNTS.subtopicAliases) || {};
-  if (bucket.counts[subdomain] !== undefined) return bucket.counts[subdomain];
-  for (const [cmsName, ourName] of Object.entries(alias)) {
-    if (ourName === subdomain && bucket.counts[cmsName] !== undefined) return bucket.counts[cmsName];
+  if (rowsAtGrade.includes(cmsName)) return cmsName;
+  if (alias[cmsName] && rowsAtGrade.includes(alias[cmsName])) return alias[cmsName];
+  if (cmsName === 'Science') {
+    const sci = rowsAtGrade.filter(d => DASH_SCIENCE_ROWS.includes(d) || d === 'Science');
+    if (sci.length === 1) return sci[0];   // exactly one, so no guessing
   }
-  return 0;
+  return null;
+}
+function cmsLookup(bucket, subdomain, rowsAtGrade) {
+  if (!bucket || !bucket.counts) return null;
+  const rows = rowsAtGrade || [subdomain];
+  let n = 0;
+  Object.entries(bucket.counts).forEach(([name, c]) => {
+    if (cmsSubtopicToRow(name, rows) === subdomain) n += (+c || 0);
+  });
+  return n;
+}
+// CMS sub-topics with no row to land in at this grade — reported, never swallowed.
+function cmsUnmatched(bucket, rowsAtGrade) {
+  if (!bucket || !bucket.counts || !rowsAtGrade) return [];
+  return Object.entries(bucket.counts)
+    .filter(([name, c]) => (+c || 0) > 0 && !cmsSubtopicToRow(name, rowsAtGrade));
 }
 /* One CMS cell. Blank when that grade has not been captured, so an empty column reads as
    "not looked at yet" rather than "the CMS has none" — the two mean very different
@@ -4843,8 +4864,8 @@ function cmsLookup(bucket, subdomain) {
 function cmsCell(bucket, subdomain, ours, footerDomains) {
   if (!bucket) return `<td class="dash-cms none" title="Not captured from the CMS yet">·</td>`;
   const n = footerDomains
-    ? footerDomains.reduce((a, d) => a + (cmsLookup(bucket, d) || 0), 0)
-    : cmsLookup(bucket, subdomain);
+    ? footerDomains.reduce((a, d) => a + (cmsLookup(bucket, d, footerDomains) || 0), 0)
+    : cmsLookup(bucket, subdomain, cmsCell.rows);
   const short = bucket.complete === false;
   // Green when the CMS has caught up: it matches or exceeds the dashboard, OR it has
   // reached the goal of DASH_GOAL per type on its own. The second condition matters
@@ -5116,6 +5137,7 @@ function renderDash() {
               ${doms.map(d => {
                 const t = tally.get(d);
                 const cx = { state: dst, grade: g, subtopic: d };
+                cmsCell.rows = expect;
                 return `<tr><td>${esc(d)}</td>`
                   + dashCell(t.informative, { ...cx, itemSetType: 'informative' })
                   + cmsCell(cms.informative, d, t.informative)
@@ -5130,6 +5152,14 @@ function renderDash() {
             <td>${expect.reduce((a, d) => a + tally.get(d).opinion, 0)}</td>
             ${cmsCell(cms.opinion, null, null, expect)}</tr></tfoot>
         </table>
+        ${(() => {
+          const left = [...cmsUnmatched(cms.informative, expect), ...cmsUnmatched(cms.opinion, expect)];
+          if (!left.length) return '';
+          const merged = {};
+          left.forEach(([n, c]) => { merged[n] = (merged[n] || 0) + c; });
+          return `<div class="cms-orphans">In the CMS with no matching row here:
+            ${Object.entries(merged).map(([n, c]) => `<span class="chip">${esc(n)} ${c}</span>`).join(' ')}</div>`;
+        })()}
       </div>`));
   });
 

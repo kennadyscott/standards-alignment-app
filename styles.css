@@ -1021,3 +1021,7 @@ body {
 .josh-box .ps-hint { margin: 8px 0; line-height: 1.5; }
 .josh-box code { background: var(--bg); padding: 1px 4px; border-radius: 4px; font-size: 11px; }
 .josh-box .ps-textarea { margin-bottom: 8px; }
+
+/* CMS sub-topics with no dashboard row at this grade — shown, never silently dropped. */
+.cms-orphans { padding: 8px 14px 12px; font-size: 11.5px; color: var(--ink-soft);
+  border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
