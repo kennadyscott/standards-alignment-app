@@ -459,12 +459,17 @@ body {
   gap: 6px;
 }
 
+/* The editor fills whatever space is left; its CONTENT is what gets a readable width.
+   Capping the panel itself left a dead column on wide screens -- 320 + 900 + 340 on a
+   1900px display leaves ~340px of bordered nothing between the editor and the side
+   panel, which reads as the screen having split itself in three. */
 .editor-panel {
   flex: 1;
+  min-width: 0;
   overflow-y: auto;
   padding: 28px 32px;
-  max-width: 900px;
 }
+.editor-panel > * { max-width: 940px; margin-left: auto; margin-right: auto; }
 
 .ps-section {
   background: var(--panel);
@@ -618,6 +623,9 @@ body {
   background: inherit;
 }
 
+/* With no set selected this panel is empty; showing it as a bordered 340px column is
+   just a stripe down the page. */
+.align-side:empty { display: none; }
 .align-side {
   width: 340px;
   flex-shrink: 0;
