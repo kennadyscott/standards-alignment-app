@@ -9,7 +9,7 @@
    snapshot of what the server holds and diff against it. No editor code has to
    announce what it touched, so nothing is missed by forgetting to instrument a path. */
 
-const STORE_BUILD = '202608271437';
+const STORE_BUILD = '202608272228';
 
 const SB = {
   client: null,
@@ -24,7 +24,7 @@ const SB = {
 };
 
 /* Which maps in `state` are key/value rows. Mirrors KV_MAPS in the migration. */
-const KV_MAPS = ['decisions', 'decisionsAt', 'noAlign', 'cms', 'severed', 'crossOk',
+const KV_MAPS = ['decisions', 'decisionsAt', 'decisionsBy', 'noAlign', 'cms', 'severed', 'crossOk',
                  'setPush', 'setStateStd', 'setCms', 'setDismiss', 'setFlag', 'setFlagAt',
                  'setStateId', 'setExported', 'setContentAt', 'botDone', 'cmsCounts'];
 
@@ -110,6 +110,9 @@ function setFromRow(r) {
   ['passages', 'questions', 'peerRevision'].forEach(k => { if (!s[k]) s[k] = []; });
   if (!s.title) s.title = '';
   if (!s.passageId) s.passageId = '';
+  // Author/time live on the row, not in SET_COLS — they must not dirty a save.
+  s.updatedBy = r.updated_by || '';
+  s.updatedAt = r.updated_at || '';
   return s;
 }
 const kvKey = (ns, key) => ns + ' ' + key;

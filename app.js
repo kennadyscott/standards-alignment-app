@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608271437';   // replaced with the deploy stamp
+const APP_BUILD = '202608272228';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -142,6 +142,7 @@ const state = {
   byAnchor: new Map(),      // Ohio standard key -> links[]
   byLinked: new Map(),      // other-state standard key -> links[]
   decisions: {},            // link id -> 'approved' | 'rejected'
+  decisionsBy: {},          // link id -> who last decided
   noAlign: {},              // `${state}:${subject}:${code}` -> true (reviewed: nothing aligns)
   cms: {},                  // `${state}:${subject}:${code}` -> true (standard is loaded in the CMS)
   severed: {},              // `${keyA}||${keyB}` -> true (override: not aligned despite a shared anchor)
@@ -166,6 +167,7 @@ const state = {
   ui: {
     view: 'explorer',
     expState: 'OH', expSubject: 'social_studies', expGrade: '4',
+    expTarget: 'GA',                 // Explorer: one comparison state; 'ALL' for the audit
     selectedKey: null, search: '',
     revSubject: 'social_studies', revGrade: '4', revStatus: 'pending', revState: 'ALL',
     inState: 'OH', inGrade: '4', overrideKey: null,
@@ -173,6 +175,7 @@ const state = {
     dashOpen: {}, dashState: 'OH',                     // Dashboard: expanded grades + which state's lists
     setFilterStatus: 'all', setFilterGrade: 'all', setFilterState: 'all', setSearch: '',   // Master list filters
     currentSetId: null, openPicker: null,
+    reviewFocus: null,                  // Review Queue: focused link id (keyboard)
     genOpen: false, genBusy: false, genModal: null,
     gen: { state: 'OH', subject: 'ela', grade: '4', code: '', genre: 'informational',
            subtopic: 'Science', itemSetType: 'informative', passageCount: 1,
@@ -680,7 +683,14 @@ function ghSaveSerialized() {
    save is in flight. */
 function userIsTyping() {
   const e = document.activeElement;
-  return !!e && (e.tagName === 'TEXTAREA' || e.tagName === 'INPUT' || e.tagName === 'SELECT');
+  if (!e) return false;
+  if (e.isContentEditable) return true;
+  if (e.tagName === 'TEXTAREA' || e.tagName === 'SELECT') return true;
+  if (e.tagName === 'INPUT') {
+    const t = (e.type || 'text').toLowerCase();
+    return t !== 'button' && t !== 'submit' && t !== 'checkbox' && t !== 'radio' && t !== 'reset';
+  }
+  return false;
 }
 let syncPulling = false;
 let lastSyncAt = null;   // Date of last successful pull/save
@@ -958,6 +968,8 @@ function setDecision(id, val) {
   if (val === undefined) delete state.decisions[id];
   else state.decisions[id] = val;
   (state.decisionsAt = state.decisionsAt || {})[id] = Date.now();
+  (state.decisionsBy = state.decisionsBy || {})[id] = (typeof sbActor === 'function' ? sbActor() : '')
+    || (SB.user && SB.user.email) || 'someone';
 }
 function mergeDecisions(server, serverAt, local, localAt, tieWins) {
   const out = {}, outAt = {};
@@ -1313,6 +1325,206 @@ function el(html) {
 function esc(s) {
   return String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 }
+
+/* Tiny inline icons — UI chrome, not content. Answer-key checkmarks in question
+   blobs stay as real characters because the parser reads them. */
+const ICO = {
+  check: '<svg viewBox="0 0 16 16"><path d="M3 8.5 6.2 12 13 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  x: '<svg viewBox="0 0 16 16"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
+  plus: '<svg viewBox="0 0 16 16"><path d="M8 3v10M3 8h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
+  spark: '<svg viewBox="0 0 16 16"><path d="M8 1.5 9.2 6.2 14 7.5 9.2 8.8 8 13.5 6.8 8.8 2 7.5 6.8 6.2Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>',
+  export: '<svg viewBox="0 0 16 16"><path d="M8 10V3.5M5.5 5.5 8 3l2.5 2.5M3.5 9.5v3h9v-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  warn: '<svg viewBox="0 0 16 16"><path d="M8 2.5 14.5 14h-13Zm0 4.5v3.2M8 12.2v.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  flag: '<svg viewBox="0 0 16 16"><path d="M4 2.5v11M4 3.5h8l-2 2.5 2 2.5H4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  align: '<svg viewBox="0 0 16 16"><path d="M5 5H2.5v6H5M11 5h2.5v6H11M6.5 8h3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  close: '<svg viewBox="0 0 16 16"><path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>',
+};
+function ico(name) {
+  return `<span class="ico" aria-hidden="true">${ICO[name] || ''}</span>`;
+}
+
+const STATUS = {
+  draft:    { label: 'Draft',            cls: 'st-draft' },
+  ready:    { label: 'Ready',            cls: 'st-ready' },
+  blocked:  { label: 'Not ready',        cls: 'st-blocked' },
+  nokey:    { label: 'Missing key',      cls: 'st-blocked' },
+  awaiting: { label: 'Awaiting CMS ID',  cls: 'st-awaiting' },
+  incms:    { label: 'In CMS',           cls: 'st-incms' },
+  pending:  { label: 'Pending',          cls: 'st-pending' },
+  approved: { label: 'Approved',         cls: 'st-approved' },
+  rejected: { label: 'Rejected',         cls: 'st-rejected' },
+  noalign:  { label: 'No alignment',     cls: 'st-noalign' },
+  flagged:  { label: 'Flagged',          cls: 'st-flagged' },
+  entered:  { label: 'Entered in CMS',   cls: 'st-incms' },
+};
+function statusPill(kind, extra, title) {
+  const m = STATUS[kind] || { label: kind, cls: 'st-pending' };
+  const label = extra ? `${m.label} · ${extra}` : m.label;
+  return `<span class="st-pill ${m.cls}"${title ? ` title="${esc(title)}"` : ''}>${esc(label)}</span>`;
+}
+function stateMod(code) { return 'st-' + String(code || '').toLowerCase(); }
+
+function actorLabel(raw) {
+  if (!raw) return '';
+  const viaIdx = String(raw).indexOf(' via ');
+  const email = viaIdx >= 0 ? raw.slice(0, viaIdx) : String(raw);
+  const via = viaIdx >= 0 ? raw.slice(viaIdx + 5) : '';
+  const local = (email.split('@')[0] || email).trim();
+  const name = local.replace(/[._-]+/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  return via ? `${name} via ${via}` : name;
+}
+function timeAgo(ts) {
+  if (!ts && ts !== 0) return '';
+  const t = typeof ts === 'number' ? ts : Date.parse(ts);
+  if (!t) return '';
+  const s = Math.round((Date.now() - t) / 1000);
+  if (s < 45) return 'just now';
+  if (s < 3600) return Math.max(1, Math.round(s / 60)) + ' min ago';
+  if (s < 86400) return Math.max(1, Math.round(s / 3600)) + 'h ago';
+  const d = Math.round(s / 86400);
+  if (d === 1) return 'yesterday';
+  if (d < 14) return d + 'd ago';
+  return new Date(t).toLocaleDateString();
+}
+function bylineHtml(by, at, verb) {
+  const who = actorLabel(by);
+  const when = timeAgo(at);
+  if (!who && !when) return '';
+  const v = verb || 'Last saved';
+  const text = who && when ? `${v} by ${who} · ${when}` : who ? `${v} by ${who}` : when;
+  return `<div class="byline">${esc(text)}</div>`;
+}
+
+const VIEWS = ['explorer', 'review', 'passages', 'input', 'dash', 'bots'];
+function hashFromUi() {
+  const u = state.ui;
+  const p = new URLSearchParams();
+  p.set('v', u.view);
+  if (u.view === 'explorer') {
+    p.set('st', u.expState); p.set('sub', u.expSubject); p.set('g', u.expGrade);
+    if (u.expTarget) p.set('vs', u.expTarget);
+    if (u.selectedKey) p.set('key', u.selectedKey);
+  } else if (u.view === 'review') {
+    p.set('sub', u.revSubject); p.set('g', u.revGrade);
+    p.set('st', u.revState); p.set('status', u.revStatus);
+    if (u.reviewFocus) p.set('id', u.reviewFocus);
+  } else if (u.view === 'passages') {
+    if (u.currentSetId) p.set('set', u.currentSetId);
+    if (u.setFilterStatus !== 'all') p.set('status', u.setFilterStatus);
+    if (u.setFilterGrade !== 'all') p.set('g', u.setFilterGrade);
+    if (u.setFilterState !== 'all') p.set('pst', u.setFilterState);
+    if (u.setSearch) p.set('q', u.setSearch);
+  } else if (u.view === 'input') {
+    p.set('st', u.inState); p.set('g', u.inGrade);
+    if (u.inStage && u.inStage !== 'all') p.set('stage', u.inStage);
+    if (u.inSelected) p.set('set', u.inSelected);
+  } else if (u.view === 'dash') {
+    p.set('st', u.dashState);
+  }
+  return '#' + p.toString();
+}
+function applyHash() {
+  const raw = (location.hash || '').replace(/^#/, '');
+  if (!raw) return false;
+  let p;
+  try { p = new URLSearchParams(raw); } catch { return false; }
+  if (![...p.keys()].length) return false;
+  const view = p.get('v');
+  if (view && VIEWS.includes(view)) state.ui.view = view;
+  const u = state.ui;
+  const st = p.get('st'), sub = p.get('sub'), g = p.get('g');
+  if (u.view === 'explorer') {
+    if (st && STATES.includes(st)) u.expState = st;
+    if (sub && SUBJECT_NAMES[sub]) u.expSubject = sub;
+    if (g && GRADES.includes(g)) u.expGrade = g;
+    const vs = p.get('vs');
+    if (vs && (STATES.includes(vs) || vs === 'ALL')) u.expTarget = vs;
+    if (p.get('key')) u.selectedKey = p.get('key');
+  } else if (u.view === 'review') {
+    if (sub && SUBJECT_NAMES[sub]) u.revSubject = sub;
+    if (g && GRADES.includes(g)) u.revGrade = g;
+    if (st && (STATES.includes(st) || st === 'ALL')) u.revState = st;
+    if (['pending', 'approved', 'rejected', 'all'].includes(p.get('status'))) u.revStatus = p.get('status');
+    if (p.get('id')) u.reviewFocus = p.get('id');
+  } else if (u.view === 'passages') {
+    if (p.get('set')) u.currentSetId = p.get('set');
+    if (p.get('status')) u.setFilterStatus = p.get('status');
+    if (g) u.setFilterGrade = g;
+    if (p.get('pst')) u.setFilterState = p.get('pst');
+    if (p.has('q')) u.setSearch = p.get('q');
+  } else if (u.view === 'input') {
+    if (st && STATES.includes(st)) u.inState = st;
+    if (g && GRADES.includes(g)) u.inGrade = g;
+    if (p.get('stage')) u.inStage = p.get('stage');
+    if (p.get('set')) u.inSelected = p.get('set');
+  } else if (u.view === 'dash') {
+    if (st && STATES.includes(st)) u.dashState = st;
+  }
+  return true;
+}
+let hashQuiet = false;
+function syncHash(push) {
+  const next = hashFromUi();
+  if ((location.hash || '#') === next) return;
+  hashQuiet = true;
+  if (push) history.pushState(null, '', next);
+  else history.replaceState(null, '', next);
+  hashQuiet = false;
+}
+function applyViewChrome() {
+  const v = state.ui.view;
+  document.querySelectorAll('#navTabs .tab').forEach(t => {
+    const on = t.dataset.view === v;
+    t.classList.toggle('active', on);
+    t.setAttribute('aria-selected', on ? 'true' : 'false');
+    t.tabIndex = on ? 0 : -1;
+  });
+  VIEWS.forEach(name => {
+    const node = document.getElementById(name + 'View');
+    if (node) node.classList.toggle('hidden', v !== name);
+  });
+}
+function applyUiControls() {
+  const u = state.ui;
+  const setSel = (id, val) => { const n = document.getElementById(id); if (n && val != null) n.value = val; };
+  setSel('stateSeg', u.expState);
+  setSel('revStateSeg', u.revState);
+  setSel('dashStateSeg', u.dashState);
+  setSel('inState', u.inState);
+  setSel('inGrade', u.inGrade);
+  setSel('setFilterStatus', u.setFilterStatus);
+  setSel('setFilterGrade', u.setFilterGrade);
+  setSel('setFilterState', u.setFilterState);
+  const search = document.getElementById('setSearch');
+  if (search) search.value = u.setSearch || '';
+  const stdSearch = document.getElementById('stdSearch');
+  if (stdSearch) stdSearch.value = u.search || '';
+  const syncSeg = (id, val) => {
+    document.querySelectorAll('#' + id + ' .seg-btn').forEach(b => b.classList.toggle('active', b.dataset.val === val));
+  };
+  syncSeg('subjectSeg', u.expSubject);
+  syncSeg('revSubjectSeg', u.revSubject);
+  syncSeg('revStatusSeg', u.revStatus);
+  document.querySelectorAll('#gradeRow .grade-btn').forEach(b => b.classList.toggle('active', b.textContent === u.expGrade));
+  document.querySelectorAll('#revGradeRow .grade-btn').forEach(b => b.classList.toggle('active', b.textContent === u.revGrade));
+}
+function showView(view, { push } = {}) {
+  if (view && VIEWS.includes(view)) state.ui.view = view;
+  applyViewChrome();
+  renderOpenView();
+  syncHash(push);
+}
+function renderOpenView() {
+  renderBadge();
+  switch (state.ui.view) {
+    case 'explorer': renderStdList(); renderCompareBar(); renderDetail(); break;
+    case 'review': renderReview(); break;
+    case 'passages': renderPassages(); break;
+    case 'input': renderInput(); break;
+    case 'dash': renderDash(); break;
+    case 'bots': renderBots(); break;
+  }
+}
 let toastTimer;
 function toast(msg) {
   const t = document.getElementById('toast');
@@ -1380,6 +1592,56 @@ function renderGradeRow(containerId, activeGrade, onPick) {
 }
 
 /* ---------- explorer ---------- */
+/* One comparison state at a time. Ohio is the hub, so looking at Texas defaults
+   the target to Ohio; looking at Ohio keeps the last other-state (or Georgia).
+   'ALL' is the audit view — every other state stacked, as the old Explorer did. */
+function coerceExpTarget(from) {
+  from = from || state.ui.expState;
+  const others = otherStates(from);
+  let t = state.ui.expTarget;
+  if (t !== 'ALL' && (!t || t === from || !others.includes(t))) {
+    t = others.includes(ANCHOR) ? ANCHOR : (others.includes('GA') ? 'GA' : others[0]);
+    state.ui.expTarget = t;
+  }
+  return t;
+}
+function explorerTarget(fromState) {
+  return coerceExpTarget(fromState || state.ui.expState);
+}
+function comparePillsHtml(from, target) {
+  const others = [...otherStates(from)].sort((a, b) =>
+    (a === ANCHOR ? -1 : b === ANCHOR ? 1 : 0) || STATE_NAMES[a].localeCompare(STATE_NAMES[b]));
+  return others.map(s =>
+    `<button type="button" class="pill-btn ${target === s ? 'active' : ''}" data-expts="${s}">${STATE_NAMES[s]}</button>`
+  ).join('') + `<button type="button" class="pill-btn ${target === 'ALL' ? 'active' : ''}" data-expts="ALL">All states</button>`;
+}
+function renderCompareBar() {
+  const bar = document.getElementById('expCompareBar');
+  if (!bar) return;
+  const from = state.ui.expState;
+  const target = coerceExpTarget(from);
+  const std = state.ui.selectedKey ? state.byKey.get(state.ui.selectedKey) : null;
+  bar.innerHTML = `
+    <div class="compare-from ${stateMod(from)}">
+      <div class="compare-kicker">Looking at</div>
+      <div class="compare-name">${STATE_NAMES[from]}</div>
+      <div class="compare-sub">${esc(SUBJECT_NAMES[state.ui.expSubject])} · Grade ${esc(state.ui.expGrade)}${std ? ' · ' + esc(std.code) : ''}</div>
+    </div>
+    <div class="compare-mid">${ico('align')}</div>
+    <div class="compare-to ${target === 'ALL' ? '' : stateMod(target)}">
+      <div class="compare-kicker">${target === 'ALL' ? 'Compared with every state' : 'Compared with'}</div>
+      <div class="compare-pills">${comparePillsHtml(from, target)}</div>
+    </div>`;
+  bar.querySelectorAll('[data-expts]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.ui.expTarget = btn.dataset.expts;
+      renderCompareBar();
+      renderDetail();
+      syncHash();
+    });
+  });
+}
+
 function currentStandards() {
   const { expState, expSubject, expGrade, search } = state.ui;
   let list = state.standards.filter(s => s.state === expState && s.subject === expSubject && gradeMatches(s.grade, expGrade));
@@ -1410,27 +1672,29 @@ function renderStdList() {
       box.appendChild(el(`<div class="std-group-head">${esc(strand)}</div>`));
       lastStrand = strand;
     }
-    const key = `${s.state}:${s.code}`;
+    const key = keyOf(s);
     const st = standardStatus(s);
     const item = el(`
-      <div class="std-item ${state.ui.selectedKey === key ? 'active' : ''}">
+      <div class="std-item ${stateMod(s.state)} ${state.ui.selectedKey === key ? 'active' : ''}">
         <div class="std-item-top">
+          <span class="st-stripe ${stateMod(s.state)}" aria-hidden="true"></span>
           <span class="std-code">${esc(s.code)}</span>
           <span class="std-strand">${esc(s.topic || '')}</span>
-          <span class="dot ${st}" title="${st === 'approved' ? 'Has approved alignment' : st === 'noalign' ? 'No Alignment Possible (reviewed)' : st === 'pending' ? 'Has pending drafts' : 'No alignments yet'}"></span>
+          <span class="dot ${st}" title="${st === 'approved' ? 'Has approved alignment' : st === 'noalign' ? 'No alignment (reviewed)' : st === 'pending' ? 'Has pending drafts' : 'No alignments yet'}"></span>
         </div>
         <div class="std-desc">${esc(s.description)}</div>
       </div>`);
-    item.addEventListener('click', () => { state.ui.selectedKey = key; renderStdList(); renderDetail(); });
+    item.addEventListener('click', () => { state.ui.selectedKey = key; renderStdList(); renderCompareBar(); renderDetail(); syncHash(); });
     box.appendChild(item);
   });
 }
 
 function stdCard(std, label) {
   return `
-    <div class="source-card">
+    <div class="source-card ${stateMod(std.state)}">
       <div class="card-label">${esc(label)}</div>
       <div class="card-code-row">
+        <span class="st-stripe ${stateMod(std.state)}" aria-hidden="true"></span>
         <span class="card-code">${esc(std.code)}</span>
         <span class="chip">${STATE_NAMES[std.state]}</span>
         <span class="chip">Grade ${esc(std.grade)}</span>
@@ -1443,7 +1707,7 @@ function stdCard(std, label) {
 }
 
 function pairSide(std, stateCode) {
-  const cls = String(stateCode).toLowerCase(); // .oh/.ga/.tx accent styles; a new state just gets the default
+  const cls = stateMod(stateCode); // 4px state stripe; a new state just gets the default
   if (!std) return `<div class="pair-side ${cls}"><div class="side-label">${STATE_NAMES[stateCode]}</div><div class="pair-desc">(standard not found)</div></div>`;
   return `
     <div class="pair-side ${cls}">
@@ -1482,7 +1746,7 @@ function isCrossGrade(a, b) { return a && b && String(a.grade) !== String(b.grad
 // the same content differently. Expected, not an error.
 function crossGradeChip(a, b) {
   if (!isCrossGrade(a, b)) return '';
-  return `<span class="chip chip-cross" title="These standards sit at different grade levels — the states sequence this content differently.">⇄ Cross-grade · ${esc(a.state)} G${esc(a.grade)} / ${esc(b.state)} G${esc(b.grade)}</span>`;
+  return `<span class="chip chip-cross" title="These standards sit at different grade levels — the states sequence this content differently.">Cross-grade · ${esc(a.state)} G${esc(a.grade)} / ${esc(b.state)} G${esc(b.grade)}</span>`;
 }
 
 /* A cross-grade alignment is true but consequential: a passage built for one grade would
@@ -1504,7 +1768,7 @@ function crossGradeControls(sel, other) {
   }
   return `<button class="act-btn approve" data-act="cross-assign" data-id="${esc(k)}"
       title="Let passages for this standard populate ${STATE_NAMES[other.state]} Grade ${esc(other.grade)}, marked Unlisted">
-      ⇄ Assign to G${esc(other.grade)}</button>
+      Assign to G${esc(other.grade)}</button>
     <button class="act-btn reject" data-act="sever" data-id="${esc(k)}"
       title="Keep passages for this standard out of Grade ${esc(other.grade)}">Dismiss</button>`;
 }
@@ -1518,7 +1782,7 @@ function alignedCard(sel, hit) {
     <div class="review-card">
       <div class="review-pair">
         ${pairSide(sel, sel.state)}
-        <div class="pair-mid">⇄</div>
+        <div class="pair-mid">${ico('align')}</div>
         ${pairSide(std, std.state)}
       </div>
       <div class="review-foot">
@@ -1528,7 +1792,7 @@ function alignedCard(sel, hit) {
         ${crossGradeChip(sel, std)}
         ${link.rationale ? `<div class="rationale"><b>Why:</b> ${esc(link.rationale)}</div>` : ''}
         <button class="act-btn reject" data-act="sever" data-id="${esc(severKey(keyOf(sel), keyOf(std)))}"
-          title="These run through the same Ohio standard but are not actually aligned">✂ Not aligned</button>
+          title="These run through the same Ohio standard but are not actually aligned">Not aligned</button>
       </div>
     </div>`;
 }
@@ -1549,21 +1813,27 @@ function linkCard(l) {
   const auto = autoRejectReason(l);
   const autoYes = auto ? null : autoApproveReason(l);
   const actions = st === 'pending'
-    ? `<button class="act-btn approve" data-act="approved" data-id="${l.id}">✓ Approve</button>
-       <button class="act-btn reject" data-act="rejected" data-id="${l.id}">✕ Reject</button>`
+    ? `<button class="act-btn approve" data-act="approved" data-id="${l.id}">${ico('check')} Approve</button>
+       <button class="act-btn reject" data-act="rejected" data-id="${l.id}">${ico('x')} Reject</button>`
     : auto
-      ? `<span class="status-chip rejected">auto-rejected · ${esc(auto)}</span>
+      ? `${statusPill('rejected', 'auto · ' + auto)}
          <button class="act-btn reset" data-act="unauto" data-id="${l.id}" title="Review it anyway">Review anyway</button>`
       : autoYes
-        ? `<span class="status-chip approved">auto-approved · ${esc(autoYes)}</span>
+        ? `${statusPill('approved', 'auto · ' + autoYes)}
            <button class="act-btn reset" data-act="unauto" data-id="${l.id}" title="Review it anyway">Review anyway</button>`
-        : `<span class="status-chip ${st}">${st}</span>
+        : `${statusPill(st)}
            <button class="act-btn reset" data-act="pending" data-id="${l.id}">Undo</button>`;
+  const decided = st !== 'pending' ? bylineHtml(state.decisionsBy && state.decisionsBy[l.id], state.decisionsAt && state.decisionsAt[l.id], 'Decided') : '';
+  const why = l.rationale
+    ? `<details class="rationale-fold"${state.ui.reviewFocus === l.id ? ' open' : ''}><summary>Why</summary>
+        <div class="rationale"><b>Why:</b> ${esc(l.rationale)}</div></details>`
+    : '';
   return `
-    <div class="review-card ${st !== 'pending' ? 'decided-' + st : ''}">
+    <div class="review-card ${st !== 'pending' ? 'decided-' + st : ''} ${state.ui.reviewFocus === l.id ? 'is-focused' : ''}"
+         data-link-id="${esc(l.id)}" tabindex="0">
       <div class="review-pair">
         ${pairSide(oh, ANCHOR)}
-        <div class="pair-mid">⇄</div>
+        <div class="pair-mid">${ico('align')}</div>
         ${pairSide(other, other.state)}
       </div>
       ${siblings.length ? `<div class="member-peers"><b>Approving also aligns it to:</b> ${siblings.map(p =>
@@ -1572,7 +1842,8 @@ function linkCard(l) {
       <div class="review-foot">
         <span class="conf-chip">confidence: ${esc(l.confidence || '—')}</span>
         ${crossGradeChip(oh, other)}
-        ${l.rationale ? `<div class="rationale"><b>Why:</b> ${esc(l.rationale)}</div>` : ''}
+        ${why}
+        ${decided}
         ${actions}
       </div>
     </div>`;
@@ -1582,19 +1853,35 @@ function renderDetail() {
   const empty = document.getElementById('emptyDetail');
   const content = document.getElementById('detailContent');
   const std = state.ui.selectedKey ? state.byKey.get(state.ui.selectedKey) : null;
-  if (!std) { empty.classList.remove('hidden'); content.classList.add('hidden'); return; }
+  const target = explorerTarget(std ? std.state : state.ui.expState);
+  if (!std) {
+    empty.classList.remove('hidden'); content.classList.add('hidden');
+    const p = empty.querySelector('#emptyCompareCopy') || empty.querySelector('p');
+    if (p) p.textContent = target === 'ALL'
+      ? 'Pick a standard on the left to see its aligned standards in every other state.'
+      : `Pick a standard on the left to compare it with ${STATE_NAMES[target]}.`;
+    return;
+  }
   empty.classList.add('hidden');
   content.classList.remove('hidden');
 
-  const hits = alignedTo(std);
-  const pending = linksFor(std).filter(l => statusOf(l) === 'pending' && linkWithinSpan(l));
+  const allHits = alignedTo(std);
+  const hits = target === 'ALL' ? allHits : allHits.filter(h => h.std.state === target);
+  const allPending = linksFor(std).filter(l => statusOf(l) === 'pending' && linkWithinSpan(l));
+  const pending = target === 'ALL'
+    ? allPending
+    : std.state === ANCHOR
+      ? allPending.filter(l => l.state === target)
+      : target === ANCHOR ? allPending : [];
   const approved = linksFor(std).filter(l => statusOf(l) === 'approved');
   const naKey = keyOf(std);
+  const showStates = target === 'ALL' ? otherStates(std.state) : [target];
+  const hiddenHits = target === 'ALL' ? 0 : allHits.filter(h => h.std.state !== target).length;
+  const hiddenPending = allPending.length - pending.length;
 
   let html = stdCard(std, `Selected standard — ${STATE_NAMES[std.state]} · ${SUBJECT_NAMES[std.subject]} · Grade ${std.grade}`);
 
-  // One section per other state.
-  otherStates(std.state).forEach(os => {
+  showStates.forEach(os => {
     const inState = hits.filter(h => h.std.state === os);
     html += `<div class="align-section-title">Aligned standards in ${STATE_NAMES[os]} (${inState.length})<span class="rule"></span></div>`;
     if (inState.length) {
@@ -1605,11 +1892,16 @@ function renderDetail() {
       html += `<div class="no-align">Nothing in ${STATE_NAMES[os]} is aligned to this yet.</div>`;
     }
   });
+  if (hiddenHits || hiddenPending) {
+    html += `<button class="act-btn compare-more" id="expShowAll" type="button">
+      Show all states${hiddenHits ? ` · ${hiddenHits} more aligned` : ''}${hiddenPending ? ` · ${hiddenPending} pending elsewhere` : ''}
+    </button>`;
+  }
 
   if (isNoAlign(std)) {
     html += `
       <div class="noalign-box">
-        <div class="noalign-title">🚫 No Alignment Possible</div>
+        <div class="noalign-title">No alignment possible</div>
         <div class="noalign-sub">Reviewed — nothing aligns to this standard, in any state.</div>
         <button class="act-btn reset" data-act="unmark-noalign" data-id="${esc(naKey)}">Undo</button>
       </div>`;
@@ -1617,7 +1909,7 @@ function renderDetail() {
     html += `
       <div class="no-align">
         Nothing aligned yet${pending.length ? ' — review the drafts below' : ''}.<br>
-        <button class="act-btn reject" data-act="mark-noalign" data-id="${esc(naKey)}" style="margin-top:10px">🚫 Mark as No Alignment Possible</button>
+        <button class="act-btn reject" data-act="mark-noalign" data-id="${esc(naKey)}" style="margin-top:10px">Mark as no alignment possible</button>
       </div>`;
   }
 
@@ -1632,54 +1924,81 @@ function renderDetail() {
   content.querySelectorAll('[data-act]').forEach(btn => {
     btn.addEventListener('click', () => handleAction(btn.dataset.act, btn.dataset.id));
   });
+  const showAll = content.querySelector('#expShowAll');
+  if (showAll) showAll.addEventListener('click', () => {
+    state.ui.expTarget = 'ALL';
+    renderCompareBar();
+    renderDetail();
+    syncHash();
+  });
   wireManualAdd(content, std);
 }
 
 /* Manual add. From an Ohio standard you pick the other state's match; from any other state
-   you pick its Ohio anchor. Either way the record is the same link. */
+   you pick its Ohio anchor. Either way the record is the same link. Searchable — a <select>
+   of every standard in the subject stopped being usable around state three. */
+function manualPickState(std) {
+  const isAnchor = std.state === ANCHOR;
+  if (!isAnchor) return ANCHOR;
+  const target = explorerTarget(std.state);
+  if (target !== 'ALL') return target;
+  return state.ui.manualPickState && otherStates(ANCHOR).includes(state.ui.manualPickState)
+    ? state.ui.manualPickState
+    : otherStates(ANCHOR)[0];
+}
 function renderManualAdd(std) {
   const isAnchor = std.state === ANCHOR;
+  const target = explorerTarget(std.state);
+  const pickState = manualPickState(std);
+  const existing = new Set(linksFor(std).map(l => isAnchor ? linkedKeyOf(l) : anchorKeyOf(l)));
+  const scope = s => s.state === pickState && s.subject === std.subject && !existing.has(keyOf(s));
+  const note = isAnchor
+    ? `Pick the ${SUBJECT_NAMES[std.subject]} standard in ${STATE_NAMES[pickState]} (any grade) that matches this one.`
+    : `Pick the Ohio ${SUBJECT_NAMES[std.subject]} standard (any grade) this one matches. It then aligns to every other state on that Ohio standard.`;
   return `
     <div class="align-section-title">Add an alignment<span class="rule"></span></div>
     <div class="source-card" style="margin-bottom:0">
-      <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap">
-        ${isAnchor ? `<select id="manualState" style="font:inherit; padding:8px 10px; border:1px solid var(--line); border-radius:8px">
-          ${otherStates(ANCHOR).map(s => `<option value="${s}">${STATE_NAMES[s]}</option>`).join('')}
-        </select>` : ''}
-        <select id="manualPick" style="font:inherit; padding:8px 10px; border:1px solid var(--line); border-radius:8px; flex:1; min-width:260px"></select>
-        <button class="act-btn approve" id="manualAddBtn">+ Add as approved</button>
-      </div>
-      <div style="font-size:12px; color:var(--ink-faint); margin-top:8px">
-        ${isAnchor
-          ? `Pick the ${SUBJECT_NAMES[std.subject]} standard in another state (any grade) that matches this one.`
-          : `Pick the Ohio ${SUBJECT_NAMES[std.subject]} standard (any grade) this one matches. It then aligns to every other state on that Ohio standard.`}
+      ${isAnchor && target === 'ALL' ? `<select id="manualState" class="ps-input" style="max-width:240px;margin-bottom:10px">
+        ${otherStates(ANCHOR).sort((a, b) => STATE_NAMES[a].localeCompare(STATE_NAMES[b])).map(s =>
+          `<option value="${s}" ${s === pickState ? 'selected' : ''}>${STATE_NAMES[s]}</option>`).join('')}
+      </select>` : ''}
+      <div class="tag-picker manual-add" id="manualPicker">
+        <input type="search" class="picker-search" id="manualSearch"
+          placeholder="Search ${STATE_NAMES[pickState]} standards by code or text…">
+        <div class="ps-hint">${esc(note)}</div>
+        <div class="picker-results" id="manualResults">${pickerResultsHtml('', pickState, scope)}</div>
       </div>
     </div>`;
 }
 
 function wireManualAdd(content, std) {
-  const sel = content.querySelector('#manualPick');
-  const btn = content.querySelector('#manualAddBtn');
-  if (!sel) return;
+  const results = content.querySelector('#manualResults');
+  const search = content.querySelector('#manualSearch');
   const stateSel = content.querySelector('#manualState');
+  if (!results) return;
   const isAnchor = std.state === ANCHOR;
-
-  const fill = () => {
-    const target = isAnchor ? (stateSel ? stateSel.value : otherStates(ANCHOR)[0]) : ANCHOR;
+  const scopeOf = (st) => {
     const existing = new Set(linksFor(std).map(l => isAnchor ? linkedKeyOf(l) : anchorKeyOf(l)));
-    const options = state.standards
-      .filter(s => s.state === target && s.subject === std.subject && !existing.has(keyOf(s)))
-      .sort((a, b) => GRADES.indexOf(a.grade) - GRADES.indexOf(b.grade));
-    sel.innerHTML = '<option value="">Choose a standard…</option>' + options.map(s =>
-      `<option value="${esc(keyOf(s))}">G${esc(s.grade)} · ${esc(s.code)} — ${esc(s.description.slice(0, 90))}${s.description.length > 90 ? '…' : ''}</option>`
-    ).join('');
+    return s => s.state === st && s.subject === std.subject && !existing.has(keyOf(s));
   };
-  fill();
-  if (stateSel) stateSel.addEventListener('change', fill);
-
-  btn.addEventListener('click', () => {
-    if (!sel.value) return;
-    const picked = state.byKey.get(sel.value);
+  const currentState = () => isAnchor
+    ? (stateSel ? stateSel.value : manualPickState(std))
+    : ANCHOR;
+  const refill = () => {
+    const st = currentState();
+    if (search) search.placeholder = `Search ${STATE_NAMES[st]} standards by code or text…`;
+    results.innerHTML = pickerResultsHtml(search ? search.value : '', st, scopeOf(st));
+  };
+  if (search) search.addEventListener('input', refill);
+  if (stateSel) stateSel.addEventListener('change', () => {
+    state.ui.manualPickState = stateSel.value;
+    refill();
+  });
+  results.addEventListener('click', e => {
+    const item = e.target.closest('.picker-item');
+    if (!item) return;
+    const [st, subject, code] = item.dataset.tag.split('|');
+    const picked = state.byKey.get(stdKey(st, subject, code));
     if (!picked) return;
     const oh = isAnchor ? std : picked;
     const other = isAnchor ? picked : std;
@@ -1696,7 +2015,9 @@ function wireManualAdd(content, std) {
     indexLinks();
     pushState();
     toast(`Aligned ${oh.code} ↔ ${other.code}`);
-    renderAll();
+    renderStdList();
+    renderDetail();
+    syncHash();
   });
 }
 
@@ -1743,14 +2064,16 @@ function handleAction(act, id) {
   } else {
     setDecision(id, act);
     saveDecisions();
-    toast(act === 'approved' ? 'Alignment approved ✓' : 'Alignment rejected');
-    // Approving a card changes the queue and the counts — nothing else. renderAll()
-    // also rebuilds the Dashboard, the Master list and State Lists, which is most of the
-    // cost of a click and none of the benefit when you are working through the queue.
-    renderReview(); renderBadge(); renderStdList(); renderDetail();
+    toast(act === 'approved' ? 'Alignment approved' : 'Alignment rejected');
+    // Approving a card changes the queue and the counts — nothing else. Do not
+    // rebuild hidden views; that was most of the cost of a click.
+    if (state.ui.view === 'review') { renderReview(); renderBadge(); }
+    else { renderStdList(); renderCompareBar(); renderDetail(); renderBadge(); }
+    syncHash();
     return;
   }
-  renderAll();
+  renderOpenView();
+  syncHash();
 }
 
 /* ---------- review queue ----------
@@ -1770,11 +2093,48 @@ function reviewScope() {
   });
 }
 
-function renderReview() {
-  const { revSubject, revGrade, revStatus, revState } = state.ui;
+function reviewShown() {
+  const { revStatus } = state.ui;
   const inScope = reviewScope();
   const shown = inScope.filter(l => revStatus === 'all' || statusOf(l) === revStatus);
-  const done = inScope.filter(l => statusOf(l) !== 'pending').length;
+  const groups = new Map();
+  shown.forEach(l => {
+    const k = anchorKeyOf(l);
+    if (!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(l);
+  });
+  const ordered = [];
+  groups.forEach(ls => ls.forEach(l => ordered.push(l)));
+  return {
+    inScope, shown: ordered, groups,
+    done: inScope.filter(l => statusOf(l) !== 'pending').length,
+  };
+}
+function reviewNextId(fromId) {
+  const { shown } = reviewShown();
+  const i = shown.findIndex(l => l.id === fromId);
+  if (i < 0) return shown[0] ? shown[0].id : null;
+  const after = shown[i + 1] || shown[i - 1];
+  return after ? after.id : null;
+}
+function focusReviewCard(id, { scroll } = { scroll: true }) {
+  const box = document.getElementById('reviewList');
+  if (!box) return;
+  box.querySelectorAll('.review-card.is-focused').forEach(n => n.classList.remove('is-focused'));
+  const node = id ? box.querySelector(`.review-card[data-link-id="${CSS.escape(id)}"]`) : null;
+  if (node) {
+    node.classList.add('is-focused');
+    const fold = node.querySelector('.rationale-fold');
+    if (fold) fold.open = true;
+    if (scroll) {
+      try { node.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch { node.scrollIntoView(false); }
+    }
+  }
+}
+
+function renderReview() {
+  const { revSubject, revGrade, revState } = state.ui;
+  const { inScope, shown, groups, done } = reviewShown();
 
   const stateLabel = revState === 'ALL' ? 'all states' : STATE_NAMES[revState];
   document.getElementById('reviewProgress').textContent = inScope.length
@@ -1782,36 +2142,102 @@ function renderReview() {
     : '';
 
   const box = document.getElementById('reviewList');
+  const y = box.scrollTop;
   box.innerHTML = '';
   if (!shown.length) {
     box.appendChild(el(`<div class="review-empty">${
       inScope.length
-        ? (revStatus === 'pending' ? '🎉 Everything for this Ohio grade is reviewed.' : `No ${revStatus === 'all' ? '' : revStatus + ' '}drafts here.`)
+        ? (state.ui.revStatus === 'pending' ? 'Everything for this Ohio grade is reviewed.' : `No ${state.ui.revStatus === 'all' ? '' : state.ui.revStatus + ' '}drafts here.`)
         : 'No drafts for this Ohio grade/subject yet.'
     }</div>`));
     return;
   }
 
-  // Group by the Ohio standard, so you see one Ohio standard with every state's candidate
-  // beneath it rather than the same Ohio text restated on each card.
-  const groups = new Map();
-  shown.forEach(l => {
-    const k = anchorKeyOf(l);
-    if (!groups.has(k)) groups.set(k, []);
-    groups.get(k).push(l);
-  });
+  if (!state.ui.reviewFocus || !shown.some(l => l.id === state.ui.reviewFocus)) {
+    const firstPending = shown.find(l => statusOf(l) === 'pending');
+    state.ui.reviewFocus = (firstPending || shown[0]).id;
+  }
 
-  [...groups.entries()].forEach(([k, ls]) => {
+  groups.forEach((ls, k) => {
     const oh = state.byKey.get(k);
     box.appendChild(el(`<div class="align-section-title">Ohio ${esc(oh ? oh.code : k)} <span class="rule"></span></div>`));
     ls.forEach(l => {
       const card = el(linkCard(l) || '<div></div>');
+      if (!card || !card.classList) return;
       card.querySelectorAll('[data-act]').forEach(btn => {
-        btn.addEventListener('click', () => handleAction(btn.dataset.act, btn.dataset.id));
+        btn.addEventListener('click', () => {
+          if ((btn.dataset.act === 'approved' || btn.dataset.act === 'rejected') && state.ui.revStatus === 'pending') {
+            state.ui.reviewFocus = reviewNextId(l.id) || l.id;
+          } else {
+            state.ui.reviewFocus = l.id;
+          }
+          handleAction(btn.dataset.act, btn.dataset.id);
+        });
+      });
+      card.addEventListener('click', e => {
+        if (e.target.closest('[data-act]')) return;
+        state.ui.reviewFocus = l.id;
+        focusReviewCard(l.id, { scroll: false });
+        syncHash();
       });
       box.appendChild(card);
     });
   });
+
+  const focused = box.querySelector('.review-card.is-focused');
+  if (focused) {
+    try { focused.scrollIntoView({ block: 'nearest' }); } catch { box.scrollTop = y; }
+  } else {
+    box.scrollTop = y;
+  }
+}
+
+function reviewKeydown(e) {
+  if (state.ui.view !== 'review') return;
+  if (userIsTyping()) return;
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  if (document.getElementById('genModal') || document.getElementById('signInOverlay')) return;
+  const key = e.key;
+  const nav = key === 'j' || key === 'J' || key === 'k' || key === 'K' || key === 'ArrowDown' || key === 'ArrowUp';
+  const act = key === 'a' || key === 'A' || key === 'r' || key === 'R' || key === 'u' || key === 'U' || key === 'n' || key === 'N';
+  if (!nav && !act) return;
+  const { shown } = reviewShown();
+  if (!shown.length) return;
+  e.preventDefault();
+  let idx = shown.findIndex(l => l.id === state.ui.reviewFocus);
+  if (idx < 0) idx = 0;
+  if (key === 'j' || key === 'J' || key === 'ArrowDown') {
+    state.ui.reviewFocus = shown[Math.min(shown.length - 1, idx + 1)].id;
+    focusReviewCard(state.ui.reviewFocus);
+    syncHash();
+    return;
+  }
+  if (key === 'k' || key === 'K' || key === 'ArrowUp') {
+    state.ui.reviewFocus = shown[Math.max(0, idx - 1)].id;
+    focusReviewCard(state.ui.reviewFocus);
+    syncHash();
+    return;
+  }
+  const l = shown[idx];
+  if (!l) return;
+  if (key === 'a' || key === 'A') {
+    if (state.ui.revStatus === 'pending') state.ui.reviewFocus = reviewNextId(l.id) || l.id;
+    handleAction('approved', l.id);
+    return;
+  }
+  if (key === 'r' || key === 'R') {
+    if (state.ui.revStatus === 'pending') state.ui.reviewFocus = reviewNextId(l.id) || l.id;
+    handleAction('rejected', l.id);
+    return;
+  }
+  if (key === 'u' || key === 'U') {
+    handleAction('pending', l.id);
+    return;
+  }
+  if (key === 'n' || key === 'N') {
+    const other = state.byKey.get(linkedKeyOf(l));
+    if (other) handleAction('mark-noalign', keyOf(other));
+  }
 }
 
 function renderBadge() {
@@ -2335,7 +2761,14 @@ function loadSets() {
   try { state.sets = JSON.parse(localStorage.getItem(LS_SETS)) || []; } catch { state.sets = []; }
   normalizeSets();
 }
-function saveSets() { pushState(); }
+function saveSets() {
+  const s = currentSet();
+  if (s) {
+    s.updatedBy = (typeof sbActor === 'function' ? sbActor() : '') || (SB.user && SB.user.email) || '';
+    s.updatedAt = new Date().toISOString();
+  }
+  pushState();
+}
 function currentSet() { return state.sets.find(s => s.id === state.ui.currentSetId) || null; }
 
 /* Sets saved before passages carried titles, or before questions carried a type, are still
@@ -2372,10 +2805,11 @@ function newPassageSet() {
     writingPrompt: { type: 'informational', text: '' },
   };
   state.sets.unshift(s);
-  saveSets();
   state.ui.currentSetId = s.id;
   state.ui.openPicker = null;
+  saveSets();
   renderPassages();
+  syncHash();
 }
 
 /* Passage-set tags are {state, subject, code}. Sets saved before Texas forced the
@@ -2396,7 +2830,7 @@ function tagAlignHtml(tag) {
   if (!hits.length) {
     if (isNoAlign(std)) {
       return `<div class="align-mini noalign"><div class="align-mini-title">Aligned standards — other states</div>
-        <div class="align-mini-item"><b>🚫 No Alignment Possible</b><span class="align-mini-desc">Reviewed — nothing aligns to this.</span></div></div>`;
+        <div class="align-mini-item"><b>No alignment possible</b><span class="align-mini-desc">Reviewed — nothing aligns to this.</span></div></div>`;
     }
     return `<div class="align-mini"><div class="align-mini-title">Approved aligned standards — other states</div>
       <div class="align-mini-empty">No approved alignment yet${pending ? ` — ${pending} draft${pending > 1 ? 's' : ''} pending in the Review Queue` : ''}.</div></div>`;
@@ -2422,14 +2856,14 @@ function tagChipHtml(tag, section, index, showAlign = true) {
       <div class="tag-row">
         <span class="tag-chip">
           <b>${esc(tag.code)}</b> · ${STATE_NAMES[tag.state]}${std && std.grade ? ` · ${esc(gradeLabel(std.grade))}` : ''}
-          <button class="tag-x" data-untag="${section}:${index}" title="Remove tag">✕</button>
+          <button class="tag-x" data-untag="${section}:${index}" title="Remove tag">${ico('close')}</button>
         </span>
         ${std ? `<span class="tag-desc">${esc(std.description.slice(0, 110))}${std.description.length > 110 ? '…' : ''}</span>` : ''}
       </div>`;
     // Cross-state alignments are intentionally NOT shown here — the Master Passage List
     // stays clean; the aligned state standard is shown (and assigned) in State Lists.
   }
-  return `<button class="act-btn tag-open" data-pick="${section}:${index}">＋ Tag standard</button>`;
+  return `<button class="act-btn tag-open" data-pick="${section}:${index}">${ico('plus')} Tag standard</button>`;
 }
 
 function pickerCandidates(query, restrictState, scope) {
@@ -2485,7 +2919,7 @@ function answerKeyWarningHtml(q, section) {
   const ok = q.type === 'cloze' ? buildClozeItem(p, q.text).answer_matched : p.complete;
   if (ok) return '';
   return `<div class="key-warn">
-      <b>⚠ No answer key</b> — this question can't be exported to the CMS yet.
+      <b>No answer key</b> — this question can't be exported to the CMS yet.
       Mark the answer either way:
       <span class="key-eg">Answer: b</span> on its own line, or a
       <span class="key-eg">✓</span> at the end of the correct choice.
@@ -2509,7 +2943,7 @@ function questionBlockHtml(q, section, i, label, ctx) {
     <div class="q-card">
       <div class="q-head">
         <span class="q-label">${esc(label)}</span>
-        <button class="q-remove" data-remove-q="${section}:${i}" title="Remove">✕</button>
+        <button class="q-remove" data-remove-q="${section}:${i}" title="Remove">${ico('close')}</button>
       </div>
       <div class="ps-field" style="margin-bottom:10px"><label>Question type</label>
         <div class="chips-row">
@@ -2594,27 +3028,102 @@ function buildPrimaryStateFilter() {
 /* A row has to say why a set cannot be sent — "not ready" alone sends someone hunting.
    The missing answer key is called out by name because it is the single biggest blocker
    in the library. */
+function setStatusKind(s) {
+  if (isDraft(s)) return 'draft';
+  const r = exportReadiness(s);
+  if (r.stage === 'has-id') return 'incms';
+  if (r.stage === 'awaiting-id') return 'awaiting';
+  if (r.stage === 'ready') return 'ready';
+  if (r.reasons.some(x => x.includes('answer key'))) return 'nokey';
+  return 'blocked';
+}
 function readinessChipHtml(s) {
   const r = exportReadiness(s);
-  if (r.stage === 'has-id') {
-    return `<div class="ready-chip in-cms">✓ In CMS · ${esc(cmsPassageIdFor(s))}</div>`;
-  }
-  if (r.stage === 'awaiting-id') {
-    return `<div class="ready-chip awaiting">↑ Exported — awaiting CMS ID</div>`;
-  }
-  if (r.stage === 'ready') {
-    return `<div class="ready-chip ready">● Ready for export</div>`;
-  }
+  if (r.stage === 'has-id') return statusPill('incms', cmsPassageIdFor(s));
+  if (r.stage === 'awaiting-id') return statusPill('awaiting');
+  if (r.stage === 'ready') return statusPill('ready', 'export');
   const keyReason = r.reasons.find(x => x.includes('answer key'));
-  const label = keyReason ? `⚠ ${keyReason}` : `⚠ ${r.reasons[0]}${r.reasons.length > 1 ? ` +${r.reasons.length - 1}` : ''}`;
-  return `<div class="ready-chip blocked" title="${esc(r.reasons.join(' · '))}">${esc(label)}</div>`;
+  if (keyReason) return statusPill('nokey', null, r.reasons.join(' · '));
+  const extra = r.reasons.length > 1 ? `+${r.reasons.length - 1}` : '';
+  return statusPill('blocked', extra || r.reasons[0], r.reasons.join(' · '));
+}
+
+const SET_ROW_H = 98;
+let setListSorted = [];
+let setListBound = false;
+let setListWindow = { start: -1, end: -1 };
+
+function setListItemEl(s) {
+  const tags = [...s.questions, ...s.peerRevision].filter(q => q.standard).length;
+  const kind = setStatusKind(s);
+  const item = el(`
+    <div class="std-item set-row ${STATUS[kind] ? STATUS[kind].cls : ''} ${state.ui.currentSetId === s.id ? 'active' : ''}">
+      <div class="std-item-top">
+        <span class="std-code">${kind === 'draft' ? `${statusPill('draft')} ` : ''}${esc(s.title || 'Untitled set')}</span>
+        <button class="q-remove" data-del-set="${s.id}" title="Delete set">${ico('close')}</button>
+      </div>
+      <div class="std-desc">${s.gaGrade ? `G${esc(s.gaGrade)} · ` : ''}${esc(s.passageId ? 'ID: ' + s.passageId : 'No passage ID')} · ${s.passages.length} passage${s.passages.length !== 1 ? 's' : ''} · ${tags} tagged</div>
+      ${readinessChipHtml(s)}
+      ${s.passages.some(p => p.title)
+        ? `<div class="std-desc set-passage-titles">${s.passages.filter(p => p.title).map(p => esc(p.title)).join(' · ')}</div>`
+        : ''}
+    </div>`);
+  item.addEventListener('click', e => {
+    if (e.target.closest('[data-del-set]')) {
+      if (confirm(`Delete "${s.title || 'Untitled set'}"? This cannot be undone.`)) {
+        (state.setDeleted = state.setDeleted || {})[s.id] = Date.now();
+        state.sets = state.sets.filter(x => x.id !== s.id);
+        if (state.ui.currentSetId === s.id) state.ui.currentSetId = null;
+        saveSets();
+        renderPassages();
+      }
+      return;
+    }
+    state.ui.currentSetId = s.id;
+    state.ui.openPicker = null;
+    renderPassages();
+    syncHash();
+  });
+  return item;
+}
+
+function paintSetListWindow(force) {
+  const box = document.getElementById('setList');
+  if (!box || !setListSorted.length) return;
+  const virtual = setListSorted.length > 40;
+  box.classList.toggle('is-virtual', virtual);
+  if (!virtual) {
+    if (!force && setListWindow.start === 0 && setListWindow.end === setListSorted.length) return;
+    box.innerHTML = '';
+    setListSorted.forEach(s => box.appendChild(setListItemEl(s)));
+    setListWindow = { start: 0, end: setListSorted.length };
+    return;
+  }
+  const h = box.clientHeight || 600;
+  const start = Math.max(0, Math.floor(box.scrollTop / SET_ROW_H) - 8);
+  const end = Math.min(setListSorted.length, start + Math.ceil(h / SET_ROW_H) + 16);
+  if (!force && start === setListWindow.start && end === setListWindow.end) return;
+  setListWindow = { start, end };
+  const top = document.createElement('div');
+  top.className = 'set-spacer';
+  top.style.height = (start * SET_ROW_H) + 'px';
+  const bot = document.createElement('div');
+  bot.className = 'set-spacer';
+  bot.style.height = ((setListSorted.length - end) * SET_ROW_H) + 'px';
+  const frag = document.createDocumentFragment();
+  frag.appendChild(top);
+  for (let i = start; i < end; i++) frag.appendChild(setListItemEl(setListSorted[i]));
+  frag.appendChild(bot);
+  box.innerHTML = '';
+  box.appendChild(frag);
 }
 
 function renderSetList() {
   const box = document.getElementById('setList');
-  box.innerHTML = '';
   if (!state.sets.length) {
-    box.appendChild(el(`<div class="review-empty">No passage sets yet.<br>Create one to get started.</div>`));
+    box.classList.remove('is-virtual');
+    box.innerHTML = `<div class="review-empty">No passage sets yet.<br>Create one to get started.</div>`;
+    setListSorted = [];
     return;
   }
   buildPrimaryStateFilter();
@@ -2624,57 +3133,29 @@ function renderSetList() {
     ? `${state.sets.length} sets`
     : `${list.length} of ${state.sets.length} sets`;
   if (!list.length) {
-    box.appendChild(el(`<div class="review-empty">No sets match these filters.</div>`));
+    box.classList.remove('is-virtual');
+    box.innerHTML = `<div class="review-empty">No sets match these filters.</div>`;
+    setListSorted = [];
     return;
   }
-  // Drafts first — they're the review queue — then by grade, then title.
-  const sorted = [...list].sort((a, b) =>
+  setListSorted = [...list].sort((a, b) =>
     ((isDraft(b) ? 1 : 0) - (isDraft(a) ? 1 : 0))
     || ((+a.gaGrade || 99) - (+b.gaGrade || 99))
     || (a.title || '').localeCompare(b.title || ''));
-  let selectedNode = null;
-  sorted.forEach(s => {
-    const tags = [...s.questions, ...s.peerRevision].filter(q => q.standard).length;
-    const item = el(`
-      <div class="std-item ${state.ui.currentSetId === s.id ? 'active' : ''} ${isDraft(s) ? 'is-draft' : ''}">
-        <div class="std-item-top">
-          <span class="std-code">${isDraft(s) ? '<span class="draft-tag">DRAFT</span> ' : ''}${esc(s.title || 'Untitled set')}</span>
-          <button class="q-remove" data-del-set="${s.id}" title="Delete set">✕</button>
-        </div>
-        <div class="std-desc">${s.gaGrade ? `G${esc(s.gaGrade)} · ` : ''}${esc(s.passageId ? 'ID: ' + s.passageId : 'No passage ID')} · ${s.passages.length} passage${s.passages.length !== 1 ? 's' : ''} · ${tags} tagged</div>
-        ${readinessChipHtml(s)}
-        ${s.passages.some(p => p.title)
-          ? `<div class="std-desc set-passage-titles">${s.passages.filter(p => p.title).map(p => esc(p.title)).join(' · ')}</div>`
-          : ''}
-      </div>`);
-    item.addEventListener('click', e => {
-      if (e.target.dataset.delSet) {
-        if (confirm(`Delete "${s.title || 'Untitled set'}"? This cannot be undone.`)) {
-          // Tombstone FIRST: without it the pre-save pull re-adds this set from the
-          // server (server-only sets are carried along by design) and the delete undoes
-          // itself on the next save.
-          (state.setDeleted = state.setDeleted || {})[s.id] = Date.now();
-          state.sets = state.sets.filter(x => x.id !== s.id);
-          if (state.ui.currentSetId === s.id) state.ui.currentSetId = null;
-          saveSets();
-          renderPassages();
-        }
-        return;
-      }
-      state.ui.currentSetId = s.id;
-      state.ui.openPicker = null;
-      renderPassages();
-    });
-    if (s.id === state.ui.currentSetId) selectedNode = item;
-    box.appendChild(item);
-  });
-  // A freshly generated set IS selected, but selection is invisible when it sits 900
-  // rows down an alphabetical list — bring it on screen.
-  if (selectedNode) {
-    requestAnimationFrame(() => {
-      try { selectedNode.scrollIntoView({ block: 'nearest' }); } catch { /* older browsers */ }
-    });
+  if (!setListBound) {
+    setListBound = true;
+    box.addEventListener('scroll', () => paintSetListWindow(false), { passive: true });
   }
+  const sel = state.ui.currentSetId;
+  const idx = sel ? setListSorted.findIndex(s => s.id === sel) : -1;
+  if (idx >= 0 && setListSorted.length > 40) {
+    const top = idx * SET_ROW_H;
+    if (top < box.scrollTop || top + SET_ROW_H > box.scrollTop + box.clientHeight) {
+      box.scrollTop = Math.max(0, top - Math.min(120, box.clientHeight / 4));
+    }
+  }
+  setListWindow = { start: -1, end: -1 };
+  paintSetListWindow(true);
 }
 
 function renderSetEditor() {
@@ -2688,7 +3169,7 @@ function renderSetEditor() {
   if (!s) {
     panel.innerHTML = `
       <div class="empty-state">
-        <div class="empty-icon">📄</div>
+        <div class="empty-icon" aria-hidden="true"></div>
         <h2>No passage set selected</h2>
         <p>Create a new passage set or pick one from the list. Tag its questions to standards and the approved alignments for other states appear automatically.</p>
       </div>`;
@@ -2711,7 +3192,10 @@ function renderSetEditor() {
 
   panel.innerHTML = `
     <div class="ps-section">
-      <div class="ps-section-title">Passage Set</div>
+      <div class="ps-section-title">Passage Set
+        ${statusPill(setStatusKind(s), s.passageId || null)}
+      </div>
+      ${bylineHtml(s.updatedBy, s.updatedAt)}
       <div class="ps-meta-row">
         <div class="ps-field" style="flex:2"><label>Title</label>
           <input type="text" class="ps-input" id="psTitle" value="${esc(s.title)}" placeholder="e.g., The Wright Brothers Take Flight"></div>
@@ -2776,19 +3260,19 @@ function renderSetEditor() {
       ${s.passages.map((p, i) => `
         <div class="q-card">
           <div class="q-head"><span class="q-label">Passage ${i + 1}</span>
-            <button class="q-remove" data-remove-p="${i}" title="Remove">✕</button></div>
+            <button class="q-remove" data-remove-p="${i}" title="Remove">${ico('close')}</button></div>
           <div class="ps-field" style="margin-bottom:10px"><label>Passage title</label>
             <input type="text" class="ps-input" data-ptitle="${i}" value="${esc(p.title)}"
               placeholder="e.g., The Wright Brothers Take Flight"></div>
-          <textarea class="ps-textarea" data-p="${i}" rows="7" placeholder="Paste the passage text here.">${esc(p.text)}</textarea>
+          <textarea class="ps-textarea passage-text" data-p="${i}" rows="10" placeholder="Paste the passage text here.">${esc(p.text)}</textarea>
         </div>`).join('')}
-      <button class="act-btn" id="addPassage">＋ Add passage</button>
+      <button class="act-btn" id="addPassage">${ico('plus')} Add passage</button>
     </div>
 
     <div class="ps-section">
       <div class="ps-section-title">Question Set <span class="ps-hint">3–4 questions, each tagged to a standard</span></div>
       ${s.questions.map((q, i) => questionBlockHtml(q, 'questions', i, `Question ${i + 1}`, qCtx)).join('')}
-      ${s.questions.length < MAX_QUESTIONS ? `<button class="act-btn" id="addQuestion">＋ Add question</button>` : ''}
+      ${s.questions.length < MAX_QUESTIONS ? `<button class="act-btn" id="addQuestion">${ico('plus')} Add question</button>` : ''}
     </div>
 
     <div class="ps-section">
@@ -2803,7 +3287,7 @@ function renderSetEditor() {
     <div class="editor-savebar">
       ${isDraft(s)
         ? `<span class="ps-hint">${s.passageId ? '' : 'Add a passage ID, then '}approve this set to move it into the passage library.</span>
-           <button class="btn btn-approve" id="approveSetBtn">✓ Approve set</button>`
+           <button class="btn btn-approve" id="approveSetBtn">${ico('check')} Approve set</button>`
         : `<span class="ps-hint">Changes save automatically — Save confirms immediately.</span>`}
       <button class="btn btn-primary" id="saveSetBtn">Save</button>
     </div>`;
@@ -3037,7 +3521,7 @@ function renderSetSide() {
         const toggle = v.cat !== 'aligned'
           ? '<span class="chip chip-warn">needs approval in State Lists</span>'
           : s.passageId
-            ? `<button class="cms-chip ${inCms ? 'loaded' : ''}" data-setcms="${esc(k)}" title="Click to toggle">${inCms ? '✓ In CMS' : 'Not in CMS'}</button>`
+            ? `<button class="cms-chip ${inCms ? 'loaded' : ''}" data-setcms="${esc(k)}" title="Click to toggle">${inCms ? 'In CMS' : 'Not in CMS'}</button>`
             : `<span class="cms-chip disabled" title="Add a passage ID first">Not in CMS</span>`;
         return `<div class="align-mini-item">
           <span class="chip">${STATE_NAMES[v.state]}</span><span class="chip">G${esc(v.grade)}</span>
@@ -3048,7 +3532,7 @@ function renderSetSide() {
     </div>`;
   }
   if (tag.state !== 'ALL' && isNoAlign(std)) {
-    html += `<div class="side-block"><div class="noalign-inline">🚫 No Alignment Possible — this passage stays in ${STATE_NAMES[std.state]} only.</div></div>`;
+    html += `<div class="side-block"><div class="noalign-inline">No alignment possible — this passage stays in ${STATE_NAMES[std.state]} only.</div></div>`;
   } else if (tag.state !== 'ALL' && serves.every(v => v.own)) {
     html += `<div class="side-block"><div class="align-mini-empty">No approved alignment within one grade yet — this passage is in ${STATE_NAMES[std.state]} only until its primary standard is aligned.</div></div>`;
   }
@@ -3073,7 +3557,7 @@ function cmsChip(std) {
   const key = keyOf(std);
   const loaded = !!state.cms[key];
   return `<button class="cms-chip ${loaded ? 'loaded' : ''}" data-cms="${esc(key)}" title="Click to toggle CMS status">
-    ${loaded ? '✓ In CMS' : 'Not in CMS'}</button>`;
+    ${loaded ? 'In CMS' : 'Not in CMS'}</button>`;
 }
 function wireCmsChips(panel) {
   panel.querySelectorAll('[data-cms]').forEach(btn => {
@@ -3184,12 +3668,12 @@ function assignedStateStd(s, hit, st, grade) {
 function inputListItem(row, selected) {
   const { set: s, stage } = row;
   const catChip = {
-    entered: '<span class="chip chip-entered">✓ Entered in CMS</span>',
+    entered: statusPill('entered'),
     approval: '<span class="chip chip-warn">Needs approval</span>',
     standards: '<span class="chip chip-stage">Needs standards</span>',
     peer: '<span class="chip chip-stage">Needs peer task</span>',
     enter: '<span class="chip">To be entered</span>',
-    flagged: '<span class="chip chip-warn">⚑ Flagged</span>',
+    flagged: statusPill('flagged'),
   }[stage] || '<span class="chip">Aligned</span>';
   const k = inputKey(s.id, state.ui.inState, state.ui.inGrade);
   const stId = (state.setStateId || {})[k];
@@ -3230,9 +3714,9 @@ function detailQuestionHtml(q, i, s, st, grade) {
     let inner;
     if (tag) {
       inner = `<div class="review-pair q-pair">
-          ${nativeSide}<div class="pair-mid">⇄</div>${pairSide(tagStd(tag) || { code: tag.code, grade, description: '' }, st)}
+          ${nativeSide}<div class="pair-mid">${ico('align')}</div>${pairSide(tagStd(tag) || { code: tag.code, grade, description: '' }, st)}
         </div>
-        <button class="act-btn reject" data-qsuntag="${i}">✕ Remove ${STATE_NAMES[st]} tag</button>`;
+        <button class="act-btn reject" data-qsuntag="${i}">${ico('close')} Remove ${STATE_NAMES[st]} tag</button>`;
     } else if (open) {
       // The picker can pull ANY grade's standards — sets sometimes align across a
       // grade boundary, so the tagger must be able to reach the neighboring grade.
@@ -3243,7 +3727,7 @@ function detailQuestionHtml(q, i, s, st, grade) {
           <select data-qsgrade style="padding:4px 10px;border:1px solid var(--line,#ccd6df);border-radius:8px;font:inherit;font-weight:700">
             ${GRADES.map(g => `<option value="${g}" ${String(g) === pg ? 'selected' : ''}>Grade ${g}</option>`).join('')}
           </select>
-          ${pg !== String(grade) ? `<span class="chip" style="background:#fdf1d2;color:#8a6400">⇄ cross-grade — this set is Grade ${grade}</span>` : ''}
+          ${pg !== String(grade) ? `<span class="chip chip-cross">Cross-grade — this set is Grade ${grade}</span>` : ''}
         </div>
         ${pickerHtml('qstate', i, st, qstateScope(pg), '')}`;
     } else {
@@ -3257,14 +3741,14 @@ function detailQuestionHtml(q, i, s, st, grade) {
             <div class="align-mini-title">Recommended from approved alignments</div>
             ${recs.map(h => `<div class="q-rec-pair">
               <div class="review-pair q-pair">
-                ${nativeSide}<div class="pair-mid">⇄</div>${pairSide(h.std, st)}
+                ${nativeSide}<div class="pair-mid">${ico('align')}</div>${pairSide(h.std, st)}
               </div>
-              <button class="act-btn approve" data-qsrec="${i}|${esc(h.std.subject)}|${esc(h.std.code)}">✓ Accept ${esc(h.std.code)}</button>
+              <button class="act-btn approve" data-qsrec="${i}|${esc(h.std.subject)}|${esc(h.std.code)}">${ico('check')} Accept ${esc(h.std.code)}</button>
             </div>`).join('')}
             <button class="act-btn tag-open" data-qspick="${i}">Choose a different standard…</button>
           </div>`
         : `<div class="review-pair q-pair">${nativeSide}</div>
-           <button class="act-btn tag-open" data-qspick="${i}">＋ Tag ${STATE_NAMES[st]} standard</button>`;
+           <button class="act-btn tag-open" data-qspick="${i}">${ico('plus')} Tag ${STATE_NAMES[st]} standard</button>`;
     }
     tagArea = `<div class="q-tag-area q-tag-stack">${inner}</div>`;
   }
@@ -3571,7 +4055,7 @@ function generatorFormHtml(opts) {
   const busy = state.ui.genBusy;
   return `
     <div class="ps-section">
-      ${modal ? '' : `<div class="ps-section-title">⚡ Generate a passage set with AI
+      ${modal ? '' : `<div class="ps-section-title">${ico('spark')} Generate a passage set with AI
         <span class="ps-hint">the passage is written to make the chosen standard assessable</span></div>`}
 
       ${modal ? '' : `<div class="ps-field"><label>State</label>
@@ -3641,7 +4125,7 @@ function generatorFormHtml(opts) {
 
       <div class="detail-actions" style="margin-top:12px">
         <button class="act-btn approve" id="genRun" ${busy || !g.code ? 'disabled' : ''}>
-          ${busy ? (state.ui.genProgress || '⏳ Generating…') : `⚡ Generate ${modal && +g.setCount > 1 ? g.setCount + ' draft sets' : 'draft set'}`}</button>
+          ${busy ? (state.ui.genProgress || 'Generating…') : `${ico('spark')} Generate ${modal && +g.setCount > 1 ? g.setCount + ' draft sets' : 'draft set'}`}</button>
         <button class="act-btn reset" id="genCancel" ${busy ? 'disabled' : ''}>${modal ? 'Close' : 'Cancel'}</button>
       </div>
       ${!g.code ? '<div class="ps-hint" style="margin-top:6px">Choose an anchor standard to enable generation.</div>' : ''}
@@ -3672,14 +4156,14 @@ function genStatusHtml() {
        </div>`).join('');
   if (busy) {
     return `<div class="gen-status gen-status-busy">
-        <div class="gen-status-head">⏳ Building set ${done + 1} of ${target}…</div>
+        <div class="gen-status-head">Building set ${done + 1} of ${target}…</div>
         <div class="ps-hint">About a minute each. Leave this open — the list below fills in as each one lands.</div>
         ${rows}
       </div>`;
   }
   const allOk = res.every(r => r.ok);
   return `<div class="gen-status ${allOk ? 'gen-status-done' : 'gen-status-warn'}">
-      <div class="gen-status-head">${allOk ? '✓' : '⚠'} Done — ${done} of ${target} set${target > 1 ? 's' : ''} built${allOk ? '' : ' (see below)'}</div>
+      <div class="gen-status-head">${allOk ? 'Done' : 'Done with issues'} — ${done} of ${target} set${target > 1 ? 's' : ''} built${allOk ? '' : ' (see below)'}</div>
       <div class="ps-hint">Saved as drafts in the Master Passage List${state.ui.genModal ? ', and this Dashboard cell is updated' : ''}.</div>
       ${rows}
       <div class="detail-actions" style="margin-top:10px">
@@ -3721,7 +4205,7 @@ function wireGeneratorForm(panel) {
     state.ui.genResults = [];
     state.ui.genTarget = n;
     for (let i = 0; i < n; i++) {
-      state.ui.genProgress = n > 1 ? `⏳ Generating ${i + 1} of ${n}…` : '⏳ Generating…';
+      state.ui.genProgress = n > 1 ? `Generating ${i + 1} of ${n}…` : 'Generating…';
       // Same anchor + same prompt twice running produced two near-identical passages,
       // so each build is told what the batch has already written.
       const avoid = (state.ui.genResults || []).filter(r => r.ok).map(r => r.title);
@@ -4079,12 +4563,12 @@ function renderInputDetail(row, st, grade) {
       </select>
       <button class="act-btn reset" data-iact="canceloverride|${esc(k)}">Cancel</button>`;
   } else if (category === 'cms') {
-    actions = `<span class="status-chip approved">✓ Entered in CMS</span>
+    actions = `${statusPill('entered')}
        <button class="act-btn reset" data-iact="uncms|${esc(k)}">Undo</button>`;
   } else if (category === 'needs') {
-    actions = `<button class="act-btn approve" data-iact="approve|${esc(k)}">✓ Assign</button>
+    actions = `<button class="act-btn approve" data-iact="approve|${esc(k)}">${ico('check')} Assign</button>
        ${nativeRow ? '' : `<button class="act-btn" data-iact="override|${esc(k)}">Override standard</button>`}
-       <button class="act-btn reject" data-iact="${dismissAct}">✕ Dismiss</button>`;
+       <button class="act-btn reject" data-iact="${dismissAct}">${ico('x')} Dismiss</button>`;
   } else {
     // In CMS unlocks only at the To Be Entered stage, and only with a passage ID —
     // earlier stages say what still blocks it.
@@ -4095,7 +4579,7 @@ function renderInputDetail(row, st, grade) {
       : stage === 'peer'
         ? `<span class="cms-chip disabled">Not in CMS — create the peer revision task below</span>`
         : cmsId
-          ? `<button class="act-btn approve" data-iact="cms|${esc(k)}">✓ Entered in CMS</button>`
+          ? `<button class="act-btn approve" data-iact="cms|${esc(k)}">${ico('check')} Entered in CMS</button>`
           : `<span class="cms-chip disabled" title="Add a passage ID on the Master Passage List, or a ${STATE_NAMES[st]} ID here">Not in CMS — needs a passage ID</span>`;
     actions = `${cmsPart}
        ${nativeRow ? '' : `<button class="act-btn" data-iact="override|${esc(k)}">Override</button>`}
@@ -4110,7 +4594,7 @@ function renderInputDetail(row, st, grade) {
     <div class="ps-section">
       <div class="ps-section-title">Peer Revision Task <span class="chip ga-chip">Georgia only</span>
         <button class="act-btn approve" data-buildpeer="1" ${building ? 'disabled' : ''}>
-          ${building ? '⏳ Generating…' : hasPeerContent ? '⚡ Rebuild with AI' : '⚡ Build with AI'}</button>
+          ${building ? 'Generating…' : hasPeerContent ? `${ico('spark')} Rebuild with AI` : `${ico('spark')} Build with AI`}</button>
       </div>
       ${botNoteHtml(STAGE_BOTS.peer)}
       ${s.peerDraft ? `
@@ -4120,7 +4604,7 @@ function renderInputDetail(row, st, grade) {
         </div>` : ''}
       <div class="peer-editor">
         ${s.peerRevision.map((q, i) => questionBlockHtml(q, 'peer', i, `Task ${i + 1}`, { restrictState: 'GA', setId: s.id })).join('')}
-        ${s.peerRevision.length < MAX_QUESTIONS ? `<button class="act-btn" data-add-peer="1">＋ Add task</button>` : ''}
+        ${s.peerRevision.length < MAX_QUESTIONS ? `<button class="act-btn" data-add-peer="1">${ico('plus')} Add task</button>` : ''}
       </div>
     </div>`;
 
@@ -4132,12 +4616,12 @@ function renderInputDetail(row, st, grade) {
   const isFlagged = flagNote !== undefined;
   const stId = (state.setStateId || {})[k];
   const flagBtn = isFlagged
-    ? `<button class="act-btn reject" data-iact="unflag|${esc(k)}">⚑ Resolve flag</button>`
-    : `<button class="act-btn" data-iact="flag|${esc(k)}" title="Pull this set out of the queue for review">⚑ Flag for review</button>`;
-  const stIdBtn = `<button class="act-btn" data-iact="stateid|${esc(k)}" title="ID used when this set enters the ${STATE_NAMES[st]} CMS at this grade (cross-grade pushes get their own ID)">${stId ? `✎ ${st} ID` : `＋ ${st} ID`}</button>`;
+    ? `<button class="act-btn reject" data-iact="unflag|${esc(k)}">${ico('flag')} Resolve flag</button>`
+    : `<button class="act-btn" data-iact="flag|${esc(k)}" title="Pull this set out of the queue for review">${ico('flag')} Flag for review</button>`;
+  const stIdBtn = `<button class="act-btn" data-iact="stateid|${esc(k)}" title="ID used when this set enters the ${STATE_NAMES[st]} CMS at this grade (cross-grade pushes get their own ID)">${stId ? `${st} ID` : `${ico('plus')} ${st} ID`}</button>`;
   const flagBanner = isFlagged
     ? `<div class="align-mini" style="border-left-color:var(--red, #c0392b); margin:10px 0 0">
-         <div class="align-mini-title">⚑ Flagged for review</div>
+         <div class="align-mini-title">Flagged for review</div>
          <div style="font-size:13px">${flagNote ? esc(flagNote) : 'No note left — ask whoever flagged it.'}</div>
        </div>`
     : '';
@@ -4388,7 +4872,7 @@ function renderInput() {
   }
   if (!visible.length) {
     box.appendChild(el(`<div class="review-empty">${f === 'all'
-      ? `All ${rows.length} passage${rows.length === 1 ? '' : 's'} for ${STATE_NAMES[st]} Grade ${grade} are entered in CMS. 🎉`
+      ? `All ${rows.length} passage${rows.length === 1 ? '' : 's'} for ${STATE_NAMES[st]} Grade ${grade} are entered in CMS.`
       : `Nothing in this stage for ${STATE_NAMES[st]} Grade ${grade}.`}</div>`));
     renderInputDetail(null, st, grade);
     return;
@@ -4410,6 +4894,7 @@ function renderInput() {
         state.ui.openPicker = null;
         state.ui.overrideKey = null;
         renderInput();
+        syncHash();
       });
       box.appendChild(item);
     });
@@ -4451,7 +4936,7 @@ function inputStages(st) {
   stages.push(
     { key: 'enter', label: 'To Be Entered', short: 'to be entered', hint: 'tag the ECR set in CMS' },
     { key: 'entered', label: 'Entered in CMS', short: 'entered', hint: 'done' },
-    { key: 'flagged', label: '⚑ Flagged', short: 'flagged', hint: 'pulled out of the queue for review' });
+    { key: 'flagged', label: 'Flagged', short: 'flagged', hint: 'pulled out of the queue for review' });
   return stages;
 }
 
@@ -4489,7 +4974,7 @@ function handleInputAction(spec) {
     const note = prompt('Flag this set for review.\nWhat looks wrong? (optional note)', '');
     if (note === null) return;
     setFlagValue(key, note.trim());
-    pushState(); renderInput(); toast('⚑ Flagged — moved to the Flagged list');
+    pushState(); renderInput(); toast('Flagged — moved to the Flagged list');
     return;
   }
   if (act === 'unflag') {
@@ -4525,15 +5010,10 @@ function handleInputAction(spec) {
 
 /* ---------- view switching + init ---------- */
 function renderAll() {
-  // NOT renderBots(): the board scans 7 states x 7 grades and costs ~2.5s. It is built
-  // when its tab is opened instead, which is the only time it is on screen.
-  renderStdList();
-  renderDetail();
-  renderReview();
-  renderBadge();
-  renderPassages();
-  renderInput();
-  renderDash();
+  // Only the open view. Hidden tabs are built when opened (see showView).
+  // Rebuilding everything used to throw the editor down the page and cost seconds.
+  renderOpenView();
+  syncHash();
 }
 
 /* ---------- dashboard ----------
@@ -5113,7 +5593,7 @@ function renderBots() {
           </label>
         </div>
       </div>
-      ${!w.total ? `<div class="bot-clear">Nothing waiting ✓</div>` : `
+      ${!w.total ? `<div class="bot-clear">Nothing waiting</div>` : `
         <div class="bot-total"><b>${w.total}</b> ${esc(unit)} across ${w.rows.length} place${w.rows.length === 1 ? '' : 's'}${b.key === 'herman' ? ' · only rows this state has standards for' : ''}</div>
         <div class="bot-list">${rows.slice(0, TOP).map(listRow).join('')}</div>
         ${rows.length > TOP ? `<details class="bot-more"><summary>${rows.length - TOP} more</summary>
@@ -5454,29 +5934,51 @@ function renderDash() {
 }
 
 function init() {
-  document.getElementById('navTabs').addEventListener('click', e => {
+  applyHash();
+  applyViewChrome();
+  const decorate = (id, name) => {
+    const n = document.getElementById(id);
+    if (n && !n.dataset.iconed) { n.dataset.iconed = '1'; n.insertAdjacentHTML('afterbegin', ico(name)); }
+  };
+  decorate('genSetBtn', 'spark');
+  decorate('cmsExportBtn', 'export');
+  decorate('newSetBtn', 'plus');
+
+  const nav = document.getElementById('navTabs');
+  nav.addEventListener('click', e => {
     const tab = e.target.closest('.tab');
     if (!tab) return;
-    state.ui.view = tab.dataset.view;
-    document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t === tab));
-    document.getElementById('explorerView').classList.toggle('hidden', state.ui.view !== 'explorer');
-    document.getElementById('reviewView').classList.toggle('hidden', state.ui.view !== 'review');
-    document.getElementById('passagesView').classList.toggle('hidden', state.ui.view !== 'passages');
-    document.getElementById('inputView').classList.toggle('hidden', state.ui.view !== 'input');
-    document.getElementById('dashView').classList.toggle('hidden', state.ui.view !== 'dash');
-    document.getElementById('botsView').classList.toggle('hidden', state.ui.view !== 'bots');
-    if (state.ui.view === 'bots') renderBots();   // built on demand — see renderAll
-    if (state.ui.view === 'dash') renderDash();
+    showView(tab.dataset.view, { push: true });
+  });
+  nav.addEventListener('keydown', e => {
+    if (e.target.getAttribute('role') !== 'tab') return;
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight' && e.key !== 'Home' && e.key !== 'End') return;
+    const tabs = [...nav.querySelectorAll('[role="tab"]')];
+    let i = tabs.indexOf(e.target);
+    if (e.key === 'Home') i = 0;
+    else if (e.key === 'End') i = tabs.length - 1;
+    else i = e.key === 'ArrowRight' ? (i + 1) % tabs.length : (i - 1 + tabs.length) % tabs.length;
+    e.preventDefault();
+    tabs[i].focus();
+    showView(tabs[i].dataset.view, { push: true });
+  });
+  document.addEventListener('keydown', reviewKeydown);
+  window.addEventListener('popstate', () => {
+    if (hashQuiet) return;
+    applyHash();
+    applyViewChrome();
+    applyUiControls();
+    renderOpenView();
   });
 
   document.getElementById('inState').addEventListener('change', e => {
-    state.ui.inState = e.target.value; state.ui.inSelected = null; state.ui.openPicker = null; renderInput();
+    state.ui.inState = e.target.value; state.ui.inSelected = null; state.ui.openPicker = null; renderInput(); syncHash();
   });
   document.getElementById('inGrade').addEventListener('change', e => {
-    state.ui.inGrade = e.target.value; state.ui.inSelected = null; state.ui.openPicker = null; renderInput();
+    state.ui.inGrade = e.target.value; state.ui.inSelected = null; state.ui.openPicker = null; renderInput(); syncHash();
   });
-  bindSeg('inStageSeg', 'inStage', v => { state.ui.inStage = v; state.ui.openPicker = null; renderInput(); });
-  bindStateSelect('dashStateSeg', false, state.ui.dashState, v => { state.ui.dashState = v; renderDash(); });
+  bindSeg('inStageSeg', 'inStage', v => { state.ui.inStage = v; state.ui.openPicker = null; renderInput(); syncHash(); });
+  bindStateSelect('dashStateSeg', false, state.ui.dashState, v => { state.ui.dashState = v; renderDash(); syncHash(); });
 
   document.getElementById('newSetBtn').addEventListener('click', newPassageSet);
   document.getElementById('genSetBtn').addEventListener('click', () => {
@@ -5489,16 +5991,16 @@ function init() {
 
   // Master list filters: status + grade (grade options come from GRADES)
   const fstSel = document.getElementById('setFilterState');
-  if (fstSel) fstSel.addEventListener('change', e => { state.ui.setFilterState = e.target.value; renderSetList(); });
+  if (fstSel) fstSel.addEventListener('change', e => { state.ui.setFilterState = e.target.value; renderSetList(); syncHash(); });
 
   const searchEl = document.getElementById('setSearch');
-  if (searchEl) searchEl.addEventListener('input', e => { state.ui.setSearch = e.target.value; renderSetList(); });
+  if (searchEl) searchEl.addEventListener('input', e => { state.ui.setSearch = e.target.value; renderSetList(); syncHash(); });
 
   const fgSel = document.getElementById('setFilterGrade');
   fgSel.innerHTML = `<option value="all">All grades</option>` + GRADES.map(g => `<option value="${g}">Grade ${g}</option>`).join('');
-  fgSel.addEventListener('change', e => { state.ui.setFilterGrade = e.target.value; renderSetList(); });
+  fgSel.addEventListener('change', e => { state.ui.setFilterGrade = e.target.value; renderSetList(); syncHash(); });
   document.getElementById('setFilterStatus').addEventListener('change', e => {
-    state.ui.setFilterStatus = e.target.value; renderSetList();
+    state.ui.setFilterStatus = e.target.value; renderSetList(); syncHash();
   });
 
   document.getElementById('saveBadge').addEventListener('click', async (ev) => {
@@ -5547,21 +6049,25 @@ function init() {
     }
   });
 
-  bindStateSelect('stateSeg', false, state.ui.expState, v => { state.ui.expState = v; state.ui.selectedKey = null; renderAll(); });
-  bindSeg('subjectSeg', 'expSubject', v => { state.ui.expSubject = v; state.ui.selectedKey = null; renderAll(); });
-  bindSeg('revSubjectSeg', 'revSubject', v => { state.ui.revSubject = v; renderReview(); });
-  bindStateSelect('revStateSeg', true, state.ui.revState, v => { state.ui.revState = v; renderReview(); });
-  bindSeg('revStatusSeg', 'revStatus', v => { state.ui.revStatus = v; renderReview(); });
+  bindStateSelect('stateSeg', false, state.ui.expState, v => {
+    state.ui.expState = v; state.ui.selectedKey = null;
+    coerceExpTarget(v);
+    renderStdList(); renderCompareBar(); renderDetail(); syncHash();
+  });
+  bindSeg('subjectSeg', 'expSubject', v => { state.ui.expSubject = v; state.ui.selectedKey = null; renderStdList(); renderCompareBar(); renderDetail(); syncHash(); });
+  bindSeg('revSubjectSeg', 'revSubject', v => { state.ui.revSubject = v; state.ui.reviewFocus = null; renderReview(); syncHash(); });
+  bindStateSelect('revStateSeg', true, state.ui.revState, v => { state.ui.revState = v; state.ui.reviewFocus = null; renderReview(); syncHash(); });
+  bindSeg('revStatusSeg', 'revStatus', v => { state.ui.revStatus = v; state.ui.reviewFocus = null; renderReview(); syncHash(); });
 
   renderGradeRow('gradeRow', state.ui.expGrade, g => {
     state.ui.expGrade = g; state.ui.selectedKey = null;
     document.querySelectorAll('#gradeRow .grade-btn').forEach(b => b.classList.toggle('active', b.textContent === g));
-    renderAll();
+    renderStdList(); renderCompareBar(); renderDetail(); syncHash();
   });
   renderGradeRow('revGradeRow', state.ui.revGrade, g => {
-    state.ui.revGrade = g;
+    state.ui.revGrade = g; state.ui.reviewFocus = null;
     document.querySelectorAll('#revGradeRow .grade-btn').forEach(b => b.classList.toggle('active', b.textContent === g));
-    renderReview();
+    renderReview(); syncHash();
   });
 
   document.getElementById('stdSearch').addEventListener('input', e => {
@@ -5588,7 +6094,10 @@ function init() {
   Promise.all([loadData(), loadPersisted()]).then(() => {
     pruneOrphanDecisions();
     mergeImportedDrafts();
-    renderAll();
+    applyUiControls();
+    applyViewChrome();
+    renderOpenView();
+    syncHash();
   });
 }
 

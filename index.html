@@ -6,8 +6,8 @@
 <title>Standards Alignment — ClearK12</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=202608271437">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=202608272228">
 </head>
 <body>
 <header class="topbar">
@@ -18,13 +18,13 @@
       <div class="brand-sub">Ohio · Georgia · Texas · Florida · North Carolina · South Carolina · Alabama — ELAR, Science &amp; Social Studies</div>
     </div>
   </div>
-  <nav class="tabs" id="navTabs">
-    <button class="tab active" data-view="explorer">Explorer</button>
-    <button class="tab" data-view="review">Review Queue <span class="badge" id="pendingBadge">0</span></button>
-    <button class="tab" data-view="passages">Master Passage List</button>
-    <button class="tab" data-view="input">State Lists</button>
-    <button class="tab" data-view="dash">Dashboard</button>
-    <button class="tab" data-view="bots">Morning Board <span class="badge" id="botsBadge">0</span></button>
+  <nav class="tabs" id="navTabs" role="tablist" aria-label="Main">
+    <button class="tab active" role="tab" aria-selected="true" aria-controls="explorerView" id="tab-explorer" data-view="explorer" tabindex="0">Explorer</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="reviewView" id="tab-review" data-view="review" tabindex="-1">Review Queue <span class="badge" id="pendingBadge">0</span></button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="passagesView" id="tab-passages" data-view="passages" tabindex="-1">Master Passage List</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="inputView" id="tab-input" data-view="input" tabindex="-1">State Lists</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="dashView" id="tab-dash" data-view="dash" tabindex="-1">Dashboard</button>
+    <button class="tab" role="tab" aria-selected="false" aria-controls="botsView" id="tab-bots" data-view="bots" tabindex="-1">Morning Board <span class="badge" id="botsBadge">0</span></button>
   </nav>
   <div class="topbar-actions">
     <button class="btn btn-ghost hidden" id="saveBadge" title="Cloud saving status — click to connect or update the access token"></button>
@@ -32,7 +32,7 @@
   </div>
 </header>
 
-<main id="explorerView" class="view">
+<main id="explorerView" class="view" role="tabpanel" aria-labelledby="tab-explorer">
   <aside class="picker-panel">
     <div class="picker-group">
       <label>State</label>
@@ -58,16 +58,17 @@
   </aside>
 
   <section class="detail-panel" id="detailPanel">
+    <div class="compare-bar" id="expCompareBar"></div>
     <div class="empty-state" id="emptyDetail">
-      <div class="empty-icon">⇄</div>
+      <div class="empty-icon" aria-hidden="true"></div>
       <h2>Select a standard</h2>
-      <p>Pick a state, subject, grade, and standard on the left to see its aligned standards in the other state.</p>
+      <p id="emptyCompareCopy">Pick a standard on the left to compare it with another state.</p>
     </div>
     <div id="detailContent" class="hidden"></div>
   </section>
 </main>
 
-<main id="reviewView" class="view hidden">
+<main id="reviewView" class="view hidden" role="tabpanel" aria-labelledby="tab-review">
   <div class="review-header">
     <div class="review-filters">
       <div class="seg" id="revSubjectSeg">
@@ -85,21 +86,28 @@
       </div>
     </div>
     <div class="review-progress" id="reviewProgress"></div>
+    <div class="kb-hint" title="Keyboard shortcuts for this queue">
+      <kbd>J</kbd><kbd>K</kbd> move
+      <kbd>A</kbd> approve
+      <kbd>R</kbd> reject
+      <kbd>U</kbd> undo
+      <kbd>N</kbd> no alignment
+    </div>
   </div>
   <div class="review-list" id="reviewList"></div>
 </main>
 
-<main id="passagesView" class="view hidden">
+<main id="passagesView" class="view hidden" role="tabpanel" aria-labelledby="tab-passages">
   <aside class="sets-panel">
-    <button class="btn btn-primary" id="newSetBtn">+ New Passage Set</button>
-    <button class="btn btn-primary" id="genSetBtn" title="Generate a complete passage set from a state standard">⚡ Generate with AI</button>
+    <button class="btn btn-primary" id="newSetBtn">New Passage Set</button>
+    <button class="btn btn-primary" id="genSetBtn" title="Generate a complete passage set from a state standard">Generate with AI</button>
     <div class="set-filters">
       <input type="search" id="setSearch" class="ps-input" placeholder="Search title, passage text, or ID…">
       <select id="setFilterStatus" class="ps-input">
         <option value="all">All statuses</option>
         <option value="ready">Ready for export</option>
-        <option value="no-key">⚠ Missing answer keys</option>
-        <option value="not-ready">⚠ Not ready (any reason)</option>
+        <option value="no-key">Missing answer keys</option>
+        <option value="not-ready">Not ready (any reason)</option>
         <option value="awaiting">Exported — awaiting CMS ID</option>
         <option value="has-id">In CMS (has ID)</option>
         <option value="draft">Drafts</option>
@@ -110,7 +118,7 @@
       </select>
       <select id="setFilterState" class="ps-input"></select>
       <div class="ps-hint" id="setFilterCount"></div>
-      <button class="btn btn-ghost" id="cmsExportBtn" title="Export the sets shown below as CMS import files (passages CSV, items CSV, and a JSON with the field map)">⬆ Export for CMS</button>
+      <button class="btn btn-ghost" id="cmsExportBtn" title="Export the sets shown below as CMS import files (passages CSV, items CSV, and a JSON with the field map)">Export for CMS</button>
     </div>
     <div class="set-list" id="setList"></div>
   </aside>
@@ -118,7 +126,7 @@
   <aside class="align-side" id="setSidePanel"></aside>
 </main>
 
-<main id="inputView" class="view hidden">
+<main id="inputView" class="view hidden" role="tabpanel" aria-labelledby="tab-input">
   <div class="review-header">
     <div class="review-filters">
       <label class="in-lbl">State</label>
@@ -135,7 +143,7 @@
   </div>
 </main>
 
-<main id="botsView" class="view hidden">
+<main id="botsView" class="view hidden" role="tabpanel" aria-labelledby="tab-bots">
   <div class="review-header">
     <div class="review-filters"><label class="in-lbl">Where to start today</label></div>
     <div class="review-progress" id="botsProgress"></div>
@@ -146,7 +154,7 @@
   </div>
 </main>
 
-<main id="dashView" class="view hidden">
+<main id="dashView" class="view hidden" role="tabpanel" aria-labelledby="tab-dash">
   <div class="review-header">
     <div class="review-filters">
       <label class="in-lbl">State</label>
@@ -158,9 +166,9 @@
 </main>
 
 <div class="toast" id="toast"></div>
-<script src="vendor/supabase.js?v=202608271437"></script>
-<script src="config.js?v=202608271437"></script>
-<script src="store.js?v=202608271437"></script>
-<script src="app.js?v=202608271437"></script>
+<script src="vendor/supabase.js?v=202608272228"></script>
+<script src="config.js?v=202608272228"></script>
+<script src="store.js?v=202608272228"></script>
+<script src="app.js?v=202608272228"></script>
 </body>
 </html>
