@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608271423';   // replaced with the deploy stamp
+const APP_BUILD = '202608271429';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4873,15 +4873,12 @@ function cmsRowsFor(st, grade) {
     });
   });
   if (!byTopic.size) return null;
-  /* If the CMS uses a plain "Science" anywhere at this grade, collapse the specific
-     science sub-topics into that single row. Georgia tags its Informational sets Earth
-     and Space / Life / Physical and its Opinion sets just "Science", which split grades
-     3-5 across four rows -- three of them empty on one side and the fourth empty on the
-     other. Kennady's call: one Science row until the CMS itself is tidied. */
-  byTopic.forEach(subs => {
-    if (!subs.has('Science')) return;
-    [...subs].forEach(s => { if (isScienceName(s) && s !== 'Science') subs.delete(s); });
-  });
+  /* Rows are left exactly as the CMS names them, including a plain "Science" sitting
+     alongside Earth and Space / Life / Physical. Georgia tags its Informational sets
+     specifically and its Opinion sets generically, so grades 3-5 carry both: the
+     specific rows keep their own numbers and the generic count lumps into the Science
+     row rather than being spread across rows it does not belong to. Kennady's call --
+     collapsing them all into one row read simply but lost the breakdown of her own sets. */
   const order = t => { const i = CMS_TOPIC_ORDER.indexOf(t); return i < 0 ? 99 : i; };
   return [...byTopic.entries()]
     .sort((a, b) => order(a[0]) - order(b[0]))
@@ -4891,12 +4888,12 @@ function cmsRowsFor(st, grade) {
    so the "ours" half of each pair lands beside the right CMS number. */
 function toCmsRow(dom, rows) {
   if (!rows) return dom;
-  // The collapsed Science row wins before any specific match, so our side lands beside
-  // the CMS number rather than in a row the CMS no longer shows.
-  if (isScienceName(dom) && rows.includes('Science')) return 'Science';
   if (rows.includes(dom)) return dom;
   if (dom === 'Earth Science' && rows.includes('Earth and Space Science')) return 'Earth and Space Science';
-  if (dom === 'Science') {
+  // Only fold when the grade offers a SINGLE science row -- Georgia grade 6 has just
+  // "Science", so our Earth/Life/Physical sets belong in it. Where the CMS names science
+  // specifically as well, our sets stay in their own row.
+  if (isScienceName(dom)) {
     const sci = rows.filter(isScienceName);
     if (sci.length === 1) return sci[0];
   }
@@ -4920,10 +4917,9 @@ function cmsSubtopicToRow(cmsName, rowsAtGrade) {
   const alias = (CMS_COUNTS && CMS_COUNTS.subtopicAliases) || {};
   if (rowsAtGrade.includes(cmsName)) return cmsName;
   if (alias[cmsName] && rowsAtGrade.includes(alias[cmsName])) return alias[cmsName];
-  // Where the CMS uses a plain "Science" at this grade, every science sub-topic lands in
-  // that one row — see cmsRowsFor for why the row list collapses in the first place.
-  if (isScienceName(cmsName) && rowsAtGrade.includes('Science')) return 'Science';
-  if (cmsName === 'Science') {
+  // A science name with no row of its own lands in the grade's single science row, when
+  // there is exactly one. Where the CMS names science both ways, each keeps its own row.
+  if (isScienceName(cmsName)) {
     const sci = rowsAtGrade.filter(isScienceName);
     if (sci.length === 1) return sci[0];   // exactly one, so no guessing
   }
