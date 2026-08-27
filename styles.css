@@ -1001,7 +1001,8 @@ body {
    the goal of 4 on its own. */
 .dash-cms.match  { background: var(--green-soft); color: var(--green); }
 .dash-cms.behind { color: var(--amber); }
-.dash-cms.zero   { color: var(--red); }
+/* 0 or 1 anywhere: the cell to go and fix. Outranks the green rules on purpose. */
+.dash-cell.critical, .dash-cms.critical { background: var(--red-soft); color: var(--red); font-weight: 700; }
 .dash-cms.none { color: var(--ink-faint); font-weight: 400; }
 .cms-short { color: var(--amber); font-weight: 700; }
 

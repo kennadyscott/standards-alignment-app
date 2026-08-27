@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608271433';   // replaced with the deploy stamp
+const APP_BUILD = '202608271437';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4827,8 +4827,14 @@ function dashSubdomain(s, grade, st) {
   return dom;
 }
 
+/* 0 or 1 is red everywhere, on both halves of a pair and on merged cells — per
+   Kennady, a cell that low is the thing to go and fix, whatever else it satisfies.
+   It outranks the green rules deliberately: a CMS cell holding 1 against 1 "matches",
+   but matching at 1 is not a state anyone wants to read as fine. */
+const isCritical = n => n <= 1;
 function dashCell(n, ctx) {
-  const cls = n >= DASH_GOAL ? 'goal-met' : n > 0 ? 'goal-partial' : 'goal-missing';
+  const cls = isCritical(n) ? 'critical'
+    : n >= DASH_GOAL ? 'goal-met' : n > 0 ? 'goal-partial' : 'goal-missing';
   // Every cell is a work order: clicking opens the builder already scoped to it.
   const d = ctx ? ` data-gencell="${esc(ctx.state)}|${esc(ctx.grade)}|${esc(ctx.subtopic)}|${esc(ctx.itemSetType)}|${n}"` : '';
   const title = ctx ? ` title="Build ${esc(ctx.subtopic)} · ${ctx.itemSetType === 'informative' ? 'Informational' : 'Opinion'} for Grade ${esc(ctx.grade)} — ${n} of ${DASH_GOAL}"` : '';
@@ -4971,7 +4977,8 @@ function cmsCell(bucket, subdomain, ours, footerDomains) {
   // because a sub-domain can hold ten drafts here while four is all that is wanted --
   // the CMS is not behind in that case, the dashboard is simply ahead of the target.
   const done = ours == null ? false : (n >= ours || n >= DASH_GOAL);
-  const cls = ours == null ? '' : done ? 'match' : n === 0 ? 'zero' : 'behind';
+  const cls = isCritical(n) ? 'critical'
+    : ours == null ? '' : done ? 'match' : 'behind';
   const gap = ours == null ? ''
     : n >= DASH_GOAL && n < ours ? ` — at the goal of ${DASH_GOAL}; the dashboard holds ${ours}`
     : n === ours ? ' — matches the dashboard'
@@ -5370,8 +5377,14 @@ function renderDash() {
                     if (!first) return '';                       // covered by the merge above
                     const n = cms[k].counts['Science'] || 0;
                     const tot = sciTotal(k);
-                    const cls = n >= tot || n >= DASH_GOAL ? 'match' : n === 0 ? 'zero' : 'behind';
-                    return `<td class="dash-merge" rowspan="${sci.length}">${tot}</td>`
+                    const cls = isCritical(n) ? 'critical'
+                      : n >= tot || n >= DASH_GOAL ? 'match' : 'behind';
+                    // Same colouring as any other "ours" cell — a merged cell that stayed
+                    // plain read as though it were not counted.
+                    const ourCls = isCritical(tot) ? 'critical'
+                      : tot >= DASH_GOAL ? 'goal-met' : tot > 0 ? 'goal-partial' : 'goal-missing';
+                    return `<td class="dash-cell dash-merge ${ourCls}" rowspan="${sci.length}"
+                             title="${esc(`${sci.join(', ')} combined — ${tot} on this dashboard`)}">${tot}</td>`
                       + `<td class="dash-cms dash-merge ${cls}" rowspan="${sci.length}"
                            title="${esc(`The CMS files all science here under one "Science" sub-topic: ${n} against ${tot} on this dashboard`)}">${n}</td>`;
                   };
