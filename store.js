@@ -9,7 +9,7 @@
    snapshot of what the server holds and diff against it. No editor code has to
    announce what it touched, so nothing is missed by forgetting to instrument a path. */
 
-const STORE_BUILD = '202608272242';
+const STORE_BUILD = '202608272252';
 
 const SB = {
   client: null,
@@ -269,5 +269,34 @@ function sbSubscribe(state, onChange) {
       SB.snapKv.set(kvKey(r.ns, r.key), v);
       sbNotify('kv', r.ns);
     })
-    .subscribe();
+    .on('presence', { event: 'sync' }, () => {
+      if (typeof SB.onPresence === 'function') SB.onPresence();
+    })
+    .subscribe(status => {
+      if (status === 'SUBSCRIBED' && SB.user) {
+        SB.channel.track({
+          setId: SB.viewingSetId || null,
+          email: SB.user.email,
+        });
+      }
+    });
+}
+
+function sbTrackView(setId) {
+  SB.viewingSetId = setId || null;
+  if (!SB.channel || !SB.user) return;
+  SB.channel.track({ setId: SB.viewingSetId, email: SB.user.email });
+}
+
+function sbViewers(setId) {
+  if (!SB.channel || !setId) return [];
+  const me = (SB.user && SB.user.email) || '';
+  const seen = new Set();
+  const st = SB.channel.presenceState ? SB.channel.presenceState() : {};
+  Object.keys(st).forEach(k => {
+    (st[k] || []).forEach(p => {
+      if (p && p.setId === setId && p.email && p.email !== me) seen.add(p.email);
+    });
+  });
+  return [...seen];
 }

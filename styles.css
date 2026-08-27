@@ -1291,6 +1291,14 @@ textarea:focus:not(:focus-visible) { outline: none; }
   font-size: 12px; color: var(--ink-faint);
   margin: 0 0 10px;
 }
+.input-list-panel .byline { margin: 2px 0 0; font-size: 11px; }
+.presence-note {
+  font-size: 12px; font-weight: 600; color: var(--accent-ink);
+  background: var(--accent-soft);
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin: 0 0 10px;
+}
 
 .kb-hint {
   display: flex; flex-wrap: wrap; align-items: center; gap: 8px;

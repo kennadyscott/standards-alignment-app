@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608272242';   // replaced with the deploy stamp
+const APP_BUILD = '202608272252';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -834,6 +834,7 @@ async function loadPersisted() {
       lastSyncAt = new Date();
       syncTrouble = false;
       sbSubscribe(state, deferredRerender);
+      SB.onPresence = updatePresenceUI;
     } catch (e) {
       syncTrouble = true;
       syncError = String((e && e.message) || e);
@@ -1394,6 +1395,19 @@ function bylineHtml(by, at, verb) {
   const text = who && when ? `${v} by ${who} · ${when}` : who ? `${v} by ${who}` : when;
   return `<div class="byline">${esc(text)}</div>`;
 }
+function presenceHtml(setId) {
+  const emails = (typeof sbViewers === 'function' && setId) ? sbViewers(setId) : [];
+  if (!emails.length) return '';
+  const names = emails.map(actorLabel).join(', ');
+  const verb = emails.length === 1 ? 'is viewing this set' : 'are viewing this set';
+  return `<div class="presence-note" id="setPresence">${esc(names)} ${verb}</div>`;
+}
+function updatePresenceUI() {
+  const host = document.getElementById('setPresenceHost');
+  if (!host) return;
+  const s = currentSet();
+  host.innerHTML = presenceHtml(s && s.id);
+}
 
 const VIEWS = ['explorer', 'review', 'passages', 'input', 'dash', 'bots'];
 function hashFromUi() {
@@ -1513,6 +1527,9 @@ function showView(view, { push } = {}) {
   applyViewChrome();
   renderOpenView();
   syncHash(push);
+  if (typeof sbTrackView === 'function') {
+    sbTrackView(state.ui.view === 'passages' ? state.ui.currentSetId : null);
+  }
 }
 function renderOpenView() {
   renderBadge();
@@ -3065,6 +3082,8 @@ function setListItemEl(s) {
       </div>
       <div class="std-desc">${s.gaGrade ? `G${esc(s.gaGrade)} · ` : ''}${esc(s.passageId ? 'ID ' + s.passageId : 'No ID')} · ${s.passages.length}p · ${tags} tagged</div>
     </div>`);
+  const who = actorLabel(s.updatedBy), when = timeAgo(s.updatedAt);
+  if (who || when) item.title = who && when ? `Last saved by ${who} · ${when}` : (who ? `Last saved by ${who}` : when);
   item.addEventListener('click', e => {
     if (e.target.closest('[data-del-set]')) {
       if (confirm(`Delete "${s.title || 'Untitled set'}"? This cannot be undone.`)) {
@@ -3193,6 +3212,7 @@ function renderSetEditor() {
         ${statusPill(setStatusKind(s), s.passageId || null)}
       </div>
       ${bylineHtml(s.updatedBy, s.updatedAt)}
+      <div id="setPresenceHost">${presenceHtml(s.id)}</div>
       <div class="ps-meta-row">
         <div class="ps-field" style="flex:2"><label>Title</label>
           <input type="text" class="ps-input" id="psTitle" value="${esc(s.title)}" placeholder="e.g., The Wright Brothers Take Flight"></div>
@@ -3571,6 +3591,7 @@ function renderPassages() {
   renderSetList();
   renderSetEditor();
   renderSetSide();
+  if (typeof sbTrackView === 'function') sbTrackView(state.ui.currentSetId);
 }
 
 /* ---------- passage input ----------
@@ -3683,6 +3704,7 @@ function inputListItem(row, selected) {
         <span class="std-code">${isDraft(s) ? '<span class="draft-tag">DRAFT</span> ' : ''}${esc(s.title || 'Untitled set')}</span>
       </div>
       <div class="std-desc">${s.gaGrade ? `G${esc(s.gaGrade)} · ` : ''}${idPart}</div>
+      ${bylineHtml(s.updatedBy, s.updatedAt)}
       <div class="concept-meta" style="margin-top:4px">${catChip}</div>
     </div>`;
 }
@@ -4626,6 +4648,8 @@ function renderInputDetail(row, st, grade) {
   box.innerHTML = `
     <div class="detail-head ${category === 'cms' ? 'decided-approved' : ''}">
       <div class="concept-title" style="font-size:18px">${isDraft(s) ? '<span class="draft-tag">DRAFT</span> ' : ''}${esc(s.title || 'Untitled set')}</div>
+      ${bylineHtml(s.updatedBy, s.updatedAt)}
+      ${presenceHtml(s.id)}
       <div class="concept-meta" style="margin-top:6px">
         ${s.passageId ? `<span class="chip">ID ${esc(s.passageId)}</span>` : '<span class="chip chip-warn">No passage ID</span>'}
         ${stId ? `<span class="chip chip-concept">${esc(st)} ID ${esc(stId)}</span>` : ''}
