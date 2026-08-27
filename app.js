@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608271243';   // replaced with the deploy stamp
+const APP_BUILD = '202608271250';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1130,6 +1130,12 @@ function autoRejectReason(l) {
 function autoApproveReason(l) {
   if (state.decisions[l.id]) return null;        // her own call always wins
   if (l.confidence !== 'strong') return null;
+  // Social studies is excluded, on the evidence of Kennady's own 900 decisions on links
+  // this rule would have caught: science 97% and ELA 88% agreement, social studies 140
+  // approved against 140 rejected -- a coin flip. It is where states diverge most;
+  // Georgia teaches the three branches in grade 3 and Ohio in grade 4, and a drafter
+  // calls both "strong" at "the same grade" for different content. Those stay reviewed.
+  if (l.subject === 'social_studies') return null;
   const oh = state.byKey.get(anchorKeyOf(l));
   const other = state.byKey.get(linkedKeyOf(l));
   if (!oh || !other) return null;
