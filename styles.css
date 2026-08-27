@@ -1007,8 +1007,38 @@ body {
 
 /* Morning Board: where each Grokbot starts today. A list, not a chip cloud — the
    earlier version put 40+ pills on one card and nobody could see where to begin. */
+.bots-split { flex: 1; display: flex; min-height: 0; }
 .bots-wrap { flex: 1; overflow-y: auto; padding: 20px 24px 40px; display: flex;
-  flex-direction: column; gap: 14px; max-width: 780px; width: 100%; }
+  flex-direction: column; gap: 14px; }
+.bots-wrap > * { max-width: 780px; width: 100%; }
+
+/* Daily completion: one square per bot per day. Whether a bot clears its work every day
+   or never does is the thing worth seeing — that is what says a job needs splitting. */
+.bot-cal { width: 360px; flex: none; overflow-y: auto; background: var(--panel);
+  border-left: 1px solid var(--line); padding: 20px 18px; }
+.cal-head { margin-bottom: 12px; }
+.cal-months { display: grid; grid-template-columns: 64px 1fr 42px; margin-bottom: 2px; }
+.cal-months .cal-month { display: none; }
+.cal-row { display: grid; grid-template-columns: 64px 1fr 42px; align-items: center;
+  gap: 8px; padding: 4px 0; }
+.cal-name { font-size: 12px; font-weight: 600; color: var(--ink); }
+.cal-cells { display: grid; grid-template-columns: repeat(28, 1fr); gap: 2px; }
+.cal-cell { display: block; width: 100%; aspect-ratio: 1; border-radius: 2px;
+  background: var(--line); }
+.cal-cell.done { background: var(--green); }
+.cal-cell.miss { background: var(--amber-soft); }
+.cal-cell.clear { background: #cfe9db; }
+.cal-cell.weekend { background: var(--bg); }
+.cal-cell.today { outline: 1.5px solid var(--accent); outline-offset: 1px; }
+.cal-score { font-size: 11.5px; text-align: right; font-variant-numeric: tabular-nums;
+  color: var(--ink); font-weight: 700; }
+.cal-score span { color: var(--ink-faint); font-weight: 400; }
+.cal-key { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px;
+  font-size: 11px; color: var(--ink-soft); }
+.cal-key span { display: inline-flex; align-items: center; gap: 4px; }
+.cal-key i { width: 10px; height: 10px; border-radius: 2px; }
+.cal-note { margin-top: 10px; line-height: 1.5; }
+@media (max-width: 1180px) { .bot-cal { display: none; } }
 .bot-card { background: var(--panel); border: 1px solid var(--line);
   border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow); }
 .bot-card.is-done { opacity: .6; }
@@ -1048,3 +1078,7 @@ body {
 .stale-bar { background: var(--amber-soft); color: var(--amber); border-bottom: 1px solid var(--amber);
   padding: 9px 16px; font-size: 13px; text-align: center; }
 .stale-bar b { color: var(--ink); }
+
+/* A side the CMS lumps: one cell spanning the science rows, number centred in it. */
+.dash-merge { vertical-align: middle; text-align: right; font-weight: 600;
+  font-variant-numeric: tabular-nums; border-left: 1px solid var(--line); }

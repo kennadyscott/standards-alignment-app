@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608271429';   // replaced with the deploy stamp
+const APP_BUILD = '202608271433';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4873,16 +4873,28 @@ function cmsRowsFor(st, grade) {
     });
   });
   if (!byTopic.size) return null;
-  /* Rows are left exactly as the CMS names them, including a plain "Science" sitting
-     alongside Earth and Space / Life / Physical. Georgia tags its Informational sets
-     specifically and its Opinion sets generically, so grades 3-5 carry both: the
-     specific rows keep their own numbers and the generic count lumps into the Science
-     row rather than being spread across rows it does not belong to. Kennady's call --
-     collapsing them all into one row read simply but lost the breakdown of her own sets. */
+  /* Where the CMS names science specifically on one side and generically on the other,
+     keep the specific rows and drop the bare "Science" row: its number is rendered as a
+     single cell MERGED down those rows for the side that lumps. Kennady's call -- keep
+     the sub-topics separate on the left, lump only the column that the CMS lumps.
+     Science rows are pulled together so the merged cell has adjacent rows to span. */
+  byTopic.forEach(subs => {
+    const sci = [...subs].filter(isScienceName);
+    if (sci.length > 1 && subs.has('Science')) subs.delete('Science');
+  });
   const order = t => { const i = CMS_TOPIC_ORDER.indexOf(t); return i < 0 ? 99 : i; };
   return [...byTopic.entries()]
     .sort((a, b) => order(a[0]) - order(b[0]))
-    .map(([topic, subs]) => [topic, [...subs].sort()]);
+    .map(([topic, subs]) => [topic, clusterScience([...subs].sort())]);
+}
+// Alphabetical, but with the science rows moved together at the position of the first
+// of them — a merged cell can only span rows that sit next to each other.
+function clusterScience(list) {
+  const sci = list.filter(isScienceName);
+  if (sci.length < 2) return list;
+  const at = list.findIndex(isScienceName);
+  const rest = list.filter(d => !isScienceName(d));
+  return [...rest.slice(0, at), ...sci, ...rest.slice(at)];
 }
 /* Our own sets are classified in the app's vocabulary; fold that onto the CMS row names
    so the "ours" half of each pair lands beside the right CMS number. */
@@ -5102,6 +5114,72 @@ function renderBots() {
       ${b.key === 'josh' ? joshPasteHtml() : ''}
     </div>`;
   }).join('');
+  renderBotCalendar(work);
+}
+
+/* A record of who finished, day by day. The point is not the ticks themselves: it is
+   seeing at a glance that one bot clears its work every day while another never does,
+   which is the signal that a job needs splitting rather than chasing. */
+const CAL_DAYS = 28;
+function calendarDays() {
+  const out = [];
+  const d = new Date();
+  d.setHours(12, 0, 0, 0);                       // midday, so DST cannot shift the date
+  for (let i = CAL_DAYS - 1; i >= 0; i--) {
+    const x = new Date(d);
+    x.setDate(d.getDate() - i);
+    out.push({
+      key: x.toISOString().slice(0, 10),
+      dom: x.getDate(),
+      weekend: x.getDay() === 0 || x.getDay() === 6,
+      month: x.toLocaleDateString(undefined, { month: 'short' }),
+      isToday: i === 0,
+    });
+  }
+  return out;
+}
+function renderBotCalendar(work) {
+  const box = document.getElementById('botCal');
+  if (!box) return;
+  const days = calendarDays();
+  const firstOfMonth = {};
+  days.forEach(d => { if (!firstOfMonth[d.month]) firstOfMonth[d.month] = d.key; });
+
+  const rows = BOTS.map(b => {
+    const cells = days.map(d => {
+      const done = state.botDone[`${b.key}|${d.key}`];
+      // A weekday with work outstanding and no tick is the case worth seeing.
+      const hadWork = d.isToday ? (work && work[b.key] && work[b.key].total > 0) : null;
+      const cls = done ? 'done' : d.weekend ? 'weekend' : hadWork === false ? 'clear' : 'miss';
+      const who = done ? String(done).split('|')[0] : '';
+      return `<span class="cal-cell ${cls} ${d.isToday ? 'today' : ''}"
+        title="${esc(`${b.name} · ${d.key}${done ? ' · done by ' + who : ' · not marked done'}`)}"></span>`;
+    }).join('');
+    const hit = days.filter(d => state.botDone[`${b.key}|${d.key}`]).length;
+    const weekdays = days.filter(d => !d.weekend).length;
+    return `<div class="cal-row">
+      <div class="cal-name">${esc(b.name)}</div>
+      <div class="cal-cells">${cells}</div>
+      <div class="cal-score" title="Days marked done, of ${weekdays} weekdays">${hit}<span>/${weekdays}</span></div>
+    </div>`;
+  }).join('');
+
+  box.innerHTML = `
+    <div class="cal-head">
+      <div class="side-title">Daily completion</div>
+      <div class="ps-hint">Last ${CAL_DAYS} days. Each square is one bot on one day.</div>
+    </div>
+    <div class="cal-months">${days.map(d =>
+      `<span class="cal-month">${firstOfMonth[d.month] === d.key ? esc(d.month) : ''}</span>`).join('')}</div>
+    ${rows}
+    <div class="cal-key">
+      <span><i class="cal-cell done"></i> done</span>
+      <span><i class="cal-cell miss"></i> not marked</span>
+      <span><i class="cal-cell clear"></i> nothing waiting</span>
+      <span><i class="cal-cell weekend"></i> weekend</span>
+    </div>
+    <div class="ps-hint cal-note">History starts the first day a bot was ticked off, so
+      this fills in from here rather than looking back.</div>`;
 }
 
 /* A Grokbot reads text, not chips. This is the same work as a brief it can be handed
@@ -5269,17 +5347,37 @@ function renderDash() {
           <tbody>
             ${groups.map(([label, doms]) => `
               <tr class="dash-group-row"><td colspan="5">${esc(label)}</td></tr>
-              ${doms.map(d => {
-                const t = tally.get(d);
-                const cx = { state: dst, grade: g, subtopic: d };
-                cmsCell.rows = expect;
-                return `<tr><td>${esc(d)}</td>`
-                  + dashCell(t.informative, { ...cx, itemSetType: 'informative' })
-                  + cmsCell(cms.informative, d, t.informative)
-                  + dashCell(t.opinion, { ...cx, itemSetType: 'opinion' })
-                  + cmsCell(cms.opinion, d, t.opinion)
-                  + `</tr>`;
-              }).join('')}`).join('')}
+              ${(() => {
+                // A side that the CMS lumps gets ONE merged cell spanning the science
+                // rows, instead of a number spread across rows it does not belong to.
+                const sci = doms.filter(isScienceName);
+                const lumps = k => sci.length > 1 && cms[k] && cms[k].counts
+                  && cms[k].counts['Science'] > 0
+                  && !sci.some(d => cms[k].counts[d] !== undefined);
+                const lumped = { informative: lumps('informative'), opinion: lumps('opinion') };
+                const sciTotal = k => sci.reduce((a, d) => a + (tally.get(d) || {})[k === 'informative' ? 'informative' : 'opinion'], 0);
+                return doms.map(d => {
+                  const t = tally.get(d);
+                  const cx = { state: dst, grade: g, subtopic: d };
+                  cmsCell.rows = expect;
+                  const first = isScienceName(d) && sci[0] === d;
+                  const pair = k => {
+                    const our = k === 'informative' ? t.informative : t.opinion;
+                    if (!lumped[k] || !isScienceName(d)) {
+                      return dashCell(our, { ...cx, itemSetType: k })
+                           + cmsCell(cms[k], d, our);
+                    }
+                    if (!first) return '';                       // covered by the merge above
+                    const n = cms[k].counts['Science'] || 0;
+                    const tot = sciTotal(k);
+                    const cls = n >= tot || n >= DASH_GOAL ? 'match' : n === 0 ? 'zero' : 'behind';
+                    return `<td class="dash-merge" rowspan="${sci.length}">${tot}</td>`
+                      + `<td class="dash-cms dash-merge ${cls}" rowspan="${sci.length}"
+                           title="${esc(`The CMS files all science here under one "Science" sub-topic: ${n} against ${tot} on this dashboard`)}">${n}</td>`;
+                  };
+                  return `<tr><td>${esc(d)}</td>${pair('informative')}${pair('opinion')}</tr>`;
+                }).join('');
+              })()}`).join('')}
           </tbody>
           <tfoot><tr><td>Goal: ${DASH_GOAL} per type</td>
             <td>${expect.reduce((a, d) => a + tally.get(d).informative, 0)}</td>
