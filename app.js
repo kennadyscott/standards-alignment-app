@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608271318';   // replaced with the deploy stamp
+const APP_BUILD = '202608271325';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4826,10 +4826,21 @@ function cmsCell(bucket, subdomain, ours, footerDomains) {
     ? footerDomains.reduce((a, d) => a + (cmsLookup(bucket, d) || 0), 0)
     : cmsLookup(bucket, subdomain);
   const short = bucket.complete === false;
-  const cls = footerDomains ? '' : (ours == null ? '' : n >= ours ? 'level' : n ? 'behind' : 'behind zero');
-  const tip = short
+  // Green means the CMS agrees with the dashboard exactly. Anything else is a gap worth
+  // seeing: fewer means work not entered yet, MORE means the CMS holds sets this
+  // dashboard does not know about, which is the more surprising of the two.
+  const cls = ours == null ? ''
+    : n === ours ? 'match'
+    : n === 0 ? 'zero'
+    : n < ours ? 'behind'
+    : 'over';
+  const gap = ours == null ? '' :
+    n === ours ? ' — matches the dashboard'
+    : n < ours ? ` — ${ours - n} not in the CMS yet`
+    : ` — ${n - ours} more in the CMS than this dashboard has`;
+  const tip = (short
     ? `CMS shows ${bucket.total} sets at this grade; ${bucket.captured} were readable (the CMS list pages at 50).`
-    : `${bucket.total} sets in the CMS at this grade`;
+    : `${bucket.total} sets in the CMS at this grade`) + gap;
   return `<td class="dash-cms ${cls}" title="${esc(tip)}">${n}${short ? '<span class="cms-short" title="partial capture">*</span>' : ''}</td>`;
 }
 
