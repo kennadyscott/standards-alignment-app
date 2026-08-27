@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608262143';   // replaced with the deploy stamp
+const APP_BUILD = '202608271235';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1073,13 +1073,38 @@ function indexLinks() {
 /* ---------- alignment ----------
    Only the reviewer's approvals count; every link starts pending.
 
-   Two standing rules cull drafts that aren't worth a look, so the queue is candidates the
-   reviewer would plausibly say yes to rather than a pile to say no to:
+   Three standing rules cull drafts that aren't worth a look, so the queue is candidates
+   the reviewer would plausibly say yes to rather than a pile to say no to:
      1. `partial` is the lowest confidence the drafters emit — never show it.
      2. A cross-grade match has to be `strong`. Same-grade moderates are worth a look;
         a moderate guess that ALSO jumps a grade is not.
+     3. A standard that names its own state is about that state and aligns nowhere.
    These are auto-rejections, not deletions: they surface under the Rejected filter with
    the reason on the card, and an explicit decision always overrides them. */
+/* A standard that names its own state is about that state, and cannot align anywhere
+   else: "significant events in Ohio", "the location of economic activities in Texas",
+   "contributions of Alabamians". Kennady had been rejecting these by hand -- the rule
+   agrees with 130 of her existing rejections.
+
+   It matches the standard's OWN text, never its parent's. That distinction matters:
+   Georgia's SS8H3d is "the weaknesses of the Articles of Confederation", which is purely
+   national and correctly approved, and only its PARENT standard mentions Georgia.
+   Including parent text would have auto-rejected it and five others like it. */
+const STATE_NAME_RX = {
+  OH: /\bOhio(?:ans?)?\b/i,
+  GA: /\bGeorgia(?:ns?)?\b/i,
+  TX: /\bTexas\b|\bTexans?\b/i,
+  FL: /\bFlorida(?:ns?|ians?)?\b/i,
+  NC: /\bNorth Carolina\b|\bNorth Carolinians?\b/i,
+  SC: /\bSouth Carolina\b|\bSouth Carolinians?\b/i,
+  AL: /\bAlabama(?:ns?|ians?)?\b/i,
+};
+function namesOwnState(std) {
+  if (!std) return false;
+  const rx = STATE_NAME_RX[std.state];
+  return !!rx && rx.test(std.description || '');
+}
+
 function autoRejectReason(l) {
   if (state.decisions[l.id]) return null;      // the reviewer's own call always wins
   if (l.confidence === 'partial') return 'partial confidence';
@@ -1089,6 +1114,9 @@ function autoRejectReason(l) {
     if (l.subject === 'ela') return 'ELAR can’t align across grades';
     if (l.confidence !== 'strong') return `cross-grade but only ${l.confidence || 'unrated'} confidence`;
   }
+  // State-specific content cannot cross state lines.
+  if (namesOwnState(oh)) return 'the Ohio standard is about Ohio specifically';
+  if (namesOwnState(other)) return `the ${STATE_NAMES[other.state] || other.state} standard is about ${STATE_NAMES[other.state] || other.state} specifically`;
   return null;
 }
 function statusOf(l) {
