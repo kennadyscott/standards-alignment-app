@@ -355,7 +355,7 @@ body {
 .align-mini.noalign { border-left-color: var(--red); background: var(--red-soft); }
 
 /* ---------- Review view ---------- */
-#reviewView, #inputView, #dashView { flex-direction: column; }
+#reviewView, #inputView, #dashView, #botsView { flex-direction: column; }
 .in-lbl {
   font-size: 11px; font-weight: 700; color: var(--ink-faint);
   text-transform: uppercase; letter-spacing: .04em; margin-right: 2px;
@@ -997,25 +997,35 @@ body {
 .dash-cms.none { color: var(--ink-faint); font-weight: 400; }
 .cms-short { color: var(--amber); font-weight: 700; }
 
-/* Morning Board: where each Grokbot starts today. */
-.bots-wrap { flex: 1; overflow-y: auto; padding: 20px 24px; display: flex;
-  flex-direction: column; gap: 14px; max-width: 900px; }
+/* Morning Board: where each Grokbot starts today. A list, not a chip cloud — the
+   earlier version put 40+ pills on one card and nobody could see where to begin. */
+.bots-wrap { flex: 1; overflow-y: auto; padding: 20px 24px 40px; display: flex;
+  flex-direction: column; gap: 14px; max-width: 780px; width: 100%; }
 .bot-card { background: var(--panel); border: 1px solid var(--line);
   border-radius: var(--radius); padding: 16px 18px; box-shadow: var(--shadow); }
-.bot-card.is-done { opacity: .62; }
-.bot-card.is-clear { border-color: var(--green-soft); }
+.bot-card.is-done { opacity: .6; }
+.bot-card.is-clear { border-color: #cfe9db; }
 .bot-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.bot-card-id { min-width: 0; }
 .bot-job { display: block; margin-top: 6px; font-size: 12.5px; color: var(--ink-soft); line-height: 1.45; }
-.bot-done-wrap { flex: none; display: flex; align-items: center; gap: 6px;
-  font-size: 12px; color: var(--ink-soft); cursor: pointer; white-space: nowrap; }
-.bot-total { margin: 12px 0 8px; font-size: 13px; font-weight: 600; color: var(--ink); }
-.bot-clear { margin-top: 12px; font-size: 13px; color: var(--green); }
-.bot-rows { display: flex; flex-wrap: wrap; gap: 6px; }
-.bot-row { display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
-  background: var(--accent-soft); border: 1px solid var(--line); border-radius: 999px;
-  padding: 4px 10px; font-size: 12px; color: var(--accent-ink); font-family: inherit; }
-.bot-row:hover { border-color: var(--accent); }
-.bot-row-n { font-weight: 700; font-variant-numeric: tabular-nums; }
+.bot-card-actions { flex: none; display: flex; align-items: center; gap: 10px; }
+.bot-done-wrap { display: flex; align-items: center; gap: 6px; font-size: 12px;
+  color: var(--ink-soft); cursor: pointer; white-space: nowrap; }
+.bot-total { margin: 12px 0 8px; font-size: 12.5px; color: var(--ink-soft); }
+.bot-total b { font-size: 15px; color: var(--ink); }
+.bot-clear { margin-top: 10px; font-size: 13px; color: var(--green); }
+.bot-list { display: flex; flex-direction: column; }
+.bot-line { display: grid; grid-template-columns: 46px 1fr auto; align-items: center; gap: 10px;
+  width: 100%; text-align: left; cursor: pointer; font-family: inherit; font-size: 13px;
+  background: none; border: 0; border-top: 1px solid var(--line); padding: 8px 4px; color: var(--ink); }
+.bot-line:first-child { border-top: 0; }
+.bot-line:hover { background: var(--accent-soft); }
+.bot-line-n { font-weight: 700; font-variant-numeric: tabular-nums; text-align: right;
+  color: var(--accent-ink); }
+.bot-line-go { font-size: 11.5px; color: var(--ink-faint); }
+.bot-line:hover .bot-line-go { color: var(--accent); }
+.bot-more { margin-top: 4px; }
+.bot-more summary { cursor: pointer; font-size: 12px; color: var(--accent-ink); padding: 4px 0; }
 .josh-box { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 12px; }
 .josh-box summary { cursor: pointer; font-size: 12.5px; font-weight: 600; color: var(--accent-ink); }
 .josh-box .ps-hint { margin: 8px 0; line-height: 1.5; }

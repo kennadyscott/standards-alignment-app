@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608271343';   // replaced with the deploy stamp
+const APP_BUILD = '202608271347';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4901,6 +4901,15 @@ const BOTS = [
   { key: 'josh', name: 'Josh', job: 'Builds count list for updated CMS numbers in the dashboard',
     kind: 'cms', unit: 'grade' },
 ];
+/* Can this state build for this row at this grade? Literary genres are universal, so
+   always yes; a content row needs standards behind it or there is nothing to write to. */
+function stateCanFill(st, grade, dom) {
+  const subj = SUBDOMAIN_SUBJECT[dom];
+  if (!subj) return true;                        // literary / literary non-fiction genre
+  return state.standards.some(x =>
+    x.state === st && x.subject === subj && gradeMatches(x.grade, grade) &&
+    canonSubdomain(x.strand, x.subject, st, grade) === dom);
+}
 const today = () => new Date().toISOString().slice(0, 10);
 const botDoneKey = k => `${k}|${today()}`;
 
@@ -4936,9 +4945,14 @@ function botWork() {
         const t = tal.get(dashSubdomain(s, g, st));
         if (t) t[s.itemSetType === 'informative' ? 'informative' : 'opinion']++;
       });
+      // Only rows this state can actually fill. Texas's CMS taxonomy carries Health,
+      // PE, Fine Arts and Technology Applications rows with no standards loaded behind
+      // them, and counting those put Texas at 208 short per grade — a number nobody can
+      // act on and nobody intends to fill.
       let gap = 0;
       doms.forEach(d => {
         const t = tal.get(d);
+        if (!t.informative && !t.opinion && !stateCanFill(st, g, d)) return;
         gap += Math.max(0, DASH_GOAL - t.informative) + Math.max(0, DASH_GOAL - t.opinion);
       });
       if (gap) { out.herman.rows.push({ state: st, grade: g, n: gap }); out.herman.total += gap; }
@@ -4962,37 +4976,68 @@ function renderBots() {
   const badge = document.getElementById('botsBadge');
   if (badge) badge.textContent = String(outstanding);
   const prog = document.getElementById('botsProgress');
-  if (prog) prog.textContent = `${outstanding} of ${BOTS.length} still have work today · ${today()}`;
+  if (prog) prog.textContent = `${outstanding} of ${BOTS.length} still have work · ${today()}`;
 
+  const TOP = 6;   // enough to start on; the rest is one click away
   wrap.innerHTML = BOTS.map(b => {
     const w = work[b.key];
     const done = state.botDone[botDoneKey(b.key)];
     const rows = w.rows.slice().sort((x, y) => y.n - x.n);
-    const label = b.unit === 'gap' ? 'sets short of goal'
-      : b.unit === 'grade' ? 'grade/type still to count'
-      : 'waiting';
+    const unit = b.unit === 'gap' ? 'sets to build'
+      : b.unit === 'grade' ? 'grade/type to count'
+      : 'sets waiting';
+    const line = r => `${STATE_NAMES[r.state] || r.state} · Grade ${r.grade}`
+      + (r.type ? ` · ${r.type === 'informative' ? 'Informational' : 'Opinion'}` : '');
+    const listRow = r => `<button class="bot-line" data-botgo="${b.key}|${r.state}|${r.grade}${r.type ? '|' + r.type : ''}">
+        <span class="bot-line-n">${r.why ? '—' : r.n}</span>
+        <span class="bot-line-where">${esc(line(r))}</span>
+        <span class="bot-line-go">open →</span>
+      </button>`;
     return `<div class="bot-card ${done ? 'is-done' : w.total ? '' : 'is-clear'}">
       <div class="bot-card-head">
-        <div>
+        <div class="bot-card-id">
           <span class="bot-badge">Grokbot ${esc(b.name)}</span>
           <span class="bot-job">${esc(b.job)}</span>
         </div>
-        <label class="bot-done-wrap" title="Tick when today's pass is finished">
-          <input type="checkbox" data-botdone="${b.key}" ${done ? 'checked' : ''}>
-          <span>${done ? `Done — ${esc(String(done).split('|')[0])}` : 'Done today'}</span>
-        </label>
+        <div class="bot-card-actions">
+          ${w.total ? `<button class="act-btn" data-botcopy="${b.key}" title="Plain-text brief to paste into the bot">Copy brief</button>` : ''}
+          <label class="bot-done-wrap" title="Tick when today's pass is finished">
+            <input type="checkbox" data-botdone="${b.key}" ${done ? 'checked' : ''}>
+            <span>${done ? 'Done' : 'Done today'}</span>
+          </label>
+        </div>
       </div>
-      ${w.total
-        ? `<div class="bot-total">${w.total} ${esc(label)}</div>
-           <div class="bot-rows">${rows.map(r => `
-             <button class="bot-row" data-botgo="${b.key}|${r.state}|${r.grade}${r.type ? '|' + r.type : ''}">
-               <span class="bot-row-where">${esc(STATE_NAMES[r.state] || r.state)} · G${esc(r.grade)}${r.type ? ` · ${r.type === 'informative' ? 'Informational' : 'Opinion'}` : ''}</span>
-               <span class="bot-row-n">${r.why ? esc(r.why) : r.n}</span>
-             </button>`).join('')}</div>`
-        : `<div class="bot-clear">Nothing waiting ✓</div>`}
+      ${!w.total ? `<div class="bot-clear">Nothing waiting ✓</div>` : `
+        <div class="bot-total"><b>${w.total}</b> ${esc(unit)} across ${w.rows.length} place${w.rows.length === 1 ? '' : 's'}${b.key === 'herman' ? ' · only rows this state has standards for' : ''}</div>
+        <div class="bot-list">${rows.slice(0, TOP).map(listRow).join('')}</div>
+        ${rows.length > TOP ? `<details class="bot-more"><summary>${rows.length - TOP} more</summary>
+          <div class="bot-list">${rows.slice(TOP).map(listRow).join('')}</div></details>` : ''}`}
       ${b.key === 'josh' ? joshPasteHtml() : ''}
     </div>`;
   }).join('');
+}
+
+/* A Grokbot reads text, not chips. This is the same work as a brief it can be handed
+   directly: what the job is, where to go, and how much is there. */
+function botBrief(key) {
+  const b = BOTS.find(x => x.key === key);
+  const w = botWork()[key];
+  const rows = w.rows.slice().sort((x, y) => y.n - x.n);
+  const unit = b.unit === 'gap' ? 'sets to build' : b.unit === 'grade' ? 'to count' : 'sets waiting';
+  const where = b.stage ? `State Lists > <state> > Grade <n> > ${inputStages('GA').find(s => s.key === b.stage).label}`
+    : b.kind === 'dash' ? 'Dashboard > <state> — click a cell under its goal to generate'
+    : 'CMS > ECR Item Sets > <state> Informational/Opinion > grade tab, then paste into Morning Board';
+  return [
+    `GROKBOT ${b.name.toUpperCase()} — ${today()}`,
+    b.job,
+    ``,
+    `Where: ${where}`,
+    `Total: ${w.total} ${unit}`,
+    ``,
+    ...rows.map(r => `- ${STATE_NAMES[r.state] || r.state}, Grade ${r.grade}`
+      + (r.type ? `, ${r.type === 'informative' ? 'Informational' : 'Opinion'}` : '')
+      + (r.why ? ` — ${r.why}` : ` — ${r.n}`)),
+  ].join('\n');
 }
 
 /* Josh's numbers. He reads the CMS and pastes the counts here rather than anyone editing
@@ -5177,6 +5222,14 @@ function renderDash() {
     });
     bots.addEventListener('click', e => {
       if (e.target.closest('#joshSave')) { joshSave(); return; }
+      const cp = e.target.closest('[data-botcopy]');
+      if (cp) {
+        const txt = botBrief(cp.dataset.botcopy);
+        navigator.clipboard.writeText(txt)
+          .then(() => toast('✓ Brief copied — paste it to the bot'))
+          .catch(() => toast('⚠ Could not reach the clipboard'));
+        return;
+      }
       const go = e.target.closest('[data-botgo]');
       if (!go) return;
       const [bot, st, grade] = go.dataset.botgo.split('|');
