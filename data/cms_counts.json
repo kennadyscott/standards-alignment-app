@@ -1,0 +1,25 @@
+{
+  "_note": "Passage-set counts read from the ECR CMS (admin.cleark12.com). NOT live: the dashboard runs in browsers with no access to the Azure-protected CMS, so these are a dated snapshot. Re-read with the CMS open in Claude's Chrome tab.",
+  "_source": "CMS > CR Writing > ECR Item Sets > <state> Informational / Opinion > per-grade tab",
+  "_capturedAt": "2026-08-27",
+  "_mapping": "CMS item set 'Informational' feeds the Informational column; 'Opinion' feeds the Opinion column. CMS SubTopic maps to the dashboard sub-domain row.",
+  "_incomplete": "A grade marked complete:false exceeded the CMS table's 50-row page limit and is short by (total - captured). Those need the API or a CSV export to be exact.",
+  "subtopicAliases": {
+    "Earth and Space Science": "Earth Science"
+  },
+  "states": {
+    "GA": {
+      "informative": {
+        "2": { "complete": true,  "total": 31, "counts": { "Social Studies": 4, "Science": 3, "True Narratives": 4, "Biographies": 4, "Short Literary Forms": 4, "Traditional Literature": 4, "Narrative Fiction": 4, "Poetry": 4 } },
+        "3": { "complete": true,  "total": 49, "counts": { "Physical Science": 10, "Government": 3, "History": 4, "Life Science": 2, "Geography": 4, "Economics": 1, "Earth and Space Science": 1, "True Narratives": 4, "Biographies": 4, "Short Literary Forms": 4, "Traditional Literature": 4, "Narrative Fiction": 4, "Poetry": 4 } },
+        "4": { "complete": false, "total": 53, "captured": 50, "counts": { "History": 5, "Government": 3, "Earth and Space Science": 6, "Physical Science": 2, "Life Science": 4, "Geography": 3, "Economics": 3, "True Narratives": 4, "Biographies": 4, "Short Literary Forms": 4, "Traditional Literature": 4, "Narrative Fiction": 4, "Poetry": 4 } }
+      },
+      "opinion": {
+        "2": { "complete": true,  "total": 31, "counts": { "Social Studies": 4, "Science": 3, "True Narratives": 4, "Biographies": 4, "Short Literary Forms": 4, "Traditional Literature": 4, "Narrative Fiction": 4, "Poetry": 4 } },
+        "3": { "complete": true,  "total": 45, "counts": { "Science": 9, "History": 4, "Government": 2, "Economics": 3, "Geography": 4, "True Narratives": 3, "Biographies": 4, "Short Literary Forms": 4, "Traditional Literature": 4, "Narrative Fiction": 4, "Poetry": 4 } },
+        "4": { "complete": false, "total": 51, "captured": 50, "counts": { "Science": 12, "Geography": 4, "Government": 3, "History": 4, "Economics": 3, "True Narratives": 4, "Biographies": 4, "Short Literary Forms": 4, "Traditional Literature": 4, "Narrative Fiction": 4, "Poetry": 4 } },
+        "5": { "complete": true,  "total": 50, "counts": { "Science": 13, "Economics": 4, "Geography": 4, "Government": 4, "History": 4, "True Narratives": 4, "Biographies": 4, "Short Literary Forms": 4, "Traditional Literature": 2, "Narrative Fiction": 3, "Poetry": 4 } }
+      }
+    }
+  }
+}

@@ -980,3 +980,17 @@ body {
 .signin-msg.bad { color: var(--red); }
 .badge-ok { color: var(--green); border-color: var(--green); }
 .badge-warn { color: var(--amber); border-color: var(--amber); }
+
+/* Dashboard: each type splits into ours | CMS. The CMS half is tinted so the eye can
+   run down it as its own column despite sitting inside a pair. */
+.dash-split-head { text-align: center; border-bottom: 1px solid var(--line); }
+.dash-sub-head { font-size: 10.5px; font-weight: 600; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--ink-faint); text-align: right; padding-top: 2px; }
+.dash-sub-head.cms { color: var(--accent-ink); }
+.dash-cms { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600;
+  background: var(--accent-soft); }
+.dash-cms.level  { color: var(--green); }
+.dash-cms.behind { color: var(--amber); }
+.dash-cms.behind.zero { color: var(--red); }
+.dash-cms.none { color: var(--ink-faint); font-weight: 400; }
+.cms-short { color: var(--amber); font-weight: 700; }
