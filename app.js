@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608271235';   // replaced with the deploy stamp
+const APP_BUILD = '202608271243';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1119,8 +1119,28 @@ function autoRejectReason(l) {
   if (namesOwnState(other)) return `the ${STATE_NAMES[other.state] || other.state} standard is about ${STATE_NAMES[other.state] || other.state} specifically`;
   return null;
 }
+/* The mirror of the reject rules: a draft the reviewer would almost certainly approve
+   should not cost her a click. STRONG confidence AND the same grade on both sides --
+   both conditions, per Kennady. A strong match that jumps a grade still gets reviewed,
+   because grade is where cross-state alignment usually goes wrong.
+
+   Order is deliberate and load-bearing: the REJECT rules run first, so a strong,
+   same-grade link whose standard names its own state is still rejected. Auto-approval
+   never rescues something an earlier rule has already ruled out. */
+function autoApproveReason(l) {
+  if (state.decisions[l.id]) return null;        // her own call always wins
+  if (l.confidence !== 'strong') return null;
+  const oh = state.byKey.get(anchorKeyOf(l));
+  const other = state.byKey.get(linkedKeyOf(l));
+  if (!oh || !other) return null;
+  if (isCrossGrade(oh, other)) return null;
+  return 'strong confidence, same grade';
+}
 function statusOf(l) {
-  return state.decisions[l.id] || (autoRejectReason(l) ? 'rejected' : 'pending');
+  if (state.decisions[l.id]) return state.decisions[l.id];
+  if (autoRejectReason(l)) return 'rejected';    // reject rules win over auto-approval
+  if (autoApproveReason(l)) return 'approved';
+  return 'pending';
 }
 function linksFor(std) {
   return std.state === ANCHOR
@@ -1420,14 +1440,18 @@ function linkCard(l) {
     .map(x => state.byKey.get(linkedKeyOf(x))).filter(Boolean)
     .filter(x => x.state !== other.state);
   const auto = autoRejectReason(l);
+  const autoYes = auto ? null : autoApproveReason(l);
   const actions = st === 'pending'
     ? `<button class="act-btn approve" data-act="approved" data-id="${l.id}">✓ Approve</button>
        <button class="act-btn reject" data-act="rejected" data-id="${l.id}">✕ Reject</button>`
     : auto
       ? `<span class="status-chip rejected">auto-rejected · ${esc(auto)}</span>
          <button class="act-btn reset" data-act="unauto" data-id="${l.id}" title="Review it anyway">Review anyway</button>`
-      : `<span class="status-chip ${st}">${st}</span>
-         <button class="act-btn reset" data-act="pending" data-id="${l.id}">Undo</button>`;
+      : autoYes
+        ? `<span class="status-chip approved">auto-approved · ${esc(autoYes)}</span>
+           <button class="act-btn reset" data-act="unauto" data-id="${l.id}" title="Review it anyway">Review anyway</button>`
+        : `<span class="status-chip ${st}">${st}</span>
+           <button class="act-btn reset" data-act="pending" data-id="${l.id}">Undo</button>`;
   return `
     <div class="review-card ${st !== 'pending' ? 'decided-' + st : ''}">
       <div class="review-pair">
