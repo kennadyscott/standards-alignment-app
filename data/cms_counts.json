@@ -4,9 +4,7 @@
   "_capturedAt": "2026-08-27",
   "_mapping": "CMS item set 'Informational' feeds the Informational column; 'Opinion' feeds the Opinion column. CMS SubTopic maps to the dashboard sub-domain row.",
   "_incomplete": "A grade marked complete:false exceeded the CMS table's 50-row page limit and is short by (total - captured). Those need the API or a CSV export to be exact.",
-  "subtopicAliases": {
-    "Earth and Space Science": "Earth Science"
-  },
+  "subtopicAliases": {},
   "states": {
     "GA": {
       "informative": {
@@ -22,6 +20,16 @@
             "Traditional Literature": 4,
             "Biographies": 4,
             "True Narratives": 4
+          },
+          "topics": {
+            "Science": "Informational",
+            "Social Studies": "Informational",
+            "Narrative Fiction": "Literary",
+            "Poetry": "Literary",
+            "Short Literary Forms": "Literary",
+            "Traditional Literature": "Literary",
+            "Biographies": "Literary Non-Fiction",
+            "True Narratives": "Literary Non-Fiction"
           }
         },
         "3": {
@@ -41,6 +49,21 @@
             "Traditional Literature": 4,
             "Biographies": 4,
             "True Narratives": 4
+          },
+          "topics": {
+            "Earth and Space Science": "Informational",
+            "Economics": "Informational",
+            "Geography": "Informational",
+            "Government": "Informational",
+            "History": "Informational",
+            "Life Science": "Informational",
+            "Physical Science": "Informational",
+            "Narrative Fiction": "Literary",
+            "Poetry": "Literary",
+            "Short Literary Forms": "Literary",
+            "Traditional Literature": "Literary",
+            "Biographies": "Literary Non-Fiction",
+            "True Narratives": "Literary Non-Fiction"
           }
         },
         "4": {
@@ -60,6 +83,21 @@
             "Traditional Literature": 4,
             "Biographies": 4,
             "True Narratives": 4
+          },
+          "topics": {
+            "Earth and Space Science": "Informational",
+            "Economics": "Informational",
+            "Geography": "Informational",
+            "Government": "Informational",
+            "History": "Informational",
+            "Life Science": "Informational",
+            "Physical Science": "Informational",
+            "Narrative Fiction": "Literary",
+            "Poetry": "Literary",
+            "Short Literary Forms": "Literary",
+            "Traditional Literature": "Literary",
+            "Biographies": "Literary Non-Fiction",
+            "True Narratives": "Literary Non-Fiction"
           }
         },
         "5": {
@@ -79,6 +117,21 @@
             "Traditional Literature": 4,
             "Biographies": 4,
             "True Narratives": 4
+          },
+          "topics": {
+            "Earth and Space Science": "Informational",
+            "Economics": "Informational",
+            "Geography": "Informational",
+            "Government": "Informational",
+            "History": "Informational",
+            "Life Science": "Informational",
+            "Physical Science": "Informational",
+            "Narrative Fiction": "Literary",
+            "Poetry": "Literary",
+            "Short Literary Forms": "Literary",
+            "Traditional Literature": "Literary",
+            "Biographies": "Literary Non-Fiction",
+            "True Narratives": "Literary Non-Fiction"
           }
         },
         "6": {
@@ -96,6 +149,19 @@
             "Traditional Literature": 4,
             "Biographies": 4,
             "True Narratives": 4
+          },
+          "topics": {
+            "Economics": "Informational",
+            "Geography": "Informational",
+            "Government": "Informational",
+            "History": "Informational",
+            "Science": "Informational",
+            "Narrative Fiction": "Literary",
+            "Poetry": "Literary",
+            "Short Literary Forms": "Literary",
+            "Traditional Literature": "Literary",
+            "Biographies": "Literary Non-Fiction",
+            "True Narratives": "Literary Non-Fiction"
           }
         },
         "7": {
@@ -111,6 +177,17 @@
             "Poetry": 4,
             "Short Literary Forms": 4,
             "Traditional Literature": 4
+          },
+          "topics": {
+            "Economics": "Informational",
+            "Geography": "Informational",
+            "Government": "Informational",
+            "History": "Informational",
+            "Life Science": "Informational",
+            "Narrative Fiction": "Literary",
+            "Poetry": "Literary",
+            "Short Literary Forms": "Literary",
+            "Traditional Literature": "Literary"
           }
         },
         "8": {
@@ -128,6 +205,19 @@
             "Traditional Literature": 4,
             "Biographies": 4,
             "True Narratives": 3
+          },
+          "topics": {
+            "Economics": "Informational",
+            "Geography": "Informational",
+            "Government": "Informational",
+            "History": "Informational",
+            "Physical Science": "Informational",
+            "Narrative Fiction": "Literary",
+            "Poetry": "Literary",
+            "Short Literary Forms": "Literary",
+            "Traditional Literature": "Literary",
+            "Biographies": "Literary Non-Fiction",
+            "True Narratives": "Literary Non-Fiction"
           }
         }
       },
@@ -144,6 +234,16 @@
             "Traditional Literature": 4,
             "Narrative Fiction": 4,
             "Poetry": 4
+          },
+          "topics": {
+            "Social Studies": "Informational",
+            "Science": "Informational",
+            "True Narratives": "Literary Non-Fiction",
+            "Biographies": "Literary Non-Fiction",
+            "Short Literary Forms": "Literary",
+            "Traditional Literature": "Literary",
+            "Narrative Fiction": "Literary",
+            "Poetry": "Literary"
           }
         },
         "3": {
@@ -161,6 +261,19 @@
             "Traditional Literature": 4,
             "Narrative Fiction": 4,
             "Poetry": 4
+          },
+          "topics": {
+            "Science": "Informational",
+            "History": "Informational",
+            "Government": "Informational",
+            "Economics": "Informational",
+            "Geography": "Informational",
+            "True Narratives": "Literary Non-Fiction",
+            "Biographies": "Literary Non-Fiction",
+            "Short Literary Forms": "Literary",
+            "Traditional Literature": "Literary",
+            "Narrative Fiction": "Literary",
+            "Poetry": "Literary"
           }
         },
         "4": {
@@ -178,6 +291,19 @@
             "Traditional Literature": 4,
             "Narrative Fiction": 4,
             "Poetry": 4
+          },
+          "topics": {
+            "Science": "Informational",
+            "Geography": "Informational",
+            "Government": "Informational",
+            "History": "Informational",
+            "Economics": "Informational",
+            "True Narratives": "Literary Non-Fiction",
+            "Biographies": "Literary Non-Fiction",
+            "Short Literary Forms": "Literary",
+            "Traditional Literature": "Literary",
+            "Narrative Fiction": "Literary",
+            "Poetry": "Literary"
           }
         },
         "5": {
@@ -195,6 +321,19 @@
             "Traditional Literature": 2,
             "Narrative Fiction": 3,
             "Poetry": 4
+          },
+          "topics": {
+            "Science": "Informational",
+            "Economics": "Informational",
+            "Geography": "Informational",
+            "Government": "Informational",
+            "History": "Informational",
+            "True Narratives": "Literary Non-Fiction",
+            "Biographies": "Literary Non-Fiction",
+            "Short Literary Forms": "Literary",
+            "Traditional Literature": "Literary",
+            "Narrative Fiction": "Literary",
+            "Poetry": "Literary"
           }
         },
         "6": {
@@ -212,6 +351,19 @@
             "Traditional Literature": 4,
             "Narrative Fiction": 4,
             "Poetry": 4
+          },
+          "topics": {
+            "Geography": "Informational",
+            "Economics": "Informational",
+            "Government": "Informational",
+            "History": "Informational",
+            "Science": "Informational",
+            "True Narratives": "Literary Non-Fiction",
+            "Biographies": "Literary Non-Fiction",
+            "Short Literary Forms": "Literary",
+            "Traditional Literature": "Literary",
+            "Narrative Fiction": "Literary",
+            "Poetry": "Literary"
           }
         },
         "7": {
@@ -229,6 +381,19 @@
             "Poetry": 2,
             "Economics": 3,
             "Science": 2
+          },
+          "topics": {
+            "Government": "Informational",
+            "Geography": "Informational",
+            "History": "Informational",
+            "True Narratives": "Literary Non-Fiction",
+            "Biographies": "Literary Non-Fiction",
+            "Short Literary Forms": "Literary",
+            "Traditional Literature": "Literary",
+            "Narrative Fiction": "Literary",
+            "Poetry": "Literary",
+            "Economics": "Informational",
+            "Science": "Informational"
           }
         },
         "8": {
@@ -246,9 +411,23 @@
             "Traditional Literature": 4,
             "Narrative Fiction": 4,
             "Poetry": 4
+          },
+          "topics": {
+            "Government": "Informational",
+            "Geography": "Informational",
+            "History": "Informational",
+            "Science": "Informational",
+            "Economics": "Informational",
+            "True Narratives": "Literary Non-Fiction",
+            "Biographies": "Literary Non-Fiction",
+            "Short Literary Forms": "Literary",
+            "Traditional Literature": "Literary",
+            "Narrative Fiction": "Literary",
+            "Poetry": "Literary"
           }
         }
       }
     }
-  }
+  },
+  "_rows": "Dashboard rows are taken from the CMS's own SubTopic names for that state and grade, grouped by its Topic, so the two always read the same. Where the CMS is inconsistent the dashboard shows that rather than hiding it."
 }

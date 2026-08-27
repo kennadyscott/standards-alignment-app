@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608271357';   // replaced with the deploy stamp
+const APP_BUILD = '202608271403';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3748,6 +3748,8 @@ function wireGeneratorForm(panel) {
 const SUBDOMAIN_SUBJECT = {
   'Science': 'science', 'Earth Science': 'science', 'Life Science': 'science',
   'Physical Science': 'science',
+  // the CMS's own spelling, now that dashboard rows come from it
+  'Earth and Space Science': 'science',
   'Social Studies': 'social_studies', 'History': 'social_studies',
   'Geography': 'social_studies', 'Government': 'social_studies',
   'Economics': 'social_studies',
@@ -4842,6 +4844,47 @@ function cmsBucket(st, kind, grade) {
   const c = CMS_COUNTS && CMS_COUNTS.states && CMS_COUNTS.states[st];
   return (c && c[kind] && c[kind][String(grade)]) || null;
 }
+/* The dashboard's rows ARE the CMS's sub-topics for that state and grade, grouped by the
+   CMS's own topic — per Kennady, "if CMS says Earth Science, the dashboard should say the
+   same." This removes a whole class of mismatch: no aliases, no sub-topic with nowhere to
+   land, and no count quietly excluded from a column.
+
+   Where the CMS is internally inconsistent, the dashboard shows that. Georgia's
+   Informational item set files science under Earth and Space / Life / Physical while its
+   Opinion item set files the same grades under a plain "Science", so grades 3-5 carry
+   both. That is what the CMS holds; hiding it would only make the numbers stop adding up. */
+const CMS_TOPIC_ORDER = ['Informational', 'Literary', 'Literary Non-Fiction'];
+function cmsRowsFor(st, grade) {
+  const buckets = [cmsBucket(st, 'informative', grade), cmsBucket(st, 'opinion', grade)].filter(Boolean);
+  if (!buckets.length) return null;
+  const byTopic = new Map();
+  buckets.forEach(b => {
+    Object.keys(b.counts || {}).forEach(sub => {
+      const topic = (b.topics && b.topics[sub]) || 'Informational';
+      if (!byTopic.has(topic)) byTopic.set(topic, new Set());
+      byTopic.get(topic).add(sub);
+    });
+  });
+  if (!byTopic.size) return null;
+  const order = t => { const i = CMS_TOPIC_ORDER.indexOf(t); return i < 0 ? 99 : i; };
+  return [...byTopic.entries()]
+    .sort((a, b) => order(a[0]) - order(b[0]))
+    .map(([topic, subs]) => [topic, [...subs].sort()]);
+}
+/* Our own sets are classified in the app's vocabulary; fold that onto the CMS row names
+   so the "ours" half of each pair lands beside the right CMS number. */
+function toCmsRow(dom, rows) {
+  if (!rows || rows.includes(dom)) return dom;
+  if (dom === 'Earth Science' && rows.includes('Earth and Space Science')) return 'Earth and Space Science';
+  // A specific science row with no CMS equivalent folds into the CMS's generic one.
+  if (DASH_SCIENCE_ROWS.includes(dom) && rows.includes('Science')) return 'Science';
+  if ((dom === 'Science' || dom === 'Social Studies') && !rows.includes(dom)) {
+    const sci = rows.filter(r => DASH_SCIENCE_ROWS.includes(r) || r === 'Science');
+    if (dom === 'Science' && sci.length === 1) return sci[0];
+  }
+  return dom;
+}
+
 function cmsCountsFor(st, grade) {
   return { informative: cmsBucket(st, 'informative', grade), opinion: cmsBucket(st, 'opinion', grade) };
 }
@@ -5137,9 +5180,11 @@ function renderDash() {
     const sets = servingSets(g);
     const own = stateSubdomains(dst, g);
     const baseGroups = DASH_GROUPS[g === '2' ? '2' : '3-8'];
-    // A state with its own published taxonomy replaces the Informational rows with its
-    // own; Literary and Literary Non-Fiction are universal and stay as they are.
-    const allGroups = own
+    // Rows come from the CMS wherever we have its numbers, so the two always read the
+    // same. Falling back to the app's own taxonomy only where the CMS is not captured yet.
+    const fromCms = cmsRowsFor(dst, g);
+    const allGroups = fromCms ? fromCms
+      : own
       // Replace the single "Informational" bucket with the CMS's own topic headings, and
       // keep the universal literary groups after them.
       ? [...own.groups, ...baseGroups.filter(([label]) => label !== 'Informational')]
@@ -5150,7 +5195,7 @@ function renderDash() {
     // row that holds work is never hidden underneath us.
     const tally = new Map(allExpect.map(d => [d, { informative: 0, opinion: 0 }]));
     sets.forEach(s => {
-      const dom = dashSubdomain(s, g, dst);
+      const dom = toCmsRow(dashSubdomain(s, g, dst), fromCms ? allExpect : null);
       const t = tally.get(dom) || { informative: 0, opinion: 0 };
       t[s.itemSetType === 'informative' ? 'informative' : 'opinion']++;
       tally.set(dom, t);
@@ -5163,6 +5208,7 @@ function renderDash() {
     // Drop a science row only when this state has no standards for it at this grade AND
     // nothing is filed there.
     const keep = d => {
+      if (fromCms) return true;                   // the CMS says this row exists; show it
       if (own) return true;                       // the state published this list; show it all
       if (!DASH_SCIENCE_ROWS.includes(d)) return true;
       const t = tally.get(d) || { informative: 0, opinion: 0 };
