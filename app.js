@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608272304';   // replaced with the deploy stamp
+const APP_BUILD = '202608272307';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3855,7 +3855,7 @@ function qstateScope(grade) {
 
 /* ---------- AI builder: whole passage set ----------
    Generate a complete, standard-anchored passage set (passage(s) + questions +
-   writing prompt) from the Master Passage List. Calls the org generate proxy (Grok).
+   writing prompt) from the Master Passage List. Calls the org generate proxy (Anthropic).
    Everything lands as a DRAFT for human review — nothing skips the normal approval path. */
 
 // Backend rule: per-grade passage length. These are the p25–p75 bands measured from
@@ -3971,7 +3971,7 @@ async function aiComplete({ system, user, schema, name }) {
   });
   let j = {};
   try { j = await r.json(); } catch { /* empty */ }
-  if (r.status === 404) throw new Error('AI proxy is not deployed yet — set XAI_API_KEY and run tools/deploy_generate.sh');
+  if (r.status === 404) throw new Error('AI proxy is not deployed yet — set ANTHROPIC_API_KEY and run tools/deploy_generate.sh');
   if (!r.ok) throw new Error(j.error || `Generate failed (${r.status})`);
   if (!j.result) throw new Error('no output returned');
   return j.result;
