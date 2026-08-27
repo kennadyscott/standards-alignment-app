@@ -9,7 +9,7 @@
    snapshot of what the server holds and diff against it. No editor code has to
    announce what it touched, so nothing is missed by forgetting to instrument a path. */
 
-const STORE_BUILD = '202608271353';
+const STORE_BUILD = '202608271357';
 
 const SB = {
   client: null,
@@ -114,6 +114,18 @@ function setFromRow(r) {
 }
 const kvKey = (ns, key) => ns + ' ' + key;
 
+/* Signatures must not depend on key ORDER. Postgres jsonb stores object keys in its own
+   order and hands them back that way: the app sends {text, standard, type} and the
+   database returns {text, type, standard}. Plain JSON.stringify therefore made every
+   save look like a foreign change coming back, which triggered a full re-render -- the
+   reported "page refreshes every ten seconds, collapses the questions I just expanded
+   and throws me down the page" while someone was mid-edit. Sort keys and the two agree. */
+function stableStringify(v) {
+  if (v === null || typeof v !== 'object') return JSON.stringify(v);
+  if (Array.isArray(v)) return '[' + v.map(stableStringify).join(',') + ']';
+  return '{' + Object.keys(v).sort().map(k => JSON.stringify(k) + ':' + stableStringify(v[k])).join(',') + '}';
+}
+
 // Compare only the columns we own; server-managed ones (updated_at) always differ.
 function rowCompare(r) {
   const o = {};
@@ -140,8 +152,8 @@ async function sbLoadAll() {
     kv.push.apply(kv, data);
     if (data.length < 1000) break;
   }
-  SB.snapSets = new Map(sets.map(r => [r.id, JSON.stringify(rowCompare(r))]));
-  SB.snapKv = new Map(kv.map(r => [kvKey(r.ns, r.key), JSON.stringify(r.value)]));
+  SB.snapSets = new Map(sets.map(r => [r.id, stableStringify(rowCompare(r))]));
+  SB.snapKv = new Map(kv.map(r => [kvKey(r.ns, r.key), stableStringify(r.value)]));
   const maps = {};
   KV_MAPS.forEach(ns => { maps[ns] = {}; });
   kv.forEach(r => { (maps[r.ns] = maps[r.ns] || {})[r.key] = r.value; });
@@ -159,7 +171,7 @@ async function sbSaveDirty(state) {
   (state.sets || []).forEach(s => {
     if (!s || !s.id) return;
     const row = rowFromSet(s);
-    const sig = JSON.stringify(rowCompare(row));
+    const sig = stableStringify(rowCompare(row));
     if (SB.snapSets.get(s.id) !== sig) setRows.push({ row: row, sig: sig });
   });
 
@@ -167,7 +179,7 @@ async function sbSaveDirty(state) {
   KV_MAPS.forEach(ns => {
     const m = state[ns] || {};
     Object.keys(m).forEach(k => {
-      const v = JSON.stringify(m[k] === undefined ? null : m[k]);
+      const v = stableStringify(m[k] === undefined ? null : m[k]);
       if (SB.snapKv.get(kvKey(ns, k)) !== v) kvRows.push({ ns: ns, key: k, value: m[k], _v: v });
     });
   });
@@ -228,7 +240,7 @@ function sbSubscribe(state, onChange) {
     .on('postgres_changes', { event: '*', schema: 'public', table: 'sets' }, p => {
       const r = p.new;
       if (!r || !r.id) return;
-      const sig = JSON.stringify(rowCompare(r));
+      const sig = stableStringify(rowCompare(r));
       // Our own write coming back. Nothing changed for us; re-rendering would be pure cost.
       if (!r.deleted_at && SB.snapSets.get(r.id) === sig) return;
       const i = (state.sets || []).findIndex(x => x.id === r.id);
@@ -247,7 +259,7 @@ function sbSubscribe(state, onChange) {
     .on('postgres_changes', { event: '*', schema: 'public', table: 'state_kv' }, p => {
       const r = p.new;
       if (!r || !r.ns) return;
-      const v = JSON.stringify(r.value);
+      const v = stableStringify(r.value);
       if (SB.snapKv.get(kvKey(r.ns, r.key)) === v) return;   // our own echo
       state[r.ns] = state[r.ns] || {};
       state[r.ns][r.key] = r.value;

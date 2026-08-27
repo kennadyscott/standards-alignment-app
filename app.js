@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608271353';   // replaced with the deploy stamp
+const APP_BUILD = '202608271357';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -781,6 +781,24 @@ function dedupeById(list) {
   return list.filter(x => x && x.id && !seen.has(x.id) && seen.add(x.id));
 }
 
+/* A teammate's change still has to reach the screen, but not by yanking someone out of
+   what they are doing. A full renderAll() rebuilds the Master Passage List, which throws
+   away every expanded question block and resets the scroll position -- reported as "it
+   undoes it and moves me all the way down the page" while uploading peer revisions.
+
+   So: hold the re-render while a field has focus, and retry once they stop. The incoming
+   data is already merged into `state`; only the redraw waits. */
+let rerenderTimer = null;
+function deferredRerender() {
+  clearTimeout(rerenderTimer);
+  const attempt = () => {
+    if (userIsTyping()) { rerenderTimer = setTimeout(attempt, 4000); return; }
+    normalizeSets();
+    renderAll();
+  };
+  rerenderTimer = setTimeout(attempt, 300);
+}
+
 async function loadPersisted() {
   loadLocal();
   loadSets();
@@ -805,7 +823,7 @@ async function loadPersisted() {
       serverAvailable = true;
       lastSyncAt = new Date();
       syncTrouble = false;
-      sbSubscribe(state, () => { normalizeSets(); renderAll(); });
+      sbSubscribe(state, deferredRerender);
     } catch (e) {
       syncTrouble = true;
       syncError = String((e && e.message) || e);
