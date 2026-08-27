@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608271347';   // replaced with the deploy stamp
+const APP_BUILD = '202608271353';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4863,8 +4863,13 @@ function cmsUnmatched(bucket, rowsAtGrade) {
    things and only one of them is a problem. */
 function cmsCell(bucket, subdomain, ours, footerDomains) {
   if (!bucket) return `<td class="dash-cms none" title="Not captured from the CMS yet">·</td>`;
+  // The footer reports what the CMS actually holds at this grade, not the sum of the rows
+  // above it. Those differ when a CMS sub-topic has no row to land in -- Georgia files 9
+  // grade-3 Opinion sets under a plain "Science" while the dashboard splits science three
+  // ways -- and a footer that quietly dropped them would understate the CMS by 9.
   const n = footerDomains
-    ? footerDomains.reduce((a, d) => a + (cmsLookup(bucket, d, footerDomains) || 0), 0)
+    ? (bucket.total != null ? bucket.total
+       : footerDomains.reduce((a, d) => a + (cmsLookup(bucket, d, footerDomains) || 0), 0))
     : cmsLookup(bucket, subdomain, cmsCell.rows);
   const short = bucket.complete === false;
   // Green when the CMS has caught up: it matches or exceeds the dashboard, OR it has
@@ -5370,6 +5375,17 @@ function init() {
   document.getElementById('exportBtn').addEventListener('click', exportData);
   const cmsBtn = document.getElementById('cmsExportBtn');
   if (cmsBtn) cmsBtn.addEventListener('click', exportForCms);
+
+  // A browser can hold a cached index.html that points at an older store.js. Everything
+  // then looks fine while behaving subtly wrong -- a saved "done" tick that never shows,
+  // because the old store did not know to load that namespace. Say so plainly instead.
+  if (typeof STORE_BUILD === 'undefined' || STORE_BUILD !== APP_BUILD) {
+    const bar = el(`<div class="stale-bar">This page is running an old cached copy
+      (${typeof STORE_BUILD === 'undefined' ? 'pre-versioning' : esc(STORE_BUILD)} vs ${esc(APP_BUILD)}).
+      Some things will not save or show correctly.
+      <b>Hold Shift and click reload</b>, or press ⌘⇧R.</div>`);
+    document.body.insertBefore(bar, document.body.firstChild);
+  }
 
   // Prune before the first render: both the links and the reviewer's decisions must be in
   // hand to tell an orphan from a not-yet-loaded link.

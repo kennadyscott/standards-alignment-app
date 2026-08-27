@@ -163,6 +163,23 @@
             "Poetry": 4
           }
         },
+        "4": {
+          "complete": true,
+          "total": 51,
+          "counts": {
+            "Science": 12,
+            "Geography": 4,
+            "Government": 3,
+            "History": 4,
+            "Economics": 4,
+            "True Narratives": 4,
+            "Biographies": 4,
+            "Short Literary Forms": 4,
+            "Traditional Literature": 4,
+            "Narrative Fiction": 4,
+            "Poetry": 4
+          }
+        },
         "5": {
           "complete": true,
           "total": 50,
@@ -177,6 +194,57 @@
             "Short Literary Forms": 4,
             "Traditional Literature": 2,
             "Narrative Fiction": 3,
+            "Poetry": 4
+          }
+        },
+        "6": {
+          "complete": true,
+          "total": 48,
+          "counts": {
+            "Geography": 7,
+            "Economics": 4,
+            "Government": 4,
+            "History": 4,
+            "Science": 5,
+            "True Narratives": 4,
+            "Biographies": 4,
+            "Short Literary Forms": 4,
+            "Traditional Literature": 4,
+            "Narrative Fiction": 4,
+            "Poetry": 4
+          }
+        },
+        "7": {
+          "complete": true,
+          "total": 36,
+          "counts": {
+            "Government": 3,
+            "Geography": 5,
+            "History": 3,
+            "True Narratives": 7,
+            "Biographies": 5,
+            "Short Literary Forms": 3,
+            "Traditional Literature": 1,
+            "Narrative Fiction": 2,
+            "Poetry": 2,
+            "Economics": 3,
+            "Science": 2
+          }
+        },
+        "8": {
+          "complete": true,
+          "total": 43,
+          "counts": {
+            "Government": 4,
+            "Geography": 6,
+            "History": 3,
+            "Science": 3,
+            "Economics": 3,
+            "True Narratives": 4,
+            "Biographies": 4,
+            "Short Literary Forms": 4,
+            "Traditional Literature": 4,
+            "Narrative Fiction": 4,
             "Poetry": 4
           }
         }

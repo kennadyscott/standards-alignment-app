@@ -1035,3 +1035,8 @@ body {
 /* CMS sub-topics with no dashboard row at this grade — shown, never silently dropped. */
 .cms-orphans { padding: 8px 14px 12px; font-size: 11.5px; color: var(--ink-soft);
   border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+
+/* Shown when the page is running a cached script older than the app expects. */
+.stale-bar { background: var(--amber-soft); color: var(--amber); border-bottom: 1px solid var(--amber);
+  padding: 9px 16px; font-size: 13px; text-align: center; }
+.stale-bar b { color: var(--ink); }
