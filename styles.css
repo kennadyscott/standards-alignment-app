@@ -1,13 +1,13 @@
 :root {
-  --bg: #f5f2fb;
+  --bg: #f3f5fb;
   --panel: #ffffff;
-  --ink: #16122a;
-  --ink-soft: #5c5672;
-  --ink-faint: #918ba8;
-  --line: #e8e3f2;
-  --accent: #6b4dff;
-  --accent-soft: #efeaff;
-  --accent-ink: #4c35d4;
+  --ink: #14182a;
+  --ink-soft: #556070;
+  --ink-faint: #8b93a6;
+  --line: #e2e6f0;
+  --accent: #3b5bfd;
+  --accent-soft: #e8edff;
+  --accent-ink: #2a44d6;
   --green: #1e8e5a;
   --green-soft: #e5f5ec;
   --red: #c2453f;
@@ -15,7 +15,7 @@
   --amber: #b07a1e;
   --amber-soft: #fdf3e0;
   --radius: 16px;
-  --shadow: 0 1px 2px rgba(40,24,80,.05), 0 8px 24px rgba(40,24,80,.06);
+  --shadow: 0 1px 2px rgba(24,40,90,.05), 0 8px 24px rgba(24,40,90,.06);
   --font-ui: 'Plus Jakarta Sans', -apple-system, sans-serif;
   --font-read: 'Source Serif 4', Georgia, 'Times New Roman', serif;
   --st-oh: #b03a2e;
@@ -73,7 +73,7 @@ textarea:focus:not(:focus-visible) { outline: none; }
   display: grid; place-items: center;
   font-weight: 800; font-size: 16px;
   letter-spacing: -0.04em;
-  box-shadow: 0 6px 16px rgba(107,77,255,.28);
+  box-shadow: 0 6px 16px rgba(59,91,253,.28);
 }
 .brand-name {
   font-weight: 800; font-size: 15px; letter-spacing: -0.03em; line-height: 1.15;
@@ -85,7 +85,7 @@ textarea:focus:not(:focus-visible) { outline: none; }
 
 .tabs {
   display: flex; gap: 2px; flex: none; justify-self: center;
-  background: #ece8f6;
+  background: #e6eaf4;
   padding: 4px;
   border-radius: 999px;
 }
@@ -103,7 +103,7 @@ textarea:focus:not(:focus-visible) { outline: none; }
 .tab.active {
   background: #fff;
   color: var(--ink);
-  box-shadow: 0 1px 3px rgba(40,24,80,.12);
+  box-shadow: 0 1px 3px rgba(24,40,90,.12);
 }
 .badge {
   display: inline-block;
@@ -200,7 +200,7 @@ textarea:focus:not(:focus-visible) { outline: none; }
 .grade-btn:hover { border-color: var(--accent); color: var(--accent-ink); }
 .grade-btn.active {
   background: var(--accent); border-color: var(--accent); color: #fff;
-  box-shadow: 0 6px 16px rgba(107,77,255,.28);
+  box-shadow: 0 6px 16px rgba(59,91,253,.28);
 }
 .grade-btn.active::after { color: rgba(255,255,255,.75); }
 
@@ -549,7 +549,7 @@ textarea:focus:not(:focus-visible) { outline: none; }
 }
 
 /* ---------- Passage sets ---------- */
-.btn-primary { background: var(--accent); color: #fff; box-shadow: 0 6px 14px rgba(107,77,255,.22); }
+.btn-primary { background: var(--accent); color: #fff; box-shadow: 0 6px 14px rgba(59,91,253,.22); }
 .btn-primary:hover { background: var(--accent-ink); }
 .btn-approve { background: #1e6e42; color: #fff; }
 .btn-approve:hover { background: #175936; }
