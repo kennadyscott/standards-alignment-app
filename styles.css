@@ -166,7 +166,7 @@ textarea:focus:not(:focus-visible) { outline: none; }
   font-size: 11px; text-transform: none; letter-spacing: 0;
 }
 
-.seg { display: flex; gap: 4px; background: #ece8f6; padding: 4px; border-radius: 999px; }
+.seg { display: flex; gap: 4px; background: #e6eaf4; padding: 4px; border-radius: 999px; }
 .seg-btn {
   flex: 1;
   border: none; background: transparent;
@@ -177,7 +177,7 @@ textarea:focus:not(:focus-visible) { outline: none; }
   white-space: nowrap;
 }
 .seg-btn:hover { color: var(--ink); }
-.seg-btn.active { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(40,24,80,.12); }
+.seg-btn.active { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(24,40,90,.12); }
 
 .grade-row { display: flex; gap: 4px; flex-wrap: wrap; }
 .grade-btn {
