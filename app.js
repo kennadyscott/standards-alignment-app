@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608271329';   // replaced with the deploy stamp
+const APP_BUILD = '202608271340';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -153,6 +153,12 @@ const state = {
   sets: [],
   setDeleted: {},                 // passage sets
   setExported: {},                // setId -> when it was last sent to the CMS
+  botDone: {},                    // `${bot}|${YYYY-MM-DD}` -> who ticked it off, so the
+                                  // Morning Board shows what has already been done today
+  cmsCounts: {},                  // `${STATE}|${type}|${grade}` -> {total, complete, counts}
+                                  // Josh's numbers, read from the CMS and pasted in here.
+                                  // Stored per state/type/grade so two people updating
+                                  // different grades never collide.
   setContentAt: {},               // setId -> when THIS browser last changed the set's content.
                                   // Without it, every browser held all ~1,670 sets in memory and
                                   // wrote its own copy of the text back on any save, so one stale
@@ -363,6 +369,8 @@ function stateBody() {
     setStateId: state.setStateId || {},
     setDeleted: state.setDeleted || {},
     setExported: state.setExported || {},
+    botDone: state.botDone || {},
+    cmsCounts: state.cmsCounts || {},
     setContentAt: state.setContentAt || {},
     sets: (() => {
       const byId = new Map((state.importedDrafts || []).map(d => [d.id, d]));
@@ -467,6 +475,8 @@ function mergeForSave(server) {
   state.setStateId = { ...S('setStateId'), ...(state.setStateId || {}) };
   state.setDeleted = { ...S('setDeleted'), ...(state.setDeleted || {}) };
   state.setExported = { ...S('setExported'), ...(state.setExported || {}) };
+  state.botDone = { ...S('botDone'), ...(state.botDone || {}) };
+  state.cmsCounts = { ...S('cmsCounts'), ...(state.cmsCounts || {}) };
   // NOTE: the timestamp maps are merged AFTER the set loop below. Merging them here
   // would raise every local stamp to the server's before the comparison runs, so local
   // would always tie and the server's newer content would never be adopted.
@@ -847,6 +857,8 @@ function mergeServerState(s) {
       setStateId: { ...(state.setStateId || {}), ...(s.setStateId || {}) },
       setDeleted: { ...(state.setDeleted || {}), ...(s.setDeleted || {}) },
       setExported: { ...(state.setExported || {}), ...(s.setExported || {}) },
+      botDone: { ...(state.botDone || {}), ...(s.botDone || {}) },
+      cmsCounts: { ...(state.cmsCounts || {}), ...(s.cmsCounts || {}) },
       setContentAt: maxMerge(state.setContentAt || {}, s.setContentAt || {}),
       setFlagM: mergeDecisions(s.setFlag || {}, s.setFlagAt || {}, state.setFlag || {}, state.setFlagAt || {}, 'server'),
       // CONTENT goes to whichever side edited it last (setContentAt), not to the server
@@ -4486,6 +4498,8 @@ function handleInputAction(spec) {
 
 /* ---------- view switching + init ---------- */
 function renderAll() {
+  // NOT renderBots(): the board scans 7 states x 7 grades and costs ~2.5s. It is built
+  // when its tab is opened instead, which is the only time it is on screen.
   renderStdList();
   renderDetail();
   renderReview();
@@ -4802,10 +4816,16 @@ function dashCell(n, ctx) {
    "Entered in CMS" here, and it drifts: Georgia grade 2 Poetry reads 9 ticked against 4
    actually in the CMS. Kennady asked for what is really there. */
 let CMS_COUNTS = null;
-function cmsCountsFor(st, grade) {
+/* Josh's pasted numbers take precedence over the file that shipped with the build: his
+   are newer by definition, and he can update a grade without a deploy. */
+function cmsBucket(st, kind, grade) {
+  const live = (state.cmsCounts || {})[`${st}|${kind}|${grade}`];
+  if (live) return live;
   const c = CMS_COUNTS && CMS_COUNTS.states && CMS_COUNTS.states[st];
-  const pick = kind => (c && c[kind] && c[kind][String(grade)]) || null;
-  return { informative: pick('informative'), opinion: pick('opinion') };
+  return (c && c[kind] && c[kind][String(grade)]) || null;
+}
+function cmsCountsFor(st, grade) {
+  return { informative: cmsBucket(st, 'informative', grade), opinion: cmsBucket(st, 'opinion', grade) };
 }
 // The CMS names a few sub-topics differently from the dashboard rows.
 function cmsLookup(bucket, subdomain) {
@@ -4841,6 +4861,167 @@ function cmsCell(bucket, subdomain, ours, footerDomains) {
     ? `CMS shows ${bucket.total} sets at this grade; ${bucket.captured} were readable (the CMS list pages at 50).`
     : `${bucket.total} sets in the CMS at this grade`) + gap;
   return `<td class="dash-cms ${cls}" title="${esc(tip)}">${n}${short ? '<span class="cms-short" title="partial capture">*</span>' : ''}</td>`;
+}
+
+/* ---------- Morning Board ----------
+   Five Grokbots, five jobs. Without this each one means opening State Lists and stepping
+   through 7 states x 7 grades to find out whether there is anything to do at all. This
+   answers "where do I start today" in one screen, and every row jumps straight to the
+   work. */
+const BOTS = [
+  { key: 'adam', name: 'Adam', job: 'Checks state lists for sets in Needs Approval and assigns or dismisses based on standard/content alignment',
+    stage: 'approval', unit: 'set' },
+  { key: 'stanley', name: 'Stanley', job: 'Reviews standards daily in the "Needs Standards" tab for state lists',
+    stage: 'standards', unit: 'set' },
+  { key: 'georgia', name: 'Georgia', job: 'Builds the Peer Review Question Sets',
+    stage: 'peer', unit: 'set' },
+  { key: 'herman', name: 'Herman', job: 'Builds new passage sets from state dashboards',
+    kind: 'dash', unit: 'gap' },
+  { key: 'josh', name: 'Josh', job: 'Builds count list for updated CMS numbers in the dashboard',
+    kind: 'cms', unit: 'grade' },
+];
+const today = () => new Date().toISOString().slice(0, 10);
+const botDoneKey = k => `${k}|${today()}`;
+
+/* Work waiting for each bot, per state and grade. Computed from the same setsForGrade /
+   rowStage the State Lists screen uses, so the board can never disagree with the tab it
+   sends you to. */
+function botWork() {
+  const stageBots = BOTS.filter(b => b.stage);
+  const out = {};
+  BOTS.forEach(b => { out[b.key] = { total: 0, rows: [] }; });
+
+  STATES.forEach(st => {
+    GRADES.forEach(g => {
+      const rows = setsForGrade(st, g);
+      if (rows.length) rows.forEach(r => { r.stage = rowStage(r, st, g); });
+      stageBots.forEach(b => {
+        // Peer tasks are a Georgia deliverable; the stage does not exist elsewhere.
+        if (b.stage === 'peer' && st !== 'GA') return;
+        const n = rows.filter(r => r.stage === b.stage).length;
+        if (n) { out[b.key].rows.push({ state: st, grade: g, n }); out[b.key].total += n; }
+      });
+
+      // Herman: how far the dashboard is from its goal, counted as missing sets.
+      const sets = state.sets.filter(s =>
+        !state.setDismiss[inputKey(s.id, st, g)] &&
+        setServes(s, true).some(v => v.state === st && v.grade === String(g)));
+      const own = stateSubdomains(st, g);
+      const base = DASH_GROUPS[g === '2' ? '2' : '3-8'];
+      const groups = own ? [...own.groups, ...base.filter(([l]) => l !== 'Informational')] : base;
+      const doms = groups.flatMap(([, d]) => d);
+      const tal = new Map(doms.map(d => [d, { informative: 0, opinion: 0 }]));
+      sets.forEach(s => {
+        const t = tal.get(dashSubdomain(s, g, st));
+        if (t) t[s.itemSetType === 'informative' ? 'informative' : 'opinion']++;
+      });
+      let gap = 0;
+      doms.forEach(d => {
+        const t = tal.get(d);
+        gap += Math.max(0, DASH_GOAL - t.informative) + Math.max(0, DASH_GOAL - t.opinion);
+      });
+      if (gap) { out.herman.rows.push({ state: st, grade: g, n: gap }); out.herman.total += gap; }
+
+      // Josh: grades with no CMS numbers, or numbers captured only in part.
+      ['informative', 'opinion'].forEach(type => {
+        const b = cmsBucket(st, type, g);
+        if (!b) { out.josh.rows.push({ state: st, grade: g, type, n: 1, why: 'never captured' }); out.josh.total++; }
+        else if (b.complete === false) { out.josh.rows.push({ state: st, grade: g, type, n: 1, why: 'partial' }); out.josh.total++; }
+      });
+    });
+  });
+  return out;
+}
+
+function renderBots() {
+  const wrap = document.getElementById('botsWrap');
+  if (!wrap) return;
+  const work = botWork();
+  const outstanding = BOTS.reduce((a, b) => a + (state.botDone[botDoneKey(b.key)] ? 0 : work[b.key].total ? 1 : 0), 0);
+  const badge = document.getElementById('botsBadge');
+  if (badge) badge.textContent = String(outstanding);
+  const prog = document.getElementById('botsProgress');
+  if (prog) prog.textContent = `${outstanding} of ${BOTS.length} still have work today · ${today()}`;
+
+  wrap.innerHTML = BOTS.map(b => {
+    const w = work[b.key];
+    const done = state.botDone[botDoneKey(b.key)];
+    const rows = w.rows.slice().sort((x, y) => y.n - x.n);
+    const label = b.unit === 'gap' ? 'sets short of goal'
+      : b.unit === 'grade' ? 'grade/type still to count'
+      : 'waiting';
+    return `<div class="bot-card ${done ? 'is-done' : w.total ? '' : 'is-clear'}">
+      <div class="bot-card-head">
+        <div>
+          <span class="bot-badge">Grokbot ${esc(b.name)}</span>
+          <span class="bot-job">${esc(b.job)}</span>
+        </div>
+        <label class="bot-done-wrap" title="Tick when today's pass is finished">
+          <input type="checkbox" data-botdone="${b.key}" ${done ? 'checked' : ''}>
+          <span>${done ? `Done — ${esc(String(done).split('|')[0])}` : 'Done today'}</span>
+        </label>
+      </div>
+      ${w.total
+        ? `<div class="bot-total">${w.total} ${esc(label)}</div>
+           <div class="bot-rows">${rows.map(r => `
+             <button class="bot-row" data-botgo="${b.key}|${r.state}|${r.grade}${r.type ? '|' + r.type : ''}">
+               <span class="bot-row-where">${esc(STATE_NAMES[r.state] || r.state)} · G${esc(r.grade)}${r.type ? ` · ${r.type === 'informative' ? 'Informational' : 'Opinion'}` : ''}</span>
+               <span class="bot-row-n">${r.why ? esc(r.why) : r.n}</span>
+             </button>`).join('')}</div>`
+        : `<div class="bot-clear">Nothing waiting ✓</div>`}
+      ${b.key === 'josh' ? joshPasteHtml() : ''}
+    </div>`;
+  }).join('');
+}
+
+/* Josh's numbers. He reads the CMS and pastes the counts here rather than anyone editing
+   a file: they save per state/type/grade like any other row, so two people updating
+   different grades never collide, and everyone sees them at once. */
+function joshPasteHtml() {
+  return `<details class="josh-box">
+    <summary>Paste CMS numbers</summary>
+    <p class="ps-hint">From the CMS item set for a state, one grade at a time. Format:<br>
+      <code>{"state":"GA","type":"informative","grade":"4","total":53,"complete":true,
+      "counts":{"History":5,"Government":3}}</code><br>
+      One object, or an array of them.</p>
+    <textarea class="ps-textarea" id="joshPaste" rows="5" placeholder='{"state":"GA","type":"informative","grade":"4", ...}'></textarea>
+    <button class="btn btn-primary" id="joshSave">Save numbers</button>
+    <div class="signin-msg" id="joshMsg"></div>
+  </details>`;
+}
+
+function joshSave() {
+  const ta = document.getElementById('joshPaste');
+  const msg = document.getElementById('joshMsg');
+  let data;
+  try { data = JSON.parse(ta.value); }
+  catch (e) { msg.textContent = 'That is not valid JSON — check for a missing comma or bracket.'; msg.className = 'signin-msg bad'; return; }
+  const list = Array.isArray(data) ? data : [data];
+  const bad = [];
+  let saved = 0;
+  list.forEach((d, i) => {
+    const st = String(d.state || '').toUpperCase();
+    const type = d.type === 'opinion' ? 'opinion' : d.type === 'informative' ? 'informative' : null;
+    if (!STATES.includes(st)) return bad.push(`#${i + 1}: unknown state "${d.state}"`);
+    if (!type) return bad.push(`#${i + 1}: type must be "informative" or "opinion"`);
+    if (!GRADES.includes(String(d.grade))) return bad.push(`#${i + 1}: grade must be 2-8`);
+    if (!d.counts || typeof d.counts !== 'object') return bad.push(`#${i + 1}: no counts object`);
+    state.cmsCounts[`${st}|${type}|${d.grade}`] = {
+      total: d.total ?? Object.values(d.counts).reduce((a, n) => a + (+n || 0), 0),
+      complete: d.complete !== false,
+      counts: d.counts,
+      at: new Date().toISOString().slice(0, 10),
+    };
+    saved++;
+  });
+  if (bad.length) { msg.textContent = bad.join(' · '); msg.className = 'signin-msg bad'; }
+  if (!saved) return;
+  pushState();
+  ta.value = '';
+  // The board re-renders below and rebuilds this box, so the confirmation goes to the
+  // toast rather than an element that is about to be replaced.
+  toast(`✓ Saved ${saved} grade${saved === 1 ? '' : 's'} — the Dashboard CMS column is updated`);
+  renderBots(); renderDash();
 }
 
 function renderDash() {
@@ -4952,6 +5133,34 @@ function renderDash() {
       </div>`));
   });
 
+  const bots = document.getElementById('botsWrap');
+  if (bots && !bots.dataset.bound) {
+    bots.dataset.bound = '1';
+    bots.addEventListener('change', e => {
+      const cb = e.target.closest('[data-botdone]');
+      if (!cb) return;
+      const k = botDoneKey(cb.dataset.botdone);
+      if (cb.checked) state.botDone[k] = `${(SB.user && SB.user.email) || 'someone'}|${new Date().toISOString()}`;
+      else delete state.botDone[k];
+      pushState();
+      renderBots();
+    });
+    bots.addEventListener('click', e => {
+      if (e.target.closest('#joshSave')) { joshSave(); return; }
+      const go = e.target.closest('[data-botgo]');
+      if (!go) return;
+      const [bot, st, grade] = go.dataset.botgo.split('|');
+      const b = BOTS.find(x => x.key === bot);
+      if (b && b.stage) {
+        state.ui.inState = st; state.ui.inGrade = grade; state.ui.inStage = b.stage;
+        document.querySelector('[data-view="input"]').click();
+      } else {
+        state.ui.dashState = st;
+        document.querySelector('[data-view="dash"]').click();
+      }
+    });
+  }
+
   wrap.addEventListener('click', e => {
     const cell = e.target.closest('[data-gencell]');
     if (!cell) return;
@@ -4971,6 +5180,8 @@ function init() {
     document.getElementById('passagesView').classList.toggle('hidden', state.ui.view !== 'passages');
     document.getElementById('inputView').classList.toggle('hidden', state.ui.view !== 'input');
     document.getElementById('dashView').classList.toggle('hidden', state.ui.view !== 'dash');
+    document.getElementById('botsView').classList.toggle('hidden', state.ui.view !== 'bots');
+    if (state.ui.view === 'bots') renderBots();   // built on demand — see renderAll
     if (state.ui.view === 'dash') renderDash();
   });
 

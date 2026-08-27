@@ -24,7 +24,7 @@ const SB = {
 /* Which maps in `state` are key/value rows. Mirrors KV_MAPS in the migration. */
 const KV_MAPS = ['decisions', 'decisionsAt', 'noAlign', 'cms', 'severed', 'crossOk',
                  'setPush', 'setStateStd', 'setCms', 'setDismiss', 'setFlag', 'setFlagAt',
-                 'setStateId', 'setExported', 'setContentAt'];
+                 'setStateId', 'setExported', 'setContentAt', 'botDone', 'cmsCounts'];
 
 const SET_COLS = {
   id: 'id', title: 'title', passageId: 'passage_id', status: 'status',
