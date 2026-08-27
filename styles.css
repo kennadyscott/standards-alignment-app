@@ -524,12 +524,30 @@ textarea:focus:not(:focus-visible) { outline: none; }
   flex-shrink: 0;
   background: var(--panel);
   border-right: 1px solid var(--line);
-  padding: 20px;
+  padding: 10px 12px 8px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 8px;
   overflow: hidden;
 }
+.set-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.set-actions .btn {
+  padding: 6px 8px;
+  font-size: 12.5px;
+  justify-content: center;
+  white-space: nowrap;
+}
+.set-filters .ps-input { padding: 6px 8px; font-size: 13px; }
+.set-filter-row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.set-filters-meta {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+}
+.btn-compact { padding: 3px 8px; font-size: 12px; }
 .set-list {
   flex: 1;
   overflow-y: auto;
@@ -800,7 +818,7 @@ textarea:focus:not(:focus-visible) { outline: none; }
 .peer-inline .q-card { width: 100%; }
 
 /* Master list filters */
-.set-filters { display: flex; flex-direction: column; gap: 6px; }
+.set-filters { display: flex; flex-direction: column; gap: 6px; flex-shrink: 0; }
 .set-filters .ps-hint { margin: 0; }
 
 /* State Lists split view: titles left, full passage set right */
@@ -1278,10 +1296,19 @@ textarea:focus:not(:focus-visible) { outline: none; }
 }
 .ps-section-title .st-pill { text-transform: none; letter-spacing: 0; font-weight: 700; margin-left: auto; }
 
+#setList .std-item { padding: 7px 8px; }
+#setList .std-item-top { margin-bottom: 2px; gap: 6px; }
+#setList .std-code {
+  flex: 1; min-width: 0;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-size: 12.5px;
+}
+#setList .st-pill { flex-shrink: 0; }
+#setList .std-desc { -webkit-line-clamp: 1; font-size: 12px; }
 .set-list.is-virtual { gap: 0; }
 .set-list.is-virtual .set-row {
-  min-height: 92px; max-height: 92px; overflow: hidden;
-  margin-bottom: 6px;
+  min-height: 64px; max-height: 64px; overflow: hidden;
+  margin-bottom: 4px;
 }
 .set-spacer { flex-shrink: 0; pointer-events: none; }
 

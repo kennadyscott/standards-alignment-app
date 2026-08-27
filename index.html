@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=202608272228">
+<link rel="stylesheet" href="styles.css?v=202608272235">
 </head>
 <body>
 <header class="topbar">
@@ -99,26 +99,32 @@
 
 <main id="passagesView" class="view hidden" role="tabpanel" aria-labelledby="tab-passages">
   <aside class="sets-panel">
-    <button class="btn btn-primary" id="newSetBtn">New Passage Set</button>
-    <button class="btn btn-primary" id="genSetBtn" title="Generate a complete passage set from a state standard">Generate with AI</button>
+    <div class="set-actions">
+      <button class="btn btn-primary" id="newSetBtn" title="Create a new passage set">New set</button>
+      <button class="btn btn-primary" id="genSetBtn" title="Generate a complete passage set from a state standard">Generate</button>
+    </div>
     <div class="set-filters">
-      <input type="search" id="setSearch" class="ps-input" placeholder="Search title, passage text, or ID…">
-      <select id="setFilterStatus" class="ps-input">
-        <option value="all">All statuses</option>
-        <option value="ready">Ready for export</option>
-        <option value="no-key">Missing answer keys</option>
-        <option value="not-ready">Not ready (any reason)</option>
-        <option value="awaiting">Exported — awaiting CMS ID</option>
-        <option value="has-id">In CMS (has ID)</option>
-        <option value="draft">Drafts</option>
-        <option value="approved">Approved</option>
-      </select>
-      <select id="setFilterGrade" class="ps-input">
-        <option value="all">All grades</option>
-      </select>
+      <input type="search" id="setSearch" class="ps-input" placeholder="Search title, text, or ID…">
+      <div class="set-filter-row">
+        <select id="setFilterStatus" class="ps-input">
+          <option value="all">All statuses</option>
+          <option value="ready">Ready for export</option>
+          <option value="no-key">Missing answer keys</option>
+          <option value="not-ready">Not ready (any reason)</option>
+          <option value="awaiting">Exported — awaiting CMS ID</option>
+          <option value="has-id">In CMS (has ID)</option>
+          <option value="draft">Drafts</option>
+          <option value="approved">Approved</option>
+        </select>
+        <select id="setFilterGrade" class="ps-input">
+          <option value="all">All grades</option>
+        </select>
+      </div>
       <select id="setFilterState" class="ps-input"></select>
-      <div class="ps-hint" id="setFilterCount"></div>
-      <button class="btn btn-ghost" id="cmsExportBtn" title="Export the sets shown below as CMS import files (passages CSV, items CSV, and a JSON with the field map)">Export for CMS</button>
+      <div class="set-filters-meta">
+        <div class="ps-hint" id="setFilterCount"></div>
+        <button class="btn btn-ghost btn-compact" id="cmsExportBtn" title="Export the sets shown below as CMS import files (passages CSV, items CSV, and a JSON with the field map)">Export</button>
+      </div>
     </div>
     <div class="set-list" id="setList"></div>
   </aside>
@@ -166,9 +172,9 @@
 </main>
 
 <div class="toast" id="toast"></div>
-<script src="vendor/supabase.js?v=202608272228"></script>
-<script src="config.js?v=202608272228"></script>
-<script src="store.js?v=202608272228"></script>
-<script src="app.js?v=202608272228"></script>
+<script src="vendor/supabase.js?v=202608272235"></script>
+<script src="config.js?v=202608272235"></script>
+<script src="store.js?v=202608272235"></script>
+<script src="app.js?v=202608272235"></script>
 </body>
 </html>

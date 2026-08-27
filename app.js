@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608272228';   // replaced with the deploy stamp
+const APP_BUILD = '202608272235';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3048,7 +3048,7 @@ function readinessChipHtml(s) {
   return statusPill('blocked', extra || r.reasons[0], r.reasons.join(' · '));
 }
 
-const SET_ROW_H = 98;
+const SET_ROW_H = 68;
 let setListSorted = [];
 let setListBound = false;
 let setListWindow = { start: -1, end: -1 };
@@ -3059,14 +3059,11 @@ function setListItemEl(s) {
   const item = el(`
     <div class="std-item set-row ${STATUS[kind] ? STATUS[kind].cls : ''} ${state.ui.currentSetId === s.id ? 'active' : ''}">
       <div class="std-item-top">
-        <span class="std-code">${kind === 'draft' ? `${statusPill('draft')} ` : ''}${esc(s.title || 'Untitled set')}</span>
+        <span class="std-code">${esc(s.title || 'Untitled set')}</span>
+        ${readinessChipHtml(s)}
         <button class="q-remove" data-del-set="${s.id}" title="Delete set">${ico('close')}</button>
       </div>
-      <div class="std-desc">${s.gaGrade ? `G${esc(s.gaGrade)} · ` : ''}${esc(s.passageId ? 'ID: ' + s.passageId : 'No passage ID')} · ${s.passages.length} passage${s.passages.length !== 1 ? 's' : ''} · ${tags} tagged</div>
-      ${readinessChipHtml(s)}
-      ${s.passages.some(p => p.title)
-        ? `<div class="std-desc set-passage-titles">${s.passages.filter(p => p.title).map(p => esc(p.title)).join(' · ')}</div>`
-        : ''}
+      <div class="std-desc">${s.gaGrade ? `G${esc(s.gaGrade)} · ` : ''}${esc(s.passageId ? 'ID ' + s.passageId : 'No ID')} · ${s.passages.length}p · ${tags} tagged</div>
     </div>`);
   item.addEventListener('click', e => {
     if (e.target.closest('[data-del-set]')) {
