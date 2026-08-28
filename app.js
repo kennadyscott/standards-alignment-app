@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608272307';   // replaced with the deploy stamp
+const APP_BUILD = '202608281236';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -633,16 +633,34 @@ function renderSignIn() {
 
 function updateSaveBadge() {
   const b = document.getElementById('saveBadge');
+  const chip = document.getElementById('sessionChip');
+  const label = document.getElementById('sessionLabel');
+  const status = document.getElementById('sessionStatus');
   if (!b) return;
   if (sbMode) {
-    b.classList.remove('hidden');
-    if (!SB.user) { b.textContent = 'Sign in'; b.className = 'btn btn-ghost badge-warn'; return; }
-    b.textContent = syncTrouble ? '⚠ ' + (syncError || 'save problem')
-                                : '● ' + SB.user.email;
-    b.className = 'btn btn-ghost ' + (syncTrouble ? 'badge-warn' : 'badge-ok');
-    b.title = syncTrouble ? syncError : 'Saving live. Click to sign out.';
+    if (!SB.user) {
+      if (chip) chip.classList.add('hidden');
+      b.classList.remove('hidden');
+      b.textContent = 'Sign in';
+      b.className = 'btn btn-ghost';
+      b.title = 'Sign in to save';
+      return;
+    }
+    b.classList.add('hidden');
+    if (chip) {
+      chip.classList.remove('hidden');
+      chip.classList.toggle('is-warn', !!syncTrouble);
+      if (label) label.textContent = syncTrouble ? 'Issue' : 'Ready';
+      const tip = syncTrouble
+        ? (syncError || 'Save problem')
+        : 'Signed in as ' + SB.user.email;
+      chip.title = tip;
+      if (status) status.setAttribute('aria-label',
+        syncTrouble ? (syncError || 'Save problem') : 'Ready, signed in as ' + SB.user.email);
+    }
     return;
   }
+  if (chip) chip.classList.add('hidden');
   if (!ghMode) { b.classList.add('hidden'); return; }
   b.classList.remove('hidden');
   // Honest status: green only when a pull has actually SUCCEEDED — a token alone
@@ -6129,12 +6147,17 @@ function init() {
     state.ui.setFilterStatus = e.target.value; renderSetList(); syncHash();
   });
 
+  const signOutBtn = document.getElementById('signOutBtn');
+  if (signOutBtn) signOutBtn.addEventListener('click', async () => {
+    if (!SB.user) return;
+    if (!await appConfirm('Sign out?', 'You will need to sign in again on this browser.', { ok: 'Sign out', danger: true })) return;
+    await sbSignOut();
+    location.reload();
+  });
+
   document.getElementById('saveBadge').addEventListener('click', async (ev) => {
     if (sbMode) {
-      if (!SB.user) { renderSignIn(); return; }
-      if (!await appConfirm('Sign out?', 'Sign out of ' + SB.user.email + '?', { ok: 'Sign out', danger: true })) return;
-      await sbSignOut();
-      location.reload();
+      if (!SB.user) renderSignIn();
       return;
     }
     if (ghToken && !ev.shiftKey && !tokenRefused()) {
