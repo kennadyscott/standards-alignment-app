@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609012132';   // replaced with the deploy stamp
+const APP_BUILD = '202609012136';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3321,7 +3321,7 @@ function renderSetEditor() {
       <div class="empty-state">
         <div class="empty-icon" aria-hidden="true"></div>
         <h2>No passage set selected</h2>
-        <p>Create a new passage set or pick one from the list. Tag its questions to standards and the approved alignments for other states appear automatically.</p>
+        <p>Pick a set from the list. Tag its questions to standards and the approved alignments for other states appear automatically. New sets are generated from the Dashboard.</p>
       </div>`;
     return;
   }
@@ -6134,9 +6134,7 @@ function init() {
     const n = document.getElementById(id);
     if (n && !n.dataset.iconed) { n.dataset.iconed = '1'; n.insertAdjacentHTML('afterbegin', ico(name)); }
   };
-  decorate('genSetBtn', 'spark');
   decorate('cmsExportBtn', 'export');
-  decorate('newSetBtn', 'plus');
   wireCmdk();
   document.addEventListener('keydown', e => {
     if ((e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K')) {
@@ -6182,15 +6180,6 @@ function init() {
   });
   bindSeg('inStageSeg', 'inStage', v => { state.ui.inStage = v; state.ui.openPicker = null; renderInput(); syncHash(); });
   bindStateSelect('dashStateSeg', false, state.ui.dashState, v => { state.ui.dashState = v; renderDash(); syncHash(); });
-
-  document.getElementById('newSetBtn').addEventListener('click', newPassageSet);
-  document.getElementById('genSetBtn').addEventListener('click', () => {
-    state.ui.currentSetId = null;
-    state.ui.genOpen = true;
-    state.ui.genResults = [];
-    state.ui.gen.words = wordBand(state.ui.gen.grade, state.ui.gen.passageCount).target;
-    renderPassages();
-  });
 
   // Master list filters: status + grade (grade options come from GRADES)
   const fstSel = document.getElementById('setFilterState');

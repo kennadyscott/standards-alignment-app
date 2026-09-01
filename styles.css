@@ -624,18 +624,6 @@ textarea:focus:not(:focus-visible) { outline: none; }
   gap: 8px;
   overflow: hidden;
 }
-.set-actions {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px;
-  flex-shrink: 0;
-}
-.set-actions .btn {
-  padding: 6px 8px;
-  font-size: 12.5px;
-  justify-content: center;
-  white-space: nowrap;
-}
 .set-filters .ps-input { padding: 6px 8px; font-size: 13px; }
 .set-filter-row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
 .set-filters-meta {
