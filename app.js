@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202608281236';   // replaced with the deploy stamp
+const APP_BUILD = '202609012132';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -173,7 +173,8 @@ const state = {
     inState: 'OH', inGrade: '4', overrideKey: null,
     inStage: 'all', inSelected: null,                  // State Lists: stage filter + selected set
     dashOpen: {}, dashState: 'OH',                     // Dashboard: expanded grades + which state's lists
-    setFilterStatus: 'all', setFilterGrade: 'all', setFilterState: 'all', setSearch: '',   // Master list filters
+    setFilterStatus: 'all', setFilterGrade: 'all', setFilterState: 'all',
+    setFilterSubtopic: 'all', setSearch: '',   // Master list filters
     currentSetId: null, openPicker: null,
     reviewFocus: null,                  // Review Queue: focused link id (keyboard)
     editPassages: false,                // Master List: read view vs textarea
@@ -1446,6 +1447,7 @@ function hashFromUi() {
     if (u.setFilterStatus !== 'all') p.set('status', u.setFilterStatus);
     if (u.setFilterGrade !== 'all') p.set('g', u.setFilterGrade);
     if (u.setFilterState !== 'all') p.set('pst', u.setFilterState);
+    if (u.setFilterSubtopic !== 'all') p.set('sub', u.setFilterSubtopic);
     if (u.setSearch) p.set('q', u.setSearch);
   } else if (u.view === 'input') {
     p.set('st', u.inState); p.set('g', u.inGrade);
@@ -1484,6 +1486,7 @@ function applyHash() {
     if (p.get('status')) u.setFilterStatus = p.get('status');
     if (g) u.setFilterGrade = g;
     if (p.get('pst')) u.setFilterState = p.get('pst');
+    if (p.get('sub')) u.setFilterSubtopic = p.get('sub');
     if (p.has('q')) u.setSearch = p.get('q');
   } else if (u.view === 'input') {
     if (st && STATES.includes(st)) u.inState = st;
@@ -1528,6 +1531,7 @@ function applyUiControls() {
   setSel('setFilterStatus', u.setFilterStatus);
   setSel('setFilterGrade', u.setFilterGrade);
   setSel('setFilterState', u.setFilterState);
+  setSel('setFilterSubtopic', u.setFilterSubtopic);
   const search = document.getElementById('setSearch');
   if (search) search.value = u.setSearch || '';
   const stdSearch = document.getElementById('stdSearch');
@@ -3055,6 +3059,12 @@ function questionBlockHtml(q, section, i, label, ctx) {
    "what you are looking at" and "what you export" can never drift apart. */
 function visibleMasterSets() {
   const fs = state.ui.setFilterStatus, fg = state.ui.setFilterGrade, fst = state.ui.setFilterState;
+  const fsub = state.ui.setFilterSubtopic;
+  // Hierarchy subtopic, as tagged on the set. "none" catches sets never classified —
+  // they are the ones that go missing, so they need to be reachable.
+  const matchesSubtopic = s => fsub === 'all' ? true
+    : fsub === 'none' ? !s.gaSubtopic
+    : s.gaSubtopic === fsub;
   // Primary state: the explicit dropdown choice, else the tagged standard's state.
   // Literary/Literary Non-Fiction anchor to a universal sub-genre (state "ALL") and so
   // serve every state — they match any specific state as well as their own option.
@@ -3092,7 +3102,55 @@ function visibleMasterSets() {
   return state.sets.filter(s =>
     matchesStatus(s) &&
     (fg === 'all' || String(s.gaGrade) === fg) &&
-    matchesState(s) && matchesSearch(s));
+    matchesState(s) && matchesSubtopic(s) && matchesSearch(s));
+}
+
+/* Hierarchy subtopic filter. Counts reflect the OTHER filters — status, grade, primary
+   state, search — but not this one, so each number is what you would actually get if you
+   picked it. Grouped by genre rather than listed flat, because "Science" and "Poetry"
+   sitting in one alphabetical run tells you nothing about which is which. */
+function buildSubtopicFilter() {
+  const sel = document.getElementById('setFilterSubtopic');
+  if (!sel) return;
+  // Count against everything except this filter, by standing it down for the tally.
+  const keep = state.ui.setFilterSubtopic;
+  state.ui.setFilterSubtopic = 'all';
+  const pool = visibleMasterSets();
+  state.ui.setFilterSubtopic = keep;
+
+  const counts = {};
+  pool.forEach(s => { const k = s.gaSubtopic || 'none'; counts[k] = (counts[k] || 0) + 1; });
+  // Keep the current pick listed even at zero, so narrowing the grade under it shows an
+  // honest empty list instead of silently snapping back to "All subtopics".
+  if (keep && keep !== 'all' && !counts[keep]) counts[keep] = 0;
+  const has = k => counts[k] !== undefined;
+
+  const GROUPS = [
+    ['Informational', ['Science', 'Social Studies', 'History', 'Geography', 'Government', 'Economics']],
+    ['Literary', ['Poetry', 'Narrative Fiction', 'Traditional Literature', 'Short Literary Forms']],
+    ['Literary Non-Fiction', ['Biographies', 'True Narratives']],
+  ];
+  const listed = new Set(GROUPS.flatMap(([, subs]) => subs));
+  // A state with its own taxonomy (Texas) tags subtopics we do not hard-code; show
+  // whatever is actually in use rather than silently omitting it.
+  const extra = Object.keys(counts).filter(k => k !== 'none' && !listed.has(k)).sort();
+
+  const opt = k => `<option value="${esc(k)}">${esc(k)} (${counts[k]})</option>`;
+  const group = ([label, subs]) => {
+    const shown = subs.filter(has);
+    return shown.length ? `<optgroup label="${esc(label)}">${shown.map(opt).join('')}</optgroup>` : '';
+  };
+  const html = `<option value="all">All subtopics</option>`
+    + GROUPS.map(group).join('')
+    + (extra.length ? `<optgroup label="Other">${extra.map(opt).join('')}</optgroup>` : '')
+    + (has('none') ? `<option value="none">No subtopic tagged (${counts.none})</option>` : '');
+
+  if (sel.innerHTML !== html) sel.innerHTML = html;   // don't stomp an open dropdown
+  if (state.ui.setFilterSubtopic && [...sel.options].some(o => o.value === state.ui.setFilterSubtopic)) {
+    sel.value = state.ui.setFilterSubtopic;
+  } else {
+    state.ui.setFilterSubtopic = 'all'; sel.value = 'all';
+  }
 }
 
 function buildPrimaryStateFilter() {
@@ -3218,6 +3276,7 @@ function renderSetList() {
     return;
   }
   buildPrimaryStateFilter();
+  buildSubtopicFilter();
   const list = visibleMasterSets();
   const countEl = document.getElementById('setFilterCount');
   if (countEl) countEl.textContent = list.length === state.sets.length
@@ -6145,6 +6204,9 @@ function init() {
   fgSel.addEventListener('change', e => { state.ui.setFilterGrade = e.target.value; renderSetList(); syncHash(); });
   document.getElementById('setFilterStatus').addEventListener('change', e => {
     state.ui.setFilterStatus = e.target.value; renderSetList(); syncHash();
+  });
+  document.getElementById('setFilterSubtopic').addEventListener('change', e => {
+    state.ui.setFilterSubtopic = e.target.value; renderSetList(); syncHash();
   });
 
   const signOutBtn = document.getElementById('signOutBtn');
