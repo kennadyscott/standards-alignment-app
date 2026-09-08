@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609081452';   // replaced with the deploy stamp
+const APP_BUILD = '202609081512';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -207,6 +207,10 @@ const LS_SETFLAGAT = 'sa_setflagat_v1';
 const LS_SETSTATEID = 'sa_setstateid_v1';
 const LS_SETDELETED = 'sa_setdeleted_v1';
 const LS_SETEXPORTED = 'sa_setexported_v1';
+// The daily Done ticks and Josh's CMS counts were the only two team maps missing
+// from the mirror, so an offline tick had nowhere to survive.
+const LS_BOTDONE = 'sa_botdone_v1';
+const LS_CMSCOUNTS = 'sa_cmscounts_v1';
 
 const readLS = (k, fallback) => {
   try { return JSON.parse(localStorage.getItem(k)) || fallback; } catch { return fallback; }
@@ -229,6 +233,8 @@ function loadLocal() {
   state.setStateId = readLS(LS_SETSTATEID, {});
   state.setDeleted = readLS(LS_SETDELETED, {});
   state.setExported = readLS(LS_SETEXPORTED, {});
+  state.botDone = readLS(LS_BOTDONE, {});
+  state.cmsCounts = readLS(LS_CMSCOUNTS, {});
 }
 function mirrorLocal() {
   // localStorage is only a FALLBACK mirror — the cloud file is the source of truth.
@@ -254,6 +260,8 @@ function mirrorLocal() {
   put(LS_SETSTATEID, JSON.stringify(state.setStateId || {}));
   put(LS_SETDELETED, JSON.stringify(state.setDeleted || {}));
   put(LS_SETEXPORTED, JSON.stringify(state.setExported || {}));
+  put(LS_BOTDONE, JSON.stringify(state.botDone || {}));
+  put(LS_CMSCOUNTS, JSON.stringify(state.cmsCounts || {}));
   if (!put(LS_SETS, JSON.stringify(state.sets))) {
     try { localStorage.removeItem(LS_SETS); } catch { /* nothing left to free */ }
   }
@@ -5655,9 +5663,53 @@ function botWork() {
   return out;
 }
 
+/* The Morning Board's handlers. These used to sit inside renderDash(), which meant they
+   were only ever attached if someone visited the Dashboard first: open the app straight
+   onto the Board -- a bookmark, a #v=bots link, a reload while it was the last view --
+   and every "Done today" box was inert. It still ticked, because a checkbox always
+   ticks, but nothing was recorded and the next render cleared it. Bound from renderBots
+   so it cannot depend on where anyone happened to click first. */
+function bindBotsBoard() {
+  const bots = document.getElementById('botsWrap');
+  if (!bots || bots.dataset.bound) return;
+  bots.dataset.bound = '1';
+  bots.addEventListener('change', e => {
+    const cb = e.target.closest('[data-botdone]');
+    if (!cb) return;
+    const k = botDoneKey(cb.dataset.botdone);
+    if (cb.checked) state.botDone[k] = `${(SB.user && SB.user.email) || 'someone'}|${new Date().toISOString()}`;
+    else delete state.botDone[k];
+    pushState();
+    renderBots();
+  });
+  bots.addEventListener('click', e => {
+    if (e.target.closest('#joshSave')) { joshSave(); return; }
+    const cp = e.target.closest('[data-botcopy]');
+    if (cp) {
+      const txt = botBrief(cp.dataset.botcopy);
+      navigator.clipboard.writeText(txt)
+        .then(() => toast('✓ Brief copied — paste it to the bot'))
+        .catch(() => toast('⚠ Could not reach the clipboard'));
+      return;
+    }
+    const go = e.target.closest('[data-botgo]');
+    if (!go) return;
+    const [bot, st, grade] = go.dataset.botgo.split('|');
+    const b = BOTS.find(x => x.key === bot);
+    if (b && b.stage) {
+      state.ui.inState = st; state.ui.inGrade = grade; state.ui.inStage = b.stage;
+      document.querySelector('[data-view="input"]').click();
+    } else {
+      state.ui.dashState = st;
+      document.querySelector('[data-view="dash"]').click();
+    }
+  });
+}
+
 function renderBots() {
   const wrap = document.getElementById('botsWrap');
   if (!wrap) return;
+  bindBotsBoard();
   const work = botWork();
   const outstanding = BOTS.reduce((a, b) => a + (state.botDone[botDoneKey(b.key)] ? 0 : work[b.key].total ? 1 : 0), 0);
   const badge = document.getElementById('botsBadge');
@@ -5989,42 +6041,6 @@ function renderDash() {
         })()}
       </div>`));
   });
-
-  const bots = document.getElementById('botsWrap');
-  if (bots && !bots.dataset.bound) {
-    bots.dataset.bound = '1';
-    bots.addEventListener('change', e => {
-      const cb = e.target.closest('[data-botdone]');
-      if (!cb) return;
-      const k = botDoneKey(cb.dataset.botdone);
-      if (cb.checked) state.botDone[k] = `${(SB.user && SB.user.email) || 'someone'}|${new Date().toISOString()}`;
-      else delete state.botDone[k];
-      pushState();
-      renderBots();
-    });
-    bots.addEventListener('click', e => {
-      if (e.target.closest('#joshSave')) { joshSave(); return; }
-      const cp = e.target.closest('[data-botcopy]');
-      if (cp) {
-        const txt = botBrief(cp.dataset.botcopy);
-        navigator.clipboard.writeText(txt)
-          .then(() => toast('✓ Brief copied — paste it to the bot'))
-          .catch(() => toast('⚠ Could not reach the clipboard'));
-        return;
-      }
-      const go = e.target.closest('[data-botgo]');
-      if (!go) return;
-      const [bot, st, grade] = go.dataset.botgo.split('|');
-      const b = BOTS.find(x => x.key === bot);
-      if (b && b.stage) {
-        state.ui.inState = st; state.ui.inGrade = grade; state.ui.inStage = b.stage;
-        document.querySelector('[data-view="input"]').click();
-      } else {
-        state.ui.dashState = st;
-        document.querySelector('[data-view="dash"]').click();
-      }
-    });
-  }
 
   wrap.addEventListener('click', e => {
     const cell = e.target.closest('[data-gencell]');
