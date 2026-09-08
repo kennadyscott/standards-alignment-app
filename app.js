@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609012136';   // replaced with the deploy stamp
+const APP_BUILD = '202609081452';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -5010,9 +5010,22 @@ const STAGE_BOTS = {
   standards: { bot: 'Stanley', does: "tags each question's standard" },
   peer:      { bot: 'Georgia', does: 'develops the Peer Revision task' },
 };
-const DASH_BOT = { bot: 'Herman', does: 'fills in passage sets' };
+/* The Dashboard has two owners, one per side of every split column: Herman builds what
+   the Ours number counts, Josh reads the CMS and refreshes the CMS number beside it. */
+const DASH_BOTS = [
+  { bot: 'Herman', does: 'fills in passage sets' },
+  { bot: 'Josh',   does: 'updates the CMS numbers' },
+];
 function botNoteHtml(entry) {
-  return `<div class="bot-note"><span class="bot-badge">Grokbot ${esc(entry.bot)}</span>${esc(entry.does)}</div>`;
+  return `<div class="bot-note">${botPairHtml(entry)}</div>`;
+}
+function botPairHtml(entry) {
+  return `<span class="bot-badge">Grokbot ${esc(entry.bot)}</span>${esc(entry.does)}`;
+}
+// One row, both owners -- two stacked notes would push the grade cards down for no gain.
+function botNotesHtml(entries) {
+  return `<div class="bot-note bot-note-multi">${
+    entries.map(e => `<span class="bot-pair">${botPairHtml(e)}</span>`).join('')}</div>`;
 }
 
 function inputStages(st) {
@@ -5834,7 +5847,7 @@ function renderDash() {
   const wrap = document.getElementById('dashWrap');
   if (!wrap) return;
   wrap.innerHTML = '';
-  wrap.appendChild(el(botNoteHtml(DASH_BOT)));
+  wrap.appendChild(el(botNotesHtml(DASH_BOTS)));
   if (!state.sets.length) {
     wrap.appendChild(el(`<div class="review-empty">No passage sets yet.</div>`));
     return;

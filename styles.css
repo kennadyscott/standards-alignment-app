@@ -1155,6 +1155,10 @@ textarea:focus:not(:focus-visible) { outline: none; }
 /* The dashboard lays its grade cards out in a grid; without this the note would take a
    cell and sit beside Grade 2 rather than heading the page. */
 .dash-wrap > .bot-note { grid-column: 1 / -1; margin-bottom: 0; }
+/* Two owners on one line. It wraps rather than squeezing on a narrow window, and the
+   gap alone separates them -- a divider between two chips reads as a third thing. */
+.bot-note-multi { flex-wrap: wrap; gap: 8px 22px; }
+.bot-pair { display: inline-flex; align-items: center; gap: 8px; }
 .bot-badge {
   flex: none;
   padding: 2px 8px; border-radius: 999px;
