@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609081512';   // replaced with the deploy stamp
+const APP_BUILD = '202609082151';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -766,6 +766,15 @@ let syncTimer;
 let serverAvailable = false;
 function postState(onDone) {
   if (sbMode) {
+    // Dev machines point at the same live Supabase project as production (see config.js) —
+    // auth and reads still hit it so the app is usable locally, but local edits must never
+    // land in the shared database. Skip the write, keep the "saved" UI state consistent.
+    if (builderIsLocalDev()) {
+      dirtyLocal = false; lastSyncAt = new Date(); syncTrouble = false; syncError = '';
+      updateSaveBadge();
+      if (onDone) onDone(true);
+      return;
+    }
     sbSaveDirty(state).then(r => {
       if (r.error) {
         syncTrouble = true; syncError = r.error;
@@ -2814,6 +2823,219 @@ async function exportForCms() {
   toast(problems.length
     ? `Saved ${base}.zip — ${itemSets.length} sets · ${qRows.length} questions, ${problems.length} need attention (see the JSON)`
     : `✓ Saved ${base}.zip — ${itemSets.length} sets · ${qRows.length} questions, all complete`);
+}
+
+/* ---------- Builder API import — separate call, alongside the zip export above.
+   No auth header yet; add one once the builder API's token scheme is wired up. ---------- */
+// Dev is any localhost/127.0.0.1 origin — the deployed GitHub Pages app is production.
+function builderIsLocalDev() {
+  const h = location.hostname;
+  return h === 'localhost' || h === '127.0.0.1';
+}
+const BUILDER_IMPORT_URL = builderIsLocalDev()
+  ? 'https://localhost:44393/api/ECRItemSetStaticQ/ImportItemSetFromBuilder'
+  : 'https://admin.api.cleark12.com/api/ECRItemSetStaticQ/ImportItemSetFromBuilder';
+
+// The CMS's own numeric grade IDs. PK/9-12 are included for completeness even though
+// this app currently only authors grades 2-8 (see GRADES/GA_GRADES).
+const BUILDER_GRADE_ID = {
+  PK: 99, K: 100, '1': 101, '2': 102, '3': 103, '4': 104, '5': 105,
+  '6': 106, '7': 107, '8': 108, '9': 109, '10': 110, '11': 111, '12': 112,
+};
+
+const BUILDER_QUESTION_TYPE_ID = { multiple_choice: 1, text_entry: 3, multi_select: 4, cloze: 5 };
+
+function builderDiv(text) { return `<div>${htmlEscape(text)}</div>`; }
+
+function builderRandToken(len) {
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  let s = '';
+  for (let i = 0; i < (len || 10); i++) s += chars[Math.floor(Math.random() * chars.length)];
+  return s;
+}
+
+// One entry per state this question is tagged for, codes comma-joined — matches the
+// ImportItemSetQuestionStateStandards DTO (StateName, StandardId as a CSV string).
+function builderStateStandards(q) {
+  const byState = {};
+  const add = t => { if (t && t.state && t.code) (byState[t.state] = byState[t.state] || []).push(t.code); };
+  add(q.standard);
+  Object.values(q.stateStandards || {}).forEach(add);
+  return Object.keys(byState).map(st => ({
+    StateName: STATE_NAMES[st] || st,
+    StandardId: byState[st].join(','),
+  }));
+}
+
+// The shared parseQuestion() scans the WHOLE answer line for any standalone a-h letter,
+// which misfires when the key restates the full option text — e.g. "Answer: b. To
+// explain how children helped clean a natural resource" reads the article "a" in
+// "clean a natural resource" as a second correct choice. Answer letters only ever
+// appear at the START of the line (or comma-separated, for multi-select), so anchoring
+// there avoids picking up stray a-h letters from restated prose.
+function builderAnswerLetters(p) {
+  if (p.options.some(o => o.checked)) return p.options.filter(o => o.checked).map(o => o.label).sort();
+  const m = String(p.answerRaw || '').match(/^\s*([a-h](?:\s*,\s*[a-h])*)\b/i);
+  return m ? [...new Set(m[1].toLowerCase().split(/\s*,\s*/))].sort() : [];
+}
+
+function builderQuestionPart(q) {
+  const p = parseQuestion(q);
+  const isCloze = q.type === 'cloze';
+  const typeId = BUILDER_QUESTION_TYPE_ID[q.type] || BUILDER_QUESTION_TYPE_ID.text_entry;
+
+  if (isCloze) {
+    const cloze = buildClozeItem(p, q.text);
+    // Swap each "Dropdown Response" placeholder for the CMS's custom-response markup,
+    // one token per blank, in the order the blanks appear in the sentence.
+    const tokens = cloze.responses.map(() => builderRandToken());
+    let i = 0;
+    const sentenceHtml = cloze.sentence.replace(new RegExp(CLOZE_PLACEHOLDER, 'g'), () => {
+      const token = tokens[i++] || tokens[tokens.length - 1];
+      return `<customresponseblock class="parentresponse"><span contenteditable="false"><span contenteditable="false">`
+        + `<span class="response" data-value="${token}" data-answertype="dropdown">Dropdown Response</span> </span></span></customresponseblock>`;
+    });
+    const clozeAnswer = [];
+    cloze.responses.forEach((r, ri) => {
+      const token = tokens[ri];
+      r.options.forEach(o => clozeAnswer.push({
+        answerTypeId: 2, answer: o.text, responseName: token, isCorrect: !!o.correct,
+      }));
+    });
+    return {
+      questionText: builderDiv(CLOZE_QUESTION_TEXT),
+      questionTypeId: typeId,
+      stateStandards: builderStateStandards(q),
+      answers: [{ answer: `<div>${sentenceHtml}</div>`, isCorrect: false }],
+      clozeAnswer,
+    };
+  }
+
+  const isChoice = q.type === 'multiple_choice' || q.type === 'multi_select';
+  let correctLetters = isChoice ? builderAnswerLetters(p) : [];
+  // Multiple Choice only ever has one right answer — clamp to the first letter found as
+  // a safety net, even if parsing (or the underlying data) somehow produced more than one.
+  if (q.type === 'multiple_choice' && correctLetters.length > 1) correctLetters = [correctLetters[0]];
+  const answers = isChoice
+    ? p.options.map(o => ({ answer: builderDiv(o.text), isCorrect: correctLetters.includes(o.label) }))
+    : [{ answer: p.answerRaw || '', isCorrect: true }];
+
+  return {
+    questionText: builderDiv(p.stem),
+    questionTypeId: typeId,
+    stateStandards: builderStateStandards(q),
+    answers,
+    clozeAnswer: [],
+  };
+}
+
+function builderQuestionEntry(q, isPeerRevision) {
+  return { isPeerRevision, questionParts: [builderQuestionPart(q)] };
+}
+
+function builderSubTopics(s) {
+  return cmsSubTopics(s).map(r => ({ stateName: r.state_name, subTopicName: r.sub_topic }));
+}
+
+// Passage text carries its paragraph breaks as \n — a single div holding raw newlines
+// wouldn't visibly break in HTML, so each paragraph gets its own sibling <div>.
+function builderPassageHtml(text) {
+  return String(text || '').split(/\n\s*\n|\n/).map(t => t.trim()).filter(Boolean)
+    .map(t => builderDiv(t)).join('');
+}
+
+function builderPassages(s) {
+  return (s.passages || []).map(p => ({ passage: builderPassageHtml(p.text || ''), title: p.title || '' }));
+}
+
+function builderItemSet(s) {
+  return {
+    sourceId: s.id,
+    title: s.title || '',
+    writingPrompt: (s.writingPrompt || {}).text || '',
+    gradeId: BUILDER_GRADE_ID[String(s.gaGrade || '')] ?? null,
+    itemSetType: s.itemSetType || '',
+    topicName: s.genre || '',
+    passages: builderPassages(s),
+    subTopics: builderSubTopics(s),
+    questions: [
+      ...(s.questions || []).filter(q => (q.text || '').trim()).map(q => builderQuestionEntry(q, false)),
+      ...(s.peerRevision || []).filter(q => (q.text || '').trim()).map(q => builderQuestionEntry(q, true)),
+    ],
+  };
+}
+
+const BUILDER_BATCH_SIZE = 10;
+const BUILDER_MAX_COUNT = 100;
+
+async function importToBuilderApi() {
+  const countInput = document.getElementById('cmsExportCount');
+  const requested = countInput ? parseInt(countInput.value, 10) : BUILDER_MAX_COUNT;
+  const maxSets = Math.min(BUILDER_MAX_COUNT, Math.max(1, requested || BUILDER_MAX_COUNT));
+
+  // A set is sendable when its content is complete AND the CMS does not already hold it.
+  // `.ready` alone means only "complete", so on any filter but "Ready for export" -- the
+  // page opens on "All statuses" -- the first click would re-send sets that already have
+  // a passage ID and create duplicates in the CMS. hasId (not stage === 'ready') is the
+  // test, so a set that was zip-exported but never landed in the CMS still gets sent.
+  const all = visibleMasterSets().filter(s => exportReadiness(s).ready);
+  const ready = all.filter(s => !exportReadiness(s).hasId);
+  const alreadyInCms = all.length - ready.length;
+  if (!ready.length) {
+    toast(alreadyInCms
+      ? `Nothing to send — all ${alreadyInCms} ready set${alreadyInCms === 1 ? ' is' : 's are'} already in the CMS`
+      : 'Nothing to send — no sets shown here are ready');
+    return;
+  }
+  const sets = ready.slice(0, maxSets);
+  const skipped = ready.length - sets.length;
+
+  const cmsBtn = document.getElementById('cmsExportBtn');
+  const originalLabel = cmsBtn ? cmsBtn.textContent : '';
+  if (cmsBtn) { cmsBtn.disabled = true; cmsBtn.textContent = 'Importing…'; }
+
+  let ok = 0, failed = 0, httpErrors = 0;
+  let updatedCurrent = false;
+  try {
+    for (let i = 0; i < sets.length; i += BUILDER_BATCH_SIZE) {
+      const chunk = sets.slice(i, i + BUILDER_BATCH_SIZE);
+      try {
+        const res = await fetch(BUILDER_IMPORT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(chunk.map(builderItemSet)),
+        });
+        if (!res.ok) { httpErrors += chunk.length; continue; }
+        // Expected response: [{ sourceId, status: "success" | "failed", passageId }, ...]
+        const results = await res.json();
+        results.forEach(r => {
+          if (r.status === 'success') ok++; else failed++;
+          // Dev points at the same live Supabase project as production — never let a local
+          // test run write a passage ID back into the shared data.
+          if (builderIsLocalDev() || r.status !== 'success' || !r.passageId) return;
+          const target = state.sets.find(x => x.id === r.sourceId);
+          if (!target) return;
+          target.passageId = r.passageId;
+          target.updatedBy = (typeof sbActor === 'function' ? sbActor() : '') || (SB.user && SB.user.email) || '';
+          target.updatedAt = new Date().toISOString();
+          if (target.id === state.ui.currentSetId) updatedCurrent = true;
+        });
+      } catch (e) {
+        httpErrors += chunk.length;
+      }
+    }
+  } finally {
+    if (cmsBtn) { cmsBtn.disabled = false; cmsBtn.textContent = originalLabel; }
+  }
+  if (!builderIsLocalDev() && ok) {
+    pushState(); renderSetList();
+    if (updatedCurrent) renderSetEditor();
+  }
+  const failedTotal = failed + httpErrors;
+  toast(`Sent to CMS: ${ok}${failedTotal ? `, ${failedTotal} failed` : ''}`
+    + ` (${sets.length} of ${ready.length} not yet in the CMS, cap ${maxSets})`
+    + (skipped ? ` — ${skipped} left for the next run` : '')
+    + (alreadyInCms ? ` · ${alreadyInCms} skipped, already in the CMS` : ''));
 }
 
 function exportData() {
@@ -6306,6 +6528,25 @@ function init() {
   document.getElementById('exportBtn').addEventListener('click', exportData);
   const cmsBtn = document.getElementById('cmsExportBtn');
   if (cmsBtn) cmsBtn.addEventListener('click', exportForCms);
+  // Sending to the CMS is a separate, outward action and gets its own button. Hanging it
+  // off Export meant one click both downloaded a zip AND wrote to the live CMS, and the
+  // two disagreed about which sets they covered (Export takes every visible ready set,
+  // this takes the first N).
+  const cmsSendBtn = document.getElementById('cmsSendBtn');
+  if (cmsSendBtn) cmsSendBtn.addEventListener('click', () => {
+    const n = document.getElementById('cmsExportCount');
+    const cap = Math.min(BUILDER_MAX_COUNT, Math.max(1, parseInt(n && n.value, 10) || BUILDER_MAX_COUNT));
+    // Writes straight into the live CMS and cannot be undone from here.
+    if (confirm(`Send up to ${cap} item set${cap === 1 ? '' : 's'} into the CMS?\n\n`
+      + 'This writes to the live CMS right away. Sets already in the CMS are skipped.')) {
+      importToBuilderApi();
+    }
+  });
+  const cmsCountInput = document.getElementById('cmsExportCount');
+  if (cmsCountInput) cmsCountInput.addEventListener('change', e => {
+    const v = Math.min(BUILDER_MAX_COUNT, Math.max(1, parseInt(e.target.value, 10) || BUILDER_MAX_COUNT));
+    e.target.value = v;
+  });
 
   // A browser can hold a cached index.html that points at an older store.js. Everything
   // then looks fine while behaving subtly wrong -- a saved "done" tick that never shows,
