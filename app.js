@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609091334';   // replaced with the deploy stamp
+const APP_BUILD = '202609091346';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2725,6 +2725,35 @@ function cmsPassageIdFor(s) {
   return (state.setStateId || {})[inputKey(s.id, st, String(s.gaGrade))] || s.passageId || '';
 }
 
+/* Paragraph numbering. ECR passages are numbered "1. ", "2. " so a question can point at
+   a paragraph, and Bernard both adds numbers where there are none and repairs sequences
+   that are wrong. Multi-passage sets are inconsistent in the library about whether the
+   second passage restarts at 1 or carries on from the first (237 restart, 94 continue),
+   so BOTH are accepted -- only a sequence that is neither is wrong. */
+function passageParaLines(p) {
+  return String((p || {}).text || '').split('\n').map(l => l.trim()).filter(Boolean);
+}
+function numberingProblem(s) {
+  const passages = (s.passages || []).filter(p => passageParaLines(p).length);
+  if (!passages.length) return '';                       // no text yet: not Bernard's job
+  let anyNumbered = false, prevLast = 0, broken = '';
+  passages.forEach((p, pi) => {
+    const lines = passageParaLines(p);
+    const nums = lines.map(l => { const m = l.match(/^(\d+)\.\s/); return m ? +m[1] : null; });
+    const have = nums.filter(n => n !== null);
+    if (!have.length) { prevLast = 0; return; }
+    anyNumbered = true;
+    const where = passages.length > 1 ? `passage ${pi + 1}: ` : '';
+    if (have.length !== nums.length) broken = broken || `${where}${nums.length - have.length} of ${nums.length} paragraphs unnumbered`;
+    else if (have.some((n, i) => i && n <= have[i - 1])) broken = broken || `${where}out of order`;
+    else if (have[have.length - 1] - have[0] !== have.length - 1) broken = broken || `${where}gaps in the sequence`;
+    else if (have[0] !== 1 && have[0] !== prevLast + 1) broken = broken || `${where}starts at ${have[0]}`;
+    prevLast = have[have.length - 1];
+  });
+  if (broken) return broken;
+  return anyNumbered ? '' : 'no paragraph numbers';
+}
+
 function exportReadiness(s) {
   const reasons = [];
   const passages = (s.passages || []).filter(p => (p.text || '').trim());
@@ -3377,6 +3406,8 @@ function visibleMasterSets() {
       // Back from the CMS with an ID but nobody has approved it yet — the queue that
       // opens up now that sets go to the CMS BEFORE they are approved, not after.
       case 'has-id-draft': return exportReadiness(s).hasId && isDraft(s);
+      // Bernard's queue, reachable from the dropdown as well as from his row.
+      case 'needs-numbers': return !!numberingProblem(s);
       default:          return true;
     }
   };
@@ -5884,6 +5915,8 @@ const BOTS = [
     stage: 'enter', unit: 'set' },
   { key: 'herman', name: 'Herman', job: 'Builds new passage sets from state dashboards',
     kind: 'dash', unit: 'gap' },
+  { key: 'bernard', name: 'Bernard', job: 'Numbers the paragraphs in passages that have none, and repairs sequences that are wrong',
+    kind: 'numbering', unit: 'set' },
   { key: 'josh', name: 'Josh', job: 'Builds count list for updated CMS numbers in the dashboard',
     kind: 'cms', unit: 'grade' },
 ];
@@ -5943,6 +5976,8 @@ function botWork() {
       });
       if (gap) { out.herman.rows.push({ state: st, grade: g, n: gap }); out.herman.total += gap; }
 
+      // Bernard works per SET, not per state list, so his rows are built after this
+      // state x grade sweep rather than inside it.
       // Josh: grades with no CMS numbers, or numbers captured only in part.
       ['informative', 'opinion'].forEach(type => {
         const b = cmsBucket(st, type, g);
@@ -5951,6 +5986,22 @@ function botWork() {
       });
     });
   });
+
+  // Bernard: every set whose paragraph numbering is missing or wrong, grouped the way
+  // the Passages filters work so one of his rows can open exactly that list.
+  {
+    const tally = new Map();
+    state.sets.forEach(s => {
+      if (!numberingProblem(s)) return;
+      const st = primaryStateOf(s) || ((s.standard || {}).state) || 'none';
+      const g = String(s.gaGrade || '');
+      const k = st + '|' + g;
+      if (!tally.has(k)) tally.set(k, { state: st, grade: g, n: 0 });
+      tally.get(k).n++;
+      out.bernard.total++;
+    });
+    out.bernard.rows = [...tally.values()];
+  }
   return out;
 }
 
@@ -5987,6 +6038,18 @@ function bindBotsBoard() {
     if (!go) return;
     const [bot, st, grade] = go.dataset.botgo.split('|');
     const b = BOTS.find(x => x.key === bot);
+    // Bernard's work is per set, so his rows open the Passages list on his own filter
+    // rather than a State List stage.
+    if (b && b.kind === 'numbering') {
+      state.ui.setFilterStatus = 'needs-numbers';
+      state.ui.setFilterState = st || 'all';
+      state.ui.setFilterGrade = grade || 'all';
+      state.ui.setFilterSubtopic = 'all';
+      state.ui.setSearch = '';
+      document.querySelector('[data-view="passages"]').click();
+      applyUiControls();
+      return;
+    }
     if (b && b.stage) {
       state.ui.inState = st; state.ui.inGrade = grade; state.ui.inStage = b.stage;
       document.querySelector('[data-view="input"]').click();
