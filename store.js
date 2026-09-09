@@ -9,7 +9,7 @@
    snapshot of what the server holds and diff against it. No editor code has to
    announce what it touched, so nothing is missed by forgetting to instrument a path. */
 
-const STORE_BUILD = '202609091253';
+const STORE_BUILD = '202609091317';
 
 const SB = {
   client: null,
@@ -130,6 +130,23 @@ function stableStringify(v) {
 }
 
 // Compare only the columns we own; server-managed ones (updated_at) always differ.
+/* Which content columns a pending row would empty out, judged against the last copy the
+   server is known to hold. SB.snapSets stores that copy as its stringified row, so the
+   previous content is already here -- no extra bookkeeping to drift out of sync. */
+function contentLost(prevSig, row) {
+  if (!prevSig) return [];                      // never seen: nothing to lose
+  let prev;
+  try { prev = JSON.parse(prevSig); } catch { return []; }
+  return LIST_COLS.filter(col =>
+    Array.isArray(prev[col]) && prev[col].length && !((row[col] || []).length));
+}
+
+// The one case where emptying is real: a person cleared the set they have open. Any
+// second set in the same save is a background write, and those are never deliberate.
+function soleDeliberateEdit(state, id, alreadyBlanked) {
+  return alreadyBlanked === 0 && !!state.ui && state.ui.currentSetId === id;
+}
+
 function rowCompare(r) {
   const o = {};
   Object.values(SET_COLS).forEach(col => { o[col] = r[col] === undefined ? null : r[col]; });
@@ -171,12 +188,28 @@ async function sbSaveDirty(state) {
   if (!SB.user) return { saved: 0, error: 'not signed in' };
 
   const setRows = [];
+  const blanked = [];
   (state.sets || []).forEach(s => {
     if (!s || !s.id) return;
     const row = rowFromSet(s);
     const sig = stableStringify(rowCompare(row));
-    if (SB.snapSets.get(s.id) !== sig) setRows.push({ row: row, sig: sig });
+    const prev = SB.snapSets.get(s.id);
+    if (prev === sig) return;
+    const lost = contentLost(prev, row);
+    // A save that would wipe passages/questions off a set the server has content for is
+    // refused. On 2026-09-09 an out-of-band status change made the app write its own
+    // copies of 134 sets back in one upsert, and rowFromSet turns a missing field into an
+    // empty list -- so every one of them lost its passage text in a single statement.
+    // Emptying a set by hand still works: that is one set, and it is the open one.
+    if (lost.length && !soleDeliberateEdit(state, s.id, blanked.length)) {
+      blanked.push({ id: s.id, title: s.title || '', lost: lost });
+      return;                                   // stays dirty, so nothing is silently lost
+    }
+    setRows.push({ row: row, sig: sig });
   });
+  if (blanked.length) {
+    console.warn('[save] refused to blank content on ' + blanked.length + ' set(s):', blanked);
+  }
 
   const kvRows = [];
   KV_MAPS.forEach(ns => {
@@ -188,6 +221,7 @@ async function sbSaveDirty(state) {
   });
 
   let saved = 0, error = null;
+  const blockedCount = blanked.length;
   for (let i = 0; i < setRows.length && !error; i += 200) {
     const chunk = setRows.slice(i, i + 200);
     const res = await c.from('sets').upsert(chunk.map(x => x.row), { onConflict: 'id' });
@@ -218,7 +252,7 @@ async function sbSaveDirty(state) {
     }
   }
   SB.lastError = error || '';
-  return { saved: saved, error: error };
+  return { saved: saved, error: error, blocked: blockedCount, blockedSets: blanked };
 }
 
 /* ---------- live updates ---------- */

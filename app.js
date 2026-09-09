@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609091253';   // replaced with the deploy stamp
+const APP_BUILD = '202609091317';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -776,6 +776,12 @@ function postState(onDone) {
       return;
     }
     sbSaveDirty(state).then(r => {
+      // Content the save refused to wipe. Loud on purpose: the set is still right on the
+      // server, but this browser's copy is wrong, and only a reload puts that back.
+      if (r.blocked) {
+        toast(`⚠ ${r.blocked} set${r.blocked === 1 ? '' : 's'} would have lost passage or `
+          + 'question content — not saved. Reload the page.');
+      }
       if (r.error) {
         syncTrouble = true; syncError = r.error;
         toast('⚠ Save failed: ' + r.error);
