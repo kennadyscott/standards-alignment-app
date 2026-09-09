@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609082151';   // replaced with the deploy stamp
+const APP_BUILD = '202609091225';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2995,6 +2995,7 @@ async function importToBuilderApi() {
   if (cmsBtn) { cmsBtn.disabled = true; cmsBtn.textContent = 'Importing…'; }
 
   let ok = 0, failed = 0, httpErrors = 0;
+  let idsWritten = 0, unmatched = 0, lastRaw = '';
   let updatedCurrent = false;
   try {
     for (let i = 0; i < sets.length; i += BUILDER_BATCH_SIZE) {
@@ -3007,17 +3008,39 @@ async function importToBuilderApi() {
         });
         if (!res.ok) { httpErrors += chunk.length; continue; }
         // Expected response: [{ sourceId, status: "success" | "failed", passageId }, ...]
-        const results = await res.json();
-        results.forEach(r => {
-          if (r.status === 'success') ok++; else failed++;
+        // Read it LOOSELY. The first production run reported "2 sent" and wrote back no
+        // IDs at all, because an exact `r.passageId` match is the only thing that counts
+        // and anything else -- PascalCase off a .NET serializer, a different name, a null
+        // while the import is still queued -- is dropped silently. Accept the plausible
+        // spellings, and if a set comes back successful with no id we can use, say so
+        // instead of reporting a clean success that quietly did nothing.
+        const raw = await res.text();
+        lastRaw = raw.slice(0, 1500);
+        const results = JSON.parse(raw);
+        (Array.isArray(results) ? results : [results]).forEach(r => {
+          const pick = (...names) => {
+            for (const n of names) {
+              if (r[n] !== undefined && r[n] !== null && r[n] !== '') return r[n];
+            }
+            return '';
+          };
+          const status = String(pick('status', 'Status') || '').toLowerCase();
+          const good = status === 'success' || status === 'succeeded' || status === 'ok'
+            || (!status && !!pick('passageId', 'PassageId', 'passageID'));
+          if (good) ok++; else { failed++; return; }
+          const newId = pick('passageId', 'PassageId', 'passageID', 'PassageID',
+                             'itemSetId', 'ItemSetId', 'id', 'Id');
+          const srcId = pick('sourceId', 'SourceId', 'sourceID', 'SourceID');
           // Dev points at the same live Supabase project as production — never let a local
           // test run write a passage ID back into the shared data.
-          if (builderIsLocalDev() || r.status !== 'success' || !r.passageId) return;
-          const target = state.sets.find(x => x.id === r.sourceId);
-          if (!target) return;
-          target.passageId = r.passageId;
+          if (builderIsLocalDev()) return;
+          if (!newId || !srcId) { unmatched++; return; }
+          const target = state.sets.find(x => x.id === srcId);
+          if (!target) { unmatched++; return; }
+          target.passageId = String(newId);
           target.updatedBy = (typeof sbActor === 'function' ? sbActor() : '') || (SB.user && SB.user.email) || '';
           target.updatedAt = new Date().toISOString();
+          idsWritten++;
           if (target.id === state.ui.currentSetId) updatedCurrent = true;
         });
       } catch (e) {
@@ -3032,10 +3055,20 @@ async function importToBuilderApi() {
     if (updatedCurrent) renderSetEditor();
   }
   const failedTotal = failed + httpErrors;
+  // "sent" is not the same as "we got an ID back" -- reporting only the first is how a
+  // run can look clean while nothing was recorded on our side. Say both.
   toast(`Sent to CMS: ${ok}${failedTotal ? `, ${failedTotal} failed` : ''}`
+    + (ok ? ` · ${idsWritten} passage ID${idsWritten === 1 ? '' : 's'} written back` : '')
     + ` (${sets.length} of ${ready.length} not yet in the CMS, cap ${maxSets})`
     + (skipped ? ` — ${skipped} left for the next run` : '')
     + (alreadyInCms ? ` · ${alreadyInCms} skipped, already in the CMS` : ''));
+  // Accepted but no usable ID: show exactly what came back, so the field name (or a
+  // pending/queued import) can be identified without opening dev tools.
+  if (ok && !idsWritten && !builderIsLocalDev()) {
+    alert('The CMS accepted ' + ok + ' set' + (ok === 1 ? '' : 's') + ' but sent back no passage ID '
+      + 'this app could use, so nothing was recorded here.\n\n'
+      + 'This is exactly what came back — send it to Ayushi:\n\n' + (lastRaw || '(empty response)'));
+  }
 }
 
 function exportData() {
