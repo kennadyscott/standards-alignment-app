@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609091240';   // replaced with the deploy stamp
+const APP_BUILD = '202609091247';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2995,7 +2995,7 @@ async function importToBuilderApi() {
   if (cmsBtn) { cmsBtn.disabled = true; cmsBtn.textContent = 'Importing…'; }
 
   let ok = 0, failed = 0, httpErrors = 0;
-  let idsWritten = 0, unmatched = 0, lastRaw = '';
+  let idsWritten = 0, unmatched = 0, approved = 0, lastRaw = '';
   let updatedCurrent = false;
   try {
     for (let i = 0; i < sets.length; i += BUILDER_BATCH_SIZE) {
@@ -3038,6 +3038,12 @@ async function importToBuilderApi() {
           const target = state.sets.find(x => x.id === srcId);
           if (!target) { unmatched++; return; }
           target.passageId = String(newId);
+          // The ID coming back IS the approval. Approving by hand already treats it that
+          // way -- the manual button warns "this set has no passage ID yet" before letting
+          // you approve without one -- and until the status clears, setServes() returns []
+          // and the set is invisible in State Lists. So clearing it here is what moves the
+          // set to "To be entered" for its own state instead of stranding it.
+          if (isDraft(target)) { delete target.status; approved++; }
           target.updatedBy = (typeof sbActor === 'function' ? sbActor() : '') || (SB.user && SB.user.email) || '';
           target.updatedAt = new Date().toISOString();
           idsWritten++;
@@ -3051,7 +3057,9 @@ async function importToBuilderApi() {
     if (cmsBtn) { cmsBtn.disabled = false; cmsBtn.textContent = originalLabel; }
   }
   if (!builderIsLocalDev() && ok) {
-    pushState(); renderSetList();
+    // saveSets() is what the manual approve calls -- the status change has to go through
+    // the same path as any other set edit or it will not survive a reload.
+    saveSets(); pushState(); renderSetList();
     if (updatedCurrent) renderSetEditor();
   }
   const failedTotal = failed + httpErrors;
@@ -3059,6 +3067,7 @@ async function importToBuilderApi() {
   // run can look clean while nothing was recorded on our side. Say both.
   toast(`Sent to CMS: ${ok}${failedTotal ? `, ${failedTotal} failed` : ''}`
     + (ok ? ` · ${idsWritten} passage ID${idsWritten === 1 ? '' : 's'} written back` : '')
+    + (approved ? ` · ${approved} approved into the state lists` : '')
     + ` (${sets.length} of ${ready.length} not yet in the CMS, cap ${maxSets})`
     + (skipped ? ` — ${skipped} left for the next run` : '')
     + (alreadyInCms ? ` · ${alreadyInCms} skipped, already in the CMS` : ''));
