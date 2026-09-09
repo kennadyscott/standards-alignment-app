@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609091346';   // replaced with the deploy stamp
+const APP_BUILD = '202609092228';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2891,12 +2891,14 @@ function builderRandToken(len) {
 
 // One entry per state this question is tagged for, codes comma-joined — matches the
 // ImportItemSetQuestionStateStandards DTO (StateName, StandardId as a CSV string).
-function builderStateStandards(q) {
+function builderStateStandards(q, primary) {
   const byState = {};
   const add = t => { if (t && t.state && t.code) (byState[t.state] = byState[t.state] || []).push(t.code); };
   add(q.standard);
   Object.values(q.stateStandards || {}).forEach(add);
-  return Object.keys(byState).map(st => ({
+  // Same rule as the subtopics: the CMS hears about the target state only. A standard
+  // Stanley tagged for another state travels with that state's list, not with this import.
+  return Object.keys(byState).filter(st => !primary || st === primary).map(st => ({
     StateName: STATE_NAMES[st] || st,
     StandardId: byState[st].join(','),
   }));
@@ -2914,7 +2916,7 @@ function builderAnswerLetters(p) {
   return m ? [...new Set(m[1].toLowerCase().split(/\s*,\s*/))].sort() : [];
 }
 
-function builderQuestionPart(q) {
+function builderQuestionPart(q, primary) {
   const p = parseQuestion(q);
   const isCloze = q.type === 'cloze';
   const typeId = BUILDER_QUESTION_TYPE_ID[q.type] || BUILDER_QUESTION_TYPE_ID.text_entry;
@@ -2940,7 +2942,7 @@ function builderQuestionPart(q) {
     return {
       questionText: builderDiv(CLOZE_QUESTION_TEXT),
       questionTypeId: typeId,
-      stateStandards: builderStateStandards(q),
+      stateStandards: builderStateStandards(q, primary),
       answers: [{ answer: `<div>${sentenceHtml}</div>`, isCorrect: false }],
       clozeAnswer,
     };
@@ -2958,18 +2960,30 @@ function builderQuestionPart(q) {
   return {
     questionText: builderDiv(p.stem),
     questionTypeId: typeId,
-    stateStandards: builderStateStandards(q),
+    stateStandards: builderStateStandards(q, primary),
     answers,
     clozeAnswer: [],
   };
 }
 
-function builderQuestionEntry(q, isPeerRevision) {
-  return { isPeerRevision, questionParts: [builderQuestionPart(q)] };
+function builderQuestionEntry(q, isPeerRevision, primary) {
+  return { isPeerRevision, questionParts: [builderQuestionPart(q, primary)] };
 }
 
+/* Only the state the passage was written for. cmsSubTopics() walks every state the set
+   SERVES -- its own plus every cross-state alignment -- which is right for the zip export
+   but wrong here: attaching a set to Florida and Georgia in the CMS on first import put
+   it in front of those states before anyone had judged the alignment, showing "0 of 4
+   questions tagged" against standards nobody had chosen yet. Cross-state adoption belongs
+   to the State Lists in this app; the CMS only ever hears about the target state. */
+function builderPrimaryState(s) {
+  return primaryStateOf(s) || ((s.standard || {}).state) || '';
+}
 function builderSubTopics(s) {
-  return cmsSubTopics(s).map(r => ({ stateName: r.state_name, subTopicName: r.sub_topic }));
+  const primary = builderPrimaryState(s);
+  return cmsSubTopics(s)
+    .filter(r => r.state === primary)
+    .map(r => ({ stateName: r.state_name, subTopicName: r.sub_topic }));
 }
 
 // Passage text carries its paragraph breaks as \n — a single div holding raw newlines
@@ -2994,8 +3008,8 @@ function builderItemSet(s) {
     passages: builderPassages(s),
     subTopics: builderSubTopics(s),
     questions: [
-      ...(s.questions || []).filter(q => (q.text || '').trim()).map(q => builderQuestionEntry(q, false)),
-      ...(s.peerRevision || []).filter(q => (q.text || '').trim()).map(q => builderQuestionEntry(q, true)),
+      ...(s.questions || []).filter(q => (q.text || '').trim()).map(q => builderQuestionEntry(q, false, builderPrimaryState(s))),
+      ...(s.peerRevision || []).filter(q => (q.text || '').trim()).map(q => builderQuestionEntry(q, true, builderPrimaryState(s))),
     ],
   };
 }
@@ -3030,7 +3044,7 @@ async function importToBuilderApi() {
   if (cmsBtn) { cmsBtn.disabled = true; cmsBtn.textContent = 'Importing…'; }
 
   let ok = 0, failed = 0, httpErrors = 0;
-  let idsWritten = 0, unmatched = 0, approved = 0, lastRaw = '';
+  let idsWritten = 0, unmatched = 0, approved = 0, lastRaw = '', lastFail = '';
   let updatedCurrent = false;
   try {
     for (let i = 0; i < sets.length; i += BUILDER_BATCH_SIZE) {
@@ -3041,7 +3055,15 @@ async function importToBuilderApi() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(chunk.map(builderItemSet)),
         });
-        if (!res.ok) { httpErrors += chunk.length; continue; }
+        if (!res.ok) {
+          // Keep the server's own words. "3 failed" with the reason thrown away means
+          // guessing at whether it was CORS, a validation rejection, or an outage --
+          // and the reason is right here in the response.
+          httpErrors += chunk.length;
+          lastFail = `HTTP ${res.status} ${res.statusText || ''}\n\n`
+            + (await res.text().catch(() => '(no response body)')).slice(0, 900);
+          continue;
+        }
         // Expected response: [{ sourceId, status: "success" | "failed", passageId }, ...]
         // Read it LOOSELY. The first production run reported "2 sent" and wrote back no
         // IDs at all, because an exact `r.passageId` match is the only thing that counts
@@ -3086,6 +3108,11 @@ async function importToBuilderApi() {
         });
       } catch (e) {
         httpErrors += chunk.length;
+        // A blocked request and a dead server both land here; the message tells them apart
+        // ("Failed to fetch" is the browser refusing, not the API saying no).
+        lastFail = 'The request never completed: ' + ((e && e.message) || e)
+          + '\n\n(A "Failed to fetch" here means the browser blocked it — CORS or network —'
+          + ' rather than the CMS rejecting the sets.)';
       }
     }
   } finally {
@@ -3106,6 +3133,11 @@ async function importToBuilderApi() {
     + ` (${sets.length} of ${ready.length} not yet in the CMS, cap ${maxSets})`
     + (skipped ? ` — ${skipped} left for the next run` : '')
     + (alreadyInCms ? ` · ${alreadyInCms} skipped, already in the CMS` : ''));
+  // Nothing got through: show the server's own words rather than a bare "failed".
+  if (!ok && failedTotal && lastFail && !builderIsLocalDev()) {
+    alert('The CMS rejected all ' + failedTotal + ' set' + (failedTotal === 1 ? '' : 's') + '.\n\n'
+      + 'This is what it said — send it to Ayushi:\n\n' + lastFail);
+  }
   // Accepted but no usable ID: show exactly what came back, so the field name (or a
   // pending/queued import) can be identified without opening dev tools.
   if (ok && !idsWritten && !builderIsLocalDev()) {
