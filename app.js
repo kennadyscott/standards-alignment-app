@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609091247';   // replaced with the deploy stamp
+const APP_BUILD = '202609091253';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3721,7 +3721,8 @@ function renderSetEditor() {
       ${isDraft(s)
         ? `<span class="ps-hint">${s.passageId ? '' : 'Add a passage ID, then '}approve this set to move it into the passage library.</span>
            <button class="btn btn-approve" id="approveSetBtn">${ico('check')} Approve set</button>`
-        : `<span class="ps-hint">Changes save automatically — Save confirms immediately.</span>`}
+        : `<span class="ps-hint">Changes save automatically — Save confirms immediately.</span>
+           <button class="act-btn" id="draftSetBtn" title="Take this set back out of the passage library and the state lists">Return to draft</button>`}
       <button class="btn btn-primary" id="saveSetBtn">Save</button>
     </div>`;
 
@@ -3770,6 +3771,20 @@ function wireSetEditor(panel, s) {
     delete s.status;                 // no longer a draft — enters the passage library
     saveSets();
     toast(`Approved "${s.title || 'set'}" — now in the passage library`);
+    renderPassages();
+  });
+
+  // The counterpart to Approve. Approving is now automatic once the CMS returns an ID,
+  // so there has to be a way back for a set approved in error -- before this, the only
+  // place a set was ever marked a draft was the moment it was created.
+  on('#draftSetBtn', 'click', async () => {
+    const places = setServes(s).length;
+    if (!await appConfirm('Return this set to draft?',
+      `It leaves the passage library${places ? ` and drops out of ${places} state list${places === 1 ? '' : 's'}` : ''}. `
+      + 'Its passage ID and everything else stay as they are.', { ok: 'Return to draft' })) return;
+    s.status = 'draft';
+    saveSets();
+    toast(`"${s.title || 'Set'}" is a draft again`);
     renderPassages();
   });
 
