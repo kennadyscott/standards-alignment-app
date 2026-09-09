@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609091317';   // replaced with the deploy stamp
+const APP_BUILD = '202609091334';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -5303,8 +5303,9 @@ function renderInput() {
    at a glance who fills a queue before a person touches it. */
 const STAGE_BOTS = {
   approval:  { bot: 'Adam',    does: 'confirms these alignments' },
-  standards: { bot: 'Stanley', does: "tags each question's standard" },
+  standards: { bot: 'Stanley', does: "accepts the alignment, or picks the standard when one is missing" },
   peer:      { bot: 'Georgia', does: 'develops the Peer Revision task' },
+  enter:     { bot: 'Eric',    does: 'enters these into the CMS' },
 };
 /* The Dashboard has two owners, one per side of every split column: Herman builds what
    the Ours number counts, Josh reads the CMS and refreshes the CMS number beside it. */
@@ -5875,10 +5876,12 @@ function cmsCell(bucket, subdomain, ours, footerDomains) {
 const BOTS = [
   { key: 'adam', name: 'Adam', job: 'Checks state lists for sets in Needs Approval and assigns or dismisses based on standard/content alignment',
     stage: 'approval', unit: 'set' },
-  { key: 'stanley', name: 'Stanley', job: 'Reviews standards daily in the "Needs Standards" tab for state lists',
+  { key: 'stanley', name: 'Stanley', job: 'Needs Standards queue: accepts good state-standard alignments on passage questions, or picks a matching standard when one is missing',
     stage: 'standards', unit: 'set' },
   { key: 'georgia', name: 'Georgia', job: 'Builds the Peer Review Question Sets',
     stage: 'peer', unit: 'set' },
+  { key: 'eric', name: 'Eric', job: 'Enters approved sets from State Lists into the CMS',
+    stage: 'enter', unit: 'set' },
   { key: 'herman', name: 'Herman', job: 'Builds new passage sets from state dashboards',
     kind: 'dash', unit: 'gap' },
   { key: 'josh', name: 'Josh', job: 'Builds count list for updated CMS numbers in the dashboard',
