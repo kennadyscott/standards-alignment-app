@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609101604';   // replaced with the deploy stamp
+const APP_BUILD = '202609101609';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -6333,8 +6333,8 @@ function renderBotsTools() {
   const box = document.getElementById('botsTools');
   if (!box) return;
   if (!botsLive()) { box.innerHTML = ''; return; }
-  const m = state.ui.botsMode || 'cards';
-  const html = `<div class="seg bots-seg">${[['cards', 'Cards'], ['digest', 'Manager'], ['log', 'Run log']]
+  const m = state.ui.botsMode || 'digest';
+  const html = `<div class="seg bots-seg">${[['digest', 'Manager'], ['cards', 'Cards'], ['log', 'Run log']]
       .map(([k, l]) => `<button class="seg-btn ${m === k ? 'active' : ''}" data-botsmode="${k}">${l}</button>`).join('')}</div>
     <button class="act-btn" id="botsManageBtn">Manage bots</button>`;
   if (box.innerHTML !== html) box.innerHTML = html;
@@ -6360,7 +6360,7 @@ function renderBots(opts) {
 
   const keepOpen = new Set([...wrap.querySelectorAll('details[open][data-keep]')].map(x => x.dataset.keep));
   const keepScroll = wrap.scrollTop;
-  const mode = botsLive() ? (state.ui.botsMode || 'cards') : 'cards';
+  const mode = botsLive() ? (state.ui.botsMode || 'digest') : 'cards';
   if (mode === 'digest') wrap.innerHTML = digestHtml(d, work);
   else if (mode === 'log') wrap.innerHTML = runLogHtml(state.ui.botsLogDate || d, state.ui.botsLogBot || '');
   else {

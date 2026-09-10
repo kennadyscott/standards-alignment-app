@@ -9,7 +9,7 @@
    snapshot of what the server holds and diff against it. No editor code has to
    announce what it touched, so nothing is missed by forgetting to instrument a path. */
 
-const STORE_BUILD = '202609101604';
+const STORE_BUILD = '202609101609';
 
 const SB = {
   client: null,
