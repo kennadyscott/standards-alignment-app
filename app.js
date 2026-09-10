@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609101635';   // replaced with the deploy stamp
+const APP_BUILD = '202609101759';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1483,6 +1483,7 @@ function hashFromUi() {
     p.set('st', u.inState); p.set('g', u.inGrade);
     if (u.inStage && u.inStage !== 'all') p.set('stage', u.inStage);
     if (u.inSelected) p.set('set', u.inSelected);
+    if (u.inSearch) p.set('q', u.inSearch);
   } else if (u.view === 'dash') {
     p.set('st', u.dashState);
   }
@@ -1523,6 +1524,7 @@ function applyHash() {
     if (g && GRADES.includes(g)) u.inGrade = g;
     if (p.get('stage')) u.inStage = p.get('stage');
     if (p.get('set')) u.inSelected = p.get('set');
+    if (p.has('q')) u.inSearch = p.get('q');
   } else if (u.view === 'dash') {
     if (st && STATES.includes(st)) u.dashState = st;
   }
@@ -1558,6 +1560,7 @@ function applyUiControls() {
   setSel('dashStateSeg', u.dashState);
   setSel('inState', u.inState);
   setSel('inGrade', u.inGrade);
+  { const n = document.getElementById('inSearch'); if (n && n.value !== (u.inSearch || '')) n.value = u.inSearch || ''; }
   setSel('setFilterStatus', u.setFilterStatus);
   setSel('setFilterGrade', u.setFilterGrade);
   setSel('setFilterState', u.setFilterState);
@@ -3367,6 +3370,83 @@ function answerKeyWarningHtml(q, section) {
     </div>`;
 }
 
+/* ---------- Standards by state ----------
+   Every state this set reaches, and each question's standard there, in one grid. Read
+   only on purpose: the Master Passage List stays the place to write the set, and each
+   state's standards are still tagged in State Lists > Needs Standards -- this is where
+   you check them without opening seven lists.
+   native    = the question's own standard, in its own state
+   tagged    = accepted for that state in State Lists
+   suggested = an approved alignment of the native standard, not accepted yet */
+function sbsCellHtml(q, st, grades) {
+  const chip = (tag, kind) => {
+    const std = tagStd(tag);
+    const tip = `${tag.code} — ${kind}${std && std.description ? ': ' + std.description : ''}`;
+    return `<span class="sbs-std sbs-${kind}" title="${esc(tip)}">${esc(tag.code)}</span><span class="sbs-kind">${kind}</span>`;
+  };
+  const native = q.standard;
+  if (native && native.state === st) return chip(native, 'native');
+  const tag = (q.stateStandards || {})[st];
+  if (tag) return chip(tag, 'tagged');
+  const nstd = native && tagStd(native);
+  const recs = nstd ? alignedTo(nstd).filter(h => h.std.state === st && grades.some(g => gradeMatches(h.std.grade, g))) : [];
+  if (recs.length) {
+    return chip(recs[0].std, 'suggested') + (recs.length > 1 ? `<span class="sbs-kind">+${recs.length - 1} more</span>` : '');
+  }
+  return `<span class="sbs-none">not tagged</span>`;
+}
+function standardsByStateHtml(s) {
+  const qs = (s.questions || []).map((q, i) => ({ q, i })).filter(x => (x.q.text || '').trim());
+  if (!s.standard || !qs.length) return '';
+  const lists = new Map();
+  setServes(s, true).forEach(v => {
+    const cur = lists.get(v.state) || { grades: new Set(), aligned: false, universal: false };
+    cur.grades.add(String(v.grade));
+    if (v.cat === 'aligned') cur.aligned = true;
+    if (v.universal) cur.universal = true;
+    lists.set(v.state, cur);
+  });
+  if (!lists.size) return '';
+  const primary = primaryStateOf(s) || (s.standard || {}).state;
+  const states = [...lists.keys()].sort((a, b) =>
+    (a === primary ? -1 : b === primary ? 1 : 0) || String(STATE_NAMES[a] || a).localeCompare(String(STATE_NAMES[b] || b)));
+  const rows = states.map(st => {
+    const info = lists.get(st);
+    const grades = [...info.grades].sort((x, y) => +x - +y);
+    const inCms = grades.some(g => state.setCms[inputKey(s.id, st, g)]);
+    const tagged = qs.filter(({ q }) => (q.standard && q.standard.state === st) || (q.stateStandards || {})[st]).length;
+    return `<tr>
+      <td class="sbs-state">
+        <b>${esc(STATE_NAMES[st] || st)}</b>
+        <div class="sbs-meta">
+          <span>G${grades.map(esc).join(', G')}</span>
+          ${st === primary ? '<span class="chip">primary</span>' : ''}
+          ${!info.aligned ? '<span class="chip chip-warn">needs approval</span>' : ''}
+          ${inCms ? '<span class="chip chip-entered">In CMS</span>' : ''}
+          <span>${tagged}/${qs.length} tagged</span>
+        </div>
+        <button class="act-btn sbs-open" data-sbs-open="${esc(st)}|${esc(grades[0])}">Open in State Lists →</button>
+      </td>
+      ${qs.map(({ q }) => `<td>${sbsCellHtml(q, st, grades)}</td>`).join('')}
+    </tr>`;
+  }).join('');
+  return `<div class="ps-section">
+    <div class="ps-section-title">Standards by state <span class="ps-hint">every state this set reaches · read-only — tag in State Lists</span></div>
+    <div class="sbs-wrap"><table class="sbs-table">
+      <thead><tr><th>State</th>${qs.map(({ q, i }) => {
+        const t = (QUESTION_TYPES.find(x => x.key === q.type) || {}).label;
+        return `<th>Question ${i + 1}${t ? `<span class="sbs-qtype">${esc(t)}</span>` : ''}</th>`;
+      }).join('')}</tr></thead>
+      <tbody>${rows}</tbody>
+    </table></div>
+    <div class="sbs-legend">
+      <span><span class="sbs-std sbs-native">code</span> native — the question's own standard</span>
+      <span><span class="sbs-std sbs-tagged">code</span> tagged in State Lists</span>
+      <span><span class="sbs-std sbs-suggested">code</span> suggested by an approved alignment, not accepted yet</span>
+    </div>
+  </div>`;
+}
+
 function questionBlockHtml(q, section, i, label, ctx) {
   // setId disambiguates pickers when many sets render at once (State Lists cards);
   // the master editor never sets it, so null === null keeps its behavior unchanged.
@@ -3783,6 +3863,7 @@ function renderSetEditor() {
       ${s.questions.map((q, i) => questionBlockHtml(q, 'questions', i, `Question ${i + 1}`, qCtx)).join('')}
       ${s.questions.length < MAX_QUESTIONS ? `<button class="act-btn" id="addQuestion">${ico('plus')} Add question</button>` : ''}
     </div>
+    ${standardsByStateHtml(s)}
 
     <div class="ps-section">
       <div class="ps-section-title">Writing Prompt</div>
@@ -3853,6 +3934,22 @@ function wireSetEditor(panel, s) {
   // The counterpart to Approve. Approving is now automatic once the CMS returns an ID,
   // so there has to be a way back for a set approved in error -- before this, the only
   // place a set was ever marked a draft was the moment it was created.
+  // Standards by state: jump to that state's list with this set picked, where the
+  // tagging actually happens.
+  on('[data-sbs-open]', 'click', e => {
+    const [st, g] = e.currentTarget.dataset.sbsOpen.split('|');
+    const row = setsForGrade(st, g).find(r => r.set.id === s.id);
+    const stage = row ? rowStage(row, st, g) : 'all';
+    state.ui.inState = st;
+    state.ui.inGrade = g;
+    state.ui.inStage = stage === 'entered' ? 'entered' : 'all';
+    state.ui.inSelected = s.id;
+    state.ui.inSearch = '';
+    state.ui.openPicker = null;
+    document.querySelector('#navTabs .tab[data-view="input"]').click();
+    applyUiControls();
+  });
+
   on('#draftSetBtn', 'click', async () => {
     const places = setServes(s).length;
     if (!await appConfirm('Return this set to draft?',
@@ -4194,7 +4291,7 @@ function assignedStateStd(s, hit, st, grade) {
 }
 
 // Compact left-panel row: title + ID + grade + status, click to open the full set.
-function inputListItem(row, selected) {
+function inputListItem(row, selected, gradeOverride) {
   const { set: s, stage } = row;
   const catChip = {
     entered: statusPill('entered'),
@@ -4204,7 +4301,7 @@ function inputListItem(row, selected) {
     enter: '<span class="chip">To be entered</span>',
     flagged: statusPill('flagged'),
   }[stage] || '<span class="chip">Aligned</span>';
-  const k = inputKey(s.id, state.ui.inState, state.ui.inGrade);
+  const k = inputKey(s.id, state.ui.inState, gradeOverride || state.ui.inGrade);
   const stId = (state.setStateId || {})[k];
   const idPart = stId
     ? `${esc(state.ui.inState)} ID ${esc(stId)}`
@@ -5274,6 +5371,66 @@ function wirePeerInline(card, s) {
   }
 }
 
+/* ---------- State Lists search ----------
+   Find a passage anywhere in the chosen state by its set title, a passage title, the
+   CMS passage ID, this state's own ID, or the set id -- across every grade and every
+   stage, including Entered in CMS, because the point is not knowing where it sits. */
+function inputSearchMatches(s, st, g, q) {
+  const n = q.toLowerCase().replace(/^#/, '');
+  const stId = (state.setStateId || {})[inputKey(s.id, st, g)] || '';
+  return [s.title, s.passageId, stId, s.id, ...(s.passages || []).map(p => p.title)]
+    .some(v => String(v || '').toLowerCase().includes(n));
+}
+function renderInputSearch(st, query) {
+  const results = [];
+  GRADES.forEach(g => {
+    setsForGrade(st, g).forEach(r => {
+      if (!inputSearchMatches(r.set, st, g, query)) return;
+      r.stage = rowStage(r, st, g);
+      r.grade = String(g);
+      results.push(r);
+    });
+  });
+  document.getElementById('inputProgress').textContent =
+    `${results.length} match${results.length === 1 ? '' : 'es'} for “${query}” in ${STATE_NAMES[st]} · all grades and stages`;
+  const box = document.getElementById('inputList');
+  box.innerHTML = '';
+  if (!results.length) {
+    box.appendChild(el(`<div class="review-empty">No ${esc(STATE_NAMES[st])} passage matches “${esc(query)}”.<br>
+      <span style="font-size:12.5px; color:var(--ink-faint)">This searches set titles, passage titles and IDs across every grade.
+      A passage only appears here once it reaches a ${esc(STATE_NAMES[st])} list.</span></div>`));
+    renderInputDetail(null, st, state.ui.inGrade);
+    return;
+  }
+  // Keep the picked result (a set can sit in two grades here, so the grade is part of
+  // the identity); otherwise start on the first.
+  const sel = results.find(r => r.set.id === state.ui.inSelected && r.grade === String(state.ui.inGrade)) || results[0];
+  state.ui.inSelected = sel.set.id;
+  state.ui.inGrade = sel.grade;
+  const gSel = document.getElementById('inGrade');
+  if (gSel) gSel.value = sel.grade;
+  GRADES.forEach(g => {
+    const list = results.filter(r => r.grade === String(g));
+    if (!list.length) return;
+    box.appendChild(el(`<div class="align-section-title">Grade ${esc(g)} (${list.length})<span class="rule"></span></div>`));
+    list.forEach(r => {
+      const item = el(inputListItem(r, r === sel, r.grade));
+      item.addEventListener('click', () => {
+        state.ui.inSelected = r.set.id;
+        state.ui.inGrade = r.grade;
+        // So clearing the search leaves you looking at it, not at a filter that hides it.
+        state.ui.inStage = r.stage === 'entered' ? 'entered' : 'all';
+        state.ui.openPicker = null;
+        state.ui.overrideKey = null;
+        renderInput();
+        syncHash();
+      });
+      box.appendChild(item);
+    });
+  });
+  renderInputDetail(sel, st, sel.grade);
+}
+
 function renderInput() {
   const stSel = document.getElementById('inState');
   const gSel = document.getElementById('inGrade');
@@ -5304,6 +5461,11 @@ function renderInput() {
   if (state.ui.inStage !== 'all' && !stages.some(x => x.key === state.ui.inStage)) state.ui.inStage = 'all';
   seg.innerHTML = `<button class="seg-btn ${state.ui.inStage === 'all' ? 'active' : ''}" data-val="all">All to-dos</button>`
     + stages.map(x => `<button class="seg-btn ${state.ui.inStage === x.key ? 'active' : ''}" data-val="${x.key}">${x.label}</button>`).join('');
+  // A search looks across every grade and stage in this state, so the stage tabs step
+  // back while it's on rather than looking like they still filter.
+  const inQuery = (state.ui.inSearch || '').trim();
+  seg.classList.toggle('is-muted', !!inQuery);
+  if (inQuery) { renderInputSearch(st, inQuery); return; }
 
   // "All" is the working queue — Entered in CMS lives only under its own filter.
   const f = state.ui.inStage;
@@ -7288,6 +7450,19 @@ function init() {
   document.getElementById('inGrade').addEventListener('change', e => {
     state.ui.inGrade = e.target.value; state.ui.inSelected = null; state.ui.openPicker = null; renderInput(); syncHash();
   });
+  // Debounced: each keystroke walks all seven grade lists for the state.
+  const inSearchEl = document.getElementById('inSearch');
+  if (inSearchEl) {
+    let inSearchTimer = null;
+    const runSearch = v => { state.ui.inSearch = v; state.ui.openPicker = null; renderInput(); syncHash(); };
+    inSearchEl.addEventListener('input', e => {
+      clearTimeout(inSearchTimer);
+      inSearchTimer = setTimeout(() => runSearch(e.target.value), 180);
+    });
+    inSearchEl.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && inSearchEl.value) { inSearchEl.value = ''; clearTimeout(inSearchTimer); runSearch(''); }
+    });
+  }
   bindSeg('inStageSeg', 'inStage', v => { state.ui.inStage = v; state.ui.openPicker = null; renderInput(); syncHash(); });
   bindStateSelect('dashStateSeg', false, state.ui.dashState, v => { state.ui.dashState = v; renderDash(); syncHash(); });
 
