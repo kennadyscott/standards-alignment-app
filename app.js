@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609101609';   // replaced with the deploy stamp
+const APP_BUILD = '202609101635';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -6138,7 +6138,7 @@ function latestRun(key, date) {
 function latestBotReport(key, date) {
   let best = null;
   runsOn(key, date).forEach(r => {
-    if (r.source === 'board') return;
+    if (r.source === 'board' || r.kind === 'digest') return;
     const t = String(r.received_at || '');
     const bt = best ? String(best.received_at || '') : '';
     if (!best || t > bt || (t === bt && r.id > best.id)) best = r;
@@ -6161,7 +6161,10 @@ function openBlockers(b, date) {
 function botStatus(b, date) {
   if (isDoneOn(b, date)) return 'done';
   const r = latestBotReport(b.key, date);
-  if (r) return r.status === 'done' ? 'working' : r.status;   // a "done" report someone un-ticked
+  if (r) {
+    if ((r.blockers || []).length) return 'blocked';           // a blocker means Blocked, unless done
+    return r.status === 'done' ? 'working' : r.status;         // a "done" report someone un-ticked
+  }
   if (!botsLive()) return 'none';
   if (date !== boardDate()) return 'silent';
   const now = boardNow();
@@ -6204,10 +6207,13 @@ const BOT_STATUS = {
   blocked: { label: 'Blocked', cls: 'bs-blocked' },
   failed:  { label: 'Failed', cls: 'bs-blocked' },
   done:    { label: 'Done', cls: 'bs-done' },
+  'nothing-waiting': { label: 'Nothing waiting', cls: 'bs-done' },
+  idle:    { label: 'Idle', cls: 'bs-quiet' },
   skipped: { label: 'Skipped', cls: 'bs-quiet' },
   silent:  { label: 'Silent', cls: 'bs-silent' },
   notyet:  { label: 'Not started', cls: 'bs-quiet' },
   off:     { label: 'Off today', cls: 'bs-quiet' },
+  digest:  { label: 'Digest', cls: 'bs-working' },
 };
 function botStatusChip(st, b) {
   const m = BOT_STATUS[st];
@@ -6217,6 +6223,11 @@ function botStatusChip(st, b) {
   return `<span class="bot-status ${m.cls}"${tip ? ` title="${esc(tip)}"` : ''}>${m.label}</span>`;
 }
 const botText = h => (typeof h === 'string' ? h : JSON.stringify(h));
+function runSourceLabel(r) {
+  return r.source === 'board' ? 'Board tick' + (r.submitted_by ? ' by ' + r.submitted_by : '')
+    : r.source === 'paste' ? 'posted by ' + (r.submitted_by || 'a teammate')
+    : r.source === 'manager' ? 'via manager' : 'bot report';
+}
 
 /* ---------- publishing the queues for bots to read ----------
    bot_brief hands a bot its live remaining. That number comes from here: whenever the
@@ -6287,6 +6298,7 @@ function bindBotsBoard() {
   });
   view.addEventListener('click', e => {
     if (e.target.closest('#joshSave')) { joshSave(); return; }
+    if (e.target.closest('#runlogPasteSave')) { saveRunlogPaste(); return; }
     const mode = e.target.closest('[data-botsmode]');
     if (mode) { state.ui.botsMode = mode.dataset.botsmode; renderBots({ keepQueues: true }); return; }
     if (e.target.closest('#botsManageBtn')) { openManageBots(); return; }
@@ -6409,8 +6421,7 @@ function botCardHtml(b, d, work) {
   const c = (rep && rep.counts) || {};
   const meta = [];
   if (botsLive()) {
-    meta.push(r ? `Updated ${esc(botAgo(r.received_at))} · ${r.source === 'board' ? 'Board tick' + (r.submitted_by ? ' by ' + esc(r.submitted_by) : '')
-      : r.source === 'manager' ? 'via manager' : 'bot report'}` : 'No report today');
+    meta.push(r ? `Updated ${esc(botAgo(r.received_at))} · ${esc(runSourceLabel(r))}` : 'No report today');
     if (c.completed != null) meta.push(`${+c.completed || 0} completed today`);
   }
   const highlights = rep && Array.isArray(rep.highlights) && rep.highlights.length
@@ -6437,6 +6448,7 @@ function botCardHtml(b, d, work) {
     ${blockers.length ? `<div class="bot-blocker">${ico('warn')}<div>${blockers.map(x =>
       `<div><b>${esc(x.code || 'other')}</b> ${esc(x.message || '')}${x.at ? ` <span class="bot-blocker-at">${esc(botClock(x.at))}</span>` : ''}</div>`).join('')}</div></div>` : ''}
     ${meta.length ? `<div class="bot-meta">${meta.map(m => `<span>${m}</span>`).join('')}</div>` : ''}
+    ${rep && rep.message ? `<div class="bot-message">${esc(rep.message)}</div>` : ''}
     ${highlights}
     ${body}
     ${b.source === 'cms' ? joshPasteHtml() : ''}
@@ -6462,21 +6474,29 @@ function digestHtml(d, work) {
   const blocked = rows.filter(x => x.bl.length || x.st === 'blocked').length;
   const completed = rows.reduce((a, x) => a + (x.completed || 0), 0);
   const stat = (n, l, cls) => `<div class="digest-stat ${cls || ''}"><b>${n}</b><span>${l}</span></div>`;
-  const mgr = managerBots().map(b => ({ b, r: latestRun(b.key, d) })).filter(x => x.r);
+  // The latest manager digest today. Only a digest clears "No manager digest"; a
+  // manager's ordinary report lands in the run log like anyone else's.
+  const digests = BOTSB.runs.filter(r => r.run_date === d && r.kind === 'digest')
+    .sort((a, b) => String(b.received_at).localeCompare(String(a.received_at)) || b.id - a.id);
+  const dg = digests[0] || null;
+  const flagged = new Set(dg && Array.isArray(dg.attention) ? dg.attention.map(String) : []);
+  const botName = k => (allBots().find(b => b.key === k) || { name: k }).name;
   const open = rows.filter(x => x.bl.length);
-  const src = r => (r.source === 'board' ? 'Board tick' : r.source === 'manager' ? 'via manager' : 'report');
+  const src = r => (r.source === 'board' ? 'Board tick' : r.source === 'paste' ? 'posted' : r.source === 'manager' ? 'via manager' : 'report');
   return `<div class="digest">
     <div class="digest-strip">
       ${stat(started, 'reported today')}${stat(silent, 'silent', silent ? 'warn' : '')}${stat(done, 'done', done ? 'good' : '')}${stat(blocked, 'blocked', blocked ? 'bad' : '')}${stat(completed, 'completed today')}
     </div>
-    ${mgr.length ? mgr.map(({ b, r }) => `<div class="digest-mgr">
-        <div class="digest-mgr-head"><span class="bot-badge">${esc(b.name)}</span> digest · ${esc(botClock(r.received_at))} Central</div>
-        ${(r.highlights || []).length ? `<ul>${r.highlights.map(h => `<li>${esc(botText(h))}</li>`).join('')}</ul>` : ''}
-      </div>`).join('') : `<div class="ps-hint digest-none">No manager digest posted today yet.</div>`}
+    ${dg ? `<div class="digest-mgr">
+        <div class="digest-mgr-head"><span class="bot-badge">${esc(botName(dg.bot_key))}</span> digest · ${esc(botClock(dg.received_at))} Central${digests.length > 1 ? ` · ${digests.length} today` : ''}${dg.source === 'paste' ? ` · ${esc(runSourceLabel(dg))}` : ''}</div>
+        ${dg.message ? `<div class="digest-summary">${esc(dg.message)}</div>` : ''}
+        ${(dg.highlights || []).length ? `<ul>${dg.highlights.map(h => `<li>${esc(botText(h))}</li>`).join('')}</ul>` : ''}
+        ${flagged.size ? `<div class="digest-attn">Needs attention: ${[...flagged].map(k => `<span class="digest-attn-chip">${esc(botName(k))}</span>`).join(' ')}</div>` : ''}
+      </div>` : `<div class="ps-hint digest-none">No manager digest posted today yet.</div>`}
     <div class="digest-table-wrap"><table class="digest-table">
       <thead><tr><th>Bot</th><th>Status</th><th>Last update</th><th class="num">Completed</th><th class="num">Remaining</th><th>Blockers</th></tr></thead>
       <tbody>${rows.map(x => `<tr class="${x.bl.length ? 'is-blocked' : ''}">
-        <td><b>${esc(x.b.name)}</b></td>
+        <td><b>${esc(x.b.name)}</b>${flagged.has(x.b.key) ? ` <span class="digest-flag" title="Flagged in today's manager digest">${ico('flag')} flagged</span>` : ''}</td>
         <td>${botStatusChip(x.st, x.b) || '—'}</td>
         <td>${x.r ? `${esc(botClock(x.r.received_at))} <span class="ps-hint">${src(x.r)}</span>` : '<span class="ps-hint">—</span>'}</td>
         <td class="num">${x.completed != null ? x.completed : '—'}</td>
@@ -6495,16 +6515,48 @@ function digestHtml(d, work) {
 function rawRun(r) {
   return { id: r.id, botKey: r.bot_key, date: r.run_date, status: r.status, startedAt: r.started_at,
     finishedAt: r.finished_at, doneToday: r.done_today, counts: r.counts, highlights: r.highlights,
-    blockers: r.blockers, outputs: r.outputs, source: r.source, submittedBy: r.submitted_by, receivedAt: r.received_at };
+    blockers: r.blockers, outputs: r.outputs, source: r.source, submittedBy: r.submitted_by, receivedAt: r.received_at,
+    kind: r.kind, message: r.message, reportedAt: r.reported_at, attention: r.attention };
 }
 function runSummary(r) {
   const c = r.counts || {};
   const bits = [];
+  if (r.message) bits.push(r.message.slice(0, 90));
   if (c.completed != null) bits.push(`${c.completed} completed`);
   if (c.remaining != null) bits.push(`${c.remaining} remaining`);
   if ((r.blockers || []).length) bits.push(`${r.blockers.length} blocker${r.blockers.length === 1 ? '' : 's'}`);
-  if ((r.highlights || []).length) bits.push(botText(r.highlights[0]).slice(0, 80));
+  if (!r.message && (r.highlights || []).length) bits.push(botText(r.highlights[0]).slice(0, 80));
+  if ((r.attention || []).length) bits.push(`attention: ${r.attention.join(', ')}`);
   return bits.join(' · ');
+}
+// Save pasted reports through the same intake a bot's token uses. Anything the server
+// refuses stays in the box with its reason, so nothing pasted is silently lost.
+async function saveRunlogPaste() {
+  const ta = document.getElementById('runlogPaste');
+  const msg = document.getElementById('runlogPasteMsg');
+  if (!ta || !ta.value.trim()) return;
+  let data;
+  try { data = JSON.parse(ta.value); }
+  catch { msg.textContent = 'That is not valid JSON — check for a missing comma, quote or bracket.'; msg.className = 'signin-msg bad'; return; }
+  const list = Array.isArray(data) ? data : [data];
+  const btn = document.getElementById('runlogPasteSave');
+  if (btn) btn.disabled = true;
+  const bad = [], failed = [];
+  let saved = 0;
+  for (let i = 0; i < list.length; i++) {
+    const res = await sbPostReport(list[i]);
+    if (res.error) { bad.push(`#${i + 1}: ${res.error}`); failed.push(list[i]); } else saved++;
+  }
+  if (btn) btn.disabled = false;
+  if (saved) toast(`✓ Saved ${saved} report${saved === 1 ? '' : 's'}`);
+  if (bad.length) {
+    ta.value = JSON.stringify(failed.length === 1 ? failed[0] : failed, null, 2);
+    msg.textContent = bad.join(' · ');
+    msg.className = 'signin-msg bad';
+    return;
+  }
+  ta.value = '';
+  renderBots({ keepQueues: true });
 }
 function runLogHtml(date, botKey) {
   const bots = allBots();
@@ -6522,12 +6574,20 @@ function runLogHtml(date, botKey) {
         `<option value="${esc(b.key)}" ${b.key === botKey ? 'selected' : ''}>${esc(b.name)}</option>`).join('')}</select>
       <span class="ps-hint">${runs.length} report${runs.length === 1 ? '' : 's'}</span>
     </div>
+    <details class="runlog-paste" data-keep="paste">
+      <summary>Paste a run report</summary>
+      <p class="ps-hint">The same JSON a bot posts — one report, or an array of them. It's saved as posted by you.</p>
+      <textarea class="ps-textarea" id="runlogPaste" rows="6" spellcheck="false"
+        placeholder='{"botKey":"austin","status":"working","message":"Auditing OH G6","completed":12,"remaining":210}'></textarea>
+      <button class="btn btn-primary btn-compact" id="runlogPasteSave">Save report</button>
+      <div class="signin-msg" id="runlogPasteMsg"></div>
+    </details>
     ${runs.length ? `<div class="runlog-list">${runs.map(r => `<details class="runlog-item" data-keep="run:${r.id}">
         <summary>
           <span class="runlog-time">${esc(botClock(r.received_at))}</span>
           <b>${esc(name(r.bot_key))}</b>
-          ${botStatusChip(r.done_today ? 'done' : r.status, {})}
-          <span class="runlog-src">${esc(r.source === 'board' ? 'Board · ' + (r.submitted_by || '') : r.source === 'manager' ? 'manager' : 'bot')}</span>
+          ${botStatusChip(r.kind === 'digest' ? 'digest' : r.done_today ? 'done' : (r.blockers || []).length ? 'blocked' : r.status, {})}
+          <span class="runlog-src">${esc(runSourceLabel(r))}</span>
           <span class="runlog-sum">${esc(runSummary(r))}</span>
         </summary>
         <pre>${esc(JSON.stringify(rawRun(r), null, 2))}</pre>
@@ -6562,6 +6622,7 @@ function renderBotCalendar(work) {
     if (isDoneOn(b, key)) return 'done';
     const r = latestBotReport(b.key, key);
     if (r && ((r.blockers || []).length || r.status === 'blocked' || r.status === 'failed')) return 'blocked';
+    if (r && r.status === 'nothing-waiting') return 'clear';
     return null;
   };
   const who = (b, key) => {
@@ -6685,8 +6746,8 @@ function manageFormHtml(b, isNew) {
   const days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
   return `
     <div class="mb-grid">
-      <label>Key <span class="ps-hint">stable id, can't change later</span>
-        <input class="ps-input" id="mbKey" value="${esc(b.key)}" ${isNew ? '' : 'disabled'} placeholder="e.g. austin" spellcheck="false"></label>
+      <label>Key <span class="ps-hint">what the bot posts as</span>
+        <input class="ps-input" id="mbKey" value="${esc(b.key)}" placeholder="e.g. cms-passage-numbers" spellcheck="false"></label>
       <label>Display name<input class="ps-input" id="mbName" value="${esc(b.name)}" placeholder="e.g. Austin"></label>
       <label class="mb-wide">One-line job<textarea class="ps-textarea" id="mbJob" rows="2">${esc(b.job)}</textarea></label>
       <label>Work type<select class="ps-input" id="mbType">${Object.entries(WORK_TYPES).map(([k, l]) =>
@@ -6710,27 +6771,38 @@ function manageFormHtml(b, isNew) {
     </div>
     <div class="mb-actions">
       <button class="btn btn-primary" data-mb="save">${isNew ? 'Add bot' : 'Save'}</button>
-      ${isNew ? '' : b.archived ? `<button class="btn btn-ghost" data-mb="restore">Restore</button>`
-        : `<button class="btn btn-ghost" data-mb="archive">Archive</button>`}
+      ${isNew ? '' : b.archived ? `<button class="btn btn-ghost" data-mb="restore">Make active</button>`
+        : `<button class="btn btn-ghost" data-mb="archive">Make inactive</button>`}
+      ${isNew || b.archived ? '' : `<button class="btn btn-ghost" data-mb="sample" title="Posts a report labeled as a sample from you, so you can see one land on the Board">Post sample ${b.workType === 'manager' ? 'digest' : 'report'}</button>`}
+      ${isNew ? '' : `<span class="mb-status ${b.archived ? 'off' : 'on'}">${b.archived ? "Inactive — hidden from the Board, and its token can't post" : 'Active on the Board'}</span>`}
     </div>
     ${!isNew && !b.archived ? manageTokenHtml(b) : ''}`;
 }
 function botSetupText(b, token) {
-  return [
-    `Standards Alignment run reports — Grokbot ${b.name} (${b.key})`,
+  const isMgr = b.workType === 'manager';
+  const lines = [
+    `Standards Alignment run reports — ${b.name} (${b.key})`,
     ``,
     `POST ${SUPABASE_URL}/rest/v1/rpc/bot_submit_run`,
     `Headers:`,
     `  apikey: ${SUPABASE_ANON_KEY}`,
     `  x-bot-token: ${token}`,
     `  Content-Type: application/json`,
-    `Body (the run report, as-is):`,
-    `  {"botKey":"${b.key}","status":"working","counts":{"completed":0,"remaining":0},"highlights":[],"blockers":[]}`,
+    `Body:`,
+    isMgr
+      ? `  {"type":"manager-digest","summary":"8am kickoff sent; Eric blocked on Ohio target state","attention":["eric"]}`
+      : `  {"botKey":"${b.key}","status":"working","message":"What you're doing, in one line","completed":0,"remaining":0,"blockers":[]}`,
     ``,
-    `status: started | working | blocked | done | failed | skipped. "done" ticks the Board.`,
-    `Blockers: [{"code":"rate_limit","message":"429 from cms","at":"<ISO time>"}]`,
-    `Your live queue: POST ${SUPABASE_URL}/rest/v1/rpc/bot_brief with the same headers and body {}`,
-  ].join('\n');
+  ];
+  if (isMgr) lines.push(
+    `Post a digest after the 8am kickoff and at ~4pm on weekdays.`,
+    `You can also post a normal report for any bot: include its "botKey".`);
+  else lines.push(
+    `status: working | done | blocked | idle | nothing-waiting. "doneToday": true marks Done for the day.`,
+    `Blockers: [{"code":"mcp_429","message":"CR Writing request failed (429)"}]`,
+    `Post on morning start, at least every 60-90 minutes while working, the moment you hit a blocker, and when done.`);
+  lines.push(`Your live card: POST ${SUPABASE_URL}/rest/v1/rpc/bot_brief with the same headers and body {}`);
+  return lines.join('\n');
 }
 function manageTokenHtml(b) {
   const shown = manageToken && manageToken.key === b.key;
@@ -6755,7 +6827,7 @@ function manageTokenHtml(b) {
 function readManageForm(isNew, b) {
   const q = s => document.querySelector('#botsManage ' + s);
   return {
-    bot_key: isNew ? q('#mbKey').value.trim().toLowerCase() : b.key,
+    bot_key: q('#mbKey').value.trim().toLowerCase(),
     name: q('#mbName').value.trim(),
     job: q('#mbJob').value.trim(),
     work_type: q('#mbType').value,
@@ -6788,8 +6860,16 @@ function bindManageBots(ov) {
       const row = readManageForm(isNew, b);
       if (!/^[a-z][a-z0-9-]{1,31}$/.test(row.bot_key)) { toast('Key: lowercase letters, numbers or dashes, starting with a letter'); return; }
       if (!row.name) { toast('Give the bot a display name'); return; }
-      if (isNew && allBots().some(x => x.key === row.bot_key)) { toast(`There's already a bot with the key "${row.bot_key}"`); return; }
+      const renaming = !isNew && b && row.bot_key !== b.key;
+      if ((isNew || renaming) && allBots().some(x => x.key === row.bot_key)) { toast(`There's already a bot with the key "${row.bot_key}"`); return; }
+      if (renaming && !await appConfirm(`Rename ${b.key} to ${row.bot_key}?`,
+        'Its history, token and queue move with it. The bot must post with the new key from now on — reports using the old one are refused.', { ok: 'Rename' })) return;
       btn.disabled = true;
+      if (renaming) {
+        const rr = await sbRenameBot(b.key, row.bot_key);
+        if (rr.error) { btn.disabled = false; toast('⚠ Could not rename — ' + rr.error); return; }
+        manageSel = row.bot_key;
+      }
       const res = await sbSaveBot(row, isNew);
       btn.disabled = false;
       if (res.error) { toast('⚠ Could not save — ' + res.error); return; }
@@ -6799,12 +6879,25 @@ function bindManageBots(ov) {
       return;
     }
     if ((act === 'archive' || act === 'restore') && b) {
-      if (act === 'archive' && !await appConfirm(`Archive ${b.name}?`,
-        'Its card leaves the Board and its token stops working. Its run history stays, and you can restore it.', { ok: 'Archive' })) return;
+      if (act === 'archive' && !await appConfirm(`Make ${b.name} inactive?`,
+        'Its card leaves the Board and its token stops working. Its run history stays, and you can make it active again.', { ok: 'Make inactive' })) return;
       const res = await sbSaveBot({ bot_key: b.key, archived_at: act === 'archive' ? new Date().toISOString() : null }, false);
       if (res.error) { toast('⚠ ' + res.error); return; }
-      toast(act === 'archive' ? `${b.name} archived` : `${b.name} restored`);
+      toast(act === 'archive' ? `${b.name} is inactive` : `${b.name} is active again`);
       after();
+      return;
+    }
+    if (act === 'sample' && b) {
+      const isMgr = b.workType === 'manager';
+      if (!await appConfirm(`Post a sample ${isMgr ? 'digest' : 'report'} for ${b.name}?`,
+        "It lands on today's Board like a real one, labeled as a sample from you — good for checking the Board, not for recording real progress.", { ok: 'Post sample' })) return;
+      const who = (SB.user && SB.user.email) || 'the Board';
+      const res = await sbPostReport(isMgr
+        ? { type: 'manager-digest', botKey: b.key, summary: `Sample digest posted from the Board by ${who} — not from the manager.`, attention: [] }
+        : { botKey: b.key, status: 'working', message: `Sample report posted from the Board by ${who} — not from the bot.` });
+      if (res.error) { toast('⚠ ' + res.error); return; }
+      toast(`✓ Sample ${isMgr ? 'digest' : 'report'} posted for ${b.name}`);
+      if (state.ui.view === 'bots') renderBots({ keepQueues: true });
       return;
     }
     if (act === 'issue' && b) {

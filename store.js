@@ -9,7 +9,7 @@
    snapshot of what the server holds and diff against it. No editor code has to
    announce what it touched, so nothing is missed by forgetting to instrument a path. */
 
-const STORE_BUILD = '202609101609';
+const STORE_BUILD = '202609101635';
 
 const SB = {
   client: null,
@@ -344,7 +344,7 @@ function sbViewers(setId) {
 const BOT_COLS = 'bot_key,name,job,grok_agent_id,work_type,queue_source,surfaces,active_days,'
   + 'active_start,active_end,sort,token_issued_at,archived_at,updated_at,updated_by';
 const RUN_COLS = 'id,bot_key,run_date,status,started_at,finished_at,done_today,counts,'
-  + 'highlights,blockers,outputs,source,submitted_by,received_at';
+  + 'highlights,blockers,outputs,source,submitted_by,received_at,message,reported_at,kind,attention';
 const QUEUE_COLS = 'bot_key,remaining,places,rows,brief,computed_at,computed_by';
 const BOTSB = {
   available: null,          // null = not loaded yet; false = unavailable, use the old Board
@@ -411,6 +411,7 @@ function sbSubscribeBots(onChange) {
     .on('postgres_changes', { event: '*', schema: 'public', table: 'bots' }, p => {
       const r = p.new;
       if (!r || !r.bot_key) return;
+      if (p.old && p.old.bot_key && p.old.bot_key !== r.bot_key) botRekeyLocal(p.old.bot_key, r.bot_key);
       const i = BOTSB.bots.findIndex(x => x.bot_key === r.bot_key);
       if (i >= 0) BOTSB.bots[i] = Object.assign({}, BOTSB.bots[i], r); else BOTSB.bots.push(r);
       sbNotifyBots();
@@ -496,4 +497,42 @@ async function sbWriteBotQueues(list) {
     BOTSB.queueSig.set(r.bot_key, botQueueSig(r));
   });
   return { written: changed.length };
+}
+
+// A key rename, mirrored locally. The server moves runs, token and queue by cascade;
+// this keeps an open Board from showing the old key until the next reload.
+function botRekeyLocal(oldKey, newKey) {
+  BOTSB.bots = BOTSB.bots.filter(x => !(x.bot_key === oldKey && BOTSB.bots.some(y => y.bot_key === newKey)));
+  BOTSB.bots.forEach(x => { if (x.bot_key === oldKey) x.bot_key = newKey; });
+  BOTSB.runs.forEach(x => { if (x.bot_key === oldKey) x.bot_key = newKey; });
+  if (BOTSB.queue.has(oldKey)) {
+    const q = BOTSB.queue.get(oldKey);
+    q.bot_key = newKey;
+    BOTSB.queue.delete(oldKey);
+    BOTSB.queue.set(newKey, q);
+    BOTSB.queueSig.set(newKey, BOTSB.queueSig.get(oldKey));
+    BOTSB.queueSig.delete(oldKey);
+  }
+}
+
+async function sbRenameBot(oldKey, newKey) {
+  const c = sbInit();
+  if (!c || !SB.user) return { error: 'not signed in' };
+  const { error } = await c.rpc('bot_rename', { p_old: oldKey, p_new: newKey });
+  if (error) return { error: error.message };
+  botRekeyLocal(oldKey, newKey);
+  return { ok: true };
+}
+
+// A report posted by a signed-in teammate -- the paste box and "Post sample report".
+// Same intake as a bot's token path, so it accepts exactly the same shape.
+async function sbPostReport(report) {
+  const c = sbInit();
+  if (!c || !SB.user) return { error: 'not signed in' };
+  const { data, error } = await c.rpc('bot_post_report', { p_report: report });
+  if (error) return { error: error.message };
+  // Fetch the stored row so it shows at once, whatever realtime is doing.
+  const r = await c.from('bot_runs').select(RUN_COLS).eq('id', data.id).single();
+  if (!r.error && r.data && !BOTSB.runs.some(x => x.id === r.data.id)) BOTSB.runs.push(r.data);
+  return { result: data };
 }
