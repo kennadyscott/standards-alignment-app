@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609092228';   // replaced with the deploy stamp
+const APP_BUILD = '202609101604';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -847,6 +847,7 @@ function deferredRerender() {
   const attempt = () => {
     if (userIsTyping()) { rerenderTimer = setTimeout(attempt, 4000); return; }
     normalizeSets();
+    invalidateQueues();
     renderAll();
   };
   rerenderTimer = setTimeout(attempt, 300);
@@ -878,6 +879,12 @@ async function loadPersisted() {
       syncTrouble = false;
       sbSubscribe(state, deferredRerender);
       SB.onPresence = updatePresenceUI;
+      // Bot registry + run log load alongside, never in front of, the passage data.
+      sbLoadBots(shiftDate(boardDate(), -CAL_DAYS)).then(ok => {
+        if (ok) { sbSubscribeBots(onBotsChange); startBotQueueRefresh(); }
+        updateBotsBadge();
+        if (state.ui.view === 'bots') renderBots({ keepQueues: true });
+      });
     } catch (e) {
       syncTrouble = true;
       syncError = String((e && e.message) || e);
@@ -5041,7 +5048,7 @@ function renderInputDetail(row, st, grade) {
         <button class="act-btn approve" data-buildpeer="1" ${building ? 'disabled' : ''}>
           ${building ? 'Generating…' : hasPeerContent ? `${ico('spark')} Rebuild with AI` : `${ico('spark')} Build with AI`}</button>
       </div>
-      ${botNoteHtml(STAGE_BOTS.peer)}
+      ${stageOwnerNote('peer')}
       ${s.peerDraft ? `
         <div class="ps-field" style="margin-bottom:12px">
           <label>Student draft — the flawed response students revise</label>
@@ -5306,7 +5313,7 @@ function renderInput() {
   box.innerHTML = '';
   // Whose queue this is. Only on the stage's own tab — on "All to-dos" the rows are
   // mixed, so a single owner would be wrong.
-  if (STAGE_BOTS[state.ui.inStage]) box.appendChild(el(botNoteHtml(STAGE_BOTS[state.ui.inStage])));
+  { const owner = sourceOwner(state.ui.inStage); if (owner) box.appendChild(el(botNoteHtml(owner))); }
   if (!rows.length) {
     box.appendChild(el(`<div class="review-empty">
       No passages serve ${STATE_NAMES[st]} Grade ${grade} yet.<br>
@@ -5362,20 +5369,8 @@ function renderInput() {
      2b. Needs Peer Task      — Georgia only: author the peer revision task
      3. To Be Entered         — tag the ECR set in CMS
      4. Entered in CMS        — done; leaves the working queue, lives under its own filter. */
-/* Which Grokbot owns each hand-off. Named per Kennady 2026-08-26 so the team can see
-   at a glance who fills a queue before a person touches it. */
-const STAGE_BOTS = {
-  approval:  { bot: 'Adam',    does: 'confirms these alignments' },
-  standards: { bot: 'Stanley', does: "accepts the alignment, or picks the standard when one is missing" },
-  peer:      { bot: 'Georgia', does: 'develops the Peer Revision task' },
-  enter:     { bot: 'Eric',    does: 'enters these into the CMS' },
-};
-/* The Dashboard has two owners, one per side of every split column: Herman builds what
-   the Ours number counts, Josh reads the CMS and refreshes the CMS number beside it. */
-const DASH_BOTS = [
-  { bot: 'Herman', does: 'fills in passage sets' },
-  { bot: 'Josh',   does: 'updates the CMS numbers' },
-];
+/* Which Grokbot owns each hand-off comes from the bot registry (sourceOwner), so a
+   rename or an archive on the Board shows up here as well. */
 function botNoteHtml(entry) {
   return `<div class="bot-note">${botPairHtml(entry)}</div>`;
 }
@@ -5932,26 +5927,36 @@ function cmsCell(bucket, subdomain, ours, footerDomains) {
 }
 
 /* ---------- Morning Board ----------
-   Five Grokbots, five jobs. Without this each one means opening State Lists and stepping
-   through 7 states x 7 grades to find out whether there is anything to do at all. This
-   answers "where do I start today" in one screen, and every row jumps straight to the
-   work. */
-const BOTS = [
-  { key: 'adam', name: 'Adam', job: 'Checks state lists for sets in Needs Approval and assigns or dismisses based on standard/content alignment',
-    stage: 'approval', unit: 'set' },
-  { key: 'stanley', name: 'Stanley', job: 'Needs Standards queue: accepts good state-standard alignments on passage questions, or picks a matching standard when one is missing',
-    stage: 'standards', unit: 'set' },
-  { key: 'georgia', name: 'Georgia', job: 'Builds the Peer Review Question Sets',
-    stage: 'peer', unit: 'set' },
-  { key: 'eric', name: 'Eric', job: 'Enters approved sets from State Lists into the CMS',
-    stage: 'enter', unit: 'set' },
-  { key: 'herman', name: 'Herman', job: 'Builds new passage sets from state dashboards',
-    kind: 'dash', unit: 'gap' },
-  { key: 'bernard', name: 'Bernard', job: 'Numbers the paragraphs in passages that have none, and repairs sequences that are wrong',
-    kind: 'numbering', unit: 'set' },
-  { key: 'josh', name: 'Josh', job: 'Builds count list for updated CMS numbers in the dashboard',
-    kind: 'cms', unit: 'grade' },
+   One card per Grokbot: where to start, how much is left, and -- from each bot's own
+   run reports -- whether it has started, finished, gone quiet or hit a wall. The roster
+   lives in Supabase (supabase/bots.sql) so bots are added, renamed and archived from the
+   Board itself. DEFAULT_BOTS is only the fallback for when those tables can't be reached,
+   in which case the Board behaves exactly as it did before run reports existed. */
+const DEFAULT_BOTS = [
+  { bot_key: 'adam', name: 'Adam', job: 'Checks state lists for sets in Needs Approval and assigns or dismisses based on standard/content alignment', work_type: 'queue', queue_source: 'approval', sort: 10 },
+  { bot_key: 'stanley', name: 'Stanley', job: 'Needs Standards queue: accepts good state-standard alignments on passage questions, or picks a matching standard when one is missing', work_type: 'queue', queue_source: 'standards', sort: 20 },
+  { bot_key: 'georgia', name: 'Georgia', job: 'Builds the Peer Review Question Sets', work_type: 'queue', queue_source: 'peer', sort: 30 },
+  { bot_key: 'eric', name: 'Eric', job: 'Enters approved sets from State Lists into the CMS', work_type: 'queue', queue_source: 'enter', sort: 40 },
+  { bot_key: 'herman', name: 'Herman', job: 'Builds new passage sets from state dashboards', work_type: 'queue', queue_source: 'dash', sort: 50 },
+  { bot_key: 'bernard', name: 'Bernard', job: 'Numbers the paragraphs in passages that have none, and repairs sequences that are wrong', work_type: 'queue', queue_source: 'numbering', sort: 60 },
+  { bot_key: 'josh', name: 'Josh', job: 'Builds count list for updated CMS numbers in the dashboard', work_type: 'count', queue_source: 'cms', sort: 70 },
 ];
+// The live queues the app can compute itself. A bot with none of these gets its
+// "remaining" from its own run reports instead.
+const QUEUE_SOURCES = {
+  approval:  { label: 'Needs Approval (State Lists)',    stage: 'approval',  unit: 'set',   does: 'confirms these alignments' },
+  standards: { label: 'Needs Standards (State Lists)',   stage: 'standards', unit: 'set',   does: 'accepts the alignment, or picks the standard when one is missing' },
+  peer:      { label: 'Needs Peer Task (Georgia)',       stage: 'peer',      unit: 'set',   does: 'develops the Peer Revision task' },
+  enter:     { label: 'To Be Entered (State Lists)',     stage: 'enter',     unit: 'set',   does: 'enters these into the CMS' },
+  dash:      { label: 'Dashboard gaps',                  kind: 'dash',       unit: 'gap',   does: 'fills in passage sets' },
+  cms:       { label: 'CMS counts (Dashboard)',          kind: 'cms',        unit: 'grade', does: 'updates the CMS numbers' },
+  numbering: { label: 'Paragraph numbering (Passages)',  kind: 'numbering',  unit: 'set',   does: 'numbers the paragraphs' },
+  notready:  { label: 'Not ready for export (Passages)', kind: 'notready',   unit: 'set',   does: 'fixes sets that are not ready' },
+};
+const WORK_TYPES = { queue: 'Queue', count: 'Count', sweep: 'Sweep', manager: 'Manager' };
+const SURFACES = { app: 'Alignment app', cms: 'cms.cleark12.com', mcp: 'MCP' };
+const BOARD_TZ = 'America/Chicago';
+
 /* Can this state build for this row at this grade? Literary genres are universal, so
    always yes; a content row needs standards behind it or there is nothing to write to. */
 function stateCanFill(st, grade, dom) {
@@ -5961,29 +5966,97 @@ function stateCanFill(st, grade, dom) {
     x.state === st && x.subject === subj && gradeMatches(x.grade, grade) &&
     canonSubdomain(x.strand, x.subject, st, grade) === dom);
 }
+// Kept for ticks saved before the run log existed; those were keyed by UTC date.
 const today = () => new Date().toISOString().slice(0, 10);
 const botDoneKey = k => `${k}|${today()}`;
 
-/* Work waiting for each bot, per state and grade. Computed from the same setsForGrade /
-   rowStage the State Lists screen uses, so the board can never disagree with the tab it
-   sends you to. */
-function botWork() {
-  const stageBots = BOTS.filter(b => b.stage);
+// The Board's day is Central time, matching bot_today() in the database. A UTC date
+// flips at 7pm in Texas and would file an evening run under tomorrow.
+function boardDate() {
+  return new Intl.DateTimeFormat('en-CA', { timeZone: BOARD_TZ, year: 'numeric', month: '2-digit', day: '2-digit' })
+    .format(new Date());
+}
+function shiftDate(ymd, n) {
+  const [y, m, d] = ymd.split('-').map(Number);
+  return new Date(Date.UTC(y, m - 1, d + n, 12)).toISOString().slice(0, 10);
+}
+function boardNow() {
+  const parts = new Intl.DateTimeFormat('en-US', { timeZone: BOARD_TZ, weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false })
+    .formatToParts(new Date());
+  const get = t => (parts.find(p => p.type === t) || {}).value;
+  let h = +get('hour');
+  if (h === 24) h = 0;
+  return { weekday: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(get('weekday')), minutes: h * 60 + (+get('minute')) };
+}
+function botAgo(iso) {
+  if (!iso) return '';
+  const s = Math.max(0, (Date.now() - new Date(iso).getTime()) / 1000);
+  if (s < 60) return 'just now';
+  if (s < 3600) return `${Math.round(s / 60)} min ago`;
+  if (s < 86400) return `${Math.round(s / 3600)} h ago`;
+  return new Date(iso).toLocaleDateString(undefined, { month: 'short', day: 'numeric', timeZone: BOARD_TZ });
+}
+function botClock(iso) {
+  if (!iso) return '';
+  return new Date(iso).toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit', timeZone: BOARD_TZ });
+}
+
+/* ---------- the roster ---------- */
+function botFromRow(r) {
+  const src = QUEUE_SOURCES[r.queue_source] || null;
+  return {
+    key: r.bot_key, name: r.name || r.bot_key, job: r.job || '',
+    workType: r.work_type || 'queue', source: src ? r.queue_source : null,
+    stage: src && src.stage, kind: src ? src.kind : 'reported', unit: src ? src.unit : 'report',
+    surfaces: r.surfaces || [], activeDays: (r.active_days || [1, 2, 3, 4, 5]).map(Number),
+    activeStart: String(r.active_start || '08:00').slice(0, 5), activeEnd: String(r.active_end || '16:00').slice(0, 5),
+    grokAgentId: r.grok_agent_id || '', sort: r.sort == null ? 100 : r.sort,
+    tokenIssuedAt: r.token_issued_at || null, archived: !!r.archived_at,
+  };
+}
+const botsLive = () => typeof BOTSB !== 'undefined' && BOTSB.available === true;
+function allBots() {
+  const rows = botsLive() ? BOTSB.bots : DEFAULT_BOTS;
+  return rows.map(botFromRow).sort((a, b) => a.sort - b.sort || a.key.localeCompare(b.key));
+}
+const workerBots = () => allBots().filter(b => !b.archived && b.workType !== 'manager');
+const managerBots = () => allBots().filter(b => !b.archived && b.workType === 'manager');
+
+// Owner notes on State Lists stages and the Dashboard follow the registry, so a rename
+// or an archive shows up there too.
+function sourceOwner(source) {
+  const b = workerBots().find(x => x.source === source);
+  return b && QUEUE_SOURCES[source] ? { bot: b.name, does: QUEUE_SOURCES[source].does } : null;
+}
+function stageOwnerNote(source) {
+  const o = sourceOwner(source);
+  return o ? botNoteHtml(o) : '';
+}
+
+/* ---------- live queues ----------
+   Computed per SOURCE, once, from the same setsForGrade / rowStage the State Lists use,
+   so the Board can never disagree with the tab it sends you to. Cached until the data
+   changes: a run report arriving must not re-run two seconds of queue math. */
+let queueCache = null;
+function invalidateQueues() { queueCache = null; }
+function queueWork() {
+  if (queueCache) return queueCache;
   const out = {};
-  BOTS.forEach(b => { out[b.key] = { total: 0, rows: [] }; });
+  Object.keys(QUEUE_SOURCES).forEach(k => { out[k] = { total: 0, rows: [] }; });
+  const stageKeys = ['approval', 'standards', 'peer', 'enter'];
 
   STATES.forEach(st => {
     GRADES.forEach(g => {
       const rows = setsForGrade(st, g);
-      if (rows.length) rows.forEach(r => { r.stage = rowStage(r, st, g); });
-      stageBots.forEach(b => {
+      rows.forEach(r => { r.stage = rowStage(r, st, g); });
+      stageKeys.forEach(sk => {
         // Peer tasks are a Georgia deliverable; the stage does not exist elsewhere.
-        if (b.stage === 'peer' && st !== 'GA') return;
-        const n = rows.filter(r => r.stage === b.stage).length;
-        if (n) { out[b.key].rows.push({ state: st, grade: g, n }); out[b.key].total += n; }
+        if (sk === 'peer' && st !== 'GA') return;
+        const n = rows.filter(r => r.stage === sk).length;
+        if (n) { out[sk].rows.push({ state: st, grade: g, n }); out[sk].total += n; }
       });
 
-      // Herman: how far the dashboard is from its goal, counted as missing sets.
+      // Dashboard gaps: how far the dashboard is from its goal, counted as missing sets.
       const sets = state.sets.filter(s =>
         !state.setDismiss[inputKey(s.id, st, g)] &&
         setServes(s, true).some(v => v.state === st && v.grade === String(g)));
@@ -6006,62 +6079,226 @@ function botWork() {
         if (!t.informative && !t.opinion && !stateCanFill(st, g, d)) return;
         gap += Math.max(0, DASH_GOAL - t.informative) + Math.max(0, DASH_GOAL - t.opinion);
       });
-      if (gap) { out.herman.rows.push({ state: st, grade: g, n: gap }); out.herman.total += gap; }
+      if (gap) { out.dash.rows.push({ state: st, grade: g, n: gap }); out.dash.total += gap; }
 
-      // Bernard works per SET, not per state list, so his rows are built after this
-      // state x grade sweep rather than inside it.
-      // Josh: grades with no CMS numbers, or numbers captured only in part.
+      // CMS counts: grades with no CMS numbers, or numbers captured only in part.
       ['informative', 'opinion'].forEach(type => {
         const b = cmsBucket(st, type, g);
-        if (!b) { out.josh.rows.push({ state: st, grade: g, type, n: 1, why: 'never captured' }); out.josh.total++; }
-        else if (b.complete === false) { out.josh.rows.push({ state: st, grade: g, type, n: 1, why: 'partial' }); out.josh.total++; }
+        if (!b) { out.cms.rows.push({ state: st, grade: g, type, n: 1, why: 'never captured' }); out.cms.total++; }
+        else if (b.complete === false) { out.cms.rows.push({ state: st, grade: g, type, n: 1, why: 'partial' }); out.cms.total++; }
       });
     });
   });
 
-  // Bernard: every set whose paragraph numbering is missing or wrong, grouped the way
-  // the Passages filters work so one of his rows can open exactly that list.
-  {
+  // Per-SET queues, grouped the way the Passages filters work so a row opens exactly
+  // that list: paragraph numbering, and sets that are not ready for export.
+  const perSet = (key, test) => {
     const tally = new Map();
     state.sets.forEach(s => {
-      if (!numberingProblem(s)) return;
+      if (!test(s)) return;
       const st = primaryStateOf(s) || ((s.standard || {}).state) || 'none';
       const g = String(s.gaGrade || '');
       const k = st + '|' + g;
       if (!tally.has(k)) tally.set(k, { state: st, grade: g, n: 0 });
       tally.get(k).n++;
-      out.bernard.total++;
+      out[key].total++;
     });
-    out.bernard.rows = [...tally.values()];
-  }
+    out[key].rows = [...tally.values()];
+  };
+  perSet('numbering', s => !!numberingProblem(s));
+  perSet('notready', s => exportReadiness(s).stage === 'not-ready');
+
+  queueCache = out;
+  return out;
+}
+// Work per bot, keyed by bot. Bots without a queue source get an empty queue here and
+// take their remaining from run reports instead.
+function botWork() {
+  const q = queueWork();
+  const out = {};
+  allBots().forEach(b => { out[b.key] = (b.source && q[b.source]) || { total: 0, rows: [] }; });
   return out;
 }
 
-/* The Morning Board's handlers. These used to sit inside renderDash(), which meant they
-   were only ever attached if someone visited the Dashboard first: open the app straight
-   onto the Board -- a bookmark, a #v=bots link, a reload while it was the last view --
-   and every "Done today" box was inert. It still ticked, because a checkbox always
-   ticks, but nothing was recorded and the next render cleared it. Bound from renderBots
-   so it cannot depend on where anyone happened to click first. */
+/* ---------- run reports ---------- */
+function runsOn(key, date) {
+  return botsLive() ? BOTSB.runs.filter(r => r.bot_key === key && r.run_date === date) : [];
+}
+function latestRun(key, date) {
+  let best = null;
+  runsOn(key, date).forEach(r => {
+    const t = String(r.received_at || '');
+    const bt = best ? String(best.received_at || '') : '';
+    if (!best || t > bt || (t === bt && r.id > best.id)) best = r;
+  });
+  return best;
+}
+// The bot's own latest report. A Board tick is a person saying done / not done -- it is
+// not the bot working, so it never supplies status, counts, highlights or blockers.
+function latestBotReport(key, date) {
+  let best = null;
+  runsOn(key, date).forEach(r => {
+    if (r.source === 'board') return;
+    const t = String(r.received_at || '');
+    const bt = best ? String(best.received_at || '') : '';
+    if (!best || t > bt || (t === bt && r.id > best.id)) best = r;
+  });
+  return best;
+}
+// Done-ness is the one thing a tick decides: the most recent signal of any kind wins.
+function isDoneOn(b, date) {
+  const r = latestRun(b.key, date);
+  if (r) return !!r.done_today;
+  return !!(state.botDone || {})[`${b.key}|${date}`];   // ticks from before the run log
+}
+function openBlockers(b, date) {
+  if (isDoneOn(b, date)) return [];
+  const r = latestBotReport(b.key, date);
+  return r && Array.isArray(r.blockers) ? r.blockers : [];
+}
+// started/working/blocked/failed/skipped come from the bot; silent, notyet and off are
+// the Board's reading of no report at all.
+function botStatus(b, date) {
+  if (isDoneOn(b, date)) return 'done';
+  const r = latestBotReport(b.key, date);
+  if (r) return r.status === 'done' ? 'working' : r.status;   // a "done" report someone un-ticked
+  if (!botsLive()) return 'none';
+  if (date !== boardDate()) return 'silent';
+  const now = boardNow();
+  if (!b.activeDays.includes(now.weekday)) return 'off';
+  const [h, m] = b.activeStart.split(':').map(Number);
+  return now.minutes >= h * 60 + m + 30 ? 'silent' : 'notyet';
+}
+function remainingFor(b, work, date) {
+  if (b.source) {
+    const w = work ? work[b.key] : null;
+    if (w) return { n: w.total, places: w.rows.length, from: 'queue' };
+    if (queueCache && queueCache[b.source]) return { n: queueCache[b.source].total, places: queueCache[b.source].rows.length, from: 'queue' };
+    const q = botsLive() ? BOTSB.queue.get(b.key) : null;
+    if (q) return { n: q.remaining, places: q.places, from: 'snapshot' };
+    return { n: null, places: null, from: null };
+  }
+  const r = latestBotReport(b.key, date);
+  const c = (r && r.counts) || {};
+  if (c.remaining != null) return { n: +c.remaining || 0, places: c.places != null ? +c.places : null, from: 'report' };
+  return { n: null, places: null, from: null };
+}
+// The badge counts bots that need a look: anything blocked, plus anything not done
+// that still has work. Unfinished-but-empty is not a reason to open the Board.
+function needsAttention(b, date, work) {
+  if (openBlockers(b, date).length) return true;
+  if (isDoneOn(b, date)) return false;
+  const rem = remainingFor(b, work, date).n;
+  return rem != null && rem > 0;
+}
+function updateBotsBadge(work) {
+  const badge = document.getElementById('botsBadge');
+  if (!badge) return;
+  const d = boardDate();
+  badge.textContent = String(workerBots().filter(b => needsAttention(b, d, work)).length);
+}
+
+const BOT_STATUS = {
+  started: { label: 'Started', cls: 'bs-working' },
+  working: { label: 'Working', cls: 'bs-working' },
+  blocked: { label: 'Blocked', cls: 'bs-blocked' },
+  failed:  { label: 'Failed', cls: 'bs-blocked' },
+  done:    { label: 'Done', cls: 'bs-done' },
+  skipped: { label: 'Skipped', cls: 'bs-quiet' },
+  silent:  { label: 'Silent', cls: 'bs-silent' },
+  notyet:  { label: 'Not started', cls: 'bs-quiet' },
+  off:     { label: 'Off today', cls: 'bs-quiet' },
+};
+function botStatusChip(st, b) {
+  const m = BOT_STATUS[st];
+  if (!m) return '';
+  const tip = st === 'notyet' ? `Due from ${b.activeStart} Central`
+    : st === 'silent' ? `No report yet today — due from ${b.activeStart} Central` : '';
+  return `<span class="bot-status ${m.cls}"${tip ? ` title="${esc(tip)}"` : ''}>${m.label}</span>`;
+}
+const botText = h => (typeof h === 'string' ? h : JSON.stringify(h));
+
+/* ---------- publishing the queues for bots to read ----------
+   bot_brief hands a bot its live remaining. That number comes from here: whenever the
+   Board renders, and every 20 minutes in any open signed-in tab. Only changed rows are
+   written. */
+function publishBotQueues(work) {
+  if (!botsLive() || !SB.user) return;
+  const list = workerBots().filter(b => b.source).map(b => {
+    const w = work[b.key] || { total: 0, rows: [] };
+    return {
+      bot_key: b.key, remaining: w.total, places: w.rows.length,
+      rows: w.rows.slice().sort((x, y) => y.n - x.n).slice(0, 40),
+      brief: botBriefText(b, w),
+    };
+  });
+  sbWriteBotQueues(list).then(r => { if (r && r.error) console.warn('[bots] queue publish failed:', r.error); });
+}
+let botQueueTimer = null;
+function startBotQueueRefresh() {
+  if (botQueueTimer) return;
+  botQueueTimer = setInterval(() => {
+    if (!botsLive() || document.hidden || state.ui.view === 'bots') return;   // the Board publishes itself
+    const run = () => {
+      invalidateQueues();
+      const w = botWork();
+      publishBotQueues(w);
+      updateBotsBadge(w);
+    };
+    (window.requestIdleCallback || (f => setTimeout(f, 0)))(run, { timeout: 60000 });
+  }, 20 * 60 * 1000);
+}
+// Realtime: a report, a registry edit or a queue snapshot arrived. Redraw from the
+// cached queues -- nothing about the passage data changed.
+function onBotsChange() {
+  updateBotsBadge();
+  if (state.ui.view === 'bots' && !userIsTyping()) renderBots({ keepQueues: true });
+  // The Manage dialog is deliberately NOT redrawn here: a bot posting while someone types
+  // a job description would wipe the field. It redraws on its own actions only.
+}
+
+/* ---------- handlers ----------
+   Bound on the whole Board view, from renderBots, so they can never depend on which tab
+   someone opened first -- the bug that left Stanley's Done tick inert. */
 function bindBotsBoard() {
-  const bots = document.getElementById('botsWrap');
-  if (!bots || bots.dataset.bound) return;
-  bots.dataset.bound = '1';
-  bots.addEventListener('change', e => {
+  const view = document.getElementById('botsView');
+  if (!view || view.dataset.bound) return;
+  view.dataset.bound = '1';
+  view.addEventListener('change', async e => {
+    if (e.target.id === 'runlogBot') { state.ui.botsLogBot = e.target.value; renderBots({ keepQueues: true }); return; }
     const cb = e.target.closest('[data-botdone]');
     if (!cb) return;
-    const k = botDoneKey(cb.dataset.botdone);
-    if (cb.checked) state.botDone[k] = `${(SB.user && SB.user.email) || 'someone'}|${new Date().toISOString()}`;
+    const key = cb.dataset.botdone;
+    const on = cb.checked;
+    if (botsLive()) {
+      // A tick is a run report like any other, so it lands in the same log, is
+      // attributed server-side, and reaches every open Board live.
+      cb.disabled = true;
+      const r = await sbTickBot(key, boardDate(), on);
+      if (r.error) { cb.checked = !on; cb.disabled = false; toast('⚠ Could not save that — ' + r.error); return; }
+      renderBots({ keepQueues: true });
+      return;
+    }
+    const k = botDoneKey(key);
+    if (on) state.botDone[k] = `${(SB.user && SB.user.email) || 'someone'}|${new Date().toISOString()}`;
     else delete state.botDone[k];
     pushState();
-    renderBots();
+    renderBots({ keepQueues: true });
   });
-  bots.addEventListener('click', e => {
+  view.addEventListener('click', e => {
     if (e.target.closest('#joshSave')) { joshSave(); return; }
+    const mode = e.target.closest('[data-botsmode]');
+    if (mode) { state.ui.botsMode = mode.dataset.botsmode; renderBots({ keepQueues: true }); return; }
+    if (e.target.closest('#botsManageBtn')) { openManageBots(); return; }
+    const day = e.target.closest('[data-logday]');
+    if (day) {
+      state.ui.botsLogDate = shiftDate(state.ui.botsLogDate || boardDate(), +day.dataset.logday);
+      renderBots({ keepQueues: true });
+      return;
+    }
     const cp = e.target.closest('[data-botcopy]');
     if (cp) {
-      const txt = botBrief(cp.dataset.botcopy);
-      navigator.clipboard.writeText(txt)
+      navigator.clipboard.writeText(botBrief(cp.dataset.botcopy))
         .then(() => toast('✓ Brief copied — paste it to the bot'))
         .catch(() => toast('⚠ Could not reach the clipboard'));
       return;
@@ -6069,11 +6306,10 @@ function bindBotsBoard() {
     const go = e.target.closest('[data-botgo]');
     if (!go) return;
     const [bot, st, grade] = go.dataset.botgo.split('|');
-    const b = BOTS.find(x => x.key === bot);
-    // Bernard's work is per set, so his rows open the Passages list on his own filter
-    // rather than a State List stage.
-    if (b && b.kind === 'numbering') {
-      state.ui.setFilterStatus = 'needs-numbers';
+    const b = allBots().find(x => x.key === bot);
+    // Per-set queues open the Passages list on their own filter, not a State List stage.
+    if (b && (b.kind === 'numbering' || b.kind === 'notready')) {
+      state.ui.setFilterStatus = b.kind === 'numbering' ? 'needs-numbers' : 'not-ready';
       state.ui.setFilterState = st || 'all';
       state.ui.setFilterGrade = grade || 'all';
       state.ui.setFilterSubtopic = 'all';
@@ -6092,75 +6328,227 @@ function bindBotsBoard() {
   });
 }
 
-function renderBots() {
+/* ---------- rendering ---------- */
+function renderBotsTools() {
+  const box = document.getElementById('botsTools');
+  if (!box) return;
+  if (!botsLive()) { box.innerHTML = ''; return; }
+  const m = state.ui.botsMode || 'cards';
+  const html = `<div class="seg bots-seg">${[['cards', 'Cards'], ['digest', 'Manager'], ['log', 'Run log']]
+      .map(([k, l]) => `<button class="seg-btn ${m === k ? 'active' : ''}" data-botsmode="${k}">${l}</button>`).join('')}</div>
+    <button class="act-btn" id="botsManageBtn">Manage bots</button>`;
+  if (box.innerHTML !== html) box.innerHTML = html;
+}
+
+function renderBots(opts) {
   const wrap = document.getElementById('botsWrap');
   if (!wrap) return;
   bindBotsBoard();
+  if (!(opts && opts.keepQueues)) invalidateQueues();
+  const d = boardDate();
   const work = botWork();
-  const outstanding = BOTS.reduce((a, b) => a + (state.botDone[botDoneKey(b.key)] ? 0 : work[b.key].total ? 1 : 0), 0);
-  const badge = document.getElementById('botsBadge');
-  if (badge) badge.textContent = String(outstanding);
-  const prog = document.getElementById('botsProgress');
-  if (prog) prog.textContent = `${outstanding} of ${BOTS.length} still have work · ${today()}`;
+  publishBotQueues(work);
+  updateBotsBadge(work);
+  renderBotsTools();
 
-  const TOP = 6;   // enough to start on; the rest is one click away
-  wrap.innerHTML = BOTS.map(b => {
-    const w = work[b.key];
-    const done = state.botDone[botDoneKey(b.key)];
-    const rows = w.rows.slice().sort((x, y) => y.n - x.n);
-    const unit = b.unit === 'gap' ? 'sets to build'
-      : b.unit === 'grade' ? 'grade/type to count'
-      : 'sets waiting';
-    const line = r => `${STATE_NAMES[r.state] || r.state} · Grade ${r.grade}`
-      + (r.type ? ` · ${r.type === 'informative' ? 'Informational' : 'Opinion'}` : '');
-    const listRow = r => `<button class="bot-line" data-botgo="${b.key}|${r.state}|${r.grade}${r.type ? '|' + r.type : ''}">
-        <span class="bot-line-n">${r.why ? '—' : r.n}</span>
-        <span class="bot-line-where">${esc(line(r))}</span>
-        <span class="bot-line-go">open →</span>
-      </button>`;
-    return `<div class="bot-card ${done ? 'is-done' : w.total ? '' : 'is-clear'}">
-      <div class="bot-card-head">
-        <div class="bot-card-id">
-          <span class="bot-badge">Grokbot ${esc(b.name)}</span>
-          <span class="bot-job">${esc(b.job)}</span>
-        </div>
-        <div class="bot-card-actions">
-          ${w.total ? `<button class="act-btn" data-botcopy="${b.key}" title="Plain-text brief to paste into the bot">Copy brief</button>` : ''}
-          <label class="bot-done-wrap" title="Tick when today's pass is finished">
-            <input type="checkbox" data-botdone="${b.key}" ${done ? 'checked' : ''}>
-            <span>${done ? 'Done' : 'Done today'}</span>
-          </label>
-        </div>
-      </div>
-      ${!w.total ? `<div class="bot-clear">Nothing waiting</div>` : `
-        <div class="bot-total"><b>${w.total}</b> ${esc(unit)} across ${w.rows.length} place${w.rows.length === 1 ? '' : 's'}${b.key === 'herman' ? ' · only rows this state has standards for' : ''}</div>
-        <div class="bot-list">${rows.slice(0, TOP).map(listRow).join('')}</div>
-        ${rows.length > TOP ? `<details class="bot-more"><summary>${rows.length - TOP} more</summary>
-          <div class="bot-list">${rows.slice(TOP).map(listRow).join('')}</div></details>` : ''}`}
-      ${b.key === 'josh' ? joshPasteHtml() : ''}
-    </div>`;
-  }).join('');
+  const bots = workerBots();
+  const attention = bots.filter(b => needsAttention(b, d, work)).length;
+  const blocked = bots.filter(b => openBlockers(b, d).length || botStatus(b, d) === 'blocked').length;
+  const done = bots.filter(b => isDoneOn(b, d)).length;
+  const prog = document.getElementById('botsProgress');
+  if (prog) prog.textContent = `${attention} need attention · ${blocked} blocked · ${done} of ${bots.length} done · ${d}`;
+
+  const keepOpen = new Set([...wrap.querySelectorAll('details[open][data-keep]')].map(x => x.dataset.keep));
+  const keepScroll = wrap.scrollTop;
+  const mode = botsLive() ? (state.ui.botsMode || 'cards') : 'cards';
+  if (mode === 'digest') wrap.innerHTML = digestHtml(d, work);
+  else if (mode === 'log') wrap.innerHTML = runLogHtml(state.ui.botsLogDate || d, state.ui.botsLogBot || '');
+  else {
+    const note = !botsLive() && typeof BOTSB !== 'undefined' && BOTSB.error
+      ? `<div class="bots-note">${ico('warn')} Run reports aren't connected (${esc(BOTSB.error)}), so this is the Board without them.</div>` : '';
+    wrap.innerHTML = note + bots.map(b => botCardHtml(b, d, work)).join('');
+  }
+  wrap.querySelectorAll('details[data-keep]').forEach(x => { if (keepOpen.has(x.dataset.keep)) x.open = true; });
+  wrap.scrollTop = keepScroll;
   renderBotCalendar(work);
+}
+
+function botCardHtml(b, d, work) {
+  const TOP = 6;   // enough to start on; the rest is one click away
+  const w = work[b.key] || { total: 0, rows: [] };
+  const st = botStatus(b, d);
+  const r = latestRun(b.key, d);
+  const done = isDoneOn(b, d);
+  const blockers = openBlockers(b, d);
+  const rem = remainingFor(b, work, d);
+  const rows = w.rows.slice().sort((x, y) => y.n - x.n);
+  const unit = b.unit === 'gap' ? 'sets to build' : b.unit === 'grade' ? 'grade/type to count' : 'sets waiting';
+  const line = x => `${STATE_NAMES[x.state] || (x.state === 'ALL' ? 'Universal' : x.state === 'none' ? 'No primary state' : x.state)}`
+    + (x.grade ? ` · Grade ${x.grade}` : '')
+    + (x.type ? ` · ${x.type === 'informative' ? 'Informational' : 'Opinion'}` : '');
+  const listRow = x => `<button class="bot-line" data-botgo="${b.key}|${x.state}|${x.grade}${x.type ? '|' + x.type : ''}">
+      <span class="bot-line-n">${x.why ? '—' : x.n}</span>
+      <span class="bot-line-where">${esc(line(x))}</span>
+      <span class="bot-line-go">open →</span>
+    </button>`;
+
+  let body;
+  if (b.source) {
+    body = !w.total ? `<div class="bot-clear">Nothing waiting</div>` : `
+      <div class="bot-total"><b>${w.total}</b> ${esc(unit)} across ${w.rows.length} place${w.rows.length === 1 ? '' : 's'}${b.source === 'dash' ? ' · only rows this state has standards for' : ''}</div>
+      <div class="bot-list">${rows.slice(0, TOP).map(listRow).join('')}</div>
+      ${rows.length > TOP ? `<details class="bot-more" data-keep="more:${b.key}"><summary>${rows.length - TOP} more</summary>
+        <div class="bot-list">${rows.slice(TOP).map(listRow).join('')}</div></details>` : ''}`;
+  } else if (rem.n != null) {
+    body = `<div class="bot-total"><b>${rem.n}</b> remaining${rem.places != null ? ` across ${rem.places} place${rem.places === 1 ? '' : 's'}` : ''} <span class="ps-hint">· from its last report</span></div>`;
+  } else {
+    body = `<div class="bot-reported">No queue in this app — remaining comes from this bot's run reports.</div>`;
+  }
+
+  const rep = latestBotReport(b.key, d);
+  const c = (rep && rep.counts) || {};
+  const meta = [];
+  if (botsLive()) {
+    meta.push(r ? `Updated ${esc(botAgo(r.received_at))} · ${r.source === 'board' ? 'Board tick' + (r.submitted_by ? ' by ' + esc(r.submitted_by) : '')
+      : r.source === 'manager' ? 'via manager' : 'bot report'}` : 'No report today');
+    if (c.completed != null) meta.push(`${+c.completed || 0} completed today`);
+  }
+  const highlights = rep && Array.isArray(rep.highlights) && rep.highlights.length
+    ? `<ul class="bot-highlights">${rep.highlights.slice(0, 3).map(h => `<li>${esc(botText(h))}</li>`).join('')}</ul>` : '';
+  const surfaces = botsLive() && b.surfaces.length
+    ? `<div class="bot-surfaces">${b.surfaces.map(s => `<span class="bot-surface">${esc(SURFACES[s] || s)}</span>`).join('')}</div>` : '';
+  const clear = !done && !blockers.length && rem.n === 0;
+
+  return `<div class="bot-card ${done ? 'is-done' : ''} ${blockers.length ? 'is-blocked' : ''} ${clear ? 'is-clear' : ''}">
+    <div class="bot-card-head">
+      <div class="bot-card-id">
+        <div class="bot-card-title"><span class="bot-badge">Grokbot ${esc(b.name)}</span>${botStatusChip(st, b)}</div>
+        <span class="bot-job">${esc(b.job)}</span>
+        ${surfaces}
+      </div>
+      <div class="bot-card-actions">
+        ${b.source && w.total ? `<button class="act-btn" data-botcopy="${b.key}" title="Plain-text brief to paste into the bot">Copy brief</button>` : ''}
+        <label class="bot-done-wrap" title="Tick when today's pass is finished">
+          <input type="checkbox" data-botdone="${b.key}" ${done ? 'checked' : ''}>
+          <span>${done ? 'Done' : 'Done today'}</span>
+        </label>
+      </div>
+    </div>
+    ${blockers.length ? `<div class="bot-blocker">${ico('warn')}<div>${blockers.map(x =>
+      `<div><b>${esc(x.code || 'other')}</b> ${esc(x.message || '')}${x.at ? ` <span class="bot-blocker-at">${esc(botClock(x.at))}</span>` : ''}</div>`).join('')}</div></div>` : ''}
+    ${meta.length ? `<div class="bot-meta">${meta.map(m => `<span>${m}</span>`).join('')}</div>` : ''}
+    ${highlights}
+    ${body}
+    ${b.source === 'cms' ? joshPasteHtml() : ''}
+  </div>`;
+}
+
+/* The manager's view: who started, who is silent, who is done, who is stuck, and what
+   is blocking them -- the 4pm scavenger hunt, answered in one place. */
+function digestHtml(d, work) {
+  const rows = workerBots().map(b => {
+    const r = latestRun(b.key, d);
+    const rep = latestBotReport(b.key, d);
+    const c = (rep && rep.counts) || {};
+    return {
+      b, r, st: botStatus(b, d), done: isDoneOn(b, d), bl: openBlockers(b, d),
+      rem: remainingFor(b, work, d), completed: c.completed != null ? (+c.completed || 0) : null,
+      reported: runsOn(b.key, d).some(x => x.source !== 'board'),
+    };
+  });
+  const started = rows.filter(x => x.reported).length;
+  const silent = rows.filter(x => x.st === 'silent').length;
+  const done = rows.filter(x => x.done).length;
+  const blocked = rows.filter(x => x.bl.length || x.st === 'blocked').length;
+  const completed = rows.reduce((a, x) => a + (x.completed || 0), 0);
+  const stat = (n, l, cls) => `<div class="digest-stat ${cls || ''}"><b>${n}</b><span>${l}</span></div>`;
+  const mgr = managerBots().map(b => ({ b, r: latestRun(b.key, d) })).filter(x => x.r);
+  const open = rows.filter(x => x.bl.length);
+  const src = r => (r.source === 'board' ? 'Board tick' : r.source === 'manager' ? 'via manager' : 'report');
+  return `<div class="digest">
+    <div class="digest-strip">
+      ${stat(started, 'reported today')}${stat(silent, 'silent', silent ? 'warn' : '')}${stat(done, 'done', done ? 'good' : '')}${stat(blocked, 'blocked', blocked ? 'bad' : '')}${stat(completed, 'completed today')}
+    </div>
+    ${mgr.length ? mgr.map(({ b, r }) => `<div class="digest-mgr">
+        <div class="digest-mgr-head"><span class="bot-badge">${esc(b.name)}</span> digest · ${esc(botClock(r.received_at))} Central</div>
+        ${(r.highlights || []).length ? `<ul>${r.highlights.map(h => `<li>${esc(botText(h))}</li>`).join('')}</ul>` : ''}
+      </div>`).join('') : `<div class="ps-hint digest-none">No manager digest posted today yet.</div>`}
+    <div class="digest-table-wrap"><table class="digest-table">
+      <thead><tr><th>Bot</th><th>Status</th><th>Last update</th><th class="num">Completed</th><th class="num">Remaining</th><th>Blockers</th></tr></thead>
+      <tbody>${rows.map(x => `<tr class="${x.bl.length ? 'is-blocked' : ''}">
+        <td><b>${esc(x.b.name)}</b></td>
+        <td>${botStatusChip(x.st, x.b) || '—'}</td>
+        <td>${x.r ? `${esc(botClock(x.r.received_at))} <span class="ps-hint">${src(x.r)}</span>` : '<span class="ps-hint">—</span>'}</td>
+        <td class="num">${x.completed != null ? x.completed : '—'}</td>
+        <td class="num">${x.rem.n != null ? x.rem.n : '—'}</td>
+        <td>${x.bl.map(z => `<span class="digest-bl">${esc(z.code || 'other')}</span>`).join(' ')}</td>
+      </tr>`).join('')}</tbody>
+    </table></div>
+    <div class="digest-sec">Open blockers</div>
+    ${open.length ? `<ul class="digest-blockers">${open.map(x => x.bl.map(z =>
+      `<li><b>${esc(x.b.name)}</b> <span class="digest-bl">${esc(z.code || 'other')}</span> ${esc(z.message || '')}${z.at ? ` <span class="ps-hint">${esc(botClock(z.at))}</span>` : ''}</li>`).join('')).join('')}</ul>`
+      : `<div class="ps-hint">None open.</div>`}
+    <div class="digest-foot"><button class="act-btn" data-botsmode="log">Raw run log →</button></div>
+  </div>`;
+}
+
+function rawRun(r) {
+  return { id: r.id, botKey: r.bot_key, date: r.run_date, status: r.status, startedAt: r.started_at,
+    finishedAt: r.finished_at, doneToday: r.done_today, counts: r.counts, highlights: r.highlights,
+    blockers: r.blockers, outputs: r.outputs, source: r.source, submittedBy: r.submitted_by, receivedAt: r.received_at };
+}
+function runSummary(r) {
+  const c = r.counts || {};
+  const bits = [];
+  if (c.completed != null) bits.push(`${c.completed} completed`);
+  if (c.remaining != null) bits.push(`${c.remaining} remaining`);
+  if ((r.blockers || []).length) bits.push(`${r.blockers.length} blocker${r.blockers.length === 1 ? '' : 's'}`);
+  if ((r.highlights || []).length) bits.push(botText(r.highlights[0]).slice(0, 80));
+  return bits.join(' · ');
+}
+function runLogHtml(date, botKey) {
+  const bots = allBots();
+  const name = k => (bots.find(b => b.key === k) || { name: k }).name;
+  const runs = BOTSB.runs.filter(r => r.run_date === date && (!botKey || r.bot_key === botKey))
+    .sort((a, b) => String(b.received_at).localeCompare(String(a.received_at)) || b.id - a.id);
+  const today = boardDate();
+  const oldest = shiftDate(today, -CAL_DAYS);
+  return `<div class="runlog">
+    <div class="runlog-head">
+      <button class="act-btn" data-logday="-1" ${date <= oldest ? 'disabled' : ''}>‹ Earlier</button>
+      <b>${esc(date)}</b>${date === today ? ' <span class="ps-hint">today</span>' : ''}
+      <button class="act-btn" data-logday="1" ${date >= today ? 'disabled' : ''}>Later ›</button>
+      <select class="ps-input" id="runlogBot"><option value="">All bots</option>${bots.map(b =>
+        `<option value="${esc(b.key)}" ${b.key === botKey ? 'selected' : ''}>${esc(b.name)}</option>`).join('')}</select>
+      <span class="ps-hint">${runs.length} report${runs.length === 1 ? '' : 's'}</span>
+    </div>
+    ${runs.length ? `<div class="runlog-list">${runs.map(r => `<details class="runlog-item" data-keep="run:${r.id}">
+        <summary>
+          <span class="runlog-time">${esc(botClock(r.received_at))}</span>
+          <b>${esc(name(r.bot_key))}</b>
+          ${botStatusChip(r.done_today ? 'done' : r.status, {})}
+          <span class="runlog-src">${esc(r.source === 'board' ? 'Board · ' + (r.submitted_by || '') : r.source === 'manager' ? 'manager' : 'bot')}</span>
+          <span class="runlog-sum">${esc(runSummary(r))}</span>
+        </summary>
+        <pre>${esc(JSON.stringify(rawRun(r), null, 2))}</pre>
+      </details>`).join('')}</div>` : `<div class="review-empty">No reports on ${esc(date)}.</div>`}
+  </div>`;
 }
 
 /* A record of who finished, day by day. The point is not the ticks themselves: it is
    seeing at a glance that one bot clears its work every day while another never does,
-   which is the signal that a job needs splitting rather than chasing. */
+   or keeps hitting the same wall -- the signal that a job needs splitting. */
 const CAL_DAYS = 28;
 function calendarDays() {
+  const now = boardDate();
   const out = [];
-  const d = new Date();
-  d.setHours(12, 0, 0, 0);                       // midday, so DST cannot shift the date
   for (let i = CAL_DAYS - 1; i >= 0; i--) {
-    const x = new Date(d);
-    x.setDate(d.getDate() - i);
-    out.push({
-      key: x.toISOString().slice(0, 10),
-      dom: x.getDate(),
-      weekend: x.getDay() === 0 || x.getDay() === 6,
-      month: x.toLocaleDateString(undefined, { month: 'short' }),
-      isToday: i === 0,
-    });
+    const key = shiftDate(now, -i);
+    const [y, m, dd] = key.split('-').map(Number);
+    const dt = new Date(Date.UTC(y, m - 1, dd, 12));
+    const wd = dt.getUTCDay();
+    out.push({ key, dom: dd, weekend: wd === 0 || wd === 6,
+      month: dt.toLocaleDateString(undefined, { month: 'short', timeZone: 'UTC' }), isToday: i === 0 });
   }
   return out;
 }
@@ -6170,18 +6558,29 @@ function renderBotCalendar(work) {
   const days = calendarDays();
   const firstOfMonth = {};
   days.forEach(d => { if (!firstOfMonth[d.month]) firstOfMonth[d.month] = d.key; });
+  const dayState = (b, key) => {
+    if (isDoneOn(b, key)) return 'done';
+    const r = latestBotReport(b.key, key);
+    if (r && ((r.blockers || []).length || r.status === 'blocked' || r.status === 'failed')) return 'blocked';
+    return null;
+  };
+  const who = (b, key) => {
+    const r = latestRun(b.key, key);
+    if (r) return r.submitted_by || '';
+    return String((state.botDone || {})[`${b.key}|${key}`] || '').split('|')[0];
+  };
 
-  const rows = BOTS.map(b => {
+  const rows = workerBots().map(b => {
     const cells = days.map(d => {
-      const done = state.botDone[`${b.key}|${d.key}`];
+      const ds = dayState(b, d.key);
       // A weekday with work outstanding and no tick is the case worth seeing.
-      const hadWork = d.isToday ? (work && work[b.key] && work[b.key].total > 0) : null;
-      const cls = done ? 'done' : d.weekend ? 'weekend' : hadWork === false ? 'clear' : 'miss';
-      const who = done ? String(done).split('|')[0] : '';
-      return `<span class="cal-cell ${cls} ${d.isToday ? 'today' : ''}"
-        title="${esc(`${b.name} · ${d.key}${done ? ' · done by ' + who : ' · not marked done'}`)}"></span>`;
+      const hadWork = d.isToday ? (remainingFor(b, work, d.key).n || 0) > 0 : null;
+      const cls = ds || (d.weekend ? 'weekend' : hadWork === false ? 'clear' : 'miss');
+      const tip = `${b.name} · ${d.key}` + (ds === 'done' ? ` · done${who(b, d.key) ? ' by ' + who(b, d.key) : ''}`
+        : ds === 'blocked' ? ' · blocked' : ' · not marked done');
+      return `<span class="cal-cell ${cls} ${d.isToday ? 'today' : ''}" title="${esc(tip)}"></span>`;
     }).join('');
-    const hit = days.filter(d => state.botDone[`${b.key}|${d.key}`]).length;
+    const hit = days.filter(d => isDoneOn(b, d.key)).length;
     const weekdays = days.filter(d => !d.weekend).length;
     return `<div class="cal-row">
       <div class="cal-name">${esc(b.name)}</div>
@@ -6193,49 +6592,252 @@ function renderBotCalendar(work) {
   box.innerHTML = `
     <div class="cal-head">
       <div class="side-title">Daily completion</div>
-      <div class="ps-hint">Last ${CAL_DAYS} days. Each square is one bot on one day.</div>
+      <div class="ps-hint">Last ${CAL_DAYS} days, Central time. Each square is one bot on one day.</div>
     </div>
     <div class="cal-months">${days.map(d =>
       `<span class="cal-month">${firstOfMonth[d.month] === d.key ? esc(d.month) : ''}</span>`).join('')}</div>
     ${rows}
     <div class="cal-key">
       <span><i class="cal-cell done"></i> done</span>
+      <span><i class="cal-cell blocked"></i> blocked</span>
       <span><i class="cal-cell miss"></i> not marked</span>
       <span><i class="cal-cell clear"></i> nothing waiting</span>
       <span><i class="cal-cell weekend"></i> weekend</span>
-    </div>
-    <div class="ps-hint cal-note">History starts the first day a bot was ticked off, so
-      this fills in from here rather than looking back.</div>`;
+    </div>`;
 }
 
 /* A Grokbot reads text, not chips. This is the same work as a brief it can be handed
-   directly: what the job is, where to go, and how much is there. */
+   directly: what the job is, where to go, how much is there, and how to report back. */
 function botBrief(key) {
-  const b = BOTS.find(x => x.key === key);
-  const w = botWork()[key];
+  const b = allBots().find(x => x.key === key);
+  return b ? botBriefText(b, botWork()[key] || { total: 0, rows: [] }) : '';
+}
+function botBriefText(b, w) {
   const rows = w.rows.slice().sort((x, y) => y.n - x.n);
   const unit = b.unit === 'gap' ? 'sets to build' : b.unit === 'grade' ? 'to count' : 'sets waiting';
-  const where = b.stage ? `State Lists > <state> > Grade <n> > ${inputStages('GA').find(s => s.key === b.stage).label}`
+  const stageLabel = s => (inputStages('GA').find(x => x.key === s) || {}).label || s;
+  const where = b.stage ? `State Lists > <state> > Grade <n> > ${stageLabel(b.stage)}`
     : b.kind === 'dash' ? 'Dashboard > <state> — click a cell under its goal to generate'
+    : b.kind === 'numbering' ? 'Passages > status "Paragraph numbers missing or wrong" > primary state + grade'
+    : b.kind === 'notready' ? 'Passages > status "Not ready (any reason)" > primary state + grade'
     : 'CMS > ECR Item Sets > <state> Informational/Opinion > grade tab, then paste into Morning Board';
   return [
-    `GROKBOT ${b.name.toUpperCase()} — ${today()}`,
+    `GROKBOT ${b.name.toUpperCase()} — ${boardDate()}`,
     b.job,
     ``,
     `Where: ${where}`,
     `Total: ${w.total} ${unit}`,
     ``,
-    ...rows.map(r => `- ${STATE_NAMES[r.state] || r.state}, Grade ${r.grade}`
+    ...rows.map(r => `- ${STATE_NAMES[r.state] || r.state}${r.grade ? `, Grade ${r.grade}` : ''}`
       + (r.type ? `, ${r.type === 'informative' ? 'Informational' : 'Opinion'}` : '')
       + (r.why ? ` — ${r.why}` : ` — ${r.n}`)),
+    ``,
+    `Report progress: POST /rest/v1/rpc/bot_submit_run with your x-bot-token (see BOT-API.md).`,
   ].join('\n');
+}
+
+/* ---------- Manage bots ----------
+   Add, edit and archive bots, and issue the token each one reports with. The token is
+   made by the server and shown here once; only its hash is kept anywhere. */
+let manageSel = null;
+let manageShowArchived = false;
+let manageToken = null;     // { key, token } -- lives only while this dialog is open
+function openManageBots(key) {
+  const first = allBots().find(b => !b.archived);
+  manageSel = key || (first && first.key) || '__new';
+  manageToken = null;
+  renderManageBots();
+}
+function closeManageBots() {
+  manageToken = null;
+  const ov = document.getElementById('botsManage');
+  if (ov) ov.remove();
+}
+function renderManageBots() {
+  let ov = document.getElementById('botsManage');
+  if (!ov) {
+    ov = el(`<div class="modal-backdrop" id="botsManage"><div class="modal-card bots-manage-card"></div></div>`);
+    document.body.appendChild(ov);
+    bindManageBots(ov);
+  }
+  const bots = allBots().filter(b => manageShowArchived || !b.archived);
+  const isNew = manageSel === '__new';
+  const b = isNew
+    ? botFromRow({ bot_key: '', name: '', job: '', work_type: 'queue', queue_source: null, surfaces: ['app'],
+                   active_days: [1, 2, 3, 4, 5], active_start: '08:00', active_end: '16:00', sort: 100 })
+    : allBots().find(x => x.key === manageSel);
+  ov.querySelector('.bots-manage-card').innerHTML = `
+    <div class="modal-head"><div class="modal-title">Manage bots</div>
+      <button class="q-remove" data-mb="close" title="Close">✕</button></div>
+    <div class="mb-split">
+      <div class="mb-list">
+        <button class="act-btn" data-mb="new">${ico('plus')} New bot</button>
+        ${bots.map(x => `<button class="mb-item ${x.key === manageSel ? 'active' : ''} ${x.archived ? 'archived' : ''}" data-mbsel="${esc(x.key)}">
+            <span>${esc(x.name)}</span>
+            <span class="mb-item-sub">${esc(x.key)} · ${esc(WORK_TYPES[x.workType] || x.workType)}${x.archived ? ' · archived' : ''}</span>
+          </button>`).join('')}
+        <label class="mb-archived"><input type="checkbox" data-mb="showarch" ${manageShowArchived ? 'checked' : ''}> Show archived</label>
+      </div>
+      <div class="mb-form">${b ? manageFormHtml(b, isNew) : '<p class="ps-hint">Pick a bot.</p>'}</div>
+    </div>`;
+}
+function manageFormHtml(b, isNew) {
+  const days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+  return `
+    <div class="mb-grid">
+      <label>Key <span class="ps-hint">stable id, can't change later</span>
+        <input class="ps-input" id="mbKey" value="${esc(b.key)}" ${isNew ? '' : 'disabled'} placeholder="e.g. austin" spellcheck="false"></label>
+      <label>Display name<input class="ps-input" id="mbName" value="${esc(b.name)}" placeholder="e.g. Austin"></label>
+      <label class="mb-wide">One-line job<textarea class="ps-textarea" id="mbJob" rows="2">${esc(b.job)}</textarea></label>
+      <label>Work type<select class="ps-input" id="mbType">${Object.entries(WORK_TYPES).map(([k, l]) =>
+        `<option value="${k}" ${b.workType === k ? 'selected' : ''}>${l}</option>`).join('')}</select></label>
+      <label>Live queue<select class="ps-input" id="mbSource">
+        <option value="">None — remaining comes from its reports</option>
+        ${Object.entries(QUEUE_SOURCES).map(([k, s]) => `<option value="${k}" ${b.source === k ? 'selected' : ''}>${esc(s.label)}</option>`).join('')}
+      </select></label>
+      <label>Grok agent id <span class="ps-hint">optional</span><input class="ps-input" id="mbAgent" value="${esc(b.grokAgentId)}" spellcheck="false"></label>
+      <label>Board order<input class="ps-input" id="mbSort" type="number" value="${esc(b.sort)}"></label>
+      <fieldset class="mb-wide"><legend>Surfaces</legend>
+        ${Object.entries(SURFACES).map(([k, l]) => `<label class="mb-check"><input type="checkbox" data-surface="${k}" ${b.surfaces.includes(k) ? 'checked' : ''}> ${esc(l)}</label>`).join('')}
+      </fieldset>
+      <fieldset class="mb-wide"><legend>Active hours, Central time</legend>
+        <div class="mb-days">${days.map((l, i) => `<label class="mb-day" title="${['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][i]}">
+          <input type="checkbox" data-day="${i}" ${b.activeDays.includes(i) ? 'checked' : ''}><span>${l}</span></label>`).join('')}</div>
+        <label class="mb-time">from <input class="ps-input" id="mbStart" type="time" value="${esc(b.activeStart)}"></label>
+        <label class="mb-time">to <input class="ps-input" id="mbEnd" type="time" value="${esc(b.activeEnd)}"></label>
+        <div class="ps-hint">A bot with no report 30 minutes after its start time shows as Silent.</div>
+      </fieldset>
+    </div>
+    <div class="mb-actions">
+      <button class="btn btn-primary" data-mb="save">${isNew ? 'Add bot' : 'Save'}</button>
+      ${isNew ? '' : b.archived ? `<button class="btn btn-ghost" data-mb="restore">Restore</button>`
+        : `<button class="btn btn-ghost" data-mb="archive">Archive</button>`}
+    </div>
+    ${!isNew && !b.archived ? manageTokenHtml(b) : ''}`;
+}
+function botSetupText(b, token) {
+  return [
+    `Standards Alignment run reports — Grokbot ${b.name} (${b.key})`,
+    ``,
+    `POST ${SUPABASE_URL}/rest/v1/rpc/bot_submit_run`,
+    `Headers:`,
+    `  apikey: ${SUPABASE_ANON_KEY}`,
+    `  x-bot-token: ${token}`,
+    `  Content-Type: application/json`,
+    `Body (the run report, as-is):`,
+    `  {"botKey":"${b.key}","status":"working","counts":{"completed":0,"remaining":0},"highlights":[],"blockers":[]}`,
+    ``,
+    `status: started | working | blocked | done | failed | skipped. "done" ticks the Board.`,
+    `Blockers: [{"code":"rate_limit","message":"429 from cms","at":"<ISO time>"}]`,
+    `Your live queue: POST ${SUPABASE_URL}/rest/v1/rpc/bot_brief with the same headers and body {}`,
+  ].join('\n');
+}
+function manageTokenHtml(b) {
+  const shown = manageToken && manageToken.key === b.key;
+  return `<div class="mb-token">
+    <div class="mb-token-head">Run-report token</div>
+    <p class="ps-hint">${b.tokenIssuedAt ? `Issued ${esc(botAgo(b.tokenIssuedAt))}.` : 'No token yet.'}
+      The bot sends it as the <code>x-bot-token</code> header — see BOT-API.md.</p>
+    <div class="mb-token-btns">
+      <button class="act-btn" data-mb="issue">${b.tokenIssuedAt ? 'Replace token' : 'Issue token'}</button>
+      ${b.tokenIssuedAt ? `<button class="act-btn" data-mb="revoke">Revoke</button>` : ''}
+    </div>
+    ${shown ? `<div class="mb-token-reveal">
+      <div class="mb-token-warn">${ico('warn')} Shown once. It isn't stored anywhere — close this and it's gone for good.</div>
+      <code class="mb-token-box">${esc(manageToken.token)}</code>
+      <div class="mb-token-btns">
+        <button class="btn btn-primary btn-compact" data-mb="copytoken">Copy token</button>
+        <button class="btn btn-ghost btn-compact" data-mb="copysetup">Copy full setup for the bot</button>
+      </div>
+    </div>` : ''}
+  </div>`;
+}
+function readManageForm(isNew, b) {
+  const q = s => document.querySelector('#botsManage ' + s);
+  return {
+    bot_key: isNew ? q('#mbKey').value.trim().toLowerCase() : b.key,
+    name: q('#mbName').value.trim(),
+    job: q('#mbJob').value.trim(),
+    work_type: q('#mbType').value,
+    queue_source: q('#mbSource').value || null,
+    grok_agent_id: q('#mbAgent').value.trim() || null,
+    sort: parseInt(q('#mbSort').value, 10) || 100,
+    surfaces: [...document.querySelectorAll('#botsManage [data-surface]:checked')].map(x => x.dataset.surface),
+    active_days: [...document.querySelectorAll('#botsManage [data-day]:checked')].map(x => +x.dataset.day),
+    active_start: q('#mbStart').value || '08:00',
+    active_end: q('#mbEnd').value || '16:00',
+  };
+}
+function bindManageBots(ov) {
+  ov.addEventListener('change', e => {
+    if (e.target.matches('[data-mb="showarch"]')) { manageShowArchived = e.target.checked; renderManageBots(); }
+  });
+  ov.addEventListener('click', async e => {
+    const sel = e.target.closest('[data-mbsel]');
+    if (sel) { manageSel = sel.dataset.mbsel; manageToken = null; renderManageBots(); return; }
+    const btn = e.target.closest('[data-mb]');
+    if (!btn) return;
+    const act = btn.dataset.mb;
+    const isNew = manageSel === '__new';
+    const b = isNew ? null : allBots().find(x => x.key === manageSel);
+    const after = () => { renderManageBots(); if (state.ui.view === 'bots') renderBots({ keepQueues: true }); };
+
+    if (act === 'close') { closeManageBots(); return; }
+    if (act === 'new') { manageSel = '__new'; manageToken = null; renderManageBots(); return; }
+    if (act === 'save') {
+      const row = readManageForm(isNew, b);
+      if (!/^[a-z][a-z0-9-]{1,31}$/.test(row.bot_key)) { toast('Key: lowercase letters, numbers or dashes, starting with a letter'); return; }
+      if (!row.name) { toast('Give the bot a display name'); return; }
+      if (isNew && allBots().some(x => x.key === row.bot_key)) { toast(`There's already a bot with the key "${row.bot_key}"`); return; }
+      btn.disabled = true;
+      const res = await sbSaveBot(row, isNew);
+      btn.disabled = false;
+      if (res.error) { toast('⚠ Could not save — ' + res.error); return; }
+      manageSel = res.bot.bot_key;
+      toast(`✓ ${res.bot.name} saved`);
+      after();
+      return;
+    }
+    if ((act === 'archive' || act === 'restore') && b) {
+      if (act === 'archive' && !await appConfirm(`Archive ${b.name}?`,
+        'Its card leaves the Board and its token stops working. Its run history stays, and you can restore it.', { ok: 'Archive' })) return;
+      const res = await sbSaveBot({ bot_key: b.key, archived_at: act === 'archive' ? new Date().toISOString() : null }, false);
+      if (res.error) { toast('⚠ ' + res.error); return; }
+      toast(act === 'archive' ? `${b.name} archived` : `${b.name} restored`);
+      after();
+      return;
+    }
+    if (act === 'issue' && b) {
+      if (b.tokenIssuedAt && !await appConfirm(`Replace ${b.name}'s token?`,
+        'The token it uses now stops working immediately. Paste the new one into its Grok instructions.', { ok: 'Replace', danger: true })) return;
+      const res = await sbIssueBotToken(b.key);
+      if (res.error) { toast('⚠ Could not issue a token — ' + res.error); return; }
+      manageToken = { key: b.key, token: res.token };
+      renderManageBots();
+      return;
+    }
+    if (act === 'revoke' && b) {
+      if (!await appConfirm(`Revoke ${b.name}'s token?`, 'It stops working immediately. The bot cannot report until you issue a new one.', { ok: 'Revoke', danger: true })) return;
+      const res = await sbRevokeBotToken(b.key);
+      if (res.error) { toast('⚠ ' + res.error); return; }
+      manageToken = null;
+      toast('Token revoked');
+      renderManageBots();
+      return;
+    }
+    if ((act === 'copytoken' || act === 'copysetup') && b && manageToken && manageToken.key === b.key) {
+      navigator.clipboard.writeText(act === 'copytoken' ? manageToken.token : botSetupText(b, manageToken.token))
+        .then(() => toast(act === 'copytoken' ? '✓ Token copied' : '✓ Setup copied — paste it into the bot'))
+        .catch(() => toast('⚠ Could not reach the clipboard — select the token and copy it'));
+    }
+  });
 }
 
 /* Josh's numbers. He reads the CMS and pastes the counts here rather than anyone editing
    a file: they save per state/type/grade like any other row, so two people updating
    different grades never collide, and everyone sees them at once. */
 function joshPasteHtml() {
-  return `<details class="josh-box">
+  return `<details class="josh-box" data-keep="josh">
     <summary>Paste CMS numbers</summary>
     <p class="ps-hint">From the CMS item set for a state, one grade at a time. Format:<br>
       <code>{"state":"GA","type":"informative","grade":"4","total":53,"complete":true,
@@ -6285,7 +6887,7 @@ function renderDash() {
   const wrap = document.getElementById('dashWrap');
   if (!wrap) return;
   wrap.innerHTML = '';
-  wrap.appendChild(el(botNotesHtml(DASH_BOTS)));
+  { const owners = ['dash', 'cms'].map(sourceOwner).filter(Boolean); if (owners.length) wrap.appendChild(el(botNotesHtml(owners))); }
   if (!state.sets.length) {
     wrap.appendChild(el(`<div class="review-empty">No passage sets yet.</div>`));
     return;

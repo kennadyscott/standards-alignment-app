@@ -9,7 +9,7 @@
    snapshot of what the server holds and diff against it. No editor code has to
    announce what it touched, so nothing is missed by forgetting to instrument a path. */
 
-const STORE_BUILD = '202609092228';
+const STORE_BUILD = '202609101604';
 
 const SB = {
   client: null,
@@ -333,4 +333,167 @@ function sbViewers(setId) {
     });
   });
   return [...seen];
+}
+
+/* ---------- Grokbot registry, run log and queue snapshot (supabase/bots.sql) ----------
+   Kept apart from the sets/state_kv machinery on purpose. Run reports are append-only
+   and never pass through sbSaveDirty, so nothing here can collide with -- or be blocked
+   by -- the passage-set save path and its content guard. If the tables are missing
+   (migration not run), BOTSB.available goes false and the Board falls back to the
+   old checkbox behaviour instead of breaking. */
+const BOT_COLS = 'bot_key,name,job,grok_agent_id,work_type,queue_source,surfaces,active_days,'
+  + 'active_start,active_end,sort,token_issued_at,archived_at,updated_at,updated_by';
+const RUN_COLS = 'id,bot_key,run_date,status,started_at,finished_at,done_today,counts,'
+  + 'highlights,blockers,outputs,source,submitted_by,received_at';
+const QUEUE_COLS = 'bot_key,remaining,places,rows,brief,computed_at,computed_by';
+const BOTSB = {
+  available: null,          // null = not loaded yet; false = unavailable, use the old Board
+  bots: [],
+  runs: [],
+  queue: new Map(),         // bot_key -> snapshot row
+  queueSig: new Map(),      // bot_key -> stable JSON last known on the server
+  channel: null,
+  onChange: null,
+  error: '',
+};
+
+function sbTableMissing(err) {
+  const m = String((err && err.code) || '') + ' ' + String((err && err.message) || '');
+  return /PGRST205|PGRST202|42P01|42883|does not exist|schema cache/i.test(m);
+}
+// jsonb reorders object keys, so compare snapshots with stableStringify, never JSON.stringify.
+function botQueueSig(x) {
+  return stableStringify([x.remaining, x.places, x.rows || [], x.brief || '']);
+}
+
+async function sbLoadBots(sinceDate) {
+  const c = sbInit();
+  if (!c || !SB.user) { BOTSB.available = false; return false; }
+  const fail = err => {
+    BOTSB.available = false;
+    BOTSB.error = sbTableMissing(err) ? 'run-log tables are not installed' : String(err.message || err);
+    return false;
+  };
+  const b = await c.from('bots').select(BOT_COLS).order('sort').order('bot_key');
+  if (b.error) return fail(b.error);
+  const runs = [];
+  // PostgREST caps a page at 1,000 rows without saying so -- page until a short one.
+  for (let from = 0; ; from += 1000) {
+    const r = await c.from('bot_runs').select(RUN_COLS).gte('run_date', sinceDate)
+      .order('id').range(from, from + 999);
+    if (r.error) return fail(r.error);
+    runs.push.apply(runs, r.data);
+    if (r.data.length < 1000) break;
+  }
+  const q = await c.from('bot_queue').select(QUEUE_COLS);
+  if (q.error) return fail(q.error);
+  BOTSB.bots = b.data;
+  BOTSB.runs = runs;
+  BOTSB.queue = new Map(q.data.map(x => [x.bot_key, x]));
+  BOTSB.queueSig = new Map(q.data.map(x => [x.bot_key, botQueueSig(x)]));
+  BOTSB.available = true;
+  BOTSB.error = '';
+  return true;
+}
+
+let botNotifyTimer = null;
+function sbNotifyBots() {
+  clearTimeout(botNotifyTimer);
+  botNotifyTimer = setTimeout(() => { if (typeof BOTSB.onChange === 'function') BOTSB.onChange(); }, 150);
+}
+
+function sbSubscribeBots(onChange) {
+  const c = sbInit();
+  if (!c || !BOTSB.available) return;
+  BOTSB.onChange = onChange;
+  if (BOTSB.channel) c.removeChannel(BOTSB.channel);
+  BOTSB.channel = c.channel('bots-board')
+    .on('postgres_changes', { event: '*', schema: 'public', table: 'bots' }, p => {
+      const r = p.new;
+      if (!r || !r.bot_key) return;
+      const i = BOTSB.bots.findIndex(x => x.bot_key === r.bot_key);
+      if (i >= 0) BOTSB.bots[i] = Object.assign({}, BOTSB.bots[i], r); else BOTSB.bots.push(r);
+      sbNotifyBots();
+    })
+    .on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'bot_runs' }, p => {
+      const r = p.new;
+      if (!r || !r.id || BOTSB.runs.some(x => x.id === r.id)) return;   // our own insert, already in
+      BOTSB.runs.push(r);
+      sbNotifyBots();
+    })
+    .on('postgres_changes', { event: '*', schema: 'public', table: 'bot_queue' }, p => {
+      const r = p.new;
+      if (!r || !r.bot_key) return;
+      BOTSB.queue.set(r.bot_key, r);
+      BOTSB.queueSig.set(r.bot_key, botQueueSig(r));
+      sbNotifyBots();
+    })
+    .subscribe();
+}
+
+// A Board tick is a run report like any other, source 'board'. The server stamps who
+// and when; the client's claim of either is ignored.
+async function sbTickBot(botKey, runDate, done) {
+  const c = sbInit();
+  if (!c || !SB.user) return { error: 'not signed in' };
+  const { data, error } = await c.from('bot_runs').insert({
+    bot_key: botKey, run_date: runDate, status: done ? 'done' : 'working', done_today: !!done,
+    source: 'board', submitted_by: SB.user.email,
+    highlights: [done ? 'Marked done on the Board' : 'Done tick removed on the Board'],
+  }).select(RUN_COLS).single();
+  if (error) return { error: error.message };
+  if (!BOTSB.runs.some(x => x.id === data.id)) BOTSB.runs.push(data);
+  return { run: data };
+}
+
+async function sbSaveBot(row, isNew) {
+  const c = sbInit();
+  if (!c || !SB.user) return { error: 'not signed in' };
+  const payload = Object.assign({}, row, { updated_by: sbActor() });
+  // The key is how an update finds its row, never a field it changes.
+  if (!isNew) delete payload.bot_key;
+  const q = isNew ? c.from('bots').insert(payload)
+                  : c.from('bots').update(payload).eq('bot_key', row.bot_key);
+  const { data, error } = await q.select(BOT_COLS).single();
+  if (error) return { error: error.message };
+  const i = BOTSB.bots.findIndex(x => x.bot_key === data.bot_key);
+  if (i >= 0) BOTSB.bots[i] = data; else BOTSB.bots.push(data);
+  return { bot: data };
+}
+
+async function sbIssueBotToken(botKey) {
+  const c = sbInit();
+  if (!c || !SB.user) return { error: 'not signed in' };
+  const { data, error } = await c.rpc('bot_issue_token', { p_bot_key: botKey });
+  if (error) return { error: error.message };
+  const b = BOTSB.bots.find(x => x.bot_key === botKey);
+  if (b) b.token_issued_at = new Date().toISOString();
+  return { token: data };
+}
+
+async function sbRevokeBotToken(botKey) {
+  const c = sbInit();
+  if (!c || !SB.user) return { error: 'not signed in' };
+  const { error } = await c.rpc('bot_revoke_token', { p_bot_key: botKey });
+  if (error) return { error: error.message };
+  const b = BOTSB.bots.find(x => x.bot_key === botKey);
+  if (b) b.token_issued_at = null;
+  return { ok: true };
+}
+
+// Publish the app's live queue counts so bots can read them. Only rows whose content
+// changed are written, so an open Board does not churn the table.
+async function sbWriteBotQueues(list) {
+  const c = sbInit();
+  if (!c || !SB.user || !BOTSB.available) return { written: 0 };
+  const changed = list.filter(x => BOTSB.queueSig.get(x.bot_key) !== botQueueSig(x));
+  if (!changed.length) return { written: 0 };
+  const { data, error } = await c.from('bot_queue').upsert(changed, { onConflict: 'bot_key' })
+    .select(QUEUE_COLS);
+  if (error) return { error: error.message, written: 0 };
+  (data || []).forEach(r => {
+    BOTSB.queue.set(r.bot_key, r);
+    BOTSB.queueSig.set(r.bot_key, botQueueSig(r));
+  });
+  return { written: changed.length };
 }
