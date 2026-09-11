@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609112026';   // replaced with the deploy stamp
+const APP_BUILD = '202609112038';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3029,9 +3029,18 @@ function builderPrimaryState(s) {
 }
 function builderSubTopics(s) {
   const primary = builderPrimaryState(s);
+  const type = s.itemSetType === 'opinion' ? 'opinion' : 'informative';
   return cmsSubTopics(s)
     .filter(r => r.state === primary)
-    .map(r => ({ stateName: r.state_name, subTopicName: r.sub_topic }));
+    .map(r => {
+      // Send the CMS's own sub-topic name wherever Josh's counts tell us what it is. Ohio
+      // grade 3 files all science under one "Science" row, so "Physical Science" names a
+      // sub-topic the CMS doesn't have there (Sept 11: three sets turned down twice). Same
+      // fold the Dashboard uses (toCmsRow); names the CMS does list are sent unchanged.
+      const b = cmsBucket(r.state, type, r.grade);
+      const rows = b && b.counts ? Object.keys(b.counts) : null;
+      return { stateName: r.state_name, subTopicName: rows ? toCmsRow(r.sub_topic, rows) : r.sub_topic };
+    });
 }
 
 // Passage text carries its paragraph breaks as \n — a single div holding raw newlines
@@ -3099,6 +3108,7 @@ async function importToBuilderApi() {
 
   let ok = 0, failed = 0, httpErrors = 0;
   let idsWritten = 0, unmatched = 0, approved = 0, lastRaw = '', lastFail = '';
+  const itemFails = [];     // "<sourceId>: <the CMS's reason>" for each set it turned down
   let updatedCurrent = false;
   let authExpired = false;
   try {
@@ -3146,7 +3156,19 @@ async function importToBuilderApi() {
           const status = String(pick('status', 'Status') || '').toLowerCase();
           const good = status === 'success' || status === 'succeeded' || status === 'ok'
             || (!status && !!pick('passageId', 'PassageId', 'passageID'));
-          if (good) ok++; else { failed++; return; }
+          if (!good) {
+            // A set the CMS turns down arrives inside a normal 200 reply, so the HTTP-error
+            // alert below never fired for it: Sept 11, three Ohio grade 3 sets read
+            // "3 failed" twice with no reason anywhere. Keep the CMS's own words per set.
+            failed++;
+            const why = pick('message', 'Message', 'error', 'Error', 'errors', 'Errors',
+                             'reason', 'Reason', 'detail', 'Detail');
+            const title = (state.sets.find(x => x.id === pick('sourceId', 'SourceId')) || {}).title;
+            itemFails.push(`${title || pick('sourceId', 'SourceId') || '(unnamed set)'}: `
+              + (why ? (typeof why === 'string' ? why : JSON.stringify(why)) : '(no reason given)'));
+            return;
+          }
+          ok++;
           const newId = pick('passageId', 'PassageId', 'passageID', 'PassageID',
                              'itemSetId', 'ItemSetId', 'id', 'Id');
           const srcId = pick('sourceId', 'SourceId', 'sourceID', 'SourceID');
@@ -3203,6 +3225,13 @@ async function importToBuilderApi() {
   if (!ok && failedTotal && lastFail && !builderIsLocalDev()) {
     alert('The CMS rejected all ' + failedTotal + ' set' + (failedTotal === 1 ? '' : 's') + '.\n\n'
       + 'This is what it said — send it to Ayushi:\n\n' + lastFail);
+  }
+  // Sets the CMS turned down one by one: the reply was a normal 200, so say why per set.
+  if (itemFails.length && !builderIsLocalDev()) {
+    alert('The CMS turned down ' + itemFails.length + ' set' + (itemFails.length === 1 ? '' : 's') + '.\n\n'
+      + 'This is what it said — send it to Ayushi:\n\n' + itemFails.slice(0, 10).join('\n')
+      + (itemFails.some(f => f.endsWith('(no reason given)'))
+          ? '\n\nThe full reply, since it gave no reason:\n' + (lastRaw || '(empty response)') : ''));
   }
   // Accepted but no usable ID: show exactly what came back, so the field name (or a
   // pending/queued import) can be identified without opening dev tools.
