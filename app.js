@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609111424';   // replaced with the deploy stamp
+const APP_BUILD = '202609112014';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -5951,9 +5951,35 @@ let CMS_COUNTS = null;
    are newer by definition, and he can update a grade without a deploy. */
 function cmsBucket(st, kind, grade) {
   const live = (state.cmsCounts || {})[`${st}|${kind}|${grade}`];
-  if (live) return live;
+  if (live) return cleanCmsBucket(live);
   const c = CMS_COUNTS && CMS_COUNTS.states && CMS_COUNTS.states[st];
-  return (c && c[kind] && c[kind][String(grade)]) || null;
+  return cleanCmsBucket((c && c[kind] && c[kind][String(grade)]) || null);
+}
+/* The CMS carries a trailing space on some sub-topic names ("True Narratives ",
+   "Short Literary Forms ") while our sets are tagged without one, so the exact match
+   missed them: Ohio grade 6 read OURS 0 beside CMS 4 on Sept 11 with 8 sets filed there.
+   Names are trimmed as they are READ, so counts already saved are fixed too, not only
+   new pastes. Two names that trim to the same one are added together. */
+const cmsName = n => String(n).trim();
+function cleanCmsBucket(b) {
+  if (!b || !b.counts) return b;
+  const counts = {};
+  let changed = false;
+  Object.entries(b.counts).forEach(([name, n]) => {
+    const k = cmsName(name);
+    if (k !== name || k in counts) changed = true;
+    counts[k] = k in counts ? (+counts[k] || 0) + (+n || 0) : n;
+  });
+  let topics = b.topics;
+  if (b.topics) {
+    topics = {};
+    Object.entries(b.topics).forEach(([name, t]) => {
+      const k = cmsName(name), v = typeof t === 'string' ? t.trim() : t;
+      if (k !== name || v !== t) changed = true;
+      if (!(k in topics)) topics[k] = v;
+    });
+  }
+  return changed ? { ...b, counts, topics } : b;
 }
 /* The dashboard's rows ARE the CMS's sub-topics for that state and grade, grouped by the
    CMS's own topic — per Kennady, "if CMS says Earth Science, the dashboard should say the
@@ -6003,6 +6029,7 @@ function clusterScience(list) {
 /* Our own sets are classified in the app's vocabulary; fold that onto the CMS row names
    so the "ours" half of each pair lands beside the right CMS number. */
 function toCmsRow(dom, rows) {
+  if (typeof dom === 'string') dom = dom.trim();   // both sides trimmed; see cleanCmsBucket
   if (!rows) return dom;
   if (rows.includes(dom)) return dom;
   if (dom === 'Earth Science' && rows.includes('Earth and Space Science')) return 'Earth and Space Science';
@@ -7184,7 +7211,7 @@ function joshSave() {
     state.cmsCounts[`${st}|${type}|${d.grade}`] = {
       total: d.total ?? Object.values(d.counts).reduce((a, n) => a + (+n || 0), 0),
       complete: d.complete !== false,
-      counts: d.counts,
+      counts: cleanCmsBucket({ counts: d.counts }).counts,   // no trailing spaces saved
       at: new Date().toISOString().slice(0, 10),
     };
     saved++;
