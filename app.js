@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609112014';   // replaced with the deploy stamp
+const APP_BUILD = '202609112021';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2881,6 +2881,36 @@ const BUILDER_IMPORT_URL = builderIsLocalDev()
   ? 'https://localhost:44393/api/ECRItemSetStaticQ/ImportItemSetFromBuilder'
   : 'https://admin.api.cleark12.com/api/ECRItemSetStaticQ/ImportItemSetFromBuilder';
 
+/* ---------- CMS token — handed to us, not obtained here ----------
+   The CMS does its own real login, then opens this app with the token in the URL
+   hash (e.g. #token=...). We just pick it up, stash it, and use it. No refresh logic —
+   once it's rejected (401) or missing, the user re-opens/re-clicks the link in the
+   CMS to get a fresh one.
+   Kept in sessionStorage, not localStorage: this app shares kennadyscott.github.io with
+   every other site hosted there, and they all share one localStorage. A tab-scoped
+   token is gone when the tab closes instead of sitting readable for weeks. */
+const CMS_TOKEN_KEY = 'cmsToken';
+
+function captureCmsTokenFromUrl() {
+  // Same hash format applyHash() reads (a URLSearchParams string after #), so a token
+  // handed over alongside a real view/set route (e.g. #v=passages&token=...) parses
+  // correctly and the rest of the route survives once the token key is stripped out.
+  // Never leave a token in the shared localStorage, even one an older build put there.
+  try { localStorage.removeItem(CMS_TOKEN_KEY); } catch { /* storage blocked */ }
+  const raw = (location.hash || '').replace(/^#/, '');
+  if (!raw) return;
+  let p;
+  try { p = new URLSearchParams(raw); } catch { return; }
+  const token = p.get('token');
+  if (!token) return;
+  try { sessionStorage.setItem(CMS_TOKEN_KEY, token); } catch { /* storage blocked */ }
+  // Don't leave it sitting in the address bar / browser history.
+  p.delete('token');
+  const rest = p.toString();
+  history.replaceState(null, '', location.pathname + location.search + (rest ? '#' + rest : ''));
+}
+function cmsToken() { try { return sessionStorage.getItem(CMS_TOKEN_KEY) || ''; } catch { return ''; } }
+
 // The CMS's own numeric grade IDs. PK/9-12 are included for completeness even though
 // this app currently only authors grades 2-8 (see GRADES/GA_GRADES).
 const BUILDER_GRADE_ID = {
@@ -2915,15 +2945,23 @@ function builderStateStandards(q, primary) {
 }
 
 // The shared parseQuestion() scans the WHOLE answer line for any standalone a-h letter,
-// which misfires when the key restates the full option text — e.g. "Answer: b. To
-// explain how children helped clean a natural resource" reads the article "a" in
-// "clean a natural resource" as a second correct choice. Answer letters only ever
-// appear at the START of the line (or comma-separated, for multi-select), so anchoring
-// there avoids picking up stray a-h letters from restated prose.
+// which misfires when the key restates option text — e.g. an article "a" inside a
+// restated sentence reads as a second correct choice. Answer letters are only ever
+// written the same way options themselves are (a letter directly followed by "." or
+// ")"), at the start of a segment — segments being separated by "," "/" or "and", even
+// when each one carries its own restated, comma-containing sentence. So: split into
+// segments on those separators, then only accept a segment if IT starts with that
+// letter-marker shape. A comma inside restated prose just produces a fragment that
+// doesn't start with a bare letter marker, and is safely ignored.
 function builderAnswerLetters(p) {
   if (p.options.some(o => o.checked)) return p.options.filter(o => o.checked).map(o => o.label).sort();
-  const m = String(p.answerRaw || '').match(/^\s*([a-h](?:\s*,\s*[a-h])*)\b/i);
-  return m ? [...new Set(m[1].toLowerCase().split(/\s*,\s*/))].sort() : [];
+  const validLabels = new Set(p.options.map(o => o.label));
+  const letters = String(p.answerRaw || '').split(/\s*(?:,|\/|\band\b)\s*/i)
+    .map(seg => (seg.trim().match(/^([a-h])(?:[.)]|$)/i) || [])[1])
+    .filter(Boolean)
+    .map(l => l.toLowerCase())
+    .filter(l => validLabels.has(l));
+  return [...new Set(letters)].sort();
 }
 
 function builderQuestionPart(q, primary) {
@@ -3028,6 +3066,12 @@ const BUILDER_BATCH_SIZE = 10;
 const BUILDER_MAX_COUNT = 100;
 
 async function importToBuilderApi() {
+  const token = cmsToken();
+  if (!token) {
+    toast('Not logged into the CMS — open this tool from its link in the CMS, then try Send to CMS again.');
+    return;
+  }
+
   const countInput = document.getElementById('cmsExportCount');
   const requested = countInput ? parseInt(countInput.value, 10) : BUILDER_MAX_COUNT;
   const maxSets = Math.min(BUILDER_MAX_COUNT, Math.max(1, requested || BUILDER_MAX_COUNT));
@@ -3049,31 +3093,31 @@ async function importToBuilderApi() {
   const sets = ready.slice(0, maxSets);
   const skipped = ready.length - sets.length;
 
-  const cmsBtn = document.getElementById('cmsExportBtn');
+  const cmsBtn = document.getElementById('cmsSendBtn');
   const originalLabel = cmsBtn ? cmsBtn.textContent : '';
   if (cmsBtn) { cmsBtn.disabled = true; cmsBtn.textContent = 'Importing…'; }
 
   let ok = 0, failed = 0, httpErrors = 0;
   let idsWritten = 0, unmatched = 0, approved = 0, lastRaw = '', lastFail = '';
   let updatedCurrent = false;
+  let authExpired = false;
   try {
     for (let i = 0; i < sets.length; i += BUILDER_BATCH_SIZE) {
       const chunk = sets.slice(i, i + BUILDER_BATCH_SIZE);
       try {
         const res = await fetch(BUILDER_IMPORT_URL, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
           body: JSON.stringify(chunk.map(builderItemSet)),
         });
-        if (!res.ok) {
-          // Keep the server's own words. "3 failed" with the reason thrown away means
-          // guessing at whether it was CORS, a validation rejection, or an outage --
-          // and the reason is right here in the response.
-          httpErrors += chunk.length;
-          lastFail = `HTTP ${res.status} ${res.statusText || ''}\n\n`
-            + (await res.text().catch(() => '(no response body)')).slice(0, 900);
-          continue;
+        if (res.status === 401) {
+          // No refresh here — the token only ever comes from the CMS's own login.
+          try { sessionStorage.removeItem(CMS_TOKEN_KEY); } catch { /* storage blocked */ }
+          httpErrors += sets.length - i;
+          authExpired = true;
+          break;
         }
+        if (!res.ok) { httpErrors += chunk.length; continue; }
         // Expected response: [{ sourceId, status: "success" | "failed", passageId }, ...]
         // Read it LOOSELY. The first production run reported "2 sent" and wrote back no
         // IDs at all, because an exact `r.passageId` match is the only thing that counts
@@ -3133,6 +3177,10 @@ async function importToBuilderApi() {
     // the same path as any other set edit or it will not survive a reload.
     saveSets(); pushState(); renderSetList();
     if (updatedCurrent) renderSetEditor();
+  }
+  if (authExpired) {
+    toast(`CMS login expired after ${ok} sent — reopen this tool from its link in the CMS and try again for the rest.`);
+    return;
   }
   const failedTotal = failed + httpErrors;
   // "sent" is not the same as "we got an ID back" -- reporting only the first is how a
@@ -7691,6 +7739,7 @@ function wireCmdk() {
 }
 
 function init() {
+  captureCmsTokenFromUrl();
   applyHash();
   // A fresh load of the Dashboard opens on the map, whatever state the address named.
   if (state.ui.view === 'dash') state.ui.dashState = 'overview';
