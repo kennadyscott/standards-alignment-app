@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609101759';   // replaced with the deploy stamp
+const APP_BUILD = '202609111327';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -172,7 +172,7 @@ const state = {
     revSubject: 'social_studies', revGrade: '4', revStatus: 'pending', revState: 'ALL',
     inState: 'OH', inGrade: '4', overrideKey: null,
     inStage: 'all', inSelected: null,                  // State Lists: stage filter + selected set
-    dashOpen: {}, dashState: 'OH',                     // Dashboard: expanded grades + which state's lists
+    dashOpen: {}, dashState: 'overview',                     // Dashboard: expanded grades + which state's lists
     setFilterStatus: 'all', setFilterGrade: 'all', setFilterState: 'all',
     setFilterSubtopic: 'all', setSearch: '',   // Master list filters
     currentSetId: null, openPicker: null,
@@ -1526,7 +1526,7 @@ function applyHash() {
     if (p.get('set')) u.inSelected = p.get('set');
     if (p.has('q')) u.inSearch = p.get('q');
   } else if (u.view === 'dash') {
-    if (st && STATES.includes(st)) u.dashState = st;
+    if (st && (STATES.includes(st) || st === 'overview')) u.dashState = st;
   }
   return true;
 }
@@ -7138,75 +7138,256 @@ function joshSave() {
   renderBots(); renderDash();
 }
 
+/* ---------- Dashboard: one model for the grade cards AND the overview map ----------
+   Both read dashGradeModel, so the map can never disagree with the card it opens. */
+
+// Which sets reach which state list at which grade, in ONE pass over the sets. The
+// overview needs all 7 states x 7 grades; filtering every set 49 times was the slow way.
+function dashServingIndex() {
+  const idx = new Map();
+  state.sets.forEach(s => {
+    const seen = new Set();
+    setServes(s, true).forEach(v => {
+      const g = String(v.grade);
+      const k = `${v.state}|${g}`;
+      if (seen.has(k)) return;
+      seen.add(k);
+      if (state.setDismiss[inputKey(s.id, v.state, g)]) return;
+      if (!idx.has(k)) idx.set(k, []);
+      idx.get(k).push(s);
+    });
+  });
+  return idx;
+}
+
+function dashGradeModel(dst, g, index) {
+  g = String(g);
+  const sets = (index || dashServingIndex()).get(`${dst}|${g}`) || [];
+  const own = stateSubdomains(dst, g);
+  const baseGroups = DASH_GROUPS[g === '2' ? '2' : '3-8'];
+  // Rows come from the CMS wherever we have its numbers, so the two always read the
+  // same. Falling back to the app's own taxonomy only where the CMS is not captured yet.
+  const fromCms = cmsRowsFor(dst, g);
+  const allGroups = fromCms ? fromCms
+    : own
+    // Replace the single "Informational" bucket with the CMS's own topic headings, and
+    // keep the universal literary groups after them.
+    ? [...own.groups, ...baseGroups.filter(([label]) => label !== 'Informational')]
+    : baseGroups;
+  const allExpect = allGroups.flatMap(([, doms]) => doms);
+
+  // sub-domain -> {informative, opinion}. Tally across EVERY possible row first, so a
+  // row that holds work is never hidden underneath us.
+  const tally = new Map(allExpect.map(d => [d, { informative: 0, opinion: 0 }]));
+  sets.forEach(s => {
+    const dom = toCmsRow(dashSubdomain(s, g, dst), fromCms ? allExpect : null);
+    const t = tally.get(dom) || { informative: 0, opinion: 0 };
+    t[s.itemSetType === 'informative' ? 'informative' : 'opinion']++;
+    tally.set(dom, t);
+  });
+  // Counts read from the CMS itself, per state/grade/type/sub-domain. Deliberately NOT
+  // state.setCms: that is what the team has ticked here, and it drifts from the CMS —
+  // Georgia grade 2 Poetry reads 9 ticked against 4 actually in the CMS.
+  const cms = cmsCountsFor(dst, g);
+
+  // Drop a science row only when this state has no standards for it at this grade AND
+  // nothing is filed there.
+  const keep = d => {
+    if (fromCms) return true;                   // the CMS says this row exists; show it
+    if (own) return true;                       // the state published this list; show it all
+    if (!DASH_SCIENCE_ROWS.includes(d)) return true;
+    const t = tally.get(d) || { informative: 0, opinion: 0 };
+    if (t.informative || t.opinion) return true;
+    return stateTeachesSubdomain(dst, g, d);
+  };
+  const groups = allGroups.map(([label, doms]) => [label, doms.filter(keep)])
+                          .filter(([, doms]) => doms.length);
+  const expect = groups.flatMap(([, doms]) => doms);
+
+  // summary: how many (sub-domain x type) cells hit the goal / are partial / missing
+  let met = 0, partial = 0, missing = 0;
+  expect.forEach(d => {
+    const t = tally.get(d) || { informative: 0, opinion: 0 };
+    [t.informative, t.opinion].forEach(n => { n >= DASH_GOAL ? met++ : n > 0 ? partial++ : missing++; });
+  });
+  return { g, sets, groups, expect, tally, cms, fromCms, met, partial, missing };
+}
+
+// Every CMS cell a grade card shows, as numbers: the same rows, and the same single
+// merged "Science" cell where the CMS lumps science. null = that tab not captured yet
+// (the card shows "·"), which is "not looked at", not "the CMS has none".
+function dashCmsCells(m) {
+  const out = { informative: null, opinion: null };
+  ['informative', 'opinion'].forEach(k => {
+    const bucket = m.cms[k];
+    if (!bucket) return;
+    const cells = [];
+    m.groups.forEach(([, doms]) => {
+      const sci = doms.filter(isScienceName);
+      const lumped = sci.length > 1 && bucket.counts && bucket.counts['Science'] > 0
+        && !sci.some(d => bucket.counts[d] !== undefined);
+      doms.forEach(d => {
+        if (lumped && isScienceName(d)) {
+          if (sci[0] === d) cells.push(+bucket.counts['Science'] || 0);
+          return;
+        }
+        cells.push(cmsLookup(bucket, d, m.expect) || 0);
+      });
+    });
+    out[k] = { cells, partial: bucket.complete === false };
+  });
+  return out;
+}
+
+/* ---------- Dashboard overview: the state map ----------
+   Kennady's rule, 2026-09-10: green means the CMS holds 3 or more for every single
+   category in every grade. Yellow is almost there, red flags big problems, white is not
+   started. "Almost there" is set at 80% of categories at 3+ -- one number to move. */
+const OVERVIEW_MIN = 3;
+const OVERVIEW_ALMOST = 0.8;
+const OVERVIEW_STATUS = {
+  green:  { label: 'Complete',     note: `${OVERVIEW_MIN}+ in the CMS for every category in every grade` },
+  yellow: { label: 'Almost there', note: `at least ${Math.round(OVERVIEW_ALMOST * 100)}% of categories at ${OVERVIEW_MIN}+` },
+  red:    { label: 'Big problems', note: `under ${Math.round(OVERVIEW_ALMOST * 100)}% of categories at ${OVERVIEW_MIN}+` },
+  white:  { label: 'Not started',  note: 'no CMS counts yet' },
+};
+function stateOverview(st, index) {
+  let total = 0, atMin = 0, low = 0, sum = 0, tabs = 0, partial = 0;
+  GRADES.forEach(g => {
+    const cc = dashCmsCells(dashGradeModel(st, g, index));
+    ['informative', 'opinion'].forEach(k => {
+      const t = cc[k];
+      if (!t) return;
+      tabs++;
+      if (t.partial) partial++;
+      t.cells.forEach(n => { total++; sum += n; if (n >= OVERVIEW_MIN) atMin++; if (n <= 1) low++; });
+    });
+  });
+  const tabsOf = GRADES.length * 2;
+  const pct = total ? atMin / total : 0;
+  // Green needs proof: every grade tab counted, none only partly, every category at 3+.
+  const status = !tabs || !sum ? 'white'
+    : tabs === tabsOf && !partial && atMin === total ? 'green'
+    : pct >= OVERVIEW_ALMOST ? 'yellow' : 'red';
+  return { st, status, total, atMin, low, tabs, tabsOf, partial, pct };
+}
+
+let usMap = null;
+let usMapState = 'idle';          // idle | loading | ready | failed
+function loadUsMap() {
+  if (usMapState !== 'idle') return;
+  usMapState = 'loading';
+  fetchJson('data/us-states-map.json').then(m => {
+    usMap = m && m.states ? m : null;
+    usMapState = usMap ? 'ready' : 'failed';
+    if (state.ui.view === 'dash' && state.ui.dashState === 'overview') renderDash();
+  });
+}
+
+function renderDashOverview(wrap) {
+  const index = dashServingIndex();
+  const rows = STATES.map(st => stateOverview(st, index))
+    .sort((x, y) => STATE_NAMES[x.st].localeCompare(STATE_NAMES[y.st]));
+  const by = Object.fromEntries(rows.map(r => [r.st, r]));
+  const count = s => rows.filter(r => r.status === s).length;
+  const prog = document.getElementById('dashProgress');
+  if (prog) prog.textContent = `${STATES.length} states · ${count('green')} complete · ${count('yellow')} almost there · `
+    + `${count('red')} with big problems · ${count('white')} not started`;
+  if (usMapState === 'idle') loadUsMap();
+
+  const pctTxt = r => (r.total ? `${Math.round(r.pct * 100)}%` : '—');
+  const tip = r => `${STATE_NAMES[r.st]}: ${OVERVIEW_STATUS[r.status].label}. `
+    + (r.tabs ? `${r.atMin} of ${r.total} CMS categories at ${OVERVIEW_MIN}+ (${pctTxt(r)}), ${r.low} at 0-1. `
+        + `${r.tabs} of ${r.tabsOf} grade tabs counted${r.partial ? `, ${r.partial} only partly` : ''}.`
+      : 'No CMS counts captured yet.')
+    + ' Click to open its dashboard.';
+
+  const map = usMapState === 'ready'
+    ? `<svg class="ov-map" viewBox="${usMap.viewBox.join(' ')}" role="group" aria-label="States by CMS coverage. Click a state to open its dashboard.">
+        ${Object.entries(usMap.states).map(([ab, x]) => by[ab]
+          ? `<path class="ov-state ov-${by[ab].status}" d="${x.d}" data-dashst="${ab}" tabindex="0" role="button" aria-label="${esc(tip(by[ab]))}"><title>${esc(tip(by[ab]))}</title></path>`
+          : `<path class="ov-other" d="${x.d}"><title>${esc(x.name)} — not in this app</title></path>`).join('')}
+        ${rows.map(r => {
+          const x = usMap.states[r.st];
+          if (!x) return '';
+          return `<g class="ov-label" transform="translate(${x.label[0]} ${x.label[1]})">
+            <text class="ov-abbr" y="-2">${r.st}</text><text class="ov-pct" y="13">${pctTxt(r)}</text></g>`;
+        }).join('')}
+      </svg>`
+    : usMapState === 'failed'
+      ? `<div class="ov-map-msg">The map couldn't load. The list works the same way — click a state.</div>`
+      : `<div class="ov-map-msg">Loading map…</div>`;
+
+  const list = rows.map(r => `<button class="ov-row" data-dashst="${r.st}" title="${esc(tip(r))}">
+      <span class="ov-dot ov-${r.status}"></span>
+      <span class="ov-row-name">${esc(STATE_NAMES[r.st])}</span>
+      <span class="ov-row-num">${pctTxt(r)}</span>
+      <span class="ov-row-status">${OVERVIEW_STATUS[r.status].label}</span>
+      <span class="ov-row-sub">${r.tabs ? `${r.atMin}/${r.total} categories at ${OVERVIEW_MIN}+ · ${r.tabs}/${r.tabsOf} grade tabs counted${r.partial ? ` (${r.partial} partly)` : ''}` : 'No CMS counts yet'}</span>
+    </button>`).join('');
+  const legend = ['green', 'yellow', 'red', 'white'].map(s =>
+    `<span class="ov-key"><span class="ov-dot ov-${s}"></span><b>${OVERVIEW_STATUS[s].label}</b> ${esc(OVERVIEW_STATUS[s].note)}</span>`).join('');
+
+  wrap.appendChild(el(`<div class="ov">
+    <div class="ov-mapbox">${map}<div class="ov-legend">${legend}</div></div>
+    <div class="ov-list"><div class="side-title">States</div>${list}
+      <div class="ps-hint ov-note">From the CMS column of each state's dashboard. Click a state, on the map or here, to open it.</div></div>
+  </div>`));
+}
+
+// One delegated handler for the Dashboard, bound once. Opening a state pushes history,
+// so the browser's Back button returns to the overview.
+function bindDashWrap(wrap) {
+  if (wrap.dataset.ovBound) return;
+  wrap.dataset.ovBound = '1';
+  const open = st => {
+    state.ui.dashState = st;
+    const sel = document.getElementById('dashStateSeg');
+    if (sel) sel.value = st;
+    renderDash();
+    syncHash(true);
+    wrap.scrollTop = 0;
+  };
+  wrap.addEventListener('click', e => {
+    const t = e.target.closest('[data-dashst]');
+    if (t) { open(t.dataset.dashst); return; }
+    if (e.target.closest('[data-dashback]')) open('overview');
+  });
+  wrap.addEventListener('keydown', e => {
+    const t = e.target.closest('[data-dashst]');
+    if (t && t.tagName.toLowerCase() === 'path' && (e.key === 'Enter' || e.key === ' ')) {
+      e.preventDefault();
+      open(t.dataset.dashst);
+    }
+  });
+}
+
 function renderDash() {
   const wrap = document.getElementById('dashWrap');
   if (!wrap) return;
   wrap.innerHTML = '';
+  bindDashWrap(wrap);
   { const owners = ['dash', 'cms'].map(sourceOwner).filter(Boolean); if (owners.length) wrap.appendChild(el(botNotesHtml(owners))); }
   if (!state.sets.length) {
     wrap.appendChild(el(`<div class="review-empty">No passage sets yet.</div>`));
     return;
   }
   const dst = state.ui.dashState;
+  // The dropdown follows whatever opened this -- a map click, a bot row, a link, Back.
+  { const sel = document.getElementById('dashStateSeg'); if (sel && sel.value !== dst) sel.value = dst; }
+  if (dst === 'overview' || !STATES.includes(dst)) { renderDashOverview(wrap); return; }
+  wrap.appendChild(el(`<div class="dash-back"><button class="act-btn" data-dashback>← All states</button></div>`));
   // Coverage per STATE list: a set counts toward a grade when it serves (or, still a
   // draft, WILL serve) that state's list at that grade — own tag, universal, or an
   // approved ±1 alignment. Dismissed-from-that-grade sets don't count.
-  const servingSets = g => state.sets.filter(s =>
-    !state.setDismiss[inputKey(s.id, dst, g)] &&
-    setServes(s, true).some(v => v.state === dst && v.grade === String(g)));
-  const totalServing = GRADES.reduce((a, g) => a + servingSets(g).length, 0);
+  const index = dashServingIndex();
+  const models = GRADES.map(g => dashGradeModel(dst, g, index));
+  const totalServing = models.reduce((sum, m) => sum + m.sets.length, 0);
   const prog = document.getElementById('dashProgress');
   if (prog) prog.textContent = `${totalServing} passage placements across ${STATE_NAMES[dst]} grade lists · drafts included · goal ${DASH_GOAL} per sub-domain per type`;
 
-  GRADES.forEach(g => {
-    const sets = servingSets(g);
-    const own = stateSubdomains(dst, g);
-    const baseGroups = DASH_GROUPS[g === '2' ? '2' : '3-8'];
-    // Rows come from the CMS wherever we have its numbers, so the two always read the
-    // same. Falling back to the app's own taxonomy only where the CMS is not captured yet.
-    const fromCms = cmsRowsFor(dst, g);
-    const allGroups = fromCms ? fromCms
-      : own
-      // Replace the single "Informational" bucket with the CMS's own topic headings, and
-      // keep the universal literary groups after them.
-      ? [...own.groups, ...baseGroups.filter(([label]) => label !== 'Informational')]
-      : baseGroups;
-    const allExpect = allGroups.flatMap(([, doms]) => doms);
-
-    // sub-domain -> {informative, opinion}. Tally across EVERY possible row first, so a
-    // row that holds work is never hidden underneath us.
-    const tally = new Map(allExpect.map(d => [d, { informative: 0, opinion: 0 }]));
-    sets.forEach(s => {
-      const dom = toCmsRow(dashSubdomain(s, g, dst), fromCms ? allExpect : null);
-      const t = tally.get(dom) || { informative: 0, opinion: 0 };
-      t[s.itemSetType === 'informative' ? 'informative' : 'opinion']++;
-      tally.set(dom, t);
-    });
-    // Counts read from the CMS itself, per state/grade/type/sub-domain. Deliberately NOT
-    // state.setCms: that is what the team has ticked here, and it drifts from the CMS —
-    // Georgia grade 2 Poetry reads 9 ticked against 4 actually in the CMS.
-    const cms = cmsCountsFor(dst, g);
-
-    // Drop a science row only when this state has no standards for it at this grade AND
-    // nothing is filed there.
-    const keep = d => {
-      if (fromCms) return true;                   // the CMS says this row exists; show it
-      if (own) return true;                       // the state published this list; show it all
-      if (!DASH_SCIENCE_ROWS.includes(d)) return true;
-      const t = tally.get(d) || { informative: 0, opinion: 0 };
-      if (t.informative || t.opinion) return true;
-      return stateTeachesSubdomain(dst, g, d);
-    };
-    const groups = allGroups.map(([label, doms]) => [label, doms.filter(keep)])
-                            .filter(([, doms]) => doms.length);
-    const expect = groups.flatMap(([, doms]) => doms);
-
-    // summary: how many (sub-domain x type) cells hit the goal / are partial / missing
-    let met = 0, partial = 0, missing = 0;
-    expect.forEach(d => {
-      const t = tally.get(d) || { informative: 0, opinion: 0 };
-      [t.informative, t.opinion].forEach(n => { n >= DASH_GOAL ? met++ : n > 0 ? partial++ : missing++; });
-    });
+  models.forEach(m => {
+    const { g, sets, groups, expect, tally, cms, met, partial, missing } = m;
 
     wrap.appendChild(el(`
       <div class="dash-card open">
@@ -7285,12 +7466,16 @@ function renderDash() {
       </div>`));
   });
 
-  wrap.addEventListener('click', e => {
-    const cell = e.target.closest('[data-gencell]');
-    if (!cell) return;
-    const [st, grade, subtopic, itemSetType, have] = cell.dataset.gencell.split('|');
-    openGenModal({ state: st, grade, subtopic, itemSetType, have: +have });
-  });
+  // Bound once: this used to be added again on every redraw, stacking a handler per render.
+  if (!wrap.dataset.genBound) {
+    wrap.dataset.genBound = '1';
+    wrap.addEventListener('click', e => {
+      const cell = e.target.closest('[data-gencell]');
+      if (!cell) return;
+      const [st, grade, subtopic, itemSetType, have] = cell.dataset.gencell.split('|');
+      openGenModal({ state: st, grade, subtopic, itemSetType, have: +have });
+    });
+  }
 }
 
 function cmdkItems() {
@@ -7464,7 +7649,10 @@ function init() {
     });
   }
   bindSeg('inStageSeg', 'inStage', v => { state.ui.inStage = v; state.ui.openPicker = null; renderInput(); syncHash(); });
-  bindStateSelect('dashStateSeg', false, state.ui.dashState, v => { state.ui.dashState = v; renderDash(); syncHash(); });
+  bindStateSelect('dashStateSeg', false, state.ui.dashState, v => { state.ui.dashState = v; renderDash(); syncHash(true); });
+  // The overview is the Dashboard's first stop, so it heads the dropdown.
+  { const sel = document.getElementById('dashStateSeg');
+    if (sel) { sel.insertAdjacentHTML('afterbegin', '<option value="overview">Overview — all states</option>'); sel.value = state.ui.dashState; } }
 
   // Master list filters: status + grade (grade options come from GRADES)
   const fstSel = document.getElementById('setFilterState');
