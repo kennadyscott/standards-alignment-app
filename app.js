@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609111336';   // replaced with the deploy stamp
+const APP_BUILD = '202609111342';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -6518,7 +6518,7 @@ function bindBotsBoard() {
       document.querySelector('[data-view="input"]').click();
     } else {
       state.ui.dashState = st;
-      document.querySelector('[data-view="dash"]').click();
+      showView('dash', { push: true });
     }
   });
 }
@@ -7295,15 +7295,20 @@ function dashCmsCells(m) {
 const OVERVIEW_MIN = 3;
 const OVERVIEW_ALMOST = 0.8;
 const OVERVIEW_STATUS = {
-  green:  { label: 'Complete',     note: `${OVERVIEW_MIN}+ in the CMS for every category in every grade` },
-  yellow: { label: 'Almost there', note: `at least ${Math.round(OVERVIEW_ALMOST * 100)}% of categories at ${OVERVIEW_MIN}+` },
-  red:    { label: 'Big problems', note: `under ${Math.round(OVERVIEW_ALMOST * 100)}% of categories at ${OVERVIEW_MIN}+` },
-  white:  { label: 'Not started',  note: 'no CMS counts yet' },
+  green:     { label: 'Complete',        note: `${OVERVIEW_MIN}+ in the CMS for every category in every grade` },
+  yellow:    { label: 'Almost there',    note: `at least ${Math.round(OVERVIEW_ALMOST * 100)}% of categories at ${OVERVIEW_MIN}+` },
+  red:       { label: 'Big problems',    note: `under ${Math.round(OVERVIEW_ALMOST * 100)}% of categories at ${OVERVIEW_MIN}+` },
+  uncounted: { label: 'Not counted yet', note: 'work has started in the app, but no CMS counts to rate it by' },
+  white:     { label: 'Not started',     note: 'nothing in this state yet' },
 };
+const OVERVIEW_ORDER = ['green', 'yellow', 'red', 'uncounted', 'white'];
 function stateOverview(st, index) {
   let total = 0, atMin = 0, low = 0, sum = 0, tabs = 0, partial = 0;
+  const appSets = new Set();
   GRADES.forEach(g => {
-    const cc = dashCmsCells(dashGradeModel(st, g, index));
+    const m = dashGradeModel(st, g, index);
+    m.sets.forEach(s => appSets.add(s.id));
+    const cc = dashCmsCells(m);
     ['informative', 'opinion'].forEach(k => {
       const t = cc[k];
       if (!t) return;
@@ -7314,11 +7319,14 @@ function stateOverview(st, index) {
   });
   const tabsOf = GRADES.length * 2;
   const pct = total ? atMin / total : 0;
-  // Green needs proof: every grade tab counted, none only partly, every category at 3+.
-  const status = !tabs || !sum ? 'white'
-    : tabs === tabsOf && !partial && atMin === total ? 'green'
+  // No CMS counts is "not counted", not "not started": Texas, the Carolinas and Alabama had
+  // hundreds of sets in the app and read as white until 2026-09-11. White is kept for a
+  // state with nothing anywhere. Green needs proof: every grade tab counted, none partly.
+  const status = !tabs ? (appSets.size ? 'uncounted' : 'white')
+    : !sum && !appSets.size ? 'white'
+    : tabs === tabsOf && !partial && total && atMin === total ? 'green'
     : pct >= OVERVIEW_ALMOST ? 'yellow' : 'red';
-  return { st, status, total, atMin, low, tabs, tabsOf, partial, pct };
+  return { st, status, total, atMin, low, tabs, tabsOf, partial, pct, appSets: appSets.size };
 }
 
 let usMap = null;
@@ -7340,19 +7348,25 @@ function renderDashOverview(wrap) {
   const by = Object.fromEntries(rows.map(r => [r.st, r]));
   const count = s => rows.filter(r => r.status === s).length;
   const prog = document.getElementById('dashProgress');
-  if (prog) prog.textContent = `${STATES.length} states · ${count('green')} complete · ${count('yellow')} almost there · `
-    + `${count('red')} with big problems · ${count('white')} not started`;
+  if (prog) prog.textContent = [`${STATES.length} states`]
+    .concat(OVERVIEW_ORDER.filter(s => count(s)).map(s => `${count(s)} ${OVERVIEW_STATUS[s].label.toLowerCase()}`)).join(' · ');
   if (usMapState === 'idle') loadUsMap();
 
   const pctTxt = r => (r.total ? `${Math.round(r.pct * 100)}%` : '—');
+  const mapTxt = r => (r.total ? pctTxt(r) : r.status === 'uncounted' ? `${r.appSets} sets` : '—');
   const tip = r => `${STATE_NAMES[r.st]}: ${OVERVIEW_STATUS[r.status].label}. `
-    + (r.tabs ? `${r.atMin} of ${r.total} CMS categories at ${OVERVIEW_MIN}+ (${pctTxt(r)}), ${r.low} at 0-1. `
+    + (r.tabs
+      ? `${r.atMin} of ${r.total} CMS categories at ${OVERVIEW_MIN}+ (${pctTxt(r)}), ${r.low} at 0-1. `
         + `${r.tabs} of ${r.tabsOf} grade tabs counted${r.partial ? `, ${r.partial} only partly` : ''}.`
-      : 'No CMS counts captured yet.')
+      : r.status === 'uncounted'
+        ? `${r.appSets} passage sets in its lists in the app, but no CMS counts yet, so it can't be rated against the ${OVERVIEW_MIN}+ rule.`
+        : 'Nothing in this state yet.')
     + ' Click to open its dashboard.';
 
   const map = usMapState === 'ready'
     ? `<svg class="ov-map" viewBox="${usMap.viewBox.join(' ')}" role="group" aria-label="States by CMS coverage. Click a state to open its dashboard.">
+        <defs><pattern id="ovHatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <rect width="6" height="6" fill="#f2f4f9"/><rect width="2.2" height="6" fill="#c9d1e3"/></pattern></defs>
         ${Object.entries(usMap.states).map(([ab, x]) => by[ab]
           ? `<path class="ov-state ov-${by[ab].status}" d="${x.d}" data-dashst="${ab}" tabindex="0" role="button" aria-label="${esc(tip(by[ab]))}"><title>${esc(tip(by[ab]))}</title></path>`
           : `<path class="ov-other" d="${x.d}"><title>${esc(x.name)} — not in this app</title></path>`).join('')}
@@ -7360,27 +7374,31 @@ function renderDashOverview(wrap) {
           const x = usMap.states[r.st];
           if (!x) return '';
           return `<g class="ov-label" transform="translate(${x.label[0]} ${x.label[1]})">
-            <text class="ov-abbr" y="-2">${r.st}</text><text class="ov-pct" y="13">${pctTxt(r)}</text></g>`;
+            <text class="ov-abbr" y="-2">${r.st}</text><text class="ov-pct" y="13">${mapTxt(r)}</text></g>`;
         }).join('')}
       </svg>`
     : usMapState === 'failed'
       ? `<div class="ov-map-msg">The map couldn't load. The list works the same way — click a state.</div>`
       : `<div class="ov-map-msg">Loading map…</div>`;
 
+  const sub = r => (r.tabs
+    ? `${r.atMin}/${r.total} categories at ${OVERVIEW_MIN}+ · ${r.tabs}/${r.tabsOf} grade tabs counted${r.partial ? ` (${r.partial} partly)` : ''}`
+    : r.status === 'uncounted' ? `${r.appSets} sets in the app · no CMS counts yet` : 'Nothing yet');
   const list = rows.map(r => `<button class="ov-row" data-dashst="${r.st}" title="${esc(tip(r))}">
       <span class="ov-dot ov-${r.status}"></span>
       <span class="ov-row-name">${esc(STATE_NAMES[r.st])}</span>
       <span class="ov-row-num">${pctTxt(r)}</span>
       <span class="ov-row-status">${OVERVIEW_STATUS[r.status].label}</span>
-      <span class="ov-row-sub">${r.tabs ? `${r.atMin}/${r.total} categories at ${OVERVIEW_MIN}+ · ${r.tabs}/${r.tabsOf} grade tabs counted${r.partial ? ` (${r.partial} partly)` : ''}` : 'No CMS counts yet'}</span>
+      <span class="ov-row-sub">${sub(r)}</span>
     </button>`).join('');
-  const legend = ['green', 'yellow', 'red', 'white'].map(s =>
+  const legend = OVERVIEW_ORDER.map(s =>
     `<span class="ov-key"><span class="ov-dot ov-${s}"></span><b>${OVERVIEW_STATUS[s].label}</b> ${esc(OVERVIEW_STATUS[s].note)}</span>`).join('');
 
   wrap.appendChild(el(`<div class="ov">
     <div class="ov-mapbox">${map}<div class="ov-legend">${legend}</div></div>
     <div class="ov-list"><div class="side-title">States</div>${list}
-      <div class="ps-hint ov-note">From the CMS column of each state's dashboard. Click a state, on the map or here, to open it.</div></div>
+      <div class="ps-hint ov-note">Rated from the CMS column of each state's dashboard. A state is
+        <b>Not counted yet</b> until its CMS numbers are captured. Click a state, on the map or here, to open it.</div></div>
   </div>`));
 }
 
@@ -7635,6 +7653,8 @@ function wireCmdk() {
 
 function init() {
   applyHash();
+  // A fresh load of the Dashboard opens on the map, whatever state the address named.
+  if (state.ui.view === 'dash') state.ui.dashState = 'overview';
   applyViewChrome();
   const decorate = (id, name) => {
     const n = document.getElementById(id);
@@ -7655,6 +7675,8 @@ function init() {
   nav.addEventListener('click', e => {
     const tab = e.target.closest('.tab');
     if (!tab) return;
+    // The Dashboard always opens on the map; any state is one click from there.
+    if (tab.dataset.view === 'dash') state.ui.dashState = 'overview';
     showView(tab.dataset.view, { push: true });
   });
   nav.addEventListener('keydown', e => {
@@ -7667,6 +7689,7 @@ function init() {
     else i = e.key === 'ArrowRight' ? (i + 1) % tabs.length : (i - 1 + tabs.length) % tabs.length;
     e.preventDefault();
     tabs[i].focus();
+    if (tabs[i].dataset.view === 'dash') state.ui.dashState = 'overview';
     showView(tabs[i].dataset.view, { push: true });
   });
   document.addEventListener('keydown', reviewKeydown);
