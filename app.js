@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609111327';   // replaced with the deploy stamp
+const APP_BUILD = '202609111336';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -6117,6 +6117,9 @@ const QUEUE_SOURCES = {
 };
 const WORK_TYPES = { queue: 'Queue', count: 'Count', sweep: 'Sweep', manager: 'Manager' };
 const SURFACES = { app: 'Alignment app', cms: 'cms.cleark12.com', mcp: 'MCP' };
+// The Board's two crews, in Kennady's order. A bot with no group lands in "Other".
+const BOT_GROUPS = [['app', 'Standards Alignment App'], ['cms', 'CMS'], [null, 'Other']];
+const botGroupRank = c => { const i = BOT_GROUPS.findIndex(([k]) => k === (c || null)); return i < 0 ? BOT_GROUPS.length : i; };
 const BOARD_TZ = 'America/Chicago';
 
 /* Can this state build for this row at this grade? Literary genres are universal, so
@@ -6174,14 +6177,25 @@ function botFromRow(r) {
     activeStart: String(r.active_start || '08:00').slice(0, 5), activeEnd: String(r.active_end || '16:00').slice(0, 5),
     grokAgentId: r.grok_agent_id || '', sort: r.sort == null ? 100 : r.sort,
     tokenIssuedAt: r.token_issued_at || null, archived: !!r.archived_at,
+    category: r.category || null,
   };
 }
 const botsLive = () => typeof BOTSB !== 'undefined' && BOTSB.available === true;
 function allBots() {
   const rows = botsLive() ? BOTSB.bots : DEFAULT_BOTS;
-  return rows.map(botFromRow).sort((a, b) => a.sort - b.sort || a.key.localeCompare(b.key));
+  return rows.map(botFromRow).sort((a, b) =>
+    botGroupRank(a.category) - botGroupRank(b.category) || a.sort - b.sort || a.key.localeCompare(b.key));
 }
 const workerBots = () => allBots().filter(b => !b.archived && b.workType !== 'manager');
+// Workers split into the Board's groups. Headings only when there is more than one
+// group to tell apart (the fallback roster has none).
+function groupedWorkers() {
+  const ws = workerBots();
+  const groups = BOT_GROUPS.map(([key, label]) => ({ key, label, bots: ws.filter(b => (b.category || null) === key) }))
+    .filter(g => g.bots.length);
+  groups.showTitles = groups.length > 1 || (groups[0] && groups[0].key !== null);
+  return groups;
+}
 const managerBots = () => allBots().filter(b => !b.archived && b.workType === 'manager');
 
 // Owner notes on State Lists stages and the Dashboard follow the registry, so a rename
@@ -6461,6 +6475,13 @@ function bindBotsBoard() {
   view.addEventListener('click', e => {
     if (e.target.closest('#joshSave')) { joshSave(); return; }
     if (e.target.closest('#runlogPasteSave')) { saveRunlogPaste(); return; }
+    const nt = e.target.closest('[data-note-toggle]');
+    if (nt) {
+      const k = nt.dataset.noteToggle;
+      if (botNotesOpen.has(k)) botNotesOpen.delete(k); else botNotesOpen.add(k);
+      nt.classList.toggle('is-open', botNotesOpen.has(k));
+      return;
+    }
     const mode = e.target.closest('[data-botsmode]');
     if (mode) { state.ui.botsMode = mode.dataset.botsmode; renderBots({ keepQueues: true }); return; }
     if (e.target.closest('#botsManageBtn')) { openManageBots(); return; }
@@ -6540,7 +6561,9 @@ function renderBots(opts) {
   else {
     const note = !botsLive() && typeof BOTSB !== 'undefined' && BOTSB.error
       ? `<div class="bots-note">${ico('warn')} Run reports aren't connected (${esc(BOTSB.error)}), so this is the Board without them.</div>` : '';
-    wrap.innerHTML = note + bots.map(b => botCardHtml(b, d, work)).join('');
+    const gw = groupedWorkers();
+    wrap.innerHTML = note + gw.map(g => (gw.showTitles ? `<div class="bots-group-title">${esc(g.label)}</div>` : '')
+      + g.bots.map(b => botCardHtml(b, d, work)).join('')).join('');
   }
   wrap.querySelectorAll('details[data-keep]').forEach(x => { if (keepOpen.has(x.dataset.keep)) x.open = true; });
   wrap.scrollTop = keepScroll;
@@ -6611,6 +6634,7 @@ function botCardHtml(b, d, work) {
       `<div><b>${esc(x.code || 'other')}</b> ${esc(x.message || '')}${x.at ? ` <span class="bot-blocker-at">${esc(botClock(x.at))}</span>` : ''}</div>`).join('')}</div></div>` : ''}
     ${meta.length ? `<div class="bot-meta">${meta.map(m => `<span>${m}</span>`).join('')}</div>` : ''}
     ${rep && rep.message ? `<div class="bot-message">${esc(rep.message)}</div>` : ''}
+    ${botNotes(rep).length ? `<div class="bot-notes"><span class="bot-notes-label">Note</span>${esc(botNotes(rep).join(' · '))}</div>` : ''}
     ${highlights}
     ${body}
     ${b.source === 'cms' ? joshPasteHtml() : ''}
@@ -6618,33 +6642,59 @@ function botCardHtml(b, d, work) {
 }
 
 /* The manager's view: who started, who is silent, who is done, who is stuck, and what
-   is blocking them -- the 4pm scavenger hunt, answered in one place. */
+   is blocking them -- the 4pm scavenger hunt, answered in one place. Grouped the way
+   Kennady runs the crews: the Standards Alignment App bots, then the CMS bots.
+   Blockers = needs a human / stopped (red). Notes = neutral context from the bot's own
+   latest report, e.g. why Done still shows remaining. Never derived from the numbers. */
+const botNotesOpen = new Set();        // Notes cells someone expanded; survives live redraws
+const botNotes = rep => (rep && Array.isArray(rep.notes) ? rep.notes.filter(Boolean).map(botText) : []);
+function noteCellHtml(key, notes) {
+  if (!notes.length) return '<span class="ps-hint">—</span>';
+  const txt = notes.join(' · ');
+  return `<div class="note-cell ${botNotesOpen.has(key) ? 'is-open' : ''}" data-note-toggle="${esc(key)}"
+    title="${esc(txt)} — click to ${botNotesOpen.has(key) ? 'collapse' : 'expand'}">${esc(txt)}</div>`;
+}
 function digestHtml(d, work) {
-  const rows = workerBots().map(b => {
+  const rowOf = b => {
     const r = latestRun(b.key, d);
     const rep = latestBotReport(b.key, d);
     const c = (rep && rep.counts) || {};
     return {
       b, r, st: botStatus(b, d), done: isDoneOn(b, d), bl: openBlockers(b, d),
       rem: remainingFor(b, work, d), completed: c.completed != null ? (+c.completed || 0) : null,
-      reported: runsOn(b.key, d).some(x => x.source !== 'board'),
+      reported: runsOn(b.key, d).some(x => x.source !== 'board'), notes: botNotes(rep),
     };
-  });
+  };
+  const gw = groupedWorkers();
+  const groups = gw.map(g => ({ label: g.label, rows: g.bots.map(rowOf) }));
+  const rows = groups.flatMap(g => g.rows);
   const started = rows.filter(x => x.reported).length;
   const silent = rows.filter(x => x.st === 'silent').length;
   const done = rows.filter(x => x.done).length;
   const blocked = rows.filter(x => x.bl.length || x.st === 'blocked').length;
-  const completed = rows.reduce((a, x) => a + (x.completed || 0), 0);
+  const completed = rows.reduce((sum, x) => sum + (x.completed || 0), 0);
   const stat = (n, l, cls) => `<div class="digest-stat ${cls || ''}"><b>${n}</b><span>${l}</span></div>`;
   // The latest manager digest today. Only a digest clears "No manager digest"; a
   // manager's ordinary report lands in the run log like anyone else's.
   const digests = BOTSB.runs.filter(r => r.run_date === d && r.kind === 'digest')
-    .sort((a, b) => String(b.received_at).localeCompare(String(a.received_at)) || b.id - a.id);
+    .sort((x, y) => String(y.received_at).localeCompare(String(x.received_at)) || y.id - x.id);
   const dg = digests[0] || null;
   const flagged = new Set(dg && Array.isArray(dg.attention) ? dg.attention.map(String) : []);
   const botName = k => (allBots().find(b => b.key === k) || { name: k }).name;
   const open = rows.filter(x => x.bl.length);
   const src = r => (r.source === 'board' ? 'Board tick' : r.source === 'paste' ? 'posted' : r.source === 'manager' ? 'via manager' : 'report');
+  const COLS = 8;
+  const rowHtml = x => `<tr class="${x.bl.length ? 'is-blocked' : ''}">
+      <td class="dg-bot"><b>${esc(x.b.name)}</b>${flagged.has(x.b.key) ? ` <span class="digest-flag" title="Flagged in today's manager digest">${ico('flag')} flagged</span>` : ''}</td>
+      <td class="dg-job">${esc(x.b.job)}</td>
+      <td>${botStatusChip(x.st, x.b) || '—'}</td>
+      <td>${x.r ? `${esc(botClock(x.r.received_at))} <span class="ps-hint">${src(x.r)}</span>` : '<span class="ps-hint">—</span>'}</td>
+      <td class="num">${x.completed != null ? x.completed : '—'}</td>
+      <td class="num">${x.rem.n != null ? x.rem.n : '—'}</td>
+      <td>${x.bl.map(z => `<span class="digest-bl" title="${esc(z.message || '')}">${esc(z.code || 'other')}</span>`).join(' ')}</td>
+      <td class="dg-notes">${noteCellHtml(x.b.key, x.notes)}</td>
+    </tr>`;
+  const dgNotes = botNotes(dg);
   return `<div class="digest">
     <div class="digest-strip">
       ${stat(started, 'reported today')}${stat(silent, 'silent', silent ? 'warn' : '')}${stat(done, 'done', done ? 'good' : '')}${stat(blocked, 'blocked', blocked ? 'bad' : '')}${stat(completed, 'completed today')}
@@ -6653,18 +6703,13 @@ function digestHtml(d, work) {
         <div class="digest-mgr-head"><span class="bot-badge">${esc(botName(dg.bot_key))}</span> digest · ${esc(botClock(dg.received_at))} Central${digests.length > 1 ? ` · ${digests.length} today` : ''}${dg.source === 'paste' ? ` · ${esc(runSourceLabel(dg))}` : ''}</div>
         ${dg.message ? `<div class="digest-summary">${esc(dg.message)}</div>` : ''}
         ${(dg.highlights || []).length ? `<ul>${dg.highlights.map(h => `<li>${esc(botText(h))}</li>`).join('')}</ul>` : ''}
+        ${dgNotes.length ? `<div class="digest-notes"><b>Notes</b><ul>${dgNotes.map(n => `<li>${esc(n)}</li>`).join('')}</ul></div>` : ''}
         ${flagged.size ? `<div class="digest-attn">Needs attention: ${[...flagged].map(k => `<span class="digest-attn-chip">${esc(botName(k))}</span>`).join(' ')}</div>` : ''}
       </div>` : `<div class="ps-hint digest-none">No manager digest posted today yet.</div>`}
     <div class="digest-table-wrap"><table class="digest-table">
-      <thead><tr><th>Bot</th><th>Status</th><th>Last update</th><th class="num">Completed</th><th class="num">Remaining</th><th>Blockers</th></tr></thead>
-      <tbody>${rows.map(x => `<tr class="${x.bl.length ? 'is-blocked' : ''}">
-        <td><b>${esc(x.b.name)}</b>${flagged.has(x.b.key) ? ` <span class="digest-flag" title="Flagged in today's manager digest">${ico('flag')} flagged</span>` : ''}</td>
-        <td>${botStatusChip(x.st, x.b) || '—'}</td>
-        <td>${x.r ? `${esc(botClock(x.r.received_at))} <span class="ps-hint">${src(x.r)}</span>` : '<span class="ps-hint">—</span>'}</td>
-        <td class="num">${x.completed != null ? x.completed : '—'}</td>
-        <td class="num">${x.rem.n != null ? x.rem.n : '—'}</td>
-        <td>${x.bl.map(z => `<span class="digest-bl">${esc(z.code || 'other')}</span>`).join(' ')}</td>
-      </tr>`).join('')}</tbody>
+      <thead><tr><th>Bot</th><th>Job</th><th>Status</th><th>Last update</th><th class="num">Completed</th><th class="num">Remaining</th><th>Blockers</th><th>Notes</th></tr></thead>
+      <tbody>${groups.map(g => (gw.showTitles ? `<tr class="digest-group"><td colspan="${COLS}">${esc(g.label)}</td></tr>` : '')
+        + g.rows.map(rowHtml).join('')).join('')}</tbody>
     </table></div>
     <div class="digest-sec">Open blockers</div>
     ${open.length ? `<ul class="digest-blockers">${open.map(x => x.bl.map(z =>
@@ -6673,17 +6718,17 @@ function digestHtml(d, work) {
     <div class="digest-foot"><button class="act-btn" data-botsmode="log">Raw run log →</button></div>
   </div>`;
 }
-
 function rawRun(r) {
   return { id: r.id, botKey: r.bot_key, date: r.run_date, status: r.status, startedAt: r.started_at,
     finishedAt: r.finished_at, doneToday: r.done_today, counts: r.counts, highlights: r.highlights,
     blockers: r.blockers, outputs: r.outputs, source: r.source, submittedBy: r.submitted_by, receivedAt: r.received_at,
-    kind: r.kind, message: r.message, reportedAt: r.reported_at, attention: r.attention };
+    kind: r.kind, message: r.message, notes: r.notes, reportedAt: r.reported_at, attention: r.attention };
 }
 function runSummary(r) {
   const c = r.counts || {};
   const bits = [];
   if (r.message) bits.push(r.message.slice(0, 90));
+  if ((r.notes || []).length) bits.push('note: ' + botText(r.notes[0]).slice(0, 80));
   if (c.completed != null) bits.push(`${c.completed} completed`);
   if (c.remaining != null) bits.push(`${c.remaining} remaining`);
   if ((r.blockers || []).length) bits.push(`${r.blockers.length} blocker${r.blockers.length === 1 ? '' : 's'}`);
@@ -6914,6 +6959,8 @@ function manageFormHtml(b, isNew) {
       <label class="mb-wide">One-line job<textarea class="ps-textarea" id="mbJob" rows="2">${esc(b.job)}</textarea></label>
       <label>Work type<select class="ps-input" id="mbType">${Object.entries(WORK_TYPES).map(([k, l]) =>
         `<option value="${k}" ${b.workType === k ? 'selected' : ''}>${l}</option>`).join('')}</select></label>
+      <label>Board group<select class="ps-input" id="mbGroup">${BOT_GROUPS.map(([k, l]) =>
+        `<option value="${k || ''}" ${(b.category || null) === k ? 'selected' : ''}>${k ? esc(l) : 'None'}</option>`).join('')}</select></label>
       <label>Live queue<select class="ps-input" id="mbSource">
         <option value="">None — remaining comes from its reports</option>
         ${Object.entries(QUEUE_SOURCES).map(([k, s]) => `<option value="${k}" ${b.source === k ? 'selected' : ''}>${esc(s.label)}</option>`).join('')}
@@ -6962,6 +7009,7 @@ function botSetupText(b, token) {
   else lines.push(
     `status: working | done | blocked | idle | nothing-waiting. "doneToday": true marks Done for the day.`,
     `Blockers: [{"code":"mcp_429","message":"CR Writing request failed (429)"}]`,
+    `Notes: "notes": "..." (or a list) for context that is NOT a blocker, e.g. why Done still shows remaining. Omit or send "" to clear.`,
     `Post on morning start, at least every 60-90 minutes while working, the moment you hit a blocker, and when done.`);
   lines.push(`Your live card: POST ${SUPABASE_URL}/rest/v1/rpc/bot_brief with the same headers and body {}`);
   return lines.join('\n');
@@ -6993,6 +7041,7 @@ function readManageForm(isNew, b) {
     name: q('#mbName').value.trim(),
     job: q('#mbJob').value.trim(),
     work_type: q('#mbType').value,
+    category: q('#mbGroup').value || null,
     queue_source: q('#mbSource').value || null,
     grok_agent_id: q('#mbAgent').value.trim() || null,
     sort: parseInt(q('#mbSort').value, 10) || 100,

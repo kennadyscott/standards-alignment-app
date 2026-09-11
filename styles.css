@@ -1637,3 +1637,20 @@ path.ov-white { fill: #fff; stroke: var(--ov-white-line); }
 .ov-row-status { font-weight: 600; color: var(--ink-soft); }
 .ov-note { margin-top: 8px; line-height: 1.5; }
 @media (max-width: 1000px) { .ov { grid-template-columns: 1fr; } }
+
+/* Board v3: crew groups, Job column, Notes (neutral) next to Blockers (red) */
+.bots-group-title { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .07em;
+  color: var(--ink-faint); margin: 8px 2px -4px; }
+.digest-table tr.digest-group td { background: var(--bg); font-size: 11px; font-weight: 800; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--ink-faint); padding: 7px 12px; }
+.digest-table .dg-bot { white-space: nowrap; }
+.digest-table .dg-job { font-size: 12px; color: var(--ink-soft); min-width: 190px; max-width: 280px; line-height: 1.4; }
+.digest-table .dg-notes { min-width: 170px; max-width: 320px; }
+.note-cell { font-size: 12px; color: var(--ink-soft); background: var(--accent-soft); border-radius: 6px; padding: 3px 8px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; cursor: pointer; line-height: 1.45; }
+.note-cell.is-open { white-space: normal; }
+.bot-notes { margin-top: 8px; font-size: 12.5px; color: var(--ink-soft); background: var(--accent-soft);
+  border-radius: 8px; padding: 7px 10px; line-height: 1.45; }
+.bot-notes-label { font-weight: 700; color: var(--accent-ink); margin-right: 6px; }
+.digest-notes { margin-top: 8px; font-size: 12.5px; color: var(--ink-soft); }
+.digest-notes ul { margin: 4px 0 0; padding-left: 18px; line-height: 1.5; }

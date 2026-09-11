@@ -9,7 +9,7 @@
    snapshot of what the server holds and diff against it. No editor code has to
    announce what it touched, so nothing is missed by forgetting to instrument a path. */
 
-const STORE_BUILD = '202609111327';
+const STORE_BUILD = '202609111336';
 
 const SB = {
   client: null,
@@ -342,9 +342,9 @@ function sbViewers(setId) {
    (migration not run), BOTSB.available goes false and the Board falls back to the
    old checkbox behaviour instead of breaking. */
 const BOT_COLS = 'bot_key,name,job,grok_agent_id,work_type,queue_source,surfaces,active_days,'
-  + 'active_start,active_end,sort,token_issued_at,archived_at,updated_at,updated_by';
+  + 'active_start,active_end,sort,token_issued_at,archived_at,updated_at,updated_by,category';
 const RUN_COLS = 'id,bot_key,run_date,status,started_at,finished_at,done_today,counts,'
-  + 'highlights,blockers,outputs,source,submitted_by,received_at,message,reported_at,kind,attention';
+  + 'highlights,blockers,outputs,source,submitted_by,received_at,message,reported_at,kind,attention,notes';
 const QUEUE_COLS = 'bot_key,remaining,places,rows,brief,computed_at,computed_by';
 const BOTSB = {
   available: null,          // null = not loaded yet; false = unavailable, use the old Board
