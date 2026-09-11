@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609112038';   // replaced with the deploy stamp
+const APP_BUILD = '202609112041';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -6046,12 +6046,17 @@ function cmsBucket(st, kind, grade) {
    Names are trimmed as they are READ, so counts already saved are fixed too, not only
    new pastes. Two names that trim to the same one are added together. */
 const cmsName = n => String(n).trim();
+// "(unknown)" is how the CMS reports sets filed with no sub-topic (Ohio grade 2
+// Informational holds 2). It isn't a sub-topic, so it gets no row -- Kennady asked for it
+// gone on Sept 11. The bucket's total still counts those sets, so the footer stays true.
+const isNoSubtopic = k => !k || /^\(\s*unknown\s*\)$/i.test(k);
 function cleanCmsBucket(b) {
   if (!b || !b.counts) return b;
   const counts = {};
   let changed = false;
   Object.entries(b.counts).forEach(([name, n]) => {
     const k = cmsName(name);
+    if (isNoSubtopic(k)) { changed = true; return; }
     if (k !== name || k in counts) changed = true;
     counts[k] = k in counts ? (+counts[k] || 0) + (+n || 0) : n;
   });
@@ -6060,6 +6065,7 @@ function cleanCmsBucket(b) {
     topics = {};
     Object.entries(b.topics).forEach(([name, t]) => {
       const k = cmsName(name), v = typeof t === 'string' ? t.trim() : t;
+      if (isNoSubtopic(k)) { changed = true; return; }
       if (k !== name || v !== t) changed = true;
       if (!(k in topics)) topics[k] = v;
     });
