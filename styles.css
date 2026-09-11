@@ -1658,3 +1658,16 @@ path.ov-white { fill: #fff; stroke: var(--ov-white-line); }
 /* Overview: a state with work in the app but no CMS counts yet — "not counted", never "not started" */
 path.ov-uncounted { fill: url(#ovHatch); stroke: #8f9cb8; }
 .ov-dot.ov-uncounted { background: repeating-linear-gradient(135deg, #c9d1e3 0 2px, #f2f4f9 2px 4px); box-shadow: inset 0 0 0 1.5px #8f9cb8; }
+
+/* Board width: the Manager table and Run log use the whole width (Cards stay readable-width),
+   so Notes fit beside Blockers without a scroll bar. */
+.bots-wrap > .digest, .bots-wrap > .runlog { max-width: none; }
+.digest-table .dg-notes { min-width: 240px; max-width: none; }
+/* Notes show up to two lines before a click, rather than one clipped line. */
+.note-cell { white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.note-cell.is-open { display: block; -webkit-line-clamp: unset; }
+/* Daily completion, collapsed, at the top of Run log. Capped so the 28 day-squares stay small. */
+.cal-box { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; }
+.cal-box > summary { cursor: pointer; font-size: 12.5px; font-weight: 700; color: var(--accent-ink); }
+.cal-box > summary .ps-hint { font-weight: 500; margin-left: 6px; }
+.cal-box-inner { max-width: 640px; padding-top: 12px; }

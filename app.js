@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609111342';   // replaced with the deploy stamp
+const APP_BUILD = '202609111424';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -6451,6 +6451,10 @@ function bindBotsBoard() {
   const view = document.getElementById('botsView');
   if (!view || view.dataset.bound) return;
   view.dataset.bound = '1';
+  view.addEventListener('toggle', e => {
+    if (!e.target.classList || !e.target.classList.contains('cal-box')) return;
+    try { localStorage.setItem(CAL_OPEN_KEY, e.target.open ? '1' : '0'); } catch { /* private window */ }
+  }, true);
   view.addEventListener('change', async e => {
     if (e.target.id === 'runlogBot') { state.ui.botsLogBot = e.target.value; renderBots({ keepQueues: true }); return; }
     const cb = e.target.closest('[data-botdone]');
@@ -6557,7 +6561,7 @@ function renderBots(opts) {
   const keepScroll = wrap.scrollTop;
   const mode = botsLive() ? (state.ui.botsMode || 'digest') : 'cards';
   if (mode === 'digest') wrap.innerHTML = digestHtml(d, work);
-  else if (mode === 'log') wrap.innerHTML = runLogHtml(state.ui.botsLogDate || d, state.ui.botsLogBot || '');
+  else if (mode === 'log') wrap.innerHTML = runLogHtml(state.ui.botsLogDate || d, state.ui.botsLogBot || '', work);
   else {
     const note = !botsLive() && typeof BOTSB !== 'undefined' && BOTSB.error
       ? `<div class="bots-note">${ico('warn')} Run reports aren't connected (${esc(BOTSB.error)}), so this is the Board without them.</div>` : '';
@@ -6567,7 +6571,6 @@ function renderBots(opts) {
   }
   wrap.querySelectorAll('details[data-keep]').forEach(x => { if (keepOpen.has(x.dataset.keep)) x.open = true; });
   wrap.scrollTop = keepScroll;
-  renderBotCalendar(work);
 }
 
 function botCardHtml(b, d, work) {
@@ -6765,7 +6768,7 @@ async function saveRunlogPaste() {
   ta.value = '';
   renderBots({ keepQueues: true });
 }
-function runLogHtml(date, botKey) {
+function runLogHtml(date, botKey, work) {
   const bots = allBots();
   const name = k => (bots.find(b => b.key === k) || { name: k }).name;
   const runs = BOTSB.runs.filter(r => r.run_date === date && (!botKey || r.bot_key === botKey))
@@ -6773,6 +6776,7 @@ function runLogHtml(date, botKey) {
   const today = boardDate();
   const oldest = shiftDate(today, -CAL_DAYS);
   return `<div class="runlog">
+    ${work ? botCalendarBoxHtml(work) : ''}
     <div class="runlog-head">
       <button class="act-btn" data-logday="-1" ${date <= oldest ? 'disabled' : ''}>‹ Earlier</button>
       <b>${esc(date)}</b>${date === today ? ' <span class="ps-hint">today</span>' : ''}
@@ -6819,9 +6823,18 @@ function calendarDays() {
   }
   return out;
 }
-function renderBotCalendar(work) {
-  const box = document.getElementById('botCal');
-  if (!box) return;
+// Daily completion lives in the Run log, collapsed: it is history, and as a sidebar it
+// took a third of the Board's width and pushed the Notes column behind a scroll bar.
+// Open or closed is remembered per browser.
+const CAL_OPEN_KEY = 'sa_botcal_open';
+function calOpenStored() { try { return localStorage.getItem(CAL_OPEN_KEY) === '1'; } catch { return false; } }
+function botCalendarBoxHtml(work) {
+  return `<details class="cal-box" data-keep="cal" ${calOpenStored() ? 'open' : ''}>
+    <summary>Daily completion <span class="ps-hint">last ${CAL_DAYS} days — who finished, day by day</span></summary>
+    <div class="cal-box-inner">${botCalendarHtml(work)}</div>
+  </details>`;
+}
+function botCalendarHtml(work) {
   const days = calendarDays();
   const firstOfMonth = {};
   days.forEach(d => { if (!firstOfMonth[d.month]) firstOfMonth[d.month] = d.key; });
@@ -6857,9 +6870,8 @@ function renderBotCalendar(work) {
     </div>`;
   }).join('');
 
-  box.innerHTML = `
+  return `
     <div class="cal-head">
-      <div class="side-title">Daily completion</div>
       <div class="ps-hint">Last ${CAL_DAYS} days, Central time. Each square is one bot on one day.</div>
     </div>
     <div class="cal-months">${days.map(d =>
