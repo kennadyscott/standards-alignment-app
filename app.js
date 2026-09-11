@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609112021';   // replaced with the deploy stamp
+const APP_BUILD = '202609112026';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3116,8 +3116,16 @@ async function importToBuilderApi() {
           httpErrors += sets.length - i;
           authExpired = true;
           break;
+        }        
+        if (!res.ok) {
+          // Keep the server's own words. "3 failed" with the reason thrown away means
+          // guessing at whether it was CORS, a validation rejection, or an outage --
+          // and the reason is right here in the response.
+          httpErrors += chunk.length;
+          lastFail = `HTTP ${res.status} ${res.statusText || ''}\n\n`
+            + (await res.text().catch(() => '(no response body)')).slice(0, 900);
+          continue;
         }
-        if (!res.ok) { httpErrors += chunk.length; continue; }
         // Expected response: [{ sourceId, status: "success" | "failed", passageId }, ...]
         // Read it LOOSELY. The first production run reported "2 sent" and wrote back no
         // IDs at all, because an exact `r.passageId` match is the only thing that counts
