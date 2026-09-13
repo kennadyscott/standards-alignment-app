@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609131506';   // replaced with the deploy stamp
+const APP_BUILD = '202609131513';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1644,7 +1644,11 @@ function toast(msg) {
   toastTimer = setTimeout(() => t.classList.remove('show'), 1800);
 }
 
-function appDialog({ title, body, value, placeholder, ok, cancel, danger, textarea }) {
+/* `alt` adds a third, deliberately secondary action; it resolves to the string 'alt' so a
+   caller can tell it from the plain yes. It exists for the case where the safe default is
+   the main button and the wider, riskier version of the same action still has to be
+   reachable without hunting through rows one at a time. */
+function appDialog({ title, body, value, placeholder, ok, cancel, alt, danger, textarea }) {
   return new Promise(resolve => {
     document.getElementById('appDialog')?.remove();
     const hasField = value !== undefined;
@@ -1658,6 +1662,7 @@ function appDialog({ title, body, value, placeholder, ok, cancel, danger, textar
           : ''}
         <div class="detail-actions" style="margin-top:8px;justify-content:flex-end">
           <button class="btn btn-ghost" id="appDialogNo">${esc(cancel || 'Cancel')}</button>
+          ${alt ? `<button class="btn btn-ghost btn-danger" id="appDialogAlt">${esc(alt)}</button>` : ''}
           <button class="btn ${danger ? 'btn-danger' : 'btn-primary'}" id="appDialogYes">${esc(ok || 'OK')}</button>
         </div>
       </div>
@@ -1666,6 +1671,7 @@ function appDialog({ title, body, value, placeholder, ok, cancel, danger, textar
     const field = document.getElementById('appDialogVal');
     const done = (v) => { ov.remove(); resolve(v); };
     document.getElementById('appDialogNo').addEventListener('click', () => done(hasField ? null : false));
+    document.getElementById('appDialogAlt')?.addEventListener('click', () => done('alt'));
     document.getElementById('appDialogYes').addEventListener('click', () => {
       done(hasField ? (field ? field.value : '') : true);
     });
@@ -1682,7 +1688,8 @@ function appDialog({ title, body, value, placeholder, ok, cancel, danger, textar
   });
 }
 function appConfirm(title, body, opts) {
-  return appDialog({ title, body, ok: (opts && opts.ok) || 'OK', cancel: (opts && opts.cancel) || 'Cancel', danger: opts && opts.danger });
+  return appDialog({ title, body, ok: (opts && opts.ok) || 'OK', cancel: (opts && opts.cancel) || 'Cancel',
+                     alt: opts && opts.alt, danger: opts && opts.danger });
 }
 function appPrompt(title, body, def, opts) {
   return appDialog({
@@ -3732,34 +3739,46 @@ function deleteVisibleSets() {
   const inCms = shown.filter(s => (s.passageId || '').trim());
   const shared = shown.filter(s => !(s.passageId || '').trim() && sharedBy.has(s.id));
   const doomed = shown.filter(s => !(s.passageId || '').trim() && !sharedBy.has(s.id));
-  if (!doomed.length) {
-    toast(`Nothing to sweep — all ${shown.length} shown are in the CMS or on another `
-      + 'state\u2019s list');
+  if (!doomed.length && !shared.length) {
+    toast(`Nothing to sweep — all ${shown.length} shown ${shown.length === 1 ? 'is' : 'are'} `
+      + 'in the CMS');
     return;
   }
+  // Once a sweep has run, what is left of a state's list can be nothing BUT the sets other
+  // states use. There is no safe subset to offer then, so those become the main action --
+  // still named, still counted, but not hidden behind a sweep that has nothing to do.
+  const onlyShared = !doomed.length;
+  const primary = onlyShared ? shared : doomed;
 
   const bits = [];
   const kept = [];
   if (inCms.length) kept.push(`${inCms.length} already in the CMS`);
-  if (shared.length) kept.push(`${shared.length} also on another state\u2019s list`);
+  if (shared.length && !onlyShared) kept.push(`${shared.length} also on another state\u2019s list`);
   if (kept.length) bits.push(`Keeping ${kept.join(' and ')}.`);
   if (shared.length) {
     // Named, not just counted: these are the ones worth knowing about, and a total cannot
     // say which they are.
     const listed = shared.slice(0, 8).map(s =>
       `  \u2022 ${s.title || 'Untitled set'} \u2014 ${[...sharedBy.get(s.id)].join(', ')}`);
-    bits.push('Kept for other states:\n' + listed.join('\n')
+    bits.push((onlyShared ? 'Every one of these is on another state\u2019s list, which loses it:\n'
+                          : 'Kept for other states:\n') + listed.join('\n')
       + (shared.length > listed.length ? `\n  \u2022 and ${shared.length - listed.length} more` : ''));
   }
   if (!scoped) bits.push('Every state is in view, so nothing is held back for another state\u2019s list.');
   bits.push('This cannot be undone once the Undo toast goes.');
-  const ids = new Set(doomed.map(s => s.id));
+  const ids = new Set();
 
-  appConfirm(`Delete ${doomed.length} passage set${doomed.length === 1 ? '' : 's'}?`,
+  // The safe sweep is the main button. Taking the shared ones as well is reachable, but it
+  // is a separate button that names the larger number -- never the default, never a click
+  // away from the ordinary one by accident.
+  const withShared = doomed.concat(shared);
+  appConfirm(`Delete ${primary.length} passage set${primary.length === 1 ? '' : 's'}?`,
     `${describeSetFilters()}\n\n${bits.join('\n\n')}`,
-    { ok: `Delete ${doomed.length}`, danger: true }).then(yes => {
-    if (!yes) return;
-    const removed = doomed.map(s => s);
+    { ok: `Delete ${primary.length}`, danger: true,
+      alt: (shared.length && !onlyShared) ? `Delete all ${withShared.length}` : null }).then(answer => {
+    if (!answer) return;
+    const removed = answer === 'alt' ? withShared : primary;
+    removed.forEach(s => ids.add(s.id));
     const at = Date.now();
     state.setDeleted = state.setDeleted || {};
     removed.forEach(s => { state.setDeleted[s.id] = at; });
