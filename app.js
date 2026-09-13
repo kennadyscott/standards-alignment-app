@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609131447';   // replaced with the deploy stamp
+const APP_BUILD = '202609131454';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2801,12 +2801,22 @@ function numberingProblem(s) {
   return anyNumbered ? '' : 'no paragraph numbers';
 }
 
-/* North Carolina's CMS item sets are banded by writing type (Sept 12): Persuasive (CMS 48,
-   "Argumentative Passage") exists for grades 5-8 only and Informational (CMS 47,
-   "Informational Passage") for 7-8 only. A set outside its band has no container to land
-   in, so it is held off Send to CMS -- never re-filed as Narrative (CMS 46). Its own stage
-   keeps it out of the "Not ready" fix queue: nothing about the set itself is wrong. */
-const CMS_TYPE_BANDS = { NC: { opinion: [5, 8], informative: [7, 8] } };
+/* The Carolinas' CMS item sets are banded by writing type (NC Sept 12, SC Sept 13):
+   Persuasive (CMS 48, "Argumentative Passage") exists for grades 5-8 only and
+   Informational (CMS 47, "Informational Passage") for 7-8 only. A set outside its band has
+   no container to land in, so it is held off Send to CMS -- never re-filed as Narrative
+   (CMS 46). Its own stage keeps it out of the "Not ready" fix queue: nothing about the set
+   itself is wrong.
+
+   This deliberately is NOT derived from STATE_CONTAINER_GRADES, even though the two
+   describe the same CMS. The dashboard's Narrative container counts both of our item-set
+   types, because in grades 2-4 Narrative is the only place that work could ever go; the
+   send rule is the standing decision NOT to refile those sets into it. Reading the
+   containers here would turn every held grade 2-4 set into a sendable one overnight. */
+const CMS_TYPE_BANDS = {
+  NC: { opinion: [5, 8], informative: [7, 8] },
+  SC: { opinion: [5, 8], informative: [7, 8] },
+};
 function cmsNoTarget(s) {
   const st = builderPrimaryState(s);
   const bands = CMS_TYPE_BANDS[st];
