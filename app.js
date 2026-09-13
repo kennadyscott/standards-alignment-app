@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609131436';   // replaced with the deploy stamp
+const APP_BUILD = '202609131447';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3686,58 +3686,64 @@ function visibleMasterSets() {
    removed from:
 
    - A set with a CMS passage ID is KEPT and reported. It already exists in the CMS, and
-     deleting our copy would leave that entry with nothing behind it. Removing one of
-     those is a single deliberate act (the x on the row), not part of a sweep.
-   - A set can serve more than one state. The primary-state filter also matches universal
-     literary sets (state "ALL"), and an approved cross-state alignment puts a set on
-     another state's grade list — so a sweep of one state's list can quietly empty rows
-     in six others. The count is shown BEFORE anything is deleted, per state.
+     deleting our copy would leave that entry with nothing behind it.
+   - A set that ALSO serves another state's grade list is KEPT and named. The primary-state
+     filter matches universal literary sets (state "ALL") too, and an approved cross-state
+     alignment puts one set on several states' lists — so a sweep of one state's list would
+     otherwise quietly empty rows in six others. Clearing North Carolina's held grades 2-4
+     on 2026-09-13 came to 69 sets, eight of which Ohio, Texas, Florida, Georgia, South
+     Carolina and Alabama were all using.
 
-   Undo restores everything, tombstones included, until the toast goes. */
+   Both are kept rather than refused, so a sweep always runs and always says what it left
+   behind. Deleting one of those is a single deliberate act — the x on its row — not part
+   of a sweep. Undo restores everything, tombstones included, until the toast goes. */
 function deleteVisibleSets() {
   const shown = visibleMasterSets();
   if (!shown.length) { toast('Nothing shown to delete'); return; }
+
+  // Which other states' grade lists each shown set is on. Only meaningful when the list is
+  // scoped to one state; with "All primary states" there is no elsewhere to protect.
+  const home = state.ui.setFilterState;
+  const scoped = STATES.includes(home);
+  const index = dashServingIndex();
+  const shownIds = new Set(shown.map(s => s.id));
+  const sharedBy = new Map();                    // set id -> the other states it is on
+  if (scoped) {
+    STATES.forEach(st => {
+      if (st === home) return;
+      GRADES.forEach(g => (index.get(`${st}|${g}`) || []).forEach(s => {
+        if (!shownIds.has(s.id)) return;
+        if (!sharedBy.has(s.id)) sharedBy.set(s.id, new Set());
+        sharedBy.get(s.id).add(st);
+      }));
+    });
+  }
+
   const inCms = shown.filter(s => (s.passageId || '').trim());
-  const doomed = shown.filter(s => !(s.passageId || '').trim());
+  const shared = shown.filter(s => !(s.passageId || '').trim() && sharedBy.has(s.id));
+  const doomed = shown.filter(s => !(s.passageId || '').trim() && !sharedBy.has(s.id));
   if (!doomed.length) {
-    toast(`All ${inCms.length} shown ${inCms.length === 1 ? 'set is' : 'sets are'} in the CMS — `
-      + 'delete one with the x on its row');
+    toast(`Nothing to sweep — all ${shown.length} shown are in the CMS or on another `
+      + 'state\u2019s list');
     return;
   }
 
-  // Which other states' grade lists lose a placement if these go.
-  const index = dashServingIndex();
-  const home = state.ui.setFilterState;
-  const ids = new Set(doomed.map(s => s.id));
-  const elsewhere = {};
-  const sharedBy = new Map();                    // set id -> the other states it is on
-  STATES.forEach(st => {
-    if (st === home) return;
-    let n = 0;
-    GRADES.forEach(g => (index.get(`${st}|${g}`) || []).forEach(s => {
-      if (!ids.has(s.id)) return;
-      n++;
-      if (!sharedBy.has(s.id)) sharedBy.set(s.id, new Set());
-      sharedBy.get(s.id).add(st);
-    }));
-    if (n) elsewhere[st] = n;
-  });
-
   const bits = [];
-  if (inCms.length) bits.push(`${inCms.length} already in the CMS will be kept.`);
-  const other = Object.entries(elsewhere);
-  if (other.length) {
-    bits.push('These also serve other state lists, which lose those placements: '
-      + other.map(([st, n]) => `${STATE_NAMES[st] || st} ${n}`).join(', ') + '.');
-    // Named, not just counted: in a sweep of 69 the eight that other states depend on are
-    // the only ones worth stopping for, and a total cannot tell you which they are.
-    const shared = doomed.filter(s => sharedBy.has(s.id));
+  const kept = [];
+  if (inCms.length) kept.push(`${inCms.length} already in the CMS`);
+  if (shared.length) kept.push(`${shared.length} also on another state\u2019s list`);
+  if (kept.length) bits.push(`Keeping ${kept.join(' and ')}.`);
+  if (shared.length) {
+    // Named, not just counted: these are the ones worth knowing about, and a total cannot
+    // say which they are.
     const listed = shared.slice(0, 8).map(s =>
-      `  • ${s.title || 'Untitled set'} — ${[...sharedBy.get(s.id)].join(', ')}`);
-    bits.push(`${shared.length} of them:\n` + listed.join('\n')
-      + (shared.length > listed.length ? `\n  • and ${shared.length - listed.length} more` : ''));
+      `  \u2022 ${s.title || 'Untitled set'} \u2014 ${[...sharedBy.get(s.id)].join(', ')}`);
+    bits.push('Kept for other states:\n' + listed.join('\n')
+      + (shared.length > listed.length ? `\n  \u2022 and ${shared.length - listed.length} more` : ''));
   }
+  if (!scoped) bits.push('Every state is in view, so nothing is held back for another state\u2019s list.');
   bits.push('This cannot be undone once the Undo toast goes.');
+  const ids = new Set(doomed.map(s => s.id));
 
   appConfirm(`Delete ${doomed.length} passage set${doomed.length === 1 ? '' : 's'}?`,
     `${describeSetFilters()}\n\n${bits.join('\n\n')}`,
