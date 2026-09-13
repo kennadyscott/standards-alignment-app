@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609131454';   // replaced with the deploy stamp
+const APP_BUILD = '202609131506';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3772,6 +3772,45 @@ function deleteVisibleSets() {
       state.sets = state.sets.concat(removed);
       normalizeSets();
       saveSets();
+      renderPassages();
+    });
+  });
+}
+
+/* Take every shown set off ONE state's list at ONE grade, without deleting anything.
+
+   The answer to a set that is anchored to a state standard at a grade the CMS cannot file
+   it in, but that five other states are using: deleting it robs them, and leaving it makes
+   the Carolina boards count work that can never be sent. Dismissing is the existing
+   per-(set, state, grade) call the Passage Input row already makes — this just does it to
+   the whole filtered list at once.
+
+   The set keeps its primary standard, so it still appears under that state in this list.
+   What it leaves is the state's grade list, its dashboard rows and the bot queues. */
+function dismissVisibleSets() {
+  const st = state.ui.setFilterState, grade = state.ui.setFilterGrade;
+  if (!STATES.includes(st) || grade === 'all') {
+    toast('Pick one state and one grade first — a dismissal is per state, per grade');
+    return;
+  }
+  const shown = visibleMasterSets();
+  const fresh = shown.filter(s => !state.setDismiss[inputKey(s.id, st, grade)]);
+  if (!fresh.length) {
+    toast(shown.length ? `All ${shown.length} shown are already off this list` : 'Nothing shown');
+    return;
+  }
+  appConfirm(`Take ${fresh.length} set${fresh.length === 1 ? '' : 's'} off `
+    + `${STATE_NAMES[st] || st} grade ${grade}?`,
+    `${describeSetFilters()}\n\nThe sets are not deleted. They keep their standards and stay `
+    + 'on every other state\u2019s list; they just stop counting as work at this grade.',
+    { ok: `Dismiss ${fresh.length}` }).then(yes => {
+    if (!yes) return;
+    fresh.forEach(s => { state.setDismiss[inputKey(s.id, st, grade)] = true; });
+    pushState();
+    renderPassages();
+    toastUndo(`Took ${fresh.length} off ${STATE_NAMES[st] || st} grade ${grade}`, () => {
+      fresh.forEach(s => { delete state.setDismiss[inputKey(s.id, st, grade)]; });
+      pushState();
       renderPassages();
     });
   });
@@ -8277,6 +8316,8 @@ function init() {
   // this takes the first N).
   const setsDeleteBtn = document.getElementById('setsDeleteBtn');
   if (setsDeleteBtn) setsDeleteBtn.addEventListener('click', deleteVisibleSets);
+  const setsDismissBtn = document.getElementById('setsDismissBtn');
+  if (setsDismissBtn) setsDismissBtn.addEventListener('click', dismissVisibleSets);
   const cmsSendBtn = document.getElementById('cmsSendBtn');
   if (cmsSendBtn) cmsSendBtn.addEventListener('click', () => {
     const n = document.getElementById('cmsExportCount');
