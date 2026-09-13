@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609112041';   // replaced with the deploy stamp
+const APP_BUILD = '202609130009';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1400,6 +1400,7 @@ const STATUS = {
   blocked:  { label: 'Not ready',        cls: 'st-blocked' },
   nokey:    { label: 'Missing key',      cls: 'st-blocked' },
   awaiting: { label: 'Awaiting CMS ID',  cls: 'st-awaiting' },
+  notarget: { label: 'No CMS target',    cls: 'st-noalign' },
   incms:    { label: 'In CMS',           cls: 'st-incms' },
   pending:  { label: 'Pending',          cls: 'st-pending' },
   approved: { label: 'Approved',         cls: 'st-approved' },
@@ -2764,6 +2765,24 @@ function numberingProblem(s) {
   return anyNumbered ? '' : 'no paragraph numbers';
 }
 
+/* North Carolina's CMS item sets are banded by writing type (Sept 12): Persuasive (CMS 48,
+   "Argumentative Passage") exists for grades 5-8 only and Informational (CMS 47,
+   "Informational Passage") for 7-8 only. A set outside its band has no container to land
+   in, so it is held off Send to CMS -- never re-filed as Narrative (CMS 46). Its own stage
+   keeps it out of the "Not ready" fix queue: nothing about the set itself is wrong. */
+const CMS_TYPE_BANDS = { NC: { opinion: [5, 8], informative: [7, 8] } };
+function cmsNoTarget(s) {
+  const st = builderPrimaryState(s);
+  const bands = CMS_TYPE_BANDS[st];
+  if (!bands) return '';
+  const type = s.itemSetType === 'opinion' ? 'opinion' : 'informative';
+  const [lo, hi] = bands[type];
+  const g = parseInt(s.gaGrade, 10);
+  if (g >= lo && g <= hi) return '';
+  return `${STATE_NAMES[st] || st} ${type === 'opinion' ? 'Persuasive' : 'Informational'}`
+    + ` is grades ${lo}–${hi} only in the CMS — held, not sent`;
+}
+
 function exportReadiness(s) {
   const reasons = [];
   const passages = (s.passages || []).filter(p => (p.text || '').trim());
@@ -2789,9 +2808,11 @@ function exportReadiness(s) {
 
   const hasId = !!cmsPassageIdFor(s);
   const exportedAt = (state.setExported || {})[s.id] || null;
+  const noTarget = hasId ? '' : cmsNoTarget(s);
   return {
-    ready: !reasons.length, reasons, hasId, exportedAt,
-    stage: reasons.length ? 'not-ready' : hasId ? 'has-id' : exportedAt ? 'awaiting-id' : 'ready',
+    ready: !reasons.length && !noTarget, reasons, hasId, exportedAt, noTarget,
+    stage: reasons.length ? 'not-ready' : hasId ? 'has-id' : noTarget ? 'no-target'
+      : exportedAt ? 'awaiting-id' : 'ready',
   };
 }
 
@@ -3606,6 +3627,7 @@ function visibleMasterSets() {
       case 'not-ready': return exportReadiness(s).stage === 'not-ready';
       case 'no-key':    return exportReadiness(s).reasons.some(r => r.includes('answer key'));
       case 'awaiting':  return exportReadiness(s).stage === 'awaiting-id';
+      case 'no-target': return exportReadiness(s).stage === 'no-target';
       case 'has-id':    return exportReadiness(s).stage === 'has-id';
       // Back from the CMS with an ID but nobody has approved it yet — the queue that
       // opens up now that sets go to the CMS BEFORE they are approved, not after.
@@ -3698,6 +3720,7 @@ function setStatusKind(s) {
   const r = exportReadiness(s);
   if (r.stage === 'has-id') return 'incms';
   if (r.stage === 'awaiting-id') return 'awaiting';
+  if (r.stage === 'no-target') return 'notarget';
   if (r.stage === 'ready') return 'ready';
   if (r.reasons.some(x => x.includes('answer key'))) return 'nokey';
   return 'blocked';
@@ -3706,6 +3729,7 @@ function readinessChipHtml(s) {
   const r = exportReadiness(s);
   if (r.stage === 'has-id') return statusPill('incms', cmsPassageIdFor(s));
   if (r.stage === 'awaiting-id') return statusPill('awaiting');
+  if (r.stage === 'no-target') return statusPill('notarget', null, r.noTarget);
   if (r.stage === 'ready') return statusPill('ready', 'export');
   const keyReason = r.reasons.find(x => x.includes('answer key'));
   if (keyReason) return statusPill('nokey', null, r.reasons.join(' · '));
@@ -4935,6 +4959,9 @@ const SUBDOMAIN_SUBJECT = {
   'Physical Science': 'science',
   // the CMS's own spelling, now that dashboard rows come from it
   'Earth and Space Science': 'science',
+  // North Carolina's CMS names (see STATE_SUBDOMAINS.NC)
+  'Earth & Space Science': 'science', 'Civics & Government': 'social_studies',
+  'Behavioral Sciences': 'social_studies',
   'Social Studies': 'social_studies', 'History': 'social_studies',
   'Geography': 'social_studies', 'Government': 'social_studies',
   'Economics': 'social_studies',
@@ -4975,6 +5002,10 @@ function hierarchySubtopic(sub, grade) {
     'Earth and Space': 'Science', 'Organisms and Environment': 'Science',
     'Citizenship': 'Government', 'Culture': 'History',
     'Science Technology and Society': 'Science',
+    // North Carolina rows. Behavioral Sciences stores the coarse tag so the set files by
+    // its NC standard's strand, not under History.
+    'Earth & Space Science': 'Science', 'Civics & Government': 'Government',
+    'Behavioral Sciences': 'Social Studies',
   };
   if (TX_TO_HIERARCHY[sub]) sub = TX_TO_HIERARCHY[sub];
   if (/(Earth|Life|Physical) Science/.test(sub)) return 'Science';
@@ -5761,15 +5792,18 @@ function canonSubdomain(strand, subject, st, gradeHint) {
 
 // The two COARSE hierarchy tags. Everything else is already a Dashboard row.
 const COARSE_SUBTOPICS = ['Science', 'Social Studies'];
+// A row name in a state's own wording ("Government" is "Civics & Government" in NC).
+const ownName = (own, name) => (own && own.alias && name && own.alias[name]) || name;
 
 function setSubdomain(s, st) {
   if (s.genre === 'literary' || s.genre === 'literary_nonfiction') return s.gaSubtopic || 'Untagged';
-  const sub = s.gaSubtopic;
-  // Under a state with its own taxonomy, only ITS row names count as already-filed.
+  // Under a state with its own taxonomy, only ITS row names count as already-filed --
+  // after renaming to that state's wording, so a reviewer's classification survives it.
   const own = stateSubdomains(st, s.gaGrade);
+  const sub = ownName(own, s.gaSubtopic);
   if (own && sub && !own.informational.includes(sub)) {
     const std0 = tagStd(s.standard);
-    const mapped = canonSubdomain(std0 && std0.strand, std0 && std0.subject, st, s.gaGrade);
+    const mapped = ownName(own, canonSubdomain(std0 && std0.strand, std0 && std0.subject, st, s.gaGrade));
     if (mapped) return mapped;
   }
   /* The reviewer's own classification WINS. Deriving the row from the anchor standard's
@@ -5783,7 +5817,7 @@ function setSubdomain(s, st) {
      Earth/Life/Physical, which the hierarchy itself cannot express. */
   if (sub && !COARSE_SUBTOPICS.includes(sub)) return sub;
   const std = tagStd(s.standard);
-  return canonSubdomain(std && std.strand, std && std.subject, st, s.gaGrade) || sub || 'Untagged';
+  return ownName(own, canonSubdomain(std && std.strand, std && std.subject, st, s.gaGrade)) || sub || 'Untagged';
 }
 
 // The sub-domains a grade is EXPECTED to cover (the hierarchy), grouped by genre —
@@ -5975,6 +6009,29 @@ const STATE_SUBDOMAINS = {
       'scientific and engineering practices': null,
     },
   },
+  /* North Carolina's Informational sub-topics as the CMS names them (canonical list,
+     Sept 12) -- exact strings, because Send to CMS writes them. Grade 2 has no Earth &
+     Space row. Generic "Science"/"Social Studies", plain "Earth Science" and plain
+     "Government" are not board rows here: `alias` renames the app's own labels so a
+     reviewer's classification survives the rename, and science sets still split by their
+     standard's strand. Literary and Literary Non-Fiction stay the universal (Ohio) list. */
+  NC: {
+    byGrade: {
+      '2': { groups: [['Informational', ['Physical Science', 'Life Science', 'Behavioral Sciences',
+                                          'Civics & Government', 'Economics', 'Geography', 'History']]] },
+      '3': 'NC_3_8', '4': 'NC_3_8', '5': 'NC_3_8', '6': 'NC_3_8', '7': 'NC_3_8', '8': 'NC_3_8',
+    },
+    named: {
+      NC_3_8: { groups: [['Informational', ['Physical Science', 'Life Science', 'Earth & Space Science',
+                         'Behavioral Sciences', 'Civics & Government', 'Economics', 'Geography', 'History']]] },
+    },
+    // NC's own social studies strand, which the generic rules don't recognise.
+    common: { 'behavioral sciences': 'Behavioral Sciences' },
+    alias: {
+      'Earth Science': 'Earth & Space Science', 'Earth and Space Science': 'Earth & Space Science',
+      'Government': 'Civics & Government', 'Civics and Government': 'Civics & Government',
+    },
+  },
 };
 
 function stateSubdomains(st, grade) {
@@ -5986,6 +6043,7 @@ function stateSubdomains(st, grade) {
     groups: g.groups,
     informational: g.groups.flatMap(([, subs]) => subs),
     strandMap: { ...entry.common, ...g.strandMap },
+    alias: entry.alias || {},
   };
 }
 function stateTeachesSubdomain(st, grade, sub) {
@@ -6145,7 +6203,7 @@ function cmsCountsFor(st, grade) {
    rather than dropped, because a count that vanishes is worse than one that looks odd. */
 // Every way the CMS or the app spells a science sub-topic.
 const SCIENCE_NAMES = ['Science', 'Earth Science', 'Earth and Space Science',
-                       'Life Science', 'Physical Science'];
+                       'Earth & Space Science', 'Life Science', 'Physical Science'];
 const isScienceName = n => SCIENCE_NAMES.includes(n);
 function cmsSubtopicToRow(cmsName, rowsAtGrade) {
   const alias = (CMS_COUNTS && CMS_COUNTS.subtopicAliases) || {};
@@ -6245,9 +6303,10 @@ const BOARD_TZ = 'America/Chicago';
 function stateCanFill(st, grade, dom) {
   const subj = SUBDOMAIN_SUBJECT[dom];
   if (!subj) return true;                        // literary / literary non-fiction genre
+  const own = stateSubdomains(st, grade);
   return state.standards.some(x =>
     x.state === st && x.subject === subj && gradeMatches(x.grade, grade) &&
-    canonSubdomain(x.strand, x.subject, st, grade) === dom);
+    ownName(own, canonSubdomain(x.strand, x.subject, st, grade)) === dom);
 }
 // Kept for ticks saved before the run log existed; those were keyed by UTC date.
 const today = () => new Date().toISOString().slice(0, 10);
