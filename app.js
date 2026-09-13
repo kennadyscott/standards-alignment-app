@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609131430';   // replaced with the deploy stamp
+const APP_BUILD = '202609131436';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3710,10 +3710,16 @@ function deleteVisibleSets() {
   const home = state.ui.setFilterState;
   const ids = new Set(doomed.map(s => s.id));
   const elsewhere = {};
+  const sharedBy = new Map();                    // set id -> the other states it is on
   STATES.forEach(st => {
     if (st === home) return;
     let n = 0;
-    GRADES.forEach(g => (index.get(`${st}|${g}`) || []).forEach(s => { if (ids.has(s.id)) n++; }));
+    GRADES.forEach(g => (index.get(`${st}|${g}`) || []).forEach(s => {
+      if (!ids.has(s.id)) return;
+      n++;
+      if (!sharedBy.has(s.id)) sharedBy.set(s.id, new Set());
+      sharedBy.get(s.id).add(st);
+    }));
     if (n) elsewhere[st] = n;
   });
 
@@ -3723,6 +3729,13 @@ function deleteVisibleSets() {
   if (other.length) {
     bits.push('These also serve other state lists, which lose those placements: '
       + other.map(([st, n]) => `${STATE_NAMES[st] || st} ${n}`).join(', ') + '.');
+    // Named, not just counted: in a sweep of 69 the eight that other states depend on are
+    // the only ones worth stopping for, and a total cannot tell you which they are.
+    const shared = doomed.filter(s => sharedBy.has(s.id));
+    const listed = shared.slice(0, 8).map(s =>
+      `  • ${s.title || 'Untitled set'} — ${[...sharedBy.get(s.id)].join(', ')}`);
+    bits.push(`${shared.length} of them:\n` + listed.join('\n')
+      + (shared.length > listed.length ? `\n  • and ${shared.length - listed.length} more` : ''));
   }
   bits.push('This cannot be undone once the Undo toast goes.');
 
