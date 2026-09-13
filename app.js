@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609131417';   // replaced with the deploy stamp
+const APP_BUILD = '202609131430';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3679,6 +3679,92 @@ function visibleMasterSets() {
     matchesState(s) && matchesSubtopic(s) && matchesSearch(s));
 }
 
+/* Delete every set the Master Passage List is currently showing.
+
+   The same filter the list and the export use, so "what you are looking at" is exactly
+   what goes. Two guards, because a passage set is worth more than the list it is being
+   removed from:
+
+   - A set with a CMS passage ID is KEPT and reported. It already exists in the CMS, and
+     deleting our copy would leave that entry with nothing behind it. Removing one of
+     those is a single deliberate act (the x on the row), not part of a sweep.
+   - A set can serve more than one state. The primary-state filter also matches universal
+     literary sets (state "ALL"), and an approved cross-state alignment puts a set on
+     another state's grade list — so a sweep of one state's list can quietly empty rows
+     in six others. The count is shown BEFORE anything is deleted, per state.
+
+   Undo restores everything, tombstones included, until the toast goes. */
+function deleteVisibleSets() {
+  const shown = visibleMasterSets();
+  if (!shown.length) { toast('Nothing shown to delete'); return; }
+  const inCms = shown.filter(s => (s.passageId || '').trim());
+  const doomed = shown.filter(s => !(s.passageId || '').trim());
+  if (!doomed.length) {
+    toast(`All ${inCms.length} shown ${inCms.length === 1 ? 'set is' : 'sets are'} in the CMS — `
+      + 'delete one with the x on its row');
+    return;
+  }
+
+  // Which other states' grade lists lose a placement if these go.
+  const index = dashServingIndex();
+  const home = state.ui.setFilterState;
+  const ids = new Set(doomed.map(s => s.id));
+  const elsewhere = {};
+  STATES.forEach(st => {
+    if (st === home) return;
+    let n = 0;
+    GRADES.forEach(g => (index.get(`${st}|${g}`) || []).forEach(s => { if (ids.has(s.id)) n++; }));
+    if (n) elsewhere[st] = n;
+  });
+
+  const bits = [];
+  if (inCms.length) bits.push(`${inCms.length} already in the CMS will be kept.`);
+  const other = Object.entries(elsewhere);
+  if (other.length) {
+    bits.push('These also serve other state lists, which lose those placements: '
+      + other.map(([st, n]) => `${STATE_NAMES[st] || st} ${n}`).join(', ') + '.');
+  }
+  bits.push('This cannot be undone once the Undo toast goes.');
+
+  appConfirm(`Delete ${doomed.length} passage set${doomed.length === 1 ? '' : 's'}?`,
+    `${describeSetFilters()}\n\n${bits.join('\n\n')}`,
+    { ok: `Delete ${doomed.length}`, danger: true }).then(yes => {
+    if (!yes) return;
+    const removed = doomed.map(s => s);
+    const at = Date.now();
+    state.setDeleted = state.setDeleted || {};
+    removed.forEach(s => { state.setDeleted[s.id] = at; });
+    state.sets = state.sets.filter(s => !ids.has(s.id));
+    if (ids.has(state.ui.currentSetId)) state.ui.currentSetId = null;
+    saveSets();
+    renderPassages();
+    toastUndo(`Deleted ${removed.length} set${removed.length === 1 ? '' : 's'}`, () => {
+      removed.forEach(s => { delete state.setDeleted[s.id]; });
+      state.sets = state.sets.concat(removed);
+      normalizeSets();
+      saveSets();
+      renderPassages();
+    });
+  });
+}
+
+// The filters in words, so a delete dialog says what it is about to sweep.
+function describeSetFilters() {
+  const u = state.ui;
+  const label = (id, v) => {
+    const sel = document.getElementById(id);
+    const opt = sel && [...sel.options].find(o => o.value === v);
+    return opt ? opt.textContent.trim() : v;
+  };
+  const parts = [];
+  parts.push(u.setFilterStatus === 'all' ? 'All statuses' : label('setFilterStatus', u.setFilterStatus));
+  parts.push(u.setFilterGrade === 'all' ? 'all grades' : `grade ${u.setFilterGrade}`);
+  parts.push(u.setFilterState === 'all' ? 'every state' : label('setFilterState', u.setFilterState));
+  if (u.setFilterSubtopic !== 'all') parts.push(label('setFilterSubtopic', u.setFilterSubtopic));
+  if ((u.setSearch || '').trim()) parts.push(`search "${u.setSearch.trim()}"`);
+  return 'Showing: ' + parts.join(' · ');
+}
+
 /* Hierarchy subtopic filter. Counts reflect the OTHER filters — status, grade, primary
    state, search — but not this one, so each number is what you would actually get if you
    picked it. Grouped by genre rather than listed flat, because "Science" and "Poetry"
@@ -5875,6 +5961,51 @@ const DASH_GROUPS = {
 };
 const DASH_GOAL = 4;   // sets per sub-domain per item-set type
 
+/* ---------- the CMS's writing containers ----------
+   A grade card's columns are the containers the CMS actually offers for that state and
+   grade, not our two item-set types. The two only line up where the CMS runs both.
+
+   North and South Carolina do not. Grades 2-4 have a Narrative container and nothing
+   else, 5-6 only Persuasive, and 7-8 Persuasive and Informational — so an Informational
+   column at grade 3 was inviting work into a container that does not exist. Narrative
+   takes BOTH of our item-set types, because the split is ours, not the CMS's; Persuasive
+   is the CMS's name for the sets we tag `opinion` (see CMS_TYPE_BANDS, which holds the
+   same grades off Send to CMS).
+
+   `cms` is the key the counts are captured under. Narrative is not captured anywhere
+   yet, so those cells read "·" — not looked at, which is the truth, rather than 0. */
+const CMS_CONTAINERS = {
+  informative: { label: 'Informational', cms: 'informative', types: ['informative'] },
+  opinion:     { label: 'Opinion',       cms: 'opinion',     types: ['opinion'] },
+  persuasive:  { label: 'Persuasive',    cms: 'opinion',     types: ['opinion'] },
+  narrative:   { label: 'Narrative',     cms: 'narrative',   types: ['informative', 'opinion'] },
+};
+const DEFAULT_CONTAINERS = ['informative', 'opinion'];
+const STATE_CONTAINER_GRADES = {
+  NC: {
+    '2': ['narrative'], '3': ['narrative'], '4': ['narrative'],
+    '5': ['persuasive'], '6': ['persuasive'],
+    '7': ['persuasive', 'informative'], '8': ['persuasive', 'informative'],
+  },
+};
+STATE_CONTAINER_GRADES.SC = STATE_CONTAINER_GRADES.NC;   // same containers, same grades
+
+function gradeContainers(st, g) {
+  const own = STATE_CONTAINER_GRADES[st];
+  const keys = (own && own[String(g)]) || DEFAULT_CONTAINERS;
+  return keys.map(k => ({ key: k, ...CMS_CONTAINERS[k] }));
+}
+// What a container holds from OUR side: the sum of the item-set types it takes.
+function containerOurs(c, t) {
+  return c.types.reduce((a, k) => a + ((t && t[k]) || 0), 0);
+}
+// The item-set types this grade has no container for — work that cannot be filed as it
+// stands. Shown under the card rather than dropped, so it is never silently invisible.
+function uncontainedTypes(containers) {
+  const covered = new Set(containers.flatMap(c => c.types));
+  return ['informative', 'opinion'].filter(k => !covered.has(k));
+}
+
 /* Not every state teaches all three sciences every year — Georgia's middle school runs
    one discipline per grade (6 Earth, 7 Life, 8 Physical), so showing empty Life and
    Physical rows there reads as a coverage gap when it is simply not part of that grade.
@@ -6148,7 +6279,8 @@ function dashCell(n, ctx) {
     : n >= DASH_GOAL ? 'goal-met' : n > 0 ? 'goal-partial' : 'goal-missing';
   // Every cell is a work order: clicking opens the builder already scoped to it.
   const d = ctx ? ` data-gencell="${esc(ctx.state)}|${esc(ctx.grade)}|${esc(ctx.subtopic)}|${esc(ctx.itemSetType)}|${n}"` : '';
-  const title = ctx ? ` title="Build ${esc(ctx.subtopic)} · ${ctx.itemSetType === 'informative' ? 'Informational' : 'Opinion'} for Grade ${esc(ctx.grade)} — ${n} of ${DASH_GOAL}"` : '';
+  const kind = ctx ? (ctx.label || (ctx.itemSetType === 'informative' ? 'Informational' : 'Opinion')) : '';
+  const title = ctx ? ` title="Build ${esc(ctx.subtopic)} · ${esc(kind)} for Grade ${esc(ctx.grade)} — ${n} of ${DASH_GOAL}"` : '';
   return `<td class="dash-cell ${cls}${ctx ? ' dash-cell-click' : ''}"${d}${title}>${n}</td>`;
 }
 
@@ -6263,7 +6395,11 @@ function toCmsRow(dom, rows) {
 }
 
 function cmsCountsFor(st, grade) {
-  return { informative: cmsBucket(st, 'informative', grade), opinion: cmsBucket(st, 'opinion', grade) };
+  return {
+    informative: cmsBucket(st, 'informative', grade),
+    opinion: cmsBucket(st, 'opinion', grade),
+    narrative: cmsBucket(st, 'narrative', grade),
+  };
 }
 /* The CMS names some sub-topics differently from the dashboard rows, and the mismatch is
    not cosmetic: Georgia grade 6 files five sets under a plain "Science" while the row
@@ -6496,16 +6632,20 @@ function queueWork() {
       // PE, Fine Arts and Technology Applications rows with no standards loaded behind
       // them, and counting those put Texas at 208 short per grade — a number nobody can
       // act on and nobody intends to fill.
+      // Against the containers this grade actually has: asking Herman for Informational
+      // AND Opinion at North Carolina grade 3 doubled a gap the CMS cannot even take,
+      // where the one Narrative container is the whole target.
       let gap = 0;
+      const conts = gradeContainers(st, g);
       doms.forEach(d => {
         const t = tal.get(d);
         if (!t.informative && !t.opinion && !stateCanFill(st, g, d)) return;
-        gap += Math.max(0, DASH_GOAL - t.informative) + Math.max(0, DASH_GOAL - t.opinion);
+        conts.forEach(c => { gap += Math.max(0, DASH_GOAL - containerOurs(c, t)); });
       });
       if (gap) { out.dash.rows.push({ state: st, grade: g, n: gap }); out.dash.total += gap; }
 
       // CMS counts: grades with no CMS numbers, or numbers captured only in part.
-      ['informative', 'opinion'].forEach(type => {
+      [...new Set(gradeContainers(st, g).map(c => c.cms))].forEach(type => {
         const b = cmsBucket(st, type, g);
         if (!b) { out.cms.rows.push({ state: st, grade: g, type, n: 1, why: 'never captured' }); out.cms.total++; }
         else if (b.complete === false) { out.cms.rows.push({ state: st, grade: g, type, n: 1, why: 'partial' }); out.cms.total++; }
@@ -7512,22 +7652,33 @@ function dashGradeModel(dst, g, index) {
                           .filter(([, doms]) => doms.length);
   const expect = groups.flatMap(([, doms]) => doms);
 
-  // summary: how many (sub-domain x type) cells hit the goal / are partial / missing
+  // summary: how many (sub-domain x container) cells hit the goal / are partial / missing
+  const containers = gradeContainers(dst, g);
   let met = 0, partial = 0, missing = 0;
   expect.forEach(d => {
     const t = tally.get(d) || { informative: 0, opinion: 0 };
-    [t.informative, t.opinion].forEach(n => { n >= DASH_GOAL ? met++ : n > 0 ? partial++ : missing++; });
+    containers.forEach(c => {
+      const n = containerOurs(c, t);
+      n >= DASH_GOAL ? met++ : n > 0 ? partial++ : missing++;
+    });
   });
-  return { g, sets, groups, expect, tally, cms, fromCms, met, partial, missing };
+  // Sets held at this grade because the CMS has no container for their item-set type.
+  const orphanTypes = uncontainedTypes(containers);
+  const held = orphanTypes.reduce((a, k) =>
+    a + expect.reduce((b, d) => b + ((tally.get(d) || {})[k] || 0), 0), 0);
+  return { g, sets, groups, expect, tally, cms, fromCms, containers, orphanTypes, held,
+           met, partial, missing };
 }
 
 // Every CMS cell a grade card shows, as numbers: the same rows, and the same single
 // merged "Science" cell where the CMS lumps science. null = that tab not captured yet
 // (the card shows "·"), which is "not looked at", not "the CMS has none".
 function dashCmsCells(m) {
-  const out = { informative: null, opinion: null };
-  ['informative', 'opinion'].forEach(k => {
-    const bucket = m.cms[k];
+  const out = {};
+  m.containers.forEach(c => {
+    const k = c.key;
+    out[k] = null;
+    const bucket = m.cms[c.cms];
     if (!bucket) return;
     const cells = [];
     m.groups.forEach(([, doms]) => {
@@ -7562,21 +7713,23 @@ const OVERVIEW_STATUS = {
 };
 const OVERVIEW_ORDER = ['green', 'yellow', 'red', 'uncounted', 'white'];
 function stateOverview(st, index) {
-  let total = 0, atMin = 0, low = 0, sum = 0, tabs = 0, partial = 0;
+  // A state's container count is not GRADES x 2 any more: the Carolinas run one container
+  // in grades 2-6 and two in 7-8, so the denominator is summed per grade below.
+  let total = 0, atMin = 0, low = 0, sum = 0, tabs = 0, partial = 0, tabsOf = 0;
   const appSets = new Set();
   GRADES.forEach(g => {
     const m = dashGradeModel(st, g, index);
     m.sets.forEach(s => appSets.add(s.id));
     const cc = dashCmsCells(m);
-    ['informative', 'opinion'].forEach(k => {
-      const t = cc[k];
+    tabsOf += m.containers.length;
+    m.containers.forEach(c => {
+      const t = cc[c.key];
       if (!t) return;
       tabs++;
       if (t.partial) partial++;
       t.cells.forEach(n => { total++; sum += n; if (n >= OVERVIEW_MIN) atMin++; if (n <= 1) low++; });
     });
   });
-  const tabsOf = GRADES.length * 2;
   const pct = total ? atMin / total : 0;
   // No CMS counts is "not counted", not "not started": Texas, the Carolinas and Alabama had
   // hundreds of sets in the app and read as white until 2026-09-11. White is kept for a
@@ -7713,7 +7866,8 @@ function renderDash() {
   if (prog) prog.textContent = `${totalServing} passage placements across ${STATE_NAMES[dst]} grade lists · drafts included · goal ${DASH_GOAL} per sub-domain per type`;
 
   models.forEach(m => {
-    const { g, sets, groups, expect, tally, cms, met, partial, missing } = m;
+    const { g, sets, groups, expect, tally, cms, containers, met, partial, missing } = m;
+    const span = 1 + containers.length * 2;
 
     wrap.appendChild(el(`
       <div class="dash-card open">
@@ -7730,37 +7884,39 @@ function renderDash() {
         <table class="dash-table">
           <thead>
             <tr><th rowspan="2">Sub-domain</th>
-                <th colspan="2" class="dash-split-head">Informational</th>
-                <th colspan="2" class="dash-split-head">Opinion</th></tr>
-            <tr><th class="dash-sub-head">Ours</th><th class="dash-sub-head cms">CMS</th>
-                <th class="dash-sub-head">Ours</th><th class="dash-sub-head cms">CMS</th></tr>
+                ${containers.map(c => `<th colspan="2" class="dash-split-head">${esc(c.label)}</th>`).join('')}</tr>
+            <tr>${containers.map(() => `<th class="dash-sub-head">Ours</th>
+                <th class="dash-sub-head cms">CMS</th>`).join('')}</tr>
           </thead>
           <tbody>
             ${groups.map(([label, doms]) => `
-              <tr class="dash-group-row"><td colspan="5">${esc(label)}</td></tr>
+              <tr class="dash-group-row"><td colspan="${span}">${esc(label)}</td></tr>
               ${(() => {
                 // A side that the CMS lumps gets ONE merged cell spanning the science
                 // rows, instead of a number spread across rows it does not belong to.
                 const sci = doms.filter(isScienceName);
-                const lumps = k => sci.length > 1 && cms[k] && cms[k].counts
-                  && cms[k].counts['Science'] > 0
-                  && !sci.some(d => cms[k].counts[d] !== undefined);
-                const lumped = { informative: lumps('informative'), opinion: lumps('opinion') };
-                const sciTotal = k => sci.reduce((a, d) => a + (tally.get(d) || {})[k === 'informative' ? 'informative' : 'opinion'], 0);
+                const lumps = c => sci.length > 1 && cms[c.cms] && cms[c.cms].counts
+                  && cms[c.cms].counts['Science'] > 0
+                  && !sci.some(d => cms[c.cms].counts[d] !== undefined);
+                const lumped = {};
+                containers.forEach(c => { lumped[c.key] = lumps(c); });
+                const sciTotal = c => sci.reduce((a, d) => a + containerOurs(c, tally.get(d)), 0);
                 return doms.map(d => {
                   const t = tally.get(d);
                   const cx = { state: dst, grade: g, subtopic: d };
                   cmsCell.rows = expect;
                   const first = isScienceName(d) && sci[0] === d;
-                  const pair = k => {
-                    const our = k === 'informative' ? t.informative : t.opinion;
-                    if (!lumped[k] || !isScienceName(d)) {
-                      return dashCell(our, { ...cx, itemSetType: k })
-                           + cmsCell(cms[k], d, our);
+                  const pair = c => {
+                    const our = containerOurs(c, t);
+                    if (!lumped[c.key] || !isScienceName(d)) {
+                      // A container that takes both our types cannot seed one, so the
+                      // builder opens on Informational and the modal's own picker decides.
+                      return dashCell(our, { ...cx, itemSetType: c.types[0], label: c.label })
+                           + cmsCell(cms[c.cms], d, our);
                     }
                     if (!first) return '';                       // covered by the merge above
-                    const n = cms[k].counts['Science'] || 0;
-                    const tot = sciTotal(k);
+                    const n = cms[c.cms].counts['Science'] || 0;
+                    const tot = sciTotal(c);
                     const cls = isCritical(n) ? 'critical'
                       : n >= tot || n >= DASH_GOAL ? 'match' : 'behind';
                     // Same colouring as any other "ours" cell — a merged cell that stayed
@@ -7772,18 +7928,21 @@ function renderDash() {
                       + `<td class="dash-cms dash-merge ${cls}" rowspan="${sci.length}"
                            title="${esc(`The CMS files all science here under one "Science" sub-topic: ${n} against ${tot} on this dashboard`)}">${n}</td>`;
                   };
-                  return `<tr><td>${esc(d)}</td>${pair('informative')}${pair('opinion')}</tr>`;
+                  return `<tr><td>${esc(d)}</td>${containers.map(pair).join('')}</tr>`;
                 }).join('');
               })()}`).join('')}
           </tbody>
-          <tfoot><tr><td>Goal: ${DASH_GOAL} per type</td>
-            <td>${expect.reduce((a, d) => a + tally.get(d).informative, 0)}</td>
-            ${cmsCell(cms.informative, null, null, expect)}
-            <td>${expect.reduce((a, d) => a + tally.get(d).opinion, 0)}</td>
-            ${cmsCell(cms.opinion, null, null, expect)}</tr></tfoot>
+          <tfoot><tr><td>Goal: ${DASH_GOAL} per container</td>
+            ${containers.map(c => `<td>${expect.reduce((a, d) => a + containerOurs(c, tally.get(d)), 0)}</td>`
+              + cmsCell(cms[c.cms], null, null, expect)).join('')}</tr></tfoot>
         </table>
+        ${m.held ? `<div class="cms-orphans">Held here with no CMS container at this grade:
+          <span class="chip">${m.held} set${m.held === 1 ? '' : 's'}</span>
+          ${esc(m.orphanTypes.map(k => k === 'informative' ? 'Informational' : 'Opinion').join(' and '))}
+          — ${esc(STATE_NAMES[dst] || dst)} grade ${esc(g)} only files
+          ${esc(containers.map(c => c.label).join(' and '))} in the CMS.</div>` : ''}
         ${(() => {
-          const left = [...cmsUnmatched(cms.informative, expect), ...cmsUnmatched(cms.opinion, expect)];
+          const left = containers.flatMap(c => cmsUnmatched(cms[c.cms], expect));
           if (!left.length) return '';
           const merged = {};
           left.forEach(([n, c]) => { merged[n] = (merged[n] || 0) + c; });
@@ -8087,6 +8246,8 @@ function init() {
   // off Export meant one click both downloaded a zip AND wrote to the live CMS, and the
   // two disagreed about which sets they covered (Export takes every visible ready set,
   // this takes the first N).
+  const setsDeleteBtn = document.getElementById('setsDeleteBtn');
+  if (setsDeleteBtn) setsDeleteBtn.addEventListener('click', deleteVisibleSets);
   const cmsSendBtn = document.getElementById('cmsSendBtn');
   if (cmsSendBtn) cmsSendBtn.addEventListener('click', () => {
     const n = document.getElementById('cmsExportCount');

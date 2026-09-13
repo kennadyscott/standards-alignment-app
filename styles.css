@@ -627,7 +627,10 @@ textarea:focus:not(:focus-visible) { outline: none; }
 .set-filters .ps-input { padding: 6px 8px; font-size: 13px; }
 .set-filter-row { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
 .set-filters-meta {
+  /* Wraps rather than squeezing: with four actions in a narrow sidebar, no-wrap turned
+     each button into a two- or three-line sliver of itself. */
   display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  flex-wrap: wrap;
 }
 .btn-compact { padding: 3px 8px; font-size: 12px; }
 .set-list {
@@ -1172,7 +1175,11 @@ textarea:focus:not(:focus-visible) { outline: none; }
   padding: 28px; width: min(420px, 92vw); display: flex; flex-direction: column; gap: 12px;
 }
 .signin-title { font-size: 19px; font-weight: 700; color: var(--ink); }
-.signin-sub { font-size: 13px; color: var(--ink-soft); line-height: 1.5; }
+.signin-sub { font-size: 13px; color: var(--ink-soft); line-height: 1.5; white-space: pre-line; }
+/* A sweep that deletes should not sit in the toolbar shouting in red; it earns the
+   red on hover, and in the confirm dialog where the count is named. */
+.btn-ghost.btn-danger { background: transparent; color: var(--red); }
+.btn-ghost.btn-danger:hover { background: var(--red); color: #fff; }
 .signin-msg { font-size: 12.5px; min-height: 18px; }
 .signin-msg.good { color: var(--green); }
 .signin-msg.bad { color: var(--red); }
