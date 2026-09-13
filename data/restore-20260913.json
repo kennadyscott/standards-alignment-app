@@ -1,0 +1,126 @@
+{
+ "note": "One-off restore of answer-key fixes reverted by mergeImportedDrafts before 2026-09-13. Question text only; passages were left alone (two had newer live copies).",
+ "builtAt": "2026-09-13",
+ "fixes": [
+  {
+   "id": "ps-ecri3-039",
+   "title": "Jackie Robinson Breaks Barriers",
+   "q": 2,
+   "was": "Read this sentence from Passage 1.\n\"Still, Jackie stayed focused and continued to play his best.\"\nThis sentence shows that Jackie (gave up when things were difficult / continued working toward his goal despite challenges / expected others to solve his problems).\nAnswer: continued working toward his goal despite challenges",
+   "now": "Read this sentence from Passage 1.\n\"Still, Jackie stayed focused and continued to play his best.\"\nThis sentence shows that Jackie [gave up when things were difficult / continued working toward his goal despite challenges / expected others to solve his problems].\nAnswer: continued working toward his goal despite challenges",
+   "from": "d8093fb1"
+  },
+  {
+   "id": "ps-ecr3-032",
+   "title": "The Enchanted Rose",
+   "q": 1,
+   "was": "Which details show how the main characters' actions contribute to the events in their stories?\n\u2611 Elara helps others along her journey, causing petals to appear and lead her to the rose.\n\u2611 Elara's kindness allows the crystal cage to shatter and free the rose.\n\u2611 Lin continues solving riddles even when she feels nervous.\n\u2611 Lin's determination helps her earn a place on the royal council.\n\u2610 The owl tells Lin about the slippers' special power.\nAnswers: 1, 2, 3, 4",
+   "now": "Which details show how the main characters' actions contribute to the events in their stories?\nA. Elara helps others along her journey, causing petals to appear and lead her to the rose. \u2714\nB. Elara's kindness allows the crystal cage to shatter and free the rose. \u2714\nC. Lin continues solving riddles even when she feels nervous. \u2714\nD. Lin's determination helps her earn a place on the royal council. \u2714\nE. The owl tells Lin about the slippers' special power.\nAnswers: A, B, C, D",
+   "from": "d8093fb1"
+  },
+  {
+   "id": "ps-ecr3-024",
+   "title": "The Little Stream",
+   "q": 1,
+   "was": "Which details show how the stream and the oak tree are similar?\n\u2611 Both continue through changing conditions over time.\n\u2611 Both help living things in their environment.\n\u2611 Both are described as steady and dependable.\n\u2610 Both travel from place to place.\n\u2610 Both are small and difficult to notice.\nAnswers: 1, 2, 3",
+   "now": "Which details show how the stream and the oak tree are similar?\nA. Both continue through changing conditions over time. \u2713\nB. Both help living things in their environment. \u2713\nC. Both are described as steady and dependable. \u2713\nD. Both travel from place to place.\nE. Both are small and difficult to notice.\nAnswers: A, B, C",
+   "from": "d8093fb1"
+  },
+  {
+   "id": "ps-ecr3-024",
+   "title": "The Little Stream",
+   "q": 2,
+   "was": "Complete the comparison.\nIn The Little Stream, the poem first describes how the stream [moves through the land / shelters animals in its branches] and later explains how it helps the valley stay green. In The Oak Tree, the poem first describes the tree's [strength and size / journey across the valley] and later explains how it provides shelter for animals.\nAnswers:\nmoves through the land\nstrength and size",
+   "now": "Complete the comparison.\nIn The Little Stream, the poem first describes how the stream [moves through the land \u2713 / shelters animals in its branches] and later explains how it helps the valley stay green. In The Oak Tree, the poem first describes the tree's [strength and size \u2713 / journey across the valley] and later explains how it provides shelter for animals.",
+   "from": "d8093fb1"
+  },
+  {
+   "id": "ps-ecri3-027",
+   "title": "The New Student",
+   "q": 0,
+   "was": "What themes are shared by BOTH passages?\n\u2611 Trying something new can lead to positive experiences.\n\u2611 Working with others can help people succeed.\n\u2610 Winning is the most important goal.\n\u2611 Confidence can grow through positive interactions with others.\n\u2610 It is best to avoid difficult situations.\nAnswers: 1, 2, and 4",
+   "now": "What themes are shared by BOTH passages?\nA. Trying something new can lead to positive experiences. \u2714\nB. Working with others can help people succeed. \u2714\nC. Winning is the most important goal.\nD. Confidence can grow through positive interactions with others. \u2714\nE. It is best to avoid difficult situations.\nAnswers: A, B, D",
+   "from": "d8093fb1"
+  },
+  {
+   "id": "ps-ecr3-003",
+   "title": "The Rabbits in the Snow",
+   "q": 0,
+   "was": "What is a similarity between the rabbits in Passage 1 and the sunflowers in Passage 2?\nA. Both developed new traits during their lifetimes.\nB. Both inherited traits that helped some individuals survive and reproduce more successfully. \u2705\nC. Both lived in cold environments.\nD. Both competed for food during the winter.",
+   "now": "What is a similarity between the rabbits in Passage 1 and the sunflowers in Passage 2?\nA. Both developed new traits during their lifetimes.\nB. Both inherited traits that helped some individuals survive and reproduce more successfully.\nC. Both lived in cold environments.\nD. Both competed for food during the winter.\nAnswer: B",
+   "from": "d8093fb1"
+  },
+  {
+   "id": "ps-ecr3-003",
+   "title": "The Rabbits in the Snow",
+   "q": 1,
+   "was": "In Passage 2, taller sunflowers were able to produce more seeds because ______.\n[ they grew during the winter months | they received more sunlight for photosynthesis \u2705 | they had thicker stems than other plants | they used less water than shorter plants ]",
+   "now": "In Passage 2, taller sunflowers were able to produce more seeds because ______.\n[they grew during the winter months / they received more sunlight for photosynthesis / they had thicker stems than other plants / they used less water than shorter plants]\nAnswer: they received more sunlight for photosynthesis",
+   "from": "d8093fb1"
+  },
+  {
+   "id": "ps-ecr3-003",
+   "title": "The Rabbits in the Snow",
+   "q": 2,
+   "was": "Which TWO details provide evidence for the idea that inherited traits can become more common in a population over time?\n\u2611 In Passage 1, many rabbits with thicker fur survived the winter and had offspring. \u2705\n\u2611 In Passage 2, many new plants inherited the trait for greater height. \u2705\n\u2610 In Passage 1, snow covered the ground for many months.\n\u2610 In Passage 2, hundreds of sunflowers grew close together.",
+   "now": "Which TWO details provide evidence for the idea that inherited traits can become more common in a population over time?\nA. In Passage 1, many rabbits with thicker fur survived the winter and had offspring. \u2714\nB. In Passage 2, many new plants inherited the trait for greater height. \u2714\nC. In Passage 1, snow covered the ground for many months.\nD. In Passage 2, hundreds of sunflowers grew close together.\nAnswers: A, B",
+   "from": "d8093fb1"
+  },
+  {
+   "id": "ps-ecri3-032",
+   "title": "The Silver Feather",
+   "q": 0,
+   "was": "What themes are shared by BOTH passages?\n\u2611 Helping others can lead to positive outcomes.\n\u2611 Kindness and good choices can bring rewards.\n\u2611 Personal growth comes from learning important lessons.\n\u2610 Magic should be kept secret from everyone.\n\u2610 Adventure is more important than responsibility.\nAnswers: 1, 2, and 3",
+   "now": "What themes are shared by BOTH passages?\nA. Helping others can lead to positive outcomes. \u2714\nB. Kindness and good choices can bring rewards. \u2714\nC. Personal growth comes from learning important lessons. \u2714\nD. Magic should be kept secret from everyone.\nE. Adventure is more important than responsibility.\nAnswers: A, B, C",
+   "from": "d8093fb1"
+  },
+  {
+   "id": "ps-ecri4-032",
+   "title": "The Busy Train",
+   "q": 0,
+   "was": "How do the two poems treat the topic of rhythm differently?\n\u2611 Passage 1 presents rhythm as energetic and powerful.\n\u2611 Passage 2 presents rhythm as calm and soothing.\n\u2611 Both poems use repeated sounds to create rhythm.\n\u2610 Both poems focus on the dangers of nature.\n\u2610 Both poems describe the same type of movement.\nAnswers: 1, 2, and 3",
+   "now": "How do the two poems treat the topic of rhythm differently?\nA. Passage 1 presents rhythm as energetic and powerful. \u2713\nB. Passage 2 presents rhythm as calm and soothing. \u2713\nC. Both poems use repeated sounds to create rhythm. \u2713\nD. Both poems focus on the dangers of nature.\nE. Both poems describe the same type of movement.\nAnswers: A, B, C",
+   "from": "41bf11a7"
+  },
+  {
+   "id": "ps-ecri7-034",
+   "title": "The Day the Sky Came Alive",
+   "q": 0,
+   "was": "Which TWO details best support the inference that Elena's view of airplanes changes significantly after the air show?\nA. \u201cThe idea of a machine carrying people through the air sounded impossible.\u201d (paragraph 1)\nB. \u201cSome believed airplanes would eventually replace trains.\u201d (paragraph 4)\nC. \u201cNow they felt like a glimpse of the future.\u201d (paragraph 13)\nD. \u201cThey found it difficult to imagine a time when airplanes were considered remarkable.\u201d (paragraph 16)\nE. \u201cVendors sold snacks and souvenirs while bands played patriotic music.\u201d (paragraph 5)\nAnswers: A, C",
+   "now": "Which TWO details best support the inference that Elena's view of airplanes changes significantly after the air show?\nA. \u201cThe idea of a machine carrying people through the air sounded impossible.\u201d (paragraph 1) \u2713\nB. \u201cSome believed airplanes would eventually replace trains.\u201d (paragraph 4)\nC. \u201cNow they felt like a glimpse of the future.\u201d (paragraph 13) \u2713\nD. \u201cThey found it difficult to imagine a time when airplanes were considered remarkable.\u201d (paragraph 16)\nE. \u201cVendors sold snacks and souvenirs while bands played patriotic music.\u201d (paragraph 5)\nAnswers: A, C",
+   "from": "d8093fb1"
+  },
+  {
+   "id": "ps-ecri7-034",
+   "title": "The Day the Sky Came Alive",
+   "q": 2,
+   "was": "The author develops a contrast between Elena's early perspective and the pilot's perspective by showing that Elena initially views airplanes as (an unlikely and almost impossible invention / a common form of transportation / a dangerous mistake that should not continue to be developed).\nAnswer: an unlikely and almost impossible invention",
+   "now": "The author develops a contrast between Elena's early perspective and the pilot's perspective by showing that Elena initially views airplanes as [an unlikely and almost impossible invention \u2713 / a common form of transportation / a dangerous mistake that should not continue to be developed].\nAnswer: an unlikely and almost impossible invention",
+   "from": "d8093fb1"
+  },
+  {
+   "id": "ps-ecri4-001",
+   "title": "Exploring Earth\u2019s Surface",
+   "q": 0,
+   "was": "What is the main idea of the passage?\nA. Earth\u2019s surface is made up of different landforms that are shaped by natural forces over time.\nB. Mountains are the most important landform on Earth\u2019s surface.\nC. Rivers and oceans are the only features that change Earth\u2019s surface.\nD. Scientists study landforms mainly by using satellites.\nCorrect Answer: A",
+   "now": "What is the main idea of the passage?\nA. Earth\u2019s surface is made up of different landforms that are shaped by natural forces over time.\nB. Mountains are the most important landform on Earth\u2019s surface.\nC. Rivers and oceans are the only features that change Earth\u2019s surface.\nD. Scientists study landforms mainly by using satellites.\nAnswer: A",
+   "from": "41bf11a7"
+  },
+  {
+   "id": "ps-ecri4-001",
+   "title": "Exploring Earth\u2019s Surface",
+   "q": 1,
+   "was": "Which TWO details from the passage explain how natural forces change Earth\u2019s surface over time?\nA. Rivers can cut through rock to form canyons.\nB. Plains are often good places for farming.\nC. Oceans can shape coastlines by moving sand and rock.\nD. Scientists use maps and satellites to study landforms.\nE. Mountains often have colder climates and snow.\nCorrect Answers: A and C",
+   "now": "Which TWO details from the passage explain how natural forces change Earth\u2019s surface over time?\nA. Rivers can cut through rock to form canyons. \u2713\nB. Plains are often good places for farming.\nC. Oceans can shape coastlines by moving sand and rock. \u2713\nD. Scientists use maps and satellites to study landforms.\nE. Mountains often have colder climates and snow.\nAnswers: A, C",
+   "from": "41bf11a7"
+  },
+  {
+   "id": "ps-ecri4-001",
+   "title": "Exploring Earth\u2019s Surface",
+   "q": 2,
+   "was": "The author mainly organizes paragraphs 2\u20135 by\n[describing different types of landforms \u25bc].\nOptions: describing different types of landforms / explaining steps in a process / comparing two scientific ideas / telling events in time order\nCorrect Answer: describing different types of landforms",
+   "now": "The author mainly organizes paragraphs 2\u20135 by [describing different types of landforms \u2713 / explaining steps in a process / comparing two scientific ideas / telling events in time order].",
+   "from": "41bf11a7"
+  }
+ ]
+}
