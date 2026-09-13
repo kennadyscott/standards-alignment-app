@@ -1671,3 +1671,8 @@ path.ov-uncounted { fill: url(#ovHatch); stroke: #8f9cb8; }
 .cal-box > summary { cursor: pointer; font-size: 12.5px; font-weight: 700; color: var(--accent-ink); }
 .cal-box > summary .ps-hint { font-weight: 500; margin-left: 6px; }
 .cal-box-inner { max-width: 640px; padding-top: 12px; }
+
+/* A state's social studies course title on each grade card (South Carolina) -- guidance
+   for what to write about, not a sub-topic row. */
+.dash-card .dash-course { margin: 10px 20px 0; font-size: 12.5px; color: var(--ink-soft); text-wrap: pretty; }
+.dash-card .dash-course-name { color: var(--ink); font-weight: 700; }

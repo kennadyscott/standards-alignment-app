@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609130009';   // replaced with the deploy stamp
+const APP_BUILD = '202609130018';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -6032,7 +6032,41 @@ const STATE_SUBDOMAINS = {
       'Government': 'Civics & Government', 'Civics and Government': 'Civics & Government',
     },
   },
+  /* South Carolina's Informational sub-topics as the CMS names them (Sept 12), the same at
+     every grade 2-8. No Behavioral Sciences (SC's four social studies themes don't have
+     it), no generic Science/Social Studies, and no "Engineering, Technology, and
+     Applications of Science" row -- a science DCI domain, not a passage sub-topic. SC's
+     grade 3-8 social studies strands are era and continent names, so a reviewer's own
+     classification decides the row (see setSubdomain); `alias` only renames it.
+     `courses` are the social studies course titles, shown at the top of each grade card
+     as guidance -- they are not sub-topics. */
+  SC: {
+    byGrade: { '2': 'SC_2_8', '3': 'SC_2_8', '4': 'SC_2_8', '5': 'SC_2_8', '6': 'SC_2_8',
+               '7': 'SC_2_8', '8': 'SC_2_8' },
+    named: {
+      SC_2_8: { groups: [
+        ['Science', ['Physical Science', 'Life Science', 'Earth & Space Science']],
+        ['Social Studies', ['History', 'Geography', 'Economics', 'Civics & Government']],
+      ] },
+    },
+    common: {},
+    alias: {
+      'Earth Science': 'Earth & Space Science', 'Earth and Space Science': 'Earth & Space Science',
+      'Government': 'Civics & Government', 'Civics and Government': 'Civics & Government',
+    },
+    courses: {
+      '2': 'Life in the United States',
+      '3': 'World Geography',
+      '4': 'United States & South Carolina Studies Part I',
+      '5': 'United States & South Carolina Studies Part II',
+      '6': 'World Civilizations',
+      '7': 'Geography of World Regions',
+      '8': 'South Carolina and the United States',
+    },
+  },
 };
+// A state's social studies course title for a grade -- guidance on the grade card only.
+const stateCourse = (st, grade) => ((STATE_SUBDOMAINS[st] || {}).courses || {})[String(grade)] || '';
 
 function stateSubdomains(st, grade) {
   const entry = STATE_SUBDOMAINS[st];
@@ -7656,6 +7690,7 @@ function renderDash() {
             <span class="ps-hint">${sets.length} set${sets.length !== 1 ? 's' : ''}</span>
           </span>
         </div>
+        ${stateCourse(dst, g) ? `<p class="dash-course">Social studies course: <span class="dash-course-name">${esc(stateCourse(dst, g))}</span></p>` : ''}
         <table class="dash-table">
           <thead>
             <tr><th rowspan="2">Sub-domain</th>
