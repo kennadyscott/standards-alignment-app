@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609130018';   // replaced with the deploy stamp
+const APP_BUILD = '202609131417';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -1130,8 +1130,59 @@ async function loadData() {
   state.importedDrafts = (await fetchJson('data/imported_sets.json')) || [];
 }
 
+/* The data file fills GAPS in a set it supplied; it never overwrites.
+
+   Until 2026-09-13 the deck content (title, passages, question text) of a still-`draft`
+   import was re-copied from the data file on every load, so that a re-parse of the file
+   could reach copies already absorbed into the saved state. The file has not been
+   re-parsed since the import landed (2026-07-16), and that refresh was instead undoing
+   real work. An answer key and a paragraph renumbering are edits to `questions[].text`
+   and `passages[].text` — exactly the fields it replaced. The edit saved fine; the next
+   load put the file's copy back over it in memory, and the save after that wrote that
+   copy to the server, so the fix was gone for good. Harry and Bernard each lost the same
+   nine sets' fixes that way, and each re-did them.
+
+   Approval was the accidental escape hatch — `isDraft` gated the refresh, so an approved
+   set kept its edits. Nothing should have to be approved to be safe to edit, so the rule
+   no longer looks at status at all.
+
+   What the file may still do is fill a field that is EMPTY, which is what the writing
+   prompt already allowed: emptiness is a parser gap, not a decision, and the file holds
+   the original text for these 669 sets. Element-wise filling only runs when the local
+   list is the same length as the file's, so a set whose questions or passages were
+   restructured is left alone entirely.
+
+   A genuine re-parse of data/imported_sets.json now needs a deliberate re-import rather
+   than arriving silently on someone's next page load. */
+function fillGapsFromImport(e, d) {
+  const blank = v => !String(v == null ? '' : v).trim();
+
+  if (blank(e.title) && !blank(d.title)) e.title = d.title;
+
+  ['passages', 'questions'].forEach(k => {
+    const src = d[k];
+    if (!Array.isArray(src) || !src.length) return;
+    if (!Array.isArray(e[k]) || !e[k].length) {
+      e[k] = JSON.parse(JSON.stringify(src));                 // nothing there to lose
+      return;
+    }
+    if (e[k].length !== src.length) return;                   // restructured — not ours to touch
+    e[k].forEach((item, i) => {
+      if (!item || !src[i]) return;
+      ['text', 'title'].forEach(f => {
+        if (src[i][f] !== undefined && blank(item[f]) && !blank(src[i][f])) item[f] = src[i][f];
+      });
+    });
+  });
+
+  if (e.writingPrompt && blank(e.writingPrompt.text) && d.writingPrompt && d.writingPrompt.text) {
+    e.writingPrompt.text = d.writingPrompt.text;
+  }
+}
+
 function mergeImportedDrafts() {
   hydrateImportedSets();
+  normalizeSets();                                // gap-filling below reads a settled shape
   const have = new Map(state.sets.map(s => [s.id, s]));
   (state.importedDrafts || []).forEach(d => {
     if ((state.setDeleted || {})[d.id]) return;   // deleted by a reviewer — stay deleted
@@ -1139,24 +1190,9 @@ function mergeImportedDrafts() {
     // Deep-copy on first merge: a shallow copy would alias passages/questions/prompt
     // between the live set and the read-only importedDrafts source.
     if (!e) { state.sets.push(JSON.parse(JSON.stringify(d))); return; }
-    // A still-draft import's DECK CONTENT (title, passages, question text) is owned by the
-    // data file — refreshing it here lets parser fixes reach copies already absorbed into
-    // appstate by an earlier save. Reviewer-owned fields always survive: passageId, status,
-    // classification (type/genre/grade/subtopic/standard), peer tasks, per-state question tags.
-    if (isDraft(e)) {
-      e.title = d.title;
-      e.passages = d.passages.map(p => ({ ...p }));
-      e.questions = d.questions.map((q, i) => {
-        const prev = e.questions && e.questions[i];
-        return prev && prev.stateStandards ? { ...q, stateStandards: prev.stateStandards } : { ...q };
-      });
-    }
-    // Filling a BLANK prompt is safe at any status — emptiness was a parser bug, not a choice.
-    if (e.writingPrompt && !(e.writingPrompt.text || '').trim() && d.writingPrompt && d.writingPrompt.text) {
-      e.writingPrompt.text = d.writingPrompt.text;
-    }
+    fillGapsFromImport(e, d);
   });
-  normalizeSets();
+  normalizeSets();                                // and whatever the loop just pushed in
 }
 
 function anchorKeyOf(l) { return stdKey(ANCHOR, l.subject, l.oh); }
