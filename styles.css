@@ -1178,6 +1178,7 @@ textarea:focus:not(:focus-visible) { outline: none; }
 .signin-sub { font-size: 13px; color: var(--ink-soft); line-height: 1.5; white-space: pre-line; }
 /* A sweep that deletes should not sit in the toolbar shouting in red; it earns the
    red on hover, and in the confirm dialog where the count is named. */
+.list-grade { color: var(--ink-faint); }
 .btn-ghost.btn-danger { background: transparent; color: var(--red); }
 .btn-ghost.btn-danger:hover { background: var(--red); color: #fff; }
 .signin-msg { font-size: 12.5px; min-height: 18px; }

@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609131624';   // replaced with the deploy stamp
+const APP_BUILD = '202609142110';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -170,7 +170,7 @@ const state = {
     expTarget: 'GA',                 // Explorer: one comparison state; 'ALL' for the audit
     selectedKey: null, search: '',
     revSubject: 'social_studies', revGrade: '4', revStatus: 'pending', revState: 'ALL',
-    inState: 'OH', inGrade: '4', overrideKey: null,
+    inState: 'OH', inGrade: '4', inSelGrade: null, overrideKey: null,
     inStage: 'all', inSelected: null,                  // State Lists: stage filter + selected set
     dashOpen: {}, dashState: 'overview',                     // Dashboard: expanded grades + which state's lists
     setFilterStatus: 'all', setFilterGrade: 'all', setFilterState: 'all',
@@ -1558,7 +1558,7 @@ function applyHash() {
     if (p.has('q')) u.setSearch = p.get('q');
   } else if (u.view === 'input') {
     if (st && STATES.includes(st)) u.inState = st;
-    if (g && GRADES.includes(g)) u.inGrade = g;
+    if (g && (g === 'all' || GRADES.includes(g))) u.inGrade = g;
     if (p.get('stage')) u.inStage = p.get('stage');
     if (p.get('set')) u.inSelected = p.get('set');
     if (p.has('q')) u.inSearch = p.get('q');
@@ -4609,7 +4609,7 @@ function assignedStateStd(s, hit, st, grade) {
 }
 
 // Compact left-panel row: title + ID + grade + status, click to open the full set.
-function inputListItem(row, selected, gradeOverride) {
+function inputListItem(row, selected, gradeOverride, showListGrade) {
   const { set: s, stage } = row;
   const catChip = {
     entered: statusPill('entered'),
@@ -4629,7 +4629,11 @@ function inputListItem(row, selected, gradeOverride) {
       <div class="std-item-top">
         <span class="std-code">${isDraft(s) ? '<span class="draft-tag">DRAFT</span> ' : ''}${esc(s.title || 'Untitled set')}</span>
       </div>
-      <div class="std-desc">${s.gaGrade ? `G${esc(s.gaGrade)} · ` : ''}${idPart}</div>
+      <div class="std-desc">${s.gaGrade ? `G${esc(s.gaGrade)} · ` : ''}${idPart}${
+        // On a mixed list the set's own grade is not the list it is sitting on, and those
+        // differ often enough (a within-one-grade alignment) to be worth saying.
+        showListGrade && gradeOverride && String(gradeOverride) !== String(s.gaGrade)
+          ? ` · <span class="list-grade">on G${esc(gradeOverride)}</span>` : ''}</div>
       ${bylineHtml(s.updatedBy, s.updatedAt)}
       <div class="concept-meta" style="margin-top:4px">${catChip}</div>
     </div>`;
@@ -5724,16 +5728,23 @@ function renderInputSearch(st, query) {
     box.appendChild(el(`<div class="review-empty">No ${esc(STATE_NAMES[st])} passage matches “${esc(query)}”.<br>
       <span style="font-size:12.5px; color:var(--ink-faint)">This searches set titles, passage titles and IDs across every grade.
       A passage only appears here once it reaches a ${esc(STATE_NAMES[st])} list.</span></div>`));
-    renderInputDetail(null, st, state.ui.inGrade);
+    renderInputDetail(null, st, state.ui.inGrade === 'all' ? GRADES[0] : state.ui.inGrade);
     return;
   }
   // Keep the picked result (a set can sit in two grades here, so the grade is part of
   // the identity); otherwise start on the first.
-  const sel = results.find(r => r.set.id === state.ui.inSelected && r.grade === String(state.ui.inGrade)) || results[0];
+  const wantGrade = String(state.ui.inSelGrade || state.ui.inGrade);
+  const sel = results.find(r => r.set.id === state.ui.inSelected && r.grade === wantGrade) || results[0];
   state.ui.inSelected = sel.set.id;
-  state.ui.inGrade = sel.grade;
-  const gSel = document.getElementById('inGrade');
-  if (gSel) gSel.value = sel.grade;
+  state.ui.inSelGrade = sel.grade;
+  // A search already spans every grade. Snapping the filter to the hit's grade is what
+  // makes clearing the search leave you looking at it -- but not when the filter was
+  // deliberately set to All grades, which already shows it.
+  if (state.ui.inGrade !== 'all') {
+    state.ui.inGrade = sel.grade;
+    const gSel = document.getElementById('inGrade');
+    if (gSel) gSel.value = sel.grade;
+  }
   GRADES.forEach(g => {
     const list = results.filter(r => r.grade === String(g));
     if (!list.length) return;
@@ -5742,7 +5753,8 @@ function renderInputSearch(st, query) {
       const item = el(inputListItem(r, r === sel, r.grade));
       item.addEventListener('click', () => {
         state.ui.inSelected = r.set.id;
-        state.ui.inGrade = r.grade;
+        state.ui.inSelGrade = r.grade;
+        if (state.ui.inGrade !== 'all') state.ui.inGrade = r.grade;
         // So clearing the search leaves you looking at it, not at a filter that hides it.
         state.ui.inStage = r.stage === 'entered' ? 'entered' : 'all';
         state.ui.openPicker = null;
@@ -5762,22 +5774,35 @@ function renderInput() {
   if (!stSel) return;
   if (!stSel.options.length) {
     stSel.innerHTML = stateOptionsHtml(false);
-    gSel.innerHTML = GRADES.map(g => `<option value="${g}">Grade ${g}</option>`).join('');
+    gSel.innerHTML = `<option value="all">All grades</option>`
+      + GRADES.map(g => `<option value="${g}">Grade ${g}</option>`).join('');
   }
   stSel.value = state.ui.inState;
   gSel.value = state.ui.inGrade;
 
   const st = state.ui.inState, grade = state.ui.inGrade;
-  const rows = setsForGrade(st, grade);
-  rows.forEach(r => { r.stage = rowStage(r, st, grade); });
+  // Every row carries the grade of the LIST it is on, not the grade of the set: a set can
+  // serve two grades of one state (a within-one-grade alignment), and on "All grades" it
+  // is then two rows with two different stages, dismissals and state IDs.
+  const allGrades = grade === 'all';
+  const gradesInView = allGrades ? GRADES : [String(grade)];
+  const rows = [];
+  gradesInView.forEach(g => setsForGrade(st, g).forEach(r => {
+    r.grade = String(g);
+    r.stage = rowStage(r, st, g);
+    rows.push(r);
+  }));
   const byStage = k => rows.filter(r => r.stage === k);
-  const dismissed = state.sets.filter(s => state.setDismiss[inputKey(s.id, st, grade)]).length;
+  const dismissed = gradesInView.reduce((a, g) =>
+    a + state.sets.filter(s => state.setDismiss[inputKey(s.id, st, g)]).length, 0);
+  const where = allGrades ? `${STATE_NAMES[st]}, all grades` : `${STATE_NAMES[st]} Grade ${grade}`;
 
   const stages = inputStages(st);
   const counts = Object.fromEntries(stages.map(x => [x.key, byStage(x.key).length]));
 
   document.getElementById('inputProgress').textContent =
-    `${rows.length} passage${rows.length === 1 ? '' : 's'} for ${STATE_NAMES[st]} Grade ${grade} · `
+    `${rows.length} passage${rows.length === 1 ? '' : 's'} for ${where}`
+    + (allGrades ? ` (${new Set(rows.map(r => r.set.id)).size} sets)` : '') + ' · '
     + stages.map(x => `${counts[x.key]} ${x.short}`).join(', ')
     + (dismissed ? ` · ${dismissed} dismissed` : '');
 
@@ -5803,35 +5828,39 @@ function renderInput() {
   { const owner = sourceOwner(state.ui.inStage); if (owner) box.appendChild(el(botNoteHtml(owner))); }
   if (!rows.length) {
     box.appendChild(el(`<div class="review-empty">
-      No passages serve ${STATE_NAMES[st]} Grade ${grade} yet.<br>
-      <span style="font-size:12.5px; color:var(--ink-faint)">A passage lands here when its primary standard is a ${STATE_NAMES[st]} Grade ${grade} standard,
+      No passages serve ${where} yet.<br>
+      <span style="font-size:12.5px; color:var(--ink-faint)">A passage lands here when its primary standard is a ${STATE_NAMES[st]}${allGrades ? '' : ` Grade ${grade}`} standard,
       is aligned to one within a grade, or is tagged to a universal (all-state) standard at this grade.
       Build sets in Passage Sets, and approve alignments in the Review Queue to make them cross over.</span>
     </div>`));
-    renderInputDetail(null, st, grade);
+    renderInputDetail(null, st, allGrades ? GRADES[0] : grade);
     return;
   }
   if (!visible.length) {
     box.appendChild(el(`<div class="review-empty">${f === 'all'
-      ? `All ${rows.length} passage${rows.length === 1 ? '' : 's'} for ${STATE_NAMES[st]} Grade ${grade} are entered in CMS.`
-      : `Nothing in this stage for ${STATE_NAMES[st]} Grade ${grade}.`}</div>`));
-    renderInputDetail(null, st, grade);
+      ? `All ${rows.length} passage${rows.length === 1 ? '' : 's'} for ${where} are entered in CMS.`
+      : `Nothing in this stage for ${where}.`}</div>`));
+    renderInputDetail(null, st, allGrades ? GRADES[0] : grade);
     return;
   }
 
   // keep the selection if it's still visible; otherwise select the first row as displayed
   const order = Object.fromEntries(stages.map((x, ix) => [x.key, ix]));
-  visible.sort((a, b) => order[a.stage] - order[b.stage]);
-  if (!visible.some(r => r.set.id === state.ui.inSelected)) state.ui.inSelected = visible[0].set.id;
-  const selId = state.ui.inSelected;
+  visible.sort((a, b) => order[a.stage] - order[b.stage] || (+a.grade) - (+b.grade));
+  // On "All grades" a set id no longer names one row, so the selection is (set, grade).
+  const isSel = r => r.set.id === state.ui.inSelected
+    && (!allGrades || r.grade === String(state.ui.inSelGrade || ''));
+  let sel = visible.find(isSel);
+  if (!sel) { sel = visible[0]; state.ui.inSelected = sel.set.id; state.ui.inSelGrade = sel.grade; }
 
   const group = (label, list, hint) => {
     if (!list.length) return;
     box.appendChild(el(`<div class="align-section-title">${label} (${list.length})${hint ? ` <span class="section-hint">${hint}</span>` : ''}<span class="rule"></span></div>`));
     list.forEach(r => {
-      const item = el(inputListItem(r, r.set.id === selId));
+      const item = el(inputListItem(r, r === sel, r.grade, allGrades));
       item.addEventListener('click', () => {
         state.ui.inSelected = r.set.id;
+        state.ui.inSelGrade = r.grade;
         state.ui.openPicker = null;
         state.ui.overrideKey = null;
         renderInput();
@@ -5846,7 +5875,7 @@ function renderInput() {
     group(x.label, visible.filter(r => r.stage === x.key), x.hint);
   });
 
-  renderInputDetail(visible.find(r => r.set.id === selId), st, grade);
+  renderInputDetail(sel, st, sel.grade);
 }
 
 /* ---------- the State Lists pipeline ----------
