@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609162055';   // replaced with the deploy stamp
+const APP_BUILD = '202609162102';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4575,6 +4575,31 @@ function setNativeGrade(s) {
 
 // Every (state, grade) this passage set serves, and its category there.
 // includeDraft: the master side panel previews (and pre-marks CMS for) drafts too.
+/* A state list refuses a writing type its CMS cannot file at that grade.
+
+   North Carolina has no Informational container below grade 7 (CMS_TYPE_BANDS says
+   informative is 7-8 there), yet 194 Informative sets were sitting on its grades 2-6
+   lists waiting to be judged -- every one of them Ohio's, Florida's or Georgia's, reaching
+   North Carolina through a cross-state alignment. None could ever be sent. Asked for
+   2026-09-16: keep them off the list, and off it permanently rather than by dismissing 194
+   rows that would have to be dismissed again for every new set.
+
+   Grades come from CMS_TYPE_BANDS so there is one source of truth, but the scope is opted
+   into per (state, type) here rather than derived: the same band logic applied to opinion
+   as well would empty North Carolina's grades 2-4 entirely, which is a separate decision.
+   The set is untouched -- it keeps its own state's list, and every other state's. */
+const LIST_REFUSES = { NC: ['informative'] };
+function listRefuses(st, s, grade) {
+  const types = LIST_REFUSES[st];
+  if (!types) return false;
+  const type = s.itemSetType === 'opinion' ? 'opinion' : 'informative';
+  if (!types.includes(type)) return false;
+  const band = (CMS_TYPE_BANDS[st] || {})[type];
+  if (!band) return false;
+  const g = parseInt(grade, 10);
+  return !(g >= band[0] && g <= band[1]);
+}
+
 function setServes(s, includeDraft) {
   if (isDraft(s) && !includeDraft) return [];   // drafts don't populate the passage library until approved
   const std = tagStd(s.standard);
@@ -4585,16 +4610,20 @@ function setServes(s, includeDraft) {
   // hierarchy grade, active now and any state added later. Aligned, not needs-approval.
   if (std.state === 'ALL') {
     if (!native) return [];   // needs a hierarchy grade to know where it lands
-    return STATES.map(st => ({ state: st, grade: native, universal: true, std, cat: 'aligned' }));
+    return STATES.filter(st => !listRefuses(st, s, native))
+      .map(st => ({ state: st, grade: native, universal: true, std, cat: 'aligned' }));
   }
 
   const out = [];
-  // The passage's own tagged state + grade — always aligned; it was built for this.
+  // The passage's own tagged state + grade — always aligned; it was built for this. A set
+  // built FOR this state at this grade stays even where the type has no container: that is
+  // its own list, and the CMS band is what holds it back from being sent.
   out.push({ state: std.state, grade: String(std.grade), std, own: true, cat: 'aligned' });
   // Approved, within-±1 alignments auto-populate. Pushed → aligned; dismissed → gone;
   // otherwise → needs approval.
   alignedTo(std).forEach(h => {
     if (!withinGradeSpan(std, h.std, std.subject)) return;
+    if (listRefuses(h.std.state, s, h.std.grade)) return;   // that list cannot file this type here
     const p = state.setPush[pushKey(s.id, h.std)];
     if (p === 'dismissed') return;
     out.push({
