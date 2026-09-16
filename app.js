@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609162010';   // replaced with the deploy stamp
+const APP_BUILD = '202609162043';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -170,7 +170,7 @@ const state = {
     expTarget: 'GA',                 // Explorer: one comparison state; 'ALL' for the audit
     selectedKey: null, search: '',
     revSubject: 'social_studies', revGrade: '4', revStatus: 'pending', revState: 'ALL',
-    inState: 'OH', inGrade: '4', inSelGrade: null, overrideKey: null,
+    inState: 'OH', inGrade: '4', inSelGrade: null, inPrompt: 'all', overrideKey: null,
     inStage: 'all', inSelected: null,                  // State Lists: stage filter + selected set
     dashOpen: {}, dashState: 'overview',                     // Dashboard: expanded grades + which state's lists
     setFilterStatus: 'all', setFilterGrade: 'all', setFilterState: 'all',
@@ -1518,6 +1518,7 @@ function hashFromUi() {
     if (u.setSearch) p.set('q', u.setSearch);
   } else if (u.view === 'input') {
     p.set('st', u.inState); p.set('g', u.inGrade);
+    if (u.inPrompt !== 'all') p.set('pt', u.inPrompt);
     if (u.inStage && u.inStage !== 'all') p.set('stage', u.inStage);
     if (u.inSelected) p.set('set', u.inSelected);
     if (u.inSearch) p.set('q', u.inSearch);
@@ -1559,6 +1560,7 @@ function applyHash() {
   } else if (u.view === 'input') {
     if (st && STATES.includes(st)) u.inState = st;
     if (g && (g === 'all' || GRADES.includes(g))) u.inGrade = g;
+    if (p.get('pt')) u.inPrompt = p.get('pt');
     if (p.get('stage')) u.inStage = p.get('stage');
     if (p.get('set')) u.inSelected = p.get('set');
     if (p.has('q')) u.inSearch = p.get('q');
@@ -3357,6 +3359,19 @@ function exportData() {
 /* ---------- passage sets ---------- */
 const LS_SETS = 'sa_passage_sets_v1';
 const PROMPT_TYPES = ['informational', 'opinion', 'argumentative'];
+/* What the CMS calls each writing prompt. `opinion` and `argumentative` are two wordings
+   of the same CMS container (48, "Argumentative Passage"); the app keeps them apart
+   because the prompts themselves read differently, and the team asks for them by the CMS's
+   names. Narrative (container 46) has no prompt type here yet -- nothing in the library
+   uses one -- so it cannot appear in this list until it does. */
+const PROMPT_TYPE_LABELS = {
+  informational: 'Informative',
+  opinion: 'Persuasive',
+  argumentative: 'Argumentative',
+  narrative: 'Narrative',
+};
+const promptTypeOf = s => ((s.writingPrompt || {}).type || '');
+const promptTypeLabel = t => PROMPT_TYPE_LABELS[t] || (t ? t[0].toUpperCase() + t.slice(1) : 'No prompt type');
 const MAX_QUESTIONS = 4;
 
 function loadSets() {
@@ -5734,16 +5749,21 @@ function inputSearchMatches(s, st, g, q) {
 }
 function renderInputSearch(st, query) {
   const results = [];
+  const wantPrompt = state.ui.inPrompt === 'all' ? null
+    : (state.ui.inPrompt === 'none' ? '' : state.ui.inPrompt);
   GRADES.forEach(g => {
     setsForGrade(st, g).forEach(r => {
       if (!inputSearchMatches(r.set, st, g, query)) return;
+      if (wantPrompt !== null && promptTypeOf(r.set) !== wantPrompt) return;
       r.stage = rowStage(r, st, g);
       r.grade = String(g);
       results.push(r);
     });
   });
   document.getElementById('inputProgress').textContent =
-    `${results.length} match${results.length === 1 ? '' : 'es'} for “${query}” in ${STATE_NAMES[st]} · all grades and stages`;
+    `${results.length} match${results.length === 1 ? '' : 'es'} for “${query}” in ${STATE_NAMES[st]}`
+    + (wantPrompt === null ? '' : ` · ${promptTypeLabel(wantPrompt) || 'no prompt type'} only`)
+    + ' · all grades and stages';
   const box = document.getElementById('inputList');
   box.innerHTML = '';
   if (!results.length) {
@@ -5814,6 +5834,11 @@ function renderInput() {
     r.stage = rowStage(r, st, g);
     rows.push(r);
   }));
+  buildPromptFilter(rows);
+  if (state.ui.inPrompt !== 'all') {
+    const want = state.ui.inPrompt === 'none' ? '' : state.ui.inPrompt;
+    for (let i = rows.length - 1; i >= 0; i--) if (promptTypeOf(rows[i].set) !== want) rows.splice(i, 1);
+  }
   const byStage = k => rows.filter(r => r.stage === k);
   const dismissed = gradesInView.reduce((a, g) =>
     a + state.sets.filter(s => state.setDismiss[inputKey(s.id, st, g)]).length, 0);
@@ -5969,6 +5994,27 @@ function resolveVisibleFlags(st, rows) {
       renderInput();
     });
   });
+}
+
+/* The Prompt filter's options, counted against the state and grade in view but not
+   against itself -- so each number is what you would actually get by picking it, the same
+   way the Master list's sub-topic filter behaves. A type with nothing behind it is left
+   out rather than offered as a dead choice, which is why Narrative is absent until a set
+   uses one. */
+function buildPromptFilter(rows) {
+  const sel = document.getElementById('inPromptType');
+  if (!sel) return;
+  const counts = {};
+  rows.forEach(r => { const t = promptTypeOf(r.set) || 'none'; counts[t] = (counts[t] || 0) + 1; });
+  const keep = state.ui.inPrompt;
+  if (keep !== 'all' && !counts[keep]) counts[keep] = 0;   // keep an empty pick visible
+  const order = [...PROMPT_TYPES, 'narrative'].filter(t => counts[t] !== undefined);
+  Object.keys(counts).forEach(t => { if (t !== 'none' && !order.includes(t)) order.push(t); });
+  if (counts.none) order.push('none');
+  sel.innerHTML = `<option value="all">All prompts (${rows.length})</option>`
+    + order.map(t => `<option value="${esc(t)}">${esc(t === 'none' ? 'No prompt type' : promptTypeLabel(t))} (${counts[t]})</option>`).join('');
+  if (![...sel.options].some(o => o.value === state.ui.inPrompt)) state.ui.inPrompt = 'all';
+  sel.value = state.ui.inPrompt;
 }
 
 function inputStages(st) {
@@ -8314,6 +8360,10 @@ function init() {
 
   document.getElementById('inState').addEventListener('change', e => {
     state.ui.inState = e.target.value; state.ui.inSelected = null; state.ui.openPicker = null; renderInput(); syncHash();
+  });
+  document.getElementById('inPromptType').addEventListener('change', e => {
+    state.ui.inPrompt = e.target.value; state.ui.inSelected = null; state.ui.openPicker = null;
+    renderInput(); syncHash();
   });
   document.getElementById('inGrade').addEventListener('change', e => {
     state.ui.inGrade = e.target.value; state.ui.inSelected = null; state.ui.openPicker = null; renderInput(); syncHash();
