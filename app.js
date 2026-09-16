@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609161252';   // replaced with the deploy stamp
+const APP_BUILD = '202609162010';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4661,12 +4661,24 @@ function detailQuestionHtml(q, i, s, st, grade) {
     const open = state.ui.openPicker && state.ui.openPicker.section === 'qstate'
       && state.ui.openPicker.index === i && state.ui.openPicker.setId === s.id;
     let inner;
-    if (tag) {
+    if (open) {
+      inner = null;                                  // filled in by the picker branch below
+    } else if (tag && isUniversalTag(tag)) {
+      // Tagged with one of our sub-genre codes. Say so plainly rather than showing it in
+      // the state's colours as though the state published it.
+      inner = `<div class="review-pair q-pair">${nativeSide}</div>
+        <div class="key-warn"><b>${STATE_NAMES[st]} does not publish ${esc(tag.code)}.</b>
+          It is one of our sub-genre codes, used to anchor a literary passage that no state
+          standard describes. Pick the ${STATE_NAMES[st]} standard this question assesses.</div>
+        <button class="act-btn tag-open" data-qspick="${i}">Choose the ${STATE_NAMES[st]} standard…</button>
+        <button class="act-btn reject" data-qsuntag="${i}">${ico('close')} Remove</button>`;
+    } else if (tag) {
       inner = `<div class="review-pair q-pair">
           ${nativeSide}<div class="pair-mid">${ico('align')}</div>${pairSide(tagStd(tag) || { code: tag.code, grade, description: '' }, st)}
         </div>
         <button class="act-btn reject" data-qsuntag="${i}">${ico('close')} Remove ${STATE_NAMES[st]} tag</button>`;
-    } else if (open) {
+    }
+    if (inner === null) {
       // The picker can pull ANY grade's standards — sets sometimes align across a
       // grade boundary, so the tagger must be able to reach the neighboring grade.
       const pg = String(state.ui.openPicker.grade || grade);
@@ -4679,7 +4691,7 @@ function detailQuestionHtml(q, i, s, st, grade) {
           ${pg !== String(grade) ? `<span class="chip chip-cross">Cross-grade — this set is Grade ${grade}</span>` : ''}
         </div>
         ${pickerHtml('qstate', i, st, qstateScope(pg), '')}`;
-    } else {
+    } else if (!tag) {
       // Recommend from the alignment work already done: the question's native standard's
       // approved alignments into this state at this grade. Accept in one click, or pick another.
       const recs = nstd
@@ -4710,10 +4722,20 @@ function detailQuestionHtml(q, i, s, st, grade) {
     </div>`;
 }
 
+/* A question's per-state tag names the standard that question assesses in that state, and
+   it is what the CMS is told. The sub-genre codes in data/universal_ela.json -- POETRY.2,
+   FANTASY, MYTH -- are ours: no state publishes them. They belong on the SET, as the
+   anchor for a literary passage that no state standard describes, and pickerCandidates
+   lets state:"ALL" through every state-restricted picker for exactly that reason.
+
+   Here that was wrong. "Chasing the Wind" ended up with POETRY.2 tagged as its Alabama,
+   North Carolina, Ohio AND South Carolina standard, each one rendered under that state's
+   name because pairSide labels the panel, not the standard. Reported 2026-09-16. */
 function qstateScope(grade) {
-  return std => std.subject === 'ela' &&
+  return std => std.subject === 'ela' && std.state !== 'ALL' &&
     gradeMatches(std.grade, grade);
 }
+const isUniversalTag = t => !!t && t.state === 'ALL';
 
 /* ---------- AI builder: whole passage set ----------
    Generate a complete, standard-anchored passage set (passage(s) + questions +
@@ -5965,8 +5987,11 @@ function inputStages(st) {
 // Every question must carry a standard usable in this state: its native tag if it's
 // this state's, otherwise a per-state tag made in the detail panel.
 function questionsTagged(s, st) {
+  // A sub-genre code is not this state's standard, so a question carrying one is still
+  // untagged here -- the set stays in Needs Standards until a real one is chosen.
   return s.questions.every(q =>
-    (q.standard && q.standard.state === st) || (q.stateStandards || {})[st]);
+    (q.standard && q.standard.state === st) || !isUniversalTag((q.stateStandards || {})[st])
+      && !!(q.stateStandards || {})[st]);
 }
 
 function rowStage(row, st, grade) {
