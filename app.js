@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609162043';   // replaced with the deploy stamp
+const APP_BUILD = '202609162055';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3103,11 +3103,21 @@ function builderQuestionEntry(q, isPeerRevision, primary) {
 function builderPrimaryState(s) {
   return primaryStateOf(s) || ((s.standard || {}).state) || '';
 }
+/* The payload carries ONE grade for the whole item set (gradeId, from s.gaGrade) and a
+   list of state+sub-topic pairs with no grade of their own. So every pair sent is filed at
+   the set's grade, whatever grade it actually aligned at -- a grade 6 set reached by Ohio
+   and Georgia at grade 7 showed up in the CMS as Ohio and Georgia grade 6. The state filter
+   below already stopped that for other states; a set can also serve its OWN state at a
+   second grade, and those rows were still going. Reported 2026-09-16.
+
+   gradeMatches, not equality: Florida bands its standards ("6-8"), and that row IS this
+   grade. Dropping it would have sent a grade 7 Florida set with no sub-topic at all. */
 function builderSubTopics(s) {
   const primary = builderPrimaryState(s);
+  const setGrade = String(s.gaGrade || '');
   const type = s.itemSetType === 'opinion' ? 'opinion' : 'informative';
   return cmsSubTopics(s)
-    .filter(r => r.state === primary)
+    .filter(r => r.state === primary && gradeMatches(r.grade, setGrade))
     .map(r => {
       // Send the CMS's own sub-topic name wherever Josh's counts tell us what it is. Ohio
       // grade 3 files all science under one "Science" row, so "Physical Science" names a
@@ -3167,16 +3177,28 @@ async function importToBuilderApi() {
   // a passage ID and create duplicates in the CMS. hasId (not stage === 'ready') is the
   // test, so a set that was zip-exported but never landed in the CMS still gets sent.
   const all = visibleMasterSets().filter(s => exportReadiness(s).ready);
-  const ready = all.filter(s => !exportReadiness(s).hasId);
-  const alreadyInCms = all.length - ready.length;
+  const withoutId = all.filter(s => !exportReadiness(s).hasId);
+  const alreadyInCms = all.length - withoutId.length;
+  // A set whose primary state reaches it only at ANOTHER grade now sends no sub-topic at
+  // all (see builderSubTopics), and the CMS files a set with no sub-topic under
+  // "(unknown)". Held back rather than imported unfiled -- the grade tagging is what needs
+  // fixing, in the State Lists, not the import.
+  const unfiled = withoutId.filter(s => !builderSubTopics(s).length);
+  const ready = withoutId.filter(s => builderSubTopics(s).length);
   if (!ready.length) {
-    toast(alreadyInCms
+    toast(unfiled.length
+      ? `Nothing to send — ${unfiled.length} set${unfiled.length === 1 ? ' has' : 's have'} no sub-topic at their own grade`
+      : alreadyInCms
       ? `Nothing to send — all ${alreadyInCms} ready set${alreadyInCms === 1 ? ' is' : 's are'} already in the CMS`
       : 'Nothing to send — no sets shown here are ready');
     return;
   }
   const sets = ready.slice(0, maxSets);
   const skipped = ready.length - sets.length;
+  if (unfiled.length) {
+    console.warn('[cms] held back, no sub-topic at the set\u2019s own grade:',
+      unfiled.map(s => `${s.id} G${s.gaGrade} ${builderPrimaryState(s)}`));
+  }
 
   const cmsBtn = document.getElementById('cmsSendBtn');
   const originalLabel = cmsBtn ? cmsBtn.textContent : '';
@@ -3296,7 +3318,8 @@ async function importToBuilderApi() {
     + (approved ? ` · ${approved} approved into the state lists` : '')
     + ` (${sets.length} of ${ready.length} not yet in the CMS, cap ${maxSets})`
     + (skipped ? ` — ${skipped} left for the next run` : '')
-    + (alreadyInCms ? ` · ${alreadyInCms} skipped, already in the CMS` : ''));
+    + (alreadyInCms ? ` · ${alreadyInCms} skipped, already in the CMS` : '')
+    + (unfiled.length ? ` · ${unfiled.length} held, no sub-topic at their own grade` : ''));
   // Nothing got through: show the server's own words rather than a bare "failed".
   if (!ok && failedTotal && lastFail && !builderIsLocalDev()) {
     alert('The CMS rejected all ' + failedTotal + ' set' + (failedTotal === 1 ? '' : 's') + '.\n\n'
