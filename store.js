@@ -9,7 +9,7 @@
    snapshot of what the server holds and diff against it. No editor code has to
    announce what it touched, so nothing is missed by forgetting to instrument a path. */
 
-const STORE_BUILD = '202609142110';
+const STORE_BUILD = '202609161239';
 
 const SB = {
   client: null,
@@ -220,6 +220,36 @@ async function sbSaveDirty(state) {
     });
   });
 
+  /* A key the app REMOVED has to be removed on the server too.
+     Saving only walked the keys still present, so `delete state.setFlag[k]` wrote nothing
+     at all: the row survived, the next load read it straight back, and a resolved flag
+     returned every morning looking like the button had not worked. Same for un-dismissing
+     a grade, clearing a state ID, un-marking Entered in CMS and every Undo -- sixteen
+     places in the app, all silently failing in the same way, while ordinary writes
+     alongside them (adding the Florida ID) went through. Reported 2026-09-16.
+
+     snapKv is what this browser knows the server holds, and load, save and realtime all
+     keep it in step with the in-memory maps -- so a key in snapKv with no key in the map
+     is a local deletion, and nothing else. */
+  const kvGone = [];
+  KV_MAPS.forEach(ns => {
+    const m = state[ns] || {};
+    const prefix = ns + ' ';
+    SB.snapKv.forEach((_v, sk) => {
+      if (sk.slice(0, prefix.length) !== prefix) return;
+      const key = sk.slice(prefix.length);
+      if (!(key in m)) kvGone.push({ ns: ns, key: key, snapKey: sk });
+    });
+  });
+  // A whole namespace going missing is a bug in the caller, not fifty deliberate undos.
+  // Refuse the lot rather than clear the team's decisions on one bad render.
+  const KV_DELETE_CAP = 500;
+  if (kvGone.length > KV_DELETE_CAP) {
+    console.warn('[save] refusing to delete ' + kvGone.length + ' state_kv rows in one save '
+      + '(cap ' + KV_DELETE_CAP + ') -- looks like a map was emptied, not edited');
+    kvGone.length = 0;
+  }
+
   let saved = 0, error = null;
   const blockedCount = blanked.length;
   for (let i = 0; i < setRows.length && !error; i += 200) {
@@ -237,6 +267,23 @@ async function sbSaveDirty(state) {
     if (res.error) { error = res.error.message; break; }
     chunk.forEach(x => SB.snapKv.set(kvKey(x.ns, x.key), x._v));
     saved += chunk.length;
+  }
+
+  if (!error && kvGone.length) {
+    const byNs = {};
+    kvGone.forEach(x => { (byNs[x.ns] = byNs[x.ns] || []).push(x); });
+    for (const ns of Object.keys(byNs)) {
+      if (error) break;
+      const list = byNs[ns];
+      for (let i = 0; i < list.length && !error; i += 200) {
+        const chunk = list.slice(i, i + 200);
+        const res = await c.from('state_kv').delete()
+          .eq('ns', ns).in('key', chunk.map(x => x.key));
+        if (res.error) { error = res.error.message; break; }
+        chunk.forEach(x => SB.snapKv.delete(x.snapKey));
+        saved += chunk.length;
+      }
+    }
   }
 
   // Deletion is a soft delete on the row, not a tombstone map the whole team carries.
@@ -294,6 +341,16 @@ function sbSubscribe(state, onChange) {
       sbNotify('sets', r.id);
     })
     .on('postgres_changes', { event: '*', schema: 'public', table: 'state_kv' }, p => {
+      // A DELETE carries no `new` row, only the key in `old`. Without this the other
+      // browsers kept a resolved flag until someone reloaded them.
+      if (p.eventType === 'DELETE') {
+        const o = p.old;
+        if (!o || !o.ns || !('key' in o)) return;
+        if (state[o.ns]) delete state[o.ns][o.key];
+        SB.snapKv.delete(kvKey(o.ns, o.key));
+        sbNotify('kv', o.ns);
+        return;
+      }
       const r = p.new;
       if (!r || !r.ns) return;
       const v = stableStringify(r.value);
