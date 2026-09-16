@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609161239';   // replaced with the deploy stamp
+const APP_BUILD = '202609161252';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -5815,11 +5815,25 @@ function renderInput() {
   // back while it's on rather than looking like they still filter.
   const inQuery = (state.ui.inSearch || '').trim();
   seg.classList.toggle('is-muted', !!inQuery);
-  if (inQuery) { renderInputSearch(st, inQuery); return; }
+  if (inQuery) {
+    document.getElementById('inResolveBtn')?.classList.add('hidden');
+    renderInputSearch(st, inQuery);
+    return;
+  }
 
   // "All" is the working queue — Entered in CMS lives only under its own filter.
   const f = state.ui.inStage;
   const visible = f === 'all' ? rows.filter(r => r.stage !== 'entered') : byStage(f);
+
+  // Clearing flags in bulk only means something on the Flagged tab, where every row shown
+  // has one. Anywhere else the button would be a guess about which rows it meant.
+  { const rb = document.getElementById('inResolveBtn');
+    if (rb) {
+      const on = f === 'flagged' && visible.length > 0;
+      rb.classList.toggle('hidden', !on);
+      if (on) rb.textContent = `Resolve ${visible.length} shown`;
+      rb.onclick = on ? () => resolveVisibleFlags(st, visible) : null;
+    } }
 
   const box = document.getElementById('inputList');
   box.innerHTML = '';
@@ -5897,6 +5911,42 @@ function botPairHtml(entry) {
 function botNotesHtml(entries) {
   return `<div class="bot-note bot-note-multi">${
     entries.map(e => `<span class="bot-pair">${botPairHtml(e)}</span>`).join('')}</div>`;
+}
+
+/* Clear the review flag on every row the Flagged tab is showing.
+
+   A flag is per (set, state, grade), so each row carries its own key and a set flagged in
+   two grades keeps the other one. Nothing about the passage is touched -- resolving a flag
+   only puts the row back into whichever queue it belongs in.
+
+   This exists because resolving them one at a time was, until 2026-09-16, silently not
+   saving: 66 Florida flags had a Resolve pressed over two days and came back every time
+   (see the state_kv deletion note in the handoff). Clearing that backlog by hand is 66
+   clicks. */
+function resolveVisibleFlags(st, rows) {
+  const items = rows.map(r => ({ key: inputKey(r.set.id, st, r.grade), row: r }))
+                    .filter(x => (state.setFlag || {})[x.key] !== undefined);
+  if (!items.length) { toast('No flags on the rows shown'); return; }
+  const notes = items.slice(0, 8).map(x =>
+    `  \u2022 ${x.row.set.title || 'Untitled set'} (G${x.row.grade}) \u2014 ${state.setFlag[x.key]}`);
+  const scope = state.ui.inGrade === 'all'
+    ? `${STATE_NAMES[st]}, all grades` : `${STATE_NAMES[st]} grade ${state.ui.inGrade}`;
+  appConfirm(`Resolve ${items.length} flag${items.length === 1 ? '' : 's'}?`,
+    `${scope}\n\nThe passages are not changed \u2014 each row goes back into the queue it `
+    + `belongs in.\n\n` + notes.join('\n')
+    + (items.length > notes.length ? `\n  \u2022 and ${items.length - notes.length} more` : ''),
+    { ok: `Resolve ${items.length}` }).then(yes => {
+    if (!yes) return;
+    const before = items.map(x => [x.key, state.setFlag[x.key]]);
+    items.forEach(x => setFlagValue(x.key, undefined));
+    pushState();
+    renderInput();
+    toastUndo(`Resolved ${items.length} flag${items.length === 1 ? '' : 's'}`, () => {
+      before.forEach(([k, note]) => setFlagValue(k, note));
+      pushState();
+      renderInput();
+    });
+  });
 }
 
 function inputStages(st) {
