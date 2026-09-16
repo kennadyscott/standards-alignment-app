@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609162102';   // replaced with the deploy stamp
+const APP_BUILD = '202609162116';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4584,11 +4584,21 @@ function setNativeGrade(s) {
    2026-09-16: keep them off the list, and off it permanently rather than by dismissing 194
    rows that would have to be dismissed again for every new set.
 
-   Grades come from CMS_TYPE_BANDS so there is one source of truth, but the scope is opted
-   into per (state, type) here rather than derived: the same band logic applied to opinion
-   as well would empty North Carolina's grades 2-4 entirely, which is a separate decision.
-   The set is untouched -- it keeps its own state's list, and every other state's. */
-const LIST_REFUSES = { NC: ['informative'] };
+   Extended 2026-09-16 to North Carolina's whole published scope: grades 7-8 take
+   Informational, 5-8 take Persuasive, and 2-4 take Narrative and nothing else. Narrative is
+   not a prompt type this app has, so grades 2-4 hold nothing at all until one exists --
+   which is the honest picture, not a gap to paper over.
+
+   Grades come from CMS_TYPE_BANDS so there is one source of truth; the scope is opted into
+   per (state, type) here rather than derived from the bands, because South Carolina has the
+   same structure and whether to apply it there is a separate decision.
+
+   A refused set is untouched and keeps every other state's list. Unlike the first cut, it
+   does not keep its OWN state's list either: North Carolina asked for nothing outside its
+   scope on its boards, and the CMS could not take such a set anyway. One built for North
+   Carolina outside the scope therefore shows on no state list, and is found where the last
+   batch of them was found -- Passages, filtered to "No CMS target (held)". */
+const LIST_REFUSES = { NC: ['informative', 'opinion'] };
 function listRefuses(st, s, grade) {
   const types = LIST_REFUSES[st];
   if (!types) return false;
@@ -4615,10 +4625,10 @@ function setServes(s, includeDraft) {
   }
 
   const out = [];
-  // The passage's own tagged state + grade — always aligned; it was built for this. A set
-  // built FOR this state at this grade stays even where the type has no container: that is
-  // its own list, and the CMS band is what holds it back from being sent.
-  out.push({ state: std.state, grade: String(std.grade), std, own: true, cat: 'aligned' });
+  // The passage's own tagged state + grade — always aligned; it was built for this.
+  if (!listRefuses(std.state, s, std.grade)) {
+    out.push({ state: std.state, grade: String(std.grade), std, own: true, cat: 'aligned' });
+  }
   // Approved, within-±1 alignments auto-populate. Pushed → aligned; dismissed → gone;
   // otherwise → needs approval.
   alignedTo(std).forEach(h => {
