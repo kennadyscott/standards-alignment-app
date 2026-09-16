@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609162116';   // replaced with the deploy stamp
+const APP_BUILD = '202609162119';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4589,16 +4589,17 @@ function setNativeGrade(s) {
    not a prompt type this app has, so grades 2-4 hold nothing at all until one exists --
    which is the honest picture, not a gap to paper over.
 
-   Grades come from CMS_TYPE_BANDS so there is one source of truth; the scope is opted into
-   per (state, type) here rather than derived from the bands, because South Carolina has the
-   same structure and whether to apply it there is a separate decision.
+   South Carolina was confirmed the same on 2026-09-16 and joined it. Grades come from
+   CMS_TYPE_BANDS so there is one source of truth; the scope stays opted into per state here
+   rather than derived from the bands, so a state gets this only once someone has said its
+   CMS really is shaped that way.
 
    A refused set is untouched and keeps every other state's list. Unlike the first cut, it
    does not keep its OWN state's list either: North Carolina asked for nothing outside its
    scope on its boards, and the CMS could not take such a set anyway. One built for North
    Carolina outside the scope therefore shows on no state list, and is found where the last
    batch of them was found -- Passages, filtered to "No CMS target (held)". */
-const LIST_REFUSES = { NC: ['informative', 'opinion'] };
+const LIST_REFUSES = { NC: ['informative', 'opinion'], SC: ['informative', 'opinion'] };
 function listRefuses(st, s, grade) {
   const types = LIST_REFUSES[st];
   if (!types) return false;
