@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609162123';   // replaced with the deploy stamp
+const APP_BUILD = '202609181528';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -2822,10 +2822,11 @@ function numberingProblem(s) {
    types, because in grades 2-4 Narrative is the only place that work could ever go; the
    send rule is the standing decision NOT to refile those sets into it. Reading the
    containers here would turn every held grade 2-4 set into a sendable one overnight. */
-const CMS_TYPE_BANDS = {
-  NC: { opinion: [5, 8], informative: [7, 8] },
-  SC: { opinion: [5, 8], informative: [7, 8] },
-};
+// Empty since 2026-09-18: the Carolinas run every writing container at every grade, so no
+// state holds a type back from Send to CMS. A state goes back in here only if its CMS
+// really cannot file that type at that grade -- see STATE_CONTAINER_GRADES, which must
+// agree with it.
+const CMS_TYPE_BANDS = {};
 function cmsNoTarget(s) {
   const st = builderPrimaryState(s);
   const bands = CMS_TYPE_BANDS[st];
@@ -4599,7 +4600,7 @@ function setNativeGrade(s) {
    scope on its boards, and the CMS could not take such a set anyway. One built for North
    Carolina outside the scope therefore shows on no state list, and is found where the last
    batch of them was found -- Passages, filtered to "No CMS target (held)". */
-const LIST_REFUSES = { NC: ['informative', 'opinion'], SC: ['informative', 'opinion'] };
+const LIST_REFUSES = {};
 function listRefuses(st, s, grade) {
   const types = LIST_REFUSES[st];
   if (!types) return false;
@@ -6278,15 +6279,22 @@ const CMS_CONTAINERS = {
   informative: { label: 'Informational', cms: 'informative', types: ['informative'] },
   opinion:     { label: 'Opinion',       cms: 'opinion',     types: ['opinion'] },
   persuasive:  { label: 'Persuasive',    cms: 'opinion',     types: ['opinion'] },
-  narrative:   { label: 'Narrative',     cms: 'narrative',   types: ['informative', 'opinion'] },
+  // Narrative is the one container our item-set types cannot name: a set is informative or
+  // opinion, and neither is narrative. It counts by PROMPT type instead, which is the only
+  // place the distinction exists -- and reads 0 everywhere until `narrative` joins
+  // PROMPT_TYPES, which is the honest picture rather than a column borrowed from its
+  // neighbours.
+  narrative:   { label: 'Narrative',     cms: 'narrative',   types: [], prompts: ['narrative'] },
 };
 const DEFAULT_CONTAINERS = ['informative', 'opinion'];
+/* The Carolinas run all three writing containers at every grade (confirmed 2026-09-18).
+   They were banded until then -- Narrative 2-4, Persuasive 5-8, Informational 7-8 -- and
+   that banding also drove what could be SENT (CMS_TYPE_BANDS) and what reached their state
+   lists (LIST_REFUSES). All three are gone together; leaving any one behind would show a
+   column on the dashboard that the rest of the app refuses to fill. */
+const ALL_THREE = ['narrative', 'informative', 'persuasive'];
 const STATE_CONTAINER_GRADES = {
-  NC: {
-    '2': ['narrative'], '3': ['narrative'], '4': ['narrative'],
-    '5': ['persuasive'], '6': ['persuasive'],
-    '7': ['persuasive', 'informative'], '8': ['persuasive', 'informative'],
-  },
+  NC: Object.fromEntries(GRADES.map(g => [String(g), ALL_THREE])),
 };
 STATE_CONTAINER_GRADES.SC = STATE_CONTAINER_GRADES.NC;   // same containers, same grades
 
@@ -6295,9 +6303,12 @@ function gradeContainers(st, g) {
   const keys = (own && own[String(g)]) || DEFAULT_CONTAINERS;
   return keys.map(k => ({ key: k, ...CMS_CONTAINERS[k] }));
 }
-// What a container holds from OUR side: the sum of the item-set types it takes.
+// What a container holds from OUR side. By item-set type, except where the container can
+// only be told apart by the writing prompt (Narrative).
 function containerOurs(c, t) {
-  return c.types.reduce((a, k) => a + ((t && t[k]) || 0), 0);
+  if (!t) return 0;
+  if (c.prompts) return c.prompts.reduce((a, p) => a + ((t.prompts || {})[p] || 0), 0);
+  return c.types.reduce((a, k) => a + (t[k] || 0), 0);
 }
 // The item-set types this grade has no container for — work that cannot be filed as it
 // stands. Shown under the card rather than dropped, so it is never silently invisible.
@@ -6923,18 +6934,21 @@ function queueWork() {
       const base = DASH_GROUPS[g === '2' ? '2' : '3-8'];
       const groups = own ? [...own.groups, ...base.filter(([l]) => l !== 'Informational')] : base;
       const doms = groups.flatMap(([, d]) => d);
-      const tal = new Map(doms.map(d => [d, { informative: 0, opinion: 0 }]));
+      const tal = new Map(doms.map(d => [d, { informative: 0, opinion: 0, prompts: {} }]));
       sets.forEach(s => {
         const t = tal.get(dashSubdomain(s, g, st));
-        if (t) t[s.itemSetType === 'informative' ? 'informative' : 'opinion']++;
+        if (!t) return;
+        t[s.itemSetType === 'informative' ? 'informative' : 'opinion']++;
+        const p = promptTypeOf(s);          // Narrative is counted by prompt, not item-set type
+        if (p) t.prompts[p] = (t.prompts[p] || 0) + 1;
       });
       // Only rows this state can actually fill. Texas's CMS taxonomy carries Health,
       // PE, Fine Arts and Technology Applications rows with no standards loaded behind
       // them, and counting those put Texas at 208 short per grade — a number nobody can
       // act on and nobody intends to fill.
-      // Against the containers this grade actually has: asking Herman for Informational
-      // AND Opinion at North Carolina grade 3 doubled a gap the CMS cannot even take,
-      // where the one Narrative container is the whole target.
+      // Against the containers this grade actually has, so Herman is asked for a gap the
+      // CMS can take. In the Carolinas that is all three, Narrative included -- which is
+      // the whole of its goal there, since nothing narrative exists yet.
       let gap = 0;
       const conts = gradeContainers(st, g);
       doms.forEach(d => {
@@ -7926,11 +7940,14 @@ function dashGradeModel(dst, g, index) {
 
   // sub-domain -> {informative, opinion}. Tally across EVERY possible row first, so a
   // row that holds work is never hidden underneath us.
-  const tally = new Map(allExpect.map(d => [d, { informative: 0, opinion: 0 }]));
+  const blank = () => ({ informative: 0, opinion: 0, prompts: {} });
+  const tally = new Map(allExpect.map(d => [d, blank()]));
   sets.forEach(s => {
     const dom = toCmsRow(dashSubdomain(s, g, dst), fromCms ? allExpect : null);
-    const t = tally.get(dom) || { informative: 0, opinion: 0 };
+    const t = tally.get(dom) || blank();
     t[s.itemSetType === 'informative' ? 'informative' : 'opinion']++;
+    const p = promptTypeOf(s);
+    if (p) t.prompts[p] = (t.prompts[p] || 0) + 1;
     tally.set(dom, t);
   });
   // Counts read from the CMS itself, per state/grade/type/sub-domain. Deliberately NOT
@@ -7944,7 +7961,7 @@ function dashGradeModel(dst, g, index) {
     if (fromCms) return true;                   // the CMS says this row exists; show it
     if (own) return true;                       // the state published this list; show it all
     if (!DASH_SCIENCE_ROWS.includes(d)) return true;
-    const t = tally.get(d) || { informative: 0, opinion: 0 };
+    const t = tally.get(d) || blank();
     if (t.informative || t.opinion) return true;
     return stateTeachesSubdomain(dst, g, d);
   };
@@ -7956,7 +7973,7 @@ function dashGradeModel(dst, g, index) {
   const containers = gradeContainers(dst, g);
   let met = 0, partial = 0, missing = 0;
   expect.forEach(d => {
-    const t = tally.get(d) || { informative: 0, opinion: 0 };
+    const t = tally.get(d) || blank();
     containers.forEach(c => {
       const n = containerOurs(c, t);
       n >= DASH_GOAL ? met++ : n > 0 ? partial++ : missing++;
