@@ -1,0 +1,1379 @@
+{
+ "note": "Sets deleted from North and South Carolina while their grades were banded to one writing container. The Carolinas run all three at every grade as of 2026-09-18, so the reason for deleting them no longer holds. Each row is still in the database, soft-deleted with its passages and questions intact; restoring clears deleted_at and the tombstone.",
+ "builtAt": "2026-09-18",
+ "count": 196,
+ "sets": [
+  {
+   "id": "ps-gen-1787101511385",
+   "state": "NC",
+   "grade": "2",
+   "title": "Choosing a Place to Live",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787101707098",
+   "state": "NC",
+   "grade": "2",
+   "title": "Finding Places on a Map",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787101593918",
+   "state": "NC",
+   "grade": "2",
+   "title": "How Trains Helped Towns Grow",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787101804630",
+   "state": "NC",
+   "grade": "2",
+   "title": "Making Choices at School",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787101827649",
+   "state": "NC",
+   "grade": "2",
+   "title": "Not Enough for Everything",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787101670611",
+   "state": "NC",
+   "grade": "2",
+   "title": "Rivers That Helped America Grow",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787101534714",
+   "state": "NC",
+   "grade": "2",
+   "title": "Where Nature Helped People Settle",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787101734931",
+   "state": "NC",
+   "grade": "2",
+   "title": "Where Towns Begin",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1789131181640",
+   "state": "NC",
+   "grade": "3",
+   "title": "A Model of the Sky",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787330971180",
+   "state": "NC",
+   "grade": "3",
+   "title": "Big Decisions and Neighborhood Choices",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787331159166",
+   "state": "NC",
+   "grade": "3",
+   "title": "Big Jobs in Government: The Governor and the Mayor",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787102928836",
+   "state": "NC",
+   "grade": "3",
+   "title": "Building the Earth in the Classroom",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787102906672",
+   "state": "NC",
+   "grade": "3",
+   "title": "Earth's Amazing Land Features",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787330293314",
+   "state": "NC",
+   "grade": "3",
+   "title": "Earth's Waters: Salty and Fresh",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787330921131",
+   "state": "NC",
+   "grade": "3",
+   "title": "From the Capitol to City Hall",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787330527492",
+   "state": "NC",
+   "grade": "3",
+   "title": "Harbor Town: How Location Built a Community",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787329955239",
+   "state": "NC",
+   "grade": "3",
+   "title": "How Plants Live and Grow",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787331337154",
+   "state": "NC",
+   "grade": "3",
+   "title": "Ideas That Grow a Town",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787331132321",
+   "state": "NC",
+   "grade": "3",
+   "title": "Leaders Near and Far",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787101881842",
+   "state": "NC",
+   "grade": "3",
+   "title": "Leaders Who Serve Our State and Towns",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787329800985",
+   "state": "NC",
+   "grade": "3",
+   "title": "Models That Show How We Move",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1789131350869",
+   "state": "NC",
+   "grade": "3",
+   "title": "Models of the Skeletal and Muscular Systems",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787331567378",
+   "state": "NC",
+   "grade": "3",
+   "title": "Natural Resources in North Carolina",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787102103354",
+   "state": "NC",
+   "grade": "3",
+   "title": "Our Home in the Solar System",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787101990695",
+   "state": "NC",
+   "grade": "3",
+   "title": "Patterns in the Sky",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787329609859",
+   "state": "NC",
+   "grade": "3",
+   "title": "People Who Build Communities",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787331610548",
+   "state": "NC",
+   "grade": "3",
+   "title": "Resources That Shape a Town",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787329644808",
+   "state": "NC",
+   "grade": "3",
+   "title": "Small Businesses, Big Communities",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787102972406",
+   "state": "NC",
+   "grade": "3",
+   "title": "Supply and Demand at the Market",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787103030439",
+   "state": "NC",
+   "grade": "3",
+   "title": "Supply and Demand at the Strawberry Stand",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787331373264",
+   "state": "NC",
+   "grade": "3",
+   "title": "The Bike Shop That Grew a Neighborhood",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787330001692",
+   "state": "NC",
+   "grade": "3",
+   "title": "The Hidden Jobs of Plant Parts",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787330158089",
+   "state": "NC",
+   "grade": "3",
+   "title": "The Life of a Seed Plant",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787102012318",
+   "state": "NC",
+   "grade": "3",
+   "title": "The Same Old Stars",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787330749593",
+   "state": "NC",
+   "grade": "3",
+   "title": "Two Climates, Two Kinds of Days",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787330711261",
+   "state": "NC",
+   "grade": "3",
+   "title": "Two Places, Two Ways of Life",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787329467714",
+   "state": "NC",
+   "grade": "3",
+   "title": "Two Teams That Work for You",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787330466034",
+   "state": "NC",
+   "grade": "3",
+   "title": "Where Places Grow",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787101902719",
+   "state": "NC",
+   "grade": "3",
+   "title": "Who Runs Our State and Towns?",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787329444997",
+   "state": "NC",
+   "grade": "3",
+   "title": "Who Runs Things Where You Live?",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787329779056",
+   "state": "NC",
+   "grade": "3",
+   "title": "Your Body's Frame and Movers",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787333354185",
+   "state": "NC",
+   "grade": "4",
+   "title": "Coming and Going: Journeys That Shaped North Carolina",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787331960289",
+   "state": "NC",
+   "grade": "4",
+   "title": "Contributions of North Carolina's People",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787333766819",
+   "state": "NC",
+   "grade": "4",
+   "title": "Leaders of Our State",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787334992142",
+   "state": "NC",
+   "grade": "4",
+   "title": "Making Smart Money Choices",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787334477115",
+   "state": "NC",
+   "grade": "4",
+   "title": "Many Voices in North Carolina Government",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787335020845",
+   "state": "NC",
+   "grade": "4",
+   "title": "Money Choices That Add Up",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787333080639",
+   "state": "NC",
+   "grade": "4",
+   "title": "Movement That Shaped North Carolina",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787333039336",
+   "state": "NC",
+   "grade": "4",
+   "title": "Moving Through North Carolina",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787332600185",
+   "state": "NC",
+   "grade": "4",
+   "title": "North Carolina Symbols",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787332218762",
+   "state": "NC",
+   "grade": "4",
+   "title": "North Carolina in America's Story",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787332179458",
+   "state": "NC",
+   "grade": "4",
+   "title": "North Carolina in American History",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787332693007",
+   "state": "NC",
+   "grade": "4",
+   "title": "North Carolina's Historical Symbols",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787332860109",
+   "state": "NC",
+   "grade": "4",
+   "title": "North Carolina's Three Regions",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787333293719",
+   "state": "NC",
+   "grade": "4",
+   "title": "People on the Move: Migration and North Carolina",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787332030481",
+   "state": "NC",
+   "grade": "4",
+   "title": "Princeville: A Town Built by Freedom",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787332912230",
+   "state": "NC",
+   "grade": "4",
+   "title": "Reading North Carolina's Rivers and Maps",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787332470984",
+   "state": "NC",
+   "grade": "4",
+   "title": "Revolution and Reform in Early North Carolina",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787334017820",
+   "state": "NC",
+   "grade": "4",
+   "title": "Rights and Responsibilities Under the North Carolina Constitution",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787333976519",
+   "state": "NC",
+   "grade": "4",
+   "title": "Rights and Responsibilities in North Carolina",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787334722826",
+   "state": "NC",
+   "grade": "4",
+   "title": "Scarcity and Choices in North Carolina",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787334763745",
+   "state": "NC",
+   "grade": "4",
+   "title": "Scarcity at Work in North Carolina",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787334507993",
+   "state": "NC",
+   "grade": "4",
+   "title": "Speaking Up in North Carolina",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787332436578",
+   "state": "NC",
+   "grade": "4",
+   "title": "Standing Up in North Carolina",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787333514916",
+   "state": "NC",
+   "grade": "4",
+   "title": "Two Regions, Two Ways of Life",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787333602632",
+   "state": "NC",
+   "grade": "4",
+   "title": "What the Land Grows: Two North Carolina Regions",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787334242633",
+   "state": "NC",
+   "grade": "4",
+   "title": "Who Leads Our State?",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787334282766",
+   "state": "NC",
+   "grade": "4",
+   "title": "Who Makes the Rules? State Leaders in North Carolina",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787333790668",
+   "state": "NC",
+   "grade": "4",
+   "title": "Working at the State Capitol",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787337978940",
+   "state": "NC",
+   "grade": "5",
+   "title": "Building a Nation Coast to Coast",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787341050191",
+   "state": "NC",
+   "grade": "5",
+   "title": "Growth and Decline: The American Economy",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787340158526",
+   "state": "NC",
+   "grade": "5",
+   "title": "How the Branches of Government Depend on Each Other",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787338207998",
+   "state": "NC",
+   "grade": "5",
+   "title": "How the Land Shapes the Way People Live",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787335543995",
+   "state": "NC",
+   "grade": "5",
+   "title": "Predicting the Weather",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787102495561",
+   "state": "NC",
+   "grade": "5",
+   "title": "Queen Bess: The Pilot Who Refused to Be Grounded",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787335704407",
+   "state": "NC",
+   "grade": "5",
+   "title": "Reading the Signs of Severe Weather",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787335410359",
+   "state": "NC",
+   "grade": "5",
+   "title": "Reading the Sky: A Weather Journal",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787338010461",
+   "state": "NC",
+   "grade": "5",
+   "title": "The Erie Canal: A Waterway That Changed America",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787102447187",
+   "state": "NC",
+   "grade": "5",
+   "title": "Voices That Won a War: The Navajo Code Talkers",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787335344007",
+   "state": "NC",
+   "grade": "5",
+   "title": "Watching the Weather",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787338248908",
+   "state": "NC",
+   "grade": "5",
+   "title": "Where People Live and How They Live",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787340121546",
+   "state": "NC",
+   "grade": "5",
+   "title": "Working Together: The Three Branches of Government",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787342467646",
+   "state": "NC",
+   "grade": "6",
+   "title": "How Ancient Societies Ruled",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787341860204",
+   "state": "NC",
+   "grade": "6",
+   "title": "Riding the Monsoon Winds",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787341781661",
+   "state": "NC",
+   "grade": "6",
+   "title": "Roads That Built the World",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787342012953",
+   "state": "NC",
+   "grade": "6",
+   "title": "When Money Made and Broke Empires",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787101699245",
+   "state": "SC",
+   "grade": "2",
+   "title": "American Holidays We Remember",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787101627688",
+   "state": "SC",
+   "grade": "2",
+   "title": "Maya's Lemonade Stand",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787101579815",
+   "state": "SC",
+   "grade": "2",
+   "title": "Saving for a Bike",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787101665608",
+   "state": "SC",
+   "grade": "2",
+   "title": "Symbols of Our Country",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787102358399",
+   "state": "SC",
+   "grade": "3",
+   "title": "Climate Around the World",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787261886434",
+   "state": "SC",
+   "grade": "3",
+   "title": "Cultures of South Carolina",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787102738624",
+   "state": "SC",
+   "grade": "3",
+   "title": "Design Solutions for Weather Hazards",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787102812302",
+   "state": "SC",
+   "grade": "3",
+   "title": "Fighting Back Against Wild Weather",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787102919739",
+   "state": "SC",
+   "grade": "3",
+   "title": "Forces You Cannot See",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787101979387",
+   "state": "SC",
+   "grade": "3",
+   "title": "How Land Shapes Work Around the World",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787101841444",
+   "state": "SC",
+   "grade": "3",
+   "title": "How People Use the Land",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787262264013",
+   "state": "SC",
+   "grade": "3",
+   "title": "How a Postcard Finds You",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787102018866",
+   "state": "SC",
+   "grade": "3",
+   "title": "How the Land Shapes Farming and Herding",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787102950157",
+   "state": "SC",
+   "grade": "3",
+   "title": "Invisible Pushes and Pulls",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787101879331",
+   "state": "SC",
+   "grade": "3",
+   "title": "Land and Work Around the World",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787262225600",
+   "state": "SC",
+   "grade": "3",
+   "title": "Layers of a Place",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787261998301",
+   "state": "SC",
+   "grade": "3",
+   "title": "Life on the Grasslands",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787102999928",
+   "state": "SC",
+   "grade": "3",
+   "title": "Lines on a Globe",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787101763619",
+   "state": "SC",
+   "grade": "3",
+   "title": "Magnets and Their Jobs",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787261925982",
+   "state": "SC",
+   "grade": "3",
+   "title": "Mapping the Inuit of the Arctic",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787262561578",
+   "state": "SC",
+   "grade": "3",
+   "title": "Peoples of the World: The Bajau",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787262590762",
+   "state": "SC",
+   "grade": "3",
+   "title": "Peoples of the World: The M\u0101ori of Aotearoa",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787262640735",
+   "state": "SC",
+   "grade": "3",
+   "title": "Peoples of the World: The S\u00e1mi of the North",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787268947053",
+   "state": "SC",
+   "grade": "3",
+   "title": "Peoples of the World: The S\u00e1mi of the North",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787262172684",
+   "state": "SC",
+   "grade": "3",
+   "title": "Places Inside Places",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787103088677",
+   "state": "SC",
+   "grade": "3",
+   "title": "Reasons to Explore",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787102774647",
+   "state": "SC",
+   "grade": "3",
+   "title": "Smart Designs Against Wild Weather",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787101799489",
+   "state": "SC",
+   "grade": "3",
+   "title": "Solving Problems with Magnets",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787102511032",
+   "state": "SC",
+   "grade": "3",
+   "title": "Steady Motion: Two Opinions",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787262222353",
+   "state": "SC",
+   "grade": "3",
+   "title": "The Floating Islands of the Uros",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787262198048",
+   "state": "SC",
+   "grade": "3",
+   "title": "The Herders of Mongolia",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787261962131",
+   "state": "SC",
+   "grade": "3",
+   "title": "The Maasai of East Africa",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787262535171",
+   "state": "SC",
+   "grade": "3",
+   "title": "The Tuareg: Travelers of the Sahara",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787268829948",
+   "state": "SC",
+   "grade": "3",
+   "title": "Traders of the Sahara: The Tuareg",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787102392182",
+   "state": "SC",
+   "grade": "3",
+   "title": "Two Extreme Climates",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787102548598",
+   "state": "SC",
+   "grade": "3",
+   "title": "Two Ways to Predict Motion",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787102465571",
+   "state": "SC",
+   "grade": "3",
+   "title": "Watching Motion, Making Predictions",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787102092217",
+   "state": "SC",
+   "grade": "3",
+   "title": "What the Land Gives: Mountains and the Sea",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787269827181",
+   "state": "SC",
+   "grade": "3",
+   "title": "When Rulers Sent Ships",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787269830765",
+   "state": "SC",
+   "grade": "3",
+   "title": "When a Town Grows Overnight",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787262198873",
+   "state": "SC",
+   "grade": "3",
+   "title": "Where Do You Live?",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787102598293",
+   "state": "SC",
+   "grade": "3",
+   "title": "Which Is Better for Predicting Motion? Two Opinions",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787269720279",
+   "state": "SC",
+   "grade": "3",
+   "title": "Who Paid the Explorers?",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787103062074",
+   "state": "SC",
+   "grade": "3",
+   "title": "Why People Explore",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787269740454",
+   "state": "SC",
+   "grade": "3",
+   "title": "Why People Move",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787269559818",
+   "state": "SC",
+   "grade": "4",
+   "title": "A Nation Divided: Causes of the Civil War",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787269530125",
+   "state": "SC",
+   "grade": "4",
+   "title": "Battle Plans of the Civil War",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787269262853",
+   "state": "SC",
+   "grade": "4",
+   "title": "Building a New Kind of Government",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787269422508",
+   "state": "SC",
+   "grade": "4",
+   "title": "Building the Rails West",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787262933631",
+   "state": "SC",
+   "grade": "4",
+   "title": "Changing Economies in the Carolina Colony",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787270139606",
+   "state": "SC",
+   "grade": "4",
+   "title": "Coast, Sandhills, and Mountains: Where People Settled in Early South Carolina",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787270115395",
+   "state": "SC",
+   "grade": "4",
+   "title": "Coasts, Harbors, and War: South Carolina's Geography During the Civil War",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787269468681",
+   "state": "SC",
+   "grade": "4",
+   "title": "Federal Laws That Reshaped the South",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787269500118",
+   "state": "SC",
+   "grade": "4",
+   "title": "Free Land for Families: The Homestead Act",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787262289516",
+   "state": "SC",
+   "grade": "4",
+   "title": "How Animals Sense Their World",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787270001129",
+   "state": "SC",
+   "grade": "4",
+   "title": "Living With the Land in Early South Carolina",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787262257909",
+   "state": "SC",
+   "grade": "4",
+   "title": "Living in the Desert",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787269885860",
+   "state": "SC",
+   "grade": "4",
+   "title": "Money, Taxes, and the Road to Independence",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787269591828",
+   "state": "SC",
+   "grade": "4",
+   "title": "New Beginnings: Money and Work After Slavery",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787269350307",
+   "state": "SC",
+   "grade": "4",
+   "title": "Opening the West: How Government Policies Moved a Nation",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787262227618",
+   "state": "SC",
+   "grade": "4",
+   "title": "Parts That Work Together",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787269972618",
+   "state": "SC",
+   "grade": "4",
+   "title": "People and Places of Early South Carolina",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787269148476",
+   "state": "SC",
+   "grade": "4",
+   "title": "Rails Across the West",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787278789589",
+   "state": "SC",
+   "grade": "4",
+   "title": "Reading the Seasons in Early South Carolina",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787269369046",
+   "state": "SC",
+   "grade": "4",
+   "title": "Rebuilding the South: New Laws After the Civil War",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787102233729",
+   "state": "SC",
+   "grade": "4",
+   "title": "Reconstruction: A Turning Point",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787269032385",
+   "state": "SC",
+   "grade": "4",
+   "title": "Reconstruction: New Laws, New Lives",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787102271445",
+   "state": "SC",
+   "grade": "4",
+   "title": "Reconstruction: Rebuilding a Nation",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787278745046",
+   "state": "SC",
+   "grade": "4",
+   "title": "Skills From Three Worlds: Crafts and Knowledge in Early South Carolina",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787270057500",
+   "state": "SC",
+   "grade": "4",
+   "title": "South Carolina and the Civil War",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787269326447",
+   "state": "SC",
+   "grade": "4",
+   "title": "South Carolina and the New Nation",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787263940071",
+   "state": "SC",
+   "grade": "4",
+   "title": "The Fur Trade in British North America",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787269098744",
+   "state": "SC",
+   "grade": "4",
+   "title": "The Long Road to Freedom",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787262328717",
+   "state": "SC",
+   "grade": "4",
+   "title": "The Night Hunter: How an Owl Uses Its Senses",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787269185438",
+   "state": "SC",
+   "grade": "4",
+   "title": "The Road to a New Nation",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787270012736",
+   "state": "SC",
+   "grade": "4",
+   "title": "The Sea Feeds New England",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787269190561",
+   "state": "SC",
+   "grade": "4",
+   "title": "Three Regions, One New Land",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787263982986",
+   "state": "SC",
+   "grade": "4",
+   "title": "Tobacco Changes the Chesapeake",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787270106223",
+   "state": "SC",
+   "grade": "4",
+   "title": "Where Rivers Met the Sea: Trade in Early South Carolina",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787269396796",
+   "state": "SC",
+   "grade": "4",
+   "title": "Why the Colonists Wanted to Be Free",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787262859431",
+   "state": "SC",
+   "grade": "4",
+   "title": "Work and Trade in Early America",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787269633450",
+   "state": "SC",
+   "grade": "4",
+   "title": "Working and Trading in the Colonies",
+   "prompt": "opinion"
+  },
+  {
+   "id": "ps-gen-1787279534249",
+   "state": "SC",
+   "grade": "5",
+   "title": "A Connected World",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787278891891",
+   "state": "SC",
+   "grade": "5",
+   "title": "A New Kind of Leader",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787279965148",
+   "state": "SC",
+   "grade": "5",
+   "title": "A Promise Kept: The GI Bill",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787279054707",
+   "state": "SC",
+   "grade": "5",
+   "title": "After the War: A Changing Nation and State",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787278865779",
+   "state": "SC",
+   "grade": "5",
+   "title": "America After the War",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787279094716",
+   "state": "SC",
+   "grade": "5",
+   "title": "America After the War: A Changing Landscape",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787279262890",
+   "state": "SC",
+   "grade": "5",
+   "title": "America and the World: A Changing Friendship",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787279361292",
+   "state": "SC",
+   "grade": "5",
+   "title": "America's Role in the World",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787279823633",
+   "state": "SC",
+   "grade": "5",
+   "title": "Cotton, Cloth, and the Crash of 1929",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787279900841",
+   "state": "SC",
+   "grade": "5",
+   "title": "Economic Expansion in a Growing Nation",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787279039958",
+   "state": "SC",
+   "grade": "5",
+   "title": "How Rural South Carolina Changed",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787279442088",
+   "state": "SC",
+   "grade": "5",
+   "title": "Leading Through Helping: America and the World After 1991",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787269989777",
+   "state": "SC",
+   "grade": "5",
+   "title": "New Substance or Not? Investigating Mixtures",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787279514691",
+   "state": "SC",
+   "grade": "5",
+   "title": "The Cost of Reaching the Stars",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787279284903",
+   "state": "SC",
+   "grade": "5",
+   "title": "When Governments Make Unjust Rules",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787269877337",
+   "state": "SC",
+   "grade": "5",
+   "title": "Which Way Is Down? The Pull of Gravity",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787280116132",
+   "state": "SC",
+   "grade": "6",
+   "title": "Drawing New Lines: Nationalism and the Changing Map of the 1800s",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787280874468",
+   "state": "SC",
+   "grade": "6",
+   "title": "Fossils, Rocks, and a Puzzle Called Pangaea",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787280803296",
+   "state": "SC",
+   "grade": "6",
+   "title": "How Earth's Surface Changes",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787280715946",
+   "state": "SC",
+   "grade": "6",
+   "title": "Reading the Clues of a Moving Earth",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787280089567",
+   "state": "SC",
+   "grade": "6",
+   "title": "Technology and the Shrinking World",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787280425440",
+   "state": "SC",
+   "grade": "6",
+   "title": "The Cost of Empire",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787280635470",
+   "state": "SC",
+   "grade": "6",
+   "title": "The Reach of Empire",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787280512184",
+   "state": "SC",
+   "grade": "6",
+   "title": "Trade Across Two Worlds",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787280426358",
+   "state": "SC",
+   "grade": "6",
+   "title": "Trading Across the World: The Silk Road",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787269806288",
+   "state": "SC",
+   "grade": "6",
+   "title": "Trapping Heat: The Science of Insulated Design",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787280058637",
+   "state": "SC",
+   "grade": "6",
+   "title": "Two Sides of a Changing World",
+   "prompt": "informational"
+  },
+  {
+   "id": "ps-gen-1787280336349",
+   "state": "SC",
+   "grade": "6",
+   "title": "Who Holds the Power? Governing Ancient Civilizations",
+   "prompt": "informational"
+  }
+ ]
+}
