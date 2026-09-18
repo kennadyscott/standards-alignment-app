@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609181528';   // replaced with the deploy stamp
+const APP_BUILD = '202609181537';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -3382,7 +3382,12 @@ function exportData() {
 
 /* ---------- passage sets ---------- */
 const LS_SETS = 'sa_passage_sets_v1';
-const PROMPT_TYPES = ['informational', 'opinion', 'argumentative'];
+/* Narrative joined 2026-09-18, so the Carolinas' grades 2-8 can hold the container they
+   have always had room for. It is a PROMPT type only: an item set is still informative or
+   opinion, and the CMS payload still sends that -- see builderItemSet, which means a
+   narrative set would arrive in the wrong container until the importer's expected value
+   for container 46 is known. */
+const PROMPT_TYPES = ['narrative', 'informational', 'opinion', 'argumentative'];
 /* What the CMS calls each writing prompt. `opinion` and `argumentative` are two wordings
    of the same CMS container (48, "Argumentative Passage"); the app keeps them apart
    because the prompts themselves read differently, and the team asks for them by the CMS's
@@ -4225,7 +4230,7 @@ function renderSetEditor() {
     <div class="ps-section">
       <div class="ps-section-title">Writing Prompt</div>
       <div class="seg" id="promptTypeSeg" style="max-width:420px">
-        ${PROMPT_TYPES.map(t => `<button class="seg-btn ${s.writingPrompt.type === t ? 'active' : ''}" data-pt="${t}">${t[0].toUpperCase() + t.slice(1)}</button>`).join('')}
+        ${PROMPT_TYPES.map(t => `<button class="seg-btn ${s.writingPrompt.type === t ? 'active' : ''}" data-pt="${t}">${esc(promptTypeLabel(t))}</button>`).join('')}
       </div>
       <textarea class="ps-textarea" id="promptText" rows="4" style="margin-top:10px"
         placeholder="Paste the writing prompt here.">${esc(s.writingPrompt.text)}</textarea>
@@ -6072,7 +6077,7 @@ function buildPromptFilter(rows) {
   rows.forEach(r => { const t = promptTypeOf(r.set) || 'none'; counts[t] = (counts[t] || 0) + 1; });
   const keep = state.ui.inPrompt;
   if (keep !== 'all' && !counts[keep]) counts[keep] = 0;   // keep an empty pick visible
-  const order = [...PROMPT_TYPES, 'narrative'].filter(t => counts[t] !== undefined);
+  const order = PROMPT_TYPES.filter(t => counts[t] !== undefined);
   Object.keys(counts).forEach(t => { if (t !== 'none' && !order.includes(t)) order.push(t); });
   if (counts.none) order.push('none');
   sel.innerHTML = `<option value="all">All prompts (${rows.length})</option>`
@@ -6275,16 +6280,21 @@ const DASH_GOAL = 4;   // sets per sub-domain per item-set type
 
    `cms` is the key the counts are captured under. Narrative is not captured anywhere
    yet, so those cells read "·" — not looked at, which is the truth, rather than 0. */
+/* Every container counts by WRITING PROMPT, not by item-set type.
+
+   Item-set type has two values and cannot name Narrative, so the first cut counted only
+   Narrative by prompt and left the others on item-set type. That double-counted: a set
+   with a narrative prompt still has an item-set type, so it landed in Narrative AND in
+   Informational, and a grade card added up to more sets than it held.
+
+   Each set has exactly one prompt type, so counting all four by prompt puts every set in
+   exactly one column. A prompt with no container at that grade is counted under the card
+   instead, the same as before. */
 const CMS_CONTAINERS = {
-  informative: { label: 'Informational', cms: 'informative', types: ['informative'] },
-  opinion:     { label: 'Opinion',       cms: 'opinion',     types: ['opinion'] },
-  persuasive:  { label: 'Persuasive',    cms: 'opinion',     types: ['opinion'] },
-  // Narrative is the one container our item-set types cannot name: a set is informative or
-  // opinion, and neither is narrative. It counts by PROMPT type instead, which is the only
-  // place the distinction exists -- and reads 0 everywhere until `narrative` joins
-  // PROMPT_TYPES, which is the honest picture rather than a column borrowed from its
-  // neighbours.
-  narrative:   { label: 'Narrative',     cms: 'narrative',   types: [], prompts: ['narrative'] },
+  informative: { label: 'Informational', cms: 'informative', prompts: ['informational'] },
+  opinion:     { label: 'Opinion',       cms: 'opinion',     prompts: ['opinion', 'argumentative'] },
+  persuasive:  { label: 'Persuasive',    cms: 'opinion',     prompts: ['opinion', 'argumentative'] },
+  narrative:   { label: 'Narrative',     cms: 'narrative',   prompts: ['narrative'] },
 };
 const DEFAULT_CONTAINERS = ['informative', 'opinion'];
 /* The Carolinas run all three writing containers at every grade (confirmed 2026-09-18).
@@ -6303,18 +6313,16 @@ function gradeContainers(st, g) {
   const keys = (own && own[String(g)]) || DEFAULT_CONTAINERS;
   return keys.map(k => ({ key: k, ...CMS_CONTAINERS[k] }));
 }
-// What a container holds from OUR side. By item-set type, except where the container can
-// only be told apart by the writing prompt (Narrative).
+// What a container holds from OUR side: the sets whose writing prompt it takes.
 function containerOurs(c, t) {
   if (!t) return 0;
-  if (c.prompts) return c.prompts.reduce((a, p) => a + ((t.prompts || {})[p] || 0), 0);
-  return c.types.reduce((a, k) => a + (t[k] || 0), 0);
+  return c.prompts.reduce((a, p) => a + ((t.prompts || {})[p] || 0), 0);
 }
-// The item-set types this grade has no container for — work that cannot be filed as it
+// The prompt types this grade has no container for — work that cannot be filed as it
 // stands. Shown under the card rather than dropped, so it is never silently invisible.
 function uncontainedTypes(containers) {
-  const covered = new Set(containers.flatMap(c => c.types));
-  return ['informative', 'opinion'].filter(k => !covered.has(k));
+  const covered = new Set(containers.flatMap(c => c.prompts));
+  return PROMPT_TYPES.filter(k => !covered.has(k));
 }
 
 /* Not every state teaches all three sciences every year — Georgia's middle school runs
@@ -7982,7 +7990,7 @@ function dashGradeModel(dst, g, index) {
   // Sets held at this grade because the CMS has no container for their item-set type.
   const orphanTypes = uncontainedTypes(containers);
   const held = orphanTypes.reduce((a, k) =>
-    a + expect.reduce((b, d) => b + ((tally.get(d) || {})[k] || 0), 0), 0);
+    a + expect.reduce((b, d) => b + (((tally.get(d) || {}).prompts || {})[k] || 0), 0), 0);
   return { g, sets, groups, expect, tally, cms, fromCms, containers, orphanTypes, held,
            met, partial, missing };
 }
@@ -8226,9 +8234,10 @@ function renderDash() {
                   const pair = c => {
                     const our = containerOurs(c, t);
                     if (!lumped[c.key] || !isScienceName(d)) {
-                      // A container that takes both our types cannot seed one, so the
-                      // builder opens on Informational and the modal's own picker decides.
-                      return dashCell(our, { ...cx, itemSetType: c.types[0], label: c.label })
+                      // The builder still works in item-set types, so a container seeds the
+                      // nearest one and the modal's own picker decides; Narrative has no
+                      // item-set type of its own and opens on Informational.
+                      return dashCell(our, { ...cx, itemSetType: c.cms === 'opinion' ? 'opinion' : 'informative', label: c.label })
                            + cmsCell(cms[c.cms], d, our);
                     }
                     if (!first) return '';                       // covered by the merge above
@@ -8255,7 +8264,7 @@ function renderDash() {
         </table>
         ${m.held ? `<div class="cms-orphans">Held here with no CMS container at this grade:
           <span class="chip">${m.held} set${m.held === 1 ? '' : 's'}</span>
-          ${esc(m.orphanTypes.map(k => k === 'informative' ? 'Informational' : 'Opinion').join(' and '))}
+          ${esc(m.orphanTypes.map(promptTypeLabel).join(' and '))}
           — ${esc(STATE_NAMES[dst] || dst)} grade ${esc(g)} only files
           ${esc(containers.map(c => c.label).join(' and '))} in the CMS.</div>` : ''}
         ${(() => {
