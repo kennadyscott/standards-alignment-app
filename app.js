@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609232237';   // replaced with the deploy stamp
+const APP_BUILD = '202609232245';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4911,12 +4911,29 @@ Grades 7-8: you may also fix the point of view ("from a first-person point of vi
 Do NOT add a checklist, "be sure to" bullets, a word or paragraph count, or any mention of
 spelling, grammar or conventions. The prompt is those three parts and nothing else.`;
 
-const NARRATIVE_TWO_INFORMATIONAL = `
-Because this set is TWO INFORMATIONAL passages, use the other shape released tests use for
-that case: no anchor sentence. State the story to invent and the facts it must draw on, e.g.
-"Write a narrative about a character who visits a relative's farm. On the farm, animals are
-cared for, vegetables are grown, and cheese is made. Describe what happens during the
-character's visit." Close with "Be sure to use details from both passages in your narrative."`;
+/* An INFORMATIONAL passage has no story to continue, so parts 1 and 2 above do not apply --
+   there is no "moment" to anchor to and nobody whose point of view could be retold.
+   Oklahoma's released items are exactly this case (a farm text and a cheese-making text at
+   grade 5; cattle-drive texts at grade 8) and they invent a story that has to carry the
+   facts. Applies at one passage or two; only the closing line differs. */
+const NARRATIVE_FROM_INFORMATIONAL = `
+THIS SET'S PASSAGE IS INFORMATIONAL, so parts 1 and 2 change. There is no story to continue
+and no character whose view could be retold — do NOT write an anchor sentence, and do not
+use any of the five angles above.
+
+Instead: name the story to invent and the subject matter it must carry, the way released
+informational-source narrative prompts do.
+  "Write a narrative about a character who visits a relative's farm. On the farm, animals
+   are cared for, vegetables are grown, and cheese is made. Describe what happens during
+   the character's visit."
+  "Write a narrative describing a day in your life as if you were a cowhand on a cattle
+   drive. In your narrative, include specific details about the cattle drive and an
+   explanation about how you helped overcome a challenge on the trail."
+The invented character and situation must make the passage's facts usable — a story a
+reader could not write without having read the passage.
+
+Part 3 still applies, worded for the source count: "Be sure to use details from the passage
+in your narrative." for one passage, "…from both passages…" for two.`;
 
 const SET_SYSTEM = `You write reading passage sets for state assessment practice (grades 2–8), in the style of released state test items.
 
@@ -5039,7 +5056,7 @@ Because there are two passages, that budget is SHARED — each passage should be
 Questions to write: ${cfg.questionCount}
 Writing prompt mode: ${promptModeFor(cfg) === 'informational' ? 'informational/explanatory' : promptModeFor(cfg)}${
   promptModeFor(cfg) === 'narrative'
-    ? '\n' + NARRATIVE_PROMPT_SPEC + (+cfg.passageCount === 2 && cfg.genre === 'informational' ? NARRATIVE_TWO_INFORMATIONAL : '')
+    ? '\n' + NARRATIVE_PROMPT_SPEC + (cfg.genre === 'informational' ? NARRATIVE_FROM_INFORMATIONAL : '')
     : ''}
 ${cfg.topic ? `Topic the passage should cover: ${cfg.topic}` : 'Choose an appropriate topic yourself.'}
 ${(cfg.avoid && cfg.avoid.length) ? `
