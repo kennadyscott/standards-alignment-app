@@ -5281,6 +5281,17 @@ const SUBDOMAIN_SUBJECT = {
   // North Carolina's CMS names (see STATE_SUBDOMAINS.NC)
   'Earth & Space Science': 'science', 'Civics & Government': 'social_studies',
   'Behavioral Sciences': 'social_studies',
+  // South Carolina's by-grade focus-area names (see STATE_SUBDOMAINS.SC).
+  // The "and" spellings are not rows; they are here so a stray label still
+  // classifies as social studies instead of falling through to ela.
+  'Applied Geography': 'social_studies',
+  'Places & Regions': 'social_studies', 'Places and Regions': 'social_studies',
+  'Environment & Resources': 'social_studies', 'Environment and Resources': 'social_studies',
+  'Human Systems': 'social_studies',
+  'Comparison': 'social_studies', 'Causation': 'social_studies',
+  'Periodization': 'social_studies', 'Context': 'social_studies',
+  'Continuities & Changes': 'social_studies', 'Continuities and Changes': 'social_studies',
+  'Evidence': 'social_studies',
   'Social Studies': 'social_studies', 'History': 'social_studies',
   'Geography': 'social_studies', 'Government': 'social_studies',
   'Economics': 'social_studies',
@@ -5331,6 +5342,9 @@ function hierarchySubtopic(sub, grade) {
   if (String(grade) === '2' && ['History', 'Geography', 'Government', 'Economics'].includes(sub)) {
     return 'Social Studies';           // grade 2's hierarchy is the coarse pair
   }
+  // South Carolina's inquiry and geography rows stay as themselves. Their standards
+  // file strands are era and continent names, so folding these onto History or
+  // Geography would file the set off the focus-area row the cell named.
   return sub;
 }
 function subdomainGenre(sub) {
@@ -6495,21 +6509,29 @@ const STATE_SUBDOMAINS = {
       'scientific and engineering practices': null,
     },
   },
-  /* North Carolina's Informational sub-topics as the CMS names them (canonical list,
-     Sept 12) -- exact strings, because Send to CMS writes them. Grade 2 has no Earth &
-     Space row. Generic "Science"/"Social Studies", plain "Earth Science" and plain
-     "Government" are not board rows here: `alias` renames the app's own labels so a
-     reviewer's classification survives the rename, and science sets still split by their
-     standard's strand. Literary and Literary Non-Fiction stay the universal (Ohio) list. */
+  /* North Carolina focus areas, as the State Watch Director names them (2026-09-23).
+     Science and Social Studies are separate groups. The old single Informational list
+     mixed them, so the dashboard never showed a Social Studies heading. Social Studies
+     is the same five subtopics in grades 2-8. Science keeps the earlier split: grade 2
+     is Physical Science and Life Science only; grades 3-8 add Earth & Space Science.
+     Exact strings, because Send to CMS writes them. "Science" and "Social Studies" are
+     group headings, not rows. Plain "Earth Science" and plain "Government" are not rows
+     either: `alias` renames the app's own labels so a reviewer's classification survives,
+     and science sets still split by their standard's strand. Literary and Literary
+     Non-Fiction stay the universal (Ohio) list. */
   NC: {
     byGrade: {
-      '2': { groups: [['Informational', ['Physical Science', 'Life Science', 'Behavioral Sciences',
-                                          'Civics & Government', 'Economics', 'Geography', 'History']]] },
+      '2': { groups: [
+        ['Science', ['Physical Science', 'Life Science']],
+        ['Social Studies', ['Behavioral Sciences', 'Civics & Government', 'Economics', 'Geography', 'History']],
+      ] },
       '3': 'NC_3_8', '4': 'NC_3_8', '5': 'NC_3_8', '6': 'NC_3_8', '7': 'NC_3_8', '8': 'NC_3_8',
     },
     named: {
-      NC_3_8: { groups: [['Informational', ['Physical Science', 'Life Science', 'Earth & Space Science',
-                         'Behavioral Sciences', 'Civics & Government', 'Economics', 'Geography', 'History']]] },
+      NC_3_8: { groups: [
+        ['Science', ['Physical Science', 'Life Science', 'Earth & Space Science']],
+        ['Social Studies', ['Behavioral Sciences', 'Civics & Government', 'Economics', 'Geography', 'History']],
+      ] },
     },
     // NC's own social studies strand, which the generic rules don't recognise.
     common: { 'behavioral sciences': 'Behavioral Sciences' },
@@ -6518,27 +6540,48 @@ const STATE_SUBDOMAINS = {
       'Government': 'Civics & Government', 'Civics and Government': 'Civics & Government',
     },
   },
-  /* South Carolina's Informational sub-topics as the CMS names them (Sept 12), the same at
-     every grade 2-8. No Behavioral Sciences (SC's four social studies themes don't have
-     it), no generic Science/Social Studies, and no "Engineering, Technology, and
-     Applications of Science" row -- a science DCI domain, not a passage sub-topic. SC's
-     grade 3-8 social studies strands are era and continent names, so a reviewer's own
-     classification decides the row (see setSubdomain); `alias` only renames it.
-     `courses` are the social studies course titles, shown at the top of each grade card
-     as guidance -- they are not sub-topics. */
+  /* South Carolina focus areas. Science is unchanged: Physical Science, Life Science,
+     and Earth & Space Science at every grade 2-8. Social Studies is by grade, per the
+     State Watch Director (2026-09-23). Grade 2 keeps the four themes. Grade 3 and grade
+     7 are geography subtopics, in different orders. Grades 4, 5, 6, and 8 share the six
+     inquiry skills. Ampersand spelling is the row (Civics & Government, Places & Regions,
+     Environment & Resources, Continuities & Changes); `alias` folds the "and" spelling
+     onto it. These names are focus-area rows, not the era and continent strands in the
+     standards file, so a reviewer's own classification decides the row (see setSubdomain).
+     No Behavioral Sciences, no generic Science or Social Studies row, and no
+     "Engineering, Technology, and Applications of Science" row. `courses` are the social
+     studies course titles, shown at the top of each grade card as guidance. They are
+     not sub-topics. */
   SC: {
-    byGrade: { '2': 'SC_2_8', '3': 'SC_2_8', '4': 'SC_2_8', '5': 'SC_2_8', '6': 'SC_2_8',
-               '7': 'SC_2_8', '8': 'SC_2_8' },
-    named: {
-      SC_2_8: { groups: [
+    byGrade: {
+      '2': { groups: [
         ['Science', ['Physical Science', 'Life Science', 'Earth & Space Science']],
         ['Social Studies', ['History', 'Geography', 'Economics', 'Civics & Government']],
+      ] },
+      '3': { groups: [
+        ['Science', ['Physical Science', 'Life Science', 'Earth & Space Science']],
+        ['Social Studies', ['Applied Geography', 'Places & Regions', 'Environment & Resources', 'Human Systems']],
+      ] },
+      '4': 'SC_4_6_8', '5': 'SC_4_6_8', '6': 'SC_4_6_8',
+      '7': { groups: [
+        ['Science', ['Physical Science', 'Life Science', 'Earth & Space Science']],
+        ['Social Studies', ['Places & Regions', 'Environment & Resources', 'Human Systems', 'Applied Geography']],
+      ] },
+      '8': 'SC_4_6_8',
+    },
+    named: {
+      SC_4_6_8: { groups: [
+        ['Science', ['Physical Science', 'Life Science', 'Earth & Space Science']],
+        ['Social Studies', ['Comparison', 'Causation', 'Periodization', 'Context', 'Continuities & Changes', 'Evidence']],
       ] },
     },
     common: {},
     alias: {
       'Earth Science': 'Earth & Space Science', 'Earth and Space Science': 'Earth & Space Science',
       'Government': 'Civics & Government', 'Civics and Government': 'Civics & Government',
+      'Places and Regions': 'Places & Regions',
+      'Environment and Resources': 'Environment & Resources',
+      'Continuities and Changes': 'Continuities & Changes',
     },
     courses: {
       '2': 'Life in the United States',
