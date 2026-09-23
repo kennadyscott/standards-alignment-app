@@ -16,7 +16,7 @@
 // Kindergarten and Grade 1 are out of scope for this team — removed from the data files,
 // the links, and the decisions (tools/drop_grades.py). Recoverable from git and the raw
 // PDFs in data/raw/ if that ever changes.
-const APP_BUILD = '202609181540';   // replaced with the deploy stamp
+const APP_BUILD = '202609232237';   // replaced with the deploy stamp
 const GRADES = ['2','3','4','5','6','7','8'];
 const ANCHOR = 'OH';
 // Adding a state = adding an entry here plus its data files in DATA_FILES. Nothing else.
@@ -4871,6 +4871,53 @@ function totalWords(passages) { return (passages || []).reduce((a, p) => a + wor
 // The library never uses text_entry in the reading question set — match it.
 const GEN_QTYPES = ['multiple_choice', 'cloze', 'multi_select'];
 
+/* ---------- the narrative writing prompt ----------
+   A narrative prompt is not phrased like the other modes, so the generator is told its
+   shape explicitly. Drawn from released items in Alabama, South Carolina, Tennessee and
+   Oklahoma (docs/narrative-prompts.md), which agree on a three-part skeleton and differ
+   only in the angle they ask for.
+
+   Deliberately NOT included: the "Reminders While Writing" / "Writer's Checklist" block
+   every one of those states prints beside the prompt. Kennady asked for the prompt only;
+   the craft expectations it carries are folded into the task sentence instead. */
+const NARRATIVE_PROMPT_SPEC = `
+WRITING PROMPT — NARRATIVE MODE. Phrase it the way released state narrative prompts are
+phrased, NOT like the informational/opinion prompts. Write it as ONE short paragraph of
+three parts in this order, with no headings, no bullets and no checklist:
+
+1. ANCHOR — one sentence naming the moment in the passage the task grows out of, written in
+   the PRESENT tense even though the passage itself is past tense. The move looks like:
+   "In the passage, Miguel wants to change his parents' opinion so that he can begin taking
+   drum lessons." / "At the end of the passage, Anders comes back to the shop with a sly grin."
+   Name the moment only — do not summarise the whole passage.
+
+2. TASK — begin "Write a narrative" and name ONE bounded angle. Never an open-ended "write
+   what happens next". Pick whichever of these the passage best supports:
+     - continue past the ending, at a NAMED next moment
+     - retell the events from another character's point of view (say which characters)
+     - a counterfactual: what might have happened if one thing in the passage had gone differently
+     - expand one named moment, such as the conversation two characters would have
+     - place the reader inside the scene ("Imagine that you are ...")
+   Use narrative verbs — "shows the reader what happens when", "telling what happens when".
+   Never "explain", "argue", "state your opinion" or "multi-paragraph response".
+   Then, in the same sentence or the next, name the craft the response must show: details
+   about the setting, and what the characters do, think and feel.
+
+3. SOURCE TIE — close with "Use details from the passage to help you write your story."
+
+Grades 2-3: one clear angle, plain wording, short sentences.
+Grades 7-8: you may also fix the point of view ("from a first-person point of view").
+
+Do NOT add a checklist, "be sure to" bullets, a word or paragraph count, or any mention of
+spelling, grammar or conventions. The prompt is those three parts and nothing else.`;
+
+const NARRATIVE_TWO_INFORMATIONAL = `
+Because this set is TWO INFORMATIONAL passages, use the other shape released tests use for
+that case: no anchor sentence. State the story to invent and the facts it must draw on, e.g.
+"Write a narrative about a character who visits a relative's farm. On the farm, animals are
+cared for, vegetables are grown, and cheese is made. Describe what happens during the
+character's visit." Close with "Be sure to use details from both passages in your narrative."`;
+
 const SET_SYSTEM = `You write reading passage sets for state assessment practice (grades 2–8), in the style of released state test items.
 
 You are given ONE anchor standard. The passage must be written so that the anchor standard can genuinely be assessed from it, and every question must be answerable from the passage alone.
@@ -4887,6 +4934,15 @@ Hard requirements:
 - When two passages are requested, they must be genuinely different texts on a related topic so students can compare them, each independently inside the word range.
 
 Style: grade-appropriate sentence length and vocabulary; passages read like real published student-facing text with a natural title, not like a worksheet.`;
+
+// The writing prompt's mode. Narrative is a mode of its own: an item set is still
+// informative or opinion, so the reviewer picks the mode and the item-set type stays as it
+// is. Without a choice it follows the item-set type, as it always has.
+function promptModeFor(cfg) {
+  if (cfg.promptMode) return cfg.promptMode;
+  return cfg.itemSetType === 'opinion'
+    ? (String(cfg.grade) >= '6' ? 'argumentative' : 'opinion') : 'informational';
+}
 
 const SET_SCHEMA = {
   type: 'object',
@@ -4981,7 +5037,10 @@ Passages to write: ${cfg.passageCount}
 WORD BUDGET FOR THE WHOLE SET: ${band.min}–${band.max} words TOTAL (aim for about ${cfg.words}).${cfg.passageCount === 2 ? `
 Because there are two passages, that budget is SHARED — each passage should be roughly ${Math.round(cfg.words / 2)} words so the pair together lands inside the total. Two full-length passages would be twice as much reading as this grade should get.` : ''}
 Questions to write: ${cfg.questionCount}
-Writing prompt mode: ${cfg.itemSetType === 'opinion' ? (String(cfg.grade) >= '6' ? 'argumentative' : 'opinion') : 'informational/explanatory'}
+Writing prompt mode: ${promptModeFor(cfg) === 'informational' ? 'informational/explanatory' : promptModeFor(cfg)}${
+  promptModeFor(cfg) === 'narrative'
+    ? '\n' + NARRATIVE_PROMPT_SPEC + (+cfg.passageCount === 2 && cfg.genre === 'informational' ? NARRATIVE_TWO_INFORMATIONAL : '')
+    : ''}
 ${cfg.topic ? `Topic the passage should cover: ${cfg.topic}` : 'Choose an appropriate topic yourself.'}
 ${(cfg.avoid && cfg.avoid.length) ? `
 THESE SETS ALREADY EXIST FOR THIS SAME STANDARD — yours must be a genuinely DIFFERENT text, not a re-telling:
@@ -5041,7 +5100,7 @@ async function handleGenerateSet(cfg, opts) {
       })),
       peerRevision: [{ text: '', standard: null, type: null }],
       writingPrompt: {
-        type: cfg.itemSetType === 'opinion' ? (String(cfg.grade) >= '6' ? 'argumentative' : 'opinion') : 'informational',
+        type: promptModeFor(cfg),
         text: out.writingPrompt || '',
       },
     };
@@ -5134,6 +5193,12 @@ function generatorFormHtml(opts) {
       <div class="ps-field"><label>Item set type</label>
         <select class="ps-input" data-gen="itemSetType">
           ${ITEM_SET_TYPES.map(x => `<option value="${x.key}" ${g.itemSetType === x.key ? 'selected' : ''}>${x.label}</option>`).join('')}
+        </select></div>
+
+      <div class="ps-field"><label>Writing prompt</label>
+        <select class="ps-input" data-gen="promptMode">
+          <option value="">Follows the item set type (${esc(promptTypeLabel(promptModeFor(g)))})</option>
+          ${PROMPT_TYPES.map(x => `<option value="${x}" ${g.promptMode === x ? 'selected' : ''}>${esc(promptTypeLabel(x))}</option>`).join('')}
         </select></div>`}
 
       <div class="ps-field"><label>Passages per set</label>
@@ -5281,17 +5346,6 @@ const SUBDOMAIN_SUBJECT = {
   // North Carolina's CMS names (see STATE_SUBDOMAINS.NC)
   'Earth & Space Science': 'science', 'Civics & Government': 'social_studies',
   'Behavioral Sciences': 'social_studies',
-  // South Carolina's by-grade focus-area names (see STATE_SUBDOMAINS.SC).
-  // The "and" spellings are not rows; they are here so a stray label still
-  // classifies as social studies instead of falling through to ela.
-  'Applied Geography': 'social_studies',
-  'Places & Regions': 'social_studies', 'Places and Regions': 'social_studies',
-  'Environment & Resources': 'social_studies', 'Environment and Resources': 'social_studies',
-  'Human Systems': 'social_studies',
-  'Comparison': 'social_studies', 'Causation': 'social_studies',
-  'Periodization': 'social_studies', 'Context': 'social_studies',
-  'Continuities & Changes': 'social_studies', 'Continuities and Changes': 'social_studies',
-  'Evidence': 'social_studies',
   'Social Studies': 'social_studies', 'History': 'social_studies',
   'Geography': 'social_studies', 'Government': 'social_studies',
   'Economics': 'social_studies',
@@ -5342,9 +5396,6 @@ function hierarchySubtopic(sub, grade) {
   if (String(grade) === '2' && ['History', 'Geography', 'Government', 'Economics'].includes(sub)) {
     return 'Social Studies';           // grade 2's hierarchy is the coarse pair
   }
-  // South Carolina's inquiry and geography rows stay as themselves. Their standards
-  // file strands are era and continent names, so folding these onto History or
-  // Geography would file the set off the focus-area row the cell named.
   return sub;
 }
 function subdomainGenre(sub) {
@@ -5362,6 +5413,7 @@ function openGenModal(cfg) {
     genre: subdomainGenre(cfg.subtopic),
     subtopic: hierarchySubtopic(cfg.subtopic, grade),
     itemSetType: cfg.itemSetType,
+    promptMode: cfg.promptMode || '',  // the Narrative column seeds narrative; others follow the type
     words: wordBand(grade, state.ui.gen.passageCount).target,
     setCount: Math.max(1, Math.min(DASH_GOAL - (cfg.have || 0), DASH_GOAL)),
   });
@@ -5386,6 +5438,7 @@ function renderGenModal() {
           <div>
             <div class="modal-title">Build for ${esc(STATE_NAMES[g.state])} · Grade ${esc(g.grade)}</div>
             <div class="ps-hint">${esc(g.subtopic)} · ${esc((ITEM_SET_TYPES.find(t => t.key === g.itemSetType) || {}).label || '')}
+              · ${esc(promptTypeLabel(promptModeFor(g)))} prompt
               — ${m.have} of ${DASH_GOAL} built</div>
           </div>
           <button class="q-remove" id="genModalX" title="Close">✕</button>
@@ -6509,29 +6562,21 @@ const STATE_SUBDOMAINS = {
       'scientific and engineering practices': null,
     },
   },
-  /* North Carolina focus areas, as the State Watch Director names them (2026-09-23).
-     Science and Social Studies are separate groups. The old single Informational list
-     mixed them, so the dashboard never showed a Social Studies heading. Social Studies
-     is the same five subtopics in grades 2-8. Science keeps the earlier split: grade 2
-     is Physical Science and Life Science only; grades 3-8 add Earth & Space Science.
-     Exact strings, because Send to CMS writes them. "Science" and "Social Studies" are
-     group headings, not rows. Plain "Earth Science" and plain "Government" are not rows
-     either: `alias` renames the app's own labels so a reviewer's classification survives,
-     and science sets still split by their standard's strand. Literary and Literary
-     Non-Fiction stay the universal (Ohio) list. */
+  /* North Carolina's Informational sub-topics as the CMS names them (canonical list,
+     Sept 12) -- exact strings, because Send to CMS writes them. Grade 2 has no Earth &
+     Space row. Generic "Science"/"Social Studies", plain "Earth Science" and plain
+     "Government" are not board rows here: `alias` renames the app's own labels so a
+     reviewer's classification survives the rename, and science sets still split by their
+     standard's strand. Literary and Literary Non-Fiction stay the universal (Ohio) list. */
   NC: {
     byGrade: {
-      '2': { groups: [
-        ['Science', ['Physical Science', 'Life Science']],
-        ['Social Studies', ['Behavioral Sciences', 'Civics & Government', 'Economics', 'Geography', 'History']],
-      ] },
+      '2': { groups: [['Informational', ['Physical Science', 'Life Science', 'Behavioral Sciences',
+                                          'Civics & Government', 'Economics', 'Geography', 'History']]] },
       '3': 'NC_3_8', '4': 'NC_3_8', '5': 'NC_3_8', '6': 'NC_3_8', '7': 'NC_3_8', '8': 'NC_3_8',
     },
     named: {
-      NC_3_8: { groups: [
-        ['Science', ['Physical Science', 'Life Science', 'Earth & Space Science']],
-        ['Social Studies', ['Behavioral Sciences', 'Civics & Government', 'Economics', 'Geography', 'History']],
-      ] },
+      NC_3_8: { groups: [['Informational', ['Physical Science', 'Life Science', 'Earth & Space Science',
+                         'Behavioral Sciences', 'Civics & Government', 'Economics', 'Geography', 'History']]] },
     },
     // NC's own social studies strand, which the generic rules don't recognise.
     common: { 'behavioral sciences': 'Behavioral Sciences' },
@@ -6540,48 +6585,27 @@ const STATE_SUBDOMAINS = {
       'Government': 'Civics & Government', 'Civics and Government': 'Civics & Government',
     },
   },
-  /* South Carolina focus areas. Science is unchanged: Physical Science, Life Science,
-     and Earth & Space Science at every grade 2-8. Social Studies is by grade, per the
-     State Watch Director (2026-09-23). Grade 2 keeps the four themes. Grade 3 and grade
-     7 are geography subtopics, in different orders. Grades 4, 5, 6, and 8 share the six
-     inquiry skills. Ampersand spelling is the row (Civics & Government, Places & Regions,
-     Environment & Resources, Continuities & Changes); `alias` folds the "and" spelling
-     onto it. These names are focus-area rows, not the era and continent strands in the
-     standards file, so a reviewer's own classification decides the row (see setSubdomain).
-     No Behavioral Sciences, no generic Science or Social Studies row, and no
-     "Engineering, Technology, and Applications of Science" row. `courses` are the social
-     studies course titles, shown at the top of each grade card as guidance. They are
-     not sub-topics. */
+  /* South Carolina's Informational sub-topics as the CMS names them (Sept 12), the same at
+     every grade 2-8. No Behavioral Sciences (SC's four social studies themes don't have
+     it), no generic Science/Social Studies, and no "Engineering, Technology, and
+     Applications of Science" row -- a science DCI domain, not a passage sub-topic. SC's
+     grade 3-8 social studies strands are era and continent names, so a reviewer's own
+     classification decides the row (see setSubdomain); `alias` only renames it.
+     `courses` are the social studies course titles, shown at the top of each grade card
+     as guidance -- they are not sub-topics. */
   SC: {
-    byGrade: {
-      '2': { groups: [
+    byGrade: { '2': 'SC_2_8', '3': 'SC_2_8', '4': 'SC_2_8', '5': 'SC_2_8', '6': 'SC_2_8',
+               '7': 'SC_2_8', '8': 'SC_2_8' },
+    named: {
+      SC_2_8: { groups: [
         ['Science', ['Physical Science', 'Life Science', 'Earth & Space Science']],
         ['Social Studies', ['History', 'Geography', 'Economics', 'Civics & Government']],
-      ] },
-      '3': { groups: [
-        ['Science', ['Physical Science', 'Life Science', 'Earth & Space Science']],
-        ['Social Studies', ['Applied Geography', 'Places & Regions', 'Environment & Resources', 'Human Systems']],
-      ] },
-      '4': 'SC_4_6_8', '5': 'SC_4_6_8', '6': 'SC_4_6_8',
-      '7': { groups: [
-        ['Science', ['Physical Science', 'Life Science', 'Earth & Space Science']],
-        ['Social Studies', ['Places & Regions', 'Environment & Resources', 'Human Systems', 'Applied Geography']],
-      ] },
-      '8': 'SC_4_6_8',
-    },
-    named: {
-      SC_4_6_8: { groups: [
-        ['Science', ['Physical Science', 'Life Science', 'Earth & Space Science']],
-        ['Social Studies', ['Comparison', 'Causation', 'Periodization', 'Context', 'Continuities & Changes', 'Evidence']],
       ] },
     },
     common: {},
     alias: {
       'Earth Science': 'Earth & Space Science', 'Earth and Space Science': 'Earth & Space Science',
       'Government': 'Civics & Government', 'Civics and Government': 'Civics & Government',
-      'Places and Regions': 'Places & Regions',
-      'Environment and Resources': 'Environment & Resources',
-      'Continuities and Changes': 'Continuities & Changes',
     },
     courses: {
       '2': 'Life in the United States',
@@ -6640,7 +6664,7 @@ function dashCell(n, ctx) {
   const cls = isCritical(n) ? 'critical'
     : n >= DASH_GOAL ? 'goal-met' : n > 0 ? 'goal-partial' : 'goal-missing';
   // Every cell is a work order: clicking opens the builder already scoped to it.
-  const d = ctx ? ` data-gencell="${esc(ctx.state)}|${esc(ctx.grade)}|${esc(ctx.subtopic)}|${esc(ctx.itemSetType)}|${n}"` : '';
+  const d = ctx ? ` data-gencell="${esc(ctx.state)}|${esc(ctx.grade)}|${esc(ctx.subtopic)}|${esc(ctx.itemSetType)}|${n}|${esc(ctx.promptMode || '')}"` : '';
   const kind = ctx ? (ctx.label || (ctx.itemSetType === 'informative' ? 'Informational' : 'Opinion')) : '';
   const title = ctx ? ` title="Build ${esc(ctx.subtopic)} · ${esc(kind)} for Grade ${esc(ctx.grade)} — ${n} of ${DASH_GOAL}"` : '';
   return `<td class="dash-cell ${cls}${ctx ? ' dash-cell-click' : ''}"${d}${title}>${n}</td>`;
@@ -8280,7 +8304,8 @@ function renderDash() {
                       // The builder still works in item-set types, so a container seeds the
                       // nearest one and the modal's own picker decides; Narrative has no
                       // item-set type of its own and opens on Informational.
-                      return dashCell(our, { ...cx, itemSetType: c.cms === 'opinion' ? 'opinion' : 'informative', label: c.label })
+                      return dashCell(our, { ...cx, itemSetType: c.cms === 'opinion' ? 'opinion' : 'informative',
+                                             promptMode: c.prompts.length === 1 ? c.prompts[0] : '', label: c.label })
                            + cmsCell(cms[c.cms], d, our);
                     }
                     if (!first) return '';                       // covered by the merge above
@@ -8327,8 +8352,8 @@ function renderDash() {
     wrap.addEventListener('click', e => {
       const cell = e.target.closest('[data-gencell]');
       if (!cell) return;
-      const [st, grade, subtopic, itemSetType, have] = cell.dataset.gencell.split('|');
-      openGenModal({ state: st, grade, subtopic, itemSetType, have: +have });
+      const [st, grade, subtopic, itemSetType, have, promptMode] = cell.dataset.gencell.split('|');
+      openGenModal({ state: st, grade, subtopic, itemSetType, have: +have, promptMode });
     });
   }
 }
